@@ -2,6 +2,8 @@ package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.request.SendMessage;
+import edu.java.bot.data.repositories.SubscriptionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,6 +12,13 @@ public class TrackSlashCommand implements SlashCommand {
     private static final String TEXT_COMMAND = "/track";
 
     private static final String DESCRIPTION = "Start tracking updates from given link";
+
+    private final SubscriptionRepository subscriptionRepository;
+
+    @Autowired
+    public TrackSlashCommand(SubscriptionRepository subscriptionRepository) {
+        this.subscriptionRepository = subscriptionRepository;
+    }
 
     @Override
     public String getTextCommand() {
