@@ -32,14 +32,13 @@ class HelpSlashCommandTest {
             **Other commands**
             /start - Register in app
             /help - Get list of commands""";
-
         String actualText = (String) sendMessageRequest.getParameters().get("text");
 
         assertThat(actualText).isEqualTo(expectedText);
     }
 
     @Test
-    void should_returnCorrectBotCommandInstance() {
+    void should_returnBotCommandInstance() {
         BotCommand botCommand = command.getBotCommand();
 
         assertAll(
