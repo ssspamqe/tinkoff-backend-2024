@@ -1,6 +1,7 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
+import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.request.SendMessage;
 import org.springframework.stereotype.Component;
 
@@ -35,8 +36,8 @@ public class HelpSlashCommand implements SlashCommand {
     }
 
     @Override
-    public SendMessage getSendMessageRequest(long chatId) {
-        return new SendMessage(chatId, RESPONSE);
+    public SendMessage getSendMessageRequest(Message message) {
+        return new SendMessage(message.chat().id(), RESPONSE);
     }
 
     @Override

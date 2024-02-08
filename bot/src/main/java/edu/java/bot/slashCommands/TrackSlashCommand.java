@@ -1,6 +1,7 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
+import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.data.repositories.SubscriptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class TrackSlashCommand implements SlashCommand {
     }
 
     @Override
-    public SendMessage getSendMessageRequest(long chatId) {
+    public SendMessage getSendMessageRequest(Message message) {
         return null;
     }
 

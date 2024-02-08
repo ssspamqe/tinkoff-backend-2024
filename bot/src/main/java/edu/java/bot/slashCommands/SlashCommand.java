@@ -1,6 +1,7 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
+import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.request.SendMessage;
 
 public interface SlashCommand {
@@ -9,7 +10,7 @@ public interface SlashCommand {
 
     String getDescription();
 
-    SendMessage getSendMessageRequest(long chatId);
+    SendMessage getSendMessageRequest(Message message);
 
     BotCommand getBotCommand();
 }
