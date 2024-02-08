@@ -1,9 +1,12 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
+import com.pengrad.telegrambot.model.Chat;
+import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.request.SendMessage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
@@ -18,8 +21,18 @@ class HelpSlashCommandTest {
 
     @Test
     void should_returnSendMessageRequest() {
-        SendMessage sendMessageRequest = command.getSendMessageRequest(1);
+        //Arrange
+        Chat chatSpy = Mockito.spy(new Chat());
+        Mockito.when(chatSpy.id()).thenReturn(1L);
 
+        Message message = Mockito.spy(new Message());
+        Mockito.when(message.chat()).thenReturn(chatSpy);
+
+        //Act
+        SendMessage sendMessageRequest = command.getSendMessageRequest(message);
+        String actualText = (String) sendMessageRequest.getParameters().get("text");
+
+        //Assert
         String expectedText = """
             This bot allows to subscribe on updates from various services!
 
@@ -32,8 +45,6 @@ class HelpSlashCommandTest {
             **Other commands**
             /start - Register in app
             /help - Get list of commands""";
-        String actualText = (String) sendMessageRequest.getParameters().get("text");
-
         assertThat(actualText).isEqualTo(expectedText);
     }
 

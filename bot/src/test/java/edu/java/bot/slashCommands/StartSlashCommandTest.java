@@ -1,14 +1,16 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
+import com.pengrad.telegrambot.model.Chat;
+import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.request.SendMessage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 class StartSlashCommandTest {
-
     SlashCommand command;
 
     @BeforeEach
@@ -18,10 +20,18 @@ class StartSlashCommandTest {
 
     @Test
     void should_returnSendMessageRequest() {
-        SendMessage sendMessageRequest = command.getSendMessageRequest(1);
+        //Arrange
+        Chat chatSpy = Mockito.spy(new Chat());
+        Mockito.when(chatSpy.id()).thenReturn(1L);
 
+        Message message = Mockito.spy(new Message());
+        Mockito.when(message.chat()).thenReturn(chatSpy);
+
+        //Act
+        SendMessage sendMessageRequest = command.getSendMessageRequest(message);
         String actualText = (String) sendMessageRequest.getParameters().get("text");
 
+        //Assert
         assertThat(actualText).isEqualTo("Registration...");
     }
 
