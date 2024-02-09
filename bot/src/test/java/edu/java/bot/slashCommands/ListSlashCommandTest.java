@@ -4,7 +4,6 @@ import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Chat;
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
-import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
 import java.util.List;
@@ -43,11 +42,10 @@ class ListSlashCommandTest {
         Message spyMessage = getDefaultSpyMessage();
 
         //Act
-        SendMessage sendMessageRequest = command.getSimpleResponse(spyMessage);
-        String actualText = (String) sendMessageRequest.getParameters().get("text");
+        String actualResponse = command.getParameterizedResponse(spyMessage);
 
         //Asert
-        assertThat(actualText).contains("first/link", "second/link", "third/link");
+        assertThat(actualResponse).contains("first/link", "second/link", "third/link");
     }
 
     @Test
@@ -59,7 +57,7 @@ class ListSlashCommandTest {
         Message spyMessage = getDefaultSpyMessage();
 
         //Act
-        String actualResponse = command.getSimpleResponse(spyMessage);
+        String actualResponse = command.getParameterizedResponse(spyMessage);
 
         //Asser
         assertThat(actualResponse).isEqualTo("There is no any subscription");
