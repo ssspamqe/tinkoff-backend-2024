@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UntrackSlashCommand implements SlashCommand {
+public class UntrackSlashCommand implements ParameterizedSlashCommand {
 
     private static final String TEXT_COMMAND = "/unrack";
 
@@ -33,6 +33,11 @@ public class UntrackSlashCommand implements SlashCommand {
 
     @Override
     public SendMessage getSimpleResponse(Message message) {
+        return null;
+    }
+
+    @Override
+    public SendMessage getParameterizedResponse(Message message) {
         return null;
     }
 

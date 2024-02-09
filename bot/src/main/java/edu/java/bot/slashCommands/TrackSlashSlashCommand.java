@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TrackSlashCommand implements SlashCommand {
+public class TrackSlashSlashCommand implements ParameterizedSlashCommand {
 
     private static final String TEXT_COMMAND = "/track";
 
@@ -17,7 +17,7 @@ public class TrackSlashCommand implements SlashCommand {
     private final SubscriptionRepository subscriptionRepository;
 
     @Autowired
-    public TrackSlashCommand(SubscriptionRepository subscriptionRepository) {
+    public TrackSlashSlashCommand(SubscriptionRepository subscriptionRepository) {
         this.subscriptionRepository = subscriptionRepository;
     }
 
@@ -33,6 +33,11 @@ public class TrackSlashCommand implements SlashCommand {
 
     @Override
     public SendMessage getSimpleResponse(Message message) {
+        return null;
+    }
+
+    @Override
+    public SendMessage getParameterizedResponse(Message message) {
         return null;
     }
 
