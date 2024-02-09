@@ -36,7 +36,7 @@ public class HelpSlashCommand implements SlashCommand {
     }
 
     @Override
-    public String getSimpleResponse(Message message) {
+    public String getSimpleResponse() {
         return RESPONSE;
     }
 

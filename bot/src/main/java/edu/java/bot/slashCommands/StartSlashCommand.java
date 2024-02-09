@@ -24,7 +24,7 @@ public class StartSlashCommand implements SlashCommand {
     }
 
     @Override
-    public String getSimpleResponse(Message message) {
+    public String getSimpleResponse() {
         return DEFAULT_RESPONSE;
     }
 

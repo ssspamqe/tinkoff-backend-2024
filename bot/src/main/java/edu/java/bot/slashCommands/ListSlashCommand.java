@@ -33,7 +33,7 @@ public class ListSlashCommand implements SlashCommand {
     }
 
     @Override
-    public String getSimpleResponse(Message message) {
+    public String getSimpleResponse() {
         return null;
     }
 

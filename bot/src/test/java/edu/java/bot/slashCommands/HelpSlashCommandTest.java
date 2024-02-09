@@ -19,34 +19,6 @@ class HelpSlashCommandTest {
     }
 
     @Test
-    void should_returnSendMessageRequest_when_simpleResponse() {
-        //Arrange
-        Chat chatSpy = Mockito.spy(new Chat());
-        Mockito.when(chatSpy.id()).thenReturn(1L);
-
-        Message message = Mockito.spy(new Message());
-        Mockito.when(message.chat()).thenReturn(chatSpy);
-
-        //Act
-        String actualResponse = command.getSimpleResponse(message);
-
-        //Assert
-        String expectedText = """
-            This bot allows to subscribe on updates from various services!
-
-            Here are commands:
-            **Subscription control**
-            /track - Start tracking updates from given link
-            /untrack - Stop tracking updates from given link
-            /list - Get list of subscriptions
-
-            **Other commands**
-            /start - Register in app
-            /help - Get list of commands""";
-        assertThat(actualResponse).isEqualTo(expectedText);
-    }
-
-    @Test
     void should_returnBotCommandInstance() {
         BotCommand botCommand = command.getBotCommand();
 

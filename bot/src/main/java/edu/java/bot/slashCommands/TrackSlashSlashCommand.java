@@ -31,7 +31,7 @@ public class TrackSlashSlashCommand implements ParameterizedSlashCommand {
     }
 
     @Override
-    public String getSimpleResponse(Message message) {
+    public String getSimpleResponse() {
         return null;
     }
 

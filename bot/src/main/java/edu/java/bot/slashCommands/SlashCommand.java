@@ -9,7 +9,7 @@ public interface SlashCommand {
 
     String getDescription();
 
-    String getSimpleResponse(Message message);
+    String getSimpleResponse();
 
     BotCommand getBotCommand();
 }

@@ -31,7 +31,7 @@ public class UntrackSlashCommand implements ParameterizedSlashCommand {
     }
 
     @Override
-    public String getSimpleResponse(Message message) {
+    public String getSimpleResponse() {
         return null;
     }
 
