@@ -59,11 +59,10 @@ class ListSlashCommandTest {
         Message spyMessage = getDefaultSpyMessage();
 
         //Act
-        SendMessage sendMessageRequest = command.getSimpleResponse(spyMessage);
-        String actualText = (String) sendMessageRequest.getParameters().get("text");
+        String actualResponse = command.getSimpleResponse(spyMessage);
 
         //Asser
-        assertThat(actualText).isEqualTo("There is no any subscription");
+        assertThat(actualResponse).isEqualTo("There is no any subscription");
     }
 
     @Test

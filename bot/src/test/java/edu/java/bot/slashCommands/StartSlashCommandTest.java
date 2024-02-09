@@ -3,7 +3,6 @@ package edu.java.bot.slashCommands;
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Chat;
 import com.pengrad.telegrambot.model.Message;
-import com.pengrad.telegrambot.request.SendMessage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -28,11 +27,10 @@ class StartSlashCommandTest {
         Mockito.when(spyMessage.chat()).thenReturn(chatSpy);
 
         //Act
-        SendMessage sendMessageRequest = command.getSimpleResponse(spyMessage);
-        String actualText = (String) sendMessageRequest.getParameters().get("text");
+        String actualResponse = command.getSimpleResponse(spyMessage);
 
         //Assert
-        assertThat(actualText).isEqualTo("Registration...");
+        assertThat(actualResponse).isEqualTo("Registration...");
     }
 
     @Test

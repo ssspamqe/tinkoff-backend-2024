@@ -2,7 +2,6 @@ package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
-import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.data.repositories.SubscriptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -32,12 +31,12 @@ public class TrackSlashSlashCommand implements ParameterizedSlashCommand {
     }
 
     @Override
-    public SendMessage getSimpleResponse(Message message) {
+    public String getSimpleResponse(Message message) {
         return null;
     }
 
     @Override
-    public SendMessage getParameterizedResponse(Message message) {
+    public String getParameterizedResponse(Message message) {
         return null;
     }
 

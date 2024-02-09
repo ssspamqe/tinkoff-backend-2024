@@ -3,7 +3,6 @@ package edu.java.bot.slashCommands;
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Chat;
 import com.pengrad.telegrambot.model.Message;
-import com.pengrad.telegrambot.request.SendMessage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -20,7 +19,7 @@ class HelpSlashCommandTest {
     }
 
     @Test
-    void should_returnSendMessageRequest() {
+    void should_returnSendMessageRequest_when_simpleResponse() {
         //Arrange
         Chat chatSpy = Mockito.spy(new Chat());
         Mockito.when(chatSpy.id()).thenReturn(1L);
@@ -29,8 +28,7 @@ class HelpSlashCommandTest {
         Mockito.when(message.chat()).thenReturn(chatSpy);
 
         //Act
-        SendMessage sendMessageRequest = command.getSimpleResponse(message);
-        String actualText = (String) sendMessageRequest.getParameters().get("text");
+        String actualResponse = command.getSimpleResponse(message);
 
         //Assert
         String expectedText = """
@@ -45,7 +43,7 @@ class HelpSlashCommandTest {
             **Other commands**
             /start - Register in app
             /help - Get list of commands""";
-        assertThat(actualText).isEqualTo(expectedText);
+        assertThat(actualResponse).isEqualTo(expectedText);
     }
 
     @Test

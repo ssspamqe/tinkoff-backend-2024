@@ -2,7 +2,6 @@ package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
-import com.pengrad.telegrambot.request.SendMessage;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -25,8 +24,8 @@ public class StartSlashCommand implements SlashCommand {
     }
 
     @Override
-    public SendMessage getSimpleResponse(Message message) {
-        return new SendMessage(message.chat().id(), DEFAULT_RESPONSE);
+    public String getSimpleResponse(Message message) {
+        return DEFAULT_RESPONSE;
     }
 
     @Override
