@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ListSlashCommand implements SlashCommand {
+public class ListSlashCommand implements ParameterizedSlashCommand {
 
     private static final String TEXT_COMMAND = "/list";
 
@@ -34,6 +34,11 @@ public class ListSlashCommand implements SlashCommand {
 
     @Override
     public String getSimpleResponse() {
+        return null;
+    }
+
+    @Override
+    public String getParameterizedResponse(Message message) {
         return null;
     }
 
