@@ -35,7 +35,7 @@ public abstract class HashMapRepository<T, I> implements BasicRepository<T, I> {
 
     @Override
     public void deleteById(I id) {
-        database.computeIfAbsent(id, null);
+        database.put(id, null);
     }
 
     private I getIdFromObject(T object) {

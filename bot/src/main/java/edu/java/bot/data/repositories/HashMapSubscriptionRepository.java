@@ -17,6 +17,7 @@ public class HashMapSubscriptionRepository extends HashMapRepository<Subscriptio
 
     @Override
     public void save(Subscription subscription) {
-        System.out.println("saved: " + subscription);
+        Long id = subscription.getId();
+        database.put(id, subscription);
     }
 }
