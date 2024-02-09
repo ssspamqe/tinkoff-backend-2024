@@ -79,4 +79,15 @@ public class HashMapSubscriptionRepositoryTest {
         assertThatCode(() -> subscriptionRepository.deleteById(1L)).doesNotThrowAnyException();
     }
 
+    @Test
+    void should_setNewId_when_subscriptionIdIsZero() {
+        Subscription subscription = new Subscription(0L, 1L, "https://link");
+
+        subscriptionRepository.save(subscription);
+        Subscription actualSubscription = subscriptionRepository.findAllByUserId(1L).getFirst();
+
+        assertThat(actualSubscription.getId()).isNotEqualTo(0);
+        assertThat(actualSubscription).isEqualTo(subscription);
+    }
+
 }
