@@ -36,7 +36,7 @@ public class HelpSlashCommand implements SlashCommand {
     }
 
     @Override
-    public SendMessage getSendMessageRequest(Message message) {
+    public SendMessage getResponse(Message message) {
         return new SendMessage(message.chat().id(), RESPONSE);
     }
 

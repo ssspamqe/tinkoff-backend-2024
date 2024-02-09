@@ -32,7 +32,7 @@ public class TrackSlashCommand implements SlashCommand {
     }
 
     @Override
-    public SendMessage getSendMessageRequest(Message message) {
+    public SendMessage getResponse(Message message) {
         return null;
     }
 

@@ -24,11 +24,11 @@ class StartSlashCommandTest {
         Chat chatSpy = Mockito.spy(new Chat());
         Mockito.when(chatSpy.id()).thenReturn(1L);
 
-        Message message = Mockito.spy(new Message());
-        Mockito.when(message.chat()).thenReturn(chatSpy);
+        Message spyMessage = Mockito.spy(new Message());
+        Mockito.when(spyMessage.chat()).thenReturn(chatSpy);
 
         //Act
-        SendMessage sendMessageRequest = command.getSendMessageRequest(message);
+        SendMessage sendMessageRequest = command.getResponse(spyMessage);
         String actualText = (String) sendMessageRequest.getParameters().get("text");
 
         //Assert

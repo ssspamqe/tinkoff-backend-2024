@@ -29,7 +29,7 @@ class HelpSlashCommandTest {
         Mockito.when(message.chat()).thenReturn(chatSpy);
 
         //Act
-        SendMessage sendMessageRequest = command.getSendMessageRequest(message);
+        SendMessage sendMessageRequest = command.getResponse(message);
         String actualText = (String) sendMessageRequest.getParameters().get("text");
 
         //Assert

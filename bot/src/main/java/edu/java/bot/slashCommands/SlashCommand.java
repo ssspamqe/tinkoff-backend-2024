@@ -10,7 +10,7 @@ public interface SlashCommand {
 
     String getDescription();
 
-    SendMessage getSendMessageRequest(Message message);
+    SendMessage getResponse(Message message);
 
     BotCommand getBotCommand();
 }
