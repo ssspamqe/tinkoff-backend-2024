@@ -33,12 +33,12 @@ public class ListSlashCommand implements ParameterizedSlashCommand {
     }
 
     @Override
-    public String getSimpleResponse() {
+    public String executeAndGetResponse() {
         return null;
     }
 
     @Override
-    public String getParameterizedResponse(Message message) {
+    public String executeWithParametersAndGetResponse(Message message) {
         return null;
     }
 

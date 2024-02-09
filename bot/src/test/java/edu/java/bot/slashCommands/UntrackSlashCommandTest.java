@@ -41,7 +41,7 @@ public class UntrackSlashCommandTest {
         Message parameterizedMessage = getParameterizeMessageWithLinkAndUserId("https://first/link", 1L);
 
         //Act
-        String actualResponse = command.getParameterizedResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
         //Assert
         Mockito.verify(subscriptionRepository, Mockito.times(1)).deleteById(1L);
@@ -57,7 +57,7 @@ public class UntrackSlashCommandTest {
         Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
         Message parameterizedMessage = getParameterizeMessageWithLinkAndUserId("https://third/link", 1L);
 
-        String actualResponse = command.getParameterizedResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
         assertThat(actualResponse).isEqualTo("There is no such subscription");
     }
@@ -67,7 +67,7 @@ public class UntrackSlashCommandTest {
     void should_returnSpecialMessage_when_linkIsNotValid(String link) {
         Message parameterizedMessage = getParameterizeMessageWithLinkAndUserId(link, 1L);
 
-        String actualResponse = command.getParameterizedResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
         assertThat(actualResponse).isEqualTo(STR."Error! \"\{link}\" is not correct");
     }
@@ -87,7 +87,7 @@ public class UntrackSlashCommandTest {
         User user = new User(userId);
 
         Message originalMessage = new Message();
-        Mockito.when(originalMessage.text()).thenReturn(command.getSimpleResponse());
+        Mockito.when(originalMessage.text()).thenReturn(command.executeAndGetResponse());
 
         Message parameterizedMessage = Mockito.spy(new Message());
         Mockito.when(parameterizedMessage.from()).thenReturn(user);

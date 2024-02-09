@@ -34,7 +34,7 @@ class TrackSlashCommandTest {
     void should_addLinkToDatabase() {
         Message parameterizedMessage = getDefaultParameterizedMessage();
 
-        String actualResponse = command.getParameterizedResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
         Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/link");
         assertDoesNotThrow(() ->
@@ -48,7 +48,7 @@ class TrackSlashCommandTest {
     void should_returnSpecialMessage_when_linkIsNotValid(String link) {
         Message parameterizedMessage = getParameterizeMessageWithLink(link);
 
-        String actualResponse = command.getParameterizedResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
         assertThat(actualResponse).isEqualTo(STR."Error! \"\{link}\" is not correct");
     }
@@ -72,7 +72,7 @@ class TrackSlashCommandTest {
         User user = new User(1L);
 
         Message originalMessage = new Message();
-        Mockito.when(originalMessage.text()).thenReturn(command.getSimpleResponse());
+        Mockito.when(originalMessage.text()).thenReturn(command.executeAndGetResponse());
 
         Message parameterizedMessage = Mockito.spy(new Message());
         Mockito.when(parameterizedMessage.from()).thenReturn(user);
