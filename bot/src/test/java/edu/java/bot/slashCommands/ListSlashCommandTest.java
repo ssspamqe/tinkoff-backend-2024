@@ -28,7 +28,6 @@ class ListSlashCommandTest {
     @BeforeEach
     void init() {
         MockitoAnnotations.openMocks(this);
-
     }
 
     @Test
@@ -41,17 +40,10 @@ class ListSlashCommandTest {
         );
         Mockito.when(subscriptionRepository.findAllByUserId(1)).thenReturn(subscriptionList);
 
-        Chat spyChat = Mockito.spy(new Chat());
-        Mockito.when(spyChat.id()).thenReturn(1L);
-
-        User user = new User(1L);
-
-        Message spyMessage = Mockito.spy(new Message());
-        Mockito.when(spyMessage.chat()).thenReturn(spyChat);
-        Mockito.when(spyMessage.from()).thenReturn(user);
+        Message spyMessage = getDefaultSpyMessage();
 
         //Act
-        SendMessage sendMessageRequest = command.getSendMessageRequest(spyMessage);
+        SendMessage sendMessageRequest = command.getSimpleResponse(spyMessage);
         String actualText = (String) sendMessageRequest.getParameters().get("text");
 
         //Asert
@@ -64,21 +56,14 @@ class ListSlashCommandTest {
         List<Subscription> subscriptionList = List.of();
         Mockito.when(subscriptionRepository.findAllByUserId(1)).thenReturn(subscriptionList);
 
-        Chat spyChat = Mockito.spy(new Chat());
-        Mockito.when(spyChat.id()).thenReturn(1L);
-
-        User user = new User(1L);
-
-        Message spyMessage = Mockito.spy(new Message());
-        Mockito.when(spyMessage.chat()).thenReturn(spyChat);
-        Mockito.when(spyMessage.from()).thenReturn(user);
+        Message spyMessage = getDefaultSpyMessage();
 
         //Act
-        SendMessage sendMessageRequest = command.getSendMessageRequest(spyMessage);
+        SendMessage sendMessageRequest = command.getSimpleResponse(spyMessage);
         String actualText = (String) sendMessageRequest.getParameters().get("text");
 
         //Asser
-        assertThat(actualText).isNotNull();
+        assertThat(actualText).isEqualTo("There is no any subscription");
     }
 
     @Test
@@ -90,5 +75,18 @@ class ListSlashCommandTest {
             () -> assertThat(botCommand.command()).isEqualTo("/start"),
             () -> assertThat(botCommand.description()).isEqualTo("Register in app")
         );
+    }
+
+    Message getDefaultSpyMessage() {
+        Chat spyChat = Mockito.spy(new Chat());
+        Mockito.when(spyChat.id()).thenReturn(1L);
+
+        User user = new User(1L);
+
+        Message spyMessage = Mockito.spy(new Message());
+        Mockito.when(spyMessage.chat()).thenReturn(spyChat);
+        Mockito.when(spyMessage.from()).thenReturn(user);
+
+        return spyMessage;
     }
 }

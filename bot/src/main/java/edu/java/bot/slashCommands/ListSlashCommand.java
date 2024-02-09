@@ -14,6 +14,8 @@ public class ListSlashCommand implements SlashCommand {
 
     private static final String DESCRIPTION = "Get list of subscriptions";
 
+    private static final String NO_SUBSCRIPTIONS_RESPONSE = "There is no active subscription";
+
     private final SubscriptionRepository subscriptionRepository;
 
     @Autowired
@@ -32,7 +34,7 @@ public class ListSlashCommand implements SlashCommand {
     }
 
     @Override
-    public SendMessage getSendMessageRequest(Message message) {
+    public SendMessage getSimpleResponse(Message message) {
         return null;
     }
 
