@@ -21,7 +21,6 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
-          java-options: '--enable-preview'
 
       - name: maven build
         run: mvn -pl bot -am package
