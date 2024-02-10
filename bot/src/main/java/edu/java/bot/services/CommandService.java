@@ -6,7 +6,9 @@ import com.pengrad.telegrambot.model.request.ForceReply;
 import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove;
 import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.services.exceptions.CantDefineSlashCommandFromTextException;
+import edu.java.bot.services.exceptions.NoSuchCommandException;
 import edu.java.bot.services.exceptions.NotAReplyMessageException;
+import edu.java.bot.services.exceptions.NotReplyOnBotMessageException;
 import edu.java.bot.services.exceptions.StrangeSlashCommandException;
 import edu.java.bot.slashCommands.NoParametersExecutableSlashCommand;
 import edu.java.bot.slashCommands.ParameterizedExecutableSlashCommand;
@@ -19,9 +21,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CommandService {
-
-    private static final String NO_SUCH_COMMAND_RESPONSE = "There is no such command";
-    private static final String NOT_REPLY_ON_BOT_MESSAGE = "Please, reply to my message to pass parameters";
 
     private Map<String, SlashCommand> allCommands;
 
@@ -63,7 +62,7 @@ public class CommandService {
         if (botMessage == null) {
             throw new NotAReplyMessageException("Passed message is not a reply (original Message is null)");
         } else if (!botMessage.from().isBot()) {
-            return NOT_REPLY_ON_BOT_MESSAGE;
+            throw new NotReplyOnBotMessageException("Message with parameters must be reply on bit message");
         }
 
         ParameterizedExecutableSlashCommand slashCommand = defineSlashCommandFromBotMessage(botMessage);
@@ -95,7 +94,7 @@ public class CommandService {
     private String handleCommand(Message message) {
         SlashCommand command = allCommands.get(message.text());
         return switch (command) {
-            case null -> NO_SUCH_COMMAND_RESPONSE;
+            case null -> throw new NoSuchCommandException(STR."There is no such command: \{message.text()}");
             case NoParametersExecutableSlashCommand noParametersExecutableSlashCommand ->
                 noParametersExecutableSlashCommand.executeAndGetResponse();
             case ParameterizedExecutableSlashCommand parameterizedExecutableSlashCommand ->
