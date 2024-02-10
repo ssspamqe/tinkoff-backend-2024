@@ -5,7 +5,6 @@ import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.request.ForceReply;
 import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove;
 import com.pengrad.telegrambot.request.SendMessage;
-import edu.java.bot.services.exceptions.CantDefineSlashCommandFromTextException;
 import edu.java.bot.services.exceptions.NoSuchCommandException;
 import edu.java.bot.services.exceptions.NotACommandOrUserParameterException;
 import edu.java.bot.services.exceptions.NotAReplyOnBotMessageException;
@@ -78,7 +77,6 @@ public class CommandService {
     private String handleCommand(Message message) {
         SlashCommand command = defineSlashCommand(message.text());
         return switch (command) {
-            case null -> throw new NoSuchCommandException(STR."There is no such command: \{message.text()}");
             case NoParametersExecutableSlashCommand noParametersExecutableSlashCommand ->
                 noParametersExecutableSlashCommand.executeAndGetResponse();
             case ParameterizedExecutableSlashCommand parameterizedExecutableSlashCommand ->
@@ -90,24 +88,22 @@ public class CommandService {
     }
 
     private SlashCommand defineSlashCommand(String text) {
-        int slashCommandsInMessageText = 0;
-        SlashCommand resultSlashCommand = null;
+        String firstCommand = extractFirstCommand(text);
+        SlashCommand slashCommand = allCommands.get(firstCommand);
+        if (slashCommand == null) {
+            throw new NoSuchCommandException(STR."There is no such command \"\{firstCommand}\"!");
+        }
+        return slashCommand;
+    }
 
-        for (var slashCommand : allCommands.values()) {
-            if (text.contains(slashCommand.getTextCommand())) {
-                slashCommandsInMessageText++;
-                resultSlashCommand = slashCommand;
+    private String extractFirstCommand(String text) {
+        String[] words = text.split(" ");
+        for (var word : words) {
+            if (word.startsWith("/")) {
+                return word;
             }
         }
-
-        if (slashCommandsInMessageText != 1) {
-            throw new CantDefineSlashCommandFromTextException(
-                STR."Message with text: \"\{text}\" expected to have 1 slashCommand, "
-                    + STR."but actual number: \{slashCommandsInMessageText}"
-            );
-        }
-
-        return resultSlashCommand;
+        return null;
     }
 
     private boolean isUserParameters(Message message) {
