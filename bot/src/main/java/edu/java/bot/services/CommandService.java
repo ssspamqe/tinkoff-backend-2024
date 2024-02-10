@@ -43,8 +43,8 @@ public class CommandService {
     public SendMessage handleMessage(Message message) {
         Long chatId = message.chat().id();
 
-        if (isCommandParameters(message)) {
-            String responseText = handleParameters(message);
+        if (isUserParameters(message)) {
+            String responseText = handleUserParameters(message);
             return new SendMessage(chatId, responseText).replyMarkup(new ReplyKeyboardRemove());
         } else if (message.text().startsWith("/")) {
             String responseText = handleCommand(message);
@@ -61,8 +61,8 @@ public class CommandService {
         }
     }
 
-    private String handleParameters(Message parameters) {
-        Message botMessage = parameters.replyToMessage();
+    private String handleUserParameters(Message userParameters) {
+        Message botMessage = userParameters.replyToMessage();
         if (botMessage == null) {
             throw new NotAReplyMessageException("Passed message is not a reply (original Message is null)");
         } else if (!botMessage.from().isBot()) {
@@ -70,7 +70,7 @@ public class CommandService {
         }
 
         ParameterizedExecutableSlashCommand slashCommand = defineSlashCommandFromBotMessage(botMessage);
-        return slashCommand.executeWithParametersAndGetResponse(parameters);
+        return slashCommand.executeWithParametersAndGetResponse(userParameters);
     }
 
     private ParameterizedExecutableSlashCommand defineSlashCommandFromBotMessage(Message originalMessage) {
@@ -108,7 +108,7 @@ public class CommandService {
         };
     }
 
-    private boolean isCommandParameters(Message message) {
+    private boolean isUserParameters(Message message) {
         Message repliedMessage = message.replyToMessage();
         return repliedMessage == null;
     }
