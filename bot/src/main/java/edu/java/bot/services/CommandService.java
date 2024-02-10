@@ -49,56 +49,34 @@ public class CommandService {
             String responseText = handleCommand(message);
             SendMessage sendMessageRequest = new SendMessage(chatId, responseText);
 
-            if (defineSlashCommandFromBotMessage(message).needAdditionalUserParameter()) {
+            if (defineSlashCommand(message.text()).needAdditionalUserParameter()) {
                 return sendMessageRequest.replyMarkup(new ForceReply());
             } else {
                 return sendMessageRequest.replyMarkup(new ReplyKeyboardRemove());
             }
 
         } else {
-            throw new NotACommandOrUserParameterException("It is not a command!");
+            throw new NotACommandOrUserParameterException("It is not a command or parameters!");
         }
     }
 
     private String handleUserParameters(Message userParameters) {
         Message botMessage = userParameters.replyToMessage();
         if (botMessage == null || !botMessage.from().isBot()) {
-            throw new NotAReplyOnBotMessageException("Message with parameters must be reply on bot message");
+            throw new NotAReplyOnBotMessageException("Message with parameters must be a reply on bot message");
         }
 
         ParameterizedExecutableSlashCommand slashCommand = null;
         try {
-            slashCommand = (ParameterizedExecutableSlashCommand) defineSlashCommandFromBotMessage(botMessage);
+            slashCommand = (ParameterizedExecutableSlashCommand) defineSlashCommand(botMessage.text());
         } catch (ClassCastException ex) {
-            throw new StrangeSlashCommandException(STR."Command from \"\{botMessage.text()}\" do not have parameters");
+            throw new StrangeSlashCommandException(STR."Command from message: \"\{botMessage.text()}\" doesn't have parameters");
         }
         return slashCommand.executeWithParametersAndGetResponse(userParameters);
-
-    }
-
-    private SlashCommand defineSlashCommandFromBotMessage(Message originalMessage) {
-        String messageText = originalMessage.text();
-        int slashCommandsInMessageText = 0;
-        SlashCommand resultSlashCommand = null;
-
-        for (var slashCommand : allCommands.values()) {
-            if (messageText.contains(slashCommand.getTextCommand())) {
-                slashCommandsInMessageText++;
-                resultSlashCommand = slashCommand;
-            }
-        }
-        if (slashCommandsInMessageText != 1) {
-            throw new CantDefineSlashCommandFromTextException(
-                STR."Message \"\{messageText}\" expected to have 1 slashCommand, "
-                    + STR."but actual number: \{slashCommandsInMessageText}"
-            );
-        }
-
-        return resultSlashCommand;
     }
 
     private String handleCommand(Message message) {
-        SlashCommand command = allCommands.get(message.text());
+        SlashCommand command = defineSlashCommand(message.text());
         return switch (command) {
             case null -> throw new NoSuchCommandException(STR."There is no such command: \{message.text()}");
             case NoParametersExecutableSlashCommand noParametersExecutableSlashCommand ->
@@ -109,6 +87,27 @@ public class CommandService {
                 STR."Command \"\{command.getTextCommand()}\" has no way of execution"
             );
         };
+    }
+
+    private SlashCommand defineSlashCommand(String text) {
+        int slashCommandsInMessageText = 0;
+        SlashCommand resultSlashCommand = null;
+
+        for (var slashCommand : allCommands.values()) {
+            if (text.contains(slashCommand.getTextCommand())) {
+                slashCommandsInMessageText++;
+                resultSlashCommand = slashCommand;
+            }
+        }
+
+        if (slashCommandsInMessageText != 1) {
+            throw new CantDefineSlashCommandFromTextException(
+                STR."Message with text: \"\{text}\" expected to have 1 slashCommand, "
+                    + STR."but actual number: \{slashCommandsInMessageText}"
+            );
+        }
+
+        return resultSlashCommand;
     }
 
     private boolean isUserParameters(Message message) {
