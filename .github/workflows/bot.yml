@@ -23,7 +23,7 @@ jobs:
           cache: maven
 
       - name: maven build
-        run: mvn -pl bot -am package
+        run: mvn -pl bot -am package --enable-preview
 
       - id: jacoco
         uses: madrapps/jacoco-report@v1.6.1
