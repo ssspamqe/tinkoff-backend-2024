@@ -62,7 +62,7 @@ public class TrackSlashSlashCommand implements ParameterizedExecutableSlashComma
         var violationList = violations.stream().toList();
 
         StringBuilder response = new StringBuilder();
-        response.append("Can't track link because:\n");
+        response.append("Can't /track link because:\n");
         for (int i = 0; i < violationList.size(); i++) {
             response.append(STR."\{i + 1}) \{violationList.get(i).getMessage()}");
         }

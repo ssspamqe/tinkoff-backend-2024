@@ -55,7 +55,7 @@ class TrackSlashCommandTest {
         String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
         String expectedResponse = """
-            Can't track link because:
+            Can't /track link because:
             1) must match "https?://.*\"""";
         assertThat(actualResponse).isEqualTo(expectedResponse);
     }
