@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TrackSlashSlashCommand implements ParameterizedSlashCommand {
+public class TrackSlashSlashCommand implements ParameterizedExecutableSlashCommand, NoParametersExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/track";
 

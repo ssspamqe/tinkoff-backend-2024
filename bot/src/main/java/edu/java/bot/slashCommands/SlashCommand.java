@@ -2,13 +2,11 @@ package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 
-public interface SlashCommand {
+public sealed interface SlashCommand permits ParameterizedExecutableSlashCommand, NoParametersExecutableSlashCommand {
 
     String getTextCommand();
 
     String getDescription();
-
-    String executeAndGetResponse();
 
     BotCommand getBotCommand();
 }

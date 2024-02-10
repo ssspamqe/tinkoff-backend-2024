@@ -1,12 +1,10 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
-import com.pengrad.telegrambot.model.Message;
-import com.pengrad.telegrambot.request.SendMessage;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelpSlashCommand implements SlashCommand {
+public class HelpSlashCommand implements NoParametersExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/help";
 

@@ -1,11 +1,10 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
-import com.pengrad.telegrambot.model.Message;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StartSlashCommand implements SlashCommand {
+public class StartSlashCommand implements NoParametersExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/start";
 
