@@ -11,20 +11,25 @@ public class HashMapSubscriptionRepository extends HashMapRepository<Subscriptio
 
     @Override
     public List<Subscription> findAllByUserId(long userId) {
-        return database.values()
-            .stream()
-            .filter(subscription -> subscription != null && subscription.getUserId() == userId)
-            .toList();
+        return executeWithLock(rwLock.readLock(), () ->
+            database.values()
+                .stream()
+                .filter(subscription -> subscription != null && subscription.getUserId() == userId)
+                .toList()
+        );
     }
 
-    @Override
+    @Override //TODO increase performance
     public void save(Subscription subscription) {
-        Long id = subscription.getId();
-        if (id == 0) {
-            id = getFreeId();
-        }
-        subscription.setId(id);
-        database.put(id, subscription);
+        executeWithLock(rwLock.writeLock(), () -> {
+            if (subscription.getId() != 0) {
+                database.put(subscription.getId(), subscription);
+            } else {
+                long id = getFreeId();
+                subscription.setId(id);
+                database.put(id, subscription);
+            }
+        });
     }
 
     private long getFreeId() {

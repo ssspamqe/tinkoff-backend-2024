@@ -18,18 +18,20 @@ public class TelegramBotController {
     private static final Logger LOGGER = LogManager.getLogger();
 
     private final CommandService commandService;
-
     private final ApplicationConfig config;
+    private final LoggingCallback loggingCallback;
 
     private TelegramBot bot;
 
     @Autowired
     public TelegramBotController(
         CommandService commandService,
-        ApplicationConfig config
+        ApplicationConfig config,
+        LoggingCallback loggingCallback
     ) {
         this.commandService = commandService;
         this.config = config;
+        this.loggingCallback = loggingCallback;
 
         initializeBot();
     }
@@ -40,7 +42,7 @@ public class TelegramBotController {
         bot.setUpdatesListener(updates -> {
             updates.forEach(update -> {
                 SendMessage response = handleUpdate(update);
-                bot.execute(response);
+                bot.execute(response, loggingCallback);
             });
             return UpdatesListener.CONFIRMED_UPDATES_ALL;
         });
