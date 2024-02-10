@@ -37,9 +37,9 @@ class TrackSlashCommandTest {
 
     @Test
     void should_addLinkToDatabase() {
-        Message parameterizedMessage = getMessageWithLinkAndUserId("https://first/link", 1L);
+        Message parameterMessage = getMessageWithLinkAndUserId("https://first/link", 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
 
         Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/link");
 
@@ -50,9 +50,9 @@ class TrackSlashCommandTest {
     @ParameterizedTest
     @ValueSource(strings = {"ashajdfjakd sdfsdf", "asdjasd ", "/track https:Mylink", ""})
     void should_returnSpecialMessage_when_linkNotMatchRegex(String link) {
-        Message parameterizedMessage = getMessageWithLinkAndUserId(link, 1L);
+        Message parameterMessage = getMessageWithLinkAndUserId(link, 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
 
         String expectedResponse = """
             Can't /track link because:

@@ -38,18 +38,15 @@ public class UntrackSlashCommandTest {
 
     @Test
     void should_removeSubscription() {
-        //Assert
         var subscriptionList = List.of(
             new Subscription(1L, 1L, "https://first/link"),
             new Subscription(2L, 1L, "https://second/link")
         );
         Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
-        Message parameterizedMessage = getParameterizeMessageWithLinkAndUserId("https://first/link", 1L);
+        Message parameterMessage = getParameterMessageWithLinkAndUserId("https://first/link", 1L);
 
-        //Act
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
 
-        //Assert
         Mockito.verify(subscriptionRepository, Mockito.times(1)).deleteById(1L);
         assertThat(actualResponse).isEqualTo("/unrack command succeed!");
     }
@@ -61,9 +58,9 @@ public class UntrackSlashCommandTest {
             new Subscription(2L, 1L, "https://second/link")
         );
         Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
-        Message parameterizedMessage = getParameterizeMessageWithLinkAndUserId("https://third/link", 1L);
+        Message parameterMessage = getParameterMessageWithLinkAndUserId("https://third/link", 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
 
         assertThat(actualResponse).isEqualTo("You don't have such subscription");
     }
@@ -71,9 +68,9 @@ public class UntrackSlashCommandTest {
     @ParameterizedTest
     @ValueSource(strings = {"ashajdfjakd sdfsdf", "asdjasd ", "/track httsp:Mylink", ""})
     void should_returnSpecialMessage_when_linkIsNotValid(String link) {
-        Message parameterizedMessage = getParameterizeMessageWithLinkAndUserId(link, 1L);
+        Message parameterMessage = getParameterMessageWithLinkAndUserId(link, 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
 
         String expectedResponse = """
             Can't /untrack link because:
@@ -92,7 +89,7 @@ public class UntrackSlashCommandTest {
         );
     }
 
-    Message getParameterizeMessageWithLinkAndUserId(String link, Long userId) {
+    Message getParameterMessageWithLinkAndUserId(String link, Long userId) {
         User user = new User(userId);
 
         Message originalMessage = Mockito.spy(new Message());

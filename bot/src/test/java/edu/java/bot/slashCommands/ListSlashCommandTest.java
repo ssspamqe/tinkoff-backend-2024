@@ -39,7 +39,7 @@ class ListSlashCommandTest {
         );
         Mockito.when(subscriptionRepository.findAllByUserId(1)).thenReturn(subscriptionList);
 
-        Message spyMessage = getDefaultSpyMessage();
+        Message spyMessage = getSpyMessageWithUserId(1L);
 
         //Act
         String actualResponse = command.executeWithParametersAndGetResponse(spyMessage);
@@ -54,7 +54,7 @@ class ListSlashCommandTest {
         List<Subscription> subscriptionList = List.of();
         Mockito.when(subscriptionRepository.findAllByUserId(1)).thenReturn(subscriptionList);
 
-        Message spyMessage = getDefaultSpyMessage();
+        Message spyMessage = getSpyMessageWithUserId(1L);
 
         //Act
         String actualResponse = command.executeWithParametersAndGetResponse(spyMessage);
@@ -74,11 +74,11 @@ class ListSlashCommandTest {
         );
     }
 
-    Message getDefaultSpyMessage() {
+    Message getSpyMessageWithUserId(Long userId) {
         Chat spyChat = Mockito.spy(new Chat());
         Mockito.when(spyChat.id()).thenReturn(1L);
 
-        User user = new User(1L);
+        User user = new User(userId);
 
         Message spyMessage = Mockito.spy(new Message());
         Mockito.when(spyMessage.chat()).thenReturn(spyChat);

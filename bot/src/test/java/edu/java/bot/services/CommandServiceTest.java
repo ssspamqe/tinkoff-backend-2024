@@ -75,7 +75,6 @@ public class CommandServiceTest {
         Mockito.when(spyMessage.text()).thenReturn("/list");
         Mockito.when(spyMessage.chat()).thenReturn(new Chat());
         Mockito.doReturn("subscriptionList").when(listSlashCommand).executeWithParametersAndGetResponse(spyMessage);
-        //Mockito.when(listSlashCommand.executeWithParametersAndGetResponse(spyMessage)).thenReturn();
 
         commandService.handleMessage(spyMessage);
 
@@ -84,6 +83,7 @@ public class CommandServiceTest {
 
     @Test
     void should_callParameterizedExecution_when_passedReplyMessage() {
+        //Arrange
         User botUser = Mockito.spy(new User(1L));
         Mockito.when(botUser.isBot()).thenReturn(true);
 
@@ -97,13 +97,16 @@ public class CommandServiceTest {
 
         Mockito.doReturn("response").when(trackSlashCommand).executeWithParametersAndGetResponse(parameterMessage);
 
+        //Act
         commandService.handleMessage(parameterMessage);
 
+        //Assert
         Mockito.verify(trackSlashCommand, Mockito.times(1)).executeWithParametersAndGetResponse(parameterMessage);
     }
 
     @Test
     void should_throwSpecialException_when_repliedNotOnBotMessage() {
+        //Arrange
         User botUser = Mockito.spy(new User(1L));
         Mockito.when(botUser.isBot()).thenReturn(false);
 
@@ -114,6 +117,7 @@ public class CommandServiceTest {
         Mockito.when(parameterMessage.replyToMessage()).thenReturn(repliedMessage);
         Mockito.when(parameterMessage.chat()).thenReturn(new Chat());
 
+        //Act, Assert
         assertThatThrownBy(
             () -> commandService.handleMessage(parameterMessage)
         ).isInstanceOf(NotAReplyOnBotMessageException.class);
