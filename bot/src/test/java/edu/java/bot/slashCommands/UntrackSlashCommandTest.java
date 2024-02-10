@@ -5,6 +5,8 @@ import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,6 +16,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
@@ -21,6 +24,9 @@ public class UntrackSlashCommandTest {
 
     @Mock
     SubscriptionRepository subscriptionRepository;
+
+    @Spy
+    Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
     @InjectMocks
     UntrackSlashCommand command;
@@ -45,7 +51,7 @@ public class UntrackSlashCommandTest {
 
         //Assert
         Mockito.verify(subscriptionRepository, Mockito.times(1)).deleteById(1L);
-        assertThat(actualResponse).isEqualTo("The subscription on https://first/link was successfully deleted");
+        assertThat(actualResponse).isEqualTo("/unrack command succeed! ");
     }
 
     @Test
@@ -59,7 +65,7 @@ public class UntrackSlashCommandTest {
 
         String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
-        assertThat(actualResponse).isEqualTo("There is no such subscription");
+        assertThat(actualResponse).isEqualTo("You don't have such subscription");
     }
 
     @ParameterizedTest
@@ -69,7 +75,10 @@ public class UntrackSlashCommandTest {
 
         String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
-        assertThat(actualResponse).isEqualTo(STR."Error! \"\{link}\" is not correct");
+        String expectedResponse = """
+            Can't /untrack link because:
+            1) must match "https?://.*\"""";
+        assertThat(actualResponse).isEqualTo(expectedResponse);
     }
 
     @Test
@@ -86,7 +95,7 @@ public class UntrackSlashCommandTest {
     Message getParameterizeMessageWithLinkAndUserId(String link, Long userId) {
         User user = new User(userId);
 
-        Message originalMessage = new Message();
+        Message originalMessage = Mockito.spy(new Message());
         Mockito.when(originalMessage.text()).thenReturn(command.executeAndGetResponse());
 
         Message parameterizedMessage = Mockito.spy(new Message());
