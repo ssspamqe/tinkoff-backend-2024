@@ -2,6 +2,8 @@ package edu.java.bot.services;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
+import com.pengrad.telegrambot.model.request.ForceReply;
+import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove;
 import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.services.exceptions.CantDefineSlashCommandFromTextException;
 import edu.java.bot.services.exceptions.NotAReplyMessageException;
@@ -39,15 +41,15 @@ public class CommandService {
     }
 
     public SendMessage handleMessage(Message message) {
-        String response = "";
-        if (isCommandParameters(message)) {
-            response = handleParameters(message);
-        } else {
-            response = handleCommand(message);
-        }
-
         Long chatId = message.chat().id();
-        return new SendMessage(chatId, response);
+
+        if (isCommandParameters(message)) {
+            String responseText = handleParameters(message);
+            return new SendMessage(chatId, responseText).replyMarkup(new ReplyKeyboardRemove());
+        } else {
+            String responseText = handleCommand(message);
+            return new SendMessage(chatId, responseText).replyMarkup(new ForceReply());
+        }
     }
 
     private String handleParameters(Message parameters) {
