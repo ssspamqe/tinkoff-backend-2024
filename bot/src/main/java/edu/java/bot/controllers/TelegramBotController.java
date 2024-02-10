@@ -47,12 +47,11 @@ public class TelegramBotController {
     }
 
     private SendMessage handleUpdate(Update update) {
-        Long chatId = update.message().chat().id();
-
         try {
             return commandService.handleMessage(update.message());
         } catch (Exception ex) {
-            LOGGER.error(ex);
+            LOGGER.error(ex.getMessage());
+            Long chatId = update.message().chat().id();
             return new SendMessage(chatId, ex.getMessage());
         }
     }
