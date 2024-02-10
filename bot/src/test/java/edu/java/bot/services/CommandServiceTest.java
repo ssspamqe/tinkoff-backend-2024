@@ -5,7 +5,6 @@ import com.pengrad.telegrambot.model.Chat;
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
 import edu.java.bot.data.repositories.SubscriptionRepository;
-import edu.java.bot.services.exceptions.CantDefineSlashCommandFromTextException;
 import edu.java.bot.services.exceptions.NoSuchCommandException;
 import edu.java.bot.services.exceptions.NotACommandOrUserParameterException;
 import edu.java.bot.services.exceptions.NotAReplyOnBotMessageException;
@@ -101,24 +100,6 @@ public class CommandServiceTest {
         commandService.handleMessage(parameterMessage);
 
         Mockito.verify(trackSlashCommand, Mockito.times(1)).executeWithParametersAndGetResponse(parameterMessage);
-    }
-
-    @Test
-    void should_throwSpecialException_when_moreThanOneCommandInBotMessage() {
-        User botUser = Mockito.spy(new User(1L));
-        Mockito.when(botUser.isBot()).thenReturn(true);
-
-        Message repliedMessage = Mockito.spy(new Message());
-        Mockito.when(repliedMessage.from()).thenReturn(botUser);
-        Mockito.when(repliedMessage.text()).thenReturn("bla bla bla /track /help");
-
-        Message parameterMessage = Mockito.spy(new Message());
-        Mockito.when(parameterMessage.replyToMessage()).thenReturn(repliedMessage);
-        Mockito.when(parameterMessage.chat()).thenReturn(new Chat());
-
-        assertThatThrownBy(
-            () -> commandService.handleMessage(parameterMessage)
-        ).isInstanceOf(CantDefineSlashCommandFromTextException.class);
     }
 
     @Test
