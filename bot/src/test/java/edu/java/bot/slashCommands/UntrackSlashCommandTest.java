@@ -51,7 +51,7 @@ public class UntrackSlashCommandTest {
 
         //Assert
         Mockito.verify(subscriptionRepository, Mockito.times(1)).deleteById(1L);
-        assertThat(actualResponse).isEqualTo("/unrack command succeed! ");
+        assertThat(actualResponse).isEqualTo("/unrack command succeed!");
     }
 
     @Test
