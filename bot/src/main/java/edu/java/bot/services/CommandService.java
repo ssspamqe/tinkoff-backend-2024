@@ -109,7 +109,6 @@ public class CommandService {
     }
 
     private boolean isUserParameters(Message message) {
-        Message repliedMessage = message.replyToMessage();
-        return repliedMessage == null;
+        return message.replyToMessage() != null;
     }
 }
