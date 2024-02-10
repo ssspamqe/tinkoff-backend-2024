@@ -7,7 +7,7 @@ import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove;
 import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.services.exceptions.CantDefineSlashCommandFromTextException;
 import edu.java.bot.services.exceptions.NotAReplyMessageException;
-import edu.java.bot.services.exceptions.StrangeSlashCommand;
+import edu.java.bot.services.exceptions.StrangeSlashCommandException;
 import edu.java.bot.slashCommands.NoParametersExecutableSlashCommand;
 import edu.java.bot.slashCommands.ParameterizedExecutableSlashCommand;
 import edu.java.bot.slashCommands.SlashCommand;
@@ -101,7 +101,7 @@ public class CommandService {
             case ParameterizedExecutableSlashCommand parameterizedExecutableSlashCommand ->
                 parameterizedExecutableSlashCommand.executeWithParametersAndGetResponse(message);
             default ->
-                throw new StrangeSlashCommand(STR."Command \"\{command.getTextCommand()}\" has no way of execution");
+                throw new StrangeSlashCommandException(STR."Command \"\{command.getTextCommand()}\" has no way of execution");
         };
     }
 
