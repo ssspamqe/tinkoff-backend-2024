@@ -69,21 +69,20 @@ public class CommandService {
             throw new NotReplyOnBotMessageException("Message with parameters must be reply on bit message");
         }
 
-        ParameterizedExecutableSlashCommand slashCommand = defineSlashCommandFromBotMessage(botMessage);
+        ParameterizedExecutableSlashCommand slashCommand =
+            (ParameterizedExecutableSlashCommand) defineSlashCommandFromBotMessage(botMessage);
         return slashCommand.executeWithParametersAndGetResponse(userParameters);
     }
 
-    private ParameterizedExecutableSlashCommand defineSlashCommandFromBotMessage(Message originalMessage) {
+    private SlashCommand defineSlashCommandFromBotMessage(Message originalMessage) {
         String messageText = originalMessage.text();
         int slashCommandsInMessageText = 0;
-        ParameterizedExecutableSlashCommand resultSlashCommand = null;
+        SlashCommand resultSlashCommand = null;
 
         for (var slashCommand : allCommands.values()) {
             if (messageText.contains(slashCommand.getTextCommand())) {
                 slashCommandsInMessageText++;
-                if (slashCommand instanceof ParameterizedExecutableSlashCommand) {
-                    resultSlashCommand = (ParameterizedExecutableSlashCommand) slashCommand;
-                }
+                resultSlashCommand = slashCommand;
             }
         }
         if (slashCommandsInMessageText != 1) {
