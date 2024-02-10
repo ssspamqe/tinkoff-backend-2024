@@ -42,7 +42,6 @@ class TrackSlashCommandTest {
         String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
 
         Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/link");
-
         Mockito.verify(subscriptionRepository, Mockito.times(1)).save(expectedToSaveSubscription);
         assertThat(actualResponse).isEqualTo("Given link was successfully added to /track it!");
     }
@@ -58,6 +57,16 @@ class TrackSlashCommandTest {
             Can't /track link because:
             1) must match "https?://.*\"""";
         assertThat(actualResponse).isEqualTo(expectedResponse);
+    }
+
+    @Test
+    void should_returnSpecialMessage_when_doubleLinks() {
+        Message parameterMessage = getMessageWithLinkAndUserId("https://ll", 1L);
+
+        command.executeWithParametersAndGetResponse(parameterMessage);
+        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
+
+        assertThat(actualResponse).isEqualTo("This link was already added to /track it");
     }
 
     @Test
