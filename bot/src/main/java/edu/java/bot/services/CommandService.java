@@ -36,8 +36,8 @@ public class CommandService {
     }
 
     public BotCommand[] getAllBotCommands() {
-        return (BotCommand[]) allCommands.values().stream()
-            .map(SlashCommand::getBotCommand).toArray();
+        return allCommands.values().stream()
+            .map(SlashCommand::getBotCommand).toArray(BotCommand[]::new);
     }
 
     public SendMessage handleMessage(Message message) {
