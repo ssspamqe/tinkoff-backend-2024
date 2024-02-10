@@ -17,6 +17,7 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
     private static final String DESCRIPTION = "Start tracking updates from given link";
     private static final String LINK_SUCCESSFULLY_ADDED_MESSAGE = "Given link was successfully added to /track it!";
     private static final String PARAMETERS_REQUEST_MESSAGE = "Reply to this message with link to /track it!";
+    private static final String SUBSCRIPTION_WAS_PREVIOUSLY_ADDED = "This link was already added to /track it";
 
     private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = true;
 
@@ -55,8 +56,11 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
             return getErrorResponse(triggeredViolations);
         }
 
-        subscriptionRepository.save(subscription);
+        if (subscriptionWasPreviouslyAdded(subscription)) {
+            return SUBSCRIPTION_WAS_PREVIOUSLY_ADDED;
+        }
 
+        subscriptionRepository.save(subscription);
         return LINK_SUCCESSFULLY_ADDED_MESSAGE;
     }
 
@@ -70,6 +74,14 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
         }
 
         return response.toString();
+    }
+
+    private boolean subscriptionWasPreviouslyAdded(Subscription subscription) {
+        var userSubscriptions = subscriptionRepository.findAllByUserId(subscription.getUserId());
+        return userSubscriptions.stream()
+            .noneMatch(
+                oldSubscription -> subscription.getLink().equals(oldSubscription.getLink())
+            );
     }
 
     @Override
