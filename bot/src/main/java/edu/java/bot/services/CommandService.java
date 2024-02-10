@@ -69,9 +69,14 @@ public class CommandService {
             throw new NotReplyOnBotMessageException("Message with parameters must be reply on bit message");
         }
 
-        ParameterizedExecutableSlashCommand slashCommand =
-            (ParameterizedExecutableSlashCommand) defineSlashCommandFromBotMessage(botMessage);
+        ParameterizedExecutableSlashCommand slashCommand = null;
+        try {
+            slashCommand = (ParameterizedExecutableSlashCommand) defineSlashCommandFromBotMessage(botMessage);
+        } catch (Exception ex) {
+            throw new StrangeSlashCommandException(STR."Command from \{botMessage.text()} do not have parameters");
+        }
         return slashCommand.executeWithParametersAndGetResponse(userParameters);
+
     }
 
     private SlashCommand defineSlashCommandFromBotMessage(Message originalMessage) {
