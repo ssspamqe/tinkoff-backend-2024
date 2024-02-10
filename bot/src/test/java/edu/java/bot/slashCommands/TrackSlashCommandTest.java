@@ -5,6 +5,8 @@ import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,14 +15,17 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class TrackSlashCommandTest {
 
     @Mock
     SubscriptionRepository subscriptionRepository;
+
+    @Spy
+    Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
     @InjectMocks
     TrackSlashSlashCommand command;
@@ -32,25 +37,27 @@ class TrackSlashCommandTest {
 
     @Test
     void should_addLinkToDatabase() {
-        Message parameterizedMessage = getDefaultParameterizedMessage();
+        Message parameterizedMessage = getMessageWithLinkAndUserId("https://first/link", 1L);
 
         String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
         Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/link");
-        assertDoesNotThrow(() ->
-            Mockito.verify(subscriptionRepository, Mockito.times(1)).save(expectedToSaveSubscription)
-        );
-        assertThat(actualResponse).isEqualTo("Successfully added https://first/link for tracking!");
+
+        Mockito.verify(subscriptionRepository, Mockito.times(1)).save(expectedToSaveSubscription);
+        assertThat(actualResponse).isEqualTo("Given link was successfully added to /track it!");
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"ashajdfjakd sdfsdf", "asdjasd ", "/track httsp:Mylink", ""})
-    void should_returnSpecialMessage_when_linkIsNotValid(String link) {
-        Message parameterizedMessage = getParameterizeMessageWithLink(link);
+    @ValueSource(strings = {"ashajdfjakd sdfsdf", "asdjasd ", "/track https:Mylink", ""})
+    void should_returnSpecialMessage_when_linkNotMatchRegex(String link) {
+        Message parameterizedMessage = getMessageWithLinkAndUserId(link, 1L);
 
         String actualResponse = command.executeWithParametersAndGetResponse(parameterizedMessage);
 
-        assertThat(actualResponse).isEqualTo(STR."Error! \"\{link}\" is not correct");
+        String expectedResponse = """
+            Can't track link because:
+            1) must match "https?://.*\"""";
+        assertThat(actualResponse).isEqualTo(expectedResponse);
     }
 
     @Test
@@ -59,19 +66,15 @@ class TrackSlashCommandTest {
 
         assertAll(
             "Bot command instance should have correct text command and description",
-            () -> assertThat(botCommand.command()).isEqualTo("/track"),
-            () -> assertThat(botCommand.description()).isEqualTo("Start tracking updates from given link")
+            () -> assertThat(botCommand.command()).isEqualTo(command.getTextCommand()),
+            () -> assertThat(botCommand.description()).isEqualTo(command.getDescription())
         );
     }
 
-    Message getDefaultParameterizedMessage() {
-        return getParameterizeMessageWithLink("https://first/link");
-    }
+    Message getMessageWithLinkAndUserId(String link, Long userId) {
+        User user = new User(userId);
 
-    Message getParameterizeMessageWithLink(String link) {
-        User user = new User(1L);
-
-        Message originalMessage = new Message();
+        Message originalMessage = Mockito.spy(new Message());
         Mockito.when(originalMessage.text()).thenReturn(command.executeAndGetResponse());
 
         Message parameterizedMessage = Mockito.spy(new Message());
