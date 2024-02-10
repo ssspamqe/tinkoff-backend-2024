@@ -69,7 +69,9 @@ public class CommandService {
         try {
             slashCommand = (ParameterizedExecutableSlashCommand) defineSlashCommand(botMessage.text());
         } catch (ClassCastException ex) {
-            throw new StrangeSlashCommandException(STR."Command from message: \"\{botMessage.text()}\" doesn't have parameters");
+            throw new StrangeSlashCommandException(
+                STR."Command from message: \"\{botMessage.text()}\" doesn't have parameters"
+            );
         }
         return slashCommand.executeWithParametersAndGetResponse(userParameters);
     }
