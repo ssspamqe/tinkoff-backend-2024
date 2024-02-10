@@ -7,6 +7,7 @@ import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove;
 import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.services.exceptions.CantDefineSlashCommandFromTextException;
 import edu.java.bot.services.exceptions.NoSuchCommandException;
+import edu.java.bot.services.exceptions.NotACommandOrUserParameterException;
 import edu.java.bot.services.exceptions.NotAReplyMessageException;
 import edu.java.bot.services.exceptions.NotReplyOnBotMessageException;
 import edu.java.bot.services.exceptions.StrangeSlashCommandException;
@@ -45,7 +46,7 @@ public class CommandService {
         if (isCommandParameters(message)) {
             String responseText = handleParameters(message);
             return new SendMessage(chatId, responseText).replyMarkup(new ReplyKeyboardRemove());
-        } else {
+        } else if (message.text().startsWith("/")) {
             String responseText = handleCommand(message);
             SendMessage sendMessageRequest = new SendMessage(chatId, responseText);
 
@@ -54,6 +55,9 @@ public class CommandService {
             } else {
                 return sendMessageRequest.replyMarkup(new ReplyKeyboardRemove());
             }
+
+        } else {
+            throw new NotACommandOrUserParameterException("Haha, funny joke");
         }
     }
 

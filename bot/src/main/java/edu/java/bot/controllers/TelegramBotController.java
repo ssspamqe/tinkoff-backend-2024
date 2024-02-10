@@ -3,7 +3,6 @@ package edu.java.bot.controllers;
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.UpdatesListener;
 import com.pengrad.telegrambot.model.Update;
-import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove;
 import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.request.SetMyCommands;
 import edu.java.bot.configuration.ApplicationConfig;
@@ -48,18 +47,13 @@ public class TelegramBotController {
     }
 
     private SendMessage handleUpdate(Update update) {
-        String text = update.message().text();
         Long chatId = update.message().chat().id();
 
-        if (text.startsWith("/")) {
-            try {
-                return commandService.handleMessage(update.message());
-            } catch (Exception ex) {
-                LOGGER.error(ex);
-                return new SendMessage(chatId, STR."Error occurred: \{ex.getMessage()} ");
-            }
-        } else {
-            return new SendMessage(chatId, "Haha, funny joke").replyMarkup(new ReplyKeyboardRemove());
+        try {
+            return commandService.handleMessage(update.message());
+        } catch (Exception ex) {
+            LOGGER.error(ex);
+            return new SendMessage(chatId, STR."Error occurred: \{ex.getMessage()} ");
         }
     }
 
