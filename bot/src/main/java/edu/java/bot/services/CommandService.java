@@ -56,7 +56,7 @@ public class CommandService {
             }
 
         } else {
-            throw new NotACommandOrUserParameterException("Haha, funny joke");
+            throw new NotACommandOrUserParameterException("It is not a command!");
         }
     }
 

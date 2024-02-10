@@ -60,7 +60,7 @@ class ListSlashCommandTest {
         String actualResponse = command.executeWithParametersAndGetResponse(spyMessage);
 
         //Asser
-        assertThat(actualResponse).isEqualTo("There is no active subscription");
+        assertThat(actualResponse).isEqualTo("There is no active subscriptions");
     }
 
     @Test

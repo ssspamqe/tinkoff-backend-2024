@@ -53,7 +53,7 @@ public class TelegramBotController {
             return commandService.handleMessage(update.message());
         } catch (Exception ex) {
             LOGGER.error(ex);
-            return new SendMessage(chatId, STR."Error occurred: \{ex.getMessage()} ");
+            return new SendMessage(chatId, ex.getMessage());
         }
     }
 
