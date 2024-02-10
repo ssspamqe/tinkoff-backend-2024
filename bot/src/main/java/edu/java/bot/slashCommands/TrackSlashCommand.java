@@ -15,8 +15,8 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
 
     private static final String TEXT_COMMAND = "/track";
     private static final String DESCRIPTION = "Start tracking updates from given link";
-    private static final String LINK_SUCCESSFULLY_ADDED = "Given link was successfully added to /track it!";
-    private static final String INIT_REQUEST_MESSAGE = "Reply to this message with link to /track it!";
+    private static final String LINK_SUCCESSFULLY_ADDED_MESSAGE = "Given link was successfully added to /track it!";
+    private static final String PARAMETERS_REQUEST_MESSAGE = "Reply to this message with link to /track it!";
 
     private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = true;
 
@@ -41,7 +41,7 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
 
     @Override
     public String executeAndGetResponse() {
-        return INIT_REQUEST_MESSAGE;
+        return PARAMETERS_REQUEST_MESSAGE;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
 
         subscriptionRepository.save(subscription);
 
-        return LINK_SUCCESSFULLY_ADDED;
+        return LINK_SUCCESSFULLY_ADDED_MESSAGE;
     }
 
     private String getErrorResponse(Set<ConstraintViolation<Subscription>> violations) {

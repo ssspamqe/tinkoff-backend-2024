@@ -16,9 +16,9 @@ public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand,
 
     private static final String TEXT_COMMAND = "/untrack";
     private static final String DESCRIPTION = "Stop tracking updates from given link";
-    private static final String INIT_REQUEST_MESSAGE = "Reply to this message with link to /untrack it!";
-    private static final String NO_SUCH_SUBSCRIPTION_RESPONSE = "You don't have such subscription";
-    private static final String SUCCESSFULLY_UNTRACKED_RESPONSE = "/unrack command succeed!";
+    private static final String PARAMETERS_REQUEST_MESSAGE = "Reply to this message with link to /untrack it!";
+    private static final String NO_SUCH_SUBSCRIPTION_MESSAGE = "You don't have such subscription";
+    private static final String SUCCESSFULLY_UNTRACKED_MESSAGE = "/unrack command succeed!";
 
     private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = true;
 
@@ -43,7 +43,7 @@ public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand,
 
     @Override
     public String executeAndGetResponse() {
-        return INIT_REQUEST_MESSAGE;
+        return PARAMETERS_REQUEST_MESSAGE;
     }
 
     @Override
@@ -64,11 +64,11 @@ public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand,
                     subscription -> link.equals(subscription.getLink())
                 ).findFirst();
         if (oldSubscription.isEmpty()) {
-            return NO_SUCH_SUBSCRIPTION_RESPONSE;
+            return NO_SUCH_SUBSCRIPTION_MESSAGE;
         }
 
         subscriptionRepository.deleteById(oldSubscription.get().getId());
-        return SUCCESSFULLY_UNTRACKED_RESPONSE;
+        return SUCCESSFULLY_UNTRACKED_MESSAGE;
     }
 
     private String getErrorResponse(Set<ConstraintViolation<Subscription>> violations) {
