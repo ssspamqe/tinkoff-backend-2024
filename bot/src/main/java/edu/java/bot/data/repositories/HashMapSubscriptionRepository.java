@@ -12,7 +12,7 @@ public class HashMapSubscriptionRepository extends HashMapRepository<Subscriptio
     public List<Subscription> findAllByUserId(long userId) {
         return database.values()
             .stream().
-            filter(subscription -> subscription.getUserId() == userId)
+            filter(subscription -> subscription != null && subscription.getUserId() == userId)
             .toList();
     }
 
