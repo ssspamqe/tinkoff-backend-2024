@@ -8,8 +8,7 @@ import com.pengrad.telegrambot.request.SendMessage;
 import edu.java.bot.services.exceptions.CantDefineSlashCommandFromTextException;
 import edu.java.bot.services.exceptions.NoSuchCommandException;
 import edu.java.bot.services.exceptions.NotACommandOrUserParameterException;
-import edu.java.bot.services.exceptions.NotAReplyMessageException;
-import edu.java.bot.services.exceptions.NotReplyOnBotMessageException;
+import edu.java.bot.services.exceptions.NotAReplyOnBotMessageException;
 import edu.java.bot.services.exceptions.StrangeSlashCommandException;
 import edu.java.bot.slashCommands.NoParametersExecutableSlashCommand;
 import edu.java.bot.slashCommands.ParameterizedExecutableSlashCommand;
@@ -63,10 +62,8 @@ public class CommandService {
 
     private String handleUserParameters(Message userParameters) {
         Message botMessage = userParameters.replyToMessage();
-        if (botMessage == null) {
-            throw new NotAReplyMessageException("Passed message is not a reply (original Message is null)");
-        } else if (!botMessage.from().isBot()) {
-            throw new NotReplyOnBotMessageException("Message with parameters must be reply on bit message");
+        if (botMessage == null || !botMessage.from().isBot()) {
+            throw new NotAReplyOnBotMessageException("Message with parameters must be reply on bot message");
         }
 
         ParameterizedExecutableSlashCommand slashCommand = null;

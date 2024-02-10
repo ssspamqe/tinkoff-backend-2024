@@ -8,7 +8,7 @@ import edu.java.bot.data.repositories.SubscriptionRepository;
 import edu.java.bot.services.exceptions.CantDefineSlashCommandFromTextException;
 import edu.java.bot.services.exceptions.NoSuchCommandException;
 import edu.java.bot.services.exceptions.NotACommandOrUserParameterException;
-import edu.java.bot.services.exceptions.NotReplyOnBotMessageException;
+import edu.java.bot.services.exceptions.NotAReplyOnBotMessageException;
 import edu.java.bot.slashCommands.HelpSlashCommand;
 import edu.java.bot.slashCommands.ListSlashCommand;
 import edu.java.bot.slashCommands.TrackSlashCommand;
@@ -135,7 +135,7 @@ public class CommandServiceTest {
 
         assertThatThrownBy(
             () -> commandService.handleMessage(parameterMessage)
-        ).isInstanceOf(NotReplyOnBotMessageException.class);
+        ).isInstanceOf(NotAReplyOnBotMessageException.class);
     }
 
     @Test
