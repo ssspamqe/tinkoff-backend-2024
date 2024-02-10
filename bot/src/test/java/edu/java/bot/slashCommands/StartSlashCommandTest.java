@@ -21,8 +21,8 @@ class StartSlashCommandTest {
 
         assertAll(
             "Bot command instance should have correct text command and description",
-            () -> assertThat(botCommand.command()).isEqualTo("/start"),
-            () -> assertThat(botCommand.description()).isEqualTo("Register in app")
+            () -> assertThat(botCommand.command()).isEqualTo(command.getTextCommand()),
+            () -> assertThat(botCommand.description()).isEqualTo(command.getDescription())
         );
     }
 }
