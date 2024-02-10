@@ -48,7 +48,13 @@ public class CommandService {
             return new SendMessage(chatId, responseText).replyMarkup(new ReplyKeyboardRemove());
         } else {
             String responseText = handleCommand(message);
-            return new SendMessage(chatId, responseText).replyMarkup(new ForceReply());
+            SendMessage sendMessageRequest = new SendMessage(chatId, responseText);
+
+            if (defineSlashCommandFromBotMessage(message).needAdditionalUserParameter()) {
+                return sendMessageRequest.replyMarkup(new ForceReply());
+            } else {
+                return sendMessageRequest.replyMarkup(new ReplyKeyboardRemove());
+            }
         }
     }
 

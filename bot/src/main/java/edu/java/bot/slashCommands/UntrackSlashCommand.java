@@ -20,6 +20,8 @@ public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand,
     private static final String NO_SUCH_SUBSCRIPTION_RESPONSE = "You don't have such subscription";
     private static final String SUCCESSFULLY_UNTRACKED_RESPONSE = "/unrack command succeed!";
 
+    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = true;
+
     private final SubscriptionRepository subscriptionRepository;
     private final Validator validator;
 
@@ -58,9 +60,9 @@ public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand,
         var userSubscriptions = subscriptionRepository.findAllByUserId(userId);
         Optional<Subscription> oldSubscription =
             userSubscriptions.stream()
-            .filter(
-                subscription -> link.equals(subscription.getLink())
-            ).findFirst();
+                .filter(
+                    subscription -> link.equals(subscription.getLink())
+                ).findFirst();
         if (oldSubscription.isEmpty()) {
             return NO_SUCH_SUBSCRIPTION_RESPONSE;
         }
@@ -68,8 +70,6 @@ public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand,
         subscriptionRepository.deleteById(oldSubscription.get().getId());
         return SUCCESSFULLY_UNTRACKED_RESPONSE;
     }
-
-
 
     private String getErrorResponse(Set<ConstraintViolation<Subscription>> violations) {
         var violationList = violations.stream().toList();
@@ -86,5 +86,10 @@ public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand,
     @Override
     public BotCommand getBotCommand() {
         return new BotCommand(TEXT_COMMAND, DESCRIPTION);
+    }
+
+    @Override
+    public boolean needAdditionalUserParameter() {
+        return NEED_ADDITIONAL_USER_PARAMETERS;
     }
 }

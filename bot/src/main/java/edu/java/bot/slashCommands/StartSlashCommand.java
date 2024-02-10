@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 public class StartSlashCommand implements NoParametersExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/start";
-
     private static final String DESCRIPTION = "Register in app";
-
     private static final String DEFAULT_RESPONSE = "Registration...";
+
+    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = false;
 
     @Override
     public String getTextCommand() {
@@ -31,4 +31,11 @@ public class StartSlashCommand implements NoParametersExecutableSlashCommand {
     public BotCommand getBotCommand() {
         return new BotCommand(TEXT_COMMAND, DESCRIPTION);
     }
+
+    @Override
+    public boolean needAdditionalUserParameter() {
+        return NEED_ADDITIONAL_USER_PARAMETERS;
+    }
 }
+
+

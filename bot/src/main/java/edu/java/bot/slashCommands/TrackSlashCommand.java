@@ -18,6 +18,8 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
     private static final String LINK_SUCCESSFULLY_ADDED = "Given link was successfully added to /track it!";
     private static final String INIT_REQUEST_MESSAGE = "Reply to this message with link to /track it!";
 
+    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = true;
+
     private final SubscriptionRepository subscriptionRepository;
     private final Validator validator;
 
@@ -73,6 +75,11 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
     @Override
     public BotCommand getBotCommand() {
         return new BotCommand(TEXT_COMMAND, DESCRIPTION);
+    }
+
+    @Override
+    public boolean needAdditionalUserParameter() {
+        return NEED_ADDITIONAL_USER_PARAMETERS;
     }
 
 }

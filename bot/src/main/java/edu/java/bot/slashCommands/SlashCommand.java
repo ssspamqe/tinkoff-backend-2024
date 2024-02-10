@@ -9,4 +9,6 @@ public sealed interface SlashCommand permits ParameterizedExecutableSlashCommand
     String getDescription();
 
     BotCommand getBotCommand();
+
+    boolean needAdditionalUserParameter();
 }

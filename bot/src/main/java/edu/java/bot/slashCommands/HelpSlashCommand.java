@@ -7,9 +7,7 @@ import org.springframework.stereotype.Component;
 public class HelpSlashCommand implements NoParametersExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/help";
-
     private static final String DESCRIPTION = "Get list of commands";
-
     private static final String RESPONSE = """
         This bot allows to subscribe on updates from various services!
 
@@ -22,6 +20,8 @@ public class HelpSlashCommand implements NoParametersExecutableSlashCommand {
         **Other commands**
         /start - Register in app
         /help - Get list of commands""";
+
+    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = false;
 
     @Override
     public String getTextCommand() {
@@ -41,5 +41,10 @@ public class HelpSlashCommand implements NoParametersExecutableSlashCommand {
     @Override
     public BotCommand getBotCommand() {
         return new BotCommand(TEXT_COMMAND, DESCRIPTION);
+    }
+
+    @Override
+    public boolean needAdditionalUserParameter() {
+        return NEED_ADDITIONAL_USER_PARAMETERS;
     }
 }

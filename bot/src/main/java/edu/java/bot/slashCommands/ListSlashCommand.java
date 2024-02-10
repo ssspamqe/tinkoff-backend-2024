@@ -12,10 +12,10 @@ import org.springframework.stereotype.Component;
 public class ListSlashCommand implements ParameterizedExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/list";
-
     private static final String DESCRIPTION = "Get list of subscriptions";
-
     private static final String NO_SUBSCRIPTIONS_RESPONSE = "There is no active subscription";
+
+    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = false;
 
     private final SubscriptionRepository subscriptionRepository;
 
@@ -56,5 +56,10 @@ public class ListSlashCommand implements ParameterizedExecutableSlashCommand {
     @Override
     public BotCommand getBotCommand() {
         return new BotCommand(TEXT_COMMAND, DESCRIPTION);
+    }
+
+    @Override
+    public boolean needAdditionalUserParameter() {
+        return NEED_ADDITIONAL_USER_PARAMETERS;
     }
 }
