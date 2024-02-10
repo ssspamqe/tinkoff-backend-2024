@@ -8,11 +8,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class HashMapSubscriptionRepository extends HashMapRepository<Subscription, Long>
     implements SubscriptionRepository {
+
     @Override
     public List<Subscription> findAllByUserId(long userId) {
         return database.values()
-            .stream().
-            filter(subscription -> subscription != null && subscription.getUserId() == userId)
+            .stream()
+            .filter(subscription -> subscription != null && subscription.getUserId() == userId)
             .toList();
     }
 
@@ -27,7 +28,7 @@ public class HashMapSubscriptionRepository extends HashMapRepository<Subscriptio
     }
 
     private long getFreeId() {
-        for (long i = 1L; i < Math.pow(10, 18); i++) {
+        for (long i = 1L; i < HASH_MAP_SIZE; i++) {
             if (database.get(i) == null) {
                 return i;
             }

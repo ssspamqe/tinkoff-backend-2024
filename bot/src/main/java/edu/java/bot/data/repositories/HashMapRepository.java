@@ -13,7 +13,8 @@ import org.apache.logging.log4j.Logger;
 
 public abstract class HashMapRepository<T, I> implements BasicRepository<T, I> {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    protected static final Logger LOGGER = LogManager.getLogger();
+    protected static final Long HASH_MAP_SIZE = (long) Math.pow(10, 18);
 
     protected Map<I, T> database = new HashMap<>();
 
@@ -47,7 +48,9 @@ public abstract class HashMapRepository<T, I> implements BasicRepository<T, I> {
             var idGetter = objectClass.getMethod(idFieldGetterName);
             return (I) idGetter.invoke(object);
         } catch (NoSuchMethodException | IllegalAccessException exception) {
-            throw new NotVisibleMethodException(STR."There is no public getter method (\{idFieldGetterName}) in class \{objectClass.getName()}}");
+            throw new NotVisibleMethodException(
+                STR."There is no public getter method (\{idFieldGetterName}) in class \{objectClass.getName()}}"
+            );
         } catch (InvocationTargetException exception) {
             throw new RuntimeException(exception);
         }
@@ -58,7 +61,9 @@ public abstract class HashMapRepository<T, I> implements BasicRepository<T, I> {
 
         var idFields = Arrays.stream(fields).filter(field -> field.isAnnotationPresent(Id.class)).toList();
         if (idFields.size() != 1) {
-            throw new IncorrectIdFieldsAmountException(STR."\{objectClass} must have only one id field. Current idFilelds amount: \{idFields.size()} ");
+            throw new IncorrectIdFieldsAmountException(
+                STR."\{objectClass} must have only one id field. Current idFilelds amount: \{idFields.size()} "
+            );
         }
         var idField = idFields.getFirst();
 

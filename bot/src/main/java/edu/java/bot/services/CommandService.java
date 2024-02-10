@@ -89,7 +89,8 @@ public class CommandService {
         }
         if (slashCommandsInMessageText != 1) {
             throw new CantDefineSlashCommandFromTextException(
-                STR."Message \"\{messageText}\" expected to have 1 slashCommand, but actual number: \{slashCommandsInMessageText}"
+                STR."Message \"\{messageText}\" expected to have 1 slashCommand, "
+                    + STR."but actual number: \{slashCommandsInMessageText}"
             );
         }
 
@@ -104,8 +105,9 @@ public class CommandService {
                 noParametersExecutableSlashCommand.executeAndGetResponse();
             case ParameterizedExecutableSlashCommand parameterizedExecutableSlashCommand ->
                 parameterizedExecutableSlashCommand.executeWithParametersAndGetResponse(message);
-            default ->
-                throw new StrangeSlashCommandException(STR."Command \"\{command.getTextCommand()}\" has no way of execution");
+            default -> throw new StrangeSlashCommandException(
+                STR."Command \"\{command.getTextCommand()}\" has no way of execution"
+            );
         };
     }
 
