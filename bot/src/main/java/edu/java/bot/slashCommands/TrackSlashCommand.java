@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TrackSlashSlashCommand implements ParameterizedExecutableSlashCommand, NoParametersExecutableSlashCommand {
+public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, NoParametersExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/track";
     private static final String DESCRIPTION = "Start tracking updates from given link";
@@ -22,7 +22,7 @@ public class TrackSlashSlashCommand implements ParameterizedExecutableSlashComma
     private final Validator validator;
 
     @Autowired
-    public TrackSlashSlashCommand(SubscriptionRepository subscriptionRepository, Validator validator) {
+    public TrackSlashCommand(SubscriptionRepository subscriptionRepository, Validator validator) {
         this.subscriptionRepository = subscriptionRepository;
         this.validator = validator;
     }

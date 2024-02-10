@@ -28,7 +28,7 @@ class TrackSlashCommandTest {
     Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
     @InjectMocks
-    TrackSlashSlashCommand command;
+    TrackSlashCommand command;
 
     @BeforeEach
     void init() {
