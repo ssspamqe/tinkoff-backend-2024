@@ -8,11 +8,15 @@ import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.request.SetMyCommands;
 import edu.java.bot.configuration.ApplicationConfig;
 import edu.java.bot.services.CommandService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class TelegramBotController {
+
+    private static final Logger LOGGER = LogManager.getLogger();
 
     private final CommandService commandService;
 
@@ -47,9 +51,13 @@ public class TelegramBotController {
         String text = update.message().text();
         Long chatId = update.message().chat().id();
 
-        SendMessage sendMessageRequest = null;
         if (text.startsWith("/")) {
-            return commandService.handleMessage(update.message());
+            try {
+                return commandService.handleMessage(update.message());
+            } catch (Exception ex) {
+                LOGGER.error(ex);
+                return new SendMessage(chatId, "Some error occurred");
+            }
         } else {
             return new SendMessage(chatId, "Haha, funny joke").replyMarkup(new ReplyKeyboardRemove());
         }
