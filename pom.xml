@@ -193,6 +193,7 @@
 
                         <compilerArgument>-Xlint:all</compilerArgument>
                         <compilerArgument>-Xdoclint:all</compilerArgument>
+                        <compilerArgument>--enable-preview</compilerArgument>
                     </configuration>
                 </plugin>
 
