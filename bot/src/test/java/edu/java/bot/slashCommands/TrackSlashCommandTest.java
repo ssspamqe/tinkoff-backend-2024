@@ -7,6 +7,7 @@ import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -63,7 +64,11 @@ class TrackSlashCommandTest {
     void should_returnSpecialMessage_when_doubleLinks() {
         Message parameterMessage = getMessageWithLinkAndUserId("https://ll", 1L);
 
-        command.executeWithParametersAndGetResponse(parameterMessage);
+        Mockito.when(
+            subscriptionRepository.findAllByUserId(1L)
+        ).thenReturn(
+            List.of(new Subscription(1L, 1L, "https://ll"))
+        );
         String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
 
         assertThat(actualResponse).isEqualTo("This link was already added to /track it");
