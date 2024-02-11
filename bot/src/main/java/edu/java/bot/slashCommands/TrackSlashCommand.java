@@ -78,10 +78,13 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
 
     private boolean subscriptionWasPreviouslyAdded(Subscription subscription) {
         var userSubscriptions = subscriptionRepository.findAllByUserId(subscription.getUserId());
-        return userSubscriptions.stream()
-            .noneMatch(
-                oldSubscription -> subscription.getLink().equals(oldSubscription.getLink())
-            );
+        boolean linkWasAlreadyAdded =
+            userSubscriptions
+                .stream()
+                .anyMatch(
+                    oldSubscription -> subscription.getLink().equals(oldSubscription.getLink())
+                );
+        return !userSubscriptions.isEmpty() && linkWasAlreadyAdded;
     }
 
     @Override
