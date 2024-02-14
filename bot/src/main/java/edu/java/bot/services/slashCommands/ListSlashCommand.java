@@ -48,10 +48,10 @@ public class ListSlashCommand implements ExecuableWithArgumentsSlashCommand {
         if (userSubscriptions.isEmpty()) {
             return NO_SUBSCRIPTIONS_RESPONSE;
         }
-        return getResponseFromSubscriptionList(userSubscriptions);
+        return buildResponseFromSubscriptionList(userSubscriptions);
     }
 
-    private String getResponseFromSubscriptionList(List<Subscription> subscriptionList) {
+    private String buildResponseFromSubscriptionList(List<Subscription> subscriptionList) {
         StringBuilder response = new StringBuilder();
         response.append("Here are your current subscriptions:\n");
         for (int i = 0; i < subscriptionList.size(); i++) {

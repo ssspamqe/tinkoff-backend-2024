@@ -17,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 public abstract class HashMapRepository<T, I> implements BasicRepository<T, I> {
 
     protected static final Logger LOGGER = LogManager.getLogger();
+
     protected static final Long HASH_MAP_SIZE = (long) Math.pow(10, 18);
 
     protected final ReentrantReadWriteLock rwLock = new ReentrantReadWriteLock();

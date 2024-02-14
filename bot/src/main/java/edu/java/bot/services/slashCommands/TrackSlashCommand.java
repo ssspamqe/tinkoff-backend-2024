@@ -54,7 +54,7 @@ public class TrackSlashCommand implements ExecuableWithArgumentsSlashCommand, Si
 
         var triggeredSubscriptionViolations = validator.validate(subscription);
         if (!triggeredSubscriptionViolations.isEmpty()) {
-            return getErrorResponse(triggeredSubscriptionViolations);
+            return buildErrorResponse(triggeredSubscriptionViolations);
         }
 
         if (subscriptionWasPreviouslyAdded(subscription)) {
@@ -65,7 +65,7 @@ public class TrackSlashCommand implements ExecuableWithArgumentsSlashCommand, Si
         return LINK_SUCCESSFULLY_ADDED_MESSAGE;
     }
 
-    private String getErrorResponse(Set<ConstraintViolation<Subscription>> violations) {
+    private String buildErrorResponse(Set<ConstraintViolation<Subscription>> violations) {
         var violationList = violations.stream().toList();
 
         StringBuilder response = new StringBuilder();

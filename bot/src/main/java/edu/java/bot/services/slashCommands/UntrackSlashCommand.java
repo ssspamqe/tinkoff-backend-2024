@@ -54,7 +54,7 @@ public class UntrackSlashCommand implements ExecuableWithArgumentsSlashCommand, 
 
         var triggeredViolations = validator.validate(subscriptionToDelete);
         if (!triggeredViolations.isEmpty()) {
-            return getErrorResponse(triggeredViolations);
+            return buildErrorResponse(triggeredViolations);
         }
 
         var userSubscriptions = subscriptionRepository.findAllByUserId(userId);
@@ -71,7 +71,7 @@ public class UntrackSlashCommand implements ExecuableWithArgumentsSlashCommand, 
         return SUCCESSFULLY_UNTRACKED_MESSAGE;
     }
 
-    private String getErrorResponse(Set<ConstraintViolation<Subscription>> violations) {
+    private String buildErrorResponse(Set<ConstraintViolation<Subscription>> violations) {
         var violationList = violations.stream().toList();
 
         StringBuilder response = new StringBuilder();
