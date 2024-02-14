@@ -20,6 +20,6 @@ public class LoggingCallback implements Callback<SendMessage, SendResponse> {
 
     @Override
     public void onFailure(SendMessage sendMessage, IOException e) {
-        LOGGER.warn(STR."Unsuccessful tryout to sent message, IOException: \{e.getMessage()}");
+        LOGGER.warn(STR."Unsuccessful tryout of sending message, IOException: \{e.getMessage()}");
     }
 }
