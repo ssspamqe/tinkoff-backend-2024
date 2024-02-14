@@ -9,8 +9,8 @@ import edu.java.bot.services.exceptions.NoSuchCommandException;
 import edu.java.bot.services.exceptions.NotACommandOrUserParameterException;
 import edu.java.bot.services.exceptions.NotAReplyOnBotMessageException;
 import edu.java.bot.services.exceptions.StrangeSlashCommandException;
-import edu.java.bot.services.slashCommands.SimplyExecutableSlashCommand;
 import edu.java.bot.services.slashCommands.ExecuableWithArgumentsSlashCommand;
+import edu.java.bot.services.slashCommands.SimplyExecutableSlashCommand;
 import edu.java.bot.services.slashCommands.SlashCommand;
 import java.util.HashMap;
 import java.util.List;
@@ -84,7 +84,6 @@ public class CommandService {
         return slashCommand.executeAndGetResponse(userParameters);
     }
 
-    //TODO rework initial command use
     private String handleCommand(Message message) {
         SlashCommand command = parseSlashCommand(message.text());
         return switch (command) {
@@ -92,9 +91,6 @@ public class CommandService {
                 simplyExecutableSlashCommand.executeAndGetResponse();
             case ExecuableWithArgumentsSlashCommand execuableWithArgumentsSlashCommand ->
                 execuableWithArgumentsSlashCommand.executeAndGetResponse(message);
-            default -> throw new StrangeSlashCommandException(
-                STR."Command \"\{command.getTextCommand()}\" has no way of execution"
-            );
         };
     }
 
