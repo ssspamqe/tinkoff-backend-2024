@@ -48,7 +48,7 @@ public class CommandService {
             String responseText = handleCommand(message);
             SendMessage sendMessageRequest = new SendMessage(chatId, responseText);
 
-            if (defineSlashCommand(message.text()).needAdditionalUserParameter()) {
+            if (parseSlashCommand(message.text()).needAdditionalUserParameter()) {
                 return sendMessageRequest.replyMarkup(new ForceReply());
             } else {
                 return sendMessageRequest.replyMarkup(new ReplyKeyboardRemove());
@@ -75,7 +75,7 @@ public class CommandService {
 
         ExecuableWithArgumentsSlashCommand slashCommand = null;
         try {
-            slashCommand = (ExecuableWithArgumentsSlashCommand) defineSlashCommand(botMessage.text());
+            slashCommand = (ExecuableWithArgumentsSlashCommand) parseSlashCommand(botMessage.text());
         } catch (ClassCastException ex) {
             throw new StrangeSlashCommandException(
                 STR."Command from message: \"\{botMessage.text()}\" have no parameters"
@@ -86,7 +86,7 @@ public class CommandService {
 
     //TODO rework initial command use
     private String handleCommand(Message message) {
-        SlashCommand command = defineSlashCommand(message.text());
+        SlashCommand command = parseSlashCommand(message.text());
         return switch (command) {
             case SimplyExecutableSlashCommand simplyExecutableSlashCommand ->
                 simplyExecutableSlashCommand.executeAndGetResponse();
@@ -98,7 +98,7 @@ public class CommandService {
         };
     }
 
-    private SlashCommand defineSlashCommand(String text) {
+    private SlashCommand parseSlashCommand(String text) {
         String firstCommand = extractFirstCommand(text);
         SlashCommand slashCommand = allCommands.get(firstCommand);
         if (slashCommand == null) {
