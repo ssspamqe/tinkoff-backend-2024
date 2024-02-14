@@ -4,15 +4,19 @@ import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
-import java.net.MalformedURLException;
-import java.net.URL;
+import edu.java.bot.services.exceptions.BadLinkException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ListSlashCommand implements ParameterizedExecutableSlashCommand {
 
+    private static final Logger LOGGER = LogManager.getLogger();
 
     private static final String TEXT_COMMAND = "/list";
     private static final String DESCRIPTION = "Get list of subscriptions";
@@ -51,16 +55,20 @@ public class ListSlashCommand implements ParameterizedExecutableSlashCommand {
         StringBuilder response = new StringBuilder();
         response.append("Here are your current subscriptions:\n");
         for (int i = 0; i < subscriptionList.size(); i++) {
-            response.append(STR."\{i + 1}) \{subscriptionList.get(i).getLink()}\n");
+            String link = subscriptionList.get(i).getLink();
+            String host = parseHostFromLink(link);
+            response.append(STR."""
+                \{i + 1})\{host}
+                \{link}""");
         }
         return response.toString();
     }
 
-    private String getHost(String s){
-        try{
-            return new URL(s).getHost();
-        } catch (MalformedURLException exception){
-            throw new
+    private String parseHostFromLink(String link) {
+        try {
+            return new URI(link).getHost();
+        } catch (URISyntaxException e) {
+            throw new BadLinkException(STR."Cant parse host (link: \{link})");
         }
     }
 
