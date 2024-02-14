@@ -44,7 +44,7 @@ public class CommandService {
         if (isUserParameters(message)) {
             String responseText = handleUserParameters(message);
             return new SendMessage(chatId, responseText).replyMarkup(new ReplyKeyboardRemove());
-        } else if (message.text().startsWith("/")) {
+        } else if (isCommand(message)) {
             String responseText = handleCommand(message);
             SendMessage sendMessageRequest = new SendMessage(chatId, responseText);
 
@@ -59,6 +59,14 @@ public class CommandService {
         }
     }
 
+    private boolean isUserParameters(Message message) {
+        return message.replyToMessage() != null;
+    }
+
+    private boolean isCommand(Message message) {
+        return message.text().startsWith("/");
+    }
+
     private String handleUserParameters(Message userParameters) {
         Message botMessage = userParameters.replyToMessage();
         if (botMessage == null || !botMessage.from().isBot()) {
@@ -70,12 +78,13 @@ public class CommandService {
             slashCommand = (ParameterizedExecutableSlashCommand) defineSlashCommand(botMessage.text());
         } catch (ClassCastException ex) {
             throw new StrangeSlashCommandException(
-                STR."Command from message: \"\{botMessage.text()}\" doesn't have parameters"
+                STR."Command from message: \"\{botMessage.text()}\" have no parameters"
             );
         }
         return slashCommand.executeWithParametersAndGetResponse(userParameters);
     }
 
+    //TODO rework initial command use
     private String handleCommand(Message message) {
         SlashCommand command = defineSlashCommand(message.text());
         return switch (command) {
@@ -108,7 +117,4 @@ public class CommandService {
         return null;
     }
 
-    private boolean isUserParameters(Message message) {
-        return message.replyToMessage() != null;
-    }
 }
