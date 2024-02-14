@@ -5,6 +5,7 @@ import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
+import edu.java.bot.services.slashCommands.TrackSlashCommand;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import java.util.List;

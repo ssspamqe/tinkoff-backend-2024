@@ -1,15 +1,18 @@
-package edu.java.bot.slashCommands;
+package edu.java.bot.services.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ListSlashCommand implements ParameterizedExecutableSlashCommand {
+
 
     private static final String TEXT_COMMAND = "/list";
     private static final String DESCRIPTION = "Get list of subscriptions";
@@ -51,6 +54,14 @@ public class ListSlashCommand implements ParameterizedExecutableSlashCommand {
             response.append(STR."\{i + 1}) \{subscriptionList.get(i).getLink()}\n");
         }
         return response.toString();
+    }
+
+    private String getHost(String s){
+        try{
+            return new URL(s).getHost();
+        } catch (MalformedURLException exception){
+            throw new
+        }
     }
 
     @Override

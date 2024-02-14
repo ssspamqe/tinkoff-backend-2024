@@ -1,4 +1,4 @@
-package edu.java.bot.slashCommands;
+package edu.java.bot.services.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 
