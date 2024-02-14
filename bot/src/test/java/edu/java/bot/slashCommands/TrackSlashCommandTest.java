@@ -41,7 +41,7 @@ class TrackSlashCommandTest {
     void should_addLinkToDatabase() {
         Message parameterMessage = getMessageWithLinkAndUserId("https://first/link", 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
+        String actualResponse = command.executeAndGetResponse(parameterMessage);
 
         Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/link");
         Mockito.verify(subscriptionRepository, Mockito.times(1)).save(expectedToSaveSubscription);
@@ -53,7 +53,7 @@ class TrackSlashCommandTest {
     void should_returnSpecialMessage_when_linkNotMatchRegex(String link) {
         Message parameterMessage = getMessageWithLinkAndUserId(link, 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
+        String actualResponse = command.executeAndGetResponse(parameterMessage);
 
         String expectedResponse = """
             Can't /track link because:
@@ -70,7 +70,7 @@ class TrackSlashCommandTest {
         ).thenReturn(
             List.of(new Subscription(1L, 1L, "https://ll"))
         );
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
+        String actualResponse = command.executeAndGetResponse(parameterMessage);
 
         assertThat(actualResponse).isEqualTo("This link was already added to /track it");
     }

@@ -74,11 +74,11 @@ public class CommandServiceTest {
         Message spyMessage = Mockito.spy(new Message());
         Mockito.when(spyMessage.text()).thenReturn("/list");
         Mockito.when(spyMessage.chat()).thenReturn(new Chat());
-        Mockito.doReturn("subscriptionList").when(listSlashCommand).executeWithParametersAndGetResponse(spyMessage);
+        Mockito.doReturn("subscriptionList").when(listSlashCommand).executeAndGetResponse(spyMessage);
 
         commandService.handleMessage(spyMessage);
 
-        Mockito.verify(listSlashCommand, Mockito.times(1)).executeWithParametersAndGetResponse(spyMessage);
+        Mockito.verify(listSlashCommand, Mockito.times(1)).executeAndGetResponse(spyMessage);
     }
 
     @Test
@@ -95,13 +95,13 @@ public class CommandServiceTest {
         Mockito.when(parameterMessage.replyToMessage()).thenReturn(repliedMessage);
         Mockito.when(parameterMessage.chat()).thenReturn(new Chat());
 
-        Mockito.doReturn("response").when(trackSlashCommand).executeWithParametersAndGetResponse(parameterMessage);
+        Mockito.doReturn("response").when(trackSlashCommand).executeAndGetResponse(parameterMessage);
 
         //Act
         commandService.handleMessage(parameterMessage);
 
         //Assert
-        Mockito.verify(trackSlashCommand, Mockito.times(1)).executeWithParametersAndGetResponse(parameterMessage);
+        Mockito.verify(trackSlashCommand, Mockito.times(1)).executeAndGetResponse(parameterMessage);
     }
 
     @Test

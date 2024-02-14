@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ListSlashCommand implements ParameterizedExecutableSlashCommand {
+public class ListSlashCommand implements ExecuableWithArgumentsSlashCommand {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
@@ -42,7 +42,7 @@ public class ListSlashCommand implements ParameterizedExecutableSlashCommand {
     }
 
     @Override
-    public String executeWithParametersAndGetResponse(Message message) {
+    public String executeAndGetResponse(Message message) {
         Long userId = message.from().id();
         List<Subscription> userSubscriptions = subscriptionRepository.findAllByUserId(userId);
         if (userSubscriptions.isEmpty()) {

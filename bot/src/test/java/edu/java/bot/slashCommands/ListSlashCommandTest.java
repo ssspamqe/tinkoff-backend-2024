@@ -44,7 +44,7 @@ class ListSlashCommandTest {
         Message spyMessage = getSpyMessageWithUserId(1L);
 
         //Act
-        String actualResponse = command.executeWithParametersAndGetResponse(spyMessage);
+        String actualResponse = command.executeAndGetResponse(spyMessage);
 
         //Asert
         assertThat(actualResponse).contains("first/link", "second/link", "third/link");
@@ -59,7 +59,7 @@ class ListSlashCommandTest {
         Message spyMessage = getSpyMessageWithUserId(1L);
 
         //Act
-        String actualResponse = command.executeWithParametersAndGetResponse(spyMessage);
+        String actualResponse = command.executeAndGetResponse(spyMessage);
 
         //Asser
         assertThat(actualResponse).isEqualTo("There is no active subscriptions");

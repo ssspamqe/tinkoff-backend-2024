@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand, NoParametersExecutableSlashCommand {
+public class UntrackSlashCommand implements ExecuableWithArgumentsSlashCommand, SimplyExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/untrack";
     private static final String DESCRIPTION = "Stop tracking updates from given link";
@@ -47,7 +47,7 @@ public class UntrackSlashCommand implements ParameterizedExecutableSlashCommand,
     }
 
     @Override
-    public String executeWithParametersAndGetResponse(Message message) {
+    public String executeAndGetResponse(Message message) {
         Long userId = message.from().id();
         String link = message.text();
         Subscription subscriptionToDelete = new Subscription(0L, userId, link);

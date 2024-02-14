@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, NoParametersExecutableSlashCommand {
+public class TrackSlashCommand implements ExecuableWithArgumentsSlashCommand, SimplyExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/track";
     private static final String DESCRIPTION = "Start tracking updates from given link";
@@ -46,7 +46,7 @@ public class TrackSlashCommand implements ParameterizedExecutableSlashCommand, N
     }
 
     @Override
-    public String executeWithParametersAndGetResponse(Message message) {
+    public String executeAndGetResponse(Message message) {
         Long userId = message.from().id();
         String link = message.text();
 

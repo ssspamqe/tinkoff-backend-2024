@@ -9,8 +9,8 @@ import edu.java.bot.services.exceptions.NoSuchCommandException;
 import edu.java.bot.services.exceptions.NotACommandOrUserParameterException;
 import edu.java.bot.services.exceptions.NotAReplyOnBotMessageException;
 import edu.java.bot.services.exceptions.StrangeSlashCommandException;
-import edu.java.bot.services.slashCommands.NoParametersExecutableSlashCommand;
-import edu.java.bot.services.slashCommands.ParameterizedExecutableSlashCommand;
+import edu.java.bot.services.slashCommands.SimplyExecutableSlashCommand;
+import edu.java.bot.services.slashCommands.ExecuableWithArgumentsSlashCommand;
 import edu.java.bot.services.slashCommands.SlashCommand;
 import java.util.HashMap;
 import java.util.List;
@@ -73,25 +73,25 @@ public class CommandService {
             throw new NotAReplyOnBotMessageException("Message with parameters must be a reply on bot message");
         }
 
-        ParameterizedExecutableSlashCommand slashCommand = null;
+        ExecuableWithArgumentsSlashCommand slashCommand = null;
         try {
-            slashCommand = (ParameterizedExecutableSlashCommand) defineSlashCommand(botMessage.text());
+            slashCommand = (ExecuableWithArgumentsSlashCommand) defineSlashCommand(botMessage.text());
         } catch (ClassCastException ex) {
             throw new StrangeSlashCommandException(
                 STR."Command from message: \"\{botMessage.text()}\" have no parameters"
             );
         }
-        return slashCommand.executeWithParametersAndGetResponse(userParameters);
+        return slashCommand.executeAndGetResponse(userParameters);
     }
 
     //TODO rework initial command use
     private String handleCommand(Message message) {
         SlashCommand command = defineSlashCommand(message.text());
         return switch (command) {
-            case NoParametersExecutableSlashCommand noParametersExecutableSlashCommand ->
-                noParametersExecutableSlashCommand.executeAndGetResponse();
-            case ParameterizedExecutableSlashCommand parameterizedExecutableSlashCommand ->
-                parameterizedExecutableSlashCommand.executeWithParametersAndGetResponse(message);
+            case SimplyExecutableSlashCommand simplyExecutableSlashCommand ->
+                simplyExecutableSlashCommand.executeAndGetResponse();
+            case ExecuableWithArgumentsSlashCommand execuableWithArgumentsSlashCommand ->
+                execuableWithArgumentsSlashCommand.executeAndGetResponse(message);
             default -> throw new StrangeSlashCommandException(
                 STR."Command \"\{command.getTextCommand()}\" has no way of execution"
             );

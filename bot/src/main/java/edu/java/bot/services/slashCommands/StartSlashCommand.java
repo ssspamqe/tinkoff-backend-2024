@@ -4,7 +4,7 @@ import com.pengrad.telegrambot.model.BotCommand;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StartSlashCommand implements NoParametersExecutableSlashCommand {
+public class StartSlashCommand implements SimplyExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/start";
     private static final String DESCRIPTION = "Register in app";

@@ -46,7 +46,7 @@ public class UntrackSlashCommandTest {
         Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
         Message parameterMessage = getParameterMessageWithLinkAndUserId("https://first/link", 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
+        String actualResponse = command.executeAndGetResponse(parameterMessage);
 
         Mockito.verify(subscriptionRepository, Mockito.times(1)).deleteById(1L);
         assertThat(actualResponse).isEqualTo("/unrack command succeed!");
@@ -61,7 +61,7 @@ public class UntrackSlashCommandTest {
         Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
         Message parameterMessage = getParameterMessageWithLinkAndUserId("https://third/link", 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
+        String actualResponse = command.executeAndGetResponse(parameterMessage);
 
         assertThat(actualResponse).isEqualTo("You don't have such subscription");
     }
@@ -71,7 +71,7 @@ public class UntrackSlashCommandTest {
     void should_returnSpecialMessage_when_linkIsNotValid(String link) {
         Message parameterMessage = getParameterMessageWithLinkAndUserId(link, 1L);
 
-        String actualResponse = command.executeWithParametersAndGetResponse(parameterMessage);
+        String actualResponse = command.executeAndGetResponse(parameterMessage);
 
         String expectedResponse = """
             Can't /untrack link because:

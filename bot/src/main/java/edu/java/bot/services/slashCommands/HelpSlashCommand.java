@@ -4,7 +4,7 @@ import com.pengrad.telegrambot.model.BotCommand;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelpSlashCommand implements NoParametersExecutableSlashCommand {
+public class HelpSlashCommand implements SimplyExecutableSlashCommand {
 
     private static final String TEXT_COMMAND = "/help";
     private static final String DESCRIPTION = "Get list of commands";
