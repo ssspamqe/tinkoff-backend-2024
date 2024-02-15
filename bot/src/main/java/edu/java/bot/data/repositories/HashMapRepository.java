@@ -27,12 +27,7 @@ public abstract class HashMapRepository<T, I> implements BasicRepository<T, I> {
     @Override
     public Optional<T> findById(I id) {
         T object = executeWithLock(rwLock.readLock(), () -> database.get(id));
-
-        if (object == null) {
-            return Optional.empty();
-        }
-
-        return Optional.of(object);
+        return Optional.ofNullable(object);
     }
 
     @Override
