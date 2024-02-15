@@ -1,4 +1,4 @@
-package edu.java.bot.botMessageEventHandlers;
+package edu.java.bot.botMessageEventListeners;
 
 import com.pengrad.telegrambot.model.Message;
 import lombok.AllArgsConstructor;

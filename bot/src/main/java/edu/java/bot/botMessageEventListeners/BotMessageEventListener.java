@@ -1,4 +1,4 @@
-package edu.java.bot.botMessageEventHandlers;
+package edu.java.bot.botMessageEventListeners;
 
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.model.Message;
@@ -7,6 +7,7 @@ import edu.java.bot.services.CommandService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 @Component
