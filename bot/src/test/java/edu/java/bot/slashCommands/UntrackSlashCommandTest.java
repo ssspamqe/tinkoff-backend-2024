@@ -89,13 +89,9 @@ public class UntrackSlashCommandTest {
     Message getParameterMessageWithLinkAndUserId(String link, Long userId) {
         User user = new User(userId);
 
-        Message originalMessage = Mockito.spy(new Message());
-        Mockito.when(originalMessage.text()).thenReturn(command.executeAndGetResponse());
-
         Message parameterizedMessage = Mockito.spy(new Message());
         Mockito.when(parameterizedMessage.from()).thenReturn(user);
         Mockito.when(parameterizedMessage.text()).thenReturn(link);
-        Mockito.when(parameterizedMessage.replyToMessage()).thenReturn(originalMessage);
 
         return parameterizedMessage;
     }
