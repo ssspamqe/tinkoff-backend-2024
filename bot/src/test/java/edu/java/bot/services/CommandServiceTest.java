@@ -14,14 +14,16 @@ import edu.java.bot.services.slashCommands.TrackSlashCommand;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
+import org.mockito.junit.jupiter.MockitoExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+@ExtendWith(MockitoExtension.class)
 public class CommandServiceTest {
 
     CommandService commandService;
@@ -42,7 +44,6 @@ public class CommandServiceTest {
 
     @BeforeEach
     void init() {
-        MockitoAnnotations.openMocks(this);
         commandService = new CommandService(List.of(helpSlashCommand, listSlashCommand, trackSlashCommand));
     }
 
