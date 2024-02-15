@@ -1,11 +1,9 @@
 package edu.java.bot.botMessageEventListeners;
 
 import com.pengrad.telegrambot.model.Message;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
-@Data
-@AllArgsConstructor
-public class BotMessageEvent {
-    private Message userMessage;
+public record BotMessageEvent(
+    Message message
+) {
 }
+
