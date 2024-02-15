@@ -24,7 +24,8 @@ public class BotMessageEventListener {
     }
 
     @EventListener
-    private void onBotMessageEvent(BotMessageEvent event) {
+    @Async
+    public void onBotMessageEvent(BotMessageEvent event) {
         Message message = event.getUserMessage();
         SendMessage response = getResponse(message);
         bot.execute(response);
