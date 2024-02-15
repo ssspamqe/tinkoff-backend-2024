@@ -29,7 +29,7 @@ public class CommandService {
     }
 
     private void fillAllCommands(List<SlashCommand> commandList) {
-        allCommands = new HashMap<>();
+        allCommands = HashMap.newHashMap(commandList.size());
         commandList.forEach(command -> allCommands.put(command.getTextCommand(), command));
     }
 
