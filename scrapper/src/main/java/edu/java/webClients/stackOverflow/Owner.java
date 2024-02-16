@@ -1,6 +1,9 @@
 package edu.java.webClients.stackOverflow;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public record Owner(
-    String display_name
+    @JsonProperty("displayName")
+    String displayName
 ) {
 }
