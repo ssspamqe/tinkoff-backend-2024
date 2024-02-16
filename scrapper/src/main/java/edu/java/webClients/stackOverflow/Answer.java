@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public record Answer(
-    int id,
+    long id,
 
     Owner owner,
 
