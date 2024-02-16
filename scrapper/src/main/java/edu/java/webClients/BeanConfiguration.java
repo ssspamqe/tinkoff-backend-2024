@@ -1,5 +1,6 @@
 package edu.java.webClients;
 
+import edu.java.webClients.gitHub.GitHubClient;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,5 +17,14 @@ public class BeanConfiguration {
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();
 
         return factory.createClient(StackOverflowClient.class);
+    }
+
+    @Bean
+    public GitHubClient gitHubClient() {
+        WebClient webClient = WebClient.builder().baseUrl("https://api.github.com/").build();
+        WebClientAdapter adapter = WebClientAdapter.create(webClient);
+        HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();
+
+        return factory.createClient(GitHubClient.class);
     }
 }
