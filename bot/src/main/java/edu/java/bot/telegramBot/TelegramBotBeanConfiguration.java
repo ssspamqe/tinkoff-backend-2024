@@ -1,9 +1,7 @@
-package edu.java.bot.configuration;
+package edu.java.bot.telegramBot;
 
 import com.pengrad.telegrambot.TelegramBot;
-import com.pengrad.telegrambot.UpdatesListener;
-import com.pengrad.telegrambot.request.SetMyCommands;
-import edu.java.bot.botMessageEventListeners.BotMessageEvent;
+import edu.java.bot.configuration.ApplicationConfig;
 import edu.java.bot.services.CommandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
@@ -30,16 +28,6 @@ public class TelegramBotBeanConfiguration {
 
     @Bean
     public TelegramBot telegramBot() {
-        TelegramBot bot = new TelegramBot(applicationConfig.telegramToken());
-        bot.execute(new SetMyCommands(commandService.getAllBotCommands()));
-        bot.setUpdatesListener(updates -> {
-            updates.forEach(update ->
-                eventPublisher.publishEvent(
-                    new BotMessageEvent(update.message())
-                )
-            );
-            return UpdatesListener.CONFIRMED_UPDATES_ALL;
-        });
-        return bot;
+        return new TelegramBot(applicationConfig.telegramToken());
     }
 }
