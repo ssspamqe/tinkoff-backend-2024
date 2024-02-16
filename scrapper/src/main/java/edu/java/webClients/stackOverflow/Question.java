@@ -5,6 +5,8 @@ import java.time.OffsetDateTime;
 import java.util.List;
 
 public record Question(
+    int id,
+
     List<String> tags,
 
     Owner owner,
