@@ -1,6 +1,7 @@
 package edu.java.webClients.stackOverflow;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.OffsetDateTime;
 import java.util.List;
 
 public record Question(
@@ -16,6 +17,15 @@ public record Question(
     @JsonProperty("answer_count")
     int answerCount,
 
-    String body
+    String body,
+
+    @JsonProperty("closed_reason")
+    String closedReason,
+
+    @JsonProperty("creation_date")
+    OffsetDateTime creationDate,
+
+    @JsonProperty("closed_date")
+    OffsetDateTime closedDate
 ) {
 }
