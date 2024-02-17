@@ -11,12 +11,12 @@ import org.springframework.web.reactive.function.client.support.WebClientAdapter
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 @Configuration
-public class BeanConfiguration {
+public class WebClientsBeanConfiguration {
 
     private final ApplicationConfig applicationConfig;
 
     @Autowired
-    public BeanConfiguration(ApplicationConfig applicationConfig) {
+    public WebClientsBeanConfiguration(ApplicationConfig applicationConfig) {
         this.applicationConfig = applicationConfig;
     }
 
