@@ -27,7 +27,7 @@ public record GitHubRepository(
     @JsonProperty("pushed_at")
     OffsetDateTime pushedAt,
 
-    @JsonProperty("subscriber_count")
+    @JsonProperty("subscribers_count")
     int subscribersCount,
 
     boolean archived
