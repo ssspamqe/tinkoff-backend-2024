@@ -10,7 +10,7 @@ public record StackOverflowQuestion(
     List<String> tags,
 
     StackOverflowOwner owner,
-    
+
     String title,
 
     @JsonProperty("is_answered")
@@ -21,13 +21,13 @@ public record StackOverflowQuestion(
 
     String body,
 
-    @JsonProperty("closed_reason")
-    String closedReason,
-
     @JsonProperty("creation_date")
     OffsetDateTime creationDate,
 
     @JsonProperty("closed_date")
-    OffsetDateTime closedDate
+    OffsetDateTime closedDate,
+
+    @JsonProperty("closed_reason")
+    String closedReason
 ) {
 }
