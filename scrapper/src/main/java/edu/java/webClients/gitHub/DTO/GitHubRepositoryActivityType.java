@@ -2,7 +2,7 @@ package edu.java.webClients.gitHub.DTO;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 
-public enum RepositoryActivityType {
+public enum GitHubRepositoryActivityType {
     PUSH,
     FORCE_PUSH,
     BRANCH_CREATION,
@@ -11,8 +11,8 @@ public enum RepositoryActivityType {
     MERGE_QUEUE_MERGE;
 
     @JsonCreator
-    public static RepositoryActivityType fromString(String text) {
-        for (var type : RepositoryActivityType.values()) {
+    public static GitHubRepositoryActivityType fromString(String text) {
+        for (var type : GitHubRepositoryActivityType.values()) {
             if (type.name().equalsIgnoreCase(text)) {
                 return type;
             }
