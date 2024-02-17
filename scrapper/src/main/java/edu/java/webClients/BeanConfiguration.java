@@ -13,9 +13,6 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 @Configuration
 public class BeanConfiguration {
 
-    private static final String DEFAULT_STACKOVERFLOW_URL = "https://api.stackexchange.com/2.3/";
-    private static final String DEFAULT_GITHUB_URL = "https://api.github.com/";
-
     private final ApplicationConfig applicationConfig;
 
     @Autowired
@@ -35,7 +32,7 @@ public class BeanConfiguration {
     private String getStackOverflowBaseUrl() {
         String configUrl = applicationConfig.stackOverflowBaseUrl();
         if (configUrl == null || configUrl.isBlank()) {
-            return DEFAULT_STACKOVERFLOW_URL;
+            return applicationConfig.defaultStackOverflowUrl();
         }
         return configUrl;
     }
@@ -52,7 +49,7 @@ public class BeanConfiguration {
     private String getGitHubBaseUrl() {
         String configUrl = applicationConfig.gitHubBaseUrl();
         if (configUrl == null || configUrl.isBlank()) {
-            return DEFAULT_GITHUB_URL;
+            return applicationConfig.defaultGitHubBaseUrl();
         }
         return configUrl;
     }
