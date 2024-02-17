@@ -10,14 +10,13 @@ public record GitHubRepository(
 
     String description,
 
-
     GitHubOwner owner,
 
     String url,
 
     String language,
 
-    String visibility,
+    GitHubRepositoryVisibilityType visibility,
 
     @JsonProperty("created_at")
     OffsetDateTime createdAt,
