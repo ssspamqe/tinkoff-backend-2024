@@ -8,6 +8,8 @@ import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.request.SetMyCommands;
 import edu.java.bot.services.CommandService;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +19,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TelegramBotInitializer {
-
     private final static Logger LOGGER = LogManager.getLogger();
+    private final static int THREADS_AMOUNT = 5;
+
+    private ExecutorService threadPool;
 
     private final TelegramBot bot;
     private final CommandService commandService;
@@ -30,15 +34,18 @@ public class TelegramBotInitializer {
 
     @EventListener
     public void onSpringRefreshedEvent(ContextRefreshedEvent event) {
+        threadPool = Executors.newFixedThreadPool(THREADS_AMOUNT);
         bot.execute(new SetMyCommands(commandService.getAllBotCommands()));
         bot.setUpdatesListener(this::handleBotUpdates);
     }
 
     private int handleBotUpdates(List<Update> updates) {
-        updates.forEach(update -> {
-            SendMessage response = getResponse(update.message());
-            bot.execute(response);
-        });
+        updates.forEach(update ->
+            threadPool.submit(() -> {
+                SendMessage response = getResponse(update.message());
+                bot.execute(response);
+            })
+        );
         return UpdatesListener.CONFIRMED_UPDATES_ALL;
     }
 
