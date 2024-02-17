@@ -3,14 +3,14 @@ package edu.java.webClients.gitHub.DTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
-public record Repository(
+public record GitHubRepository(
     long id,
 
     String name,
 
     String description,
 
-    Owner owner,
+    GitHubOwner owner,
 
     String url,
 

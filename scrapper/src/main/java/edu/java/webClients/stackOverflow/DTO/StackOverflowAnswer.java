@@ -3,10 +3,10 @@ package edu.java.webClients.stackOverflow.DTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
-public record Answer(
+public record StackOverflowAnswer(
     long id,
 
-    Owner owner,
+    StackOverflowOwner owner,
 
     @JsonProperty("is_accepted")
     boolean isAccepted,
