@@ -1,5 +1,8 @@
 package edu.java.webClients.stackOverflow;
 
+import edu.java.webClients.stackOverflow.DTO.Answer;
+import edu.java.webClients.stackOverflow.DTO.Question;
+import edu.java.webClients.stackOverflow.DTO.Response;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.HttpExchange;

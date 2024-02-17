@@ -1,6 +1,8 @@
 package edu.java.webClients.gitHub;
 
 import java.util.List;
+import edu.java.webClients.gitHub.DTO.Repository;
+import edu.java.webClients.gitHub.DTO.RepositoryActivity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.HttpExchange;
