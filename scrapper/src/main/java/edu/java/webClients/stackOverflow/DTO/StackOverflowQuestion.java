@@ -10,7 +10,7 @@ public record StackOverflowQuestion(
     List<String> tags,
 
     StackOverflowOwner owner,
-
+    
     String title,
 
     @JsonProperty("is_answered")

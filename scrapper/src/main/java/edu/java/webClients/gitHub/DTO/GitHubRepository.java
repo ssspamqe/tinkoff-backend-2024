@@ -10,6 +10,7 @@ public record GitHubRepository(
 
     String description,
 
+
     GitHubOwner owner,
 
     String url,
