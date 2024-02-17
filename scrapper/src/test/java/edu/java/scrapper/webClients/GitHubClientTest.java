@@ -2,7 +2,7 @@ package edu.java.scrapper.webClients;
 
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import edu.java.configuration.ApplicationConfig;
-import edu.java.webClients.BeanConfiguration;
+import edu.java.webClients.WebClientsBeanConfiguration;
 import edu.java.webClients.gitHub.DTO.GitHubOwner;
 import edu.java.webClients.gitHub.DTO.GitHubRepository;
 import edu.java.webClients.gitHub.DTO.GitHubRepositoryActivity;
@@ -29,7 +29,7 @@ public class GitHubClientTest {
     ApplicationConfig applicationConfig;
 
     @InjectMocks
-    BeanConfiguration beanConfiguration;
+    WebClientsBeanConfiguration webClientsBeanConfiguration;
 
     GitHubClient gitHubClient;
 
@@ -37,7 +37,7 @@ public class GitHubClientTest {
     public void should_returnRepository() {
         //Arrange
         Mockito.when(applicationConfig.gitHubBaseUrl()).thenReturn("http://localhost:8080/");
-        gitHubClient = beanConfiguration.gitHubClient();
+        gitHubClient = webClientsBeanConfiguration.gitHubClient();
 
         stubFor(get("/repos/testUser/test-repo")
             .willReturn(okJson(
@@ -55,11 +55,10 @@ public class GitHubClientTest {
     }
 
     @Test
-    public void should_returnRepository_when_urlInApplicationConfigIsNull() {
+    public void should_buildClient_when_urlInApplicationConfigIsNull() {
         //Arrange
         Mockito.when(applicationConfig.gitHubBaseUrl()).thenReturn(null);
         Mockito.when(applicationConfig.defaultGitHubBaseUrl()).thenReturn("http://localhost:8080/");
-        gitHubClient = beanConfiguration.gitHubClient();
 
         stubFor(get("/repos/testUser/test-repo")
             .willReturn(okJson(
@@ -69,6 +68,7 @@ public class GitHubClientTest {
         );
 
         //Act
+        gitHubClient = webClientsBeanConfiguration.gitHubClient();
         GitHubRepository actualRepository = gitHubClient.findRepository("testUser", "test-repo");
 
         //Assert
@@ -77,10 +77,10 @@ public class GitHubClientTest {
     }
 
     @Test
-    public void should_returnRepositoryActivity() {
+    public void should_returnRepositoryActivities() {
         //Arrange
         Mockito.when(applicationConfig.gitHubBaseUrl()).thenReturn("http://localhost:8080/");
-        gitHubClient = beanConfiguration.gitHubClient();
+        gitHubClient = webClientsBeanConfiguration.gitHubClient();
 
         stubFor(get("/repos/testUser/test-repo/activity")
             .willReturn(okJson("""
