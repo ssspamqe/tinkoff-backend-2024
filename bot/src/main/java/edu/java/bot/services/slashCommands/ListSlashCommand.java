@@ -57,7 +57,7 @@ public class ListSlashCommand implements ExecuableWithArgumentsSlashCommand {
         for (int i = 0; i < subscriptionList.size(); i++) {
             String link = subscriptionList.get(i).getLink();
             String host = parseHostFromLink(link);
-            response.append(STR."\{i + 1})\{host}\n\{link}");
+            response.append(STR."\{i + 1}) \{host}\n\{link}");
         }
         return response.toString();
     }
