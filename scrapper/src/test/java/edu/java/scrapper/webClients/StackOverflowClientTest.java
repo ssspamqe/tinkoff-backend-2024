@@ -120,33 +120,33 @@ public class StackOverflowClientTest {
 
         stubFor(get("/questions/123/answers?site=stackoverflow&filter=withbody")
             .willReturn(okJson("""
-                    {
-                        "items": [
-                            {
-                               "id": 1,
-                               "owner": {
-                                    "display_name": "customName1"
-                               },
-                               "is_accepted": true,
-                               "score": 123,
-                               "body": "This is first answer",
-                               "creation_date": 1314376600
-                            },
-                            {
-                               "id": 2,
-                               "owner": {
-                                    "display_name": "customName2"
-                               },
-                               "is_accepted": false,
-                               "score": 456,
-                               "body": "This is second answer",
-                               "creation_date": 1599067756
-                            }
-                        ],
-                        "hase_more": false,
-                        "quota_max": 300,
-                        "quota_remaining": 299
-                    }""")
+                {
+                    "items": [
+                        {
+                           "id": 1,
+                           "owner": {
+                                "display_name": "customName1"
+                           },
+                           "is_accepted": true,
+                           "score": 123,
+                           "body": "This is first answer",
+                           "creation_date": 1314376600
+                        },
+                        {
+                           "id": 2,
+                           "owner": {
+                                "display_name": "customName2"
+                           },
+                           "is_accepted": false,
+                           "score": 456,
+                           "body": "This is second answer",
+                           "creation_date": 1599067756
+                        }
+                    ],
+                    "hase_more": false,
+                    "quota_max": 300,
+                    "quota_remaining": 299
+                }""")
             )
         );
 
