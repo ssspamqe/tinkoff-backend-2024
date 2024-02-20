@@ -30,9 +30,10 @@ public class WebClientsBeanConfiguration {
     }
 
     private String getStackOverflowBaseUrl() {
-        String configUrl = applicationConfig.stackOverflowBaseUrl();
+        String defaultUrl = applicationConfig.stackOverflowUrl().defaultUrl();
+        String configUrl = applicationConfig.stackOverflowUrl().configUrl();
         if (configUrl == null || configUrl.isBlank()) {
-            return applicationConfig.defaultStackOverflowUrl();
+            return defaultUrl;
         }
         return configUrl;
     }
@@ -47,9 +48,10 @@ public class WebClientsBeanConfiguration {
     }
 
     private String getGitHubBaseUrl() {
-        String configUrl = applicationConfig.gitHubBaseUrl();
+        String defaultUrl = applicationConfig.gitHubUrl().defaultUrl();
+        String configUrl = applicationConfig.gitHubUrl().configUrl();
         if (configUrl == null || configUrl.isBlank()) {
-            return applicationConfig.defaultGitHubBaseUrl();
+            return defaultUrl;
         }
         return configUrl;
     }

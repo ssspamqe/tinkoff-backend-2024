@@ -25,6 +25,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 @WireMockTest(httpPort = 8080)
 @ExtendWith(MockitoExtension.class)
 public class GitHubClientTest {
+
+    static final String WIRE_MOCK_URL = "http://localhost:8080/";
+
     @Mock
     ApplicationConfig applicationConfig;
 
@@ -36,7 +39,8 @@ public class GitHubClientTest {
     @Test
     public void should_returnRepository() {
         //Arrange
-        Mockito.when(applicationConfig.gitHubBaseUrl()).thenReturn("http://localhost:8080/");
+        Mockito.when(applicationConfig.gitHubUrl())
+            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         gitHubClient = webClientsBeanConfiguration.gitHubClient();
 
         stubFor(get("/repos/testUser/test-repo")
@@ -57,8 +61,7 @@ public class GitHubClientTest {
     @Test
     public void should_buildClient_when_urlInApplicationConfigIsNull() {
         //Arrange
-        Mockito.when(applicationConfig.gitHubBaseUrl()).thenReturn(null);
-        Mockito.when(applicationConfig.defaultGitHubBaseUrl()).thenReturn("http://localhost:8080/");
+        Mockito.when(applicationConfig.gitHubUrl()).thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, null));
 
         stubFor(get("/repos/testUser/test-repo")
             .willReturn(okJson(
@@ -79,7 +82,8 @@ public class GitHubClientTest {
     @Test
     public void should_returnRepositoryActivities() {
         //Arrange
-        Mockito.when(applicationConfig.gitHubBaseUrl()).thenReturn("http://localhost:8080/");
+        Mockito.when(applicationConfig.gitHubUrl())
+            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         gitHubClient = webClientsBeanConfiguration.gitHubClient();
 
         stubFor(get("/repos/testUser/test-repo/activity")

@@ -26,6 +26,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(MockitoExtension.class)
 public class StackOverflowClientTest {
 
+    static final String WIRE_MOCK_URL = "http://localhost:8080/";
+
     @Mock
     ApplicationConfig applicationConfig;
 
@@ -37,7 +39,8 @@ public class StackOverflowClientTest {
     @Test
     public void should_returnQuestion() {
         //Arrange
-        Mockito.when(applicationConfig.stackOverflowBaseUrl()).thenReturn("http://localhost:8080/");
+        Mockito.when(applicationConfig.stackOverflowUrl())
+            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
 
         stubFor(get("/questions/123?site=stackoverflow&filter=withbody").
@@ -90,8 +93,8 @@ public class StackOverflowClientTest {
     @Test
     public void should_buildWebClient_when_urlInApplicationConfigIsNull() {
         //Arrange
-        Mockito.when(applicationConfig.stackOverflowBaseUrl()).thenReturn(null);
-        Mockito.when(applicationConfig.defaultStackOverflowUrl()).thenReturn("http://localhost:8080/");
+        Mockito.when(applicationConfig.stackOverflowUrl())
+            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, null));
 
         stubFor(get("/questions/123?site=stackoverflow&filter=withbody")
             .willReturn(okJson("""
@@ -115,7 +118,8 @@ public class StackOverflowClientTest {
     @Test
     public void should_returnAnswers() {
         //Arrange
-        Mockito.when(applicationConfig.stackOverflowBaseUrl()).thenReturn("http://localhost:8080");
+        Mockito.when(applicationConfig.stackOverflowUrl())
+            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
 
         stubFor(get("/questions/123/answers?site=stackoverflow&filter=withbody")

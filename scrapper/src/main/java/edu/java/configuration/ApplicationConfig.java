@@ -14,16 +14,19 @@ public record ApplicationConfig(
     @NotNull
     Scheduler scheduler,
 
-    @NotBlank
-    String defaultStackOverflowUrl,
+    @NotNull
+    StackOverflowUrl stackOverflowUrl,
 
-    String stackOverflowBaseUrl,
+    @NotNull
+    GitHubUrl gitHubUrl
 
-    @NotBlank
-    String defaultGitHubBaseUrl,
-
-    String gitHubBaseUrl
 ) {
     public record Scheduler(boolean enable, @NotNull Duration interval, @NotNull Duration forceCheckDelay) {
+    }
+
+    public record StackOverflowUrl(@NotBlank String defaultUrl, String configUrl) {
+    }
+
+    public record GitHubUrl(@NotBlank String defaultUrl, String configUrl) {
     }
 }
