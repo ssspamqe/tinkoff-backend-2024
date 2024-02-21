@@ -1,4 +1,4 @@
-package edu.java.webClients.gitHub.DTO;
+package edu.java.webClients.gitHub.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 
