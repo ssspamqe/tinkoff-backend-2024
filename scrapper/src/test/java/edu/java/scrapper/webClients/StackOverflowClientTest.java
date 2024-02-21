@@ -44,7 +44,7 @@ public class StackOverflowClientTest {
         stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
 
         stubFor(get("/questions/123?site=stackoverflow&filter=withbody").
-            willReturn(okJson("""
+            willReturn(okJson(STR."""
                 {
                     "items":[
                                 {
@@ -59,7 +59,7 @@ public class StackOverflowClientTest {
                                     "is_answered": true,
                                     "answer_count": 321,
                                     "body": "test question body",
-                                    "creation_date": 1314376600,
+                                        "creation_date": 1314376600,
                                     "closed_date": 1599067756,
                                     "closed_reason": "test closed reason"
                                 }
@@ -155,7 +155,8 @@ public class StackOverflowClientTest {
         );
 
         //Act
-        List<StackOverflowAnswer> actualAnswerList = stackOverflowClient.findAnswersByQuestionId(123).items();
+        List<StackOverflowAnswer> actualAnswerList =
+            stackOverflowClient.findAnswersByQuestionId(123).items();
 
         //Assert
         List<StackOverflowAnswer> expectedAnswerList = List.of(

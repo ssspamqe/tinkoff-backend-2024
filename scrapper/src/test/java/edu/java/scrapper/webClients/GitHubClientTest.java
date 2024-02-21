@@ -3,12 +3,12 @@ package edu.java.scrapper.webClients;
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import edu.java.configuration.ApplicationConfig;
 import edu.java.webClients.WebClientsBeanConfiguration;
+import edu.java.webClients.gitHub.GitHubClient;
 import edu.java.webClients.gitHub.dto.GitHubOwner;
 import edu.java.webClients.gitHub.dto.GitHubRepository;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryActivity;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityType;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryVisibilityType;
-import edu.java.webClients.gitHub.GitHubClient;
 import java.time.OffsetDateTime;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -51,17 +51,20 @@ public class GitHubClientTest {
         );
 
         //Act
-        GitHubRepository actualRepository = gitHubClient.findRepository("testUser", "test-repo");
+        GitHubRepository actualRepository =
+            gitHubClient.findRepository("testUser", "test-repo");
 
         //Assert
-        GitHubRepository expectedRepository = getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
+        GitHubRepository expectedRepository =
+            getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
         assertThat(actualRepository).isEqualTo(expectedRepository);
     }
 
     @Test
     public void should_buildClient_when_urlInApplicationConfigIsNull() {
         //Arrange
-        Mockito.when(applicationConfig.gitHubUrl()).thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, null));
+        Mockito.when(applicationConfig.gitHubUrl())
+            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, null));
 
         stubFor(get("/repos/testUser/test-repo")
             .willReturn(okJson(
@@ -75,7 +78,8 @@ public class GitHubClientTest {
         GitHubRepository actualRepository = gitHubClient.findRepository("testUser", "test-repo");
 
         //Assert
-        GitHubRepository expectedRepository = getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
+        GitHubRepository expectedRepository =
+            getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
         assertThat(actualRepository).isEqualTo(expectedRepository);
     }
 
