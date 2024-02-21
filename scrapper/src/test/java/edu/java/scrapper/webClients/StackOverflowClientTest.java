@@ -3,10 +3,10 @@ package edu.java.scrapper.webClients;
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import edu.java.configuration.ApplicationConfig;
 import edu.java.webClients.WebClientsBeanConfiguration;
+import edu.java.webClients.stackOverflow.StackOverflowClient;
 import edu.java.webClients.stackOverflow.dto.StackOverflowAnswer;
 import edu.java.webClients.stackOverflow.dto.StackOverflowOwner;
 import edu.java.webClients.stackOverflow.dto.StackOverflowQuestion;
-import edu.java.webClients.stackOverflow.StackOverflowClient;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
@@ -59,8 +59,8 @@ public class StackOverflowClientTest {
                                     "is_answered": true,
                                     "answer_count": 321,
                                     "body": "test question body",
-                                        "creation_date": 1314376600,
-                                    "closed_date": 1599067756,
+                                    "creation_date": 567,
+                                    "closed_date": 890,
                                     "closed_reason": "test closed reason"
                                 }
                         ],
@@ -75,6 +75,8 @@ public class StackOverflowClientTest {
         List<StackOverflowQuestion> actualQuestionList = stackOverflowClient.findQuestionById(123).items();
 
         //Assert
+        Instant creationDate = Instant.ofEpochSecond(567);
+        Instant closedDate = Instant.ofEpochSecond(890);
         StackOverflowQuestion expectedQuestion = new StackOverflowQuestion(
             123,
             List.of("Java", "Spring"),
@@ -83,8 +85,8 @@ public class StackOverflowClientTest {
             true,
             321,
             "test question body",
-            OffsetDateTime.ofInstant(Instant.ofEpochSecond(1314376600), ZoneOffset.UTC),
-            OffsetDateTime.ofInstant(Instant.ofEpochSecond(1599067756), ZoneOffset.UTC),
+            OffsetDateTime.ofInstant(creationDate, ZoneOffset.UTC),
+            OffsetDateTime.ofInstant(closedDate, ZoneOffset.UTC),
             "test closed reason"
         );
         assertThat(actualQuestionList).containsExactly(expectedQuestion);
@@ -134,7 +136,7 @@ public class StackOverflowClientTest {
                            "is_accepted": true,
                            "score": 123,
                            "body": "This is first answer",
-                           "creation_date": 1314376600
+                           "creation_date": 567
                         },
                         {
                            "id": 2,
@@ -144,7 +146,7 @@ public class StackOverflowClientTest {
                            "is_accepted": false,
                            "score": 456,
                            "body": "This is second answer",
-                           "creation_date": 1599067756
+                           "creation_date": 890
                         }
                     ],
                     "hase_more": false,
@@ -159,6 +161,8 @@ public class StackOverflowClientTest {
             stackOverflowClient.findAnswersByQuestionId(123).items();
 
         //Assert
+        Instant creationDate1 = Instant.ofEpochSecond(567);
+        Instant creationDate2 = Instant.ofEpochSecond(890);
         List<StackOverflowAnswer> expectedAnswerList = List.of(
             new StackOverflowAnswer(
                 1,
@@ -166,7 +170,7 @@ public class StackOverflowClientTest {
                 true,
                 123,
                 "This is first answer",
-                OffsetDateTime.ofInstant(Instant.ofEpochSecond(1314376600), ZoneOffset.UTC)
+                OffsetDateTime.ofInstant(creationDate1, ZoneOffset.UTC)
             ),
             new StackOverflowAnswer(
                 2,
@@ -174,7 +178,7 @@ public class StackOverflowClientTest {
                 false,
                 456,
                 "This is second answer",
-                OffsetDateTime.ofInstant(Instant.ofEpochSecond(1599067756), ZoneOffset.UTC)
+                OffsetDateTime.ofInstant(creationDate2, ZoneOffset.UTC)
             )
         );
         assertThat(actualAnswerList).isEqualTo(expectedAnswerList);
