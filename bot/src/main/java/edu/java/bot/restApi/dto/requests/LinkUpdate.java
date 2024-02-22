@@ -1,4 +1,4 @@
-package edu.java.bot.restApi.dto.updateRequest;
+package edu.java.bot.restApi.dto.requests;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;

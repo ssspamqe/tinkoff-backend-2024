@@ -1,6 +1,6 @@
 package edu.java.bot.restApi.controllers;
 
-import edu.java.bot.restApi.dto.updateRequest.LinkUpdate;
+import edu.java.bot.restApi.dto.requests.LinkUpdate;
 import jakarta.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
