@@ -16,7 +16,7 @@
         <jdk.version>21</jdk.version>
         <java.release>21</java.release>
 
-        <revision>0.1</revision>
+        <revision>0.2</revision>
 
         <skip.unit.tests>false</skip.unit.tests>
 
@@ -193,6 +193,7 @@
 
                         <compilerArgument>-Xlint:all</compilerArgument>
                         <compilerArgument>-Xdoclint:all</compilerArgument>
+                        <compilerArgument>--enable-preview</compilerArgument>
                     </configuration>
                 </plugin>
 
@@ -203,6 +204,7 @@
                     <version>${maven-surefire-plugin.version}</version>
                     <configuration>
                         <skip>${skip.unit.tests}</skip>
+                        <argLine>--enable-preview</argLine>
                     </configuration>
                 </plugin>
                 <plugin>
