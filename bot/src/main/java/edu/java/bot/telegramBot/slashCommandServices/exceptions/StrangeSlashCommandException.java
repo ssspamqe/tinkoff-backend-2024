@@ -1,4 +1,4 @@
-package edu.java.bot.services.exceptions;
+package edu.java.bot.telegramBot.slashCommandServices.exceptions;
 
 public class StrangeSlashCommandException extends CommandServiceException {
     public StrangeSlashCommandException(String message) {

@@ -1,4 +1,4 @@
-package edu.java.bot.services.exceptions;
+package edu.java.bot.telegramBot.slashCommandServices.exceptions;
 
 public class NotACommandOrUserParameterException extends CommandServiceException {
     public NotACommandOrUserParameterException(String message) {

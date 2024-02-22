@@ -1,4 +1,4 @@
-package edu.java.bot.services.slashCommands;
+package edu.java.bot.telegramBot.slashCommandServices.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import org.springframework.stereotype.Component;

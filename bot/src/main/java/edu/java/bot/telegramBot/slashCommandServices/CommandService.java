@@ -1,20 +1,21 @@
-package edu.java.bot.services;
+package edu.java.bot.telegramBot.slashCommandServices;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.request.ForceReply;
 import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove;
 import com.pengrad.telegrambot.request.SendMessage;
-import edu.java.bot.services.exceptions.NoSuchCommandException;
-import edu.java.bot.services.exceptions.NotACommandOrUserParameterException;
-import edu.java.bot.services.exceptions.NotAReplyOnBotMessageException;
-import edu.java.bot.services.exceptions.StrangeSlashCommandException;
-import edu.java.bot.services.slashCommands.ExecuableWithArgumentsSlashCommand;
-import edu.java.bot.services.slashCommands.SimplyExecutableSlashCommand;
-import edu.java.bot.services.slashCommands.SlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.exceptions.NoSuchCommandException;
+import edu.java.bot.telegramBot.slashCommandServices.exceptions.NotACommandOrUserParameterException;
+import edu.java.bot.telegramBot.slashCommandServices.exceptions.NotAReplyOnBotMessageException;
+import edu.java.bot.telegramBot.slashCommandServices.exceptions.StrangeSlashCommandException;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.ExecuableWithArgumentsSlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.SimplyExecutableSlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.SlashCommand;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

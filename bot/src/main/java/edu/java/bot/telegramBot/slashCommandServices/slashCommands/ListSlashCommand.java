@@ -1,13 +1,14 @@
-package edu.java.bot.services.slashCommands;
+package edu.java.bot.telegramBot.slashCommandServices.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
-import edu.java.bot.services.exceptions.BadLinkException;
+import edu.java.bot.telegramBot.slashCommandServices.exceptions.BadLinkException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

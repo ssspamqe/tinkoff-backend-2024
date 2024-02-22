@@ -5,7 +5,7 @@ import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
-import edu.java.bot.services.slashCommands.ListSlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.ListSlashCommand;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

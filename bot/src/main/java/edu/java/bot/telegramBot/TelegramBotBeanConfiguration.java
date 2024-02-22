@@ -2,7 +2,7 @@ package edu.java.bot.telegramBot;
 
 import com.pengrad.telegrambot.TelegramBot;
 import edu.java.bot.configuration.ApplicationConfig;
-import edu.java.bot.services.CommandService;
+import edu.java.bot.telegramBot.slashCommandServices.CommandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;

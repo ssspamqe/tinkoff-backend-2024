@@ -1,8 +1,8 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
-import edu.java.bot.services.slashCommands.HelpSlashCommand;
-import edu.java.bot.services.slashCommands.SlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.HelpSlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.SlashCommand;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
