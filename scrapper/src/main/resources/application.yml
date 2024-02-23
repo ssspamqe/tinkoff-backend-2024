@@ -8,7 +8,8 @@ app:
   git-hub-url:
     default-url: https://api.github.com/
   telegram-bot-url:
-    default-url: http://localhost:8090/bot/api/v1
+    default-url: http://localhost:8090/bot/api/v1/
+
 spring:
   application:
     name: scrapper
