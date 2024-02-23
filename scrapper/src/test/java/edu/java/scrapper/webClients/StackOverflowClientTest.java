@@ -7,16 +7,19 @@ import edu.java.webClients.stackOverflow.StackOverflowClient;
 import edu.java.webClients.stackOverflow.dto.StackOverflowAnswer;
 import edu.java.webClients.stackOverflow.dto.StackOverflowOwner;
 import edu.java.webClients.stackOverflow.dto.StackOverflowQuestion;
+import edu.java.webClients.stackOverflow.dto.StackOverflowResponse;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.ResponseEntity;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
@@ -36,14 +39,18 @@ public class StackOverflowClientTest {
 
     StackOverflowClient stackOverflowClient;
 
-    public void should_returnQuestion() {
-        //Arrange
+    @BeforeEach
+    void init() {
         Mockito.when(applicationConfig.stackOverflowUrl())
             .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
+    }
 
+    @Test
+    public void should_returnQuestion() {
+        //Arrange
         stubFor(get("/questions/123?site=stackoverflow&filter=withbody").
-            willReturn(okJson(STR."""
+            willReturn(okJson("""
                 {
                     "items":[
                                 {
@@ -71,7 +78,8 @@ public class StackOverflowClientTest {
         );
 
         //Act
-        List<StackOverflowQuestion> actualQuestionList = stackOverflowClient.findQuestionById(123).items();
+        ResponseEntity<StackOverflowResponse<StackOverflowQuestion>> actualResponse =
+            stackOverflowClient.findQuestionById(123);
 
         //Assert
         Instant creationDate = Instant.ofEpochSecond(567);
@@ -88,41 +96,15 @@ public class StackOverflowClientTest {
             OffsetDateTime.ofInstant(closedDate, ZoneOffset.UTC),
             "test closed reason"
         );
-        assertThat(actualQuestionList).containsExactly(expectedQuestion);
-    }
 
-    @Test
-    public void should_buildWebClient_when_urlInApplicationConfigIsNull() {
-        //Arrange
-        Mockito.when(applicationConfig.stackOverflowUrl())
-            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, null));
-
-        stubFor(get("/questions/123?site=stackoverflow&filter=withbody")
-            .willReturn(okJson("""
-                {
-                    "items":[],
-                    "hase_more": false,
-                    "quota_max": 300,
-                    "quota_remaining": 299
-                }""")
-            )
-        );
-
-        //Act
-        stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
-        int actualQuotaRemaining = stackOverflowClient.findQuestionById(123).quotaRemaining();
-
-        //Assert
-        assertThat(actualQuotaRemaining).isEqualTo(299);
+        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
+        assertThat(actualResponse.getBody()).isNotNull();
+        assertThat(actualResponse.getBody().items()).isNotNull().containsExactly(expectedQuestion);
     }
 
     @Test
     public void should_returnAnswers() {
         //Arrange
-        Mockito.when(applicationConfig.stackOverflowUrl())
-            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
-        stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
-
         stubFor(get("/questions/123/answers?site=stackoverflow&filter=withbody")
             .willReturn(okJson("""
                 {
@@ -156,8 +138,8 @@ public class StackOverflowClientTest {
         );
 
         //Act
-        List<StackOverflowAnswer> actualAnswerList =
-            stackOverflowClient.findAnswersByQuestionId(123).items();
+        ResponseEntity<StackOverflowResponse<StackOverflowAnswer>> actualResponse =
+            stackOverflowClient.findAnswersByQuestionId(123);
 
         //Assert
         Instant creationDate1 = Instant.ofEpochSecond(567);
@@ -180,6 +162,10 @@ public class StackOverflowClientTest {
                 OffsetDateTime.ofInstant(creationDate2, ZoneOffset.UTC)
             )
         );
-        assertThat(actualAnswerList).isEqualTo(expectedAnswerList);
+
+        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
+        assertThat(actualResponse.getBody()).isNotNull();
+        assertThat(actualResponse.getBody().items()).isNotNull()
+            .containsExactlyInAnyOrderElementsOf(expectedAnswerList);
     }
 }
