@@ -40,7 +40,7 @@ public class GitHubClientTest {
     public void should_returnRepository() {
         //Arrange
         Mockito.when(applicationConfig.gitHubUrl())
-            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
+            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         gitHubClient = webClientsBeanConfiguration.gitHubClient();
 
         stubFor(get("/repos/testUser/test-repo")
@@ -64,7 +64,7 @@ public class GitHubClientTest {
     public void should_buildClient_when_urlInApplicationConfigIsNull() {
         //Arrange
         Mockito.when(applicationConfig.gitHubUrl())
-            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, null));
+            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, null));
 
         stubFor(get("/repos/testUser/test-repo")
             .willReturn(okJson(
@@ -87,7 +87,7 @@ public class GitHubClientTest {
     public void should_returnRepositoryActivities() {
         //Arrange
         Mockito.when(applicationConfig.gitHubUrl())
-            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
+            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         gitHubClient = webClientsBeanConfiguration.gitHubClient();
 
         stubFor(get("/repos/testUser/test-repo/activity")

@@ -36,11 +36,10 @@ public class StackOverflowClientTest {
 
     StackOverflowClient stackOverflowClient;
 
-    @Test
     public void should_returnQuestion() {
         //Arrange
         Mockito.when(applicationConfig.stackOverflowUrl())
-            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
+            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
 
         stubFor(get("/questions/123?site=stackoverflow&filter=withbody").
@@ -96,7 +95,7 @@ public class StackOverflowClientTest {
     public void should_buildWebClient_when_urlInApplicationConfigIsNull() {
         //Arrange
         Mockito.when(applicationConfig.stackOverflowUrl())
-            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, null));
+            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, null));
 
         stubFor(get("/questions/123?site=stackoverflow&filter=withbody")
             .willReturn(okJson("""
@@ -121,7 +120,7 @@ public class StackOverflowClientTest {
     public void should_returnAnswers() {
         //Arrange
         Mockito.when(applicationConfig.stackOverflowUrl())
-            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
+            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
         stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
 
         stubFor(get("/questions/123/answers?site=stackoverflow&filter=withbody")

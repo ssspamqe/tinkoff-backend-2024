@@ -22,37 +22,21 @@ public class WebClientsBeanConfiguration {
 
     @Bean
     public StackOverflowClient stackOverflowClient() {
-        WebClient webClient = WebClient.builder().baseUrl(getStackOverflowBaseUrl()).build();
+        String baseUrl = applicationConfig.stackOverflowUrl().getBaseUrl();
+        WebClient webClient = WebClient.builder().baseUrl(baseUrl).build();
         WebClientAdapter adapter = WebClientAdapter.create(webClient);
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();
 
         return factory.createClient(StackOverflowClient.class);
     }
 
-    private String getStackOverflowBaseUrl() {
-        String defaultUrl = applicationConfig.stackOverflowUrl().defaultUrl();
-        String configUrl = applicationConfig.stackOverflowUrl().configUrl();
-        if (configUrl == null || configUrl.isBlank()) {
-            return defaultUrl;
-        }
-        return configUrl;
-    }
-
     @Bean
     public GitHubClient gitHubClient() {
-        WebClient webClient = WebClient.builder().baseUrl(getGitHubBaseUrl()).build();
+        String baseUrl = applicationConfig.gitHubUrl().getBaseUrl();
+        WebClient webClient = WebClient.builder().baseUrl(baseUrl).build();
         WebClientAdapter adapter = WebClientAdapter.create(webClient);
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();
 
         return factory.createClient(GitHubClient.class);
-    }
-
-    private String getGitHubBaseUrl() {
-        String defaultUrl = applicationConfig.gitHubUrl().defaultUrl();
-        String configUrl = applicationConfig.gitHubUrl().configUrl();
-        if (configUrl == null || configUrl.isBlank()) {
-            return defaultUrl;
-        }
-        return configUrl;
     }
 }
