@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/scrapper/v1/links")
+@RequestMapping("/scrapper/api/v1/links")
 public class LinkController {
 
     private static Logger LOGGER = LogManager.getLogger();

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/bot/v1")
+@RequestMapping("/bot/api/v1")
 public class BotController {
 
     private static final Logger LOGGER = LogManager.getLogger();

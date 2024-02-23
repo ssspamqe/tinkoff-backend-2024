@@ -16,4 +16,4 @@ logging:
 springdoc:
   show-actuator: true
   swagger-ui:
-    path: bot/api/v1/swagger-ui
+    path: /bot/api/v1/swagger-ui
