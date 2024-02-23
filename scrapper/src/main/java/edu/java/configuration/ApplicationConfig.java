@@ -18,7 +18,10 @@ public record ApplicationConfig(
     ApiUrl stackOverflowUrl,
 
     @NotNull
-    ApiUrl gitHubUrl
+    ApiUrl gitHubUrl,
+
+    @NotNull
+    ApiUrl telegramBotUrl
 
 ) {
     public record Scheduler(boolean enable, @NotNull Duration interval, @NotNull Duration forceCheckDelay) {
