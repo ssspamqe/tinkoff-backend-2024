@@ -15,18 +15,16 @@ public record ApplicationConfig(
     Scheduler scheduler,
 
     @NotNull
-    StackOverflowUrl stackOverflowUrl,
+    ApiUrl stackOverflowUrl,
 
     @NotNull
-    GitHubUrl gitHubUrl
+    ApiUrl gitHubUrl
 
 ) {
     public record Scheduler(boolean enable, @NotNull Duration interval, @NotNull Duration forceCheckDelay) {
     }
 
-    public record StackOverflowUrl(@NotBlank String defaultUrl, String configUrl) {
-    }
+    public record ApiUrl(@NotBlank String defaultUrl, String configUrl) {
 
-    public record GitHubUrl(@NotBlank String defaultUrl, String configUrl) {
     }
 }
