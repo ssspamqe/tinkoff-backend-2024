@@ -3,6 +3,7 @@ package edu.java.webClients;
 import edu.java.configuration.ApplicationConfig;
 import edu.java.webClients.gitHub.GitHubClient;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
+import edu.java.webClients.telegramBot.TelegramBotClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,20 +24,26 @@ public class WebClientsBeanConfiguration {
     @Bean
     public StackOverflowClient stackOverflowClient() {
         String baseUrl = applicationConfig.stackOverflowUrl().getBaseUrl();
-        WebClient webClient = WebClient.builder().baseUrl(baseUrl).build();
-        WebClientAdapter adapter = WebClientAdapter.create(webClient);
-        HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();
-
-        return factory.createClient(StackOverflowClient.class);
+        return createDefaultWebClient(baseUrl, StackOverflowClient.class);
     }
 
     @Bean
     public GitHubClient gitHubClient() {
         String baseUrl = applicationConfig.gitHubUrl().getBaseUrl();
-        WebClient webClient = WebClient.builder().baseUrl(baseUrl).build();
+        return createDefaultWebClient(baseUrl, GitHubClient.class);
+    }
+
+    @Bean
+    public TelegramBotClient telegramBotClient() {
+        String baseUrl = applicationConfig.telegramBotUrl().getBaseUrl();
+        return createDefaultWebClient(baseUrl, TelegramBotClient.class);
+    }
+
+    private <T> T createDefaultWebClient(String url, Class<T> webClientInterface) {
+        WebClient webClient = WebClient.builder().baseUrl(url).build();
         WebClientAdapter adapter = WebClientAdapter.create(webClient);
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();
 
-        return factory.createClient(GitHubClient.class);
+        return factory.createClient(webClientInterface);
     }
 }
