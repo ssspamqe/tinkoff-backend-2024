@@ -1,4 +1,4 @@
-package edu.java.restApi.dto.responses;
+package edu.java.restApi.controllers.dto.responses;
 
 public record LinkResponse(
     int id,

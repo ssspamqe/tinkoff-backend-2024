@@ -1,8 +1,8 @@
-package edu.java.restApi.dto.requests;
+package edu.java.restApi.controllers.dto.requests;
 
 import jakarta.validation.constraints.Pattern;
 
-public record RemoveLinkRequest(
+public record AddLinkRequest(
     @Pattern(regexp = "https?://.*")
     String link
 ) {
