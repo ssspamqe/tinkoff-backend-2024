@@ -1,9 +1,9 @@
 package edu.java.restApi.controllers;
 
-import edu.java.restApi.dto.requests.AddLinkRequest;
-import edu.java.restApi.dto.requests.RemoveLinkRequest;
-import edu.java.restApi.dto.responses.LinkResponse;
-import edu.java.restApi.dto.responses.ListLinksResponse;
+import edu.java.restApi.controllers.dto.requests.AddLinkRequest;
+import edu.java.restApi.controllers.dto.requests.RemoveLinkRequest;
+import edu.java.restApi.controllers.dto.responses.LinkResponse;
+import edu.java.restApi.controllers.dto.responses.ListLinksResponse;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import java.util.List;

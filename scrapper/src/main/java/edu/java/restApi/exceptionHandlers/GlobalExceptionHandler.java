@@ -1,6 +1,6 @@
 package edu.java.restApi.exceptionHandlers;
 
-import edu.java.restApi.dto.responses.ApiErrorResponse;
+import edu.java.restApi.controllers.dto.responses.ApiErrorResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatusCode;
