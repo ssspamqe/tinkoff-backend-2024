@@ -7,27 +7,27 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class ChatLinks {
+public class TelegramChatLinksRepository {
 
     private final RedisTemplate<String, Object> redisTemplate;
 
     @Autowired
-    public ChatLinks(RedisTemplate<String, Object> redisTemplate) {
+    public TelegramChatLinksRepository(RedisTemplate<String, Object> redisTemplate) {
         this.redisTemplate = redisTemplate;
     }
 
     public void addLinkToChat(long chatId, long linkId) {
-        redisTemplate.opsForSet().add(STR."chat_links:\{chatId}", linkId);
-        redisTemplate.opsForSet().add(STR."link_chats:\{linkId}", chatId);
+        redisTemplate.opsForSet().add(STR."telegramChat_links:\{chatId}", linkId);
+        redisTemplate.opsForSet().add(STR."link_telegramChats:\{linkId}", chatId);
     }
 
-    public Set<Long> getChatLinks(long chatId) {
-        return redisTemplate.opsForSet().members(STR."chat_links:\{chatId}").stream()
+    public Set<Long> findAllLinksByChatId(long chatId) {
+        return redisTemplate.opsForSet().members(STR."telegramChat_links:\{chatId}").stream()
             .map(item -> (Long) item).collect(Collectors.toSet());
     }
 
-    public Set<Long> getChatsByLink(long linkId) {
-        return redisTemplate.opsForSet().members(STR."link_chats:\{linkId}").stream()
+    public Set<Long> findAllChatsByLinkId(long linkId) {
+        return redisTemplate.opsForSet().members(STR."link_telegramChats:\{linkId}").stream()
             .map(item -> (Long) item).collect(Collectors.toSet());
     }
 }
