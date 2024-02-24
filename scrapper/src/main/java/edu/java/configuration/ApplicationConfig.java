@@ -6,6 +6,7 @@ import java.time.Duration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.validation.annotation.Validated;
+import javax.xml.crypto.Data;
 
 @Validated
 @ConfigurationProperties(prefix = "app", ignoreUnknownFields = false)
@@ -21,7 +22,10 @@ public record ApplicationConfig(
     ApiUrl gitHubUrl,
 
     @NotNull
-    ApiUrl telegramBotUrl
+    ApiUrl telegramBotUrl,
+
+    @NotNull
+    DatabaseConnection redisConnection
 
 ) {
 
@@ -35,5 +39,8 @@ public record ApplicationConfig(
             }
             return configUrl;
         }
+    }
+
+    public record DatabaseConnection(@NotBlank String hostName, @NotNull int port, String password) {
     }
 }
