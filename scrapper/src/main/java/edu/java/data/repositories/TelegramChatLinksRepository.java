@@ -9,6 +9,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class TelegramChatLinksRepository {
 
+    private static final String CHAT_LINKS_KEY_PREFIX = "telegramChat_links";
+    private static final String LINK_CHATS_KEY_PREFIX = "link_telegramChats";
+
     private final RedisTemplate<String, Object> redisTemplate;
 
     @Autowired
@@ -16,23 +19,32 @@ public class TelegramChatLinksRepository {
         this.redisTemplate = redisTemplate;
     }
 
-    public void addLinkToChat(long chatId, long linkId) {
-        redisTemplate.opsForSet().add(STR."telegramChat_links:\{chatId}", linkId);
-        redisTemplate.opsForSet().add(STR."link_telegramChats:\{linkId}", chatId);
+    public void addLinkToChat(Long chatId, Long linkId) {
+        redisTemplate.opsForSet().add(buildTelegramChatLinksKey(chatId), linkId);
+        redisTemplate.opsForSet().add(buildLinksTelegramChatKey(linkId), chatId);
     }
 
     public void removeLinkFromChat(long chatId, long linkId) {
-        redisTemplate.opsForSet().remove(STR."telegramChat_links:\{chatId}", linkId);
-        redisTemplate.opsForSet().remove(STR."link_telegramChats:\{linkId}", chatId);
+        redisTemplate.opsForSet().remove(buildTelegramChatLinksKey(chatId), linkId);
+        redisTemplate.opsForSet().remove(buildLinksTelegramChatKey(linkId), chatId);
     }
 
     public Set<Long> findAllLinksByChatId(long chatId) {
-        return redisTemplate.opsForSet().members(STR."telegramChat_links:\{chatId}").stream()
+        return redisTemplate.opsForSet().members(buildTelegramChatLinksKey(chatId)).stream()
             .map(item -> (long) item).collect(Collectors.toSet());
+
     }
 
     public Set<Long> findAllChatsByLinkId(long linkId) {
-        return redisTemplate.opsForSet().members(STR."link_telegramChats:\{linkId}").stream()
+        return redisTemplate.opsForSet().members(buildLinksTelegramChatKey(linkId)).stream()
             .map(item -> (long) item).collect(Collectors.toSet());
+    }
+
+    private String buildTelegramChatLinksKey(long chatId) {
+        return STR."\{CHAT_LINKS_KEY_PREFIX}:\{chatId}";
+    }
+
+    private String buildLinksTelegramChatKey(long linkId) {
+        return STR."\{LINK_CHATS_KEY_PREFIX}:\{linkId}";
     }
 }
