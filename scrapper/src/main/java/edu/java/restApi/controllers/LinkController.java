@@ -1,6 +1,5 @@
 package edu.java.restApi.controllers;
 
-import edu.java.data.entities.Link;
 import edu.java.restApi.controllers.dto.requests.AddLinkRequest;
 import edu.java.restApi.controllers.dto.requests.RemoveLinkRequest;
 import edu.java.restApi.controllers.dto.responses.LinkResponse;
@@ -38,11 +37,10 @@ public class LinkController {
     public ResponseEntity<ListLinksResponse> getTrackedLinksByChatId(
         @RequestHeader("Tg-Chat-Id") @Min(0) int chatApiId
     ) {
-        List<Link> trackedLinks = linkService.getTrackedLinks(chatApiId).stream().map().toList();
-        return ResponseEntity.ok(new ListLinksResponse(
-            trackedLinks,
-            trackedLinks.size()
-        ));
+        List<LinkResponse> trackedLinks =
+            linkService.getTrackedLinks(chatApiId).stream().map(LinkResponse::new).toList();
+        ListLinksResponse listLinksResponse = new ListLinksResponse(trackedLinks, trackedLinks.size());
+        return ResponseEntity.ok(listLinksResponse);
     }
 
     @PostMapping
@@ -50,17 +48,19 @@ public class LinkController {
         @RequestHeader("Tg-Chat-Id") @Min(0) int chatId,
         @Valid @RequestBody AddLinkRequest addLinkRequest
     ) {
-        LOGGER.debug(STR."Adding new link (\{addLinkRequest.link()}) to track by chat with id \{chatId}}");
-        return ResponseEntity.ok(new LinkResponse(1, addLinkRequest.link()));
+        String linkUrl = addLinkRequest.link();
+        LinkResponse linkResponse = new LinkResponse(linkService.addLinkToTrack(chatId, linkUrl));
+        return ResponseEntity.ok(linkResponse);
     }
 
     @DeleteMapping
-    public ResponseEntity<LinkResponse> deleteTrackedLink(
+    public ResponseEntity<LinkResponse> untrackLink(
         @RequestHeader("Tg-Chat-Id") @Min(0) int chatId,
         @Valid @RequestBody RemoveLinkRequest removeLinkRequest
     ) {
-        LOGGER.debug(STR."Delete link \{removeLinkRequest.link()} from tracking of chat with id \{chatId}}");
-        return ResponseEntity.ok(new LinkResponse(1, "example/link"));
+        String linkUrl = removeLinkRequest.link();
+        LinkResponse linkResponse = new LinkResponse(linkService.untrackLink(chatId, linkUrl));
+        return ResponseEntity.ok(linkResponse);
     }
 
 }

@@ -49,24 +49,32 @@ public class LinkService {
             .collect(Collectors.toSet());
     }
 
-    public void addLinkToTrack(long chatApiId, String linkUrl) {
+    public Link addLinkToTrack(long chatId, String linkUrl) {
         Link link = findOrSave(linkUrl);
         long linkId = link.id();
 
-        TelegramChat chat = findOrThrowException(chatApiId);
-        Long chatId = chat.id();
+        if (chatWasNotRegistered(chatId)) {
+            throw new NoSuchChatException(STR."There is no registered chat with id \{chatId}");
+        }
 
         telegramChatLinksRepository.addLinkToChat(chatId, linkId);
+        return link;
     }
 
-    public void untrackLink(long chatApiId, String linkUrl) {
+    public Link untrackLink(long chatId, String linkUrl) {
         Link link = findOrThrowException(linkUrl);
         long linkId = link.id();
 
-        TelegramChat chat = findOrThrowException(chatApiId);
-        Long chatId = chat.id();
+        if (chatWasNotRegistered(chatId)) {
+            throw new NoSuchChatException(STR."There is no registered chat with id \{chatId}");
+        }
 
         telegramChatLinksRepository.removeLinkFromChat(chatId, linkId);
+        return link;
+    }
+
+    private boolean chatWasNotRegistered(long chatId) {
+        return telegramChatRepository.findById(chatId).isEmpty();
     }
 
     private Link findOrSave(String linkUrl) {
