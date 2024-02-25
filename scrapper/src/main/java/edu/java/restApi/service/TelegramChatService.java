@@ -21,7 +21,7 @@ public class TelegramChatService {
     }
 
     public void registerChat(long apiId) {
-        Optional<TelegramChat> oldChat = telegramChatRepository.findByTelegramChatId(apiId);
+        Optional<TelegramChat> oldChat = telegramChatRepository.findByApiId(apiId);
         if (oldChat.isPresent()) {
             throw new DoubleChatRegistrationException(STR."Chat with id \{apiId} was alreadyRegistered");
         }
@@ -30,7 +30,7 @@ public class TelegramChatService {
     }
 
     public void deleteChat(long apiId) {
-        Optional<TelegramChat> chat = telegramChatRepository.findByTelegramChatId(apiId);
+        Optional<TelegramChat> chat = telegramChatRepository.findByApiId(apiId);
         if (chat.isEmpty()) {
             throw new NoSuchChatException(STR."There is no such chat with id \{apiId}");
         }
