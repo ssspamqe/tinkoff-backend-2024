@@ -1,9 +1,9 @@
-package edu.java.restApi.service;
+package edu.java.restApi.services;
 
 import edu.java.data.entities.TelegramChat;
 import edu.java.data.repositories.TelegramChatRepository;
-import edu.java.restApi.service.exceptions.DoubleChatRegistrationException;
-import edu.java.restApi.service.exceptions.NoSuchChatException;
+import edu.java.restApi.services.exceptions.DoubleChatRegistrationException;
+import edu.java.restApi.services.exceptions.NoSuchChatException;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.UUID;

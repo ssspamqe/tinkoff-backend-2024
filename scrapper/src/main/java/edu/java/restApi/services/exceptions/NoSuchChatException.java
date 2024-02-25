@@ -1,4 +1,4 @@
-package edu.java.restApi.service.exceptions;
+package edu.java.restApi.services.exceptions;
 
 public class NoSuchChatException extends RuntimeException {
     public NoSuchChatException(String message) {
