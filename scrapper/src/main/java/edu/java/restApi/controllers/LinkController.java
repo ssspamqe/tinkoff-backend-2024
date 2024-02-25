@@ -1,5 +1,6 @@
 package edu.java.restApi.controllers;
 
+import edu.java.data.entities.Link;
 import edu.java.restApi.controllers.dto.requests.AddLinkRequest;
 import edu.java.restApi.controllers.dto.requests.RemoveLinkRequest;
 import edu.java.restApi.controllers.dto.responses.LinkResponse;
@@ -34,11 +35,13 @@ public class LinkController {
     }
 
     @GetMapping
-    public ResponseEntity<ListLinksResponse> getTrackedLinksByChatId(@RequestHeader("Tg-Chat-Id") @Min(0) int chatId) {
-        LOGGER.debug(STR."Returning all subscribed links. Chat id: \{chatId} ");
+    public ResponseEntity<ListLinksResponse> getTrackedLinksByChatId(
+        @RequestHeader("Tg-Chat-Id") @Min(0) int chatApiId
+    ) {
+        List<Link> trackedLinks = linkService.getTrackedLinks(chatApiId).stream().map().toList();
         return ResponseEntity.ok(new ListLinksResponse(
-            List.of(new LinkResponse(1, "some/link")),
-            1
+            trackedLinks,
+            trackedLinks.size()
         ));
     }
 

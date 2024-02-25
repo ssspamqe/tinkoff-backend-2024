@@ -10,7 +10,7 @@ import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
-import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,12 +36,12 @@ public class LinkService {
     public Set<Link> getTrackedLinks(int chatApiId) {
         TelegramChat chat = findOrThrowException(chatApiId);
 
-        Set<UUID> linkIds = telegramChatLinksRepository.findAllLinksByChatId(chat.id());
+        Set<Long> linkIds = telegramChatLinksRepository.findAllLinksByChatId(chat.id());
 
         return buildSetOfLinks(linkIds);
     }
 
-    private Set<Link> buildSetOfLinks(Set<UUID> linkIds) {
+    private Set<Link> buildSetOfLinks(Set<Long> linkIds) {
         return linkIds.stream()
             .map(id ->
                 linkRepository.findById(id).orElse(null)
@@ -51,20 +51,20 @@ public class LinkService {
 
     public void addLinkToTrack(long chatApiId, String linkUrl) {
         Link link = findOrSave(linkUrl);
-        UUID linkId = link.id();
+        long linkId = link.id();
 
         TelegramChat chat = findOrThrowException(chatApiId);
-        UUID chatId = chat.id();
+        Long chatId = chat.id();
 
         telegramChatLinksRepository.addLinkToChat(chatId, linkId);
     }
 
     public void untrackLink(long chatApiId, String linkUrl) {
         Link link = findOrThrowException(linkUrl);
-        UUID linkId = link.id();
+        long linkId = link.id();
 
         TelegramChat chat = findOrThrowException(chatApiId);
-        UUID chatId = chat.id();
+        Long chatId = chat.id();
 
         telegramChatLinksRepository.removeLinkFromChat(chatId, linkId);
     }
@@ -72,7 +72,7 @@ public class LinkService {
     private Link findOrSave(String linkUrl) {
         Optional<Link> optionalLink = linkRepository.findByUrl(linkUrl);
         if (linkUrl.isEmpty()) {
-            Link newLink = new Link(UUID.randomUUID(), linkUrl);
+            Link newLink = new Link(ThreadLocalRandom.current().nextLong(1), linkUrl);
             linkRepository.save(newLink);
             return newLink;
         }
@@ -80,7 +80,7 @@ public class LinkService {
     }
 
     private TelegramChat findOrThrowException(long chatApiId) {
-        Optional<TelegramChat> telegramChat = telegramChatRepository.findByApiId(chatApiId);
+        Optional<TelegramChat> telegramChat = telegramChatRepository.findById(chatApiId);
         if (telegramChat.isEmpty()) {
             throw new NoSuchChatException(STR."There is no such chat with id \{chatApiId}");
         }

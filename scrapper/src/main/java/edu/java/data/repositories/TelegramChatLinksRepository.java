@@ -1,7 +1,6 @@
 package edu.java.data.repositories;
 
 import java.util.Set;
-import java.util.UUID;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -17,23 +16,23 @@ public class TelegramChatLinksRepository {
         this.redisTemplate = redisTemplate;
     }
 
-    public void addLinkToChat(UUID chatId, UUID linkId) {
+    public void addLinkToChat(long chatId, long linkId) {
         redisTemplate.opsForSet().add(STR."telegramChat_links:\{chatId}", linkId);
         redisTemplate.opsForSet().add(STR."link_telegramChats:\{linkId}", chatId);
     }
 
-    public void removeLinkFromChat(UUID chatId, UUID linkId) {
+    public void removeLinkFromChat(long chatId, long linkId) {
         redisTemplate.opsForSet().remove(STR."telegramChat_links:\{chatId}", linkId);
-        redisTemplate.opsForSet().removes(STR."link_telegramChats:\{linkId}", chatId);
+        redisTemplate.opsForSet().remove(STR."link_telegramChats:\{linkId}", chatId);
     }
 
-    public Set<UUID> findAllLinksByChatId(UUID chatId) {
+    public Set<Long> findAllLinksByChatId(long chatId) {
         return redisTemplate.opsForSet().members(STR."telegramChat_links:\{chatId}").stream()
-            .map(item -> (UUID) item).collect(Collectors.toSet());
+            .map(item -> (long) item).collect(Collectors.toSet());
     }
 
-    public Set<UUID> findAllChatsByLinkId(UUID linkId) {
+    public Set<Long> findAllChatsByLinkId(long linkId) {
         return redisTemplate.opsForSet().members(STR."link_telegramChats:\{linkId}").stream()
-            .map(item -> (UUID) item).collect(Collectors.toSet());
+            .map(item -> (long) item).collect(Collectors.toSet());
     }
 }

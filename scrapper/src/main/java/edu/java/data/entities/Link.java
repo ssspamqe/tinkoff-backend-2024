@@ -6,7 +6,7 @@ import java.util.UUID;
 
 @RedisHash("Link")
 public record Link(
-    UUID id,
+    long id,
     String url
 ) {
 }
