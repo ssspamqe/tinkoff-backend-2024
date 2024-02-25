@@ -35,7 +35,7 @@ public class LinkController {
 
     @GetMapping
     public ResponseEntity<ListLinksResponse> getTrackedLinksByChatId(
-        @RequestHeader("Tg-Chat-Id") @Min(0) int chatApiId
+        @RequestHeader("Tg-Chat-Id") @Min(1) int chatApiId
     ) {
         List<LinkResponse> trackedLinks =
             linkService.getTrackedLinks(chatApiId).stream().map(LinkResponse::new).toList();
@@ -45,7 +45,7 @@ public class LinkController {
 
     @PostMapping
     public ResponseEntity<LinkResponse> addLinkToTrack(
-        @RequestHeader("Tg-Chat-Id") @Min(0) int chatId,
+        @RequestHeader("Tg-Chat-Id") @Min(1) int chatId,
         @Valid @RequestBody AddLinkRequest addLinkRequest
     ) {
         String linkUrl = addLinkRequest.link();
@@ -55,7 +55,7 @@ public class LinkController {
 
     @DeleteMapping
     public ResponseEntity<LinkResponse> untrackLink(
-        @RequestHeader("Tg-Chat-Id") @Min(0) int chatId,
+        @RequestHeader("Tg-Chat-Id") @Min(1) int chatId,
         @Valid @RequestBody RemoveLinkRequest removeLinkRequest
     ) {
         String linkUrl = removeLinkRequest.link();
