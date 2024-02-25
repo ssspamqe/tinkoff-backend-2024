@@ -2,6 +2,7 @@ package edu.java.bot.restApi.dto.requests;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import java.net.URI;
 import java.util.List;
 
 public record LinkUpdate(
@@ -9,7 +10,7 @@ public record LinkUpdate(
     int id,
 
     @NotBlank
-    String url,
+    URI url,
 
     @NotBlank
     String description,
