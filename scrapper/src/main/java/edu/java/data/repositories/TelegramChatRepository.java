@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TelegramChatRepository extends CrudRepository<TelegramChat, UUID> {
-    Optional<TelegramChat> findByTelegramChatId(long telegramChatId);
+    Optional<TelegramChat> findByApiId(long apiId);
 }
+ 

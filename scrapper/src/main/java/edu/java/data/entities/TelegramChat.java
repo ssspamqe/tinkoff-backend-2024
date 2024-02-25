@@ -7,7 +7,7 @@ import org.springframework.data.redis.core.RedisHash;
 @RedisHash("TelegramChat")
 public record TelegramChat(
     UUID id,
-    long telegramChatId,
+    long apiId,
     LocalDateTime registrationDate
 ) {
 }

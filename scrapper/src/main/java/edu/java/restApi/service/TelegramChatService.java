@@ -20,21 +20,21 @@ public class TelegramChatService {
         this.telegramChatRepository = telegramChatRepository;
     }
 
-    public void registerChat(long telegramChatId) {
-        Optional<TelegramChat> oldChat = telegramChatRepository.findByTelegramChatId(telegramChatId);
+    public void registerChat(long apiId) {
+        Optional<TelegramChat> oldChat = telegramChatRepository.findByTelegramChatId(apiId);
         if (oldChat.isPresent()) {
-            throw new DoubleChatRegistrationException(STR."Chat with id \{telegramChatId} was alreadyRegistered");
+            throw new DoubleChatRegistrationException(STR."Chat with id \{apiId} was alreadyRegistered");
         }
-        TelegramChat newChat = new TelegramChat(UUID.randomUUID(), telegramChatId, LocalDateTime.now());
+        TelegramChat newChat = new TelegramChat(UUID.randomUUID(), apiId, LocalDateTime.now());
         telegramChatRepository.save(newChat);
     }
 
-    public void deleteChat(long telegramChatId) {
-        Optional<TelegramChat> chat = telegramChatRepository.findByTelegramChatId(telegramChatId);
+    public void deleteChat(long apiId) {
+        Optional<TelegramChat> chat = telegramChatRepository.findByTelegramChatId(apiId);
         if (chat.isEmpty()) {
-            throw new NoSuchChatException(STR."There is no such chat with id \{telegramChatId}");
+            throw new NoSuchChatException(STR."There is no such chat with id \{apiId}");
         }
-        UUID chatId = chat.get().id();
-        telegramChatRepository.deleteById(chatId);
+        UUID telegramChatId = chat.get().id();
+        telegramChatRepository.deleteById(telegramChatId);
     }
 }
