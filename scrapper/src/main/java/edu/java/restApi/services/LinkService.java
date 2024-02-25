@@ -79,8 +79,8 @@ public class LinkService {
 
     private Link findOrSave(String linkUrl) {
         Optional<Link> optionalLink = linkRepository.findByUrl(linkUrl);
-        if (linkUrl.isEmpty()) {
-            Link newLink = new Link(ThreadLocalRandom.current().nextLong(1), linkUrl);
+        if (optionalLink.isEmpty()) {
+            Link newLink = new Link(ThreadLocalRandom.current().nextLong(1, Long.MAX_VALUE), linkUrl);
             linkRepository.save(newLink);
             return newLink;
         }
