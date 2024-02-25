@@ -22,6 +22,11 @@ public class TelegramChatLinksRepository {
         redisTemplate.opsForSet().add(STR."link_telegramChats:\{linkId}", chatId);
     }
 
+    public void removeLinkFromChat(UUID chatId, UUID linkId) {
+        redisTemplate.opsForSet().remove(STR."telegramChat_links:\{chatId}", linkId);
+        redisTemplate.opsForSet().removes(STR."link_telegramChats:\{linkId}", chatId);
+    }
+
     public Set<UUID> findAllLinksByChatId(UUID chatId) {
         return redisTemplate.opsForSet().members(STR."telegramChat_links:\{chatId}").stream()
             .map(item -> (UUID) item).collect(Collectors.toSet());
