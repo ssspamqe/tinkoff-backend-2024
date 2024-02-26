@@ -65,10 +65,11 @@ public class CommandServiceTest {
         Message spyMessage = Mockito.spy(new Message());
         Mockito.when(spyMessage.text()).thenReturn("/help");
         Mockito.when(spyMessage.chat()).thenReturn(new Chat());
+        Mockito.when(spyMessage.from()).thenReturn(new User(1L));
 
         commandService.handleMessage(spyMessage);
 
-        Mockito.verify(helpSlashCommand, Mockito.times(1)).executeAndGetResponse();
+        Mockito.verify(helpSlashCommand, Mockito.times(1)).executeAndGetResponse(spyMessage);
     }
 
     @Test
@@ -92,18 +93,20 @@ public class CommandServiceTest {
         Message repliedMessage = Mockito.spy(new Message());
         Mockito.when(repliedMessage.from()).thenReturn(botUser);
         Mockito.when(repliedMessage.text()).thenReturn("bla bla bla /track");
+        Mockito.when(repliedMessage.chat()).thenReturn(new Chat());
 
         Message parameterMessage = Mockito.spy(new Message());
         Mockito.when(parameterMessage.replyToMessage()).thenReturn(repliedMessage);
-        Mockito.when(parameterMessage.chat()).thenReturn(new Chat());
 
-        Mockito.doReturn("response").when(trackSlashCommand).executeAndGetResponse(parameterMessage);
+        Mockito.doReturn("response").when(trackSlashCommand)
+            .executeWithUserParametersAndGetResponse(parameterMessage);
 
         //Act
         commandService.handleMessage(parameterMessage);
 
         //Assert
-        Mockito.verify(trackSlashCommand, Mockito.times(1)).executeAndGetResponse(parameterMessage);
+        Mockito.verify(trackSlashCommand, Mockito.times(1))
+            .executeWithUserParametersAndGetResponse(parameterMessage);
     }
 
     @Test
@@ -117,7 +120,6 @@ public class CommandServiceTest {
 
         Message parameterMessage = Mockito.spy(new Message());
         Mockito.when(parameterMessage.replyToMessage()).thenReturn(repliedMessage);
-        Mockito.when(parameterMessage.chat()).thenReturn(new Chat());
 
         //Act, Assert
         assertThatThrownBy(
@@ -140,7 +142,6 @@ public class CommandServiceTest {
     void should_trowSpecialException_when_messageNotCommandOrUserParameter() {
         Message message = Mockito.spy(new Message());
         Mockito.when(message.text()).thenReturn("blallblabla");
-        Mockito.when(message.chat()).thenReturn(new Chat());
 
         assertThatThrownBy(
             () -> commandService.handleMessage(message)
