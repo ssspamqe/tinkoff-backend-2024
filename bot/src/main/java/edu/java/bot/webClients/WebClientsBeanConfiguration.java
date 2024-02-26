@@ -25,15 +25,15 @@ public class WebClientsBeanConfiguration {
 
     public ScrapperTelegramChatClient scrapperTelegramChatClient() {
         String baseUrl = applicationConfig.scrapperUrl().getBaseUrl();
-        return createDefaultWebClient(baseUrl, ScrapperTelegramChatClient.class);
+        return createDefaultScraperWebClient(baseUrl, ScrapperTelegramChatClient.class);
     }
 
     public ScrapperLinksClient scrapperLinksClient() {
         String baseUrl = applicationConfig.scrapperUrl().getBaseUrl();
-        return createDefaultWebClient(baseUrl, ScrapperLinksClient.class);
+        return createDefaultScraperWebClient(baseUrl, ScrapperLinksClient.class);
     }
 
-    private <T> T createDefaultWebClient(String url, Class<T> webClientInterface) {
+    private <T> T createDefaultScraperWebClient(String url, Class<T> webClientInterface) {
         WebClient webClient = WebClient.builder()
             .defaultStatusHandler(HttpStatusCode::is4xxClientError, response ->
                 response.bodyToMono(ApiErrorResponse.class)
