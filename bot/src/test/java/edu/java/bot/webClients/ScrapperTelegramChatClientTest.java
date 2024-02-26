@@ -1,0 +1,104 @@
+package edu.java.bot.webClients;
+
+import com.github.tomakehurst.wiremock.junit5.WireMockTest;
+import edu.java.bot.configuration.ApplicationConfig;
+import edu.java.bot.restApi.dto.responses.ApiErrorResponse;
+import edu.java.bot.webClients.scrapper.ScrapperTelegramChatClient;
+import edu.java.bot.webClients.scrapper.exceptions.ClientErrorException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.ResponseEntity;
+import java.util.List;
+import static com.github.tomakehurst.wiremock.client.WireMock.containing;
+import static com.github.tomakehurst.wiremock.client.WireMock.delete;
+import static com.github.tomakehurst.wiremock.client.WireMock.get;
+import static com.github.tomakehurst.wiremock.client.WireMock.ok;
+import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
+import static com.github.tomakehurst.wiremock.client.WireMock.post;
+import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
+@WireMockTest(httpPort = 8080)
+@ExtendWith(MockitoExtension.class)
+public class ScrapperTelegramChatClientTest {
+
+    static final String WIRE_MOCK_URL = "http://localhost:8080";
+
+    @Mock ApplicationConfig applicationConfig;
+
+    @InjectMocks
+    WebClientsBeanConfiguration webClientsBeanConfiguration;
+
+    ScrapperTelegramChatClient scrapperTelegramChatClient;
+
+    @BeforeEach
+    void init() {
+        Mockito.when(applicationConfig.scrapperUrl())
+            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
+        scrapperTelegramChatClient = webClientsBeanConfiguration.scrapperTelegramChatClient();
+    }
+
+    @Test
+    public void should_notThrowException_when_postHttpStatus2xx() {
+        stubFor(post("/tg-chat/1")
+            .willReturn(ok()));
+
+        ResponseEntity<?> actualResponse = scrapperTelegramChatClient.registerNewChat(1);
+
+        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
+    }
+
+    @Test
+    public void should_notThrowException_when_deleteHttpStatus2xx() {
+        stubFor(delete("/tg-chat/1")
+            .willReturn(ok()));
+
+        ResponseEntity<?> actualResponse = scrapperTelegramChatClient.deleteChat(1);
+
+        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
+    }
+
+    @Test
+    public void should_throwClientErrorException_when_httpStatus4xx() {
+        //Arrange
+        stubFor(post("/tg-chat/1")
+            .willReturn(
+                okJson("""
+                    {
+                        "description": "some description",
+                        "code": "400",
+                        "exceptionName":"some exception",
+                        "exceptionMessage": "some message",
+                        "stacktrace":[
+                            "frame1",
+                            "frame2"
+                        ]
+                    }"""
+                )
+                    .withStatus(400)
+            )
+        );
+
+        //Act, Assert
+        ApiErrorResponse expectedApiErrorResponse = new ApiErrorResponse(
+            "some description",
+            "400",
+            "some exception",
+            "some message",
+            List.of("frame1", "frame2")
+        );
+        ClientErrorException expectedException = new ClientErrorException(expectedApiErrorResponse);
+
+        assertThatThrownBy(
+            () -> scrapperTelegramChatClient.registerNewChat(1)
+        ).isInstanceOf(ClientErrorException.class)
+            .isEqualTo(expectedException);
+    }
+
+}
