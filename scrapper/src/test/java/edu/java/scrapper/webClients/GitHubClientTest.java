@@ -1,8 +1,6 @@
 package edu.java.scrapper.webClients;
 
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
-import edu.java.configuration.ApplicationConfig;
-import edu.java.webClients.WebClientsBeanConfiguration;
 import edu.java.webClients.gitHub.GitHubClient;
 import edu.java.webClients.gitHub.dto.GitHubOwner;
 import edu.java.webClients.gitHub.dto.GitHubRepository;
@@ -11,14 +9,15 @@ import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityType;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryVisibilityType;
 import java.time.OffsetDateTime;
 import java.util.List;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
@@ -26,24 +25,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @WireMockTest(httpPort = 8080)
 @ExtendWith(MockitoExtension.class)
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
 public class GitHubClientTest {
 
     static final String WIRE_MOCK_URL = "http://localhost:8080/";
 
-    @Mock
-    ApplicationConfig applicationConfig;
-
-    @InjectMocks
-    WebClientsBeanConfiguration webClientsBeanConfiguration;
-
+    @Autowired
     GitHubClient gitHubClient;
-
-    @BeforeEach
-    void init() {
-        Mockito.when(applicationConfig.gitHubUrl())
-            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
-        gitHubClient = webClientsBeanConfiguration.gitHubClient();
-    }
 
     @Test
     public void should_returnRepository() {
@@ -161,5 +150,10 @@ public class GitHubClientTest {
             345,
             true
         );
+    }
+
+    @DynamicPropertySource
+    static void jdbcProperties(DynamicPropertyRegistry registry) {
+        registry.add("app.git-hub-url.default-url", () -> WIRE_MOCK_URL);
     }
 }
