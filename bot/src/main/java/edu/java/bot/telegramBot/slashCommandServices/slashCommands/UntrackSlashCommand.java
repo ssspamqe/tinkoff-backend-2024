@@ -12,15 +12,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UntrackSlashCommand implements ExecuableWithArgumentsSlashCommand, SimplyExecutableSlashCommand {
+public class UntrackSlashCommand implements ExecutableWithUserParametersSlashCommand {
 
     private static final String TEXT_COMMAND = "/untrack";
     private static final String DESCRIPTION = "Stop tracking updates from given link";
     private static final String PARAMETERS_REQUEST_MESSAGE = "Reply to this message with link to /untrack it!";
     private static final String NO_SUCH_SUBSCRIPTION_MESSAGE = "You don't have such subscription";
     private static final String SUCCESSFULLY_UNTRACKED_MESSAGE = "/unrack command succeed!";
-
-    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = true;
 
     private final SubscriptionRepository subscriptionRepository;
     private final Validator validator;
@@ -42,12 +40,13 @@ public class UntrackSlashCommand implements ExecuableWithArgumentsSlashCommand, 
     }
 
     @Override
-    public String executeAndGetResponse() {
-        return PARAMETERS_REQUEST_MESSAGE;
+    public String executeAndGetResponse(Message message) {
+        String username = message.from().username();
+        return STR."\{username},\n\{PARAMETERS_REQUEST_MESSAGE}";
     }
 
     @Override
-    public String executeAndGetResponse(Message message) {
+    public String executeWithUserParametersAndGetResponse(Message message) {
         Long userId = message.from().id();
         String link = message.text();
         Subscription subscriptionToDelete = new Subscription(0L, userId, link);
@@ -86,10 +85,5 @@ public class UntrackSlashCommand implements ExecuableWithArgumentsSlashCommand, 
     @Override
     public BotCommand getBotCommand() {
         return new BotCommand(TEXT_COMMAND, DESCRIPTION);
-    }
-
-    @Override
-    public boolean needAdditionalUserParameter() {
-        return NEED_ADDITIONAL_USER_PARAMETERS;
     }
 }

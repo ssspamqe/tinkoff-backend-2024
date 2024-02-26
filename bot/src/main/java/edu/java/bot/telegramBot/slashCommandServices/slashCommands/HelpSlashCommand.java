@@ -1,10 +1,11 @@
 package edu.java.bot.telegramBot.slashCommandServices.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
+import com.pengrad.telegrambot.model.Message;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelpSlashCommand implements SimplyExecutableSlashCommand {
+public class HelpSlashCommand implements SlashCommand {
 
     private static final String TEXT_COMMAND = "/help";
     private static final String DESCRIPTION = "Get list of commands";
@@ -21,7 +22,11 @@ public class HelpSlashCommand implements SimplyExecutableSlashCommand {
         /start - Register in app
         /help - Get list of commands""";
 
-    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = false;
+    @Override
+    public String executeAndGetResponse(Message message) {
+        String username = message.from().username();
+        return STR."Hello, \{username}!\n\{RESPONSE}";
+    }
 
     @Override
     public String getTextCommand() {
@@ -34,17 +39,8 @@ public class HelpSlashCommand implements SimplyExecutableSlashCommand {
     }
 
     @Override
-    public String executeAndGetResponse() {
-        return RESPONSE;
-    }
-
-    @Override
     public BotCommand getBotCommand() {
         return new BotCommand(TEXT_COMMAND, DESCRIPTION);
     }
 
-    @Override
-    public boolean needAdditionalUserParameter() {
-        return NEED_ADDITIONAL_USER_PARAMETERS;
-    }
 }

@@ -8,14 +8,13 @@ import edu.java.bot.telegramBot.slashCommandServices.exceptions.BadLinkException
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ListSlashCommand implements ExecuableWithArgumentsSlashCommand {
+public class ListSlashCommand implements SlashCommand {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
@@ -23,23 +22,11 @@ public class ListSlashCommand implements ExecuableWithArgumentsSlashCommand {
     private static final String DESCRIPTION = "Get list of subscriptions";
     private static final String NO_SUBSCRIPTIONS_RESPONSE = "There is no active subscriptions";
 
-    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = false;
-
     private final SubscriptionRepository subscriptionRepository;
 
     @Autowired
     public ListSlashCommand(SubscriptionRepository subscriptionRepository) {
         this.subscriptionRepository = subscriptionRepository;
-    }
-
-    @Override
-    public String getTextCommand() {
-        return TEXT_COMMAND;
-    }
-
-    @Override
-    public String getDescription() {
-        return DESCRIPTION;
     }
 
     @Override
@@ -72,12 +59,17 @@ public class ListSlashCommand implements ExecuableWithArgumentsSlashCommand {
     }
 
     @Override
-    public BotCommand getBotCommand() {
-        return new BotCommand(TEXT_COMMAND, DESCRIPTION);
+    public String getTextCommand() {
+        return TEXT_COMMAND;
     }
 
     @Override
-    public boolean needAdditionalUserParameter() {
-        return NEED_ADDITIONAL_USER_PARAMETERS;
+    public String getDescription() {
+        return DESCRIPTION;
+    }
+
+    @Override
+    public BotCommand getBotCommand() {
+        return new BotCommand(TEXT_COMMAND, DESCRIPTION);
     }
 }

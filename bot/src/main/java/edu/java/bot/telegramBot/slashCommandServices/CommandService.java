@@ -9,13 +9,11 @@ import edu.java.bot.telegramBot.slashCommandServices.exceptions.NoSuchCommandExc
 import edu.java.bot.telegramBot.slashCommandServices.exceptions.NotACommandOrUserParameterException;
 import edu.java.bot.telegramBot.slashCommandServices.exceptions.NotAReplyOnBotMessageException;
 import edu.java.bot.telegramBot.slashCommandServices.exceptions.StrangeSlashCommandException;
-import edu.java.bot.telegramBot.slashCommandServices.slashCommands.ExecuableWithArgumentsSlashCommand;
-import edu.java.bot.telegramBot.slashCommandServices.slashCommands.SimplyExecutableSlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.ExecutableWithUserParametersSlashCommand;
 import edu.java.bot.telegramBot.slashCommandServices.slashCommands.SlashCommand;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,21 +38,10 @@ public class CommandService {
     }
 
     public SendMessage handleMessage(Message message) {
-        Long chatId = message.chat().id();
-
         if (isUserParameters(message)) {
-            String responseText = handleUserParameters(message);
-            return new SendMessage(chatId, responseText).replyMarkup(new ReplyKeyboardRemove());
+            return handleUserParameters(message);
         } else if (isCommand(message)) {
-            String responseText = handleCommand(message);
-            SendMessage sendMessageRequest = new SendMessage(chatId, responseText);
-
-            if (parseSlashCommand(message.text()).needAdditionalUserParameter()) {
-                return sendMessageRequest.replyMarkup(new ForceReply());
-            } else {
-                return sendMessageRequest.replyMarkup(new ReplyKeyboardRemove());
-            }
-
+            return handleCommand(message);
         } else {
             throw new NotACommandOrUserParameterException("It is not a command or parameters!");
         }
@@ -68,31 +55,48 @@ public class CommandService {
         return message.text().startsWith("/");
     }
 
-    private String handleUserParameters(Message userParameters) {
+    private SendMessage handleUserParameters(Message userParameters) {
         Message botMessage = userParameters.replyToMessage();
         if (botMessage == null || !botMessage.from().isBot()) {
             throw new NotAReplyOnBotMessageException("Message with parameters must be a reply on bot message");
         }
 
-        ExecuableWithArgumentsSlashCommand slashCommand = null;
-        try {
-            slashCommand = (ExecuableWithArgumentsSlashCommand) parseSlashCommand(botMessage.text());
-        } catch (ClassCastException ex) {
-            throw new StrangeSlashCommandException(
-                STR."Command from message: \"\{botMessage.text()}\" have no parameters"
-            );
-        }
-        return slashCommand.executeAndGetResponse(userParameters);
+        ExecutableWithUserParametersSlashCommand slashCommand =
+            parseExecutableWithUserParametersSlashCommandOrThrowException(botMessage.text());
+
+        Long chatId = botMessage.chat().id();
+        String response = slashCommand.executeWithUserParametersAndGetResponse(userParameters);
+        return new SendMessage(chatId, response).replyMarkup(new ReplyKeyboardRemove());
     }
 
-    private String handleCommand(Message message) {
+    //TODO find a shorter name
+    private ExecutableWithUserParametersSlashCommand parseExecutableWithUserParametersSlashCommandOrThrowException(
+        String text
+    ) {
+        try {
+            return (ExecutableWithUserParametersSlashCommand) parseSlashCommand(text);
+        } catch (ClassCastException ex) {
+            throw new StrangeSlashCommandException(
+                STR."Command from message: \"\{text}\" have no parameters"
+            );
+        }
+    }
+
+    private SendMessage handleCommand(Message message) {
+        Long chatId = message.chat().id();
         SlashCommand command = parseSlashCommand(message.text());
-        return switch (command) {
-            case SimplyExecutableSlashCommand simplyExecutableSlashCommand ->
-                simplyExecutableSlashCommand.executeAndGetResponse();
-            case ExecuableWithArgumentsSlashCommand execuableWithArgumentsSlashCommand ->
-                execuableWithArgumentsSlashCommand.executeAndGetResponse(message);
-        };
+        String responseText = command.executeAndGetResponse(message);
+        SendMessage sendMessageRequest = new SendMessage(chatId, responseText);
+
+        if (requiresUserParameters(command)) {
+            return sendMessageRequest.replyMarkup(new ForceReply());
+        } else {
+            return sendMessageRequest.replyMarkup(new ReplyKeyboardRemove());
+        }
+    }
+
+    private boolean requiresUserParameters(SlashCommand command) {
+        return command instanceof ExecutableWithUserParametersSlashCommand;
     }
 
     private SlashCommand parseSlashCommand(String text) {

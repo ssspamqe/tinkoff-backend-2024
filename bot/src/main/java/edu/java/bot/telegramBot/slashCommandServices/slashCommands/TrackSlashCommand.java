@@ -11,15 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TrackSlashCommand implements ExecuableWithArgumentsSlashCommand, SimplyExecutableSlashCommand {
+public class TrackSlashCommand implements ExecutableWithUserParametersSlashCommand {
 
     private static final String TEXT_COMMAND = "/track";
     private static final String DESCRIPTION = "Start tracking updates from given link";
     private static final String LINK_SUCCESSFULLY_ADDED_MESSAGE = "Given link was successfully added to /track it!";
     private static final String PARAMETERS_REQUEST_MESSAGE = "Reply to this message with link to /track it!";
     private static final String SUBSCRIPTION_WAS_PREVIOUSLY_ADDED = "This link was already added to /track it";
-
-    private static final boolean NEED_ADDITIONAL_USER_PARAMETERS = true;
 
     private final SubscriptionRepository subscriptionRepository;
     private final Validator validator;
@@ -41,12 +39,13 @@ public class TrackSlashCommand implements ExecuableWithArgumentsSlashCommand, Si
     }
 
     @Override
-    public String executeAndGetResponse() {
-        return PARAMETERS_REQUEST_MESSAGE;
+    public String executeAndGetResponse(Message message) {
+        String username = message.from().username();
+        return STR."\{username},\n\{PARAMETERS_REQUEST_MESSAGE}";
     }
 
     @Override
-    public String executeAndGetResponse(Message message) {
+    public String executeWithUserParametersAndGetResponse(Message message) {
         Long userId = message.from().id();
         String link = message.text();
 
@@ -92,10 +91,4 @@ public class TrackSlashCommand implements ExecuableWithArgumentsSlashCommand, Si
     public BotCommand getBotCommand() {
         return new BotCommand(TEXT_COMMAND, DESCRIPTION);
     }
-
-    @Override
-    public boolean needAdditionalUserParameter() {
-        return NEED_ADDITIONAL_USER_PARAMETERS;
-    }
-
 }
