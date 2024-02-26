@@ -19,7 +19,7 @@ import reactor.core.publisher.Mono;
 public class WebClientsBeanConfiguration {
 
     private final ApplicationConfig applicationConfig;
-    private HttpServiceProxyFactory scrapperWebClientsFactory;
+    private static HttpServiceProxyFactory scrapperWebClientsFactory;
 
     @Autowired
     public WebClientsBeanConfiguration(ApplicationConfig applicationConfig) {
@@ -27,7 +27,7 @@ public class WebClientsBeanConfiguration {
     }
 
     @PostConstruct
-    void init() {
+    private void init() {
         String baseUrl = applicationConfig.scrapperUrl().getBaseUrl();
         WebClient webClient = WebClient.builder()
             .defaultStatusHandler(HttpStatusCode::is4xxClientError, response ->

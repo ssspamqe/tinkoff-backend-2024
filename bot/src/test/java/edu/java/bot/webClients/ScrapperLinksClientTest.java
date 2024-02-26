@@ -1,7 +1,6 @@
 package edu.java.bot.webClients;
 
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
-import edu.java.bot.configuration.ApplicationConfig;
 import edu.java.bot.webClients.exceptions.ClientErrorException;
 import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
 import edu.java.bot.webClients.scrapper.dto.requests.AddLinkRequest;
@@ -11,14 +10,15 @@ import edu.java.bot.webClients.scrapper.dto.responses.ListLinksResponse;
 import edu.java.bot.webClients.scrapper.dto.responses.ScrapperApiErrorResponse;
 import java.net.URI;
 import java.util.List;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static com.github.tomakehurst.wiremock.client.WireMock.containing;
 import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
@@ -30,24 +30,14 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @WireMockTest(httpPort = 8080)
 @ExtendWith(MockitoExtension.class)
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
 public class ScrapperLinksClientTest {
 
-    private final String WIRE_MOCK_URL = "http://localhost:8080/";
+    private static final String WIRE_MOCK_URL = "http://localhost:8080/";
 
-    @Mock
-    ApplicationConfig applicationConfig;
-
-    @InjectMocks
-    WebClientsBeanConfiguration webClientsBeanConfiguration;
-
+    @Autowired
     ScrapperLinksClient scrapperLinksClient;
-
-    @BeforeEach
-    void init() {
-        Mockito.when(applicationConfig.scrapperUrl())
-            .thenReturn(new ApplicationConfig.ApiUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
-        scrapperLinksClient = webClientsBeanConfiguration.scrapperLinksClient();
-    }
 
     @Test
     public void should_returnListsLinksResponse_when_getHttpStatus2xx() {
@@ -159,11 +149,20 @@ public class ScrapperLinksClientTest {
             "some message",
             List.of("frame1", "frame2")
         );
-        ClientErrorException expectedException = new ClientErrorException(expectedApiErrorResponse);
 
         assertThatThrownBy(
             () -> scrapperLinksClient.findTrackedLinks(1)
-        ).isInstanceOf(ClientErrorException.class)
-            .isEqualTo(expectedException);
+        )
+            .isInstanceOf(ClientErrorException.class)
+            .satisfies(actualException ->
+                assertThat(((ClientErrorException) actualException).getErrorResponseBody())
+                    .isEqualTo(expectedApiErrorResponse)
+            );
+    }
+
+    @DynamicPropertySource
+    static void jdbcProperties(DynamicPropertyRegistry registry) {
+        registry.add("app.scrapper-url.default-url", () -> WIRE_MOCK_URL);
+        registry.add("app.telegram-token", () -> "telegramTokenPlaceHolder");
     }
 }
