@@ -25,7 +25,7 @@ public class TelegramChatController {
         this.chatService = chatService;
     }
 
-    @PostMapping("/{id}") 
+    @PostMapping("/{id}")
     public ResponseEntity<?> registerChat(@PathVariable @Min(1) long id) {
         chatService.registerChat(id);
         return ResponseEntity.ok().build();

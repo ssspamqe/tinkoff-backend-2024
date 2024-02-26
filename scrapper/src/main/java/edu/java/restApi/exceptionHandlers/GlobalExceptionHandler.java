@@ -3,11 +3,12 @@ package edu.java.restApi.exceptionHandlers;
 import edu.java.restApi.controllers.dto.responses.ApiErrorResponse;
 import edu.java.restApi.services.exceptions.DoubleChatRegistrationException;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
+import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import java.util.Arrays;
 import java.util.List;
-import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -25,7 +26,9 @@ public class GlobalExceptionHandler {
     private static final String NO_SUCH_LINK_DESCRIPTION = "There is no record about such link";
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ApiErrorResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
+    public ResponseEntity<ApiErrorResponse> handleMethodArgumentNotValidException(
+        MethodArgumentNotValidException exception
+    ) {
         HttpStatusCode statusCode = exception.getStatusCode();
         ApiErrorResponse errorResponse =
             buildDefaultErrorResponse(statusCode, INCORRECT_REQUEST_PARAMETERS_DESCRIPTION, exception);
@@ -34,8 +37,10 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(DoubleChatRegistrationException.class)
-    public ResponseEntity<ApiErrorResponse> handleDoubleChatRegistrationException(DoubleChatRegistrationException exception) {
-        HttpStatusCode statusCode = HttpStatusCode.valueOf(409);
+    public ResponseEntity<ApiErrorResponse> handleDoubleChatRegistrationException(
+        DoubleChatRegistrationException exception
+    ) {
+        HttpStatusCode statusCode = HttpStatus.CONFLICT;
         ApiErrorResponse errorResponse =
             buildDefaultErrorResponse(statusCode, DOUBLE_CHAT_REGISTRATION_DESCRIPTION, exception);
         return ResponseEntity.status(statusCode).body(errorResponse);
@@ -43,7 +48,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NoSuchChatException.class)
     public ResponseEntity<ApiErrorResponse> handleNoSuchChatException(NoSuchChatException exception) {
-        HttpStatusCode statusCode = HttpStatusCode.valueOf(404);
+        HttpStatusCode statusCode = HttpStatus.CONFLICT;
         ApiErrorResponse errorResponse =
             buildDefaultErrorResponse(statusCode, NO_SUCH_CHAT_DESCRIPTION, exception);
         return ResponseEntity.status(statusCode).body(errorResponse);
@@ -51,7 +56,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NoSuchLinkException.class)
     public ResponseEntity<ApiErrorResponse> handleNoSuchLinkException(NoSuchLinkException exception) {
-        HttpStatusCode statusCode = HttpStatusCode.valueOf(404);
+        HttpStatusCode statusCode = HttpStatus.NOT_FOUND;
         ApiErrorResponse errorResponse =
             buildDefaultErrorResponse(statusCode, NO_SUCH_LINK_DESCRIPTION, exception);
         return ResponseEntity.status(statusCode).body(errorResponse);

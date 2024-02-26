@@ -18,7 +18,9 @@ public class GlobalExceptionHandler {
     private static final String INCORRECT_REQUEST_PARAMETERS_DESCRIPTION = "Incorrect request parameters";
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ApiErrorResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
+    public ResponseEntity<ApiErrorResponse> handleMethodArgumentNotValidException(
+        MethodArgumentNotValidException exception
+    ) {
         HttpStatusCode statusCode = exception.getStatusCode();
         String exceptionName = exception.getClass().getSimpleName();
         String exceptionMessage = exception.getMessage();

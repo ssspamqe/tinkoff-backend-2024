@@ -1,12 +1,11 @@
 package edu.java.bot.webClients;
 
-import com.github.tomakehurst.wiremock.client.MappingBuilder;
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import edu.java.bot.configuration.ApplicationConfig;
 import edu.java.bot.webClients.exceptions.ClientErrorException;
 import edu.java.bot.webClients.scrapper.ScrapperTelegramChatClient;
 import edu.java.bot.webClients.scrapper.dto.responses.ScrapperApiErrorResponse;
-import org.junit.jupiter.api.BeforeEach;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -17,7 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import java.util.List;
 import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
@@ -47,7 +45,6 @@ public class ScrapperTelegramChatClientTest {
 
         assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
     }
-
 
     @Test
     public void should_notThrowException_when_deleteHttpStatus2xx() {
