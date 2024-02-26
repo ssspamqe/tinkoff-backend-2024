@@ -2,13 +2,13 @@ package edu.java.bot.webClients;
 
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import edu.java.bot.configuration.ApplicationConfig;
-import edu.java.bot.restApi.dto.responses.ApiErrorResponse;
+import edu.java.bot.webClients.exceptions.ClientErrorException;
 import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
 import edu.java.bot.webClients.scrapper.dto.requests.AddLinkRequest;
 import edu.java.bot.webClients.scrapper.dto.requests.RemoveLinkRequest;
 import edu.java.bot.webClients.scrapper.dto.responses.LinkResponse;
 import edu.java.bot.webClients.scrapper.dto.responses.ListLinksResponse;
-import edu.java.bot.webClients.scrapper.exceptions.ClientErrorException;
+import edu.java.bot.webClients.scrapper.dto.responses.ScrapperApiErrorResponse;
 import java.net.URI;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
@@ -152,7 +152,7 @@ public class ScrapperLinksClientTest {
         );
 
         //Act, Assert
-        ApiErrorResponse expectedApiErrorResponse = new ApiErrorResponse(
+        ScrapperApiErrorResponse expectedApiErrorResponse = new ScrapperApiErrorResponse(
             "some description",
             "400",
             "some exception",

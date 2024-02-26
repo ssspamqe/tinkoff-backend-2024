@@ -4,7 +4,8 @@ import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import edu.java.bot.configuration.ApplicationConfig;
 import edu.java.bot.restApi.dto.responses.ApiErrorResponse;
 import edu.java.bot.webClients.scrapper.ScrapperTelegramChatClient;
-import edu.java.bot.webClients.scrapper.exceptions.ClientErrorException;
+import edu.java.bot.webClients.exceptions.ClientErrorException;
+import edu.java.bot.webClients.scrapper.dto.responses.ScrapperApiErrorResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,7 +15,6 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.ResponseEntity;
 import java.util.List;
-import static com.github.tomakehurst.wiremock.client.WireMock.containing;
 import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
@@ -86,7 +86,7 @@ public class ScrapperTelegramChatClientTest {
         );
 
         //Act, Assert
-        ApiErrorResponse expectedApiErrorResponse = new ApiErrorResponse(
+        ScrapperApiErrorResponse expectedApiErrorResponse = new ScrapperApiErrorResponse(
             "some description",
             "400",
             "some exception",
