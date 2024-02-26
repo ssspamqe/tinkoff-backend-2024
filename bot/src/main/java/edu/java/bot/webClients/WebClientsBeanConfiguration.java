@@ -1,12 +1,13 @@
 package edu.java.bot.webClients;
 
 import edu.java.bot.configuration.ApplicationConfig;
-import edu.java.bot.restApi.dto.responses.ApiErrorResponse;
+import edu.java.bot.webClients.exceptions.ClientErrorException;
 import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
 import edu.java.bot.webClients.scrapper.ScrapperTelegramChatClient;
-import edu.java.bot.webClients.exceptions.ClientErrorException;
 import edu.java.bot.webClients.scrapper.dto.responses.ScrapperApiErrorResponse;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -18,32 +19,34 @@ import reactor.core.publisher.Mono;
 public class WebClientsBeanConfiguration {
 
     private final ApplicationConfig applicationConfig;
+    private HttpServiceProxyFactory scrapperWebClientsFactory;
 
     @Autowired
     public WebClientsBeanConfiguration(ApplicationConfig applicationConfig) {
         this.applicationConfig = applicationConfig;
     }
 
-    public ScrapperTelegramChatClient scrapperTelegramChatClient() {
+    @PostConstruct
+    void init() {
         String baseUrl = applicationConfig.scrapperUrl().getBaseUrl();
-        return createDefaultScraperWebClient(baseUrl, ScrapperTelegramChatClient.class);
-    }
-
-    public ScrapperLinksClient scrapperLinksClient() {
-        String baseUrl = applicationConfig.scrapperUrl().getBaseUrl();
-        return createDefaultScraperWebClient(baseUrl, ScrapperLinksClient.class);
-    }
-
-    private <T> T createDefaultScraperWebClient(String url, Class<T> webClientInterface) {
         WebClient webClient = WebClient.builder()
             .defaultStatusHandler(HttpStatusCode::is4xxClientError, response ->
                 response.bodyToMono(ScrapperApiErrorResponse.class)
                     .flatMap(errorBody -> Mono.error(new ClientErrorException(errorBody)))
             )
-            .baseUrl(url)
+            .baseUrl(baseUrl)
             .build();
         WebClientAdapter adapter = WebClientAdapter.create(webClient);
-        HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();
-        return factory.createClient(webClientInterface);
+        scrapperWebClientsFactory = HttpServiceProxyFactory.builderFor(adapter).build();
+    }
+
+    @Bean
+    public ScrapperTelegramChatClient scrapperTelegramChatClient() {
+        return scrapperWebClientsFactory.createClient(ScrapperTelegramChatClient.class);
+    }
+
+    @Bean
+    public ScrapperLinksClient scrapperLinksClient() {
+        return scrapperWebClientsFactory.createClient(ScrapperLinksClient.class);
     }
 }

@@ -1,10 +1,10 @@
 package edu.java.bot.webClients.exceptions;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Value;
 
-@AllArgsConstructor
-@Data
+@EqualsAndHashCode(callSuper = true)
+@Value
 public class ClientErrorException extends RuntimeException {
-    private final ClientErrorResponseBody errorResponseBody;
+    ClientErrorResponseBody errorResponseBody;
 }
