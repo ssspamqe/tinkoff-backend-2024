@@ -18,7 +18,7 @@ public class NoSuchChatException extends ScrapperServiceException {
     }
 
     @Override
-    public HttpStatusCode getHttpStatusCode(){
+    public HttpStatusCode getHttpStatusCode() {
         return HTTP_STATUS_CODE;
     }
 }
