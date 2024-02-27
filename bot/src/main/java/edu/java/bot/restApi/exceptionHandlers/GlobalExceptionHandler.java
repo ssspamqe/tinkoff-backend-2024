@@ -10,32 +10,54 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.HandlerMethodValidationException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final String INCORRECT_REQUEST_PARAMETERS_DESCRIPTION = "Incorrect request parameters";
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiErrorResponse> handleMethodArgumentNotValidException(
         MethodArgumentNotValidException exception
     ) {
         HttpStatusCode statusCode = exception.getStatusCode();
+        String description = Arrays.toString(exception.getDetailMessageArguments());
+        ApiErrorResponse errorResponse =
+            buildDefaultErrorResponse(statusCode, description, exception);
+
+        return ResponseEntity.status(statusCode).body(errorResponse);
+    }
+
+    @ExceptionHandler(HandlerMethodValidationException.class)
+    public ResponseEntity<ApiErrorResponse> handleMethodArgumentNotValidException(
+        HandlerMethodValidationException exception
+    ) {
+
+        HttpStatusCode statusCode = exception.getStatusCode();
+        String description = Arrays.toString(exception.getDetailMessageArguments());
+        ApiErrorResponse errorResponse =
+            buildDefaultErrorResponse(statusCode, description, exception);
+
+        return ResponseEntity.status(statusCode).body(errorResponse);
+    }
+
+    private ApiErrorResponse buildDefaultErrorResponse(
+        HttpStatusCode statusCode,
+        String description,
+        Exception exception
+    ) {
         String exceptionName = exception.getClass().getSimpleName();
         String exceptionMessage = exception.getMessage();
         List<String> stacktrace = Arrays.stream(exception.getStackTrace()).map(StackTraceElement::toString).toList();
 
-        ApiErrorResponse errorResponse = new ApiErrorResponse(
-            INCORRECT_REQUEST_PARAMETERS_DESCRIPTION,
+        return new ApiErrorResponse(
+            description,
             statusCode.toString(),
             exceptionName,
             exceptionMessage,
             stacktrace
         );
-
-        LOGGER.warn("Incorrect request parameters: {}", errorResponse);
-        return ResponseEntity.status(statusCode).body(errorResponse);
     }
 
 }
