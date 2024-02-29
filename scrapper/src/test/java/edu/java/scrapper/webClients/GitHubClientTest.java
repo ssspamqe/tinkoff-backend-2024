@@ -15,8 +15,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
@@ -27,9 +27,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(MockitoExtension.class)
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
+@TestPropertySource(locations = "classpath:application-test.yml")
+@ActiveProfiles("test")
 public class GitHubClientTest {
-
-    static final String WIRE_MOCK_URL = "http://localhost:8080/";
 
     @Autowired
     GitHubClient gitHubClient;
@@ -150,10 +150,5 @@ public class GitHubClientTest {
             345,
             true
         );
-    }
-
-    @DynamicPropertySource
-    static void jdbcProperties(DynamicPropertyRegistry registry) {
-        registry.add("app.git-hub-url.default-url", () -> WIRE_MOCK_URL);
     }
 }

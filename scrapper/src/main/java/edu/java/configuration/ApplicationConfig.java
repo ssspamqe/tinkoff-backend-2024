@@ -25,7 +25,6 @@ public record ApplicationConfig(
 
     @NotNull
     DatabaseConnection redisConnection
-
 ) {
 
     public record Scheduler(boolean enable, @NotNull Duration interval, @NotNull Duration forceCheckDelay) {

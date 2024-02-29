@@ -13,8 +13,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
@@ -27,9 +27,9 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 @ExtendWith(MockitoExtension.class)
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
+@TestPropertySource(locations = "classpath:application-test.yml")
+@ActiveProfiles("test")
 public class TelegramBotClientTest {
-
-    static final String WIRE_MOCK_URL = "http://localhost:8080/";
 
     @Autowired
     TelegramBotClient telegramBotClient;
@@ -88,10 +88,5 @@ public class TelegramBotClientTest {
                     .isEqualTo(expectedApiErrorResponse)
             );
 
-    }
-
-    @DynamicPropertySource
-    static void jdbcProperties(DynamicPropertyRegistry registry) {
-        registry.add("app.telegram-bot-url.default-url", () -> WIRE_MOCK_URL);
     }
 }
