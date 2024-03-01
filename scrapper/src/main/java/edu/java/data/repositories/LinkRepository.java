@@ -1,11 +1,9 @@
 package edu.java.data.repositories;
 
-import edu.java.data.entities.Link;
+import com.redis.om.spring.repository.RedisDocumentRepository;
+import edu.java.data.models.Link;
 import java.util.Optional;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface LinkRepository extends CrudRepository<Link, Long> {
+public interface LinkRepository extends RedisDocumentRepository<Link, Long> {
     Optional<Link> findByUrl(String url);
 }

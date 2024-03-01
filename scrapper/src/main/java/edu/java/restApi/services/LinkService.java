@@ -1,16 +1,16 @@
 package edu.java.restApi.services;
 
-import edu.java.data.entities.Link;
-import edu.java.data.entities.TelegramChat;
+import edu.java.data.models.Link;
+import edu.java.data.models.TelegramChat;
+import edu.java.data.models.TelegramChatLink;
 import edu.java.data.repositories.LinkRepository;
-import edu.java.data.repositories.TelegramChatLinksRepository;
+import edu.java.data.repositories.TelegramChatLinkRepository;
 import edu.java.data.repositories.TelegramChatRepository;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
 import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,24 +19,30 @@ import org.springframework.stereotype.Service;
 public class LinkService {
 
     private final LinkRepository linkRepository;
-    private final TelegramChatLinksRepository telegramChatLinksRepository;
+    private final TelegramChatLinkRepository telegramChatLinkRepository;
     private final TelegramChatRepository telegramChatRepository;
 
     @Autowired
     public LinkService(
         LinkRepository linkRepository,
-        TelegramChatLinksRepository telegramChatLinksRepository,
+        TelegramChatLinkRepository telegramChatLinkRepository,
         TelegramChatRepository telegramChatRepository
     ) {
         this.linkRepository = linkRepository;
-        this.telegramChatLinksRepository = telegramChatLinksRepository;
+        this.telegramChatLinkRepository = telegramChatLinkRepository;
         this.telegramChatRepository = telegramChatRepository;
     }
 
-    public Set<Link> getTrackedLinks(int chatApiId) {
-        TelegramChat chat = findOrThrowException(chatApiId);
+    public Set<Link> getTrackedLinks(long chatId) {
+        if (!chatWithIdWasRegistered(chatId)) {
+            throw new NoSuchChatException(STR."There is no chat with id \{chatId}");
+        }
 
-        Set<Long> linkIds = telegramChatLinksRepository.findAllLinksByChatId(chat.id());
+        Set<Long> linkIds = telegramChatLinkRepository
+            .findAllByChatId(chatId)
+            .stream()
+            .map(TelegramChatLink::linkId)
+            .collect(Collectors.toSet());
 
         return buildSetOfLinks(linkIds);
     }
@@ -53,34 +59,38 @@ public class LinkService {
         Link link = findOrSave(linkUrl);
         long linkId = link.id();
 
-        if (chatWasNotRegistered(chatId)) {
+        if (!chatWithIdWasRegistered(chatId)) {
             throw new NoSuchChatException(STR."There is no registered chat with id \{chatId}");
         }
 
-        telegramChatLinksRepository.addLinkToChat(chatId, linkId);
+        assignLinkToChat(chatId, linkId);
         return link;
+    }
+
+    private void assignLinkToChat(long chatId, long linkId) {
+        telegramChatLinkRepository.save(new TelegramChatLink(chatId, linkId));
     }
 
     public Link untrackLink(long chatId, String linkUrl) {
         Link link = findOrThrowException(linkUrl);
         long linkId = link.id();
 
-        if (chatWasNotRegistered(chatId)) {
+        if (!chatWithIdWasRegistered(chatId)) {
             throw new NoSuchChatException(STR."There is no registered chat with id \{chatId}");
         }
 
-        telegramChatLinksRepository.removeLinkFromChat(chatId, linkId);
+        telegramChatLinkRepository.removeByChatIdAndLinkId(chatId, linkId);
         return link;
     }
 
-    private boolean chatWasNotRegistered(long chatId) {
-        return telegramChatRepository.findById(chatId).isEmpty();
+    private boolean chatWithIdWasRegistered(long chatId) {
+        return telegramChatRepository.findById(chatId).isPresent();
     }
 
     private Link findOrSave(String linkUrl) {
         Optional<Link> optionalLink = linkRepository.findByUrl(linkUrl);
         if (optionalLink.isEmpty()) {
-            Link newLink = new Link(ThreadLocalRandom.current().nextLong(1, Long.MAX_VALUE), linkUrl);
+            Link newLink = new Link(linkUrl);
             linkRepository.save(newLink);
             return newLink;
         }
@@ -97,6 +107,7 @@ public class LinkService {
 
     private Link findOrThrowException(String linkUrl) {
         Optional<Link> link = linkRepository.findByUrl(linkUrl);
+        System.out.println(link);
         if (link.isEmpty()) {
             throw new NoSuchLinkException(STR."There is no link with such url: \{linkUrl}");
         }
