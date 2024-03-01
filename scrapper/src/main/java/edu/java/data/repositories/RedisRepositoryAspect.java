@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class RedisRepositoryAspect {
     @Around(
-        "execution(java.util.Optional<edu.java.data.models.Link> " +
-            "edu.java.data.repositories.LinkRepository.findByUrl(String))"
+        "execution(java.util.Optional<edu.java.data.models.Link> "
+            + "edu.java.data.repositories.LinkRepository.findByUrl(String))"
     )
     public Optional<Link> executeFindByUrlWithEscapedColon(ProceedingJoinPoint joinPoint) throws Throwable {
         String originalUrl = (String) joinPoint.getArgs()[0];

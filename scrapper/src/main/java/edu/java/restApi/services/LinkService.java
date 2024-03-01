@@ -107,7 +107,6 @@ public class LinkService {
 
     private Link findOrThrowException(String linkUrl) {
         Optional<Link> link = linkRepository.findByUrl(linkUrl);
-        System.out.println(link);
         if (link.isEmpty()) {
             throw new NoSuchLinkException(STR."There is no link with such url: \{linkUrl}");
         }

@@ -16,6 +16,8 @@ public record Link(
     String url
 ) {
 
+    private static final String ESCAPED_COLON = "\\:";
+
     public Link(String url) {
         this(ThreadLocalRandom.current().nextLong(1, Long.MAX_VALUE), url);
     }
@@ -29,10 +31,10 @@ public record Link(
     }
 
     public static String escapeColon(String s) {
-        return s.replace(":", "\\:");
+        return s.replace(":", ESCAPED_COLON);
     }
 
     public static String unescapeColon(String s) {
-        return s.replace("\\:", ":");
+        return s.replace(ESCAPED_COLON, ":");
     }
 }
