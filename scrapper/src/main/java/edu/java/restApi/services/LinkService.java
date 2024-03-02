@@ -91,9 +91,7 @@ public class LinkService {
     }
 
     private TelegramChat findChatByApiIdOrThrowException(long chatApiId) {
-        System.out.println(chatApiId);
         Optional<TelegramChat> telegramChat = telegramChatRepository.findByApiId(chatApiId);
-        System.out.println(telegramChat);
         if (telegramChat.isEmpty()) {
             throw new NoSuchChatException(STR."There is no such chat with id \{chatApiId}");
         }
