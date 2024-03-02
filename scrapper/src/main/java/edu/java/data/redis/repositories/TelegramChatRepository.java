@@ -6,6 +6,5 @@ import java.util.Optional;
 
 public interface TelegramChatRepository extends RedisDocumentRepository<TelegramChat, String> {
     Optional<TelegramChat> findByApiId(long id);
-
 }
 

@@ -12,7 +12,7 @@ services:
     networks:
       - backend
   redis:
-    image: redis/redis-stack:latest
+    image: redis/redis-stack:7.2.4
     hostname: localhost
     ports:
       - "6379:6379"
