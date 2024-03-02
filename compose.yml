@@ -16,6 +16,8 @@ services:
     hostname: localhost
     ports:
       - "6379:6379"
+    networks:
+      - backend
 
 volumes:
   postgresql: { }

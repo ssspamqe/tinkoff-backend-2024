@@ -1,10 +1,9 @@
 package edu.java.restApi.services;
 
-import edu.java.data.models.TelegramChat;
-import edu.java.data.repositories.TelegramChatRepository;
+import edu.java.data.redis.documents.TelegramChat;
+import edu.java.data.redis.repositories.TelegramChatRepository;
 import edu.java.restApi.services.exceptions.DoubleChatRegistrationException;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
-import java.time.LocalDateTime;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,20 +18,20 @@ public class TelegramChatService {
         this.telegramChatRepository = telegramChatRepository;
     }
 
-    public void registerChat(long id) {
-        Optional<TelegramChat> oldChat = telegramChatRepository.findById(id);
+    public void registerChat(long apiId) {
+        Optional<TelegramChat> oldChat = telegramChatRepository.findByApiId(apiId);
         if (oldChat.isPresent()) {
-            throw new DoubleChatRegistrationException(STR."Chat with id \{id} was alreadyRegistered");
+            throw new DoubleChatRegistrationException(STR."Chat with id \{apiId} was alreadyRegistered");
         }
-        TelegramChat newChat = new TelegramChat(id, LocalDateTime.now());
+        TelegramChat newChat = new TelegramChat(apiId);
         telegramChatRepository.save(newChat);
     }
 
-    public void deleteChat(long id) {
-        Optional<TelegramChat> chat = telegramChatRepository.findById(id);
+    public void deleteChat(long apiId) {
+        Optional<TelegramChat> chat = telegramChatRepository.findByApiId(apiId);
         if (chat.isEmpty()) {
-            throw new NoSuchChatException(STR."There is no such chat with id \{id}");
+            throw new NoSuchChatException(STR."There is no such chat with id \{apiId}");
         }
-        telegramChatRepository.deleteById(id);
+        telegramChatRepository.deleteById(chat.get().getId());
     }
 }
