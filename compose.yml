@@ -11,11 +11,30 @@ services:
       - postgresql:/var/lib/postgresql/data
     networks:
       - backend
+
   redis:
     image: redis/redis-stack:latest
     hostname: localhost
     ports:
       - "6379:6379"
+    networks:
+      - backend
+
+  liquibase-migrations:
+    image: liquibase/liquibase:4.25
+    depends_on:
+      - postgresql
+    command:
+      - --changelog-file=master.xml
+      - --driver=org.postgresql.Driver
+      - --url=jdbc:postgresql://postgresql:5432/scrapper
+      - --username=postgres
+      - --password=postgres
+      - update
+    volumes:
+      - ./migrations:/liquibase/changelog
+    networks:
+      - backend
 
 volumes:
   postgresql: { }

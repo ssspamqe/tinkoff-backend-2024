@@ -1,11 +1,11 @@
 package edu.java.restApi.services;
 
-import edu.java.data.models.Link;
-import edu.java.data.models.TelegramChat;
-import edu.java.data.models.TelegramChatLink;
-import edu.java.data.repositories.LinkRepository;
-import edu.java.data.repositories.TelegramChatLinkRepository;
-import edu.java.data.repositories.TelegramChatRepository;
+import edu.java.data.redis.documents.Link;
+import edu.java.data.redis.documents.TelegramChat;
+import edu.java.data.redis.documents.TelegramChatLink;
+import edu.java.data.redis.repositories.LinkRepository;
+import edu.java.data.redis.repositories.TelegramChatLinkRepository;
+import edu.java.data.redis.repositories.TelegramChatRepository;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
 import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import java.util.Objects;

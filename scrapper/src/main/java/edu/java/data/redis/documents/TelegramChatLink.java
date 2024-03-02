@@ -1,4 +1,4 @@
-package edu.java.data.models;
+package edu.java.data.redis.documents;
 
 import com.redis.om.spring.annotations.Document;
 import com.redis.om.spring.annotations.Indexed;

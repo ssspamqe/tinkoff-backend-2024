@@ -1,7 +1,7 @@
 package edu.java.restApi.services;
 
-import edu.java.data.models.TelegramChat;
-import edu.java.data.repositories.TelegramChatRepository;
+import edu.java.data.redis.documents.TelegramChat;
+import edu.java.data.redis.repositories.TelegramChatRepository;
 import edu.java.restApi.services.exceptions.DoubleChatRegistrationException;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
 import java.time.LocalDateTime;

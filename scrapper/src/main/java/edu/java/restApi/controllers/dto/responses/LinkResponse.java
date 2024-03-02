@@ -1,6 +1,6 @@
 package edu.java.restApi.controllers.dto.responses;
 
-import edu.java.data.models.Link;
+import edu.java.data.redis.documents.Link;
 import java.net.URI;
 
 public record LinkResponse(
