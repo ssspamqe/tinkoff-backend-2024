@@ -1,13 +1,11 @@
 package edu.java.data.redis.documents;
 
 import com.redis.om.spring.annotations.Document;
-import java.time.LocalDateTime;
 import com.redis.om.spring.annotations.Indexed;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 import org.springframework.data.annotation.Id;
-
 
 @Document
 @AllArgsConstructor
