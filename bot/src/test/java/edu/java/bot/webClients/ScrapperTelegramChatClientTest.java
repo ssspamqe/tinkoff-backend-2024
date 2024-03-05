@@ -1,21 +1,12 @@
 package edu.java.bot.webClients;
 
-import com.github.tomakehurst.wiremock.junit5.WireMockTest;
-import edu.java.bot.configuration.ApplicationConfig;
 import edu.java.bot.webClients.exceptions.ClientErrorException;
 import edu.java.bot.webClients.scrapper.ScrapperTelegramChatClient;
 import edu.java.bot.webClients.scrapper.dto.responses.ScrapperApiErrorResponse;
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
@@ -24,14 +15,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-@WireMockTest(httpPort = 8080)
-@ExtendWith(MockitoExtension.class)
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
-@EnableConfigurationProperties(ApplicationConfig.class)
-public class ScrapperTelegramChatClientTest {
-
-    static final String WIRE_MOCK_URL = "http://localhost:8080";
+public class ScrapperTelegramChatClientTest extends WebClientTest {
 
     @Autowired
     ScrapperTelegramChatClient scrapperTelegramChatClient;
@@ -97,11 +81,4 @@ public class ScrapperTelegramChatClientTest {
                     .isEqualTo(expectedApiErrorResponse)
             );
     }
-
-    @DynamicPropertySource
-    static void jdbcProperties(DynamicPropertyRegistry registry) {
-        registry.add("app.scrapper-url.default-url", () -> WIRE_MOCK_URL);
-        registry.add("app.telegram-token", () -> "telegramTokenPlaceHolder");
-    }
-
 }
