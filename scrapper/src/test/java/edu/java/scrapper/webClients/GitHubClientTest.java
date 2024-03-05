@@ -16,7 +16,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GitHubClientTest extends WebClientTest {
+public class GitHubClientTest implements WebClientTest{
 
     @Autowired
     GitHubClient gitHubClient;

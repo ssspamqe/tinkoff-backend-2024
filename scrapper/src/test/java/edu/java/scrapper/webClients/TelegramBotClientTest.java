@@ -16,7 +16,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class TelegramBotClientTest extends WebClientTest {
+public class TelegramBotClientTest implements WebClientTest {
 
     @Autowired
     TelegramBotClient telegramBotClient;

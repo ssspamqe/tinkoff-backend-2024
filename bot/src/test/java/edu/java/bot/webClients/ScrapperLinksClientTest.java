@@ -21,7 +21,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class ScrapperLinksClientTest extends WebClientTest {
+public class ScrapperLinksClientTest implements WebClientTest {
 
     @Autowired
     ScrapperLinksClient scrapperLinksClient;

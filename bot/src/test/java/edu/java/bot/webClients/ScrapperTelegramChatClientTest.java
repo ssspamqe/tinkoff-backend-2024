@@ -15,7 +15,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class ScrapperTelegramChatClientTest extends WebClientTest {
+public class ScrapperTelegramChatClientTest implements WebClientTest {
 
     @Autowired
     ScrapperTelegramChatClient scrapperTelegramChatClient;
