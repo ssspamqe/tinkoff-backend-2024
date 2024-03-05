@@ -12,6 +12,10 @@ public class DoubleChatRegistrationException extends ScrapperServiceException {
         super(message);
     }
 
+    public DoubleChatRegistrationException(long apiId) {
+        super(STR."Chat with id \{apiId} was already registered");
+    }
+
     @Override
     public String getDescription() {
         return DESCRIPTION;

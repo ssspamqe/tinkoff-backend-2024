@@ -21,7 +21,7 @@ public class TelegramChatService {
     public void registerChat(long apiId) {
         Optional<TelegramChat> oldChat = telegramChatRepository.findByApiId(apiId);
         if (oldChat.isPresent()) {
-            throw new DoubleChatRegistrationException(STR."Chat with id \{apiId} was alreadyRegistered");
+            throw new DoubleChatRegistrationException(apiId);
         }
         TelegramChat newChat = new TelegramChat(apiId);
         telegramChatRepository.save(newChat);

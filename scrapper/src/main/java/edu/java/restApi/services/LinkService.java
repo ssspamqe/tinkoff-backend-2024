@@ -39,21 +39,19 @@ public class LinkService {
             .orElseThrow(() -> new NoSuchChatException(chatApiId));
         String chatId = chat.getId();
 
-        Set<String> linkIds = telegramChatLinkRepository
-            .findAllByChatId(chatId)
-            .stream()
-            .map(TelegramChatLink::getLinkId)
-            .collect(Collectors.toSet());
-
-        return buildSetOfLinks(linkIds);
+        return buildSetOfLinks(chatId);
     }
 
-    private Set<Link> buildSetOfLinks(Set<String> linkIds) {
-        return linkIds.stream()
-            .map(id ->
-                linkRepository.findById(id).orElse(null)
-            ).filter(Objects::nonNull)
+    private Set<Link> buildSetOfLinks(String chatId) {
+        return telegramChatLinkRepository.findAllByChatId(chatId)
+            .stream()
+            .map(chatLinkCouple -> {
+                String linkId = chatLinkCouple.getLinkId();
+                //TODO if there is no link in redis -> go to postgres
+                return linkRepository.findById(linkId).orElse(null);
+            }).filter(Objects::nonNull)
             .collect(Collectors.toSet());
+
     }
 
     public Link addLinkToTrack(long chatApiId, String linkUrl) {
