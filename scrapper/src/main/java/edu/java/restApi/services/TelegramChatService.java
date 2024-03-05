@@ -28,10 +28,8 @@ public class TelegramChatService {
     }
 
     public void deleteChat(long apiId) {
-        Optional<TelegramChat> chat = telegramChatRepository.findByApiId(apiId);
-        if (chat.isEmpty()) {
-            throw new NoSuchChatException(STR."There is no such chat with id \{apiId}");
-        }
-        telegramChatRepository.deleteById(chat.get().getId());
+        TelegramChat chat = telegramChatRepository.findByApiId(apiId)
+            .orElseThrow(() -> new NoSuchChatException(apiId));
+        telegramChatRepository.deleteById(chat.getId());
     }
 }

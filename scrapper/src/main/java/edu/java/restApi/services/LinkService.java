@@ -8,6 +8,7 @@ import edu.java.data.redis.repositories.TelegramChatLinkRepository;
 import edu.java.data.redis.repositories.TelegramChatRepository;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
 import edu.java.restApi.services.exceptions.NoSuchLinkException;
+import java.net.URI;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -34,7 +35,8 @@ public class LinkService {
     }
 
     public Set<Link> getTrackedLinks(long chatApiId) {
-        TelegramChat chat = findChatByApiIdOrThrowException(chatApiId);
+        TelegramChat chat = telegramChatRepository.findByApiId(chatApiId)
+            .orElseThrow(() -> new NoSuchChatException(chatApiId));
         String chatId = chat.getId();
 
         Set<String> linkIds = telegramChatLinkRepository
@@ -55,7 +57,8 @@ public class LinkService {
     }
 
     public Link addLinkToTrack(long chatApiId, String linkUrl) {
-        TelegramChat chat = findChatByApiIdOrThrowException(chatApiId);
+        TelegramChat chat = telegramChatRepository.findByApiId(chatApiId)
+            .orElseThrow(() -> new NoSuchChatException(chatApiId));
         String chatId = chat.getId();
 
         Link link = findOrSave(linkUrl);
@@ -70,10 +73,12 @@ public class LinkService {
     }
 
     public Link untrackLink(long chatApiId, String linkUrl) {
-        Link link = findOrThrowException(linkUrl);
+        Link link = linkRepository.findByHashedUrl(Link.hash(linkUrl))
+            .orElseThrow(() -> new NoSuchLinkException(URI.create(linkUrl)));
         String linkId = link.getId();
 
-        TelegramChat chat = findChatByApiIdOrThrowException(chatApiId);
+        TelegramChat chat = telegramChatRepository.findByApiId(chatApiId)
+            .orElseThrow(() -> new NoSuchChatException(chatApiId));
         String chatId = chat.getId();
 
         telegramChatLinkRepository.removeByChatIdAndLinkId(chatId, linkId);
@@ -88,21 +93,5 @@ public class LinkService {
             return newLink;
         }
         return optionalLink.get();
-    }
-
-    private TelegramChat findChatByApiIdOrThrowException(long chatApiId) {
-        Optional<TelegramChat> telegramChat = telegramChatRepository.findByApiId(chatApiId);
-        if (telegramChat.isEmpty()) {
-            throw new NoSuchChatException(STR."There is no such chat with id \{chatApiId}");
-        }
-        return telegramChat.get();
-    }
-
-    private Link findOrThrowException(String linkUrl) {
-        Optional<Link> link = linkRepository.findByHashedUrl(Link.hash(linkUrl));
-        if (link.isEmpty()) {
-            throw new NoSuchLinkException(STR."There is no link with such url: \{linkUrl}");
-        }
-        return link.get();
     }
 }

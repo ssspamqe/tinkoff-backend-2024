@@ -12,6 +12,10 @@ public class NoSuchChatException extends ScrapperServiceException {
         super(message);
     }
 
+    public NoSuchChatException(long chatApiId) {
+        super(STR."There is no such chat with id \{chatApiId}");
+    }
+
     @Override
     public String getDescription() {
         return DESCRIPTION;
