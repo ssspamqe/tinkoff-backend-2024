@@ -12,18 +12,17 @@ import org.springframework.http.ResponseEntity;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class TelegramBotClientTest implements WebClientTest {
+public class TelegramBotClientTest extends WebClientTest {
 
     @Autowired
     TelegramBotClient telegramBotClient;
 
     @Test
     public void should_notThrowException_when_postHttpStatus2xx() {
-        stubFor(post("/updates")
+        mockServer.stubFor(post("/updates")
             .willReturn(ok()));
 
         ResponseEntity<?> actualResponse = telegramBotClient.sendLinkUpdate(new LinkUpdate(
@@ -36,7 +35,7 @@ public class TelegramBotClientTest implements WebClientTest {
     @Test
     public void should_throwClientErrorException_when_httpStatus4xx() {
         //Arrange
-        stubFor(post("/updates")
+        mockServer.stubFor(post("/updates")
             .willReturn(
                 okJson("""
                     {

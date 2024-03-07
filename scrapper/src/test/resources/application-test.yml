@@ -5,3 +5,4 @@ app:
     default-url: http://localhost:8080/
   telegram-bot-url:
     default-url: http://localhost:8080/
+port: 8080

@@ -13,10 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GitHubClientTest implements WebClientTest{
+public class GitHubClientTest extends WebClientTest {
 
     @Autowired
     GitHubClient gitHubClient;
@@ -24,7 +23,7 @@ public class GitHubClientTest implements WebClientTest{
     @Test
     public void should_returnRepository() {
         //Arrange
-        stubFor(get("/repos/testUser/test-repo")
+        mockServer.stubFor(get("/repos/testUser/test-repo")
             .willReturn(okJson(
                     getRepositoryWithOwnerAndNameResponseBody("testUser", "test-repo")
                 )
@@ -46,7 +45,7 @@ public class GitHubClientTest implements WebClientTest{
     @Test
     public void should_returnRepositoryActivities() {
         //Arrange
-        stubFor(get("/repos/testUser/test-repo/activity")
+        mockServer.stubFor(get("/repos/testUser/test-repo/activity")
             .willReturn(okJson("""
                 [
                     {

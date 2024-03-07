@@ -11,18 +11,17 @@ import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class ScrapperTelegramChatClientTest implements WebClientTest {
+public class ScrapperTelegramChatClientTest extends WebClientTest {
 
     @Autowired
     ScrapperTelegramChatClient scrapperTelegramChatClient;
 
     @Test
     public void should_notThrowException_when_postHttpStatus2xx() {
-        stubFor(post("/tg-chat/1")
+        mockServer.stubFor(post("/tg-chat/1")
             .willReturn(ok()));
 
         ResponseEntity<?> actualResponse = scrapperTelegramChatClient.registerNewChat(1);
@@ -32,7 +31,7 @@ public class ScrapperTelegramChatClientTest implements WebClientTest {
 
     @Test
     public void should_notThrowException_when_deleteHttpStatus2xx() {
-        stubFor(delete("/tg-chat/1")
+        mockServer.stubFor(delete("/tg-chat/1")
             .willReturn(ok()));
 
         ResponseEntity<?> actualResponse = scrapperTelegramChatClient.deleteChat(1);
@@ -43,7 +42,7 @@ public class ScrapperTelegramChatClientTest implements WebClientTest {
     @Test
     public void should_throwClientErrorException_when_httpStatus4xx() {
         //Arrange
-        stubFor(post("/tg-chat/1")
+        mockServer.stubFor(post("/tg-chat/1")
             .willReturn(
                 okJson("""
                     {

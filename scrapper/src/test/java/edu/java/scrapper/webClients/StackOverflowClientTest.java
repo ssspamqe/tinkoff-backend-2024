@@ -1,6 +1,5 @@
 package edu.java.scrapper.webClients;
 
-import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
 import edu.java.webClients.stackOverflow.dto.StackOverflowAnswer;
 import edu.java.webClients.stackOverflow.dto.StackOverflowOwner;
@@ -11,20 +10,13 @@ import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.TestPropertySource;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StackOverflowClientTest implements WebClientTest{
+public class StackOverflowClientTest extends WebClientTest {
 
     @Autowired
     StackOverflowClient stackOverflowClient;
@@ -32,7 +24,7 @@ public class StackOverflowClientTest implements WebClientTest{
     @Test
     public void should_returnQuestion() {
         //Arrange
-        stubFor(get("/questions/123?site=stackoverflow&filter=withbody").
+        mockServer.stubFor(get("/questions/123?site=stackoverflow&filter=withbody").
             willReturn(okJson("""
                 {
                     "items":[
@@ -88,7 +80,7 @@ public class StackOverflowClientTest implements WebClientTest{
     @Test
     public void should_returnAnswers() {
         //Arrange
-        stubFor(get("/questions/123/answers?site=stackoverflow&filter=withbody")
+        mockServer.stubFor(get("/questions/123/answers?site=stackoverflow&filter=withbody")
             .willReturn(okJson("""
                 {
                     "items": [

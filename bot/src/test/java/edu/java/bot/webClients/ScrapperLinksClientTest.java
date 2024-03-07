@@ -17,18 +17,17 @@ import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class ScrapperLinksClientTest implements WebClientTest {
+public class ScrapperLinksClientTest extends WebClientTest {
 
     @Autowired
     ScrapperLinksClient scrapperLinksClient;
 
     @Test
     public void should_returnListsLinksResponse_when_getHttpStatus2xx() {
-        stubFor(get("/links")
+        mockServer.stubFor(get("/links")
             .withHeader("Tg-Chat-Id", containing("1"))
             .willReturn(
                 okJson("""
@@ -64,7 +63,7 @@ public class ScrapperLinksClientTest implements WebClientTest {
 
     @Test
     public void should_returnListResponse_when_postHttpStatus2xx() {
-        stubFor(post("/links")
+        mockServer.stubFor(post("/links")
             .withHeader("Tg-Chat-Id", containing("1"))
             .willReturn(okJson("""
                     {
@@ -86,7 +85,7 @@ public class ScrapperLinksClientTest implements WebClientTest {
 
     @Test
     public void should_returnLinkResponse_when_deleteHttpStatus2xx() {
-        stubFor(delete("/links")
+        mockServer.stubFor(delete("/links")
             .withHeader("Tg-Chat-Id", containing("1"))
             .willReturn(okJson("""
                     {
@@ -109,7 +108,7 @@ public class ScrapperLinksClientTest implements WebClientTest {
     @Test
     public void should_throwClientErrorException_when_httpStatus4xx() {
         //Arrange
-        stubFor(get("/links")
+        mockServer.stubFor(get("/links")
             .withHeader("Tg-Chat-Id", containing("1"))
             .willReturn(
                 okJson("""
