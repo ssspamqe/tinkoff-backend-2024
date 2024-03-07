@@ -1,6 +1,6 @@
 package edu.java.scrapper.integrationTests;
 
-import java.nio.file.Files;
+import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
 import liquibase.Contexts;
@@ -9,7 +9,8 @@ import liquibase.Liquibase;
 import liquibase.database.Database;
 import liquibase.database.DatabaseFactory;
 import liquibase.database.jvm.JdbcConnection;
-import liquibase.resource.ClassLoaderResourceAccessor;
+import liquibase.resource.DirectoryResourceAccessor;
+import liquibase.resource.ResourceAccessor;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.JdbcDatabaseContainer;
@@ -41,7 +42,9 @@ public abstract class IntegrationTest {
         Database database = DatabaseFactory.getInstance()
             .findCorrectDatabaseImplementation(new JdbcConnection(connection));
 
-        Liquibase liquibase = new Liquibase("migrations/master.xml", new ClassLoaderResourceAccessor(), database);
+        Path changeLogPath = new File(".").toPath().toAbsolutePath().getParent().getParent().resolve("migrations");
+        ResourceAccessor resourceAccessor = new DirectoryResourceAccessor(changeLogPath);
+        Liquibase liquibase = new Liquibase("master.yaml", resourceAccessor, database);
         liquibase.update(new Contexts(), new LabelExpression());
     }
 
