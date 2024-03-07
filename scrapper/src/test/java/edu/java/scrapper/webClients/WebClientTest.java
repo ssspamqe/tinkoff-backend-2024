@@ -24,4 +24,3 @@ public abstract class WebClientTest {
         return wireMockConfig().port(WIRE_MOCK_PORT);
     }
 }
-

@@ -6,13 +6,13 @@ import edu.java.bot.webClients.scrapper.dto.responses.ScrapperApiErrorResponse;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class ScrapperTelegramChatClientTest extends WebClientTest {
 
@@ -24,9 +24,7 @@ public class ScrapperTelegramChatClientTest extends WebClientTest {
         mockServer.stubFor(post("/tg-chat/1")
             .willReturn(ok()));
 
-        ResponseEntity<?> actualResponse = scrapperTelegramChatClient.registerNewChat(1);
-
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
+        assertDoesNotThrow(() -> scrapperTelegramChatClient.registerNewChat(1));
     }
 
     @Test
@@ -34,9 +32,7 @@ public class ScrapperTelegramChatClientTest extends WebClientTest {
         mockServer.stubFor(delete("/tg-chat/1")
             .willReturn(ok()));
 
-        ResponseEntity<?> actualResponse = scrapperTelegramChatClient.deleteChat(1);
-
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
+        assertDoesNotThrow(() -> scrapperTelegramChatClient.deleteChat(1));
     }
 
     @Test
@@ -55,8 +51,7 @@ public class ScrapperTelegramChatClientTest extends WebClientTest {
                             "frame2"
                         ]
                     }"""
-                )
-                    .withStatus(400)
+                ).withStatus(400)
             )
         );
 
@@ -76,8 +71,7 @@ public class ScrapperTelegramChatClientTest extends WebClientTest {
             .satisfies(actualException ->
                 assertThat(
                     ((ClientErrorException) actualException).getErrorResponseBody()
-                )
-                    .isEqualTo(expectedApiErrorResponse)
+                ).isEqualTo(expectedApiErrorResponse)
             );
     }
 }

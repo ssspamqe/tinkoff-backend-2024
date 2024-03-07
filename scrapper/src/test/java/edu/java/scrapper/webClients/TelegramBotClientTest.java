@@ -8,12 +8,12 @@ import java.net.URI;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class TelegramBotClientTest extends WebClientTest {
 
@@ -25,11 +25,11 @@ public class TelegramBotClientTest extends WebClientTest {
         mockServer.stubFor(post("/updates")
             .willReturn(ok()));
 
-        ResponseEntity<?> actualResponse = telegramBotClient.sendLinkUpdate(new LinkUpdate(
+        LinkUpdate linkUpdate = new LinkUpdate(
             1, URI.create("http://my/link"), "description", List.of(1)
-        ));
+        );
 
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
+        assertDoesNotThrow(() -> telegramBotClient.sendLinkUpdate(linkUpdate));
     }
 
     @Test

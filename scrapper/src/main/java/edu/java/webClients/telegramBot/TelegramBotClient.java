@@ -10,5 +10,5 @@ import org.springframework.web.service.annotation.PostExchange;
 public interface TelegramBotClient {
 
     @PostExchange(url = "/updates")
-    ResponseEntity<?> sendLinkUpdate(@RequestBody LinkUpdate linkUpdate);
+    void sendLinkUpdate(@RequestBody LinkUpdate linkUpdate);
 }

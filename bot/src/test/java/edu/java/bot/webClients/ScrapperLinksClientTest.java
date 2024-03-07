@@ -11,7 +11,6 @@ import java.net.URI;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import static com.github.tomakehurst.wiremock.client.WireMock.containing;
 import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
@@ -44,12 +43,11 @@ public class ScrapperLinksClientTest extends WebClientTest {
                        ],
                        "size": 2
                     }"""
-                )
-                    .withStatus(200)
+                ).withStatus(200)
             )
         );
 
-        ResponseEntity<ListLinksResponse> actualResponse = scrapperLinksClient.findTrackedLinks(1);
+        ListLinksResponse actualResponse = scrapperLinksClient.findTrackedLinks(1);
         ListLinksResponse expectedResponseBody = new ListLinksResponse(
             List.of(
                 new LinkResponse(1, URI.create("http://first/link")),
@@ -57,8 +55,7 @@ public class ScrapperLinksClientTest extends WebClientTest {
             ),
             2
         );
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
-        assertThat(actualResponse.getBody()).isEqualTo(expectedResponseBody);
+        assertThat(actualResponse).isEqualTo(expectedResponseBody);
     }
 
     @Test
@@ -70,17 +67,15 @@ public class ScrapperLinksClientTest extends WebClientTest {
                         "id": 1,
                         "url": "http://my/link"
                     }"""
-                )
-                    .withStatus(200)
+                ).withStatus(200)
             )
         );
 
-        ResponseEntity<LinkResponse> actualResponse =
+        LinkResponse actualResponse =
             scrapperLinksClient.trackLink(1, new AddLinkRequest("http://my/link"));
 
         LinkResponse expectedResponseBody = new LinkResponse(1, URI.create("http://my/link"));
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
-        assertThat(actualResponse.getBody()).isEqualTo(expectedResponseBody);
+        assertThat(actualResponse).isEqualTo(expectedResponseBody);
     }
 
     @Test
@@ -92,17 +87,15 @@ public class ScrapperLinksClientTest extends WebClientTest {
                         "id": 1,
                         "url": "http://my/link"
                     }"""
-                )
-                    .withStatus(200)
+                ).withStatus(200)
             )
         );
 
-        ResponseEntity<LinkResponse> actualResponse =
+        LinkResponse actualResponse =
             scrapperLinksClient.untrackLink(1, new RemoveLinkRequest("http://my/link"));
 
         LinkResponse expectedResponseBody = new LinkResponse(1, URI.create("http://my/link"));
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
-        assertThat(actualResponse.getBody()).isEqualTo(expectedResponseBody);
+        assertThat(actualResponse).isEqualTo(expectedResponseBody);
     }
 
     @Test
@@ -122,8 +115,7 @@ public class ScrapperLinksClientTest extends WebClientTest {
                             "frame2"
                         ]
                     }"""
-                )
-                    .withStatus(400)
+                ).withStatus(400)
             )
         );
 

@@ -11,7 +11,6 @@ import java.time.ZoneOffset;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -53,7 +52,7 @@ public class StackOverflowClientTest extends WebClientTest {
         );
 
         //Act
-        ResponseEntity<StackOverflowResponse<StackOverflowQuestion>> actualResponse =
+        StackOverflowResponse<StackOverflowQuestion> actualResponse =
             stackOverflowClient.findQuestionById(123);
 
         //Assert
@@ -72,9 +71,8 @@ public class StackOverflowClientTest extends WebClientTest {
             "test closed reason"
         );
 
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
-        assertThat(actualResponse.getBody()).isNotNull();
-        assertThat(actualResponse.getBody().items()).isNotNull().containsExactly(expectedQuestion);
+        assertThat(actualResponse).isNotNull();
+        assertThat(actualResponse.items()).isNotNull().containsExactly(expectedQuestion);
     }
 
     @Test
@@ -113,7 +111,7 @@ public class StackOverflowClientTest extends WebClientTest {
         );
 
         //Act
-        ResponseEntity<StackOverflowResponse<StackOverflowAnswer>> actualResponse =
+        StackOverflowResponse<StackOverflowAnswer> actualResponse =
             stackOverflowClient.findAnswersByQuestionId(123);
 
         //Assert
@@ -138,9 +136,8 @@ public class StackOverflowClientTest extends WebClientTest {
             )
         );
 
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
-        assertThat(actualResponse.getBody()).isNotNull();
-        assertThat(actualResponse.getBody().items()).isNotNull()
+        assertThat(actualResponse).isNotNull();
+        assertThat(actualResponse.items()).isNotNull()
             .containsExactlyInAnyOrderElementsOf(expectedAnswerList);
     }
 }

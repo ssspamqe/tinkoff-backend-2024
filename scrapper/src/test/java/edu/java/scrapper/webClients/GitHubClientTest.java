@@ -31,15 +31,13 @@ public class GitHubClientTest extends WebClientTest {
         );
 
         //Act
-        ResponseEntity<GitHubRepository> actualResponse =
+        GitHubRepository actualRepository =
             gitHubClient.findRepository("testUser", "test-repo");
 
         //Assert
         GitHubRepository expectedRepository =
             getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
-
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
-        assertThat(actualResponse.getBody()).isNotNull().isEqualTo(expectedRepository);
+        assertThat(actualRepository).isNotNull().isEqualTo(expectedRepository);
     }
 
     @Test
@@ -73,7 +71,7 @@ public class GitHubClientTest extends WebClientTest {
         );
 
         //Act
-        ResponseEntity<List<GitHubRepositoryActivity>> actualResponse =
+        List<GitHubRepositoryActivity> actualRepositoryActivities =
             gitHubClient.findRepositoryActivities("testUser", "test-repo");
 
         //Assert
@@ -93,8 +91,8 @@ public class GitHubClientTest extends WebClientTest {
                 GitHubRepositoryActivityType.PR_MERGE
             )
         );
-        assertThat(actualResponse.getStatusCode().is2xxSuccessful()).isTrue();
-        assertThat(actualResponse.getBody()).containsExactlyInAnyOrderElementsOf(expectedActivities);
+
+        assertThat(actualRepositoryActivities).containsExactlyInAnyOrderElementsOf(expectedActivities);
     }
 
     private String getRepositoryWithOwnerAndNameResponseBody(String ownerName, String repoName) {
