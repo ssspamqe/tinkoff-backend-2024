@@ -1,11 +1,11 @@
 package edu.java.restApi.services;
 
-import edu.java.data.redis.documents.Link;
-import edu.java.data.redis.documents.TelegramChat;
-import edu.java.data.redis.documents.TelegramChatLink;
-import edu.java.data.redis.repositories.LinkRepository;
-import edu.java.data.redis.repositories.TelegramChatLinkRepository;
-import edu.java.data.redis.repositories.TelegramChatRepository;
+import edu.java.dao.redis.documents.Link;
+import edu.java.dao.redis.documents.TelegramChat;
+import edu.java.dao.redis.documents.TelegramChatLink;
+import edu.java.dao.redis.repositories.LinkCachedRepository;
+import edu.java.dao.redis.repositories.TelegramChatLinkCachedRepository;
+import edu.java.dao.redis.repositories.TelegramChatCacheRepository;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
 import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import java.net.URI;
@@ -19,23 +19,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class LinkService {
 
-    private final LinkRepository linkRepository;
-    private final TelegramChatLinkRepository telegramChatLinkRepository;
-    private final TelegramChatRepository telegramChatRepository;
+    private final LinkCachedRepository linkCachedRepository;
+    private final TelegramChatLinkCachedRepository telegramChatLinkCachedRepository;
+    private final TelegramChatCacheRepository telegramChatCacheRepository;
 
     @Autowired
     public LinkService(
-        LinkRepository linkRepository,
-        TelegramChatLinkRepository telegramChatLinkRepository,
-        TelegramChatRepository telegramChatRepository
+        LinkCachedRepository linkCachedRepository,
+        TelegramChatLinkCachedRepository telegramChatLinkCachedRepository,
+        TelegramChatCacheRepository telegramChatCacheRepository
     ) {
-        this.linkRepository = linkRepository;
-        this.telegramChatLinkRepository = telegramChatLinkRepository;
-        this.telegramChatRepository = telegramChatRepository;
+        this.linkCachedRepository = linkCachedRepository;
+        this.telegramChatLinkCachedRepository = telegramChatLinkCachedRepository;
+        this.telegramChatCacheRepository = telegramChatCacheRepository;
     }
 
     public Set<Link> getTrackedLinks(long chatApiId) {
-        TelegramChat chat = telegramChatRepository.findByApiId(chatApiId)
+        TelegramChat chat = telegramChatCacheRepository.findByApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId));
         String chatId = chat.getId();
 
@@ -43,19 +43,19 @@ public class LinkService {
     }
 
     private Set<Link> buildSetOfLinks(String chatId) {
-        return telegramChatLinkRepository.findAllByChatId(chatId)
+        return telegramChatLinkCachedRepository.findAllByChatId(chatId)
             .stream()
             .map(chatLinkCouple -> {
                 String linkId = chatLinkCouple.getLinkId();
                 //TODO if there is no link in redis -> go to postgres
-                return linkRepository.findById(linkId).orElse(null);
+                return linkCachedRepository.findById(linkId).orElse(null);
             }).filter(Objects::nonNull)
             .collect(Collectors.toSet());
 
     }
 
     public Link addLinkToTrack(long chatApiId, String linkUrl) {
-        TelegramChat chat = telegramChatRepository.findByApiId(chatApiId)
+        TelegramChat chat = telegramChatCacheRepository.findByApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId));
         String chatId = chat.getId();
 
@@ -67,27 +67,27 @@ public class LinkService {
     }
 
     private void assignLinkToChat(String chatId, String linkId) {
-        telegramChatLinkRepository.save(new TelegramChatLink(chatId, linkId));
+        telegramChatLinkCachedRepository.save(new TelegramChatLink(chatId, linkId));
     }
 
     public Link untrackLink(long chatApiId, String linkUrl) {
-        Link link = linkRepository.findByHashedUrl(Link.hash(linkUrl))
+        Link link = linkCachedRepository.findByHashedUrl(Link.hash(linkUrl))
             .orElseThrow(() -> new NoSuchLinkException(URI.create(linkUrl)));
         String linkId = link.getId();
 
-        TelegramChat chat = telegramChatRepository.findByApiId(chatApiId)
+        TelegramChat chat = telegramChatCacheRepository.findByApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId));
         String chatId = chat.getId();
 
-        telegramChatLinkRepository.removeByChatIdAndLinkId(chatId, linkId);
+        telegramChatLinkCachedRepository.removeByChatIdAndLinkId(chatId, linkId);
         return link;
     }
 
     private Link findOrSave(String linkUrl) {
-        Optional<Link> optionalLink = linkRepository.findByHashedUrl(Link.hash(linkUrl));
+        Optional<Link> optionalLink = linkCachedRepository.findByHashedUrl(Link.hash(linkUrl));
         if (optionalLink.isEmpty()) {
             Link newLink = new Link(linkUrl);
-            linkRepository.save(newLink);
+            linkCachedRepository.save(newLink);
             return newLink;
         }
         return optionalLink.get();
