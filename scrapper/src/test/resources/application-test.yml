@@ -5,3 +5,11 @@ app:
     default-url: http://localhost:8080/
   telegram-bot-url:
     default-url: http://localhost:8080/
+
+#TODO: change when jdbc will we established
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc://noDB
+  liquibase:
+      enabled: false

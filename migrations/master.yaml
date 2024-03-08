@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: 01-chats.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: 02-links.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: 03-chat_links.sql
+      relativeToChangelogFile: true
+
