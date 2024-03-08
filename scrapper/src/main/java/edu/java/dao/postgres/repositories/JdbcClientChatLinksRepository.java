@@ -55,6 +55,6 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
         jdbcClient.sql(DELETE_BY_CHAT_ID_AND_LINK_ID_QUERY)
             .param("chat_id", chatId)
             .param("link_id", linkId);
-
+        
     }
 }
