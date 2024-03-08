@@ -1,4 +1,4 @@
-package edu.java.scrapper.integrationTests;
+package edu.java.scrapper.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ import java.sql.Statement;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ExampleTest extends IntegrationTest {
+public class ExampleTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void sampleTest() throws Exception {
@@ -24,5 +24,4 @@ public class ExampleTest extends IntegrationTest {
 
         assertThat(actualUrl).isEqualTo("https://sample/link");
     }
-
 }
