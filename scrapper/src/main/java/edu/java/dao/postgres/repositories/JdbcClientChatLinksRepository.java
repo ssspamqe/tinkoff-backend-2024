@@ -13,6 +13,9 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
 
     private static final String TABLE_NAME = "chats";
 
+    private static final String SAVE_QUERY =
+        STR."INSERT INTO \{TABLE_NAME} (chat_id, link_id) VALUES (:chat_id, :link_id)";
+
     private static final String FIND_BY_CHAT_ID_QUERY =
         STR."SELECT * FROM \{TABLE_NAME} WHERE chat_id = :chat_id";
 
@@ -23,6 +26,13 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
         STR."DELETE FROM \{TABLE_NAME} WHERE chat_id = :chat_id AND link_id = :link_id";
 
     private final JdbcClient jdbcClient;
+
+    @Override
+    public void save(ChatLink chatLink) {
+        jdbcClient.sql(SAVE_QUERY)
+            .param("chat_id", chatLink.getChatId())
+            .param("link_id", chatLink.getLinkId());
+    }
 
     @Override
     public List<ChatLink> findByChatId(long chatId) {
@@ -42,6 +52,6 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
 
     @Override
     public void removeByChatIdAndLinkId(long chatId, long linkId) {
-        
+
     }
 }
