@@ -15,18 +15,30 @@ public record ApplicationConfig(
     Scheduler scheduler,
 
     @NotNull
-    StackOverflowUrl stackOverflowUrl,
+    ApiUrl stackOverflowUrl,
 
     @NotNull
-    GitHubUrl gitHubUrl
+    ApiUrl gitHubUrl,
 
+    @NotNull
+    ApiUrl telegramBotUrl,
+
+    @NotNull
+    DatabaseConnection redisConnection
 ) {
+
     public record Scheduler(boolean enable, @NotNull Duration interval, @NotNull Duration forceCheckDelay) {
     }
 
-    public record StackOverflowUrl(@NotBlank String defaultUrl, String configUrl) {
+    public record ApiUrl(@NotBlank String defaultUrl, String configUrl) {
+        public String getBaseUrl() {
+            if (configUrl == null) {
+                return defaultUrl;
+            }
+            return configUrl;
+        }
     }
 
-    public record GitHubUrl(@NotBlank String defaultUrl, String configUrl) {
+    public record DatabaseConnection(@NotBlank String hostName, @NotNull int port, String password) {
     }
 }

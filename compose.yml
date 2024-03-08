@@ -11,6 +11,13 @@ services:
       - postgresql:/var/lib/postgresql/data
     networks:
       - backend
+  redis:
+    image: redis/redis-stack:7.2.4
+    hostname: localhost
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
 
 volumes:
   postgresql: { }

@@ -23,10 +23,13 @@
         <!-- Spring -->
         <spring-boot.version>3.2.2</spring-boot.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
+        <spring-doc.version>2.3.0</spring-doc.version>
 
         <!-- Other -->
         <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
         <java-telegram-bot-api.version>7.0.1</java-telegram-bot-api.version>
+        <docker-compose.version>3.2.3</docker-compose.version>
+        <commons-codec.version>1.16.1</commons-codec.version>
 
         <!-- Tests -->
         <testcontainers.version>1.19.4</testcontainers.version>
@@ -39,6 +42,9 @@
         <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
         <git-commit-id-maven-plugin.version>7.0.0</git-commit-id-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
+
+        <!-- Data -->
+        <redis-om.version>0.8.8</redis-om.version>
 
         <!-- Linters -->
         <maven-checkstyle-plugin.version>3.3.1</maven-checkstyle-plugin.version>

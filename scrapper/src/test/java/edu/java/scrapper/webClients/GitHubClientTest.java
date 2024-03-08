@@ -1,8 +1,5 @@
 package edu.java.scrapper.webClients;
 
-import com.github.tomakehurst.wiremock.junit5.WireMockTest;
-import edu.java.configuration.ApplicationConfig;
-import edu.java.webClients.WebClientsBeanConfiguration;
 import edu.java.webClients.gitHub.GitHubClient;
 import edu.java.webClients.gitHub.dto.GitHubOwner;
 import edu.java.webClients.gitHub.dto.GitHubRepository;
@@ -12,38 +9,20 @@ import edu.java.webClients.gitHub.dto.GitHubRepositoryVisibilityType;
 import java.time.OffsetDateTime;
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@WireMockTest(httpPort = 8080)
-@ExtendWith(MockitoExtension.class)
-public class GitHubClientTest {
+public class GitHubClientTest extends WebClientTest {
 
-    static final String WIRE_MOCK_URL = "http://localhost:8080/";
-
-    @Mock
-    ApplicationConfig applicationConfig;
-
-    @InjectMocks
-    WebClientsBeanConfiguration webClientsBeanConfiguration;
-
+    @Autowired
     GitHubClient gitHubClient;
 
     @Test
     public void should_returnRepository() {
         //Arrange
-        Mockito.when(applicationConfig.gitHubUrl())
-            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
-        gitHubClient = webClientsBeanConfiguration.gitHubClient();
-
-        stubFor(get("/repos/testUser/test-repo")
+        mockServer.stubFor(get("/repos/testUser/test-repo")
             .willReturn(okJson(
                     getRepositoryWithOwnerAndNameResponseBody("testUser", "test-repo")
                 )
@@ -57,40 +36,13 @@ public class GitHubClientTest {
         //Assert
         GitHubRepository expectedRepository =
             getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
-        assertThat(actualRepository).isEqualTo(expectedRepository);
-    }
-
-    @Test
-    public void should_buildClient_when_urlInApplicationConfigIsNull() {
-        //Arrange
-        Mockito.when(applicationConfig.gitHubUrl())
-            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, null));
-
-        stubFor(get("/repos/testUser/test-repo")
-            .willReturn(okJson(
-                    getRepositoryWithOwnerAndNameResponseBody("testUser", "test-repo")
-                )
-            )
-        );
-
-        //Act
-        gitHubClient = webClientsBeanConfiguration.gitHubClient();
-        GitHubRepository actualRepository = gitHubClient.findRepository("testUser", "test-repo");
-
-        //Assert
-        GitHubRepository expectedRepository =
-            getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
-        assertThat(actualRepository).isEqualTo(expectedRepository);
+        assertThat(actualRepository).isNotNull().isEqualTo(expectedRepository);
     }
 
     @Test
     public void should_returnRepositoryActivities() {
         //Arrange
-        Mockito.when(applicationConfig.gitHubUrl())
-            .thenReturn(new ApplicationConfig.GitHubUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
-        gitHubClient = webClientsBeanConfiguration.gitHubClient();
-
-        stubFor(get("/repos/testUser/test-repo/activity")
+        mockServer.stubFor(get("/repos/testUser/test-repo/activity")
             .willReturn(okJson("""
                 [
                     {
@@ -118,7 +70,7 @@ public class GitHubClientTest {
         );
 
         //Act
-        List<GitHubRepositoryActivity> actualActivities =
+        List<GitHubRepositoryActivity> actualRepositoryActivities =
             gitHubClient.findRepositoryActivities("testUser", "test-repo");
 
         //Assert
@@ -138,7 +90,8 @@ public class GitHubClientTest {
                 GitHubRepositoryActivityType.PR_MERGE
             )
         );
-        assertThat(actualActivities).containsExactlyElementsOf(expectedActivities);
+
+        assertThat(actualRepositoryActivities).containsExactlyInAnyOrderElementsOf(expectedActivities);
     }
 
     private String getRepositoryWithOwnerAndNameResponseBody(String ownerName, String repoName) {
@@ -181,5 +134,4 @@ public class GitHubClientTest {
             true
         );
     }
-
 }

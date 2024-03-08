@@ -5,7 +5,7 @@ import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
 import edu.java.bot.data.entities.Subscription;
 import edu.java.bot.data.repositories.SubscriptionRepository;
-import edu.java.bot.services.slashCommands.TrackSlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.TrackSlashCommand;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import java.util.List;
@@ -37,7 +37,7 @@ class TrackSlashCommandTest {
     void should_addLinkToDatabase() {
         Message parameterMessage = getMessageWithLinkAndUserId("https://first/link", 1L);
 
-        String actualResponse = command.executeAndGetResponse(parameterMessage);
+        String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
         Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/link");
         Mockito.verify(subscriptionRepository, Mockito.times(1)).save(expectedToSaveSubscription);
@@ -49,7 +49,7 @@ class TrackSlashCommandTest {
     void should_returnSpecialMessage_when_linkNotMatchRegex(String link) {
         Message parameterMessage = getMessageWithLinkAndUserId(link, 1L);
 
-        String actualResponse = command.executeAndGetResponse(parameterMessage);
+        String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
         String expectedResponse = """
             Can't /track link because:
@@ -66,7 +66,7 @@ class TrackSlashCommandTest {
         ).thenReturn(
             List.of(new Subscription(1L, 1L, "https://ll"))
         );
-        String actualResponse = command.executeAndGetResponse(parameterMessage);
+        String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
         assertThat(actualResponse).isEqualTo("This link was already added to /track it");
     }

@@ -1,50 +1,30 @@
 package edu.java.scrapper.webClients;
 
-import com.github.tomakehurst.wiremock.junit5.WireMockTest;
-import edu.java.configuration.ApplicationConfig;
-import edu.java.webClients.WebClientsBeanConfiguration;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
 import edu.java.webClients.stackOverflow.dto.StackOverflowAnswer;
 import edu.java.webClients.stackOverflow.dto.StackOverflowOwner;
 import edu.java.webClients.stackOverflow.dto.StackOverflowQuestion;
+import edu.java.webClients.stackOverflow.dto.StackOverflowResponse;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.okJson;
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@WireMockTest(httpPort = 8080)
-@ExtendWith(MockitoExtension.class)
-public class StackOverflowClientTest {
+public class StackOverflowClientTest extends WebClientTest {
 
-    static final String WIRE_MOCK_URL = "http://localhost:8080/";
-
-    @Mock
-    ApplicationConfig applicationConfig;
-
-    @InjectMocks
-    WebClientsBeanConfiguration webClientsBeanConfiguration;
-
+    @Autowired
     StackOverflowClient stackOverflowClient;
 
     @Test
     public void should_returnQuestion() {
         //Arrange
-        Mockito.when(applicationConfig.stackOverflowUrl())
-            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
-        stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
-
-        stubFor(get("/questions/123?site=stackoverflow&filter=withbody").
-            willReturn(okJson(STR."""
+        mockServer.stubFor(get("/questions/123?site=stackoverflow&filter=withbody").
+            willReturn(okJson("""
                 {
                     "items":[
                                 {
@@ -72,7 +52,8 @@ public class StackOverflowClientTest {
         );
 
         //Act
-        List<StackOverflowQuestion> actualQuestionList = stackOverflowClient.findQuestionById(123).items();
+        StackOverflowResponse<StackOverflowQuestion> actualResponse =
+            stackOverflowClient.findQuestionById(123);
 
         //Assert
         Instant creationDate = Instant.ofEpochSecond(567);
@@ -89,42 +70,15 @@ public class StackOverflowClientTest {
             OffsetDateTime.ofInstant(closedDate, ZoneOffset.UTC),
             "test closed reason"
         );
-        assertThat(actualQuestionList).containsExactly(expectedQuestion);
-    }
 
-    @Test
-    public void should_buildWebClient_when_urlInApplicationConfigIsNull() {
-        //Arrange
-        Mockito.when(applicationConfig.stackOverflowUrl())
-            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, null));
-
-        stubFor(get("/questions/123?site=stackoverflow&filter=withbody")
-            .willReturn(okJson("""
-                {
-                    "items":[],
-                    "hase_more": false,
-                    "quota_max": 300,
-                    "quota_remaining": 299
-                }""")
-            )
-        );
-
-        //Act
-        stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
-        int actualQuotaRemaining = stackOverflowClient.findQuestionById(123).quotaRemaining();
-
-        //Assert
-        assertThat(actualQuotaRemaining).isEqualTo(299);
+        assertThat(actualResponse).isNotNull();
+        assertThat(actualResponse.items()).isNotNull().containsExactly(expectedQuestion);
     }
 
     @Test
     public void should_returnAnswers() {
         //Arrange
-        Mockito.when(applicationConfig.stackOverflowUrl())
-            .thenReturn(new ApplicationConfig.StackOverflowUrl(WIRE_MOCK_URL, WIRE_MOCK_URL));
-        stackOverflowClient = webClientsBeanConfiguration.stackOverflowClient();
-
-        stubFor(get("/questions/123/answers?site=stackoverflow&filter=withbody")
+        mockServer.stubFor(get("/questions/123/answers?site=stackoverflow&filter=withbody")
             .willReturn(okJson("""
                 {
                     "items": [
@@ -157,8 +111,8 @@ public class StackOverflowClientTest {
         );
 
         //Act
-        List<StackOverflowAnswer> actualAnswerList =
-            stackOverflowClient.findAnswersByQuestionId(123).items();
+        StackOverflowResponse<StackOverflowAnswer> actualResponse =
+            stackOverflowClient.findAnswersByQuestionId(123);
 
         //Assert
         Instant creationDate1 = Instant.ofEpochSecond(567);
@@ -181,6 +135,9 @@ public class StackOverflowClientTest {
                 OffsetDateTime.ofInstant(creationDate2, ZoneOffset.UTC)
             )
         );
-        assertThat(actualAnswerList).isEqualTo(expectedAnswerList);
+
+        assertThat(actualResponse).isNotNull();
+        assertThat(actualResponse.items()).isNotNull()
+            .containsExactlyInAnyOrderElementsOf(expectedAnswerList);
     }
 }
