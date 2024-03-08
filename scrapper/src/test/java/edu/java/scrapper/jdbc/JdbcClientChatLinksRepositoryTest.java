@@ -89,5 +89,4 @@ public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironmen
         assertThat(actualLinkId).isEqualTo(1);
         assertThat(actualChatId).isEqualTo(2);
     }
-
 }
