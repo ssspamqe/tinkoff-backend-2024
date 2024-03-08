@@ -1,8 +1,27 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## [0.4] - 2024-03-08
 
-## [0.3] - 2024-2-22
+### Added
+- Rest api controllers
+      - Bot rest controller
+          - post /updates - send update
+      - Scrapper rest controller
+          - post /tg-chat/{id} - register chat
+          - delete /tg-chat/{id} - delete chat
+          - get /links - get all tracked links(requires Tg-Chat-Id header)
+          - post /links - add link for tracking (requires Tg-Chat-Id header)
+          - delete /links - delete tracked link (requires Tg-Chat-Id header)
+- Service and domain layers in Scrapper
+    - Redis is being used for storing data
+- Swagger-ui for api
+- Web clients
+    - Bot web client in scrapper
+    - Scrapper web client in bot
+
+
+## [0.3] - 2024-02-22
 
 ### Added
 - Web clients
