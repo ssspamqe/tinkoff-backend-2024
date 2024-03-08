@@ -14,7 +14,7 @@ public class ExampleTest extends JdbcIntegrationEnvironment {
         Connection connection =
             DriverManager.getConnection(POSTGRES.getJdbcUrl(), POSTGRES.getUsername(), POSTGRES.getPassword());
         Statement statement = connection.createStatement();
-        statement.execute("INSERT INTO links (url) VALUES ('https://sample/link')");
+        statement.execute("INSERT INTO links (url,created_at) VALUES ('https://sample/link','2011-05-16 15:36:38')");
         ResultSet resultSet = statement.executeQuery("SELECT * FROM links");
 
         String actualUrl = null;
