@@ -16,31 +16,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 
-//TODO use transaction for rollback
+
 public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Autowired @Qualifier("jdbcClientChatLinksRepository")
     ChatLinksRepository chatLinksRepository;
-
-    Connection connection;
-    Statement statement;
-
-    @BeforeEach
-    void beforeEach() throws SQLException {
-        connection =
-            DriverManager.getConnection(POSTGRES.getJdbcUrl(), POSTGRES.getUsername(), POSTGRES.getPassword());
-        statement = connection.createStatement();
-    }
-
-    @AfterEach
-    void afterEach() throws SQLException {
-        statement.execute("TRUNCATE chat_links RESTART IDENTITY ");
-        statement.execute("TRUNCATE chats RESTART IDENTITY CASCADE");
-        statement.execute("TRUNCATE links RESTART IDENTITY CASCADE");
-
-        statement.close();
-        connection.close();
-    }
 
     @Test
     public void should_doNotThrowException_when_saving() {
