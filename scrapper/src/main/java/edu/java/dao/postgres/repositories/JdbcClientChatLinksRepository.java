@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 public class JdbcClientChatLinksRepository implements ChatLinksRepository {
 
-    private static final String TABLE_NAME = "chats";
+    private static final String TABLE_NAME = "chat_links";
 
     private static final String SAVE_QUERY =
         STR."INSERT INTO \{TABLE_NAME} (chat_id, link_id) VALUES (:chat_id, :link_id)";
@@ -54,7 +54,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     public void removeByChatIdAndLinkId(long chatId, long linkId) {
         jdbcClient.sql(DELETE_BY_CHAT_ID_AND_LINK_ID_QUERY)
             .param("chat_id", chatId)
-            .param("link_id", linkId);
-        
+            .param("link_id", linkId)
+            .update();
     }
 }
