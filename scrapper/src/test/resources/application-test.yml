@@ -1,4 +1,12 @@
 app:
+  scheduler:
+    enable: true
+    force-check-delay: 10s
+    interval: 10s
+  redis-connection:
+    port: 1
+    host-name: test-name
+    password: test-password
   stack-overflow-url:
     default-url: http://localhost:8080/
   git-hub-url:
@@ -6,10 +14,9 @@ app:
   telegram-bot-url:
     default-url: http://localhost:8080/
 
-#TODO: change when jdbc will we established
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc://noDB
   liquibase:
-      enabled: false
+    enabled: false
