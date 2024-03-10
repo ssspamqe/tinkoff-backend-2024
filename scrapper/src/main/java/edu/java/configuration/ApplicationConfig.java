@@ -21,10 +21,7 @@ public record ApplicationConfig(
     ApiUrl gitHubUrl,
 
     @NotNull
-    ApiUrl telegramBotUrl,
-
-    @NotNull
-    DatabaseConnection redisConnection
+    ApiUrl telegramBotUrl
 ) {
 
     public record Scheduler(boolean enable, @NotNull Duration interval, @NotNull Duration forceCheckDelay) {
@@ -37,8 +34,5 @@ public record ApplicationConfig(
             }
             return configUrl;
         }
-    }
-
-    public record DatabaseConnection(@NotBlank String hostName, @NotNull int port, String password) {
     }
 }
