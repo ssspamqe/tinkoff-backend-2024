@@ -39,7 +39,7 @@ public class JdbcClientChatRepositoryTest extends JdbcIntegrationEnvironment {
     public void should_returnEmptyOptional_when_cantFindChat() {
         Optional<Chat> actualChat = chatRepository.findById(1L);
 
-        assertThat(actualChat).isPresent();
+        assertThat(actualChat).isEmpty();
     }
 
     @Test
