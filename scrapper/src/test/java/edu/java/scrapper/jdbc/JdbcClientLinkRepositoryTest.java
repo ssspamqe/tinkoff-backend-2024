@@ -17,7 +17,7 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_save() throws SQLException {
-        Link link = new Link("some url", LocalDateTime.now());
+        Link link = new Link("https://link", LocalDateTime.now());
 
         linkRepository.save(link);
 
@@ -27,32 +27,32 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_findById() throws SQLException {
-        statement.execute("INSERT INTO links (url, created_at) VALUES ('some url','2022-06-16 16:37:23')");
+        statement.execute("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
 
         Link actualLink = linkRepository.findById(1L).get();
 
-        assertThat(actualLink.getUrl()).isEqualTo("some url");
+        assertThat(actualLink.getUrl()).isEqualTo("https://link");
     }
 
     @Test
     public void should_returnEmptyOptional_when_cantFindLink() {
         Optional<Link> actualLink = linkRepository.findById(1L);
 
-        assertThat(actualLink).isPresent();
+        assertThat(actualLink).isEmpty();
     }
 
     @Test
     public void should_findByUrl() throws SQLException {
-        statement.execute("INSERT INTO links (url, created_at) VALUES ('some url','2022-06-16 16:37:23')");
+        statement.execute("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
 
-        Link actualLink = linkRepository.findByUrl("some url").get();
+        Link actualLink = linkRepository.findByUrl("https://link").get();
 
         assertThat(actualLink.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16T16:37:23"));
     }
 
     @Test
     public void should_removeById() throws SQLException {
-        statement.execute("INSERT INTO links (url, created_at) VALUES ('some url','2022-06-16 16:37:23')");
+        statement.execute("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
 
         linkRepository.removeById(1L);
 
