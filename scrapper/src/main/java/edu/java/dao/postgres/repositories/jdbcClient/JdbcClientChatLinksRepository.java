@@ -1,9 +1,11 @@
-package edu.java.dao.postgres.repositories;
+package edu.java.dao.postgres.repositories.jdbcClient;
 
 import edu.java.dao.postgres.entities.ChatLink;
-import edu.java.dao.postgres.entities.rowMappers.ChatLinkRowMapper;
+import edu.java.dao.postgres.repositories.ChatLinksRepository;
+import edu.java.dao.postgres.repositories.jdbcClient.rowMappers.ChatLinkRowMapper;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Repository;
 public class JdbcClientChatLinksRepository implements ChatLinksRepository {
 
     private static final String TABLE_NAME = "chat_links";
+    private static final RowMapper<ChatLink> ROW_MAPPER = new ChatLinkRowMapper();
 
     private static final String SAVE_QUERY =
         STR."INSERT INTO \{TABLE_NAME} (chat_id, link_id) VALUES (:chat_id, :link_id)";
@@ -39,7 +42,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     public List<ChatLink> findByChatId(long chatId) {
         return jdbcClient.sql(FIND_BY_CHAT_ID_QUERY)
             .param("chat_id", chatId)
-            .query(new ChatLinkRowMapper())
+            .query(ROW_MAPPER)
             .list();
     }
 
@@ -47,7 +50,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     public List<ChatLink> findByLinkId(long linkId) {
         return jdbcClient.sql(FIND_BY_LINK_ID_QUERY)
             .param("link_id", linkId)
-            .query(new ChatLinkRowMapper())
+            .query(ROW_MAPPER)
             .list();
     }
 

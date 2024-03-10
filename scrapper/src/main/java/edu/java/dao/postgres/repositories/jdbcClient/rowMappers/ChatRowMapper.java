@@ -1,4 +1,4 @@
-package edu.java.dao.postgres.entities.rowMappers;
+package edu.java.dao.postgres.repositories.jdbcClient.rowMappers;
 
 import edu.java.dao.postgres.entities.Chat;
 import java.sql.ResultSet;
