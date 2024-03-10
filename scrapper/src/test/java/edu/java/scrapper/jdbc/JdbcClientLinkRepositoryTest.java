@@ -16,7 +16,7 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
     LinkRepository linkRepository;
 
     @Test
-    public void should_notThrowException_when_saving() throws SQLException {
+    public void should_save() throws SQLException {
         Link link = new Link("some url", LocalDateTime.now());
 
         linkRepository.save(link);
@@ -26,7 +26,7 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
     }
 
     @Test
-    public void should_findByLinkId() throws SQLException {
+    public void should_findById() throws SQLException {
         statement.execute("INSERT INTO links (url, created_at) VALUES ('some url','2022-06-16 16:37:23')");
 
         Link actualLink = linkRepository.findById(1L).get();
@@ -36,17 +36,18 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_returnEmptyOptional_when_cantFindLink() {
-        Optional<Link> link = linkRepository.findById(1L);
+        Optional<Link> actualLink = linkRepository.findById(1L);
 
-        assertThat(link.isEmpty()).isTrue();
+        assertThat(actualLink).isPresent();
     }
 
     @Test
     public void should_findByUrl() throws SQLException {
         statement.execute("INSERT INTO links (url, created_at) VALUES ('some url','2022-06-16 16:37:23')");
 
-        Link link = linkRepository.findByUrl("some url").get();
-        assertThat(link.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16T16:37:23"));
+        Link actualLink = linkRepository.findByUrl("some url").get();
+
+        assertThat(actualLink.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16T16:37:23"));
     }
 
     @Test
