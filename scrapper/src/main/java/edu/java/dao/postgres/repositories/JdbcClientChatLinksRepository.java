@@ -31,7 +31,8 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     public void save(ChatLink chatLink) {
         jdbcClient.sql(SAVE_QUERY)
             .param("chat_id", chatLink.getChatId())
-            .param("link_id", chatLink.getLinkId());
+            .param("link_id", chatLink.getLinkId())
+            .update();
     }
 
     @Override
