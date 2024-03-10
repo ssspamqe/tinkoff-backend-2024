@@ -53,9 +53,14 @@ public class JdbcClientChatRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_removeById() throws SQLException {
+        //Arrange
         statement.execute("INSERT INTO chats (telegram_api_id, created_at) VALUES (123,'2022-06-16 16:37:23')");
 
-        chatRepository.removeById(1L);
+        //Act
+        boolean actualResponse = chatRepository.removeById(1L);
+
+        //Assert
+        assertThat(actualResponse).isFalse();
 
         ResultSet resultSet = statement.executeQuery("SELECT * FROM chats");
         assertThat(resultSet.next()).isFalse();
@@ -63,9 +68,14 @@ public class JdbcClientChatRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_removeByTelegramApiId() throws SQLException {
+        //Arrange
         statement.execute("INSERT INTO chats (telegram_api_id, created_at) VALUES (123,'2022-06-16 16:37:23')");
 
-        chatRepository.removeByTelegramApiId(123);
+        //Act
+        boolean actualResponse = chatRepository.removeByTelegramApiId(123);
+
+        //Assert
+        assertThat(actualResponse).isFalse();
 
         ResultSet resultSet = statement.executeQuery("SELECT * FROM chats");
         assertThat(resultSet.next()).isFalse();

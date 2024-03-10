@@ -79,9 +79,11 @@ public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironmen
         statement.execute("INSERT INTO chat_links (chat_id, link_id) VALUES (1,1)");
 
         //Act
-        chatLinksRepository.removeByChatIdAndLinkId(1, 1);
+        boolean actualResponse = chatLinksRepository.removeByChatIdAndLinkId(1, 1);
 
         //Assert
+        assertThat(actualResponse).isFalse();
+
         ResultSet resultSet = statement.executeQuery("SELECT * FROM chat_links");
         assertThat(resultSet.next()).isFalse();
     }

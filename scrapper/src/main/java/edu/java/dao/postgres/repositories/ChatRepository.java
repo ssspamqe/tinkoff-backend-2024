@@ -7,6 +7,6 @@ public interface ChatRepository {
     void save(Chat chat);
     Optional<Chat> findById(long id);
     Optional<Chat> findByTelegramApiId(long telegramApiId);
-    void removeById(long id);
-    void removeByTelegramApiId(long telegramApiId);
+    boolean removeById(long id);
+    boolean removeByTelegramApiId(long telegramApiId);
 }

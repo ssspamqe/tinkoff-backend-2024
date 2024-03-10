@@ -58,16 +58,16 @@ public class JdbcClientChatRepository implements ChatRepository {
     }
 
     @Override
-    public void removeById(long id) {
-        jdbcClient.sql(DELETE_BY_ID_QUERY)
+    public boolean removeById(long id) {
+        return jdbcClient.sql(DELETE_BY_ID_QUERY)
             .param("id", id)
-            .update();
+            .update() != 0;
     }
 
     @Override
-    public void removeByTelegramApiId(long telegramApiId) {
-        jdbcClient.sql(DELETE_BY_TELEGRAM_API_ID_QUERY)
+    public boolean removeByTelegramApiId(long telegramApiId) {
+        return jdbcClient.sql(DELETE_BY_TELEGRAM_API_ID_QUERY)
             .param("telegram_api_id", telegramApiId)
-            .update();
+            .update() != 0;
     }
 }

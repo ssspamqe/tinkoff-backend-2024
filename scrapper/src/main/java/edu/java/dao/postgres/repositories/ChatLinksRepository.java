@@ -7,6 +7,6 @@ public interface ChatLinksRepository {
     void save(ChatLink chatLink);
     List<ChatLink> findByChatId(long chatId);
     List<ChatLink> findByLinkId(long linkId);
-    void removeByChatIdAndLinkId(long chatId, long linkId);
+    boolean removeByChatIdAndLinkId(long chatId, long linkId);
 }
 

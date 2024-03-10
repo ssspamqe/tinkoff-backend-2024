@@ -7,5 +7,5 @@ public interface LinkRepository {
     void save(Link link);
     Optional<Link> findById(long id);
     Optional<Link> findByUrl(String url);
-    void removeById(long id);
+    boolean removeById(long id);
 }

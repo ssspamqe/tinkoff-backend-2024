@@ -55,9 +55,9 @@ public class JdbcClientLinkRepository implements LinkRepository {
     }
 
     @Override
-    public void removeById(long id) {
-        jdbcClient.sql(DELETE_BY_ID_QUERY)
+    public boolean removeById(long id) {
+        return jdbcClient.sql(DELETE_BY_ID_QUERY)
             .param("id", id)
-            .update();
+            .update() != 0;
     }
 }

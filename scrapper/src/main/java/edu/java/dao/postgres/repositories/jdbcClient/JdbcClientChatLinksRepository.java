@@ -55,10 +55,10 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     }
 
     @Override
-    public void removeByChatIdAndLinkId(long chatId, long linkId) {
-        jdbcClient.sql(DELETE_BY_CHAT_ID_AND_LINK_ID_QUERY)
+    public boolean removeByChatIdAndLinkId(long chatId, long linkId) {
+        return jdbcClient.sql(DELETE_BY_CHAT_ID_AND_LINK_ID_QUERY)
             .param("chat_id", chatId)
             .param("link_id", linkId)
-            .update();
+            .update() != 0;
     }
 }

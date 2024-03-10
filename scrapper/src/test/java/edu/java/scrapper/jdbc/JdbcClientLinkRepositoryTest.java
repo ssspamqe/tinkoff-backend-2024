@@ -52,9 +52,14 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_removeById() throws SQLException {
+        //Arrange
         statement.execute("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
 
-        linkRepository.removeById(1L);
+        //Act
+        boolean actualResponse = linkRepository.removeById(1L);
+
+        //Assert
+        assertThat(actualResponse).isFalse();
 
         ResultSet resultSet = statement.executeQuery("SELECT * FROM links");
         assertThat(resultSet.next()).isFalse();
