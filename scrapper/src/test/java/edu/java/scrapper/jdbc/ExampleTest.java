@@ -1,27 +1,35 @@
 package edu.java.scrapper.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import edu.java.dao.postgres.entities.Link;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@TestMethodOrder(MethodOrderer.MethodName.class)
 public class ExampleTest extends JdbcIntegrationEnvironment {
 
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
     @Test
+    @Order(1)
     public void sampleTest() throws Exception {
-        Connection connection =
-            DriverManager.getConnection(POSTGRES.getJdbcUrl(), POSTGRES.getUsername(), POSTGRES.getPassword());
-        Statement statement = connection.createStatement();
-        statement.execute("INSERT INTO links (url,created_at) VALUES ('https://sample/link','2011-05-16 15:36:38')");
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM links");
+        jdbcTemplate.update("INSERT INTO links (url,created_at) VALUES ('https://sample/link','2011-05-16 15:36:38')");
 
-        String actualUrl = null;
-        while (resultSet.next()) {
-            actualUrl = resultSet.getString("url");
-        }
+        int actual = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM links", Integer.class);
 
-        assertThat(actualUrl).isEqualTo("https://sample/link");
+        assertThat(actual).isEqualTo(1);
+    }
+
+    @Test
+    @Order(2)
+    public void sampleTest2() throws Exception {
+        int actual = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM links", Integer.class);
+
+        assertThat(actual).isNotEqualTo(1);
     }
 }
