@@ -1,6 +1,5 @@
 package edu.java.scrapper.jdbc;
 
-import com.opencsv.ResultSetHelperService;
 import edu.java.dao.postgres.entities.Link;
 import edu.java.dao.postgres.repositories.LinkRepository;
 import java.sql.ResultSet;
@@ -11,17 +10,19 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatCode;
 
 class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
     @Autowired @Qualifier("jdbcClientLinkRepository")
     LinkRepository linkRepository;
 
     @Test
-    public void should_notThrowException_when_saving() {
+    public void should_notThrowException_when_saving() throws SQLException {
         Link link = new Link("some url", LocalDateTime.now());
 
-        assertThatCode(() -> linkRepository.save(link)).doesNotThrowAnyException();
+        linkRepository.save(link);
+
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM links");
+        assertThat(resultSet.next()).isTrue();
     }
 
     @Test
@@ -45,8 +46,7 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
         statement.execute("INSERT INTO links (url, created_at) VALUES ('some url','2022-06-16 16:37:23')");
 
         Link link = linkRepository.findByUrl("some url").get();
-
-        assertThat(link.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16 16:37:23"));
+        assertThat(link.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16T16:37:23"));
     }
 
     @Test
