@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatCode;
 
 public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironment {
 
@@ -17,10 +16,15 @@ public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironmen
     ChatLinksRepository chatLinksRepository;
 
     @Test
-    public void should_notThrowException_when_saving() {
+    public void should_save() throws SQLException {
+        statement.execute("INSERT INTO chats (telegram_api_id, created_at) VALUES (11,'2022-06-16 16:37:23')");
+        statement.execute("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
         ChatLink chatLink = new ChatLink(1, 1);
 
-        assertThatCode(() -> chatLinksRepository.save(chatLink)).doesNotThrowAnyException();
+        chatLinksRepository.save(chatLink);
+
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM chat_links");
+        assertThat(resultSet.next()).isTrue();
     }
 
     @Test
