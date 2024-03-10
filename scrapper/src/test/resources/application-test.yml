@@ -3,10 +3,6 @@ app:
     enable: true
     force-check-delay: 10s
     interval: 10s
-  redis-connection:
-    port: 1
-    host-name: test-name
-    password: test-password
   stack-overflow-url:
     default-url: http://localhost:8080/
   git-hub-url:
