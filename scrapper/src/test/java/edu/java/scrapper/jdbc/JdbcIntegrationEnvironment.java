@@ -3,8 +3,6 @@ package edu.java.scrapper.jdbc;
 import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.sql.Statement;
 import liquibase.Contexts;
 import liquibase.LabelExpression;
@@ -14,22 +12,21 @@ import liquibase.database.DatabaseFactory;
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.resource.DirectoryResourceAccessor;
 import liquibase.resource.ResourceAccessor;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
+import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.JdbcDatabaseContainer;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-//TODO use transaction for rollback
 @Testcontainers
 @SpringBootTest
 @TestPropertySource(locations = "classpath:application-test.yml")
 @ActiveProfiles("test")
+@Transactional
 public abstract class JdbcIntegrationEnvironment {
 
     @Container
@@ -50,23 +47,6 @@ public abstract class JdbcIntegrationEnvironment {
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
-    }
-
-    @BeforeEach
-    void beforeEach() throws SQLException {
-        connection =
-            DriverManager.getConnection(POSTGRES.getJdbcUrl(), POSTGRES.getUsername(), POSTGRES.getPassword());
-        statement = connection.createStatement();
-    }
-
-    @AfterEach
-    void afterEach() throws SQLException {
-        statement.execute("TRUNCATE chat_links RESTART IDENTITY ");
-        statement.execute("TRUNCATE chats RESTART IDENTITY CASCADE");
-        statement.execute("TRUNCATE links RESTART IDENTITY CASCADE");
-
-        statement.close();
-        connection.close();
     }
 
     private static void runMigrations(JdbcDatabaseContainer<?> c) throws Exception {
