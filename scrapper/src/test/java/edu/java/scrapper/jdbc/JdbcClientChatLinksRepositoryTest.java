@@ -2,20 +2,14 @@ package edu.java.scrapper.jdbc;
 
 import edu.java.dao.postgres.entities.ChatLink;
 import edu.java.dao.postgres.repositories.ChatLinksRepository;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
-
 
 public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironment {
 
@@ -23,7 +17,7 @@ public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironmen
     ChatLinksRepository chatLinksRepository;
 
     @Test
-    public void should_doNotThrowException_when_saving() {
+    public void should_notThrowException_when_saving() {
         ChatLink chatLink = new ChatLink(1, 1);
 
         assertThatCode(() -> chatLinksRepository.save(chatLink)).doesNotThrowAnyException();
