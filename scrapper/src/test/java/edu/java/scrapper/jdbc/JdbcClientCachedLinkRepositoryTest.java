@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
+class JdbcClientCachedLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
     static final RowMapper<Link> ROW_MAPPER = new LinkRowMapper();
 

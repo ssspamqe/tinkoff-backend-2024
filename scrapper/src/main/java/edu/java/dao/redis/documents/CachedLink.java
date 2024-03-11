@@ -10,7 +10,7 @@ import org.springframework.data.annotation.Id;
 @Document
 @Getter
 @AllArgsConstructor
-public class Link {
+public class CachedLink {
     @Id
     @Indexed
     private String id;
@@ -20,12 +20,12 @@ public class Link {
     @Indexed
     private String hashedUrl;
 
-    public Link(String id, String url) {
+    public CachedLink(String id, String url) {
         this.id = id;
         this.url = url;
     }
 
-    public Link(String url) {
+    public CachedLink(String url) {
         setUrl(url);
     }
 

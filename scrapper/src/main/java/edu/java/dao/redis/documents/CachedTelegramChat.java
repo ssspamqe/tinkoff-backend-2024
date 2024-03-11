@@ -10,7 +10,7 @@ import org.springframework.data.annotation.Id;
 @Document
 @AllArgsConstructor
 @Getter
-public class TelegramChat {
+public class CachedTelegramChat {
     @Id
     @Indexed
     private String id;
@@ -21,16 +21,16 @@ public class TelegramChat {
     @Indexed
     private LocalDateTime registrationDate;
 
-    public TelegramChat(long apiId, LocalDateTime registrationDate) {
+    public CachedTelegramChat(long apiId, LocalDateTime registrationDate) {
         this.apiId = apiId;
         this.registrationDate = registrationDate;
     }
 
-    public TelegramChat(LocalDateTime registrationDate) {
+    public CachedTelegramChat(LocalDateTime registrationDate) {
         this.registrationDate = registrationDate;
     }
 
-    public TelegramChat(long apiId) {
+    public CachedTelegramChat(long apiId) {
         this(apiId, LocalDateTime.now());
     }
 }

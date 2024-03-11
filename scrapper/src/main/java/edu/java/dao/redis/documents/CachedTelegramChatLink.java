@@ -9,7 +9,7 @@ import org.springframework.data.annotation.Id;
 @Document
 @Getter
 @AllArgsConstructor
-public class TelegramChatLink {
+public class CachedTelegramChatLink {
 
     @Id
     @Indexed
@@ -21,7 +21,7 @@ public class TelegramChatLink {
     @Indexed
     private String linkId;
 
-    public TelegramChatLink(String chatId, String linkId) {
+    public CachedTelegramChatLink(String chatId, String linkId) {
         this.chatId = chatId;
         this.linkId = linkId;
     }
