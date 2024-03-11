@@ -3,7 +3,6 @@ package edu.java.scrapper.jdbc;
 import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
-import java.sql.Statement;
 import liquibase.Contexts;
 import liquibase.LabelExpression;
 import liquibase.Liquibase;
@@ -12,9 +11,14 @@ import liquibase.database.DatabaseFactory;
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.resource.DirectoryResourceAccessor;
 import liquibase.resource.ResourceAccessor;
+import org.junit.jupiter.api.BeforeEach;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.JdbcDatabaseContainer;
@@ -29,12 +33,10 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @Transactional
 public abstract class JdbcIntegrationEnvironment {
 
-    @Container
     @ServiceConnection
     static PostgreSQLContainer<?> POSTGRES;
 
-    Connection connection;
-    Statement statement;
+    @Autowired JdbcTemplate jdbcTemplate;
 
     static {
         POSTGRES = new PostgreSQLContainer<>("postgres:16")
@@ -49,6 +51,13 @@ public abstract class JdbcIntegrationEnvironment {
         }
     }
 
+    @BeforeEach
+    public void restartIdentity() {
+        jdbcTemplate.update("TRUNCATE chat_links RESTART IDENTITY");
+        jdbcTemplate.update("TRUNCATE chats RESTART IDENTITY CASCADE");
+        jdbcTemplate.update("TRUNCATE links RESTART IDENTITY CASCADE");
+    }
+
     private static void runMigrations(JdbcDatabaseContainer<?> c) throws Exception {
         Connection connection = POSTGRES.createConnection("");
 
@@ -59,5 +68,12 @@ public abstract class JdbcIntegrationEnvironment {
         ResourceAccessor resourceAccessor = new DirectoryResourceAccessor(changeLogPath);
         Liquibase liquibase = new Liquibase("master.yaml", resourceAccessor, database);
         liquibase.update(new Contexts(), new LabelExpression());
+    }
+
+    @DynamicPropertySource
+    static void jdbcProperties(DynamicPropertyRegistry registry) {
+        registry.add("spring.datasource.url", POSTGRES::getJdbcUrl);
+        registry.add("spring.datasource.username", POSTGRES::getUsername);
+        registry.add("spring.datasource.password", POSTGRES::getPassword);
     }
 }

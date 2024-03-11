@@ -2,32 +2,36 @@ package edu.java.scrapper.jdbc;
 
 import edu.java.dao.postgres.entities.Link;
 import edu.java.dao.postgres.repositories.LinkRepository;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import edu.java.dao.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
+
+    static final RowMapper<Link> ROW_MAPPER = new LinkRowMapper();
+
     @Autowired @Qualifier("jdbcClientLinkRepository")
     LinkRepository linkRepository;
 
     @Test
-    public void should_save() throws SQLException {
+    public void should_save() {
         Link link = new Link("https://link", LocalDateTime.now());
 
         linkRepository.save(link);
 
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM links");
-        assertThat(resultSet.next()).isTrue();
+        Optional<Link> actualLink =
+            jdbcTemplate.query("SELECT * FROM links", ROW_MAPPER).stream().findFirst();
+        assertThat(actualLink).isPresent();
     }
 
     @Test
-    public void should_findById() throws SQLException {
-        statement.execute("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
+    public void should_findById() {
+        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
 
         Link actualLink = linkRepository.findById(1L).get();
 
@@ -42,8 +46,8 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
     }
 
     @Test
-    public void should_findByUrl() throws SQLException {
-        statement.execute("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
+    public void should_findByUrl() {
+        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
 
         Link actualLink = linkRepository.findByUrl("https://link").get();
 
@@ -51,18 +55,19 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
     }
 
     @Test
-    public void should_removeById() throws SQLException {
+    public void should_removeById() {
         //Arrange
-        statement.execute("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
 
         //Act
         boolean actualResponse = linkRepository.removeById(1L);
 
         //Assert
-        assertThat(actualResponse).isFalse();
+        assertThat(actualResponse).isTrue();
 
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM links");
-        assertThat(resultSet.next()).isFalse();
+        Optional<Link> actualLink =
+            jdbcTemplate.query("SELECT * FROM links", ROW_MAPPER).stream().findFirst();
+        assertThat(actualLink).isEmpty();
     }
 
 }
