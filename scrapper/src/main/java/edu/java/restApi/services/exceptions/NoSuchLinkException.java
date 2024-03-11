@@ -17,6 +17,10 @@ public class NoSuchLinkException extends ScrapperServiceException {
         super(STR."There is no link with such link: \{linkUrl}");
     }
 
+    public NoSuchLinkException(long linkId){
+        super(STR."There is no such link with id \{linkId}");
+    }
+
     @Override
     public String getDescription() {
         return DESCRIPTION;

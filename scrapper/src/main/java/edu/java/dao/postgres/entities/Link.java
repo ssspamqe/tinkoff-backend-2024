@@ -18,4 +18,8 @@ public class Link {
         this.url = url;
         this.createdAt = createdAt;
     }
+
+    public Link(String url){
+        this(url, LocalDateTime.now());
+    }
 }

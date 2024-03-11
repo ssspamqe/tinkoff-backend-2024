@@ -18,4 +18,8 @@ public class Chat {
         this.telegramApiId = telegramApiId;
         this.createdAt = createdAt;
     }
+
+    public Chat(long telegramApiId) {
+        this(telegramApiId, LocalDateTime.now());
+    }
 }
