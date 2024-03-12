@@ -22,7 +22,7 @@ public class ChatDAO implements ChatDataAccessObject {
     private final ChatLinksRepository chatLinksRepository;
     private final LinkDAO linkDao;
 
-    public Set<Link> getTrackedLinks(long chatApiId) {
+    public Set<Link> getTrackedLinksByApiId(long chatApiId) {
         Chat chat = chatRepository.findByTelegramApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId));
         long chatId = chat.getId();
@@ -39,7 +39,7 @@ public class ChatDAO implements ChatDataAccessObject {
             }).collect(Collectors.toSet());
     }
 
-    public Link associateUrl(String url, long chatApiId) {
+    public Link associateUrlByApiId(String url, long chatApiId) {
         long chatId = chatRepository.findByTelegramApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId))
             .getId();
@@ -55,7 +55,7 @@ public class ChatDAO implements ChatDataAccessObject {
         chatLinksRepository.save(chatLinkCouple);
     }
 
-    public Link dissociateUrl(String url, long chatApiId) {
+    public Link dissociateUrlByApiId(String url, long chatApiId) {
         Link link = linkDao.findByUrl(url)
             .orElseThrow(() -> new NoSuchLinkException(URI.create(url)));
 
@@ -67,7 +67,7 @@ public class ChatDAO implements ChatDataAccessObject {
         return link;
     }
 
-    public Chat registerChat(long apiId) {
+    public Chat registerChatWithApiId(long apiId) {
         Optional<Chat> oldChat = chatRepository.findById(apiId);
         if (oldChat.isPresent()) {
             throw new DoubleChatRegistrationException(apiId);
@@ -77,7 +77,7 @@ public class ChatDAO implements ChatDataAccessObject {
         return newChat;
     }
 
-    public void deleteChat(long apiId) {
+    public void deleteChatWithApiId(long apiId) {
         if (chatRepository.findByTelegramApiId(apiId).isEmpty()) {
             throw new NoSuchChatException(apiId);
         }
