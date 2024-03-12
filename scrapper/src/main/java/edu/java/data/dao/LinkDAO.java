@@ -1,4 +1,4 @@
-package edu.java.data;
+package edu.java.data.dao;
 
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class LinkDAO {
+public class LinkDAO implements LinkDataAccessObject {
 
     private final LinkRepository linkRepository;
 

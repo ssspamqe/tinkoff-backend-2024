@@ -1,4 +1,4 @@
-package edu.java.data;
+package edu.java.data.dao;
 
 import edu.java.data.postgres.entities.Chat;
 import edu.java.data.postgres.entities.ChatLink;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class ChatDAO {
+public class ChatDAO implements ChatDataAccessObject {
     private final ChatRepository chatRepository;
     private final ChatLinksRepository chatLinksRepository;
     private final LinkDAO linkDao;
