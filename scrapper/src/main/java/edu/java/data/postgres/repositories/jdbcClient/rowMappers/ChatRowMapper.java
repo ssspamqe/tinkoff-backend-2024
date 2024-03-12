@@ -1,6 +1,6 @@
-package edu.java.dao.postgres.repositories.jdbcClient.rowMappers;
+package edu.java.data.postgres.repositories.jdbcClient.rowMappers;
 
-import edu.java.dao.postgres.entities.Chat;
+import edu.java.data.postgres.entities.Chat;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;

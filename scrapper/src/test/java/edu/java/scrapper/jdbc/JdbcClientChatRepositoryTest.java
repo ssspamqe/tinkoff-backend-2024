@@ -1,8 +1,8 @@
 package edu.java.scrapper.jdbc;
 
-import edu.java.dao.postgres.entities.Chat;
-import edu.java.dao.postgres.repositories.ChatRepository;
-import edu.java.dao.postgres.repositories.jdbcClient.rowMappers.ChatRowMapper;
+import edu.java.data.postgres.entities.Chat;
+import edu.java.data.postgres.repositories.ChatRepository;
+import edu.java.data.postgres.repositories.jdbcClient.rowMappers.ChatRowMapper;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;

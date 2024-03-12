@@ -1,7 +1,7 @@
-package edu.java.dao;
+package edu.java.data;
 
-import edu.java.dao.postgres.entities.Link;
-import edu.java.dao.postgres.repositories.LinkRepository;
+import edu.java.data.postgres.entities.Link;
+import edu.java.data.postgres.repositories.LinkRepository;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;

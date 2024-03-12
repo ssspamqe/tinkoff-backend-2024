@@ -1,7 +1,7 @@
-package edu.java.dao.redis.repositories;
+package edu.java.data.redis.repositories;
 
 import com.redis.om.spring.repository.RedisDocumentRepository;
-import edu.java.dao.redis.documents.CachedTelegramChatLink;
+import edu.java.data.redis.documents.CachedTelegramChatLink;
 import java.util.List;
 
 public interface TelegramChatLinkCachedRepository extends RedisDocumentRepository<CachedTelegramChatLink, String> {

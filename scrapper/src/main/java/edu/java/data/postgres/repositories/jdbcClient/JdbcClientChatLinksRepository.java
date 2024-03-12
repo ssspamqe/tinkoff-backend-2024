@@ -1,8 +1,8 @@
-package edu.java.dao.postgres.repositories.jdbcClient;
+package edu.java.data.postgres.repositories.jdbcClient;
 
-import edu.java.dao.postgres.entities.ChatLink;
-import edu.java.dao.postgres.repositories.ChatLinksRepository;
-import edu.java.dao.postgres.repositories.jdbcClient.rowMappers.ChatLinkRowMapper;
+import edu.java.data.postgres.entities.ChatLink;
+import edu.java.data.postgres.repositories.ChatLinksRepository;
+import edu.java.data.postgres.repositories.jdbcClient.rowMappers.ChatLinkRowMapper;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;

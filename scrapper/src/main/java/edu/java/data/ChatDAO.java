@@ -1,10 +1,10 @@
-package edu.java.dao;
+package edu.java.data;
 
-import edu.java.dao.postgres.entities.Chat;
-import edu.java.dao.postgres.entities.ChatLink;
-import edu.java.dao.postgres.entities.Link;
-import edu.java.dao.postgres.repositories.ChatLinksRepository;
-import edu.java.dao.postgres.repositories.ChatRepository;
+import edu.java.data.postgres.entities.Chat;
+import edu.java.data.postgres.entities.ChatLink;
+import edu.java.data.postgres.entities.Link;
+import edu.java.data.postgres.repositories.ChatLinksRepository;
+import edu.java.data.postgres.repositories.ChatRepository;
 import edu.java.restApi.services.exceptions.DoubleChatRegistrationException;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
 import edu.java.restApi.services.exceptions.NoSuchLinkException;

@@ -1,8 +1,8 @@
-package edu.java.dao.postgres.repositories.jdbcClient;
+package edu.java.data.postgres.repositories.jdbcClient;
 
-import edu.java.dao.postgres.entities.Link;
-import edu.java.dao.postgres.repositories.LinkRepository;
-import edu.java.dao.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
+import edu.java.data.postgres.entities.Link;
+import edu.java.data.postgres.repositories.LinkRepository;
+import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;

@@ -1,14 +1,14 @@
 package edu.java.restApi.services;
 
-import edu.java.dao.postgres.repositories.ChatLinksRepository;
-import edu.java.dao.postgres.repositories.ChatRepository;
-import edu.java.dao.postgres.repositories.LinkRepository;
-import edu.java.dao.redis.documents.CachedLink;
-import edu.java.dao.redis.documents.CachedTelegramChat;
-import edu.java.dao.redis.documents.CachedTelegramChatLink;
-import edu.java.dao.redis.repositories.LinkCachedRepository;
-import edu.java.dao.redis.repositories.TelegramChatCacheRepository;
-import edu.java.dao.redis.repositories.TelegramChatLinkCachedRepository;
+import edu.java.data.postgres.repositories.ChatLinksRepository;
+import edu.java.data.postgres.repositories.ChatRepository;
+import edu.java.data.postgres.repositories.LinkRepository;
+import edu.java.data.redis.documents.CachedLink;
+import edu.java.data.redis.documents.CachedTelegramChat;
+import edu.java.data.redis.documents.CachedTelegramChatLink;
+import edu.java.data.redis.repositories.LinkCachedRepository;
+import edu.java.data.redis.repositories.TelegramChatCacheRepository;
+import edu.java.data.redis.repositories.TelegramChatLinkCachedRepository;
 import edu.java.restApi.services.exceptions.NoSuchChatException;
 import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import java.net.URI;

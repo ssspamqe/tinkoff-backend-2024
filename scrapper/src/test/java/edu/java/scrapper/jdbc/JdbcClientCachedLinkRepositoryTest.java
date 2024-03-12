@@ -1,8 +1,8 @@
 package edu.java.scrapper.jdbc;
 
-import edu.java.dao.postgres.entities.Link;
-import edu.java.dao.postgres.repositories.LinkRepository;
-import edu.java.dao.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
+import edu.java.data.postgres.entities.Link;
+import edu.java.data.postgres.repositories.LinkRepository;
+import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,5 @@
 package edu.java.scrapper.jdbc;
 
-import edu.java.dao.postgres.entities.Link;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

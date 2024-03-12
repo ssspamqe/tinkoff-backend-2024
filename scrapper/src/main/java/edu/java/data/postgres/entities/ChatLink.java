@@ -1,4 +1,4 @@
-package edu.java.dao.postgres.entities;
+package edu.java.data.postgres.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
