@@ -22,6 +22,14 @@ public class ChatDAO implements ChatDataAccessObject {
     private final ChatLinksRepository chatLinksRepository;
     private final LinkDAO linkDao;
 
+    public Optional<Chat> findById(long id){
+        return chatRepository.findById(id);
+    }
+
+    public Optional<Chat> findByApiId(long apiId){
+        return chatRepository.findByTelegramApiId(apiId);
+    }
+
     public Set<Link> getTrackedLinksByApiId(long chatApiId) {
         Chat chat = chatRepository.findByTelegramApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId));
