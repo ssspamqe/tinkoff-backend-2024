@@ -24,8 +24,7 @@ public class LinkDAO implements LinkDataAccessObject {
         return linkRepository.findByUrl(url)
             .orElseGet(() -> {
                 Link newLink = new Link(url);
-                linkRepository.save(newLink);
-                return newLink;
+                return linkRepository.save(newLink);
             });
     }
 }

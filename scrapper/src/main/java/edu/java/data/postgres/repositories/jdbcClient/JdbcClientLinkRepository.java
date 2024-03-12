@@ -3,6 +3,8 @@ package edu.java.data.postgres.repositories.jdbcClient;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
+import edu.java.restApi.services.exceptions.NoSuchLinkException;
+import java.net.URI;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
@@ -31,11 +33,13 @@ public class JdbcClientLinkRepository implements LinkRepository {
     private final JdbcClient jdbcClient;
 
     @Override
-    public void save(Link link) {
+    public Link save(Link link) {
         jdbcClient.sql(SAVE_QUERY)
             .param("url", link.getUrl())
             .param("created_at", link.getCreatedAt())
             .update();
+        return findByUrl(link.getUrl())
+            .orElseThrow(() -> new NoSuchLinkException(URI.create(link.getUrl())));
     }
 
     @Override

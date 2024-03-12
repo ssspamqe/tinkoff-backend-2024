@@ -22,11 +22,11 @@ public class ChatDAO implements ChatDataAccessObject {
     private final ChatLinksRepository chatLinksRepository;
     private final LinkDAO linkDao;
 
-    public Optional<Chat> findById(long id){
+    public Optional<Chat> findById(long id) {
         return chatRepository.findById(id);
     }
 
-    public Optional<Chat> findByApiId(long apiId){
+    public Optional<Chat> findByApiId(long apiId) {
         return chatRepository.findByTelegramApiId(apiId);
     }
 
@@ -76,7 +76,7 @@ public class ChatDAO implements ChatDataAccessObject {
     }
 
     public Chat registerChatWithApiId(long apiId) {
-        Optional<Chat> oldChat = chatRepository.findById(apiId);
+        Optional<Chat> oldChat = chatRepository.findByTelegramApiId(apiId);
         if (oldChat.isPresent()) {
             throw new DoubleChatRegistrationException(apiId);
         }
