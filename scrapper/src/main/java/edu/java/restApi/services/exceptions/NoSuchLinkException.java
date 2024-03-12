@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatusCode;
 
 public class NoSuchLinkException extends ScrapperServiceException {
 
-    private static final String DESCRIPTION = "There is no record about such link";
+    private static final String DESCRIPTION = "There is no record about such url";
     private static final HttpStatusCode HTTP_STATUS_CODE = HttpStatus.CONFLICT;
 
     public NoSuchLinkException(String message) {

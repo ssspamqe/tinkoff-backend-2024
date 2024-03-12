@@ -8,8 +8,6 @@ import edu.java.restApi.services.LinkService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import java.util.List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,8 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/scrapper/api/v1/links")
 public class LinkController {
-
-    private static final Logger LOGGER = LogManager.getLogger();
 
     private final LinkService linkService;
 
@@ -48,7 +44,7 @@ public class LinkController {
         @RequestHeader("Tg-Chat-Id") @Min(1) int chatId,
         @Valid @RequestBody AddLinkRequest addLinkRequest
     ) {
-        String linkUrl = addLinkRequest.link();
+        String linkUrl = addLinkRequest.url();
         LinkResponse linkResponse = new LinkResponse(linkService.addLinkToTrack(chatId, linkUrl));
         return ResponseEntity.ok(linkResponse);
     }
@@ -58,7 +54,7 @@ public class LinkController {
         @RequestHeader("Tg-Chat-Id") @Min(1) int chatId,
         @Valid @RequestBody RemoveLinkRequest removeLinkRequest
     ) {
-        String linkUrl = removeLinkRequest.link();
+        String linkUrl = removeLinkRequest.url();
         LinkResponse linkResponse = new LinkResponse(linkService.untrackLink(chatId, linkUrl));
         return ResponseEntity.ok(linkResponse);
     }

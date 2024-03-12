@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/scrapper/api/v1/tg-chat")
 public class TelegramChatController {
 
-    private static final Logger LOGGER = LogManager.getLogger();
-
     private final TelegramChatService chatService;
 
     @Autowired

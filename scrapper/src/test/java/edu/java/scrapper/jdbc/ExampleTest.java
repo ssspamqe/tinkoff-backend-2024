@@ -17,7 +17,7 @@ public class ExampleTest extends JdbcIntegrationEnvironment {
     @Test
     @Order(1)
     public void sampleTest() throws Exception {
-        jdbcTemplate.update("INSERT INTO links (url,created_at) VALUES ('https://sample/link','2011-05-16 15:36:38')");
+        jdbcTemplate.update("INSERT INTO links (url,created_at) VALUES ('https://sample/url','2011-05-16 15:36:38')");
 
         int actual = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM links", Integer.class);
 

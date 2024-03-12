@@ -4,6 +4,6 @@ import jakarta.validation.constraints.Pattern;
 
 public record AddLinkRequest(
     @Pattern(regexp = "https?://.*")
-    String link
+    String url
 ) {
 }

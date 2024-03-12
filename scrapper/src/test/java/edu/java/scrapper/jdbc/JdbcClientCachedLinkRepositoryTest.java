@@ -31,7 +31,7 @@ class JdbcClientCachedLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_findById() {
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://url','2022-06-16 16:37:23')");
 
         Link actualLink = linkRepository.findById(1L).get();
 
@@ -47,7 +47,7 @@ class JdbcClientCachedLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_findByUrl() {
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://url','2022-06-16 16:37:23')");
 
         Link actualLink = linkRepository.findByUrl("https://link").get();
 
@@ -57,7 +57,7 @@ class JdbcClientCachedLinkRepositoryTest extends JdbcIntegrationEnvironment {
     @Test
     public void should_removeById() {
         //Arrange
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link','2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://url','2022-06-16 16:37:23')");
 
         //Act
         boolean actualResponse = linkRepository.removeById(1L);
