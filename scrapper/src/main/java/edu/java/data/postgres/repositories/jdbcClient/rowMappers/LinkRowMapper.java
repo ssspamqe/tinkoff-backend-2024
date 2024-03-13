@@ -12,7 +12,8 @@ public class LinkRowMapper implements RowMapper<Link> {
         long id = rs.getLong("id");
         String url = rs.getString("url");
         LocalDateTime createdAt = rs.getTimestamp("created_at").toLocalDateTime();
+        LocalDateTime lastCheckedAt = rs.getTimestamp("last_checked_at").toLocalDateTime();
 
-        return new Link(id, url, createdAt);
+        return new Link(id, url, createdAt, lastCheckedAt);
     }
 }

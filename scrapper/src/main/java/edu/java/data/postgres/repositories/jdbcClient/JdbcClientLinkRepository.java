@@ -36,10 +36,10 @@ public class JdbcClientLinkRepository implements LinkRepository {
 
     private static final String UPDATE_QUERY =
         STR."UPDATE \{TABLE_NAME} SET "
-            + "url = :url"
-            + "created_at = :created_at"
-            + "last_checked_at = :last_checked_at"
-            + "WHERE id = :id";
+            + "url = :url "
+            + "created_at = :created_at "
+            + "last_checked_at = :last_checked_at "
+            + "WHERE id = :id ";
     private final JdbcClient jdbcClient;
 
     @Override
