@@ -5,6 +5,7 @@ import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
 import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import java.net.URI;
+import java.util.Collection;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
@@ -30,6 +31,15 @@ public class JdbcClientLinkRepository implements LinkRepository {
     private static final String DELETE_BY_ID_QUERY =
         STR."DELETE FROM \{TABLE_NAME} WHERE id = :id";
 
+    private static final String FIND_BY_LAST_CHECK_DELAY_QUERY =
+        STR."SELECT * FROM \{TABLE_NAME} WHERE last_checked_at < NOW() - INTERVAL ':seconds seconds'";
+
+    private static final String UPDATE_QUERY =
+        STR."UPDATE \{TABLE_NAME} SET "
+            + "url = :url"
+            + "created_at = :created_at"
+            + "last_checked_at = :last_checked_at"
+            + "WHERE id = :id";
     private final JdbcClient jdbcClient;
 
     @Override
@@ -40,6 +50,23 @@ public class JdbcClientLinkRepository implements LinkRepository {
             .update();
         return findByUrl(link.getUrl())
             .orElseThrow(() -> new NoSuchLinkException(URI.create(link.getUrl())));
+    }
+
+    @Override
+    public void update(Link link) {
+        jdbcClient.sql(UPDATE_QUERY)
+            .param("url", link.getUrl())
+            .param("created_at", link.getCreatedAt())
+            .param("last_checked_at", link.getLastCheckedAt())
+            .update();
+    }
+
+    @Override
+    public Collection<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
+        return jdbcClient.sql(FIND_BY_LAST_CHECK_DELAY_QUERY)
+            .param("seconds", seconds)
+            .query(ROW_MAPPER)
+            .set();
     }
 
     @Override
@@ -64,4 +91,5 @@ public class JdbcClientLinkRepository implements LinkRepository {
             .param("id", id)
             .update() != 0;
     }
+
 }
