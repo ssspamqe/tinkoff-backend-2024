@@ -13,13 +13,15 @@ public class Link {
     private long id;
     private String url;
     private LocalDateTime createdAt;
+    private LocalDateTime lastCheckedAt;
 
     public Link(String url, LocalDateTime createdAt) {
         this.url = url;
         this.createdAt = createdAt;
+        this.lastCheckedAt = LocalDateTime.MIN;
     }
 
-    public Link(String url){
+    public Link(String url) {
         this(url, LocalDateTime.now());
     }
 }
