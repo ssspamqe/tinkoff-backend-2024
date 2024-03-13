@@ -11,3 +11,7 @@ databaseChangeLog:
       file: 03-chat_links.sql
       relativeToChangelogFile: true
 
+  - include:
+      file: entities/stack_overflow_questions.sql
+      relativeToChangelogFile: true
+
