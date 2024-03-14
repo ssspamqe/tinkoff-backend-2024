@@ -14,10 +14,4 @@ public class StackOverflowQuestion {
     long linkId;
     String descriptionMd5Hash;
     Set<Long> answerIds;
-
-    public StackOverflowQuestion(long linkId, String descriptionMd5Hash, Set<Long> answerIds) {
-        this.linkId = linkId;
-        this.descriptionMd5Hash = descriptionMd5Hash;
-        this.answerIds = answerIds;
-    }
 }
