@@ -31,7 +31,7 @@ public class GitHubClientTest extends WebClientTest {
 
         //Act
         GitHubRepository actualRepository =
-            gitHubClient.findRepository("testUser", "test-repo");
+            gitHubClient.fetchRepository("testUser", "test-repo");
 
         //Assert
         GitHubRepository expectedRepository =
@@ -71,7 +71,7 @@ public class GitHubClientTest extends WebClientTest {
 
         //Act
         List<GitHubRepositoryActivity> actualRepositoryActivities =
-            gitHubClient.findRepositoryActivities("testUser", "test-repo");
+            gitHubClient.fetchRepositoryActivities("testUser", "test-repo");
 
         //Assert
         List<GitHubRepositoryActivity> expectedActivities = List.of(

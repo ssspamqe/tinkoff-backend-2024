@@ -11,10 +11,10 @@ import org.springframework.web.service.annotation.HttpExchange;
 public interface GitHubClient {
 
     @GetExchange(url = "/repos/{owner}/{repoName}")
-    GitHubRepository findRepository(@PathVariable String owner, @PathVariable String repoName);
+    GitHubRepository fetchRepository(@PathVariable String owner, @PathVariable String repoName);
 
     @GetExchange(url = "/repos/{owner}/{repoName}/activity")
-    List<GitHubRepositoryActivity> findRepositoryActivities(
+    List<GitHubRepositoryActivity> fetchRepositoryActivities(
         @PathVariable String owner,
         @PathVariable String repoName
     );

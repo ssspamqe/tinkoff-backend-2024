@@ -53,7 +53,7 @@ public class StackOverflowClientTest extends WebClientTest {
 
         //Act
         StackOverflowResponse<StackOverflowQuestion> actualResponse =
-            stackOverflowClient.findQuestionById(123);
+            stackOverflowClient.fetchQuestionById(123);
 
         //Assert
         Instant creationDate = Instant.ofEpochSecond(567);
@@ -112,7 +112,7 @@ public class StackOverflowClientTest extends WebClientTest {
 
         //Act
         StackOverflowResponse<StackOverflowAnswer> actualResponse =
-            stackOverflowClient.findAnswersByQuestionId(123);
+            stackOverflowClient.fetchAnswersByQuestionId(123);
 
         //Assert
         Instant creationDate1 = Instant.ofEpochSecond(567);
