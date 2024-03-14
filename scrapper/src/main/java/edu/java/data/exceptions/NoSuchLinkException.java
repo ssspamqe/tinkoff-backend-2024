@@ -1,10 +1,10 @@
-package edu.java.restApi.services.exceptions;
+package edu.java.data.exceptions;
 
 import java.net.URI;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 
-public class NoSuchLinkException extends ScrapperServiceException {
+public class NoSuchLinkException extends DataServiceException {
 
     private static final String DESCRIPTION = "There is no record about such url";
     private static final HttpStatusCode HTTP_STATUS_CODE = HttpStatus.CONFLICT;

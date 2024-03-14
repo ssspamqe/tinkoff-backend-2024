@@ -6,7 +6,7 @@ import java.util.List;
 
 public record LinkUpdate(
 
-    int id,
+    long id,
 
     @NotBlank
     String url,
@@ -15,6 +15,6 @@ public record LinkUpdate(
     String description,
 
     @NotEmpty
-    List<Integer> tgChatIds
+    List<Long> tgChatIds
 ) {
 }

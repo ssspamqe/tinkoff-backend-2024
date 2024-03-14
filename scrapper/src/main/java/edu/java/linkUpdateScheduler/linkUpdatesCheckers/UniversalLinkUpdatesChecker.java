@@ -1,5 +1,6 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers;
 
+import edu.java.data.postgres.entities.Link;
 import edu.java.linkUpdateScheduler.exceptions.LinkUpdateSchedulerException;
 import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;
 import java.net.URI;
@@ -11,12 +12,12 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class UniversalLinkUpdatesChecker {
 
-    private final List<LinkUpdatesChecker> linkUpdatesCheckers;
+    private final List<LinkAllUpdatesChecker> linkAllUpdatesCheckers;
 
-    List<LinkUpdate> getUpdate(URI url) {
-        for (var linkUpdateChecker : linkUpdatesCheckers) {
+    public List<LinkUpdate> getUpdates(Link link) {
+        for (var linkUpdateChecker : linkAllUpdatesCheckers) {
             try {
-                return linkUpdateChecker.getUpdates(url);
+                return linkUpdateChecker.getUpdates(link);
             } catch (LinkUpdateSchedulerException _) {
             }
         }

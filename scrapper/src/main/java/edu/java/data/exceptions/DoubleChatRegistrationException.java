@@ -1,9 +1,9 @@
-package edu.java.restApi.services.exceptions;
+package edu.java.data.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 
-public class DoubleChatRegistrationException extends ScrapperServiceException {
+public class DoubleChatRegistrationException extends DataServiceException {
 
     private static final String DESCRIPTION = "Can't register new chat, as it was already registered";
     private static final HttpStatusCode HTTP_STATUS_CODE = HttpStatus.CONFLICT;

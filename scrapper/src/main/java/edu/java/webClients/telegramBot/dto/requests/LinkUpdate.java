@@ -1,12 +1,13 @@
 package edu.java.webClients.telegramBot.dto.requests;
 
+import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.LinkUpdateType;
 import java.net.URI;
 import java.util.List;
 
 public record LinkUpdate(
-    int id,
+    long id,
     URI url,
-    String description,
-    List<Integer> tgChatIds
+    LinkUpdateType type,
+    List<Long> tgChatIds
 ) {
 }

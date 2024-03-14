@@ -1,12 +1,15 @@
 package edu.java.data.dao;
 
+import edu.java.data.exceptions.NoSuchLinkException;
+import edu.java.data.postgres.entities.ChatLink;
 import edu.java.data.postgres.entities.Link;
+import edu.java.data.postgres.repositories.ChatLinksRepository;
 import edu.java.data.postgres.repositories.LinkRepository;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
-import edu.java.restApi.services.exceptions.NoSuchLinkException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +18,7 @@ import org.springframework.stereotype.Repository;
 public class LinkDAO implements LinkDataAccessObject {
 
     private final LinkRepository linkRepository;
+    private final ChatLinksRepository chatLinksRepository;
 
     public Optional<Link> findByUrl(String url) {
         return linkRepository.findByUrl(url);
@@ -39,6 +43,14 @@ public class LinkDAO implements LinkDataAccessObject {
     }
 
     @Override
+    public List<Long> findAssociatedChatsIdsById(long id) {
+        return chatLinksRepository
+            .findByLinkId(id)
+            .stream()
+            .map(ChatLink::getChatId).toList();
+    }
+
+    @Override
     public void updateLastCheckedById(Collection<Long> ids) {
         LocalDateTime currentLTime = LocalDateTime.now();
         ids.forEach(id -> updateLastCheckedById(id, currentLTime));
@@ -58,7 +70,7 @@ public class LinkDAO implements LinkDataAccessObject {
     @Override
     public void updateLastCheckedById(long id, LocalDateTime lastChecked) {
         Link link = linkRepository.findById(id)
-            .orElseThrow(()->new NoSuchLinkException(id));
+            .orElseThrow(() -> new NoSuchLinkException(id));
         link.setLastCheckedAt(lastChecked);
         linkRepository.update(link);
     }

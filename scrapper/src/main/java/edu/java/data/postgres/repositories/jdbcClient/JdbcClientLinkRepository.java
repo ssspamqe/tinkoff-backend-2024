@@ -3,7 +3,7 @@ package edu.java.data.postgres.repositories.jdbcClient;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
-import edu.java.restApi.services.exceptions.NoSuchLinkException;
+import edu.java.data.exceptions.NoSuchLinkException;
 import java.net.URI;
 import java.util.Collection;
 import java.util.Optional;

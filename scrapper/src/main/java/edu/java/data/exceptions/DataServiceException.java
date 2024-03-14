@@ -1,15 +1,15 @@
-package edu.java.restApi.services.exceptions;
+package edu.java.data.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 
-public class ScrapperServiceException extends RuntimeException {
+public class DataServiceException extends RuntimeException {
 
-    private static final String DESCRIPTION = "Some error happened in scrapper services...";
+    private static final String DESCRIPTION = "Some error happened in data services...";
 
     private static final HttpStatusCode HTTP_STATUS_CODE = HttpStatus.NOT_FOUND;
 
-    ScrapperServiceException(String message) {
+    DataServiceException(String message) {
         super(message);
     }
 

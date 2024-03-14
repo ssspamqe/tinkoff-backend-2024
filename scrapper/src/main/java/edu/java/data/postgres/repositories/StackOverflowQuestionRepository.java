@@ -5,8 +5,12 @@ import java.util.Optional;
 
 public interface StackOverflowQuestionRepository {
 
+    Optional<StackOverflowQuestion> findById(long id);
+
     Optional<StackOverflowQuestion> findByLinkId(long linkId);
 
-    void update(StackOverflowQuestion stackOverflowQuestion);
+    void save(StackOverflowQuestion question);
+
+    void update(StackOverflowQuestion question);
 
 }

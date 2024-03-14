@@ -1,5 +1,6 @@
 package edu.java.data.postgres.entities;
 
+import java.net.URI;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,17 +12,17 @@ public class Link {
 
     @Id
     private long id;
-    private String url;
+    private URI url;
     private LocalDateTime createdAt;
     private LocalDateTime lastCheckedAt;
 
-    public Link(String url, LocalDateTime createdAt) {
+    public Link(URI url, LocalDateTime createdAt) {
         this.url = url;
         this.createdAt = createdAt;
         this.lastCheckedAt = LocalDateTime.MIN;
     }
 
-    public Link(String url) {
+    public Link(URI url) {
         this(url, LocalDateTime.now());
     }
 }

@@ -26,7 +26,21 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
             + "description_md5_hash = :description_md5_hash "
             + "answer_api_ids = :answer_api_ids";
 
+    private static final String SAVE_QUERY =
+        STR."INSERT INTO \{TABLE_NAME} VALUES (:id, :link_id, :description_md5_hash, :answer_api_ids)";
+
+    private static final String FIND_BY_ID_QUERY =
+        STR."SELECT * FROM \{TABLE_NAME} WHERE id = :id";
+
     private final JdbcClient jdbcClient;
+
+    @Override
+    public Optional<StackOverflowQuestion> findById(long id) {
+        return jdbcClient.sql(FIND_BY_ID_QUERY)
+            .param("id", id)
+            .query(ROW_MAPPER)
+            .optional();
+    }
 
     @Override
     public Optional<StackOverflowQuestion> findByLinkId(long linkId) {
@@ -37,11 +51,21 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
     }
 
     @Override
-    public void update(StackOverflowQuestion stackOverflowQuestion) {
+    public void save(StackOverflowQuestion question) {
+        jdbcClient.sql(SAVE_QUERY)
+            .param("id", question.getId())
+            .param("link_id", question.getLinkId())
+            .param("description_md5_hash", question.getDescriptionMd5Hash())
+            .param("answer_api_ids", question.getAnswerApiIds())
+            .update();
+    }
+
+    @Override
+    public void update(StackOverflowQuestion question) {
         jdbcClient.sql(UPDATE_QUERY)
-            .param("link_id", stackOverflowQuestion.getLinkId())
-            .param("description_md5_hash", stackOverflowQuestion.getDescriptionMd5Hash())
-            .param("answer_api_ids", stackOverflowQuestion.getAnswerApiIds())
+            .param("link_id", question.getLinkId())
+            .param("description_md5_hash", question.getDescriptionMd5Hash())
+            .param("answer_api_ids", question.getAnswerApiIds())
             .update();
     }
 }

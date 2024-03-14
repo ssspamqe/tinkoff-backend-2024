@@ -1,9 +1,9 @@
-package edu.java.restApi.services.exceptions;
+package edu.java.data.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 
-public class NoSuchChatException extends ScrapperServiceException {
+public class NoSuchChatException extends DataServiceException {
 
     private static final String DESCRIPTION = "There is no record about such chat";
     private static final HttpStatusCode HTTP_STATUS_CODE = HttpStatus.NOT_FOUND;
