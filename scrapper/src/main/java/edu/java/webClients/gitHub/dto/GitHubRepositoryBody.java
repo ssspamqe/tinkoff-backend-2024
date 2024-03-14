@@ -2,6 +2,7 @@ package edu.java.webClients.gitHub.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
+import org.apache.commons.codec.digest.DigestUtils;
 
 public record GitHubRepositoryBody(
     long id,
@@ -33,4 +34,8 @@ public record GitHubRepositoryBody(
     boolean archived
 
 ) {
+    //TODO suggest a better for for hashing
+    String getMd5Hash() {
+        return DigestUtils.md5Hex(toString());
+    }
 }
