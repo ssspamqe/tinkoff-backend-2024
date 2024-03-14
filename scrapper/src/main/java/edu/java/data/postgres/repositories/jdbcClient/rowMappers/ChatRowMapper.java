@@ -11,9 +11,8 @@ public class ChatRowMapper implements RowMapper<Chat> {
     @Override
     public Chat mapRow(ResultSet rs, int rowNum) throws SQLException {
         long id = rs.getLong("id");
-        long telegramApiId = rs.getLong("telegram_api_id");
         LocalDateTime createdAt = rs.getTimestamp("created_at").toLocalDateTime();
 
-        return new Chat(id, telegramApiId, createdAt);
+        return new Chat(id, createdAt);
     }
 }

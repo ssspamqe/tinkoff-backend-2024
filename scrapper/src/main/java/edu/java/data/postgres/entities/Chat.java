@@ -11,15 +11,9 @@ public class Chat {
 
     @Id
     private long id;
-    private long telegramApiId;
     private LocalDateTime createdAt;
 
-    public Chat(long telegramApiId, LocalDateTime createdAt) {
-        this.telegramApiId = telegramApiId;
-        this.createdAt = createdAt;
-    }
-
-    public Chat(long telegramApiId) {
-        this(telegramApiId, LocalDateTime.now());
+    public Chat(long id) {
+        this(id, LocalDateTime.now());
     }
 }

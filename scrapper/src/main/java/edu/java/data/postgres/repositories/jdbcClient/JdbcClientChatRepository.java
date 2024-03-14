@@ -36,7 +36,7 @@ public class JdbcClientChatRepository implements ChatRepository {
     @Override
     public void save(Chat chat) {
         jdbcClient.sql(SAVE_QUERY)
-            .param("telegram_api_id", chat.getTelegramApiId())
+            .param("telegram_api_id", chat.getId())
             .param("created_at", chat.getCreatedAt())
             .update();
     }
