@@ -1,20 +1,20 @@
 package edu.java.data.postgres.repositories;
 
-import edu.java.data.postgres.entities.LinkEntity;
+import edu.java.data.postgres.entities.Link;
 
 import java.util.Collection;
 import java.util.Optional;
 
 public interface LinkRepository {
-    LinkEntity save(LinkEntity linkEntity);
+    Link save(Link link);
 
-    Collection<LinkEntity> findByLastCheckDelayFromNowInSeconds(long seconds);
+    Collection<Link> findByLastCheckDelayFromNowInSeconds(long seconds);
 
-    void update(LinkEntity linkEntity);
+    void update(Link link);
 
-    Optional<LinkEntity> findById(long id);
+    Optional<Link> findById(long id);
 
-    Optional<LinkEntity> findByUrl(String url);
+    Optional<Link> findByUrl(String url);
 
     boolean removeById(long id);
 }

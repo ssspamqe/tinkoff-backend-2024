@@ -1,9 +1,9 @@
 package edu.java.scrapper.webClients;
 
 import edu.java.webClients.gitHub.GitHubClient;
-import edu.java.webClients.gitHub.dto.GitHubOwner;
-import edu.java.webClients.gitHub.dto.GitHubRepository;
-import edu.java.webClients.gitHub.dto.GitHubRepositoryActivity;
+import edu.java.webClients.gitHub.dto.GitHubOwnerBody;
+import edu.java.webClients.gitHub.dto.GitHubRepositoryBody;
+import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityBody;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityType;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryVisibilityType;
 import java.time.OffsetDateTime;
@@ -30,11 +30,11 @@ public class GitHubClientTest extends WebClientTest {
         );
 
         //Act
-        GitHubRepository actualRepository =
+        GitHubRepositoryBody actualRepository =
             gitHubClient.fetchRepository("testUser", "test-repo");
 
         //Assert
-        GitHubRepository expectedRepository =
+        GitHubRepositoryBody expectedRepository =
             getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
         assertThat(actualRepository).isNotNull().isEqualTo(expectedRepository);
     }
@@ -70,21 +70,21 @@ public class GitHubClientTest extends WebClientTest {
         );
 
         //Act
-        List<GitHubRepositoryActivity> actualRepositoryActivities =
+        List<GitHubRepositoryActivityBody> actualRepositoryActivities =
             gitHubClient.fetchRepositoryActivities("testUser", "test-repo");
 
         //Assert
-        List<GitHubRepositoryActivity> expectedActivities = List.of(
-            new GitHubRepositoryActivity(
+        List<GitHubRepositoryActivityBody> expectedActivities = List.of(
+            new GitHubRepositoryActivityBody(
                 1,
-                new GitHubOwner(11, "testUser"),
+                new GitHubOwnerBody(11, "testUser"),
                 "new/branch",
                 OffsetDateTime.parse("2023-09-13T21:17:36Z"),
                 GitHubRepositoryActivityType.PUSH
             ),
-            new GitHubRepositoryActivity(
+            new GitHubRepositoryActivityBody(
                 2,
-                new GitHubOwner(123, "secondTestUser"),
+                new GitHubOwnerBody(123, "secondTestUser"),
                 "second/branch",
                 OffsetDateTime.parse("2023-09-13T21:17:36Z"),
                 GitHubRepositoryActivityType.PR_MERGE
@@ -115,12 +115,12 @@ public class GitHubClientTest extends WebClientTest {
             }""";
     }
 
-    private GitHubRepository getExpectedGitHubRepositoryWithOwnerAndName(String ownerName, String repoName) {
-        return new GitHubRepository(
+    private GitHubRepositoryBody getExpectedGitHubRepositoryWithOwnerAndName(String ownerName, String repoName) {
+        return new GitHubRepositoryBody(
             123,
             repoName,
             "test description",
-            new GitHubOwner(
+            new GitHubOwnerBody(
                 321,
                 ownerName
             ),

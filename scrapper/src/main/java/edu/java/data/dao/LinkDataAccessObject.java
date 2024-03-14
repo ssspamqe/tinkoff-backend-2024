@@ -1,6 +1,6 @@
 package edu.java.data.dao;
 
-import edu.java.data.postgres.entities.LinkEntity;
+import edu.java.data.postgres.entities.Link;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -9,13 +9,13 @@ import java.util.Optional;
 
 public interface LinkDataAccessObject {
 
-    Optional<LinkEntity> findByUrl(String url);
+    Optional<Link> findByUrl(String url);
 
-    Optional<LinkEntity> findById(long id);
+    Optional<Link> findById(long id);
 
-    LinkEntity saveOrFindByUrl(String url);
+    Link saveOrFindByUrl(String url);
 
-    Collection<LinkEntity> findByLastCheckDelayFromNow(Duration duration);
+    Collection<Link> findByLastCheckDelayFromNow(Duration duration);
 
     void updateLastCheckedById(long id);
 

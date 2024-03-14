@@ -1,12 +1,12 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers;
 
 import edu.java.data.dao.LinkDataAccessObject;
-import edu.java.data.postgres.entities.LinkEntity;
+import edu.java.data.postgres.entities.Link;
 import edu.java.linkUpdateScheduler.exceptions.IncorrectHostException;
 import edu.java.linkUpdateScheduler.exceptions.UnsuccessfulStackOverflowQuestionUrlParseException;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
-import edu.java.webClients.stackOverflow.dto.StackOverflowQuestion;
-import edu.java.webClients.stackOverflow.dto.StackOverflowResponse;
+import edu.java.webClients.stackOverflow.dto.StackOverflowQuestionBody;
+import edu.java.webClients.stackOverflow.dto.StackOverflowResponseBody;
 import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;
 import java.net.URI;
 import java.util.List;
@@ -28,15 +28,15 @@ public class StackOverflowUpdatesChecker implements LinkUpdatesChecker {
     private final StackOverflowClient stackOverflowClient;
 
     @Override
-    public List<LinkUpdate> getUpdates(LinkEntity linkEntity) throws IncorrectHostException {
-        URI url = URI.create(linkEntity.getUrl());
+    public List<LinkUpdate> getUpdates(Link link) throws IncorrectHostException {
+        URI url = URI.create(link.getUrl());
         String hostName = url.getHost();
         if (isIncorrectHostName(hostName)) {
             throw new IncorrectHostException(hostName);
         }
 
         long questionId = extractQuestionId(url);
-        StackOverflowResponse<StackOverflowQuestion> = stackOverflowClient.findQuestio
+        StackOverflowResponseBody<StackOverflowQuestionBody> = stackOverflowClient.findQuestio
     }
 
     private boolean isIncorrectHostName(String hostName) {

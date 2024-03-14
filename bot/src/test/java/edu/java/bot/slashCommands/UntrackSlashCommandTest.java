@@ -36,11 +36,11 @@ public class UntrackSlashCommandTest {
     @Test
     void should_removeSubscription() {
         var subscriptionList = List.of(
-            new Subscription(1L, 1L, "https://first/linkEntity"),
-            new Subscription(2L, 1L, "https://second/linkEntity")
+            new Subscription(1L, 1L, "https://first/link"),
+            new Subscription(2L, 1L, "https://second/link")
         );
         Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
-        Message parameterMessage = getParameterMessageWithLinkAndUserId("https://first/linkEntity", 1L);
+        Message parameterMessage = getParameterMessageWithLinkAndUserId("https://first/link", 1L);
 
         String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
@@ -51,11 +51,11 @@ public class UntrackSlashCommandTest {
     @Test
     void should_returnSpecialMessage_when_noSuchSubscription() {
         var subscriptionList = List.of(
-            new Subscription(1L, 1L, "https://first/linkEntity"),
-            new Subscription(2L, 1L, "https://second/linkEntity")
+            new Subscription(1L, 1L, "https://first/link"),
+            new Subscription(2L, 1L, "https://second/link")
         );
         Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
-        Message parameterMessage = getParameterMessageWithLinkAndUserId("https://third/linkEntity", 1L);
+        Message parameterMessage = getParameterMessageWithLinkAndUserId("https://third/link", 1L);
 
         String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
@@ -64,13 +64,13 @@ public class UntrackSlashCommandTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"ashajdfjakd sdfsdf", "asdjasd ", "/track httsp:Mylink", ""})
-    void should_returnSpecialMessage_when_linkIsNotValid(String linkEntity) {
-        Message parameterMessage = getParameterMessageWithLinkAndUserId(linkEntity, 1L);
+    void should_returnSpecialMessage_when_linkIsNotValid(String link) {
+        Message parameterMessage = getParameterMessageWithLinkAndUserId(link, 1L);
 
         String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
         String expectedResponse = """
-            Can't /untrack linkEntity because:
+            Can't /untrack link because:
             1) must match "https?://.*\"""";
         assertThat(actualResponse).isEqualTo(expectedResponse);
     }
@@ -86,12 +86,12 @@ public class UntrackSlashCommandTest {
         );
     }
 
-    Message getParameterMessageWithLinkAndUserId(String linkEntity, Long userId) {
+    Message getParameterMessageWithLinkAndUserId(String link, Long userId) {
         User user = new User(userId);
 
         Message parameterizedMessage = Mockito.spy(new Message());
         Mockito.when(parameterizedMessage.from()).thenReturn(user);
-        Mockito.when(parameterizedMessage.text()).thenReturn(linkEntity);
+        Mockito.when(parameterizedMessage.text()).thenReturn(link);
 
         return parameterizedMessage;
     }

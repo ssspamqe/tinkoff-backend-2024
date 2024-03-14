@@ -3,10 +3,10 @@ package edu.java.webClients.gitHub.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
-public record GitHubRepositoryActivity(
+public record GitHubRepositoryActivityBody(
     long id,
 
-    GitHubOwner actor,
+    GitHubOwnerBody actor,
 
     @JsonProperty("ref")
     String reference,

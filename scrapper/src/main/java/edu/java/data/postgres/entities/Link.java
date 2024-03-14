@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 
 @Data
 @AllArgsConstructor
-public class LinkEntity {
+public class Link {
 
     @Id
     private long id;
@@ -15,13 +15,13 @@ public class LinkEntity {
     private LocalDateTime createdAt;
     private LocalDateTime lastCheckedAt;
 
-    public LinkEntity(String url, LocalDateTime createdAt) {
+    public Link(String url, LocalDateTime createdAt) {
         this.url = url;
         this.createdAt = createdAt;
         this.lastCheckedAt = LocalDateTime.MIN;
     }
 
-    public LinkEntity(String url) {
+    public Link(String url) {
         this(url, LocalDateTime.now());
     }
 }

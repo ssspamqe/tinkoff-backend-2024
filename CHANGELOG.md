@@ -18,8 +18,8 @@ All notable changes to this project will be documented in this file.
         - post /tg-chat/{id} - register chat
         - delete /tg-chat/{id} - delete chat
         - get /links - get all tracked links(requires Tg-Chat-Id header)
-        - post /links - add linkEntity for tracking (requires Tg-Chat-Id header)
-        - delete /links - delete tracked linkEntity (requires Tg-Chat-Id header)
+        - post /links - add link for tracking (requires Tg-Chat-Id header)
+        - delete /links - delete tracked link (requires Tg-Chat-Id header)
 - Service and domain layers in Scrapper
     - Redis is being used for storing data
 - Swagger-ui for api

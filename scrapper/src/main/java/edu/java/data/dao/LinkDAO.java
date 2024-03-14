@@ -1,6 +1,6 @@
 package edu.java.data.dao;
 
-import edu.java.data.postgres.entities.LinkEntity;
+import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -16,24 +16,24 @@ public class LinkDAO implements LinkDataAccessObject {
 
     private final LinkRepository linkRepository;
 
-    public Optional<LinkEntity> findByUrl(String url) {
+    public Optional<Link> findByUrl(String url) {
         return linkRepository.findByUrl(url);
     }
 
-    public Optional<LinkEntity> findById(long id) {
+    public Optional<Link> findById(long id) {
         return linkRepository.findById(id);
     }
 
-    public LinkEntity saveOrFindByUrl(String url) {
+    public Link saveOrFindByUrl(String url) {
         return linkRepository.findByUrl(url)
             .orElseGet(() -> {
-                LinkEntity newLinkEntity = new LinkEntity(url);
-                return linkRepository.save(newLinkEntity);
+                Link newLink = new Link(url);
+                return linkRepository.save(newLink);
             });
     }
 
     @Override
-    public Collection<LinkEntity> findByLastCheckDelayFromNow(Duration duration) {
+    public Collection<Link> findByLastCheckDelayFromNow(Duration duration) {
         long seconds = duration.getSeconds();
         return linkRepository.findByLastCheckDelayFromNowInSeconds(seconds);
     }
@@ -57,10 +57,10 @@ public class LinkDAO implements LinkDataAccessObject {
 
     @Override
     public void updateLastCheckedById(long id, LocalDateTime lastChecked) {
-        LinkEntity linkEntity = linkRepository.findById(id)
+        Link link = linkRepository.findById(id)
             .orElseThrow(()->new NoSuchLinkException(id));
-        linkEntity.setLastCheckedAt(lastChecked);
-        linkRepository.update(linkEntity);
+        link.setLastCheckedAt(lastChecked);
+        linkRepository.update(link);
     }
 
 }

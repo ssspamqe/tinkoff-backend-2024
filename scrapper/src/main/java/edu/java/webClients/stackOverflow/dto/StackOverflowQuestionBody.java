@@ -4,12 +4,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import java.util.List;
 
-public record StackOverflowQuestion(
+public record StackOverflowQuestionBody(
     long id,
 
     List<String> tags,
 
-    StackOverflowOwner owner,
+    StackOverflowOwnerBody owner,
 
     String title,
 

@@ -3,7 +3,7 @@ package edu.java.webClients.stackOverflow.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
-public record StackOverflowResponse<T>(
+public record StackOverflowResponseBody<T>(
     List<T> items,
 
     @JsonProperty("has_mor")

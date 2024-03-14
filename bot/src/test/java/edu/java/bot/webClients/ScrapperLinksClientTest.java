@@ -34,11 +34,11 @@ public class ScrapperLinksClientTest extends WebClientTest {
                         "links": [
                             {
                                 "id": 1,
-                                "url":"http://first/linkEntity"
+                                "url":"http://first/link"
                             },
                             {
                                 "id": 2,
-                                "url":"http://second/linkEntity"
+                                "url":"http://second/link"
                             }
                        ],
                        "size": 2
@@ -50,8 +50,8 @@ public class ScrapperLinksClientTest extends WebClientTest {
         ListLinksResponse actualResponse = scrapperLinksClient.findTrackedLinks(1);
         ListLinksResponse expectedResponseBody = new ListLinksResponse(
             List.of(
-                new LinkResponse(1, URI.create("http://first/linkEntity")),
-                new LinkResponse(2, URI.create("http://second/linkEntity"))
+                new LinkResponse(1, URI.create("http://first/link")),
+                new LinkResponse(2, URI.create("http://second/link"))
             ),
             2
         );
@@ -65,16 +65,16 @@ public class ScrapperLinksClientTest extends WebClientTest {
             .willReturn(okJson("""
                     {
                         "id": 1,
-                        "url": "http://my/linkEntity"
+                        "url": "http://my/link"
                     }"""
                 ).withStatus(200)
             )
         );
 
         LinkResponse actualResponse =
-            scrapperLinksClient.trackLink(1, new AddLinkRequest("http://my/linkEntity"));
+            scrapperLinksClient.trackLink(1, new AddLinkRequest("http://my/link"));
 
-        LinkResponse expectedResponseBody = new LinkResponse(1, URI.create("http://my/linkEntity"));
+        LinkResponse expectedResponseBody = new LinkResponse(1, URI.create("http://my/link"));
         assertThat(actualResponse).isEqualTo(expectedResponseBody);
     }
 
@@ -85,16 +85,16 @@ public class ScrapperLinksClientTest extends WebClientTest {
             .willReturn(okJson("""
                     {
                         "id": 1,
-                        "url": "http://my/linkEntity"
+                        "url": "http://my/link"
                     }"""
                 ).withStatus(200)
             )
         );
 
         LinkResponse actualResponse =
-            scrapperLinksClient.untrackLink(1, new RemoveLinkRequest("http://my/linkEntity"));
+            scrapperLinksClient.untrackLink(1, new RemoveLinkRequest("http://my/link"));
 
-        LinkResponse expectedResponseBody = new LinkResponse(1, URI.create("http://my/linkEntity"));
+        LinkResponse expectedResponseBody = new LinkResponse(1, URI.create("http://my/link"));
         assertThat(actualResponse).isEqualTo(expectedResponseBody);
     }
 
