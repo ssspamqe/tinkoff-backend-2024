@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 public record StackOverflowResponseBody<T>(
-    Set<T> items,
+    List<T> items,
 
     @JsonProperty("has_mor")
     boolean hasMor,
