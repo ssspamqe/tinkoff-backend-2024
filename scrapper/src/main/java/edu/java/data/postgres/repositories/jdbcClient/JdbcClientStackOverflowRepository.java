@@ -56,7 +56,7 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
             .param("id", question.getId())
             .param("link_id", question.getLinkId())
             .param("description_md5_hash", question.getDescriptionMd5Hash())
-            .param("answer_api_ids", question.getAnswerApiIds())
+            .param("answer_api_ids", question.getAnswerIds())
             .update();
     }
 
@@ -65,7 +65,7 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
         jdbcClient.sql(UPDATE_QUERY)
             .param("link_id", question.getLinkId())
             .param("description_md5_hash", question.getDescriptionMd5Hash())
-            .param("answer_api_ids", question.getAnswerApiIds())
+            .param("answer_api_ids", question.getAnswerIds())
             .update();
     }
 }
