@@ -35,24 +35,24 @@ class TrackSlashCommandTest {
 
     @Test
     void should_addLinkToDatabase() {
-        Message parameterMessage = getMessageWithLinkAndUserId("https://first/link", 1L);
+        Message parameterMessage = getMessageWithLinkAndUserId("https://first/linkEntity", 1L);
 
         String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
-        Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/link");
+        Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/linkEntity");
         Mockito.verify(subscriptionRepository, Mockito.times(1)).save(expectedToSaveSubscription);
-        assertThat(actualResponse).isEqualTo("Given link was successfully added to /track it!");
+        assertThat(actualResponse).isEqualTo("Given linkEntity was successfully added to /track it!");
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"ashajdfjakd sdfsdf", "asdjasd ", "/track https:Mylink", ""})
-    void should_returnSpecialMessage_when_linkNotMatchRegex(String link) {
-        Message parameterMessage = getMessageWithLinkAndUserId(link, 1L);
+    void should_returnSpecialMessage_when_linkNotMatchRegex(String linkEntity) {
+        Message parameterMessage = getMessageWithLinkAndUserId(linkEntity, 1L);
 
         String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
         String expectedResponse = """
-            Can't /track link because:
+            Can't /track linkEntity because:
             1) must match "https?://.*\"""";
         assertThat(actualResponse).isEqualTo(expectedResponse);
     }
@@ -68,7 +68,7 @@ class TrackSlashCommandTest {
         );
         String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
-        assertThat(actualResponse).isEqualTo("This link was already added to /track it");
+        assertThat(actualResponse).isEqualTo("This linkEntity was already added to /track it");
     }
 
     @Test
@@ -82,12 +82,12 @@ class TrackSlashCommandTest {
         );
     }
 
-    Message getMessageWithLinkAndUserId(String link, Long userId) {
+    Message getMessageWithLinkAndUserId(String linkEntity, Long userId) {
         User user = new User(userId);
 
         Message parameterizedMessage = Mockito.spy(new Message());
         Mockito.when(parameterizedMessage.from()).thenReturn(user);
-        Mockito.when(parameterizedMessage.text()).thenReturn(link);
+        Mockito.when(parameterizedMessage.text()).thenReturn(linkEntity);
 
         return parameterizedMessage;
     }

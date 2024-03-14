@@ -1,6 +1,6 @@
 package edu.java.data.postgres.repositories.jdbcClient;
 
-import edu.java.data.postgres.entities.Link;
+import edu.java.data.postgres.entities.LinkEntity;
 import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
 import edu.java.restApi.services.exceptions.NoSuchLinkException;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
 public class JdbcClientLinkRepository implements LinkRepository {
 
     private static final String TABLE_NAME = "links";
-    private static final RowMapper<Link> ROW_MAPPER = new LinkRowMapper();
+    private static final RowMapper<LinkEntity> ROW_MAPPER = new LinkRowMapper();
 
     private static final String SAVE_QUERY =
         STR."INSERT INTO \{TABLE_NAME} (url, created_at) VALUES (:url, :created_at)";
@@ -43,26 +43,26 @@ public class JdbcClientLinkRepository implements LinkRepository {
     private final JdbcClient jdbcClient;
 
     @Override
-    public Link save(Link link) {
+    public LinkEntity save(LinkEntity linkEntity) {
         jdbcClient.sql(SAVE_QUERY)
-            .param("url", link.getUrl())
-            .param("created_at", link.getCreatedAt())
+            .param("url", linkEntity.getUrl())
+            .param("created_at", linkEntity.getCreatedAt())
             .update();
-        return findByUrl(link.getUrl())
-            .orElseThrow(() -> new NoSuchLinkException(URI.create(link.getUrl())));
+        return findByUrl(linkEntity.getUrl())
+            .orElseThrow(() -> new NoSuchLinkException(URI.create(linkEntity.getUrl())));
     }
 
     @Override
-    public void update(Link link) {
+    public void update(LinkEntity linkEntity) {
         jdbcClient.sql(UPDATE_QUERY)
-            .param("url", link.getUrl())
-            .param("created_at", link.getCreatedAt())
-            .param("last_checked_at", link.getLastCheckedAt())
+            .param("url", linkEntity.getUrl())
+            .param("created_at", linkEntity.getCreatedAt())
+            .param("last_checked_at", linkEntity.getLastCheckedAt())
             .update();
     }
 
     @Override
-    public Collection<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
+    public Collection<LinkEntity> findByLastCheckDelayFromNowInSeconds(long seconds) {
         return jdbcClient.sql(FIND_BY_LAST_CHECK_DELAY_QUERY)
             .param("seconds", seconds)
             .query(ROW_MAPPER)
@@ -70,7 +70,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     }
 
     @Override
-    public Optional<Link> findById(long id) {
+    public Optional<LinkEntity> findById(long id) {
         return jdbcClient.sql(FIND_BY_ID_QUERY)
             .param("id", id)
             .query(ROW_MAPPER)
@@ -78,7 +78,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     }
 
     @Override
-    public Optional<Link> findByUrl(String url) {
+    public Optional<LinkEntity> findByUrl(String url) {
         return jdbcClient.sql(FIND_BY_URL_QUERY)
             .param("url", url)
             .query(ROW_MAPPER)

@@ -2,7 +2,7 @@ package edu.java.data.dao;
 
 import edu.java.data.postgres.entities.Chat;
 import edu.java.data.postgres.entities.ChatLink;
-import edu.java.data.postgres.entities.Link;
+import edu.java.data.postgres.entities.LinkEntity;
 import edu.java.data.postgres.repositories.ChatLinksRepository;
 import edu.java.data.postgres.repositories.ChatRepository;
 import edu.java.restApi.services.exceptions.DoubleChatRegistrationException;
@@ -30,7 +30,7 @@ public class ChatDAO implements ChatDataAccessObject {
         return chatRepository.findByTelegramApiId(apiId);
     }
 
-    public Set<Link> getTrackedLinksByApiId(long chatApiId) {
+    public Set<LinkEntity> getTrackedLinksByApiId(long chatApiId) {
         Chat chat = chatRepository.findByTelegramApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId));
         long chatId = chat.getId();
@@ -38,7 +38,7 @@ public class ChatDAO implements ChatDataAccessObject {
         return buildSetOfLinks(chatId);
     }
 
-    private Set<Link> buildSetOfLinks(long chatId) {
+    private Set<LinkEntity> buildSetOfLinks(long chatId) {
         return chatLinksRepository.findByChatId(chatId)
             .stream()
             .map(chatLinkCouple -> {
@@ -47,15 +47,15 @@ public class ChatDAO implements ChatDataAccessObject {
             }).collect(Collectors.toSet());
     }
 
-    public Link associateUrlByApiId(String url, long chatApiId) {
+    public LinkEntity associateUrlByApiId(String url, long chatApiId) {
         long chatId = chatRepository.findByTelegramApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId))
             .getId();
 
-        Link link = linkDao.saveOrFindByUrl(url);
+        LinkEntity linkEntity = linkDao.saveOrFindByUrl(url);
 
-        assignLinkToChat(link.getId(), chatId);
-        return link;
+        assignLinkToChat(linkEntity.getId(), chatId);
+        return linkEntity;
     }
 
     private void assignLinkToChat(long linkId, long chatId) {
@@ -63,16 +63,16 @@ public class ChatDAO implements ChatDataAccessObject {
         chatLinksRepository.save(chatLinkCouple);
     }
 
-    public Link dissociateUrlByApiId(String url, long chatApiId) {
-        Link link = linkDao.findByUrl(url)
+    public LinkEntity dissociateUrlByApiId(String url, long chatApiId) {
+        LinkEntity linkEntity = linkDao.findByUrl(url)
             .orElseThrow(() -> new NoSuchLinkException(URI.create(url)));
 
         long chatId = chatRepository.findByTelegramApiId(chatApiId)
             .orElseThrow(() -> new NoSuchChatException(chatApiId))
             .getId();
 
-        chatLinksRepository.removeByChatIdAndLinkId(chatId, link.getId());
-        return link;
+        chatLinksRepository.removeByChatIdAndLinkId(chatId, linkEntity.getId());
+        return linkEntity;
     }
 
     public Chat registerChatWithApiId(long apiId) {

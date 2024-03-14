@@ -14,8 +14,8 @@ public class HelpSlashCommand implements SlashCommand {
 
         Here are commands:
         **Subscription control**
-        /track - Start tracking updates from given link
-        /untrack - Stop tracking updates from given link
+        /track - Start tracking updates from given linkEntity
+        /untrack - Stop tracking updates from given linkEntity
         /list - Get list of subscriptions
 
         **Other commands**

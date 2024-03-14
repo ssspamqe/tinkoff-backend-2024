@@ -1,12 +1,12 @@
 package edu.java.data.postgres.repositories;
 
-import edu.java.data.postgres.entities.StackOverflowQuestion;
+import edu.java.data.postgres.entities.StackOverflowQuestionEntity;
 import java.util.Optional;
 
 public interface StackOverflowQuestionRepository {
 
-    Optional<StackOverflowQuestion> findByLinkId(long linkId);
+    Optional<StackOverflowQuestionEntity> findByLinkId(long linkId);
 
-    void update(StackOverflowQuestion stackOverflowQuestion);
+    void update(StackOverflowQuestionEntity stackOverflowQuestionEntity);
 
 }

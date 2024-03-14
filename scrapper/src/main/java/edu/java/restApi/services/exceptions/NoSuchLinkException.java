@@ -14,11 +14,11 @@ public class NoSuchLinkException extends ScrapperServiceException {
     }
 
     public NoSuchLinkException(URI linkUrl) {
-        super(STR."There is no link with such link: \{linkUrl}");
+        super(STR."There is no linkEntity with such linkEntity: \{linkUrl}");
     }
 
     public NoSuchLinkException(long linkId){
-        super(STR."There is no such link with id \{linkId}");
+        super(STR."There is no such linkEntity with id \{linkId}");
     }
 
     @Override

@@ -1,7 +1,7 @@
 package edu.java.data.dao;
 
 import edu.java.data.postgres.entities.Chat;
-import edu.java.data.postgres.entities.Link;
+import edu.java.data.postgres.entities.LinkEntity;
 import java.util.Optional;
 import java.util.Set;
 
@@ -11,11 +11,11 @@ public interface ChatDataAccessObject {
 
     Optional<Chat> findByApiId(long apiId);
 
-    Set<Link> getTrackedLinksByApiId(long chatApiId);
+    Set<LinkEntity> getTrackedLinksByApiId(long chatApiId);
 
-    Link associateUrlByApiId(String url, long chatApiId);
+    LinkEntity associateUrlByApiId(String url, long chatApiId);
 
-    Link dissociateUrlByApiId(String url, long chatApiId);
+    LinkEntity dissociateUrlByApiId(String url, long chatApiId);
 
     Chat registerChatWithApiId(long apiId);
 

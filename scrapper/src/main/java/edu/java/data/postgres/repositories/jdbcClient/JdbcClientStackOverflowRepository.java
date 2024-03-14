@@ -1,6 +1,6 @@
 package edu.java.data.postgres.repositories.jdbcClient;
 
-import edu.java.data.postgres.entities.StackOverflowQuestion;
+import edu.java.data.postgres.entities.StackOverflowQuestionEntity;
 import edu.java.data.postgres.repositories.StackOverflowQuestionRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.StackOverflowQuestionRowMapper;
 import java.util.Optional;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 public class JdbcClientStackOverflowRepository implements StackOverflowQuestionRepository {
 
-    private static final RowMapper<StackOverflowQuestion> ROW_MAPPER = new StackOverflowQuestionRowMapper();
+    private static final RowMapper<StackOverflowQuestionEntity> ROW_MAPPER = new StackOverflowQuestionRowMapper();
 
     private static final String TABLE_NAME = "stack_overflow_questions";
 
@@ -29,7 +29,7 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
     private final JdbcClient jdbcClient;
 
     @Override
-    public Optional<StackOverflowQuestion> findByLinkId(long linkId) {
+    public Optional<StackOverflowQuestionEntity> findByLinkId(long linkId) {
         return jdbcClient.sql(FIND_BY_LINK_ID_QUERY)
             .param("link_id", linkId)
             .query(ROW_MAPPER)
@@ -37,11 +37,11 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
     }
 
     @Override
-    public void update(StackOverflowQuestion stackOverflowQuestion) {
+    public void update(StackOverflowQuestionEntity stackOverflowQuestionEntity) {
         jdbcClient.sql(UPDATE_QUERY)
-            .param("link_id", stackOverflowQuestion.getLinkId())
-            .param("description_md5_hash", stackOverflowQuestion.getDescriptionMd5Hash())
-            .param("answer_api_ids", stackOverflowQuestion.getAnswerApiIds())
+            .param("link_id", stackOverflowQuestionEntity.getLinkId())
+            .param("description_md5_hash", stackOverflowQuestionEntity.getDescriptionMd5Hash())
+            .param("answer_api_ids", stackOverflowQuestionEntity.getAnswerApiIds())
             .update();
     }
 }

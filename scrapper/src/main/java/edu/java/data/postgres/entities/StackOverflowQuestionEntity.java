@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 
 @Data
 @AllArgsConstructor
-public class StackOverflowQuestion {
+public class StackOverflowQuestionEntity {
 
     @Id
     long id;
@@ -14,7 +14,7 @@ public class StackOverflowQuestion {
     String descriptionMd5Hash;
     long[] answerApiIds;
 
-    public StackOverflowQuestion(long linkId, String descriptionMd5Hash, long[] answerApiIds) {
+    public StackOverflowQuestionEntity(long linkId, String descriptionMd5Hash, long[] answerApiIds) {
         this.linkId = linkId;
         this.descriptionMd5Hash = descriptionMd5Hash;
         this.answerApiIds = answerApiIds;

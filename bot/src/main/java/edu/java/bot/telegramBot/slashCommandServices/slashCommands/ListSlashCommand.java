@@ -43,18 +43,18 @@ public class ListSlashCommand implements SlashCommand {
         StringBuilder response = new StringBuilder();
         response.append("Here are your current subscriptions:\n");
         for (int i = 0; i < subscriptionList.size(); i++) {
-            String link = subscriptionList.get(i).getLink();
-            String host = parseHostFromLink(link);
-            response.append(STR."\{i + 1}) \{host}\n\{link}");
+            String linkEntity = subscriptionList.get(i).getLink();
+            String host = parseHostFromLink(linkEntity);
+            response.append(STR."\{i + 1}) \{host}\n\{linkEntity}");
         }
         return response.toString();
     }
 
-    private String parseHostFromLink(String link) {
+    private String parseHostFromLink(String linkEntity) {
         try {
-            return new URI(link).getHost();
+            return new URI(linkEntity).getHost();
         } catch (URISyntaxException e) {
-            throw new BadLinkException(STR."Cant parse host (link: \{link})");
+            throw new BadLinkException(STR."Cant parse host (linkEntity: \{linkEntity})");
         }
     }
 
