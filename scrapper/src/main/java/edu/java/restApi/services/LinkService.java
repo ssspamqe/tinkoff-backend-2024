@@ -15,14 +15,14 @@ public class LinkService {
     private final UniversalInitialStateScreener firstStateScreener;
 
     public Set<Link> getTrackedLinks(long chatApiId) {
-        return chatDao.getTrackedLinksByApiId(chatApiId);
+        return chatDao.getTrackedLinksByChatId(chatApiId);
     }
 
     public Link addLinkToTrack(long chatApiId, String linkUrl) {
-        return chatDao.associateUrlByApiId(linkUrl, chatApiId);
+        return chatDao.associateUrlByChatId(linkUrl, chatApiId);
     }
 
     public Link untrackLink(long chatApiId, String linkUrl) {
-        return chatDao.dissociateUrlByApiId(linkUrl, chatApiId);
+        return chatDao.dissociateUrlByChatId(linkUrl, chatApiId);
     }
 }

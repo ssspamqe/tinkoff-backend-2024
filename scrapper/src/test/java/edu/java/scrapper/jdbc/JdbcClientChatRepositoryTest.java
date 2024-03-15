@@ -31,11 +31,11 @@ public class JdbcClientChatRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_findById() {
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (123,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
 
         Chat actualChat = chatRepository.findById(1L).get();
 
-        assertThat(actualChat.getTelegramApiId()).isEqualTo(123);
+        assertThat(actualChat.getId()).isEqualTo(1);
     }
 
     @Test
@@ -46,18 +46,9 @@ public class JdbcClientChatRepositoryTest extends JdbcIntegrationEnvironment {
     }
 
     @Test
-    public void should_findByTelegramApiId() {
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (123,'2022-06-16 16:37:23')");
-
-        Chat actualChat = chatRepository.findByTelegramApiId(123).get();
-
-        assertThat(actualChat.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16T16:37:23"));
-    }
-
-    @Test
     public void should_removeById() {
         //Arrange
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (123,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
 
         //Act
         boolean actualResponse = chatRepository.removeById(1L);
@@ -69,21 +60,4 @@ public class JdbcClientChatRepositoryTest extends JdbcIntegrationEnvironment {
             jdbcTemplate.query("SELECT * FROM chats", ROW_MAPPER).stream().findFirst();
         assertThat(actualChat).isEmpty();
     }
-
-    @Test
-    public void should_removeByTelegramApiId() {
-        //Arrange
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (123,'2022-06-16 16:37:23')");
-
-        //Act
-        boolean actualResponse = chatRepository.removeByTelegramApiId(123);
-
-        //Assert
-        assertThat(actualResponse).isTrue();
-
-        Optional<Chat> actualChat =
-            jdbcTemplate.query("SELECT * FROM chats", ROW_MAPPER).stream().findFirst();
-        assertThat(actualChat).isEmpty();
-    }
-
 }

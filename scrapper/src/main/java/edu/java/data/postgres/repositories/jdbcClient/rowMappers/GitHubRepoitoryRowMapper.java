@@ -11,6 +11,7 @@ public class GitHubRepoitoryRowMapper implements RowMapper<GitHubRepositoryEntit
     @Override
     public GitHubRepositoryEntity mapRow(ResultSet rs, int rowNum) throws SQLException {
         long id = rs.getLong("id");
+        long linkId = rs.getLong("link_id");
         String name = rs.getString("name");
         String owner = rs.getString("owner");
         String descriptionMd5hash = rs.getString("description_md5_hash");
@@ -18,7 +19,7 @@ public class GitHubRepoitoryRowMapper implements RowMapper<GitHubRepositoryEntit
         Object[] arrayData = (Object[]) rs.getArray("activities_ids").getArray();
         Set<Long> activitiesIds = buildSetLong(arrayData);
 
-        return new GitHubRepositoryEntity(id, name, owner, descriptionMd5hash, activitiesIds);
+        return new GitHubRepositoryEntity(id, linkId, name, owner, descriptionMd5hash, activitiesIds);
     }
 
     private Set<Long> buildSetLong(Object[] arrayData) {

@@ -54,7 +54,6 @@ public abstract class JdbcIntegrationEnvironment {
     @BeforeEach
     public void restartIdentity() {
         jdbcTemplate.update("TRUNCATE chat_links RESTART IDENTITY");
-        jdbcTemplate.update("TRUNCATE chats RESTART IDENTITY CASCADE");
         jdbcTemplate.update("TRUNCATE links RESTART IDENTITY CASCADE");
     }
 

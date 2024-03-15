@@ -1,13 +1,13 @@
 package edu.java.data.dao;
 
+import edu.java.data.exceptions.DoubleChatRegistrationException;
+import edu.java.data.exceptions.NoSuchChatException;
+import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.postgres.entities.Chat;
 import edu.java.data.postgres.entities.ChatLink;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.ChatLinksRepository;
 import edu.java.data.postgres.repositories.ChatRepository;
-import edu.java.data.exceptions.DoubleChatRegistrationException;
-import edu.java.data.exceptions.NoSuchChatException;
-import edu.java.data.exceptions.NoSuchLinkException;
 import java.net.URI;
 import java.util.Optional;
 import java.util.Set;
@@ -28,13 +28,9 @@ public class ChatDAO implements ChatDataAccessObject {
         return chatRepository.findById(id);
     }
 
-    public Optional<Chat> findByApiId(long apiId) {
-        return chatRepository.findByTelegramApiId(apiId);
-    }
-
-    public Set<Link> getTrackedLinksByApiId(long chatApiId) {
-        Chat chat = chatRepository.findByTelegramApiId(chatApiId)
-            .orElseThrow(() -> new NoSuchChatException(chatApiId));
+    public Set<Link> getTrackedLinksByChatId(long id) {
+        Chat chat = chatRepository.findById(id)
+            .orElseThrow(() -> new NoSuchChatException(id));
         long chatId = chat.getId();
 
         return buildSetOfLinks(chatId);
@@ -49,10 +45,10 @@ public class ChatDAO implements ChatDataAccessObject {
             }).collect(Collectors.toSet());
     }
 
-    public Link associateUrlByApiId(String url, long chatApiId) {
-        long chatId = chatRepository.findByTelegramApiId(chatApiId)
-            .orElseThrow(() -> new NoSuchChatException(chatApiId))
-            .getId();
+    public Link associateUrlByChatId(String url, long chatId) {
+        if (chatRepository.findById(chatId).isEmpty()) {
+            throw new NoSuchChatException(chatId);
+        }
 
         Link link = linkDao.saveOrFindByUrl(url);
 
@@ -65,20 +61,20 @@ public class ChatDAO implements ChatDataAccessObject {
         chatLinksRepository.save(chatLinkCouple);
     }
 
-    public Link dissociateUrlByApiId(String url, long chatApiId) {
+    public Link dissociateUrlByChatId(String url, long chatId) {
+        if (chatRepository.findById(chatId).isEmpty()) {
+            throw new NoSuchChatException(chatId);
+        }
+
         Link link = linkDao.findByUrl(url)
             .orElseThrow(() -> new NoSuchLinkException(URI.create(url)));
-
-        long chatId = chatRepository.findByTelegramApiId(chatApiId)
-            .orElseThrow(() -> new NoSuchChatException(chatApiId))
-            .getId();
 
         chatLinksRepository.removeByChatIdAndLinkId(chatId, link.getId());
         return link;
     }
 
-    public Chat registerChatWithApiId(long apiId) {
-        Optional<Chat> oldChat = chatRepository.findByTelegramApiId(apiId);
+    public Chat registerChatWithId(long apiId) {
+        Optional<Chat> oldChat = chatRepository.findById(apiId);
         if (oldChat.isPresent()) {
             throw new DoubleChatRegistrationException(apiId);
         }
@@ -87,10 +83,10 @@ public class ChatDAO implements ChatDataAccessObject {
         return newChat;
     }
 
-    public void deleteChatWithApiId(long apiId) {
-        if (chatRepository.findByTelegramApiId(apiId).isEmpty()) {
-            throw new NoSuchChatException(apiId);
+    public void deleteChatWithId(long chatId) {
+        if (chatRepository.findById(chatId).isEmpty()) {
+            throw new NoSuchChatException(chatId);
         }
-        chatRepository.removeByTelegramApiId(apiId);
+        chatRepository.removeById(chatId);
     }
 }

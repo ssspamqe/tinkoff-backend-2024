@@ -1,5 +1,6 @@
 package edu.java.scrapper.webClients;
 
+import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.LinkUpdateType;
 import edu.java.webClients.exceptions.ClientErrorException;
 import edu.java.webClients.telegramBot.TelegramBotClient;
 import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;
@@ -26,10 +27,10 @@ public class TelegramBotClientTest extends WebClientTest {
             .willReturn(ok()));
 
         LinkUpdate linkUpdate = new LinkUpdate(
-            1, URI.create("http://my/link"), "description", List.of(1)
+            1, URI.create("http://my/link"), LinkUpdateType.GIT_HUB_REPOSITORY_ACTIVITIES, List.of(1L)
         );
 
-        assertDoesNotThrow(() -> telegramBotClient.sendLinkUpdates(linkUpdate));
+        assertDoesNotThrow(() -> telegramBotClient.sendLinkUpdates(List.of(linkUpdate)));
     }
 
     @Test
@@ -63,11 +64,11 @@ public class TelegramBotClientTest extends WebClientTest {
         );
 
         LinkUpdate linkUpdate = new LinkUpdate(
-            1, URI.create("http://my/link"), "discription", List.of(1)
+            1, URI.create("http://my/link"),LinkUpdateType.STACK_OVERFLOW_ANSWERS, List.of(1L)
         );
 
         assertThatThrownBy(
-            () -> telegramBotClient.sendLinkUpdates(linkUpdate)
+            () -> telegramBotClient.sendLinkUpdates(List.of(linkUpdate))
         ).isInstanceOf(ClientErrorException.class)
             .satisfies(actualResponse ->
                 assertThat(((ClientErrorException) actualResponse).getErrorResponseBody())

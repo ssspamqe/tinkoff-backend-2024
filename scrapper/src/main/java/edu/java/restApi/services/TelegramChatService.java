@@ -12,10 +12,10 @@ public class TelegramChatService {
     private final ChatDataAccessObject chatDao;
 
     public Chat registerChat(long apiId) {
-        return chatDao.registerChatWithApiId(apiId);
+        return chatDao.registerChatWithId(apiId);
     }
 
     public void deleteChat(long apiId) {
-        chatDao.deleteChatWithApiId(apiId);
+        chatDao.deleteChatWithId(apiId);
     }
 }

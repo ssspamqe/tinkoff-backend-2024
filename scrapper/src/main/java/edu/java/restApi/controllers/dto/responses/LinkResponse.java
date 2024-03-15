@@ -8,11 +8,11 @@ public record LinkResponse(
     Long id,
     URI url
 ) {
-    public LinkResponse(CachedLink link) {
-        this(Long.valueOf(link.getId()), URI.create(link.getUrl()));
+    public LinkResponse(CachedLink cachedLink) {
+        this(Long.valueOf(cachedLink.getId()), URI.create(cachedLink.getUrl()));
     }
 
     public LinkResponse(Link link) {
-        this(link.getId(), URI.create(link.getUrl()));
+        this(link.getId(), link.getUrl());
     }
 }

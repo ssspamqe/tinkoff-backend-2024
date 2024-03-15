@@ -1,5 +1,5 @@
 app:
-  scheduler:
+  scheduler-config:
     enable: true
     interval: 10s
     force-check-delay: 10s
@@ -23,6 +23,12 @@ spring:
     redis:
       host: localhost
       port: 6379
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgresql:5432/scrapper
+    password: postgres
+    username: postgres
+
   docker:
     compose:
       enabled: true

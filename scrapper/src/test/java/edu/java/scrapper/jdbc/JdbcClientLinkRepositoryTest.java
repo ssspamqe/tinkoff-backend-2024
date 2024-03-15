@@ -3,6 +3,7 @@ package edu.java.scrapper.jdbc;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
+import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,7 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
     @Test
     public void should_save() {
-        Link link = new Link("https://link", LocalDateTime.now());
+        Link link = new Link(URI.create("https://link"), LocalDateTime.now());
 
         linkRepository.save(link);
 
@@ -35,7 +36,7 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
 
         Link actualLink = linkRepository.findById(1L).get();
 
-        assertThat(actualLink.getUrl()).isEqualTo("https://link");
+        assertThat(actualLink.getUrl()).hasToString("https://url");
     }
 
     @Test
@@ -49,7 +50,7 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
     public void should_findByUrl() {
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://url','2022-06-16 16:37:23')");
 
-        Link actualLink = linkRepository.findByUrl("https://link").get();
+        Link actualLink = linkRepository.findByUrl("https://url").get();
 
         assertThat(actualLink.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16T16:37:23"));
     }

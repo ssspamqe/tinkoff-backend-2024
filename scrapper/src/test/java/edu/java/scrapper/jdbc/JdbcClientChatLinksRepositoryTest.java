@@ -20,7 +20,7 @@ public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironmen
 
     @Test
     public void should_save() {
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (11,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
         ChatLink chatLink = new ChatLink(1, 1);
 
@@ -34,15 +34,15 @@ public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironmen
     @Test
     public void should_findByChatId() {
         //Arrange
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (11,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (12,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (2,'2022-06-16 16:37:23')");
 
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link2','2022-06-16 16:37:23')");
 
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id) VALUES (1,1)");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id) VALUES (1,2)");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id) VALUES (2,1)");
+        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,1,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,2,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (2,1,'2022-06-16 16:37:23')");
 
         //Act
         List<Long> actualLinkIds = chatLinksRepository.findByChatId(1)
@@ -55,15 +55,15 @@ public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironmen
     @Test
     public void should_findByLinkId() {
         //Arrange
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (11,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (12,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (2,'2022-06-16 16:37:23')");
 
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link2','2022-06-16 16:37:23')");
 
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id) VALUES (1,1)");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id) VALUES (2,1)");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id) VALUES (1,2)");
+        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,1,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (2,1,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,2,'2022-06-16 16:37:23')");
 
         //Act
         List<Long> actualChatIds = chatLinksRepository.findByLinkId(1)
@@ -76,11 +76,11 @@ public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironmen
     @Test
     public void should_removeByChatIdAndLinkId() {
         //Arrange
-        jdbcTemplate.update("INSERT INTO chats (telegram_api_id, created_at) VALUES (11,'2022-06-16 16:37:23')");
+        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
 
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
 
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id) VALUES (1,1)");
+        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id,created_at) VALUES (1,1,'2022-06-16 16:37:23')");
 
         //Act
         boolean actualResponse = chatLinksRepository.removeByChatIdAndLinkId(1, 1);

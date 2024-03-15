@@ -17,7 +17,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     private static final RowMapper<ChatLink> ROW_MAPPER = new ChatLinkRowMapper();
 
     private static final String SAVE_QUERY =
-        STR."INSERT INTO \{TABLE_NAME} (chat_id, link_id) VALUES (:chat_id, :link_id)";
+        STR."INSERT INTO \{TABLE_NAME} (chat_id, link_id,created_at) VALUES (:chat_id, :link_id, :created_at)";
 
     private static final String FIND_BY_CHAT_ID_QUERY =
         STR."SELECT * FROM \{TABLE_NAME} WHERE chat_id = :chat_id";
@@ -35,6 +35,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
         jdbcClient.sql(SAVE_QUERY)
             .param("chat_id", chatLink.getChatId())
             .param("link_id", chatLink.getLinkId())
+            .param("created_at",chatLink.getCreatedAt())
             .update();
     }
 

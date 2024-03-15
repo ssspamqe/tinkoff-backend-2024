@@ -44,7 +44,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     @Override
     public Link save(Link link) {
         jdbcClient.sql(SAVE_QUERY)
-            .param("url", link.getUrl())
+            .param("url", link.getUrl().toString())
             .param("created_at", link.getCreatedAt())
             .update();
         return findByUrl(link.getUrl().toString())
