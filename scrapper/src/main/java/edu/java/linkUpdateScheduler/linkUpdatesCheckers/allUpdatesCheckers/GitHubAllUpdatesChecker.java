@@ -1,0 +1,135 @@
+package edu.java.linkUpdateScheduler.linkUpdatesCheckers.allUpdatesCheckers;
+
+import edu.java.data.dao.GitHubRepositoryDataAccessObject;
+import edu.java.data.dao.LinkDataAccessObject;
+import edu.java.data.exceptions.NoSuchGitHubRepositoryException;
+import edu.java.data.postgres.entities.GitHubRepositoryEntity;
+import edu.java.data.postgres.entities.Link;
+import edu.java.linkUpdateScheduler.exceptions.IncorrectHostException;
+import edu.java.linkUpdateScheduler.exceptions.UnsuccessfulGitHubUrlParseException;
+import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.LinkUpdateType;
+import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.gitHub.GitHubRepositorySingleUpdateChecker;
+import edu.java.webClients.gitHub.GitHubClient;
+import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityBody;
+import edu.java.webClients.gitHub.dto.GitHubRepositoryBody;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
+public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
+
+    private static final Set<String> HOST_NAMES = Set.of("github.com", "github.dev");
+    private static final Pattern REPOSITORY_NAME_OWNER_PATTERN = Pattern.compile("github.com/([^/]+)/([^/]+)$");
+
+    private final GitHubRepositoryDataAccessObject repositoryDao;
+    private final LinkDataAccessObject linkDao;
+    private final GitHubClient gitHubClient;
+    private final List<GitHubRepositorySingleUpdateChecker> updateCheckers;
+
+    @Override
+    public List<LinkUpdate> getUpdates(Link link) throws IncorrectHostException {
+        String hostName = link.getUrl().toString();
+        if (isIncorrectHostName(hostName)) {
+            throw new IncorrectHostException(hostName);
+        }
+
+        GitHubNicknameAndRepositoryName nicknameAndRepository = extractNicknameAndRepository(link.getUrl());
+        String nickname = nicknameAndRepository.nickname;
+        String repositoryName = nicknameAndRepository.repository;
+
+        GitHubRepositoryEntity oldRepositoryRecord = repositoryDao.findByNameAndOwner(repositoryName, nickname)
+            .orElseThrow(() -> new NoSuchGitHubRepositoryException(repositoryName, nickname));
+        GitHubRepositoryBody currentRepositoryBody = gitHubClient.fetchRepository(nickname, repositoryName);
+
+        List<LinkUpdateType> detectedUpdateTypes =
+            iterateAllSingleUpdateCheckers(oldRepositoryRecord, currentRepositoryBody);
+
+        if (!detectedUpdateTypes.isEmpty()) {
+            updateLocalRecord(currentRepositoryBody, link.getId());
+        }
+
+        return buildLinkUpdateList(link, detectedUpdateTypes);
+    }
+
+    private List<LinkUpdate> buildLinkUpdateList(Link link, List<LinkUpdateType> updateTypes) {
+        List<Long> chatIds = linkDao.findAssociatedChatsIdsById(link.getId());
+        return updateTypes.stream()
+            .map(type ->
+                new LinkUpdate(
+                    link.getId(),
+                    link.getUrl(),
+                    type,
+                    chatIds
+                )
+            )
+            .toList();
+    }
+
+    private boolean isIncorrectHostName(String hostname) {
+        return !HOST_NAMES.contains(hostname);
+    }
+
+    private GitHubNicknameAndRepositoryName extractNicknameAndRepository(URI url) {
+        Matcher matcher = REPOSITORY_NAME_OWNER_PATTERN.matcher(url.toString());
+        if (matcher.find()) {
+            String nickname = matcher.group(1);
+            String result = matcher.group(2);
+            return new GitHubNicknameAndRepositoryName(nickname, result);
+        } else {
+            throw new UnsuccessfulGitHubUrlParseException(url);
+        }
+    }
+
+    private List<LinkUpdateType> iterateAllSingleUpdateCheckers(
+        GitHubRepositoryEntity oldRepositoryRecord,
+        GitHubRepositoryBody currentRepositoryBody
+    ) {
+        List<LinkUpdateType> linkUpdateTypes = new ArrayList<>();
+        for (var updateChecker : updateCheckers) {
+            if (updateChecker.hasUpdate(oldRepositoryRecord, currentRepositoryBody)) {
+                linkUpdateTypes.add(updateChecker.getType());
+            }
+        }
+        return linkUpdateTypes;
+    }
+
+    private void updateLocalRecord(GitHubRepositoryBody newRepositoryBody, long linkId) {
+
+        long id = newRepositoryBody.id();
+        String name = newRepositoryBody.name();
+        String owner = newRepositoryBody.owner().login();
+        String descriptionMd5Hash = newRepositoryBody.getMd5Hash();
+        Set<Long> activities = gitHubClient
+            .fetchRepositoryActivities(owner, name)
+            .stream()
+            .map(GitHubRepositoryActivityBody::id)
+            .collect(Collectors.toSet());
+
+        GitHubRepositoryEntity updatedRepository =
+            new GitHubRepositoryEntity(
+                id,
+                linkId,
+                name,
+                owner,
+                descriptionMd5Hash,
+                activities
+            );
+        repositoryDao.update(updatedRepository);
+    }
+
+    private record GitHubNicknameAndRepositoryName(
+        String nickname,
+        String repository
+    ) {
+    }
+}
+

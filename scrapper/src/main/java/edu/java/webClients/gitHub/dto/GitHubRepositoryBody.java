@@ -35,7 +35,7 @@ public record GitHubRepositoryBody(
 
 ) {
     //TODO suggest a better for for hashing
-    String getMd5Hash() {
+    public String getMd5Hash() {
         return DigestUtils.md5Hex(toString());
     }
 }

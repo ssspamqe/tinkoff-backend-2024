@@ -24,12 +24,12 @@ public class StackOverflowQuestionAnswersUpdateChecker implements StackOverflowQ
     @Override
     public boolean hasUpdate(StackOverflowQuestion oldState, StackOverflowQuestionBody newState) {
         Set<Long> oldAnswers = oldState.getAnswerIds();
-        Set<Long> newAnswers = getAnswersIds(newState.id());
+        Set<Long> newAnswers = fetchAnswersIds(newState.id());
 
         return !oldAnswers.equals(newAnswers);
     }
 
-    private Set<Long> getAnswersIds(long questionId) {
+    private Set<Long> fetchAnswersIds(long questionId) {
         return stackOverflowClient
             .fetchAnswersByQuestionId(questionId)
             .items().stream()

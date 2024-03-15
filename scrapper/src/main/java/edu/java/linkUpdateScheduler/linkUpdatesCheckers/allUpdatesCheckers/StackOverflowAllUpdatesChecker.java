@@ -1,4 +1,4 @@
-package edu.java.linkUpdateScheduler.linkUpdatesCheckers;
+package edu.java.linkUpdateScheduler.linkUpdatesCheckers.allUpdatesCheckers;
 
 import edu.java.data.dao.LinkDataAccessObject;
 import edu.java.data.dao.StackOverflowQuestionDataAccessObject;
@@ -10,6 +10,7 @@ import edu.java.linkUpdateScheduler.exceptions.UnsuccessfulStackOverflowQuestion
 import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.LinkUpdateType;
 import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.stackoverflow.StackOverflowQuestionSingleUpdateChecker;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
+import edu.java.webClients.stackOverflow.dto.StackOverflowAnswerBody;
 import edu.java.webClients.stackOverflow.dto.StackOverflowQuestionBody;
 import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;
 import java.net.URI;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -48,6 +50,10 @@ public class StackOverflowAllUpdatesChecker implements LinkAllUpdatesChecker {
 
         List<LinkUpdateType> detectedUpdatesTypes =
             iterateAllSingleUpdateCheckers(oldQuestionRecord, currentQuestionBody);
+
+        if (!detectedUpdatesTypes.isEmpty()) {
+            updateLocalRecord(currentQuestionBody, link.getId());
+        }
 
         return buildLinkUpdateList(link, detectedUpdatesTypes);
     }
@@ -90,5 +96,24 @@ public class StackOverflowAllUpdatesChecker implements LinkAllUpdatesChecker {
             }
         }
         return linkUpdateTypes;
+    }
+
+    private void updateLocalRecord(StackOverflowQuestionBody newQuestionBody, long linkId) {
+        long id = newQuestionBody.id();
+        String descriptionMd5Hash = newQuestionBody.getMd5hash();
+        Set<Long> answersIds =
+            stackOverflowClient
+                .fetchAnswersByQuestionId(id)
+                .items().stream()
+                .map(StackOverflowAnswerBody::id)
+                .collect(Collectors.toSet());
+
+        StackOverflowQuestion updatedQuestion = new StackOverflowQuestion(
+            id,
+            linkId,
+            descriptionMd5Hash,
+            answersIds
+        );
+        stackOverflowQuestionDao.update(updatedQuestion);
     }
 }

@@ -15,7 +15,7 @@ public interface GitHubClient {
 
     @GetExchange(url = "/repos/{owner}/{repoName}/activity")
     List<GitHubRepositoryActivityBody> fetchRepositoryActivities(
-        @PathVariable String owner,
-        @PathVariable String repoName
+        @PathVariable String repoName,
+        @PathVariable String owner
     );
 }
