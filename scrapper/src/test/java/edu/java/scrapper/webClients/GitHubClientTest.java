@@ -71,7 +71,7 @@ public class GitHubClientTest extends WebClientTest {
 
         //Act
         List<GitHubRepositoryActivityBody> actualRepositoryActivities =
-            gitHubClient.fetchRepositoryActivities("test-repo", "test-user");
+            gitHubClient.fetchRepositoryActivitiesByRepositoryNameAndOwner("test-repo", "test-user");
 
         //Assert
         List<GitHubRepositoryActivityBody> expectedActivities = List.of(

@@ -61,8 +61,18 @@ public class LinkUpdateScheduler {
         });
 
         if (!allLinkUpdates.isEmpty()) {
-            telegramBotClient.sendLinkUpdates(allLinkUpdates);
+            LOGGER.debug(STR."Sending \{allLinkUpdates.size()} updates to bot...");
+            try {
+                telegramBotClient.sendLinkUpdates(allLinkUpdates);
+                LOGGER.debug(STR."Sent \{allLinkUpdates.size()} updates to bot");
+            } catch (Exception ex) {
+                LOGGER.warn("Can't send updates to bot, because of {}", ex.getMessage());
+            }
+
+        } else {
+            LOGGER.debug("No updates...");
         }
+
     }
 
 }

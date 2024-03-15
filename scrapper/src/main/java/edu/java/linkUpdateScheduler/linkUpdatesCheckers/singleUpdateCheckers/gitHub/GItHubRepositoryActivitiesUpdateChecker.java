@@ -31,7 +31,7 @@ public class GItHubRepositoryActivitiesUpdateChecker implements GitHubRepository
 
     private Set<Long> fetchActivitiesIds(String name, String owner) {
         return gitHubClient
-            .fetchRepositoryActivities(name, owner)
+            .fetchRepositoryActivitiesByRepositoryNameAndOwner(name, owner)
             .stream()
             .map(GitHubRepositoryActivityBody::id)
             .collect(Collectors.toSet());

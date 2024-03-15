@@ -17,14 +17,15 @@ public class JdbcClientGitHubRepositoryEntityRepository implements GitHubReposit
     private static final RowMapper<GitHubRepositoryEntity> ROW_MAPPER = new GitHubRepoitoryRowMapper();
 
     private static final String SAVE_QUERY =
-        STR."INSERT INTO \{TABLE_NAME} VALUES (:id, :name. :owner, :description_md5_hash, :activities_ids)";
+        STR."INSERT INTO \{TABLE_NAME} VALUES "
+            + "(:id, :link_id, :name, :owner, :description_md5_hash, :activities_ids)";
 
     private static final String UPDATE_QUERY =
         STR."UPDATE \{TABLE_NAME} SET "
-            + "link_id = :link_id,"
+            + "link_id = :link_id, "
             + "name = :name, "
             + "owner = :owner, "
-            + "description_md5_hash = :description_md5_hash "
+            + "description_md5_hash = :description_md5_hash, "
             + "activities_ids = :activities_ids "
             + "WHERE id = :id";
 
@@ -32,29 +33,33 @@ public class JdbcClientGitHubRepositoryEntityRepository implements GitHubReposit
         STR."SELECT * FROM \{TABLE_NAME} WHERE id = :id";
 
     private static final String FIND_BY_NAME_AND_OWNER_QUERY =
-        STR."SELECT * FROm \{TABLE_NAME} WHERE name = :name AND owner = :owner";
+        STR."SELECT * FROM \{TABLE_NAME} WHERE name = :name AND owner = :owner";
 
     private final JdbcClient jdbcClient;
 
     @Override
     public void save(GitHubRepositoryEntity repository) {
+        Long[] activities = repository.getActivitiesIds().toArray(new Long[0]);
         jdbcClient.sql(SAVE_QUERY)
-            .param("link_id", repository.getLinkId())
             .param("id", repository.getId())
+            .param("link_id", repository.getLinkId())
             .param("name", repository.getName())
             .param("owner", repository.getOwner())
             .param("description_md5_hash", repository.getDescriptionMd5Hash())
+            .param("activities_ids", activities)
             .update();
     }
 
     @Override
     public void update(GitHubRepositoryEntity repository) {
+        Long[] activities = repository.getActivitiesIds().toArray(new Long[0]);
         jdbcClient.sql(UPDATE_QUERY)
             .param("link_id", repository.getLinkId())
             .param("id", repository.getId())
             .param("name", repository.getName())
             .param("owner", repository.getOwner())
             .param("description_md5_hash", repository.getDescriptionMd5Hash())
+            .param("activities_ids", activities)
             .update();
     }
 

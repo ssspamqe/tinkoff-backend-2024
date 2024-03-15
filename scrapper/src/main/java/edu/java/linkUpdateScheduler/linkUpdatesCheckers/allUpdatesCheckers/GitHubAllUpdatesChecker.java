@@ -38,29 +38,26 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
 
     @Override
     public List<LinkUpdate> getUpdates(Link link) throws IncorrectHostException {
-        String hostName = link.getUrl().toString();
+        String hostName = link.getUrl().getHost();
         if (isIncorrectHostName(hostName)) {
             throw new IncorrectHostException(hostName);
         }
 
-        GitHubNicknameAndRepositoryName nicknameAndRepository = extractNicknameAndRepository(link.getUrl());
-        String nickname = nicknameAndRepository.nickname;
-        String repositoryName = nicknameAndRepository.repository;
+        RepositoryNameAndOwner nicknameAndRepository = extractRepositoryNameAndOwner(link.getUrl());
+        String repositoryName = nicknameAndRepository.name;
+        String owner = nicknameAndRepository.owner;
 
-        GitHubRepositoryEntity oldRepositoryRecord = repositoryDao.findByNameAndOwner(repositoryName, nickname)
-            .orElseThrow(() -> new NoSuchGitHubRepositoryException(repositoryName, nickname));
+        GitHubRepositoryEntity oldRepositoryRecord = repositoryDao.findByNameAndOwner(repositoryName, owner)
+            .orElseThrow(() -> new NoSuchGitHubRepositoryException(repositoryName, owner));
         GitHubRepositoryBody currentRepositoryBody =
-            gitHubClient.fetchRepositoryByNameAndOwner(nickname, repositoryName);
+            gitHubClient.fetchRepositoryByNameAndOwner(repositoryName, owner);
 
         List<LinkUpdateType> detectedUpdateTypes =
             iterateAllSingleUpdateCheckers(oldRepositoryRecord, currentRepositoryBody);
-
         if (!detectedUpdateTypes.isEmpty()) {
             updateLocalRecord(currentRepositoryBody, link.getId());
         }
 
-
-        linkDao.updateLastCheckedById(link.getId());
         return buildLinkUpdateList(link, detectedUpdateTypes);
     }
 
@@ -82,12 +79,12 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
         return !applicationConfig.isGitHubHostName(hostname);
     }
 
-    private GitHubNicknameAndRepositoryName extractNicknameAndRepository(URI url) {
+    private RepositoryNameAndOwner extractRepositoryNameAndOwner(URI url) {
         Matcher matcher = REPOSITORY_NAME_OWNER_PATTERN.matcher(url.toString());
         if (matcher.find()) {
-            String nickname = matcher.group(1);
-            String result = matcher.group(2);
-            return new GitHubNicknameAndRepositoryName(nickname, result);
+            String owner = matcher.group(1);
+            String repositoryName = matcher.group(2);
+            return new RepositoryNameAndOwner(repositoryName, owner);
         } else {
             throw new UnsuccessfulGitHubUrlParseException(url);
         }
@@ -113,7 +110,7 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
         String owner = newRepositoryBody.owner().login();
         String descriptionMd5Hash = newRepositoryBody.getMd5Hash();
         Set<Long> activities = gitHubClient
-            .fetchRepositoryActivities(owner, name)
+            .fetchRepositoryActivitiesByRepositoryNameAndOwner(name, owner)
             .stream()
             .map(GitHubRepositoryActivityBody::id)
             .collect(Collectors.toSet());
@@ -130,9 +127,9 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
         repositoryDao.update(updatedRepository);
     }
 
-    private record GitHubNicknameAndRepositoryName(
-        String nickname,
-        String repository
+    private record RepositoryNameAndOwner(
+        String name,
+        String owner
     ) {
     }
 }

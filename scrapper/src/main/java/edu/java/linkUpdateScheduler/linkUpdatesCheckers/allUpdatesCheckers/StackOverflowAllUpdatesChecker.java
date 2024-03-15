@@ -56,7 +56,6 @@ public class StackOverflowAllUpdatesChecker implements LinkAllUpdatesChecker {
             updateLocalRecord(currentQuestionBody, link.getId());
         }
 
-        linkDao.updateLastCheckedById(link.getId());
         return buildLinkUpdateList(link, detectedUpdatesTypes);
     }
 

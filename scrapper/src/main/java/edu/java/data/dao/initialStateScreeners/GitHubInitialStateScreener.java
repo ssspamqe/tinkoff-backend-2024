@@ -15,12 +15,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
+
 
 @Component
 @RequiredArgsConstructor
 public class GitHubInitialStateScreener implements InitialStateScreener {
 
+    private static final Logger LOGGER = LogManager.getLogger();
     private static final Pattern REPOSITORY_NAME_OWNER_PATTERN = Pattern.compile("github.com/([^/]+)/([^/]+)$");
 
     private final ApplicationConfig applicationConfig;
@@ -79,7 +83,7 @@ public class GitHubInitialStateScreener implements InitialStateScreener {
 
     private Set<Long> fetchActivitiesIds(String repositoryName, String owner) {
         return gitHubClient
-            .fetchRepositoryActivities(repositoryName, owner)
+            .fetchRepositoryActivitiesByRepositoryNameAndOwner(repositoryName, owner)
             .stream()
             .map(GitHubRepositoryActivityBody::id)
             .collect(Collectors.toSet());

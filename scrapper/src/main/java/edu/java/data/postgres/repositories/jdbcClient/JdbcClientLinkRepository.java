@@ -37,10 +37,10 @@ public class JdbcClientLinkRepository implements LinkRepository {
 
     private static final String UPDATE_QUERY =
         STR."UPDATE \{TABLE_NAME} SET "
-            + "url = :url "
-            + "created_at = :created_at "
+            + "url = :url, "
+            + "created_at = :created_at, "
             + "last_checked_at = :last_checked_at "
-            + "WHERE id = :id ";
+            + "WHERE id = :id";
     private final JdbcClient jdbcClient;
 
     @Override
@@ -56,7 +56,8 @@ public class JdbcClientLinkRepository implements LinkRepository {
     @Override
     public void update(Link link) {
         jdbcClient.sql(UPDATE_QUERY)
-            .param("url", link.getUrl())
+            .param("id",link.getId())
+            .param("url", link.getUrl().toString())
             .param("created_at", link.getCreatedAt())
             .param("last_checked_at", link.getLastCheckedAt())
             .update();
