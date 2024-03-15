@@ -4,6 +4,8 @@ import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.Collection;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +33,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
         STR."DELETE FROM \{TABLE_NAME} WHERE id = :id";
 
     private static final String FIND_BY_LAST_CHECK_DELAY_QUERY =
-        STR."SELECT * FROM \{TABLE_NAME} WHERE last_checked_at < NOW() - INTERVAL ':seconds seconds'";
+        STR."SELECT * FROM \{TABLE_NAME} WHERE last_checked_at < :timestamp";
 
     private static final String UPDATE_QUERY =
         STR."UPDATE \{TABLE_NAME} SET "
@@ -62,8 +64,9 @@ public class JdbcClientLinkRepository implements LinkRepository {
 
     @Override
     public Collection<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
+        Timestamp sqlTimestamp = Timestamp.from(Instant.now().minusSeconds(seconds));
         return jdbcClient.sql(FIND_BY_LAST_CHECK_DELAY_QUERY)
-            .param("seconds", seconds)
+            .param("timestamp", sqlTimestamp)
             .query(ROW_MAPPER)
             .set();
     }
