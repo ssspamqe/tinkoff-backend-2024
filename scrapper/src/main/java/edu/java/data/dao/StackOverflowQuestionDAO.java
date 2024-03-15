@@ -2,13 +2,14 @@ package edu.java.data.dao;
 
 import edu.java.data.postgres.entities.StackOverflowQuestion;
 import edu.java.data.postgres.repositories.StackOverflowQuestionRepository;
-import edu.java.webClients.stackOverflow.dto.StackOverflowQuestionBody;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @RequiredArgsConstructor
+@Transactional
 public class StackOverflowQuestionDAO implements StackOverflowQuestionDataAccessObject {
 
     private final StackOverflowQuestionRepository stackOverflowQuestionRepository;
@@ -33,11 +34,4 @@ public class StackOverflowQuestionDAO implements StackOverflowQuestionDataAccess
         stackOverflowQuestionRepository.save(question);
     }
 
-    //TODO finish implementation
-    @Override
-    public void save(StackOverflowQuestionBody questionBody, long linkId) {
-        throw new UnsupportedOperationException();
-//        long id = questionBody.id();
-//        String descriptionHash = questionBody.getMd5hash();
-    }
 }

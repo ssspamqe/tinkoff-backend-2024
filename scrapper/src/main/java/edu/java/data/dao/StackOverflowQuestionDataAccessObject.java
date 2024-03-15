@@ -14,5 +14,4 @@ public interface StackOverflowQuestionDataAccessObject {
 
     void save(StackOverflowQuestion question);
 
-    void save(StackOverflowQuestionBody questionBody, long linkId);
 }

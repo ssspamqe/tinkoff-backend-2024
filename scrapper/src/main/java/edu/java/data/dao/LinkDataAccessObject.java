@@ -21,9 +21,5 @@ public interface LinkDataAccessObject {
 
     void updateLastCheckedById(long id);
 
-    void updateLastCheckedById(Collection<Long> ids);
-
     void updateLastCheckedById(long id, LocalDateTime lastChecked);
-
-    void updateLastCheckedById(Collection<Long> ids, LocalDateTime lastChecked);
 }

@@ -5,9 +5,11 @@ import edu.java.data.postgres.repositories.GitHubRepositoryEntityRepository;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @RequiredArgsConstructor
+@Transactional
 public class GitHubRepositoryDAO implements GitHubRepositoryDataAccessObject {
 
     private final GitHubRepositoryEntityRepository gitHubRepositoryEntityRepository;

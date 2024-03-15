@@ -14,9 +14,11 @@ import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @RequiredArgsConstructor
+@Transactional
 public class LinkDAO implements LinkDataAccessObject {
 
     private final LinkRepository linkRepository;
@@ -35,7 +37,7 @@ public class LinkDAO implements LinkDataAccessObject {
         return linkRepository.findByUrl(url)
             .orElseGet(() -> {
                 Link newLink = new Link(URI.create(url));
-                newLink =  linkRepository.save(newLink);
+                newLink = linkRepository.save(newLink);
                 initialStateScreener.saveInitialState(newLink);
                 return newLink;
             });
@@ -56,28 +58,25 @@ public class LinkDAO implements LinkDataAccessObject {
     }
 
     @Override
-    public void updateLastCheckedById(Collection<Long> ids) {
-        LocalDateTime currentLTime = LocalDateTime.now();
-        ids.forEach(id -> updateLastCheckedById(id, currentLTime));
-    }
-
-    @Override
     public void updateLastCheckedById(long id) {
         LocalDateTime currentTime = LocalDateTime.now();
-        updateLastCheckedById(id, currentTime);
-    }
-
-    @Override
-    public void updateLastCheckedById(Collection<Long> ids, LocalDateTime lastChecked) {
-        ids.forEach(id -> updateLastCheckedById(id, lastChecked));
+        updateLastCheckedByIdWithoutTransaction(id, currentTime);
     }
 
     @Override
     public void updateLastCheckedById(long id, LocalDateTime lastChecked) {
-        Link link = linkRepository.findById(id)
-            .orElseThrow(() -> new NoSuchLinkException(id));
+        updateLastCheckedByIdWithoutTransaction(id, lastChecked);
+    }
+
+    private void updateLastCheckedByIdWithoutTransaction(long id, LocalDateTime lastChecked) {
+        Link link = findLinkByIdOrThrowException(id);
         link.setLastCheckedAt(lastChecked);
         linkRepository.update(link);
+    }
+
+    private Link findLinkByIdOrThrowException(long id) {
+        return linkRepository.findById(id)
+            .orElseThrow(() -> new NoSuchLinkException(id));
     }
 
 }

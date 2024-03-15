@@ -14,9 +14,11 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @RequiredArgsConstructor
+@Transactional
 public class ChatDAO implements ChatDataAccessObject {
     private final ChatRepository chatRepository;
     private final ChatLinksRepository chatLinksRepository;

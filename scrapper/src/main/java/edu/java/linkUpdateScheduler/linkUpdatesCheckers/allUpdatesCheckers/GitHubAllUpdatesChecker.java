@@ -59,6 +59,8 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
             updateLocalRecord(currentRepositoryBody, link.getId());
         }
 
+
+        linkDao.updateLastCheckedById(link.getId());
         return buildLinkUpdateList(link, detectedUpdateTypes);
     }
 
