@@ -4,10 +4,11 @@ import edu.java.configuration.ApplicationConfig;
 import edu.java.data.dao.LinkDataAccessObject;
 import edu.java.data.postgres.entities.Link;
 import edu.java.linkUpdateScheduler.linkUpdatesCheckers.UniversalLinkUpdatesChecker;
+import edu.java.webClients.telegramBot.TelegramBotClient;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,6 +28,7 @@ public class LinkUpdateScheduler {
     private final LinkDataAccessObject linkDao;
     private final ApplicationConfig.SchedulerConfig schedulerConfig;
     private final UniversalLinkUpdatesChecker universalLinkUpdatesChecker;
+    private final TelegramBotClient telegramBotClient;
 
     private boolean contextIsLoaded = false;
 
@@ -58,8 +60,8 @@ public class LinkUpdateScheduler {
             allLinkUpdates.addAll(linkUpdates);
         });
 
-        if(!allLinkUpdates.isEmpty()){
-
+        if (!allLinkUpdates.isEmpty()) {
+            telegramBotClient.sendLinkUpdates(allLinkUpdates);
         }
     }
 

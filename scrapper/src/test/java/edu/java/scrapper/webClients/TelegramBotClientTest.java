@@ -29,7 +29,7 @@ public class TelegramBotClientTest extends WebClientTest {
             1, URI.create("http://my/link"), "description", List.of(1)
         );
 
-        assertDoesNotThrow(() -> telegramBotClient.sendLinkUpdate(linkUpdate));
+        assertDoesNotThrow(() -> telegramBotClient.sendLinkUpdates(linkUpdate));
     }
 
     @Test
@@ -67,7 +67,7 @@ public class TelegramBotClientTest extends WebClientTest {
         );
 
         assertThatThrownBy(
-            () -> telegramBotClient.sendLinkUpdate(linkUpdate)
+            () -> telegramBotClient.sendLinkUpdates(linkUpdate)
         ).isInstanceOf(ClientErrorException.class)
             .satisfies(actualResponse ->
                 assertThat(((ClientErrorException) actualResponse).getErrorResponseBody())

@@ -9,5 +9,5 @@ import org.springframework.web.service.annotation.PostExchange;
 @HttpExchange
 public interface TelegramBotClient {
     @PostExchange(url = "/updates")
-    void sendLinkUpdate(@RequestBody List<LinkUpdate> linkUpdates);
+    void sendLinkUpdates(@RequestBody List<LinkUpdate> linkUpdates);
 }
