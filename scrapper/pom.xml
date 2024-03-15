@@ -153,13 +153,6 @@
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec.version}</version>
         </dependency>
-        <dependency>
-            <groupId>edu.java</groupId>
-            <artifactId>bot</artifactId>
-            <version>0.3</version>
-            <scope>compile</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
