@@ -31,7 +31,7 @@ public class GitHubClientTest extends WebClientTest {
 
         //Act
         GitHubRepositoryBody actualRepository =
-            gitHubClient.fetchRepository("testUser", "test-repo");
+            gitHubClient.fetchRepositoryByNameAndOwner("testUser", "test-repo");
 
         //Assert
         GitHubRepositoryBody expectedRepository =

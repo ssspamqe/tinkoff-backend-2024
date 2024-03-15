@@ -11,7 +11,7 @@ import org.springframework.web.service.annotation.HttpExchange;
 public interface GitHubClient {
 
     @GetExchange(url = "/repos/{owner}/{repoName}")
-    GitHubRepositoryBody fetchRepository(@PathVariable String repoName, @PathVariable String owner);
+    GitHubRepositoryBody fetchRepositoryByNameAndOwner(@PathVariable String repoName, @PathVariable String owner);
 
     @GetExchange(url = "/repos/{owner}/{repoName}/activity")
     List<GitHubRepositoryActivityBody> fetchRepositoryActivities(

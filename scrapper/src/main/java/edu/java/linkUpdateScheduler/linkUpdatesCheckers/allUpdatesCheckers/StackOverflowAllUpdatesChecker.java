@@ -1,5 +1,6 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.allUpdatesCheckers;
 
+import edu.java.configuration.ApplicationConfig;
 import edu.java.data.dao.LinkDataAccessObject;
 import edu.java.data.dao.StackOverflowQuestionDataAccessObject;
 import edu.java.data.exceptions.NoSuchStackOverflowQuestionException;
@@ -27,13 +28,13 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class StackOverflowAllUpdatesChecker implements LinkAllUpdatesChecker {
 
-    private static final Set<String> HOST_NAMES = Set.of("stackoverflow.com");
     private static final Pattern QUESTION_ID_EXCTRACTOR_PATTERN = Pattern.compile("questions/(\\d+)/");
 
     private final LinkDataAccessObject linkDao;
     private final StackOverflowQuestionDataAccessObject stackOverflowQuestionDao;
     private final StackOverflowClient stackOverflowClient;
     private final List<StackOverflowQuestionSingleUpdateChecker> updateCheckers;
+    private final ApplicationConfig applicationConfig;
 
     @Override
     public List<LinkUpdate> getUpdates(Link link) throws IncorrectHostException {
@@ -73,7 +74,7 @@ public class StackOverflowAllUpdatesChecker implements LinkAllUpdatesChecker {
     }
 
     private boolean isIncorrectHostName(String hostName) {
-        return !HOST_NAMES.contains(hostName);
+        return !applicationConfig.isStackOverflowHostName(hostName);
     }
 
     private long extractQuestionId(URI url) {

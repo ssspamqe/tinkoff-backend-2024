@@ -16,6 +16,6 @@ databaseChangeLog:
       relativeToChangelogFile: true
 
   - include:
-      file: migrations/git_hub_repositories.sql
+      file: entities/git_hub_repositories.sql
       relativeToChangelogFile: true
 

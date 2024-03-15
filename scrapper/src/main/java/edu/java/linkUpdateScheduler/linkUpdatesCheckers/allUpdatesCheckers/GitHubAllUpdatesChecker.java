@@ -1,5 +1,6 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.allUpdatesCheckers;
 
+import edu.java.configuration.ApplicationConfig;
 import edu.java.data.dao.GitHubRepositoryDataAccessObject;
 import edu.java.data.dao.LinkDataAccessObject;
 import edu.java.data.exceptions.NoSuchGitHubRepositoryException;
@@ -27,13 +28,13 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
 
-    private static final Set<String> HOST_NAMES = Set.of("github.com", "github.dev");
     private static final Pattern REPOSITORY_NAME_OWNER_PATTERN = Pattern.compile("github.com/([^/]+)/([^/]+)$");
 
     private final GitHubRepositoryDataAccessObject repositoryDao;
     private final LinkDataAccessObject linkDao;
     private final GitHubClient gitHubClient;
     private final List<GitHubRepositorySingleUpdateChecker> updateCheckers;
+    private final ApplicationConfig applicationConfig;
 
     @Override
     public List<LinkUpdate> getUpdates(Link link) throws IncorrectHostException {
@@ -48,7 +49,8 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
 
         GitHubRepositoryEntity oldRepositoryRecord = repositoryDao.findByNameAndOwner(repositoryName, nickname)
             .orElseThrow(() -> new NoSuchGitHubRepositoryException(repositoryName, nickname));
-        GitHubRepositoryBody currentRepositoryBody = gitHubClient.fetchRepository(nickname, repositoryName);
+        GitHubRepositoryBody currentRepositoryBody =
+            gitHubClient.fetchRepositoryByNameAndOwner(nickname, repositoryName);
 
         List<LinkUpdateType> detectedUpdateTypes =
             iterateAllSingleUpdateCheckers(oldRepositoryRecord, currentRepositoryBody);
@@ -75,7 +77,7 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
     }
 
     private boolean isIncorrectHostName(String hostname) {
-        return !HOST_NAMES.contains(hostname);
+        return !applicationConfig.isGitHubHostName(hostname);
     }
 
     private GitHubNicknameAndRepositoryName extractNicknameAndRepository(URI url) {

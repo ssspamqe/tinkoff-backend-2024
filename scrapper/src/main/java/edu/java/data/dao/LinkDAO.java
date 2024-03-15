@@ -1,10 +1,12 @@
 package edu.java.data.dao;
 
+import edu.java.data.dao.initialStateScreeners.UniversalInitialStateScreener;
 import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.postgres.entities.ChatLink;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.ChatLinksRepository;
 import edu.java.data.postgres.repositories.LinkRepository;
+import java.net.URI;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -19,6 +21,7 @@ public class LinkDAO implements LinkDataAccessObject {
 
     private final LinkRepository linkRepository;
     private final ChatLinksRepository chatLinksRepository;
+    private final UniversalInitialStateScreener initialStateScreener;
 
     public Optional<Link> findByUrl(String url) {
         return linkRepository.findByUrl(url);
@@ -31,8 +34,10 @@ public class LinkDAO implements LinkDataAccessObject {
     public Link saveOrFindByUrl(String url) {
         return linkRepository.findByUrl(url)
             .orElseGet(() -> {
-                Link newLink = new Link(url);
-                return linkRepository.save(newLink);
+                Link newLink = new Link(URI.create(url));
+                newLink =  linkRepository.save(newLink);
+                initialStateScreener.saveInitialState(newLink);
+                return newLink;
             });
     }
 

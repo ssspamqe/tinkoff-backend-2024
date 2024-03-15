@@ -3,6 +3,7 @@ package edu.java.configuration;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import java.time.Duration;
+import java.util.Set;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -23,7 +24,13 @@ public record ApplicationConfig(
     ApiUrl gitHubUrl,
 
     @NotNull
-    ApiUrl telegramBotUrl
+    ApiUrl telegramBotUrl,
+
+    @NotNull
+    Set<String> gitHubHostNames,
+
+    @NotNull
+    Set<String> stackOverflowHostNames
 ) {
 
     public record SchedulerConfig(boolean enable, @NotNull Duration interval, @NotNull Duration forceCheckDelay) {
@@ -36,5 +43,13 @@ public record ApplicationConfig(
             }
             return configUrl;
         }
+    }
+
+    public boolean isGitHubHostName(String hostName) {
+        return gitHubHostNames.contains(hostName);
+    }
+
+    public boolean isStackOverflowHostName(String hostName) {
+        return stackOverflowHostNames.contains(hostName);
     }
 }
