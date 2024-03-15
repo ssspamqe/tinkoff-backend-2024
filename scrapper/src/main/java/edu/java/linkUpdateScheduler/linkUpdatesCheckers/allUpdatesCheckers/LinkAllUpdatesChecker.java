@@ -1,4 +1,4 @@
-package edu.java.linkUpdateScheduler.linkUpdatesCheckers;
+package edu.java.linkUpdateScheduler.linkUpdatesCheckers.allUpdatesCheckers;
 
 import edu.java.data.postgres.entities.Link;
 import edu.java.linkUpdateScheduler.exceptions.IncorrectHostException;

@@ -21,8 +21,9 @@ public class JdbcClientGitHubRepositoryEntityRepository implements GitHubReposit
 
     private static final String UPDATE_QUERY =
         STR."UPDATE \{TABLE_NAME} SET "
-            + "name = :name "
-            + "owner = :owner "
+            + "link_id = :link_id,"
+            + "name = :name, "
+            + "owner = :owner, "
             + "description_md5_hash = :description_md5_hash "
             + "activities_ids = :activities_ids "
             + "WHERE id = :id";
@@ -38,6 +39,7 @@ public class JdbcClientGitHubRepositoryEntityRepository implements GitHubReposit
     @Override
     public void save(GitHubRepositoryEntity repository) {
         jdbcClient.sql(SAVE_QUERY)
+            .param("link_id", repository.getLinkId())
             .param("id", repository.getId())
             .param("name", repository.getName())
             .param("owner", repository.getOwner())
@@ -48,6 +50,7 @@ public class JdbcClientGitHubRepositoryEntityRepository implements GitHubReposit
     @Override
     public void update(GitHubRepositoryEntity repository) {
         jdbcClient.sql(UPDATE_QUERY)
+            .param("link_id", repository.getLinkId())
             .param("id", repository.getId())
             .param("name", repository.getName())
             .param("owner", repository.getOwner())
