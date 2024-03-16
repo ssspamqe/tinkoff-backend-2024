@@ -62,7 +62,7 @@ public class CommandService {
         }
 
         ExecutableWithUserParametersSlashCommand slashCommand =
-            parseExecutableWithUserParametersSlashCommandOrThrowException(botMessage.text());
+            parseParameterizedSlashCommandOrThrowException(botMessage.text());
 
         Long chatId = botMessage.chat().id();
         String response = slashCommand.executeWithUserParametersAndGetResponse(userParameters);
@@ -70,7 +70,7 @@ public class CommandService {
     }
 
     //TODO find a shorter name
-    private ExecutableWithUserParametersSlashCommand parseExecutableWithUserParametersSlashCommandOrThrowException(
+    private ExecutableWithUserParametersSlashCommand parseParameterizedSlashCommandOrThrowException(
         String text
     ) {
         try {

@@ -2,16 +2,14 @@ package edu.java.bot.telegramBot.slashCommandServices.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
-import edu.java.bot.data.entities.Subscription;
-import edu.java.bot.data.repositories.SubscriptionRepository;
-import jakarta.validation.ConstraintViolation;
+import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
+import edu.java.bot.webClients.scrapper.dto.requests.RemoveLinkRequest;
 import jakarta.validation.Validator;
-import java.util.Optional;
-import java.util.Set;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class UntrackSlashCommand implements ExecutableWithUserParametersSlashCommand {
 
     private static final String TEXT_COMMAND = "/untrack";
@@ -20,14 +18,8 @@ public class UntrackSlashCommand implements ExecutableWithUserParametersSlashCom
     private static final String NO_SUCH_SUBSCRIPTION_MESSAGE = "You don't have such subscription";
     private static final String SUCCESSFULLY_UNTRACKED_MESSAGE = "/unrack command succeed!";
 
-    private final SubscriptionRepository subscriptionRepository;
     private final Validator validator;
-
-    @Autowired
-    public UntrackSlashCommand(SubscriptionRepository subscriptionRepository, Validator validator) {
-        this.subscriptionRepository = subscriptionRepository;
-        this.validator = validator;
-    }
+    private final ScrapperLinksClient scrapperLinksClient;
 
     @Override
     public String getTextCommand() {
@@ -45,41 +37,19 @@ public class UntrackSlashCommand implements ExecutableWithUserParametersSlashCom
         return STR."\{username},\n\{PARAMETERS_REQUEST_MESSAGE}";
     }
 
-    @Override
+    @Override //TODO add exception handling
     public String executeWithUserParametersAndGetResponse(Message message) {
-        Long userId = message.from().id();
-        String link = message.text();
-        Subscription subscriptionToDelete = new Subscription(0L, userId, link);
+        long chatId = message.from().id();
+        String url = message.text();
 
-        var triggeredViolations = validator.validate(subscriptionToDelete);
-        if (!triggeredViolations.isEmpty()) {
-            return buildErrorResponse(triggeredViolations);
-        }
+        sendToScrapperNewUrlChatIdDissociation(url, chatId);
 
-        var userSubscriptions = subscriptionRepository.findAllByUserId(userId);
-        Optional<Subscription> oldSubscription =
-            userSubscriptions.stream()
-                .filter(
-                    subscription -> link.equals(subscription.getLink())
-                ).findFirst();
-        if (oldSubscription.isEmpty()) {
-            return NO_SUCH_SUBSCRIPTION_MESSAGE;
-        }
-
-        subscriptionRepository.deleteById(oldSubscription.get().getId());
         return SUCCESSFULLY_UNTRACKED_MESSAGE;
     }
 
-    private String buildErrorResponse(Set<ConstraintViolation<Subscription>> violations) {
-        var violationList = violations.stream().toList();
-
-        StringBuilder response = new StringBuilder();
-        response.append("Can't /untrack link because:\n");
-        for (int i = 0; i < violationList.size(); i++) {
-            response.append(STR."\{i + 1}) \{violationList.get(i).getMessage()}");
-        }
-
-        return response.toString();
+    private void sendToScrapperNewUrlChatIdDissociation(String url, long chatId) {
+        RemoveLinkRequest removeLinkRequest = new RemoveLinkRequest(url);
+        scrapperLinksClient.untrackLinkByChatId(removeLinkRequest, chatId);
     }
 
     @Override

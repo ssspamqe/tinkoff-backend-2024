@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
         MethodArgumentNotValidException exception
     ) {
         HttpStatusCode statusCode = exception.getStatusCode();
-        String description = Arrays.toString( exception.getDetailMessageArguments());
+        String description = Arrays.toString(exception.getDetailMessageArguments());
         ApiErrorResponse errorResponse =
             buildDefaultErrorResponse(statusCode, description, exception);
 

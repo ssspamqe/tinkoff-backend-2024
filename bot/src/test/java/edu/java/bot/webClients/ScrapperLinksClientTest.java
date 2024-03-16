@@ -47,7 +47,7 @@ public class ScrapperLinksClientTest extends WebClientTest {
             )
         );
 
-        ListLinksResponse actualResponse = scrapperLinksClient.findTrackedLinks(1);
+        ListLinksResponse actualResponse = scrapperLinksClient.fetchTrackedLinksByChatId(1);
         ListLinksResponse expectedResponseBody = new ListLinksResponse(
             List.of(
                 new LinkResponse(1, URI.create("http://first/link")),
@@ -129,7 +129,7 @@ public class ScrapperLinksClientTest extends WebClientTest {
         );
 
         assertThatThrownBy(
-            () -> scrapperLinksClient.findTrackedLinks(1)
+            () -> scrapperLinksClient.fetchTrackedLinksByChatId(1)
         )
             .isInstanceOf(ClientErrorException.class)
             .satisfies(actualException ->

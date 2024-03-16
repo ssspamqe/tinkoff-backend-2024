@@ -2,15 +2,14 @@ package edu.java.bot.telegramBot.slashCommandServices.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
-import edu.java.bot.data.entities.Subscription;
-import edu.java.bot.data.repositories.SubscriptionRepository;
-import jakarta.validation.ConstraintViolation;
+import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
+import edu.java.bot.webClients.scrapper.dto.requests.AddLinkRequest;
 import jakarta.validation.Validator;
-import java.util.Set;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class TrackSlashCommand implements ExecutableWithUserParametersSlashCommand {
 
     private static final String TEXT_COMMAND = "/track";
@@ -19,14 +18,8 @@ public class TrackSlashCommand implements ExecutableWithUserParametersSlashComma
     private static final String PARAMETERS_REQUEST_MESSAGE = "Reply to this message with link to /track it!";
     private static final String SUBSCRIPTION_WAS_PREVIOUSLY_ADDED = "This link was already added to /track it";
 
-    private final SubscriptionRepository subscriptionRepository;
     private final Validator validator;
-
-    @Autowired
-    public TrackSlashCommand(SubscriptionRepository subscriptionRepository, Validator validator) {
-        this.subscriptionRepository = subscriptionRepository;
-        this.validator = validator;
-    }
+    private final ScrapperLinksClient scrapperLinksClient;
 
     @Override
     public String getTextCommand() {
@@ -44,47 +37,19 @@ public class TrackSlashCommand implements ExecutableWithUserParametersSlashComma
         return STR."\{username},\n\{PARAMETERS_REQUEST_MESSAGE}";
     }
 
-    @Override
+    @Override //TODO add exception handling
     public String executeWithUserParametersAndGetResponse(Message message) {
-        Long userId = message.from().id();
-        String link = message.text();
+        Long chatId = message.chat().id();
+        String url = message.text();
 
-        Subscription subscription = new Subscription(0L, userId, link);
+        sendToScrapperNewUrlChatIdAssociation(url, chatId);
 
-        var triggeredSubscriptionViolations = validator.validate(subscription);
-        if (!triggeredSubscriptionViolations.isEmpty()) {
-            return buildErrorResponse(triggeredSubscriptionViolations);
-        }
-
-        if (subscriptionWasPreviouslyAdded(subscription)) {
-            return SUBSCRIPTION_WAS_PREVIOUSLY_ADDED;
-        }
-
-        subscriptionRepository.save(subscription);
         return LINK_SUCCESSFULLY_ADDED_MESSAGE;
     }
 
-    private String buildErrorResponse(Set<ConstraintViolation<Subscription>> violations) {
-        var violationList = violations.stream().toList();
-
-        StringBuilder response = new StringBuilder();
-        response.append("Can't /track link because:\n");
-        for (int i = 0; i < violationList.size(); i++) {
-            response.append(STR."\{i + 1}) \{violationList.get(i).getMessage()}");
-        }
-
-        return response.toString();
-    }
-
-    private boolean subscriptionWasPreviouslyAdded(Subscription subscription) {
-        var userSubscriptions = subscriptionRepository.findAllByUserId(subscription.getUserId());
-        boolean linkWasAlreadyAdded =
-            userSubscriptions
-                .stream()
-                .anyMatch(
-                    oldSubscription -> subscription.getLink().equals(oldSubscription.getLink())
-                );
-        return !userSubscriptions.isEmpty() && linkWasAlreadyAdded;
+    public void sendToScrapperNewUrlChatIdAssociation(String url, long chatId) {
+        AddLinkRequest addLinkRequest = new AddLinkRequest(url);
+        scrapperLinksClient.trackLinkByChatId(addLinkRequest, chatId);
     }
 
     @Override
