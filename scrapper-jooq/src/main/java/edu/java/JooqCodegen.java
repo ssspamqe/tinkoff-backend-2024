@@ -10,8 +10,12 @@ import org.jooq.meta.jaxb.Property;
 import org.jooq.meta.jaxb.Target;
 
 public class JooqCodegen {
-    public static void main(String[] args) throws Exception {
 
+    private JooqCodegen() {
+    }
+
+    @SuppressWarnings("MultipleStringLiterals")
+    public static void generate() throws Exception {
         Database database = new Database()
             .withName("org.jooq.meta.postgres.PostgresDatabase")
             .withProperties(
