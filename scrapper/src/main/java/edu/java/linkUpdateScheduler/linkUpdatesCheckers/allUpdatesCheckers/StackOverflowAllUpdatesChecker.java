@@ -8,7 +8,7 @@ import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.entities.StackOverflowQuestion;
 import edu.java.linkUpdateScheduler.exceptions.IncorrectHostException;
 import edu.java.linkUpdateScheduler.exceptions.UnsuccessfulStackOverflowQuestionUrlParseException;
-import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.LinkUpdateType;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.stackoverflow.StackOverflowQuestionSingleUpdateChecker;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
 import edu.java.webClients.stackOverflow.dto.StackOverflowAnswerBody;

@@ -1,6 +1,6 @@
 package edu.java.scrapper.webClients;
 
-import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.LinkUpdateType;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.webClients.exceptions.ClientErrorException;
 import edu.java.webClients.telegramBot.TelegramBotClient;
 import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;

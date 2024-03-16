@@ -1,4 +1,4 @@
-package edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers;
+package edu.java.webClients.telegramBot.dto.requests;
 
 public enum LinkUpdateType {
     STACK_OVERFLOW_DESCRIPTION,

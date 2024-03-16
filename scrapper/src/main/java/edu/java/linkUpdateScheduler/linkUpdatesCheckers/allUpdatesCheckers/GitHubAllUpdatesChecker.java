@@ -8,7 +8,7 @@ import edu.java.data.postgres.entities.GitHubRepositoryEntity;
 import edu.java.data.postgres.entities.Link;
 import edu.java.linkUpdateScheduler.exceptions.IncorrectHostException;
 import edu.java.linkUpdateScheduler.exceptions.UnsuccessfulGitHubUrlParseException;
-import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.LinkUpdateType;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.gitHub.GitHubRepositorySingleUpdateChecker;
 import edu.java.webClients.gitHub.GitHubClient;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityBody;

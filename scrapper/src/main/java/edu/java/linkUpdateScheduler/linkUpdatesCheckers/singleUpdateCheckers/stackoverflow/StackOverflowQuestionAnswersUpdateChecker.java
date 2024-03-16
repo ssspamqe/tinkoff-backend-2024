@@ -1,7 +1,7 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.stackoverflow;
 
 import edu.java.data.postgres.entities.StackOverflowQuestion;
-import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.LinkUpdateType;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
 import edu.java.webClients.stackOverflow.dto.StackOverflowAnswerBody;
 import edu.java.webClients.stackOverflow.dto.StackOverflowQuestionBody;
