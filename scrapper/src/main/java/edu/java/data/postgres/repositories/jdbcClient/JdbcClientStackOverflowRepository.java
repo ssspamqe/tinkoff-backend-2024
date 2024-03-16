@@ -18,16 +18,17 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
     private static final String TABLE_NAME = "stack_overflow_questions";
 
     private static final String FIND_BY_LINK_ID_QUERY =
-        STR."SELECT * FROM \{TABLE_NAME} WHERE id = :id";
+        STR."SELECT * FROM \{TABLE_NAME} WHERE link_id = :link_id";
 
     private static final String UPDATE_QUERY =
         STR."UPDATE \{TABLE_NAME} SET "
-            + "link_id = :link_id "
-            + "description_md5_hash = :description_md5_hash "
-            + "answer_api_ids = :answer_api_ids";
+            + "link_id = :link_id, "
+            + "description_md5_hash = :description_md5_hash, "
+            + "answers_ids = :answers_ids "
+            + "WHERE id  = :id";
 
     private static final String SAVE_QUERY =
-        STR."INSERT INTO \{TABLE_NAME} VALUES (:id, :link_id, :description_md5_hash, :answer_api_ids)";
+        STR."INSERT INTO \{TABLE_NAME} VALUES (:id, :link_id, :description_md5_hash, :answers_ids)";
 
     private static final String FIND_BY_ID_QUERY =
         STR."SELECT * FROM \{TABLE_NAME} WHERE id = :id";
@@ -52,20 +53,23 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
 
     @Override
     public void save(StackOverflowQuestion question) {
+        Long[] answers = question.getAnswerIds().toArray(new Long[0]);
         jdbcClient.sql(SAVE_QUERY)
             .param("id", question.getId())
             .param("link_id", question.getLinkId())
             .param("description_md5_hash", question.getDescriptionMd5Hash())
-            .param("answer_api_ids", question.getAnswerIds())
+            .param("answers_ids", answers)
             .update();
     }
 
     @Override
     public void update(StackOverflowQuestion question) {
+        Long[] answers = question.getAnswerIds().toArray(new Long[0]);
         jdbcClient.sql(UPDATE_QUERY)
+            .param("id", question.getId())
             .param("link_id", question.getLinkId())
             .param("description_md5_hash", question.getDescriptionMd5Hash())
-            .param("answer_api_ids", question.getAnswerIds())
+            .param("answers_ids", answers)
             .update();
     }
 }

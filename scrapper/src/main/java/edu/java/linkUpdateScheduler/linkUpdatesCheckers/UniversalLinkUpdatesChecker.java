@@ -26,8 +26,6 @@ public class UniversalLinkUpdatesChecker {
                 return linkUpdateChecker.getUpdates(link);
             } catch (IncorrectHostException _) {
 
-            } catch (Exception ex) {
-                LOGGER.warn("Can't parse link with url {} because of {}", link.getUrl(), ex.getMessage());
             }
         }
         linkDao.updateLastCheckedById(link.getId());

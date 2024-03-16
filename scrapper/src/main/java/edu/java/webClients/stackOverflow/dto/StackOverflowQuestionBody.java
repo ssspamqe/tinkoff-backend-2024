@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.commons.codec.digest.DigestUtils;
 
 public record StackOverflowQuestionBody(
+    @JsonProperty("question_id")
     long id,
 
     List<String> tags,

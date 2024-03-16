@@ -38,7 +38,7 @@ public class StackOverflowAllUpdatesChecker implements LinkAllUpdatesChecker {
 
     @Override
     public List<LinkUpdate> getUpdates(Link link) throws IncorrectHostException {
-        String hostName = link.getUrl().toString();
+        String hostName = link.getUrl().getHost();
         if (isIncorrectHostName(hostName)) {
             throw new IncorrectHostException(hostName);
         }
