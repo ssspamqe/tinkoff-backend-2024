@@ -56,7 +56,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     @Override
     public void update(Link link) {
         jdbcClient.sql(UPDATE_QUERY)
-            .param("id",link.getId())
+            .param("id", link.getId())
             .param("url", link.getUrl().toString())
             .param("created_at", link.getCreatedAt())
             .param("last_checked_at", link.getLastCheckedAt())

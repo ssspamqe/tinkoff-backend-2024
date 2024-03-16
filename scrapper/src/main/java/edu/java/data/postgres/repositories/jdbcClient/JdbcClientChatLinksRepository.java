@@ -35,7 +35,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
         jdbcClient.sql(SAVE_QUERY)
             .param("chat_id", chatLink.getChatId())
             .param("link_id", chatLink.getLinkId())
-            .param("created_at",chatLink.getCreatedAt())
+            .param("created_at", chatLink.getCreatedAt())
             .update();
     }
 

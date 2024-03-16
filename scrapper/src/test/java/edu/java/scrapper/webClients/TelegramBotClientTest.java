@@ -64,7 +64,7 @@ public class TelegramBotClientTest extends WebClientTest {
         );
 
         LinkUpdate linkUpdate = new LinkUpdate(
-            1, URI.create("http://my/link"),LinkUpdateType.STACK_OVERFLOW_ANSWERS, List.of(1L)
+            1, URI.create("http://my/link"), LinkUpdateType.STACK_OVERFLOW_ANSWERS, List.of(1L)
         );
 
         assertThatThrownBy(

@@ -1,7 +1,6 @@
 package edu.java.data.dao;
 
 import edu.java.data.postgres.entities.StackOverflowQuestion;
-import edu.java.webClients.stackOverflow.dto.StackOverflowQuestionBody;
 import java.util.Optional;
 
 public interface StackOverflowQuestionDataAccessObject {

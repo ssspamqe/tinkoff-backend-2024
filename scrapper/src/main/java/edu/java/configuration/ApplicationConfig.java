@@ -33,6 +33,14 @@ public record ApplicationConfig(
     Set<String> stackOverflowHostNames
 ) {
 
+    public boolean isGitHubHostName(String hostName) {
+        return gitHubHostNames.contains(hostName);
+    }
+
+    public boolean isStackOverflowHostName(String hostName) {
+        return stackOverflowHostNames.contains(hostName);
+    }
+
     public record SchedulerConfig(boolean enable, @NotNull Duration interval, @NotNull Duration forceCheckDelay) {
     }
 
@@ -45,11 +53,4 @@ public record ApplicationConfig(
         }
     }
 
-    public boolean isGitHubHostName(String hostName) {
-        return gitHubHostNames.contains(hostName);
-    }
-
-    public boolean isStackOverflowHostName(String hostName) {
-        return stackOverflowHostNames.contains(hostName);
-    }
 }

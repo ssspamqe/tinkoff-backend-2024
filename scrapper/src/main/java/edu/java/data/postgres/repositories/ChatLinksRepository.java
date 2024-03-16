@@ -5,8 +5,11 @@ import java.util.List;
 
 public interface ChatLinksRepository {
     void save(ChatLink chatLink);
+
     List<ChatLink> findByChatId(long chatId);
+
     List<ChatLink> findByLinkId(long linkId);
+
     boolean removeByChatIdAndLinkId(long chatId, long linkId);
 }
 

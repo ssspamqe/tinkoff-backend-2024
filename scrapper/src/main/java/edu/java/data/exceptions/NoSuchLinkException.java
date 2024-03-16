@@ -17,7 +17,7 @@ public class NoSuchLinkException extends DataServiceException {
         super(STR."There is no link with such link: \{linkUrl}");
     }
 
-    public NoSuchLinkException(long linkId){
+    public NoSuchLinkException(long linkId) {
         super(STR."There is no such link with id \{linkId}");
     }
 

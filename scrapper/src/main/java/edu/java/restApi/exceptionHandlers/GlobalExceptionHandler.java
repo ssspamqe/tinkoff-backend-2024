@@ -1,7 +1,7 @@
 package edu.java.restApi.exceptionHandlers;
 
-import edu.java.restApi.controllers.dto.responses.ApiErrorResponse;
 import edu.java.data.exceptions.DataServiceException;
+import edu.java.restApi.controllers.dto.responses.ApiErrorResponse;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;

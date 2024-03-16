@@ -1,7 +1,6 @@
 package edu.java.data.postgres.repositories;
 
 import edu.java.data.postgres.entities.Link;
-
 import java.util.Collection;
 import java.util.Optional;
 

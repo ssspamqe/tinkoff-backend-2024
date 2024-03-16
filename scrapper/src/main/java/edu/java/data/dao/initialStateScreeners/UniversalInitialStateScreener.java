@@ -17,7 +17,7 @@ public class UniversalInitialStateScreener {
             try {
                 initialStateScreener.saveInitialState(link);
                 return true;
-            } catch (IncorrectHostException _) {
+            } catch (IncorrectHostException ex) {
             }
         }
         return false;

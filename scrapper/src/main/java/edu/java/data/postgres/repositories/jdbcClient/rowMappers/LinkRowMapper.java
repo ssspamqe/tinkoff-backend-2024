@@ -5,7 +5,6 @@ import java.net.URI;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
-
 import org.springframework.jdbc.core.RowMapper;
 
 public class LinkRowMapper implements RowMapper<Link> {

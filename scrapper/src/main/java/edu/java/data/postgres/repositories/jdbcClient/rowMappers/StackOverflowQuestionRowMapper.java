@@ -15,16 +15,16 @@ public class StackOverflowQuestionRowMapper implements RowMapper<StackOverflowQu
         long linkId = rs.getLong("link_id");
         String descriptionMd5Hash = rs.getString("description_md5_hash");
 
-        Object[] arrayData =  (Object[]) rs.getArray("answers_ids").getArray();
+        Object[] arrayData = (Object[]) rs.getArray("answers_ids").getArray();
         Set<Long> answerApiIds = buildSetLong(arrayData);
 
         return new StackOverflowQuestion(id, linkId, descriptionMd5Hash, answerApiIds);
     }
 
-    private Set<Long> buildSetLong(Object[] arrayData){
+    private Set<Long> buildSetLong(Object[] arrayData) {
         Set<Long> result = new HashSet<>();
-        for(var data : arrayData){
-            result.add((long)data);
+        for (var data : arrayData) {
+            result.add((long) data);
         }
         return result;
     }
