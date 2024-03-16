@@ -1,12 +1,12 @@
-create table git_hub_repositories
+CREATE TABLE git_hub_repositories
 (
-    id                   bigint,
-    link_id              bigint not null references links (id) on delete cascade,
-    name                 varchar(128) not null,
-    owner                varchar(128) not null,
-    description_md5_hash text         not null,
-    activities_ids       bigint[]     not null,
+    id                   BIGINT,
+    link_id              BIGINT       NOT NULL REFERENCES links (id) ON DELETE CASCADE,
+    name                 VARCHAR(128) NOT NULL,
+    owner                VARCHAR(128) NOT NULL,
+    description_md5_hash TEXT         NOT NULL,
+    activities_ids       BIGINT[]     NOT NULL,
 
-    unique (name, owner),
-    primary key (id)
+    UNIQUE (name, owner),
+    PRIMARY KEY (id)
 )
