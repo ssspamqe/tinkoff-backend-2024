@@ -31,6 +31,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     private final JdbcClient jdbcClient;
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public void save(ChatLink chatLink) {
         jdbcClient.sql(SAVE_QUERY)
             .param("chat_id", chatLink.getChatId())
@@ -40,6 +41,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public List<ChatLink> findByChatId(long chatId) {
         return jdbcClient.sql(FIND_BY_CHAT_ID_QUERY)
             .param("chat_id", chatId)
@@ -48,6 +50,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public List<ChatLink> findByLinkId(long linkId) {
         return jdbcClient.sql(FIND_BY_LINK_ID_QUERY)
             .param("link_id", linkId)
@@ -56,6 +59,7 @@ public class JdbcClientChatLinksRepository implements ChatLinksRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public boolean removeByChatIdAndLinkId(long chatId, long linkId) {
         return jdbcClient.sql(DELETE_BY_CHAT_ID_AND_LINK_ID_QUERY)
             .param("chat_id", chatId)

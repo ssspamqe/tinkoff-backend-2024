@@ -44,6 +44,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     private final JdbcClient jdbcClient;
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public Link save(Link link) {
         jdbcClient.sql(SAVE_QUERY)
             .param("url", link.getUrl().toString())
@@ -54,6 +55,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public void update(Link link) {
         jdbcClient.sql(UPDATE_QUERY)
             .param("id", link.getId())
@@ -64,6 +66,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public Collection<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
         Timestamp sqlTimestamp = Timestamp.from(Instant.now().minusSeconds(seconds));
         return jdbcClient.sql(FIND_BY_LAST_CHECK_DELAY_QUERY)
@@ -73,6 +76,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public Optional<Link> findById(long id) {
         return jdbcClient.sql(FIND_BY_ID_QUERY)
             .param("id", id)
@@ -81,6 +85,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public Optional<Link> findByUrl(String url) {
         return jdbcClient.sql(FIND_BY_URL_QUERY)
             .param("url", url)
@@ -89,6 +94,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public boolean removeById(long id) {
         return jdbcClient.sql(DELETE_BY_ID_QUERY)
             .param("id", id)

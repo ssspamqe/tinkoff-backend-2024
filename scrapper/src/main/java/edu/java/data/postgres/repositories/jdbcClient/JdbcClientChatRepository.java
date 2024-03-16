@@ -28,6 +28,7 @@ public class JdbcClientChatRepository implements ChatRepository {
     private final JdbcClient jdbcClient;
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public void save(Chat chat) {
         jdbcClient.sql(SAVE_QUERY)
             .param("id", chat.getId())
@@ -36,6 +37,7 @@ public class JdbcClientChatRepository implements ChatRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public Optional<Chat> findById(long id) {
         return jdbcClient.sql(FIND_BY_ID_QUERY)
             .param("id", id)
@@ -44,6 +46,7 @@ public class JdbcClientChatRepository implements ChatRepository {
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public boolean removeById(long id) {
         return jdbcClient.sql(DELETE_BY_ID_QUERY)
             .param("id", id)

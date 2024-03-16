@@ -24,7 +24,7 @@ public class UniversalLinkUpdatesChecker {
         for (var linkUpdateChecker : linkAllUpdatesCheckers) {
             try {
                 return linkUpdateChecker.getUpdates(link);
-            } catch (IncorrectHostException _) {
+            } catch (IncorrectHostException ex) {
 
             }
         }

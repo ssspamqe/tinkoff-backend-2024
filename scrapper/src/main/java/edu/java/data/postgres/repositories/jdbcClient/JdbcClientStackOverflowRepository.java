@@ -36,6 +36,7 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
     private final JdbcClient jdbcClient;
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public Optional<StackOverflowQuestion> findById(long id) {
         return jdbcClient.sql(FIND_BY_ID_QUERY)
             .param("id", id)
@@ -44,6 +45,7 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public Optional<StackOverflowQuestion> findByLinkId(long linkId) {
         return jdbcClient.sql(FIND_BY_LINK_ID_QUERY)
             .param("link_id", linkId)
@@ -52,6 +54,7 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public void save(StackOverflowQuestion question) {
         Long[] answers = question.getAnswerIds().toArray(new Long[0]);
         jdbcClient.sql(SAVE_QUERY)
@@ -63,6 +66,7 @@ public class JdbcClientStackOverflowRepository implements StackOverflowQuestionR
     }
 
     @Override
+    @SuppressWarnings("MultipleStringLiterals")
     public void update(StackOverflowQuestion question) {
         Long[] answers = question.getAnswerIds().toArray(new Long[0]);
         jdbcClient.sql(UPDATE_QUERY)

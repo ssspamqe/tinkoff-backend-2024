@@ -47,7 +47,9 @@ public class StackOverflowAllUpdatesChecker implements LinkAllUpdatesChecker {
         StackOverflowQuestionBody currentQuestionBody =
             stackOverflowClient.fetchQuestionById(questionId).items().getFirst();
         StackOverflowQuestion oldQuestionRecord = stackOverflowQuestionDao.findById(questionId)
-            .orElseThrow(() -> new NoSuchStackOverflowQuestionException(STR."There is no question with id \{questionId}"));
+            .orElseThrow(
+                () -> new NoSuchStackOverflowQuestionException(STR."There is no question with id \{questionId}")
+            );
 
         List<LinkUpdateType> detectedUpdatesTypes =
             iterateAllSingleUpdateCheckers(oldQuestionRecord, currentQuestionBody);
