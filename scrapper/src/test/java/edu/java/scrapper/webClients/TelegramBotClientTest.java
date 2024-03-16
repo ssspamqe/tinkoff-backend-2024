@@ -1,9 +1,9 @@
 package edu.java.scrapper.webClients;
 
-import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.webClients.exceptions.ClientErrorException;
 import edu.java.webClients.telegramBot.TelegramBotClient;
 import edu.java.webClients.telegramBot.dto.requests.LinkUpdate;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.webClients.telegramBot.dto.responses.TelegramBotApiErrorResponse;
 import java.net.URI;
 import java.util.List;

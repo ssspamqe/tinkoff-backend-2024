@@ -8,7 +8,7 @@ public enum LinkUpdateType {
 
     private final String message;
 
-    private LinkUpdateType(String message) {
+    LinkUpdateType(String message) {
         this.message = message;
     }
 

@@ -1,8 +1,8 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.gitHub;
 
 import edu.java.data.postgres.entities.GitHubRepositoryEntity;
-import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryBody;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import org.springframework.stereotype.Component;
 
 @Component

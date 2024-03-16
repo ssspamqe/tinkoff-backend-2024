@@ -1,10 +1,10 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.stackoverflow;
 
 import edu.java.data.postgres.entities.StackOverflowQuestion;
-import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
 import edu.java.webClients.stackOverflow.dto.StackOverflowAnswerBody;
 import edu.java.webClients.stackOverflow.dto.StackOverflowQuestionBody;
+import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;

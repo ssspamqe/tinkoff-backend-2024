@@ -36,7 +36,6 @@ public class LinkDAO implements LinkDataAccessObject {
     public Link saveOrFindByUrl(String url) {
         return linkRepository.findByUrl(url)
             .orElseGet(() -> {
-                System.out.println(url);
                 Link newLink = new Link(URI.create(url));
                 newLink = linkRepository.save(newLink);
                 initialStateScreener.saveInitialState(newLink);
