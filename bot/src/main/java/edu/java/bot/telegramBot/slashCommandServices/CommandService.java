@@ -68,7 +68,7 @@ public class CommandService {
         String response = slashCommand.executeWithUserParametersAndGetResponse(userParameters);
         return new SendMessage(chatId, response).replyMarkup(new ReplyKeyboardRemove());
     }
-    
+
     private ParameterizedSlashCommand parseParameterizedSlashCommandOrThrowException(
         String text
     ) {
