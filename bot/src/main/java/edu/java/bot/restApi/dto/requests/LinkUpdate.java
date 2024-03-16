@@ -12,7 +12,7 @@ public record LinkUpdate(
     String url,
 
     @NotBlank
-    String description,
+    LinkUpdateType type,
 
     @NotEmpty
     List<Long> tgChatIds
