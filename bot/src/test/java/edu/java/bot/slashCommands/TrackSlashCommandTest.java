@@ -1,74 +1,36 @@
 package edu.java.bot.slashCommands;
 
 import com.pengrad.telegrambot.model.BotCommand;
+import com.pengrad.telegrambot.model.Chat;
 import com.pengrad.telegrambot.model.Message;
-import com.pengrad.telegrambot.model.User;
-import edu.java.bot.data.entities.Subscription;
-import edu.java.bot.data.repositories.SubscriptionRepository;
 import edu.java.bot.telegramBot.slashCommandServices.slashCommands.TrackSlashCommand;
-import jakarta.validation.Validation;
-import jakarta.validation.Validator;
-import java.util.List;
+import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.mockito.ArgumentMatchers.eq;
 
 @ExtendWith(MockitoExtension.class)
 class TrackSlashCommandTest {
 
-    @Mock
-    SubscriptionRepository subscriptionRepository;
-
-    @Spy
-    Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+    @Mock ScrapperLinksClient scrapperLinksClient;
 
     @InjectMocks
     TrackSlashCommand command;
 
     @Test
-    void should_addLinkToDatabase() {
-        Message parameterMessage = getMessageWithLinkAndUserId("https://first/link", 1L);
+    void should_sendRequestForTracking() {
+        Message parameterMessage = getMessageWithLinkAndChatId("https://first/link", 1L);
 
         String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
-        Subscription expectedToSaveSubscription = new Subscription(0L, 1L, "https://first/link");
-        Mockito.verify(subscriptionRepository, Mockito.times(1)).save(expectedToSaveSubscription);
+        Mockito.verify(scrapperLinksClient, Mockito.times(1)).trackLinkByChatId(Mockito.any(), eq(1L));
         assertThat(actualResponse).isEqualTo("Given link was successfully added to /track it!");
-    }
-
-    @ParameterizedTest
-    @ValueSource(strings = {"ashajdfjakd sdfsdf", "asdjasd ", "/track https:Mylink", ""})
-    void should_returnSpecialMessage_when_linkNotMatchRegex(String link) {
-        Message parameterMessage = getMessageWithLinkAndUserId(link, 1L);
-
-        String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
-
-        String expectedResponse = """
-            Can't /track link because:
-            1) must match "https?://.*\"""";
-        assertThat(actualResponse).isEqualTo(expectedResponse);
-    }
-
-    @Test
-    void should_returnSpecialMessage_when_doubleLinks() {
-        Message parameterMessage = getMessageWithLinkAndUserId("https://ll", 1L);
-
-        Mockito.when(
-            subscriptionRepository.findAllByUserId(1L)
-        ).thenReturn(
-            List.of(new Subscription(1L, 1L, "https://ll"))
-        );
-        String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
-
-        assertThat(actualResponse).isEqualTo("This link was already added to /track it");
     }
 
     @Test
@@ -82,11 +44,12 @@ class TrackSlashCommandTest {
         );
     }
 
-    Message getMessageWithLinkAndUserId(String link, Long userId) {
-        User user = new User(userId);
+    Message getMessageWithLinkAndChatId(String link, Long chatId) {
+        Chat chat = Mockito.spy(new Chat());
+        Mockito.when(chat.id()).thenReturn(chatId);
 
         Message parameterizedMessage = Mockito.spy(new Message());
-        Mockito.when(parameterizedMessage.from()).thenReturn(user);
+        Mockito.when(parameterizedMessage.chat()).thenReturn(chat);
         Mockito.when(parameterizedMessage.text()).thenReturn(link);
 
         return parameterizedMessage;

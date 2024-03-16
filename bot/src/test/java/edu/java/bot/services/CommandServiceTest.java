@@ -4,7 +4,6 @@ import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Chat;
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
-import edu.java.bot.data.repositories.SubscriptionRepository;
 import edu.java.bot.telegramBot.slashCommandServices.CommandService;
 import edu.java.bot.telegramBot.slashCommandServices.exceptions.NoSuchCommandException;
 import edu.java.bot.telegramBot.slashCommandServices.exceptions.NotACommandOrUserParameterException;
@@ -12,12 +11,12 @@ import edu.java.bot.telegramBot.slashCommandServices.exceptions.NotAReplyOnBotMe
 import edu.java.bot.telegramBot.slashCommandServices.slashCommands.HelpSlashCommand;
 import edu.java.bot.telegramBot.slashCommandServices.slashCommands.ListSlashCommand;
 import edu.java.bot.telegramBot.slashCommandServices.slashCommands.TrackSlashCommand;
+import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -29,11 +28,10 @@ public class CommandServiceTest {
 
     CommandService commandService;
 
-    @Mock
-    SubscriptionRepository subscriptionRepository;
-
     @Spy
     HelpSlashCommand helpSlashCommand;
+
+    @Spy ScrapperLinksClient scrapperLinksClient;
 
     @Spy
     @InjectMocks

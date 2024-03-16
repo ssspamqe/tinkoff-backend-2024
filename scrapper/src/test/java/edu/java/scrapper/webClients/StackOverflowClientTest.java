@@ -28,7 +28,7 @@ public class StackOverflowClientTest extends WebClientTest {
                 {
                     "items":[
                                 {
-                                    "id": 123,
+                                    "question_id": 123,
                                     "tags" :[
                                         "Java","Spring"
                                     ],
@@ -83,7 +83,7 @@ public class StackOverflowClientTest extends WebClientTest {
                 {
                     "items": [
                         {
-                           "id": 1,
+                           "answer_id": 1,
                            "owner": {
                                 "display_name": "customName1"
                            },
@@ -93,7 +93,7 @@ public class StackOverflowClientTest extends WebClientTest {
                            "creation_date": 567
                         },
                         {
-                           "id": 2,
+                           "answer_id": 2,
                            "owner": {
                                 "display_name": "customName2"
                            },

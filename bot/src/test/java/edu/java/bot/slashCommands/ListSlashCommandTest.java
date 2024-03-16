@@ -3,9 +3,11 @@ package edu.java.bot.slashCommands;
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
-import edu.java.bot.data.entities.Subscription;
-import edu.java.bot.data.repositories.SubscriptionRepository;
 import edu.java.bot.telegramBot.slashCommandServices.slashCommands.ListSlashCommand;
+import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
+import edu.java.bot.webClients.scrapper.dto.responses.LinkResponse;
+import edu.java.bot.webClients.scrapper.dto.responses.ListLinksResponse;
+import java.net.URI;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,43 +22,37 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 class ListSlashCommandTest {
 
     @Mock
-    SubscriptionRepository subscriptionRepository;
+    ScrapperLinksClient scrapperLinksClient;
 
     @InjectMocks
     ListSlashCommand command;
 
     @Test
-    void should_returnMessageWithSubscriptionList() {
+    void should_sendRequestForStartingToTrack() {
         //Arrange
-        var subscriptionList = List.of(
-            new Subscription(1L, 1L, "first/link"),
-            new Subscription(2L, 1L, "second/link"),
-            new Subscription(3L, 1L, "third/link")
+        Mockito.when(scrapperLinksClient.fetchTrackedLinksByChatId(1L)).thenReturn(
+            new ListLinksResponse(
+                List.of(
+                    new LinkResponse(1, URI.create("https://link1")),
+                    new LinkResponse(2, URI.create("https://link2"))
+                ),
+                2
+            )
         );
-        Mockito.when(subscriptionRepository.findAllByUserId(1)).thenReturn(subscriptionList);
-
         Message spyMessage = getSpyMessageWithUserId(1L);
 
         //Act
         String actualResponse = command.executeAndGetResponse(spyMessage);
 
         //Asert
-        assertThat(actualResponse).contains("first/link", "second/link", "third/link");
-    }
-
-    @Test
-    void should_returnSpecialMessage_when_noSubscriptions() {
-        //Arrange
-        List<Subscription> subscriptionList = List.of();
-        Mockito.when(subscriptionRepository.findAllByUserId(1)).thenReturn(subscriptionList);
-
-        Message spyMessage = getSpyMessageWithUserId(1L);
-
-        //Act
-        String actualResponse = command.executeAndGetResponse(spyMessage);
-
-        //Asser
-        assertThat(actualResponse).isEqualTo("There is no active subscriptions");
+        Mockito.verify(scrapperLinksClient, Mockito.times(1)).fetchTrackedLinksByChatId(1L);
+        assertThat(actualResponse).isEqualTo("""
+            Here are your current subscriptions:
+            1) link1
+            https://link1
+            2) link2
+            https://link2
+            """);
     }
 
     @Test

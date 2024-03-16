@@ -3,20 +3,14 @@ package edu.java.bot.slashCommands;
 import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.User;
-import edu.java.bot.data.entities.Subscription;
-import edu.java.bot.data.repositories.SubscriptionRepository;
 import edu.java.bot.telegramBot.slashCommandServices.slashCommands.UntrackSlashCommand;
-import jakarta.validation.Validation;
-import jakarta.validation.Validator;
-import java.util.List;
+import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
+import edu.java.bot.webClients.scrapper.dto.requests.RemoveLinkRequest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -25,54 +19,20 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 public class UntrackSlashCommandTest {
 
     @Mock
-    SubscriptionRepository subscriptionRepository;
-
-    @Spy
-    Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+    ScrapperLinksClient scrapperLinksClient;
 
     @InjectMocks
     UntrackSlashCommand command;
 
     @Test
-    void should_removeSubscription() {
-        var subscriptionList = List.of(
-            new Subscription(1L, 1L, "https://first/link"),
-            new Subscription(2L, 1L, "https://second/link")
-        );
-        Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
-        Message parameterMessage = getParameterMessageWithLinkAndUserId("https://first/link", 1L);
+    void should_sendRequestForUntracking() {
+        Message parameterMessage = getParameterMessageWithLinkAndChatId("https://first/link", 1L);
 
         String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
 
-        Mockito.verify(subscriptionRepository, Mockito.times(1)).deleteById(1L);
+        Mockito.verify(scrapperLinksClient, Mockito.times(1))
+            .untrackLinkByChatId(new RemoveLinkRequest("https://first/link"), 1L);
         assertThat(actualResponse).isEqualTo("/unrack command succeed!");
-    }
-
-    @Test
-    void should_returnSpecialMessage_when_noSuchSubscription() {
-        var subscriptionList = List.of(
-            new Subscription(1L, 1L, "https://first/link"),
-            new Subscription(2L, 1L, "https://second/link")
-        );
-        Mockito.when(subscriptionRepository.findAllByUserId(1L)).thenReturn(subscriptionList);
-        Message parameterMessage = getParameterMessageWithLinkAndUserId("https://third/link", 1L);
-
-        String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
-
-        assertThat(actualResponse).isEqualTo("You don't have such subscription");
-    }
-
-    @ParameterizedTest
-    @ValueSource(strings = {"ashajdfjakd sdfsdf", "asdjasd ", "/track httsp:Mylink", ""})
-    void should_returnSpecialMessage_when_linkIsNotValid(String link) {
-        Message parameterMessage = getParameterMessageWithLinkAndUserId(link, 1L);
-
-        String actualResponse = command.executeWithUserParametersAndGetResponse(parameterMessage);
-
-        String expectedResponse = """
-            Can't /untrack link because:
-            1) must match "https?://.*\"""";
-        assertThat(actualResponse).isEqualTo(expectedResponse);
     }
 
     @Test
@@ -86,8 +46,8 @@ public class UntrackSlashCommandTest {
         );
     }
 
-    Message getParameterMessageWithLinkAndUserId(String link, Long userId) {
-        User user = new User(userId);
+    Message getParameterMessageWithLinkAndChatId(String link, Long chatId) {
+        User user = new User(chatId);
 
         Message parameterizedMessage = Mockito.spy(new Message());
         Mockito.when(parameterizedMessage.from()).thenReturn(user);

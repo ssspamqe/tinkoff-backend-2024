@@ -12,7 +12,7 @@ public class StartSlashCommand implements SlashCommand {
 
     private static final String TEXT_COMMAND = "/start";
     private static final String DESCRIPTION = "Register in app";
-    private static final String DEFAULT_RESPONSE = "Registration...";
+    private static final String DEFAULT_RESPONSE = "Registered";
 
     private final ScrapperTelegramChatClient scrapperTelegramChatClient;
 

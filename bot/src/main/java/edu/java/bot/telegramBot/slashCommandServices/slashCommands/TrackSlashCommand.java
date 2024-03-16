@@ -4,7 +4,6 @@ import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
 import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
 import edu.java.bot.webClients.scrapper.dto.requests.AddLinkRequest;
-import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +17,6 @@ public class TrackSlashCommand implements ParameterizedSlashCommand {
     private static final String PARAMETERS_REQUEST_MESSAGE = "Reply to this message with link to /track it!";
     private static final String SUBSCRIPTION_WAS_PREVIOUSLY_ADDED = "This link was already added to /track it";
 
-    private final Validator validator;
     private final ScrapperLinksClient scrapperLinksClient;
 
     @Override

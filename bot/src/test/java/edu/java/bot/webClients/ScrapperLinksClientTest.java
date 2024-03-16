@@ -72,7 +72,7 @@ public class ScrapperLinksClientTest extends WebClientTest {
         );
 
         LinkResponse actualResponse =
-            scrapperLinksClient.trackLink(1, new AddLinkRequest("http://my/link"));
+            scrapperLinksClient.trackLinkByChatId(new AddLinkRequest("http://my/link"), 1);
 
         LinkResponse expectedResponseBody = new LinkResponse(1, URI.create("http://my/link"));
         assertThat(actualResponse).isEqualTo(expectedResponseBody);
@@ -92,7 +92,7 @@ public class ScrapperLinksClientTest extends WebClientTest {
         );
 
         LinkResponse actualResponse =
-            scrapperLinksClient.untrackLink(1, new RemoveLinkRequest("http://my/link"));
+            scrapperLinksClient.untrackLinkByChatId(new RemoveLinkRequest("http://my/link"), 1);
 
         LinkResponse expectedResponseBody = new LinkResponse(1, URI.create("http://my/link"));
         assertThat(actualResponse).isEqualTo(expectedResponseBody);
