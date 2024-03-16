@@ -25,7 +25,7 @@ spring:
       port: 6379
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://postgresql:5432/scrapper
+    url: jdbc:postgresql://localhost:5432/scrapper
     password: postgres
     username: postgres
 
