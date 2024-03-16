@@ -12,17 +12,26 @@ import java.net.URI;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-@RequiredArgsConstructor
 @Transactional
 public class ChatDAO implements ChatDataAccessObject {
     private final ChatRepository chatRepository;
     private final ChatLinksRepository chatLinksRepository;
     private final LinkDAO linkDao;
+
+    public ChatDAO(
+        @Qualifier("jdbcClientChatRepository") ChatRepository chatRepository,
+        @Qualifier("jdbcClientChatLinksRepository") ChatLinksRepository chatLinksRepository,
+        LinkDAO linkDao
+    ) {
+        this.chatRepository = chatRepository;
+        this.chatLinksRepository = chatLinksRepository;
+        this.linkDao = linkDao;
+    }
 
     public Optional<Chat> findById(long id) {
         return chatRepository.findById(id);

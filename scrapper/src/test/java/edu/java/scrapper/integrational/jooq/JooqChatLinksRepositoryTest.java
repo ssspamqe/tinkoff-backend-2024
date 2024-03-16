@@ -1,8 +1,9 @@
-package edu.java.scrapper.jdbc;
+package edu.java.scrapper.integrational.jooq;
 
 import edu.java.data.postgres.entities.ChatLink;
 import edu.java.data.postgres.repositories.ChatLinksRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.ChatLinkRowMapper;
+import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
@@ -11,11 +12,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JdbcClientChatLinksRepositoryTest extends JdbcIntegrationEnvironment {
-
+public class JooqChatLinksRepositoryTest extends DatabaseIntegrationEnvironment {
     static final RowMapper<ChatLink> ROW_MAPPER = new ChatLinkRowMapper();
 
-    @Autowired @Qualifier("jdbcClientChatLinksRepository")
+    @Qualifier("jooqChatLinksRepository") @Autowired
     ChatLinksRepository chatLinksRepository;
 
     @Test

@@ -11,7 +11,6 @@ public class Chat {
 
     @Id
     private long id;
-    //TODO use use offsetDateTime
     private LocalDateTime createdAt;
 
     public Chat(long id) {

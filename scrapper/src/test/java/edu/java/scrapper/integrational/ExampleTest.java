@@ -1,4 +1,4 @@
-package edu.java.scrapper.jdbc;
+package edu.java.scrapper.integrational;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-public class ExampleTest extends JdbcIntegrationEnvironment {
+public class ExampleTest extends DatabaseIntegrationEnvironment {
 
     @Autowired
     JdbcTemplate jdbcTemplate;

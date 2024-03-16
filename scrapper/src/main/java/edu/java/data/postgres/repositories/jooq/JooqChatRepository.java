@@ -2,13 +2,10 @@ package edu.java.data.postgres.repositories.jooq;
 
 import edu.java.data.postgres.entities.Chat;
 import edu.java.data.postgres.repositories.ChatRepository;
-import edu.java.data.postgres.repositories.jooq.objectMappers.ChatRecordMapper;
-import edu.java.data.postgres.repositories.jooq.objectMappers.JooqRecordMapper;
 import java.time.OffsetDateTime;
 import java.time.ZoneId;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
-import org.jooq.Record;
 import org.jooq.impl.DefaultDSLContext;
 import org.springframework.stereotype.Repository;
 import static edu.java.domain.jooq.public_.Tables.CHATS;
@@ -17,11 +14,9 @@ import static edu.java.domain.jooq.public_.Tables.CHATS;
 @RequiredArgsConstructor
 public class JooqChatRepository implements ChatRepository {
 
-    private static final JooqRecordMapper<Chat> RECORD_MAPPER = new ChatRecordMapper();
-
     private final DefaultDSLContext dsl;
 
-    @Override
+    @Override //TODO fix codegen bug
     public void save(Chat chat) {
         OffsetDateTime offsetCreatedAt =
             chat.getCreatedAt()
@@ -35,11 +30,10 @@ public class JooqChatRepository implements ChatRepository {
 
     @Override
     public Optional<Chat> findById(long id) {
-        Record record = dsl.select()
+        Chat chat = dsl.select()
             .from(CHATS)
             .where(CHATS.ID.eq(id))
-            .fetchOne();
-        Chat chat = RECORD_MAPPER.mapJooqInstance(record);
+            .fetchOneInto(Chat.class);
         return Optional.ofNullable(chat);
     }
 

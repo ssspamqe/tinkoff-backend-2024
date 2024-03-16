@@ -5,6 +5,7 @@ import org.jooq.meta.jaxb.Configuration;
 import org.jooq.meta.jaxb.Database;
 import org.jooq.meta.jaxb.Generate;
 import org.jooq.meta.jaxb.Generator;
+import org.jooq.meta.jaxb.Jdbc;
 import org.jooq.meta.jaxb.Property;
 import org.jooq.meta.jaxb.Target;
 
@@ -12,10 +13,10 @@ public class JooqCodegen {
     public static void main(String[] args) throws Exception {
 
         Database database = new Database()
-            .withName("org.jooq.meta.extensions.liquibase.LiquibaseDatabase")
+            .withName("org.jooq.meta.postgres.PostgresDatabase")
             .withProperties(
                 new Property().withKey("rootPath").withValue("migrations"),
-                new Property().withKey("scripts").withValue("master.xml")
+                new Property().withKey("scripts").withValue("master.yaml")
             );
 
         Generate options = new Generate()
@@ -36,7 +37,7 @@ public class JooqCodegen {
             .withPojos(true);
 
         Target target = new Target()
-            .withPackageName("edu.java.scrapper.domain.jooq")
+            .withPackageName("edu.java.domain.jooq")
             .withDirectory("scrapper/src/main/java");
 
         Configuration configuration = new Configuration()
@@ -45,6 +46,12 @@ public class JooqCodegen {
                     .withDatabase(database)
                     .withGenerate(options)
                     .withTarget(target)
+            ).withJdbc(
+                new Jdbc()
+                    .withDriver("org.postgresql.Driver")
+                    .withUrl("jdbc:postgresql://localhost:5432/scrapper")
+                    .withUser("postgres")
+                    .withPassword("postgres")
             );
 
         GenerationTool.generate(configuration);

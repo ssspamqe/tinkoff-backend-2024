@@ -3,16 +3,22 @@ package edu.java.data.dao;
 import edu.java.data.postgres.entities.GitHubRepositoryEntity;
 import edu.java.data.postgres.repositories.GitHubRepositoryEntityRepository;
 import java.util.Optional;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-@RequiredArgsConstructor
 @Transactional
 public class GitHubRepositoryDAO implements GitHubRepositoryDataAccessObject {
 
     private final GitHubRepositoryEntityRepository gitHubRepositoryEntityRepository;
+
+    public GitHubRepositoryDAO(
+        @Qualifier("jdbcClientGitHubRepositoryEntityRepository")
+        GitHubRepositoryEntityRepository gitHubRepositoryEntityRepository
+    ) {
+        this.gitHubRepositoryEntityRepository = gitHubRepositoryEntityRepository;
+    }
 
     @Override
     public void save(GitHubRepositoryEntity repository) {

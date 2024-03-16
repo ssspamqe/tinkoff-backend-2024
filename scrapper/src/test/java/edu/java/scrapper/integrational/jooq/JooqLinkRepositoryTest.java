@@ -1,8 +1,9 @@
-package edu.java.scrapper.jdbc;
+package edu.java.scrapper.integrational.jooq;
 
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
+import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -12,11 +13,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
+public class JooqLinkRepositoryTest extends DatabaseIntegrationEnvironment {
 
     static final RowMapper<Link> ROW_MAPPER = new LinkRowMapper();
 
-    @Autowired @Qualifier("jdbcClientLinkRepository")
+    @Qualifier("jooqLinkRepository") @Autowired
     LinkRepository linkRepository;
 
     @Test
@@ -70,5 +71,4 @@ class JdbcClientLinkRepositoryTest extends JdbcIntegrationEnvironment {
             jdbcTemplate.query("SELECT * FROM links", ROW_MAPPER).stream().findFirst();
         assertThat(actualLink).isEmpty();
     }
-
 }

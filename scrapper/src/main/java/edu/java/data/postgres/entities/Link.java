@@ -19,7 +19,7 @@ public class Link {
     public Link(URI url, LocalDateTime createdAt) {
         this.url = url;
         this.createdAt = createdAt;
-        this.lastCheckedAt = LocalDateTime.MIN;
+        this.lastCheckedAt = LocalDateTime.now();
     }
 
     public Link(URI url) {

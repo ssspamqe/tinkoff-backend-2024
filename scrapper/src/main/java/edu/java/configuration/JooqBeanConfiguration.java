@@ -1,6 +1,8 @@
 package edu.java.configuration;
 
+import javax.sql.DataSource;
 import lombok.RequiredArgsConstructor;
+import org.jooq.SQLDialect;
 import org.jooq.conf.RenderQuotedNames;
 import org.jooq.impl.DataSourceConnectionProvider;
 import org.jooq.impl.DefaultConfiguration;
@@ -9,7 +11,6 @@ import org.springframework.boot.autoconfigure.jooq.DefaultConfigurationCustomize
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
-import javax.sql.DataSource;
 
 @Configuration
 @RequiredArgsConstructor
@@ -33,14 +34,14 @@ public class JooqBeanConfiguration {
     }
 
     @Bean
-    public DefaultDSLContext dsl(){
+    public DefaultDSLContext dsl() {
         return new DefaultDSLContext(configuration());
     }
-
 
     public DefaultConfiguration configuration() {
         DefaultConfiguration jooqConfiguration = new DefaultConfiguration();
         jooqConfiguration.set(connectionProvider());
+        jooqConfiguration.set(SQLDialect.POSTGRES);
 
         return jooqConfiguration;
     }

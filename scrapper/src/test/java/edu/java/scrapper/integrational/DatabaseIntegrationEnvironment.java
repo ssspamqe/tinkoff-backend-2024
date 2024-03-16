@@ -1,4 +1,4 @@
-package edu.java.scrapper.jdbc;
+package edu.java.scrapper.integrational;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -30,12 +30,12 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @TestPropertySource(locations = "classpath:application-test.yml")
 @ActiveProfiles("test")
 @Transactional
-public abstract class JdbcIntegrationEnvironment {
+public abstract class DatabaseIntegrationEnvironment {
 
     @ServiceConnection
-    static PostgreSQLContainer<?> POSTGRES;
+    protected static PostgreSQLContainer<?> POSTGRES;
 
-    @Autowired JdbcTemplate jdbcTemplate;
+    @Autowired protected JdbcTemplate jdbcTemplate;
 
     static {
         POSTGRES = new PostgreSQLContainer<>("postgres:16")

@@ -3,16 +3,21 @@ package edu.java.data.dao;
 import edu.java.data.postgres.entities.StackOverflowQuestion;
 import edu.java.data.postgres.repositories.StackOverflowQuestionRepository;
 import java.util.Optional;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-@RequiredArgsConstructor
 @Transactional
 public class StackOverflowQuestionDAO implements StackOverflowQuestionDataAccessObject {
 
     private final StackOverflowQuestionRepository stackOverflowQuestionRepository;
+
+    public StackOverflowQuestionDAO(
+        @Qualifier("jdbcClientStackOverflowRepository") StackOverflowQuestionRepository stackOverflowQuestionRepository
+    ) {
+        this.stackOverflowQuestionRepository = stackOverflowQuestionRepository;
+    }
 
     @Override
     public Optional<StackOverflowQuestion> findById(long id) {
