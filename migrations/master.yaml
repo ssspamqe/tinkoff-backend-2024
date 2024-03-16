@@ -12,10 +12,10 @@ databaseChangeLog:
       relativeToChangelogFile: true
 
   - include:
-      file: entities/stack_overflow_questions.sql
+      file: services/stack_overflow_questions.sql
       relativeToChangelogFile: true
 
   - include:
-      file: entities/git_hub_repositories.sql
+      file: services/git_hub_repositories.sql
       relativeToChangelogFile: true
 
