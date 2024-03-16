@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class TrackSlashCommand implements ExecutableWithUserParametersSlashCommand {
+public class TrackSlashCommand implements ParameterizedSlashCommand {
 
     private static final String TEXT_COMMAND = "/track";
     private static final String DESCRIPTION = "Start tracking updates from given link";

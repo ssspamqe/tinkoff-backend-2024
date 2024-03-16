@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class UntrackSlashCommand implements ExecutableWithUserParametersSlashCommand {
+public class UntrackSlashCommand implements ParameterizedSlashCommand {
 
     private static final String TEXT_COMMAND = "/untrack";
     private static final String DESCRIPTION = "Stop tracking updates from given link";

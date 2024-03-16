@@ -9,7 +9,7 @@ import edu.java.bot.telegramBot.slashCommandServices.exceptions.NoSuchCommandExc
 import edu.java.bot.telegramBot.slashCommandServices.exceptions.NotACommandOrUserParameterException;
 import edu.java.bot.telegramBot.slashCommandServices.exceptions.NotAReplyOnBotMessageException;
 import edu.java.bot.telegramBot.slashCommandServices.exceptions.StrangeSlashCommandException;
-import edu.java.bot.telegramBot.slashCommandServices.slashCommands.ExecutableWithUserParametersSlashCommand;
+import edu.java.bot.telegramBot.slashCommandServices.slashCommands.ParameterizedSlashCommand;
 import edu.java.bot.telegramBot.slashCommandServices.slashCommands.SlashCommand;
 import java.util.HashMap;
 import java.util.List;
@@ -61,20 +61,19 @@ public class CommandService {
             throw new NotAReplyOnBotMessageException("Message with parameters must be a reply on bot message");
         }
 
-        ExecutableWithUserParametersSlashCommand slashCommand =
+        ParameterizedSlashCommand slashCommand =
             parseParameterizedSlashCommandOrThrowException(botMessage.text());
 
         Long chatId = botMessage.chat().id();
         String response = slashCommand.executeWithUserParametersAndGetResponse(userParameters);
         return new SendMessage(chatId, response).replyMarkup(new ReplyKeyboardRemove());
     }
-
-    //TODO find a shorter name
-    private ExecutableWithUserParametersSlashCommand parseParameterizedSlashCommandOrThrowException(
+    
+    private ParameterizedSlashCommand parseParameterizedSlashCommandOrThrowException(
         String text
     ) {
         try {
-            return (ExecutableWithUserParametersSlashCommand) parseSlashCommand(text);
+            return (ParameterizedSlashCommand) parseSlashCommand(text);
         } catch (ClassCastException ex) {
             throw new StrangeSlashCommandException(
                 STR."Command from message: \"\{text}\" have no parameters"
@@ -96,7 +95,7 @@ public class CommandService {
     }
 
     private boolean requiresUserParameters(SlashCommand command) {
-        return command instanceof ExecutableWithUserParametersSlashCommand;
+        return command instanceof ParameterizedSlashCommand;
     }
 
     private SlashCommand parseSlashCommand(String text) {
