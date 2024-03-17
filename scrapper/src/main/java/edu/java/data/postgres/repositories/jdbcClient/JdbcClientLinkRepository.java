@@ -1,6 +1,5 @@
 package edu.java.data.postgres.repositories.jdbcClient;
 
-import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
@@ -21,7 +20,7 @@ public class JdbcClientLinkRepository implements LinkRepository {
     private static final RowMapper<Link> ROW_MAPPER = new LinkRowMapper();
 
     private static final String SAVE_QUERY =
-        STR."INSERT INTO \{TABLE_NAME} (url, created_at) VALUES (:url, :created_at)";
+        STR."INSERT INTO \{TABLE_NAME} (url, created_at) VALUES (:url, :created_at) RETURNING *";
 
     private static final String FIND_BY_ID_QUERY =
         STR."SELECT * FROM \{TABLE_NAME} WHERE id = :id";
@@ -46,12 +45,11 @@ public class JdbcClientLinkRepository implements LinkRepository {
     @Override
     @SuppressWarnings("MultipleStringLiterals")
     public Link save(Link link) {
-        jdbcClient.sql(SAVE_QUERY)
+        return jdbcClient.sql(SAVE_QUERY)
             .param("url", link.getUrl().toString())
             .param("created_at", link.getCreatedAt())
-            .update();
-        return findByUrl(link.getUrl().toString())
-            .orElseThrow(() -> new NoSuchLinkException(link.getUrl()));
+            .query(ROW_MAPPER)
+            .single();
     }
 
     @Override
