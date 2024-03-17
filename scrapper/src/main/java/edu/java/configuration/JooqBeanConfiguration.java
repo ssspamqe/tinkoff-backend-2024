@@ -16,7 +16,7 @@ import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
 
 @Configuration
 @ComponentScan(basePackages = "edu.java",
-               excludeFilters = @ComponentScan.Filter(type= FilterType.REGEX, pattern="edu.java.domain.jooq.*"))
+               excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "edu.java.domain.jooq.*"))
 @RequiredArgsConstructor
 public class JooqBeanConfiguration {
 
