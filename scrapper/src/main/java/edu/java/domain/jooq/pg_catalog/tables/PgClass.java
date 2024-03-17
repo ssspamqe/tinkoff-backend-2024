@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Indexes;
 import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgClassRecord;
@@ -18,7 +17,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
 import org.jooq.ForeignKey;
-import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Record;
 import org.jooq.Schema;
@@ -146,12 +144,6 @@ public class PgClass extends TableImpl<PgClassRecord> {
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public List<Index> getIndexes() {
-        return Arrays.asList(Indexes.PG_CLASS_TBLSPC_RELFILENODE_INDEX);
     }
 
     @Override

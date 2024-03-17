@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Indexes;
 import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAuthMembersRecord;
@@ -19,7 +18,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
 import org.jooq.ForeignKey;
 import org.jooq.Function7;
-import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Record;
 import org.jooq.Records;
@@ -97,12 +95,6 @@ public class PgAuthMembers extends TableImpl<PgAuthMembersRecord> {
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public List<Index> getIndexes() {
-        return Arrays.asList(Indexes.PG_AUTH_MEMBERS_GRANTOR_INDEX);
     }
 
     @Override

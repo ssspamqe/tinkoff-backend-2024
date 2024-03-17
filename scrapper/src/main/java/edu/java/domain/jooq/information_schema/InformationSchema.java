@@ -85,7 +85,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jooq.Catalog;
 import org.jooq.Configuration;
-import org.jooq.Domain;
 import org.jooq.Field;
 import org.jooq.Result;
 import org.jooq.Table;
@@ -280,18 +279,6 @@ public class InformationSchema extends SchemaImpl {
     @NotNull
     public Catalog getCatalog() {
         return DefaultCatalog.DEFAULT_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public final List<Domain<?>> getDomains() {
-        return Arrays.asList(
-            edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER,
-            edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA,
-            edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER,
-            edu.java.domain.jooq.information_schema.Domains.TIME_STAMP,
-            edu.java.domain.jooq.information_schema.Domains.YES_OR_NO
-        );
     }
 
     @Override

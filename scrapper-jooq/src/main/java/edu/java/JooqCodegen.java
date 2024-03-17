@@ -46,7 +46,15 @@ public class JooqCodegen {
             .withComments(false)
             .withDeprecated(false)
             .withJavadoc(false)
-            .withXmlTypes(false);
+            .withXmlTypes(false)
+            .withIndexes(false)
+            .withGlobalDomainReferences(false)
+            .withRoutines(false)
+            .withEmptySchemas(false)
+            .withEmbeddables(false)
+            .withFluentSetters(false)
+            .withInterfaces(false)
+            .withRelations(false);
 
         Target target = new Target()
             .withPackageName("edu.java.domain.jooq")

@@ -4,12 +4,8 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Indexes;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgShdependRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
@@ -18,7 +14,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
 import org.jooq.ForeignKey;
 import org.jooq.Function7;
-import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Record;
 import org.jooq.Records;
@@ -95,12 +90,6 @@ public class PgShdepend extends TableImpl<PgShdependRecord> {
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public List<Index> getIndexes() {
-        return Arrays.asList(Indexes.PG_SHDEPEND_DEPENDER_INDEX, Indexes.PG_SHDEPEND_REFERENCE_INDEX);
     }
 
     @Override
