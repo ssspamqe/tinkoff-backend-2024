@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function2;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row2;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -72,10 +66,6 @@ public class PgConfig extends TableImpl<PgConfigRecord> {
         this(DSL.name("pg_config"), null);
     }
 
-    public <O extends Record> PgConfig(Table<O> child, ForeignKey<O, PgConfigRecord> key) {
-        super(child, key, PG_CONFIG);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -116,23 +106,5 @@ public class PgConfig extends TableImpl<PgConfigRecord> {
     @NotNull
     public PgConfig rename(Table<?> name) {
         return new PgConfig(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row2 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row2<String, String> fieldsRow() {
-        return (Row2) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function2<? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function2<? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -14,12 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function18;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row18;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -147,27 +143,9 @@ public class PgStatGetIo extends TableImpl<PgStatGetIoRecord> {
         return new PgStatGetIo(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row18 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row18<String, String, String, Long, Double, Long, Double, Long, Double, Long, Double, Long, Long, Long, Long, Long, Double, OffsetDateTime> fieldsRow() {
-        return (Row18) super.fieldsRow();
-    }
-
     public PgStatGetIo call() {
         PgStatGetIo result = new PgStatGetIo(DSL.name("pg_stat_get_io"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function18<? super String, ? super String, ? super String, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Double, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function18<? super String, ? super String, ? super String, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Double, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

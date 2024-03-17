@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgRewriteRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -91,26 +80,10 @@ public class PgRewrite extends TableImpl<PgRewriteRecord> {
         this(DSL.name("pg_rewrite"), null);
     }
 
-    public <O extends Record> PgRewrite(Table<O> child, ForeignKey<O, PgRewriteRecord> key) {
-        super(child, key, PG_REWRITE);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgRewriteRecord> getPrimaryKey() {
-        return Keys.PG_REWRITE_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgRewriteRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_REWRITE_REL_RULENAME_INDEX);
     }
 
     @Override
@@ -147,23 +120,5 @@ public class PgRewrite extends TableImpl<PgRewriteRecord> {
     @NotNull
     public PgRewrite rename(Table<?> name) {
         return new PgRewrite(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<Long, String, Long, String, String, Boolean, Object, Object> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Boolean, ? super Object, ? super Object, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Boolean, ? super Object, ? super Object, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

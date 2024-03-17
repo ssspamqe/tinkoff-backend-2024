@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function7;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row7;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -84,10 +78,6 @@ public class PgStatArchiver extends TableImpl<PgStatArchiverRecord> {
         this(DSL.name("pg_stat_archiver"), null);
     }
 
-    public <O extends Record> PgStatArchiver(Table<O> child, ForeignKey<O, PgStatArchiverRecord> key) {
-        super(child, key, PG_STAT_ARCHIVER);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -128,23 +118,5 @@ public class PgStatArchiver extends TableImpl<PgStatArchiverRecord> {
     @NotNull
     public PgStatArchiver rename(Table<?> name) {
         return new PgStatArchiver(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row7 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row7<Long, String, OffsetDateTime, Long, String, OffsetDateTime, OffsetDateTime> fieldsRow() {
-        return (Row7) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function7<? super Long, ? super String, ? super OffsetDateTime, ? super Long, ? super String, ? super OffsetDateTime, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super String, ? super OffsetDateTime, ? super Long, ? super String, ? super OffsetDateTime, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

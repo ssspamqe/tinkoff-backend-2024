@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTriggerRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function19;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row19;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -112,26 +101,10 @@ public class PgTrigger extends TableImpl<PgTriggerRecord> {
         this(DSL.name("pg_trigger"), null);
     }
 
-    public <O extends Record> PgTrigger(Table<O> child, ForeignKey<O, PgTriggerRecord> key) {
-        super(child, key, PG_TRIGGER);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgTriggerRecord> getPrimaryKey() {
-        return Keys.PG_TRIGGER_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgTriggerRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_TRIGGER_TGRELID_TGNAME_INDEX);
     }
 
     @Override
@@ -168,23 +141,5 @@ public class PgTrigger extends TableImpl<PgTriggerRecord> {
     @NotNull
     public PgTrigger rename(Table<?> name) {
         return new PgTrigger(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row19 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row19<Long, Long, Long, String, Long, Short, String, Boolean, Long, Long, Long, Boolean, Boolean, Short, Object[], byte[], Object, String, String> fieldsRow() {
-        return (Row19) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function19<? super Long, ? super Long, ? super Long, ? super String, ? super Long, ? super Short, ? super String, ? super Boolean, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Boolean, ? super Short, ? super Object[], ? super byte[], ? super Object, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function19<? super Long, ? super Long, ? super Long, ? super String, ? super Long, ? super Short, ? super String, ? super Boolean, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Boolean, ? super Short, ? super Object[], ? super byte[], ? super Object, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

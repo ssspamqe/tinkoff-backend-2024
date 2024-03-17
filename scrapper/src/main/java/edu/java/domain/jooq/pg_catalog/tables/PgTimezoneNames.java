@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -118,27 +114,9 @@ public class PgTimezoneNames extends TableImpl<PgTimezoneNamesRecord> {
         return new PgTimezoneNames(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<String, String, YearToSecond, Boolean> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
     public PgTimezoneNames call() {
         PgTimezoneNames result = new PgTimezoneNames(DSL.name("pg_timezone_names"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super YearToSecond, ? super Boolean, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super YearToSecond, ? super Boolean, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

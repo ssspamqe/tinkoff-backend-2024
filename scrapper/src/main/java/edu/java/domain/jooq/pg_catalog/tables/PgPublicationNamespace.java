@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgPublicationNamespaceRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function3;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row3;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -79,26 +68,10 @@ public class PgPublicationNamespace extends TableImpl<PgPublicationNamespaceReco
         this(DSL.name("pg_publication_namespace"), null);
     }
 
-    public <O extends Record> PgPublicationNamespace(Table<O> child, ForeignKey<O, PgPublicationNamespaceRecord> key) {
-        super(child, key, PG_PUBLICATION_NAMESPACE);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgPublicationNamespaceRecord> getPrimaryKey() {
-        return Keys.PG_PUBLICATION_NAMESPACE_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgPublicationNamespaceRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_PUBLICATION_NAMESPACE_PNNSPID_PNPUBID_INDEX);
     }
 
     @Override
@@ -135,23 +108,5 @@ public class PgPublicationNamespace extends TableImpl<PgPublicationNamespaceReco
     @NotNull
     public PgPublicationNamespace rename(Table<?> name) {
         return new PgPublicationNamespace(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row3 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row3<Long, Long, Long> fieldsRow() {
-        return (Row3) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function3<? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

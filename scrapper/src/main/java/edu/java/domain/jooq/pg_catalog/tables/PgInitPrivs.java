@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgInitPrivsRecord;
 
@@ -13,18 +12,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function5;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -80,20 +72,10 @@ public class PgInitPrivs extends TableImpl<PgInitPrivsRecord> {
         this(DSL.name("pg_init_privs"), null);
     }
 
-    public <O extends Record> PgInitPrivs(Table<O> child, ForeignKey<O, PgInitPrivsRecord> key) {
-        super(child, key, PG_INIT_PRIVS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgInitPrivsRecord> getPrimaryKey() {
-        return Keys.PG_INIT_PRIVS_O_C_O_INDEX;
     }
 
     @Override
@@ -130,23 +112,5 @@ public class PgInitPrivs extends TableImpl<PgInitPrivsRecord> {
     @NotNull
     public PgInitPrivs rename(Table<?> name) {
         return new PgInitPrivs(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row5 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row5<Long, Long, Integer, String, String[]> fieldsRow() {
-        return (Row5) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function5<? super Long, ? super Long, ? super Integer, ? super String, ? super String[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super Long, ? super Integer, ? super String, ? super String[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

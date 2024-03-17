@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAuthMembersRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function7;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row7;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -87,26 +76,10 @@ public class PgAuthMembers extends TableImpl<PgAuthMembersRecord> {
         this(DSL.name("pg_auth_members"), null);
     }
 
-    public <O extends Record> PgAuthMembers(Table<O> child, ForeignKey<O, PgAuthMembersRecord> key) {
-        super(child, key, PG_AUTH_MEMBERS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgAuthMembersRecord> getPrimaryKey() {
-        return Keys.PG_AUTH_MEMBERS_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgAuthMembersRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_AUTH_MEMBERS_MEMBER_ROLE_INDEX, Keys.PG_AUTH_MEMBERS_ROLE_MEMBER_INDEX);
     }
 
     @Override
@@ -143,23 +116,5 @@ public class PgAuthMembers extends TableImpl<PgAuthMembersRecord> {
     @NotNull
     public PgAuthMembers rename(Table<?> name) {
         return new PgAuthMembers(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row7 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row7<Long, Long, Long, Long, Boolean, Boolean, Boolean> fieldsRow() {
-        return (Row7) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function7<? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Boolean, ? super Boolean, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Boolean, ? super Boolean, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

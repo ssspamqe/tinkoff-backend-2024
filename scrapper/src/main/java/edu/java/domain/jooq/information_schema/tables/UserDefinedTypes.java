@@ -12,9 +12,7 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -119,10 +117,6 @@ public class UserDefinedTypes extends TableImpl<UserDefinedTypesRecord> {
 
     public UserDefinedTypes() {
         this(DSL.name("user_defined_types"), null);
-    }
-
-    public <O extends Record> UserDefinedTypes(Table<O> child, ForeignKey<O, UserDefinedTypesRecord> key) {
-        super(child, key, USER_DEFINED_TYPES);
     }
 
     @Override

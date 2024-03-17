@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.public_.tables;
 
 
-import edu.java.domain.jooq.public_.Keys;
 import edu.java.domain.jooq.public_.Public;
 import edu.java.domain.jooq.public_.tables.records.GitHubRepositoriesRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function6;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row6;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -85,41 +74,10 @@ public class GitHubRepositories extends TableImpl<GitHubRepositoriesRecord> {
         this(DSL.name("git_hub_repositories"), null);
     }
 
-    public <O extends Record> GitHubRepositories(Table<O> child, ForeignKey<O, GitHubRepositoriesRecord> key) {
-        super(child, key, GIT_HUB_REPOSITORIES);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : Public.PUBLIC;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<GitHubRepositoriesRecord> getPrimaryKey() {
-        return Keys.GIT_HUB_REPOSITORIES_PKEY;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<GitHubRepositoriesRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.GIT_HUB_REPOSITORIES_NAME_OWNER_KEY);
-    }
-
-    @Override
-    @NotNull
-    public List<ForeignKey<GitHubRepositoriesRecord, ?>> getReferences() {
-        return Arrays.asList(Keys.GIT_HUB_REPOSITORIES__GIT_HUB_REPOSITORIES_LINK_ID_FKEY);
-    }
-
-    private transient Links _links;
-
-    public Links links() {
-        if (_links == null)
-            _links = new Links(this, Keys.GIT_HUB_REPOSITORIES__GIT_HUB_REPOSITORIES_LINK_ID_FKEY);
-
-        return _links;
     }
 
     @Override
@@ -156,23 +114,5 @@ public class GitHubRepositories extends TableImpl<GitHubRepositoriesRecord> {
     @NotNull
     public GitHubRepositories rename(Table<?> name) {
         return new GitHubRepositories(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row6 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row6<Long, Long, String, String, String, Long[]> fieldsRow() {
-        return (Row6) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function6<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

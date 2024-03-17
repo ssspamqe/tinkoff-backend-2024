@@ -14,12 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function10;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row10;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -131,27 +127,9 @@ public class PgStatGetRecoveryPrefetch extends TableImpl<PgStatGetRecoveryPrefet
         return new PgStatGetRecoveryPrefetch(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row10 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row10<OffsetDateTime, Long, Long, Long, Long, Long, Long, Integer, Integer, Integer> fieldsRow() {
-        return (Row10) super.fieldsRow();
-    }
-
     public PgStatGetRecoveryPrefetch call() {
         PgStatGetRecoveryPrefetch result = new PgStatGetRecoveryPrefetch(DSL.name("pg_stat_get_recovery_prefetch"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function10<? super OffsetDateTime, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function10<? super OffsetDateTime, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

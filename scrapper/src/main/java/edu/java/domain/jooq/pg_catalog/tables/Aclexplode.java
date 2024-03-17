@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -118,16 +114,6 @@ public class Aclexplode extends TableImpl<AclexplodeRecord> {
         return new Aclexplode(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Long, Long, String, Boolean> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
     public Aclexplode call(
           String[] acl
     ) {
@@ -146,13 +132,5 @@ public class Aclexplode extends TableImpl<AclexplodeRecord> {
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super String, ? super Boolean, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super String, ? super Boolean, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

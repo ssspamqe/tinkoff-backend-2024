@@ -14,12 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function6;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row6;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -123,27 +119,9 @@ public class PgCursor extends TableImpl<PgCursorRecord> {
         return new PgCursor(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row6 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row6<String, String, Boolean, Boolean, Boolean, OffsetDateTime> fieldsRow() {
-        return (Row6) super.fieldsRow();
-    }
-
     public PgCursor call() {
         PgCursor result = new PgCursor(DSL.name("pg_cursor"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

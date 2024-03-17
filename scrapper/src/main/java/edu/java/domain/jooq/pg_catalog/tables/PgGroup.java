@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function3;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row3;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -74,10 +68,6 @@ public class PgGroup extends TableImpl<PgGroupRecord> {
         this(DSL.name("pg_group"), null);
     }
 
-    public <O extends Record> PgGroup(Table<O> child, ForeignKey<O, PgGroupRecord> key) {
-        super(child, key, PG_GROUP);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -118,23 +108,5 @@ public class PgGroup extends TableImpl<PgGroupRecord> {
     @NotNull
     public PgGroup rename(Table<?> name) {
         return new PgGroup(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row3 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row3<String, Long, Long[]> fieldsRow() {
-        return (Row3) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function3<? super String, ? super Long, ? super Long[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super Long, ? super Long[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

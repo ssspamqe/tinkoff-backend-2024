@@ -14,12 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -129,27 +125,9 @@ public class PgStatGetSlru extends TableImpl<PgStatGetSlruRecord> {
         return new PgStatGetSlru(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<String, Long, Long, Long, Long, Long, Long, Long, OffsetDateTime> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
     public PgStatGetSlru call() {
         PgStatGetSlru result = new PgStatGetSlru(DSL.name("pg_stat_get_slru"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

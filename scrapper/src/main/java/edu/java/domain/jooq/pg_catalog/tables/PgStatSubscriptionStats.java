@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function5;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -80,10 +74,6 @@ public class PgStatSubscriptionStats extends TableImpl<PgStatSubscriptionStatsRe
         this(DSL.name("pg_stat_subscription_stats"), null);
     }
 
-    public <O extends Record> PgStatSubscriptionStats(Table<O> child, ForeignKey<O, PgStatSubscriptionStatsRecord> key) {
-        super(child, key, PG_STAT_SUBSCRIPTION_STATS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -124,23 +114,5 @@ public class PgStatSubscriptionStats extends TableImpl<PgStatSubscriptionStatsRe
     @NotNull
     public PgStatSubscriptionStats rename(Table<?> name) {
         return new PgStatSubscriptionStats(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row5 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row5<Long, String, Long, Long, OffsetDateTime> fieldsRow() {
-        return (Row5) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

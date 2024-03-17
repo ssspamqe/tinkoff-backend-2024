@@ -4,26 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTypeRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -134,26 +127,10 @@ public class PgType extends TableImpl<PgTypeRecord> {
         this(DSL.name("pg_type"), null);
     }
 
-    public <O extends Record> PgType(Table<O> child, ForeignKey<O, PgTypeRecord> key) {
-        super(child, key, PG_TYPE);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgTypeRecord> getPrimaryKey() {
-        return Keys.PG_TYPE_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgTypeRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_TYPE_TYPNAME_NSP_INDEX);
     }
 
     @Override

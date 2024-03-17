@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function3;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row3;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -120,16 +116,6 @@ public class PgLogicalSlotPeekChanges extends TableImpl<PgLogicalSlotPeekChanges
         return new PgLogicalSlotPeekChanges(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row3 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row3<Object, Long, String> fieldsRow() {
-        return (Row3) super.fieldsRow();
-    }
-
     public PgLogicalSlotPeekChanges call(
           String slotName
         , Object uptoLsn
@@ -160,13 +146,5 @@ public class PgLogicalSlotPeekChanges extends TableImpl<PgLogicalSlotPeekChanges
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function3<? super Object, ? super Long, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Object, ? super Long, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

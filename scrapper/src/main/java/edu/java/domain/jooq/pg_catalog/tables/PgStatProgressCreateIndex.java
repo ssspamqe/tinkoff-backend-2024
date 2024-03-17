@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function16;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row16;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -100,10 +94,6 @@ public class PgStatProgressCreateIndex extends TableImpl<PgStatProgressCreateInd
         this(DSL.name("pg_stat_progress_create_index"), null);
     }
 
-    public <O extends Record> PgStatProgressCreateIndex(Table<O> child, ForeignKey<O, PgStatProgressCreateIndexRecord> key) {
-        super(child, key, PG_STAT_PROGRESS_CREATE_INDEX);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -144,23 +134,5 @@ public class PgStatProgressCreateIndex extends TableImpl<PgStatProgressCreateInd
     @NotNull
     public PgStatProgressCreateIndex rename(Table<?> name) {
         return new PgStatProgressCreateIndex(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row16 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row16<Integer, Long, String, Long, Long, String, String, Long, Long, Long, Long, Long, Long, Long, Long, Long> fieldsRow() {
-        return (Row16) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function16<? super Integer, ? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function16<? super Integer, ? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

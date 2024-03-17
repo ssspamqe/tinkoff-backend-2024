@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function2;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row2;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -115,16 +111,6 @@ public class TsParse extends TableImpl<TsParseRecord> {
         return new TsParse(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row2 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row2<Integer, String> fieldsRow() {
-        return (Row2) super.fieldsRow();
-    }
-
     public TsParse call(
           Long parserOid
         , String txt
@@ -147,13 +133,5 @@ public class TsParse extends TableImpl<TsParseRecord> {
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function2<? super Integer, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function2<? super Integer, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

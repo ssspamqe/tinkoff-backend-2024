@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function10;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row10;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -90,10 +84,6 @@ public class PgStatReplicationSlots extends TableImpl<PgStatReplicationSlotsReco
         this(DSL.name("pg_stat_replication_slots"), null);
     }
 
-    public <O extends Record> PgStatReplicationSlots(Table<O> child, ForeignKey<O, PgStatReplicationSlotsRecord> key) {
-        super(child, key, PG_STAT_REPLICATION_SLOTS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -134,23 +124,5 @@ public class PgStatReplicationSlots extends TableImpl<PgStatReplicationSlotsReco
     @NotNull
     public PgStatReplicationSlots rename(Table<?> name) {
         return new PgStatReplicationSlots(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row10 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row10<String, Long, Long, Long, Long, Long, Long, Long, Long, OffsetDateTime> fieldsRow() {
-        return (Row10) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function10<? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function10<? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

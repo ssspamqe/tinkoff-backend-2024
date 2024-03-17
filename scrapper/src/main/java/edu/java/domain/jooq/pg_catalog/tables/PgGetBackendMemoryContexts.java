@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -127,27 +123,9 @@ public class PgGetBackendMemoryContexts extends TableImpl<PgGetBackendMemoryCont
         return new PgGetBackendMemoryContexts(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<String, String, String, Integer, Long, Long, Long, Long, Long> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
     public PgGetBackendMemoryContexts call() {
         PgGetBackendMemoryContexts result = new PgGetBackendMemoryContexts(DSL.name("pg_get_backend_memory_contexts"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super String, ? super String, ? super String, ? super Integer, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super String, ? super String, ? super Integer, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

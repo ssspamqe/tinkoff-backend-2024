@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAggregateRecord;
 
@@ -13,18 +12,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function22;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row22;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -114,20 +106,10 @@ public class PgAggregate extends TableImpl<PgAggregateRecord> {
         this(DSL.name("pg_aggregate"), null);
     }
 
-    public <O extends Record> PgAggregate(Table<O> child, ForeignKey<O, PgAggregateRecord> key) {
-        super(child, key, PG_AGGREGATE);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgAggregateRecord> getPrimaryKey() {
-        return Keys.PG_AGGREGATE_FNOID_INDEX;
     }
 
     @Override
@@ -164,23 +146,5 @@ public class PgAggregate extends TableImpl<PgAggregateRecord> {
     @NotNull
     public PgAggregate rename(Table<?> name) {
         return new PgAggregate(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row22 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row22<String, String, Short, String, String, String, String, String, String, String, String, Boolean, Boolean, String, String, Long, Long, Integer, Long, Integer, String, String> fieldsRow() {
-        return (Row22) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function22<? super String, ? super String, ? super Short, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super Long, ? super Long, ? super Integer, ? super Long, ? super Integer, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function22<? super String, ? super String, ? super Short, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super Long, ? super Long, ? super Integer, ? super Long, ? super Integer, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

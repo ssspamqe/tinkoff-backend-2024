@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function7;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row7;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -81,10 +75,6 @@ public class TriggeredUpdateColumns extends TableImpl<TriggeredUpdateColumnsReco
         this(DSL.name("triggered_update_columns"), null);
     }
 
-    public <O extends Record> TriggeredUpdateColumns(Table<O> child, ForeignKey<O, TriggeredUpdateColumnsRecord> key) {
-        super(child, key, TRIGGERED_UPDATE_COLUMNS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -125,23 +115,5 @@ public class TriggeredUpdateColumns extends TableImpl<TriggeredUpdateColumnsReco
     @NotNull
     public TriggeredUpdateColumns rename(Table<?> name) {
         return new TriggeredUpdateColumns(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row7 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row7<String, String, String, String, String, String, String> fieldsRow() {
-        return (Row7) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

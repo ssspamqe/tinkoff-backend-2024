@@ -14,12 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function3;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row3;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -117,27 +113,9 @@ public class PgLsArchiveStatusdir extends TableImpl<PgLsArchiveStatusdirRecord> 
         return new PgLsArchiveStatusdir(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row3 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row3<String, Long, OffsetDateTime> fieldsRow() {
-        return (Row3) super.fieldsRow();
-    }
-
     public PgLsArchiveStatusdir call() {
         PgLsArchiveStatusdir result = new PgLsArchiveStatusdir(DSL.name("pg_ls_archive_statusdir"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

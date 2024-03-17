@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function16;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row16;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -102,10 +96,6 @@ public class PgLocks extends TableImpl<PgLocksRecord> {
         this(DSL.name("pg_locks"), null);
     }
 
-    public <O extends Record> PgLocks(Table<O> child, ForeignKey<O, PgLocksRecord> key) {
-        super(child, key, PG_LOCKS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -146,23 +136,5 @@ public class PgLocks extends TableImpl<PgLocksRecord> {
     @NotNull
     public PgLocks rename(Table<?> name) {
         return new PgLocks(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row16 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row16<String, Long, Long, Integer, Short, String, Long, Long, Long, Short, String, Integer, String, Boolean, Boolean, OffsetDateTime> fieldsRow() {
-        return (Row16) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function16<? super String, ? super Long, ? super Long, ? super Integer, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Integer, ? super String, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function16<? super String, ? super Long, ? super Long, ? super Integer, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Integer, ? super String, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

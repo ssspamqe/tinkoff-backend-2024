@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgOperatorRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function15;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row15;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -103,26 +92,10 @@ public class PgOperator extends TableImpl<PgOperatorRecord> {
         this(DSL.name("pg_operator"), null);
     }
 
-    public <O extends Record> PgOperator(Table<O> child, ForeignKey<O, PgOperatorRecord> key) {
-        super(child, key, PG_OPERATOR);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgOperatorRecord> getPrimaryKey() {
-        return Keys.PG_OPERATOR_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgOperatorRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_OPERATOR_OPRNAME_L_R_N_INDEX);
     }
 
     @Override
@@ -159,23 +132,5 @@ public class PgOperator extends TableImpl<PgOperatorRecord> {
     @NotNull
     public PgOperator rename(Table<?> name) {
         return new PgOperator(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row15 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row15<Long, String, Long, Long, String, Boolean, Boolean, Long, Long, Long, Long, Long, String, String, String> fieldsRow() {
-        return (Row15) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function15<? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super Boolean, ? super Boolean, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function15<? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super Boolean, ? super Boolean, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

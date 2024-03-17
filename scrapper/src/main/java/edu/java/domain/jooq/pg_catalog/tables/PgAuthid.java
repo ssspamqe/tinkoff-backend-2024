@@ -4,31 +4,21 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAuthidRecord;
 
 import java.time.OffsetDateTime;
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function12;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row12;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -98,26 +88,10 @@ public class PgAuthid extends TableImpl<PgAuthidRecord> {
         this(DSL.name("pg_authid"), null);
     }
 
-    public <O extends Record> PgAuthid(Table<O> child, ForeignKey<O, PgAuthidRecord> key) {
-        super(child, key, PG_AUTHID);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgAuthidRecord> getPrimaryKey() {
-        return Keys.PG_AUTHID_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgAuthidRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_AUTHID_ROLNAME_INDEX);
     }
 
     @Override
@@ -154,23 +128,5 @@ public class PgAuthid extends TableImpl<PgAuthidRecord> {
     @NotNull
     public PgAuthid rename(Table<?> name) {
         return new PgAuthid(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row12 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row12<Long, String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Integer, String, OffsetDateTime> fieldsRow() {
-        return (Row12) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function12<? super Long, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Integer, ? super String, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Long, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Integer, ? super String, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAmopRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -91,26 +80,10 @@ public class PgAmop extends TableImpl<PgAmopRecord> {
         this(DSL.name("pg_amop"), null);
     }
 
-    public <O extends Record> PgAmop(Table<O> child, ForeignKey<O, PgAmopRecord> key) {
-        super(child, key, PG_AMOP);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgAmopRecord> getPrimaryKey() {
-        return Keys.PG_AMOP_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgAmopRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_AMOP_FAM_STRAT_INDEX, Keys.PG_AMOP_OPR_FAM_INDEX);
     }
 
     @Override
@@ -147,23 +120,5 @@ public class PgAmop extends TableImpl<PgAmopRecord> {
     @NotNull
     public PgAmop rename(Table<?> name) {
         return new PgAmop(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<Long, Long, Long, Long, Short, String, Long, Long, Long> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super Long, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

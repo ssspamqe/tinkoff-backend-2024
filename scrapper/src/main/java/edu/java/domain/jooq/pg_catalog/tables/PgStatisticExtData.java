@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatisticExtDataRecord;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatisticRecord;
@@ -14,18 +13,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function6;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row6;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -86,20 +78,10 @@ public class PgStatisticExtData extends TableImpl<PgStatisticExtDataRecord> {
         this(DSL.name("pg_statistic_ext_data"), null);
     }
 
-    public <O extends Record> PgStatisticExtData(Table<O> child, ForeignKey<O, PgStatisticExtDataRecord> key) {
-        super(child, key, PG_STATISTIC_EXT_DATA);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgStatisticExtDataRecord> getPrimaryKey() {
-        return Keys.PG_STATISTIC_EXT_DATA_STXOID_INH_INDEX;
     }
 
     @Override
@@ -136,23 +118,5 @@ public class PgStatisticExtData extends TableImpl<PgStatisticExtDataRecord> {
     @NotNull
     public PgStatisticExtData rename(Table<?> name) {
         return new PgStatisticExtData(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row6 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row6<Long, Boolean, Object, Object, Object, PgStatisticRecord[]> fieldsRow() {
-        return (Row6) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function6<? super Long, ? super Boolean, ? super Object, ? super Object, ? super Object, ? super PgStatisticRecord[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super Boolean, ? super Object, ? super Object, ? super Object, ? super PgStatisticRecord[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function12;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row12;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -133,27 +129,9 @@ public class PgEventTriggerDroppedObjects extends TableImpl<PgEventTriggerDroppe
         return new PgEventTriggerDroppedObjects(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row12 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row12<Long, Long, Integer, Boolean, Boolean, Boolean, String, String, String, String, String[], String[]> fieldsRow() {
-        return (Row12) super.fieldsRow();
-    }
-
     public PgEventTriggerDroppedObjects call() {
         PgEventTriggerDroppedObjects result = new PgEventTriggerDroppedObjects(DSL.name("pg_event_trigger_dropped_objects"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function12<? super Long, ? super Long, ? super Integer, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super String, ? super String, ? super String[], ? super String[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Long, ? super Long, ? super Integer, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super String, ? super String, ? super String[], ? super String[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -12,13 +12,9 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function2;
 import org.jooq.JSONB;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row2;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -115,16 +111,6 @@ public class JsonbEach extends TableImpl<JsonbEachRecord> {
         return new JsonbEach(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row2 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row2<String, JSONB> fieldsRow() {
-        return (Row2) super.fieldsRow();
-    }
-
     public JsonbEach call(
           JSONB fromJson
     ) {
@@ -143,13 +129,5 @@ public class JsonbEach extends TableImpl<JsonbEachRecord> {
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function2<? super String, ? super JSONB, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function2<? super String, ? super JSONB, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function18;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row18;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -106,10 +100,6 @@ public class PgStatIo extends TableImpl<PgStatIoRecord> {
         this(DSL.name("pg_stat_io"), null);
     }
 
-    public <O extends Record> PgStatIo(Table<O> child, ForeignKey<O, PgStatIoRecord> key) {
-        super(child, key, PG_STAT_IO);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -150,23 +140,5 @@ public class PgStatIo extends TableImpl<PgStatIoRecord> {
     @NotNull
     public PgStatIo rename(Table<?> name) {
         return new PgStatIo(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row18 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row18<String, String, String, Long, Double, Long, Double, Long, Double, Long, Double, Long, Long, Long, Long, Long, Double, OffsetDateTime> fieldsRow() {
-        return (Row18) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function18<? super String, ? super String, ? super String, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Double, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function18<? super String, ? super String, ? super String, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Double, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Double, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgCastRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function6;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row6;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -85,26 +74,10 @@ public class PgCast extends TableImpl<PgCastRecord> {
         this(DSL.name("pg_cast"), null);
     }
 
-    public <O extends Record> PgCast(Table<O> child, ForeignKey<O, PgCastRecord> key) {
-        super(child, key, PG_CAST);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgCastRecord> getPrimaryKey() {
-        return Keys.PG_CAST_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgCastRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_CAST_SOURCE_TARGET_INDEX);
     }
 
     @Override
@@ -141,23 +114,5 @@ public class PgCast extends TableImpl<PgCastRecord> {
     @NotNull
     public PgCast rename(Table<?> name) {
         return new PgCast(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row6 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row6<Long, Long, Long, Long, String, String> fieldsRow() {
-        return (Row6) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function6<? super Long, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

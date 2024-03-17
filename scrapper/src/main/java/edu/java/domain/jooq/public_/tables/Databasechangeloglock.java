@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.public_.tables;
 
 
-import edu.java.domain.jooq.public_.Keys;
 import edu.java.domain.jooq.public_.Public;
 import edu.java.domain.jooq.public_.tables.records.DatabasechangeloglockRecord;
 
@@ -15,18 +14,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -80,20 +72,10 @@ public class Databasechangeloglock extends TableImpl<DatabasechangeloglockRecord
         this(DSL.name("databasechangeloglock"), null);
     }
 
-    public <O extends Record> Databasechangeloglock(Table<O> child, ForeignKey<O, DatabasechangeloglockRecord> key) {
-        super(child, key, DATABASECHANGELOGLOCK);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : Public.PUBLIC;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<DatabasechangeloglockRecord> getPrimaryKey() {
-        return Keys.DATABASECHANGELOGLOCK_PKEY;
     }
 
     @Override
@@ -130,23 +112,5 @@ public class Databasechangeloglock extends TableImpl<DatabasechangeloglockRecord
     @NotNull
     public Databasechangeloglock rename(Table<?> name) {
         return new Databasechangeloglock(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Integer, Boolean, LocalDateTime, String> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Integer, ? super Boolean, ? super LocalDateTime, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Integer, ? super Boolean, ? super LocalDateTime, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

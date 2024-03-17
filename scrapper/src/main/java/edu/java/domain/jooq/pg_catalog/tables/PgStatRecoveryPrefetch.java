@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function10;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row10;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -90,10 +84,6 @@ public class PgStatRecoveryPrefetch extends TableImpl<PgStatRecoveryPrefetchReco
         this(DSL.name("pg_stat_recovery_prefetch"), null);
     }
 
-    public <O extends Record> PgStatRecoveryPrefetch(Table<O> child, ForeignKey<O, PgStatRecoveryPrefetchRecord> key) {
-        super(child, key, PG_STAT_RECOVERY_PREFETCH);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -134,23 +124,5 @@ public class PgStatRecoveryPrefetch extends TableImpl<PgStatRecoveryPrefetchReco
     @NotNull
     public PgStatRecoveryPrefetch rename(Table<?> name) {
         return new PgStatRecoveryPrefetch(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row10 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row10<OffsetDateTime, Long, Long, Long, Long, Long, Long, Integer, Integer, Integer> fieldsRow() {
-        return (Row10) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function10<? super OffsetDateTime, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function10<? super OffsetDateTime, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

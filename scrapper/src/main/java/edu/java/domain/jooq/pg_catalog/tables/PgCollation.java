@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgCollationRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function12;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row12;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -97,26 +86,10 @@ public class PgCollation extends TableImpl<PgCollationRecord> {
         this(DSL.name("pg_collation"), null);
     }
 
-    public <O extends Record> PgCollation(Table<O> child, ForeignKey<O, PgCollationRecord> key) {
-        super(child, key, PG_COLLATION);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgCollationRecord> getPrimaryKey() {
-        return Keys.PG_COLLATION_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgCollationRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_COLLATION_NAME_ENC_NSP_INDEX);
     }
 
     @Override
@@ -153,23 +126,5 @@ public class PgCollation extends TableImpl<PgCollationRecord> {
     @NotNull
     public PgCollation rename(Table<?> name) {
         return new PgCollation(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row12 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row12<Long, String, Long, Long, String, Boolean, Integer, String, String, String, String, String> fieldsRow() {
-        return (Row12) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function12<? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super Boolean, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super Boolean, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

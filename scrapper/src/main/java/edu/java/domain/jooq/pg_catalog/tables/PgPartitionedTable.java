@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgPartitionedTableRecord;
 
@@ -13,18 +12,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -87,20 +79,10 @@ public class PgPartitionedTable extends TableImpl<PgPartitionedTableRecord> {
         this(DSL.name("pg_partitioned_table"), null);
     }
 
-    public <O extends Record> PgPartitionedTable(Table<O> child, ForeignKey<O, PgPartitionedTableRecord> key) {
-        super(child, key, PG_PARTITIONED_TABLE);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgPartitionedTableRecord> getPrimaryKey() {
-        return Keys.PG_PARTITIONED_TABLE_PARTRELID_INDEX;
     }
 
     @Override
@@ -137,23 +119,5 @@ public class PgPartitionedTable extends TableImpl<PgPartitionedTableRecord> {
     @NotNull
     public PgPartitionedTable rename(Table<?> name) {
         return new PgPartitionedTable(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<Long, String, Short, Long, Object[], Object[], Object[], Object> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Short, ? super Long, ? super Object[], ? super Object[], ? super Object[], ? super Object, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Short, ? super Long, ? super Object[], ? super Object[], ? super Object[], ? super Object, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

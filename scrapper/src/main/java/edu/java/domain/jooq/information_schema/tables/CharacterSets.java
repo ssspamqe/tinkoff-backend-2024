@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -83,10 +77,6 @@ public class CharacterSets extends TableImpl<CharacterSetsRecord> {
         this(DSL.name("character_sets"), null);
     }
 
-    public <O extends Record> CharacterSets(Table<O> child, ForeignKey<O, CharacterSetsRecord> key) {
-        super(child, key, CHARACTER_SETS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -127,23 +117,5 @@ public class CharacterSets extends TableImpl<CharacterSetsRecord> {
     @NotNull
     public CharacterSets rename(Table<?> name) {
         return new CharacterSets(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<String, String, String, String, String, String, String, String> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

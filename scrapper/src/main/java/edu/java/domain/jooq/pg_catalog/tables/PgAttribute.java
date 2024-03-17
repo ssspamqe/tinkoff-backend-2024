@@ -4,26 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAttributeRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -121,26 +114,10 @@ public class PgAttribute extends TableImpl<PgAttributeRecord> {
         this(DSL.name("pg_attribute"), null);
     }
 
-    public <O extends Record> PgAttribute(Table<O> child, ForeignKey<O, PgAttributeRecord> key) {
-        super(child, key, PG_ATTRIBUTE);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgAttributeRecord> getPrimaryKey() {
-        return Keys.PG_ATTRIBUTE_RELID_ATTNUM_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgAttributeRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_ATTRIBUTE_RELID_ATTNAM_INDEX);
     }
 
     @Override

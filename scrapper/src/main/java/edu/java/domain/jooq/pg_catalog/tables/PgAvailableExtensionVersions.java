@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -125,27 +121,9 @@ public class PgAvailableExtensionVersions extends TableImpl<PgAvailableExtension
         return new PgAvailableExtensionVersions(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<String, String, Boolean, Boolean, Boolean, String, String[], String> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
     public PgAvailableExtensionVersions call() {
         PgAvailableExtensionVersions result = new PgAvailableExtensionVersions(DSL.name("pg_available_extension_versions"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super String[], ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super String[], ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

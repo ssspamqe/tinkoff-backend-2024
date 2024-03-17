@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function1;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row1;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -113,16 +109,6 @@ public class Unnest extends TableImpl<UnnestRecord> {
         return new Unnest(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row1 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row1<Object> fieldsRow() {
-        return (Row1) super.fieldsRow();
-    }
-
     public Unnest call(
           Object[] __1
     ) {
@@ -141,13 +127,5 @@ public class Unnest extends TableImpl<UnnestRecord> {
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function1<? super Object, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Object, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

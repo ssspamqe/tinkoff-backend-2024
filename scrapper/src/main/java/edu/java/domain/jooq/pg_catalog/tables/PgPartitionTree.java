@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -120,16 +116,6 @@ public class PgPartitionTree extends TableImpl<PgPartitionTreeRecord> {
         return new PgPartitionTree(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Object, Object, Boolean, Integer> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
     public PgPartitionTree call(
           Object rootrelid
     ) {
@@ -148,13 +134,5 @@ public class PgPartitionTree extends TableImpl<PgPartitionTreeRecord> {
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Object, ? super Object, ? super Boolean, ? super Integer, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Object, ? super Object, ? super Boolean, ? super Integer, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

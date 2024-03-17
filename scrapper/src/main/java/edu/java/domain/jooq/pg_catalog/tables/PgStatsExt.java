@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function15;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row15;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -100,10 +94,6 @@ public class PgStatsExt extends TableImpl<PgStatsExtRecord> {
         this(DSL.name("pg_stats_ext"), null);
     }
 
-    public <O extends Record> PgStatsExt(Table<O> child, ForeignKey<O, PgStatsExtRecord> key) {
-        super(child, key, PG_STATS_EXT);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -144,23 +134,5 @@ public class PgStatsExt extends TableImpl<PgStatsExtRecord> {
     @NotNull
     public PgStatsExt rename(Table<?> name) {
         return new PgStatsExt(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row15 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row15<String, String, String, String, String, String[], String[], String[], Boolean, Object, Object, String[], Boolean[], Double[], Double[]> fieldsRow() {
-        return (Row15) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function15<? super String, ? super String, ? super String, ? super String, ? super String, ? super String[], ? super String[], ? super String[], ? super Boolean, ? super Object, ? super Object, ? super String[], ? super Boolean[], ? super Double[], ? super Double[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function15<? super String, ? super String, ? super String, ? super String, ? super String, ? super String[], ? super String[], ? super String[], ? super Boolean, ? super Object, ? super Object, ? super String[], ? super Boolean[], ? super Double[], ? super Double[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

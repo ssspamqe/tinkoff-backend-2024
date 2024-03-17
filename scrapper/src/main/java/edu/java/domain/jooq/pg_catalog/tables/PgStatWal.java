@@ -15,14 +15,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -89,10 +83,6 @@ public class PgStatWal extends TableImpl<PgStatWalRecord> {
         this(DSL.name("pg_stat_wal"), null);
     }
 
-    public <O extends Record> PgStatWal(Table<O> child, ForeignKey<O, PgStatWalRecord> key) {
-        super(child, key, PG_STAT_WAL);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -133,23 +123,5 @@ public class PgStatWal extends TableImpl<PgStatWalRecord> {
     @NotNull
     public PgStatWal rename(Table<?> name) {
         return new PgStatWal(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<Long, Long, BigDecimal, Long, Long, Long, Double, Double, OffsetDateTime> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super Long, ? super Long, ? super BigDecimal, ? super Long, ? super Long, ? super Long, ? super Double, ? super Double, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super Long, ? super BigDecimal, ? super Long, ? super Long, ? super Long, ? super Double, ? super Double, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

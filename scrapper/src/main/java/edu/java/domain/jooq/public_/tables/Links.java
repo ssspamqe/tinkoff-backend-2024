@@ -4,32 +4,21 @@
 package edu.java.domain.jooq.public_.tables;
 
 
-import edu.java.domain.jooq.public_.Keys;
 import edu.java.domain.jooq.public_.Public;
 import edu.java.domain.jooq.public_.tables.records.LinksRecord;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
-import org.jooq.Identity;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -83,32 +72,10 @@ public class Links extends TableImpl<LinksRecord> {
         this(DSL.name("links"), null);
     }
 
-    public <O extends Record> Links(Table<O> child, ForeignKey<O, LinksRecord> key) {
-        super(child, key, LINKS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : Public.PUBLIC;
-    }
-
-    @Override
-    @NotNull
-    public Identity<LinksRecord, Long> getIdentity() {
-        return (Identity<LinksRecord, Long>) super.getIdentity();
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<LinksRecord> getPrimaryKey() {
-        return Keys.LINKS_PKEY;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<LinksRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.LINKS_URL_KEY);
     }
 
     @Override
@@ -145,23 +112,5 @@ public class Links extends TableImpl<LinksRecord> {
     @NotNull
     public Links rename(Table<?> name) {
         return new Links(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Long, String, LocalDateTime, LocalDateTime> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Long, ? super String, ? super LocalDateTime, ? super LocalDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super String, ? super LocalDateTime, ? super LocalDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

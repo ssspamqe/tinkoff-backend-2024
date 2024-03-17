@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function11;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row11;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -92,10 +86,6 @@ public class PgStatBgwriter extends TableImpl<PgStatBgwriterRecord> {
         this(DSL.name("pg_stat_bgwriter"), null);
     }
 
-    public <O extends Record> PgStatBgwriter(Table<O> child, ForeignKey<O, PgStatBgwriterRecord> key) {
-        super(child, key, PG_STAT_BGWRITER);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -136,23 +126,5 @@ public class PgStatBgwriter extends TableImpl<PgStatBgwriterRecord> {
     @NotNull
     public PgStatBgwriter rename(Table<?> name) {
         return new PgStatBgwriter(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row11 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row11<Long, Long, Double, Double, Long, Long, Long, Long, Long, Long, OffsetDateTime> fieldsRow() {
-        return (Row11) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function11<? super Long, ? super Long, ? super Double, ? super Double, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function11<? super Long, ? super Long, ? super Double, ? super Double, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

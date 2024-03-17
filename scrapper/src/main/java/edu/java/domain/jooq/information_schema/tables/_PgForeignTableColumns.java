@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -76,10 +70,6 @@ public class _PgForeignTableColumns extends TableImpl<_PgForeignTableColumnsReco
         this(DSL.name("_pg_foreign_table_columns"), null);
     }
 
-    public <O extends Record> _PgForeignTableColumns(Table<O> child, ForeignKey<O, _PgForeignTableColumnsRecord> key) {
-        super(child, key, _PG_FOREIGN_TABLE_COLUMNS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -120,23 +110,5 @@ public class _PgForeignTableColumns extends TableImpl<_PgForeignTableColumnsReco
     @NotNull
     public _PgForeignTableColumns rename(Table<?> name) {
         return new _PgForeignTableColumns(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<String, String, String, String[]> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super String, ? super String[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super String, ? super String[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

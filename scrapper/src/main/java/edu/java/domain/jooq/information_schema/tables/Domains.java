@@ -12,9 +12,7 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -115,10 +113,6 @@ public class Domains extends TableImpl<DomainsRecord> {
 
     public Domains() {
         this(DSL.name("domains"), null);
-    }
-
-    public <O extends Record> Domains(Table<O> child, ForeignKey<O, DomainsRecord> key) {
-        super(child, key, DOMAINS);
     }
 
     @Override

@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function10;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row10;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -87,10 +81,6 @@ public class RoutinePrivileges extends TableImpl<RoutinePrivilegesRecord> {
         this(DSL.name("routine_privileges"), null);
     }
 
-    public <O extends Record> RoutinePrivileges(Table<O> child, ForeignKey<O, RoutinePrivilegesRecord> key) {
-        super(child, key, ROUTINE_PRIVILEGES);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -131,23 +121,5 @@ public class RoutinePrivileges extends TableImpl<RoutinePrivilegesRecord> {
     @NotNull
     public RoutinePrivileges rename(Table<?> name) {
         return new RoutinePrivileges(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row10 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row10<String, String, String, String, String, String, String, String, String, String> fieldsRow() {
-        return (Row10) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function10<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function10<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

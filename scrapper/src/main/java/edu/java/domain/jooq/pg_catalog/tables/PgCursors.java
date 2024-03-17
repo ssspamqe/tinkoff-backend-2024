@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function6;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row6;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -82,10 +76,6 @@ public class PgCursors extends TableImpl<PgCursorsRecord> {
         this(DSL.name("pg_cursors"), null);
     }
 
-    public <O extends Record> PgCursors(Table<O> child, ForeignKey<O, PgCursorsRecord> key) {
-        super(child, key, PG_CURSORS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -126,23 +116,5 @@ public class PgCursors extends TableImpl<PgCursorsRecord> {
     @NotNull
     public PgCursors rename(Table<?> name) {
         return new PgCursors(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row6 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row6<String, String, Boolean, Boolean, Boolean, OffsetDateTime> fieldsRow() {
-        return (Row6) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -85,10 +79,6 @@ public class RoutineSequenceUsage extends TableImpl<RoutineSequenceUsageRecord> 
         this(DSL.name("routine_sequence_usage"), null);
     }
 
-    public <O extends Record> RoutineSequenceUsage(Table<O> child, ForeignKey<O, RoutineSequenceUsageRecord> key) {
-        super(child, key, ROUTINE_SEQUENCE_USAGE);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -129,23 +119,5 @@ public class RoutineSequenceUsage extends TableImpl<RoutineSequenceUsageRecord> 
     @NotNull
     public RoutineSequenceUsage rename(Table<?> name) {
         return new RoutineSequenceUsage(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<String, String, String, String, String, String, String, String, String> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

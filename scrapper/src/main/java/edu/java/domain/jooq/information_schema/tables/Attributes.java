@@ -12,9 +12,7 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -123,10 +121,6 @@ public class Attributes extends TableImpl<AttributesRecord> {
 
     public Attributes() {
         this(DSL.name("attributes"), null);
-    }
-
-    public <O extends Record> Attributes(Table<O> child, ForeignKey<O, AttributesRecord> key) {
-        super(child, key, ATTRIBUTES);
     }
 
     @Override

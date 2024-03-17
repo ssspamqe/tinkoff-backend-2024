@@ -4,26 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgConstraintRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -122,26 +115,10 @@ public class PgConstraint extends TableImpl<PgConstraintRecord> {
         this(DSL.name("pg_constraint"), null);
     }
 
-    public <O extends Record> PgConstraint(Table<O> child, ForeignKey<O, PgConstraintRecord> key) {
-        super(child, key, PG_CONSTRAINT);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgConstraintRecord> getPrimaryKey() {
-        return Keys.PG_CONSTRAINT_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgConstraintRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_CONSTRAINT_CONRELID_CONTYPID_CONNAME_INDEX);
     }
 
     @Override

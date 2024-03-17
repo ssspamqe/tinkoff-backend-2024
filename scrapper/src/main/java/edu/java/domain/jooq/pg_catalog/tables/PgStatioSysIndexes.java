@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function7;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row7;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -82,10 +76,6 @@ public class PgStatioSysIndexes extends TableImpl<PgStatioSysIndexesRecord> {
         this(DSL.name("pg_statio_sys_indexes"), null);
     }
 
-    public <O extends Record> PgStatioSysIndexes(Table<O> child, ForeignKey<O, PgStatioSysIndexesRecord> key) {
-        super(child, key, PG_STATIO_SYS_INDEXES);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -126,23 +116,5 @@ public class PgStatioSysIndexes extends TableImpl<PgStatioSysIndexesRecord> {
     @NotNull
     public PgStatioSysIndexes rename(Table<?> name) {
         return new PgStatioSysIndexes(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row7 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row7<Long, Long, String, String, String, Long, Long> fieldsRow() {
-        return (Row7) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function7<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

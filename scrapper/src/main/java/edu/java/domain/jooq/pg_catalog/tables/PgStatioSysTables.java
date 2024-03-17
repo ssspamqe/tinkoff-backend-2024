@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function11;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row11;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -90,10 +84,6 @@ public class PgStatioSysTables extends TableImpl<PgStatioSysTablesRecord> {
         this(DSL.name("pg_statio_sys_tables"), null);
     }
 
-    public <O extends Record> PgStatioSysTables(Table<O> child, ForeignKey<O, PgStatioSysTablesRecord> key) {
-        super(child, key, PG_STATIO_SYS_TABLES);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -134,23 +124,5 @@ public class PgStatioSysTables extends TableImpl<PgStatioSysTablesRecord> {
     @NotNull
     public PgStatioSysTables rename(Table<?> name) {
         return new PgStatioSysTables(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row11 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row11<Long, String, String, Long, Long, Long, Long, Long, Long, Long, Long> fieldsRow() {
-        return (Row11) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function11<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function11<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

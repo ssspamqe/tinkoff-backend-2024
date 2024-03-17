@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -76,10 +70,6 @@ public class PgRules extends TableImpl<PgRulesRecord> {
         this(DSL.name("pg_rules"), null);
     }
 
-    public <O extends Record> PgRules(Table<O> child, ForeignKey<O, PgRulesRecord> key) {
-        super(child, key, PG_RULES);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -120,23 +110,5 @@ public class PgRules extends TableImpl<PgRulesRecord> {
     @NotNull
     public PgRules rename(Table<?> name) {
         return new PgRules(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<String, String, String, String> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

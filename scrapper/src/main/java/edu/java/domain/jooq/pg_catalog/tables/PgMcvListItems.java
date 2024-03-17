@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function5;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -120,16 +116,6 @@ public class PgMcvListItems extends TableImpl<PgMcvListItemsRecord> {
         return new PgMcvListItems(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row5 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row5<Integer, String[], Boolean[], Double, Double> fieldsRow() {
-        return (Row5) super.fieldsRow();
-    }
-
     public PgMcvListItems call(
           Object mcvList
     ) {
@@ -148,13 +134,5 @@ public class PgMcvListItems extends TableImpl<PgMcvListItemsRecord> {
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function5<? super Integer, ? super String[], ? super Boolean[], ? super Double, ? super Double, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Integer, ? super String[], ? super Boolean[], ? super Double, ? super Double, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

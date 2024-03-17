@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function3;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row3;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -116,16 +112,6 @@ public class PgExtensionUpdatePaths extends TableImpl<PgExtensionUpdatePathsReco
         return new PgExtensionUpdatePaths(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row3 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row3<String, String, String> fieldsRow() {
-        return (Row3) super.fieldsRow();
-    }
-
     public PgExtensionUpdatePaths call(
           String name
     ) {
@@ -144,13 +130,5 @@ public class PgExtensionUpdatePaths extends TableImpl<PgExtensionUpdatePathsReco
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function3<? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

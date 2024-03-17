@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -86,10 +80,6 @@ public class _PgForeignServers extends TableImpl<_PgForeignServersRecord> {
         this(DSL.name("_pg_foreign_servers"), null);
     }
 
-    public <O extends Record> _PgForeignServers(Table<O> child, ForeignKey<O, _PgForeignServersRecord> key) {
-        super(child, key, _PG_FOREIGN_SERVERS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -130,23 +120,5 @@ public class _PgForeignServers extends TableImpl<_PgForeignServersRecord> {
     @NotNull
     public _PgForeignServers rename(Table<?> name) {
         return new _PgForeignServers(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<Long, String[], String, String, String, String, String, String, String> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super Long, ? super String[], ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super String[], ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

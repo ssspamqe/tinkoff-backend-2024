@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function5;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -77,10 +71,6 @@ public class SqlParts extends TableImpl<SqlPartsRecord> {
         this(DSL.name("sql_parts"), null);
     }
 
-    public <O extends Record> SqlParts(Table<O> child, ForeignKey<O, SqlPartsRecord> key) {
-        super(child, key, SQL_PARTS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -121,23 +111,5 @@ public class SqlParts extends TableImpl<SqlPartsRecord> {
     @NotNull
     public SqlParts rename(Table<?> name) {
         return new SqlParts(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row5 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row5<String, String, String, String, String> fieldsRow() {
-        return (Row5) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

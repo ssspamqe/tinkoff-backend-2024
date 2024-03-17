@@ -14,12 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function16;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row16;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -143,27 +139,9 @@ public class PgLockStatus extends TableImpl<PgLockStatusRecord> {
         return new PgLockStatus(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row16 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row16<String, Long, Long, Integer, Short, String, Long, Long, Long, Short, String, Integer, String, Boolean, Boolean, OffsetDateTime> fieldsRow() {
-        return (Row16) super.fieldsRow();
-    }
-
     public PgLockStatus call() {
         PgLockStatus result = new PgLockStatus(DSL.name("pg_lock_status"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function16<? super String, ? super Long, ? super Long, ? super Integer, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Integer, ? super String, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function16<? super String, ? super Long, ? super Long, ? super Integer, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Integer, ? super String, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

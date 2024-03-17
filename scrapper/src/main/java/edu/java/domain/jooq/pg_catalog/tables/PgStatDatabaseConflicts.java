@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -84,10 +78,6 @@ public class PgStatDatabaseConflicts extends TableImpl<PgStatDatabaseConflictsRe
         this(DSL.name("pg_stat_database_conflicts"), null);
     }
 
-    public <O extends Record> PgStatDatabaseConflicts(Table<O> child, ForeignKey<O, PgStatDatabaseConflictsRecord> key) {
-        super(child, key, PG_STAT_DATABASE_CONFLICTS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -128,23 +118,5 @@ public class PgStatDatabaseConflicts extends TableImpl<PgStatDatabaseConflictsRe
     @NotNull
     public PgStatDatabaseConflicts rename(Table<?> name) {
         return new PgStatDatabaseConflicts(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<Long, String, Long, Long, Long, Long, Long, Long> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

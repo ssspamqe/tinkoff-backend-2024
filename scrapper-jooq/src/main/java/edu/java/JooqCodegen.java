@@ -14,10 +14,6 @@ public class JooqCodegen {
     private JooqCodegen() {
     }
 
-    public static void main(String[] args) throws Exception {
-        generate();
-    }
-
     @SuppressWarnings("MultipleStringLiterals")
     public static void generate() throws Exception {
         Database database = new Database()
@@ -27,7 +23,31 @@ public class JooqCodegen {
                 new Property().withKey("scripts").withValue("master.yaml")
             );
 
-        Generate options = new Generate()
+        Generate options = buildOptions();
+
+        Target target = new Target()
+            .withPackageName("edu.java.domain.jooq")
+            .withDirectory("scrapper/src/main/java");
+
+        Configuration configuration = new Configuration()
+            .withGenerator(
+                new Generator()
+                    .withDatabase(database)
+                    .withGenerate(options)
+                    .withTarget(target)
+            ).withJdbc(
+                new Jdbc()
+                    .withDriver("org.postgresql.Driver")
+                    .withUrl("jdbc:postgresql://localhost:5432/scrapper")
+                    .withUser("postgres")
+                    .withPassword("postgres")
+            );
+
+        GenerationTool.generate(configuration);
+    }
+
+    private static Generate buildOptions() {
+        return new Generate()
             .withGeneratedAnnotation(true)
             .withGeneratedAnnotationDate(false)
             .withNullableAnnotation(true)
@@ -56,26 +76,10 @@ public class JooqCodegen {
             .withRelations(false)
             .withEmptyCatalogs(false)
             .withSequences(false)
-            .withSources(false);
-
-        Target target = new Target()
-            .withPackageName("edu.java.domain.jooq")
-            .withDirectory("scrapper/src/main/java");
-
-        Configuration configuration = new Configuration()
-            .withGenerator(
-                new Generator()
-                    .withDatabase(database)
-                    .withGenerate(options)
-                    .withTarget(target)
-            ).withJdbc(
-                new Jdbc()
-                    .withDriver("org.postgresql.Driver")
-                    .withUrl("jdbc:postgresql://localhost:5432/scrapper")
-                    .withUser("postgres")
-                    .withPassword("postgres")
-            );
-
-        GenerationTool.generate(configuration);
+            .withSources(false)
+            .withTables(false)
+            .withQueues(false)
+            .withRecordsImplementingRecordN(false)
+            .withImplicitJoinPathsToOne(false);
     }
 }

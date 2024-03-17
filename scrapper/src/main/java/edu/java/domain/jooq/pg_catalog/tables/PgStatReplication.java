@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function20;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row20;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -116,10 +110,6 @@ public class PgStatReplication extends TableImpl<PgStatReplicationRecord> {
         this(DSL.name("pg_stat_replication"), null);
     }
 
-    public <O extends Record> PgStatReplication(Table<O> child, ForeignKey<O, PgStatReplicationRecord> key) {
-        super(child, key, PG_STAT_REPLICATION);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -160,23 +150,5 @@ public class PgStatReplication extends TableImpl<PgStatReplicationRecord> {
     @NotNull
     public PgStatReplication rename(Table<?> name) {
         return new PgStatReplication(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row20 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row20<Integer, Long, String, String, Object, String, Integer, OffsetDateTime, Long, String, Object, Object, Object, Object, YearToSecond, YearToSecond, YearToSecond, Integer, String, OffsetDateTime> fieldsRow() {
-        return (Row20) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function20<? super Integer, ? super Long, ? super String, ? super String, ? super Object, ? super String, ? super Integer, ? super OffsetDateTime, ? super Long, ? super String, ? super Object, ? super Object, ? super Object, ? super Object, ? super YearToSecond, ? super YearToSecond, ? super YearToSecond, ? super Integer, ? super String, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function20<? super Integer, ? super Long, ? super String, ? super String, ? super Object, ? super String, ? super Integer, ? super OffsetDateTime, ? super Long, ? super String, ? super Object, ? super Object, ? super Object, ? super Object, ? super YearToSecond, ? super YearToSecond, ? super YearToSecond, ? super Integer, ? super String, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

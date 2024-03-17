@@ -14,9 +14,7 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -227,10 +225,6 @@ public class Routines extends TableImpl<RoutinesRecord> {
 
     public Routines() {
         this(DSL.name("routines"), null);
-    }
-
-    public <O extends Record> Routines(Table<O> child, ForeignKey<O, RoutinesRecord> key) {
-        super(child, key, ROUTINES);
     }
 
     @Override

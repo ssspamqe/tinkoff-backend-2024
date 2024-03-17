@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgSubscriptionRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function17;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row17;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -108,26 +97,10 @@ public class PgSubscription extends TableImpl<PgSubscriptionRecord> {
         this(DSL.name("pg_subscription"), null);
     }
 
-    public <O extends Record> PgSubscription(Table<O> child, ForeignKey<O, PgSubscriptionRecord> key) {
-        super(child, key, PG_SUBSCRIPTION);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgSubscriptionRecord> getPrimaryKey() {
-        return Keys.PG_SUBSCRIPTION_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgSubscriptionRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_SUBSCRIPTION_SUBNAME_INDEX);
     }
 
     @Override
@@ -164,23 +137,5 @@ public class PgSubscription extends TableImpl<PgSubscriptionRecord> {
     @NotNull
     public PgSubscription rename(Table<?> name) {
         return new PgSubscription(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row17 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row17<Long, Long, Object, String, Long, Boolean, Boolean, String, String, Boolean, Boolean, Boolean, String, String, String, String[], String> fieldsRow() {
-        return (Row17) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function17<? super Long, ? super Long, ? super Object, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super String, ? super String[], ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function17<? super Long, ? super Long, ? super Object, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super String, ? super String[], ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

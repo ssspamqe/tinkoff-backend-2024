@@ -12,9 +12,7 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -125,10 +123,6 @@ public class Parameters extends TableImpl<ParametersRecord> {
 
     public Parameters() {
         this(DSL.name("parameters"), null);
-    }
-
-    public <O extends Record> Parameters(Table<O> child, ForeignKey<O, ParametersRecord> key) {
-        super(child, key, PARAMETERS);
     }
 
     @Override

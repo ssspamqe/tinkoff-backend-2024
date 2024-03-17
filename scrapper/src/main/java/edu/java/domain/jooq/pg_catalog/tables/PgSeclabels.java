@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -84,10 +78,6 @@ public class PgSeclabels extends TableImpl<PgSeclabelsRecord> {
         this(DSL.name("pg_seclabels"), null);
     }
 
-    public <O extends Record> PgSeclabels(Table<O> child, ForeignKey<O, PgSeclabelsRecord> key) {
-        super(child, key, PG_SECLABELS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -128,23 +118,5 @@ public class PgSeclabels extends TableImpl<PgSeclabelsRecord> {
     @NotNull
     public PgSeclabels rename(Table<?> name) {
         return new PgSeclabels(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<Long, Long, Integer, String, Long, String, String, String> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super Long, ? super Long, ? super Integer, ? super String, ? super Long, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super Long, ? super Integer, ? super String, ? super Long, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

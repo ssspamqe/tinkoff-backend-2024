@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -86,10 +80,6 @@ public class PgPreparedStatements extends TableImpl<PgPreparedStatementsRecord> 
         this(DSL.name("pg_prepared_statements"), null);
     }
 
-    public <O extends Record> PgPreparedStatements(Table<O> child, ForeignKey<O, PgPreparedStatementsRecord> key) {
-        super(child, key, PG_PREPARED_STATEMENTS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -130,23 +120,5 @@ public class PgPreparedStatements extends TableImpl<PgPreparedStatementsRecord> 
     @NotNull
     public PgPreparedStatements rename(Table<?> name) {
         return new PgPreparedStatements(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<String, String, OffsetDateTime, Object[], Object[], Boolean, Long, Long> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super OffsetDateTime, ? super Object[], ? super Object[], ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super OffsetDateTime, ? super Object[], ? super Object[], ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

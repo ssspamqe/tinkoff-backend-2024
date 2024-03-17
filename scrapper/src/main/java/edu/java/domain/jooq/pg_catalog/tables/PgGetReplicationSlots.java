@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function15;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row15;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -141,27 +137,9 @@ public class PgGetReplicationSlots extends TableImpl<PgGetReplicationSlotsRecord
         return new PgGetReplicationSlots(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row15 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row15<String, String, String, Long, Boolean, Boolean, Integer, Long, Long, Object, Object, String, Long, Boolean, Boolean> fieldsRow() {
-        return (Row15) super.fieldsRow();
-    }
-
     public PgGetReplicationSlots call() {
         PgGetReplicationSlots result = new PgGetReplicationSlots(DSL.name("pg_get_replication_slots"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function15<? super String, ? super String, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? super Integer, ? super Long, ? super Long, ? super Object, ? super Object, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function15<? super String, ? super String, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? super Integer, ? super Long, ? super Long, ? super Object, ? super Object, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

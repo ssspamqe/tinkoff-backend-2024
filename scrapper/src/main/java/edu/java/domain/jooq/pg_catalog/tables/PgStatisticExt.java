@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatisticExtRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -92,26 +81,10 @@ public class PgStatisticExt extends TableImpl<PgStatisticExtRecord> {
         this(DSL.name("pg_statistic_ext"), null);
     }
 
-    public <O extends Record> PgStatisticExt(Table<O> child, ForeignKey<O, PgStatisticExtRecord> key) {
-        super(child, key, PG_STATISTIC_EXT);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgStatisticExtRecord> getPrimaryKey() {
-        return Keys.PG_STATISTIC_EXT_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgStatisticExtRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_STATISTIC_EXT_NAME_INDEX);
     }
 
     @Override
@@ -148,23 +121,5 @@ public class PgStatisticExt extends TableImpl<PgStatisticExtRecord> {
     @NotNull
     public PgStatisticExt rename(Table<?> name) {
         return new PgStatisticExt(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<Long, Long, String, Long, Long, Integer, Object[], String[], Object> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super Long, ? super Long, ? super String, ? super Long, ? super Long, ? super Integer, ? super Object[], ? super String[], ? super Object, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super Long, ? super String, ? super Long, ? super Long, ? super Integer, ? super Object[], ? super String[], ? super Object, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTsTemplateRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function5;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -83,26 +72,10 @@ public class PgTsTemplate extends TableImpl<PgTsTemplateRecord> {
         this(DSL.name("pg_ts_template"), null);
     }
 
-    public <O extends Record> PgTsTemplate(Table<O> child, ForeignKey<O, PgTsTemplateRecord> key) {
-        super(child, key, PG_TS_TEMPLATE);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgTsTemplateRecord> getPrimaryKey() {
-        return Keys.PG_TS_TEMPLATE_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgTsTemplateRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_TS_TEMPLATE_TMPLNAME_INDEX);
     }
 
     @Override
@@ -139,23 +112,5 @@ public class PgTsTemplate extends TableImpl<PgTsTemplateRecord> {
     @NotNull
     public PgTsTemplate rename(Table<?> name) {
         return new PgTsTemplate(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row5 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row5<Long, String, Long, String, String> fieldsRow() {
-        return (Row5) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super Long, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super Long, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

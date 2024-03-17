@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function1;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row1;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -69,10 +63,6 @@ public class InformationSchemaCatalogName extends TableImpl<InformationSchemaCat
         this(DSL.name("information_schema_catalog_name"), null);
     }
 
-    public <O extends Record> InformationSchemaCatalogName(Table<O> child, ForeignKey<O, InformationSchemaCatalogNameRecord> key) {
-        super(child, key, INFORMATION_SCHEMA_CATALOG_NAME);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -113,23 +103,5 @@ public class InformationSchemaCatalogName extends TableImpl<InformationSchemaCat
     @NotNull
     public InformationSchemaCatalogName rename(Table<?> name) {
         return new InformationSchemaCatalogName(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row1 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row1<String> fieldsRow() {
-        return (Row1) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

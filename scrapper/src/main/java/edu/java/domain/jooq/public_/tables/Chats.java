@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.public_.tables;
 
 
-import edu.java.domain.jooq.public_.Keys;
 import edu.java.domain.jooq.public_.Public;
 import edu.java.domain.jooq.public_.tables.records.ChatsRecord;
 
@@ -15,18 +14,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function2;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row2;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -76,20 +68,10 @@ public class Chats extends TableImpl<ChatsRecord> {
         this(DSL.name("chats"), null);
     }
 
-    public <O extends Record> Chats(Table<O> child, ForeignKey<O, ChatsRecord> key) {
-        super(child, key, CHATS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : Public.PUBLIC;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<ChatsRecord> getPrimaryKey() {
-        return Keys.CHATS_PKEY;
     }
 
     @Override
@@ -126,23 +108,5 @@ public class Chats extends TableImpl<ChatsRecord> {
     @NotNull
     public Chats rename(Table<?> name) {
         return new Chats(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row2 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row2<Long, OffsetDateTime> fieldsRow() {
-        return (Row2) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function2<? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function2<? super Long, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

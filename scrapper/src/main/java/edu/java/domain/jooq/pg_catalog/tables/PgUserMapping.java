@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgUserMappingRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -81,26 +70,10 @@ public class PgUserMapping extends TableImpl<PgUserMappingRecord> {
         this(DSL.name("pg_user_mapping"), null);
     }
 
-    public <O extends Record> PgUserMapping(Table<O> child, ForeignKey<O, PgUserMappingRecord> key) {
-        super(child, key, PG_USER_MAPPING);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgUserMappingRecord> getPrimaryKey() {
-        return Keys.PG_USER_MAPPING_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgUserMappingRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_USER_MAPPING_USER_SERVER_INDEX);
     }
 
     @Override
@@ -137,23 +110,5 @@ public class PgUserMapping extends TableImpl<PgUserMappingRecord> {
     @NotNull
     public PgUserMapping rename(Table<?> name) {
         return new PgUserMapping(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Long, Long, Long, String[]> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super Long, ? super String[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super Long, ? super String[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

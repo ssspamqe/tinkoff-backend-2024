@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function1;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row1;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -114,16 +110,6 @@ public class RegexpMatches extends TableImpl<RegexpMatchesRecord> {
         return new RegexpMatches(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row1 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row1<String[]> fieldsRow() {
-        return (Row1) super.fieldsRow();
-    }
-
     public RegexpMatches call(
           String __1
         , String __2
@@ -150,13 +136,5 @@ public class RegexpMatches extends TableImpl<RegexpMatchesRecord> {
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function1<? super String[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

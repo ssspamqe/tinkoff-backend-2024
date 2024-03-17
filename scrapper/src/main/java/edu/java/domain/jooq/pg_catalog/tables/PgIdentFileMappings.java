@@ -12,12 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function7;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row7;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -123,27 +119,9 @@ public class PgIdentFileMappings extends TableImpl<PgIdentFileMappingsRecord> {
         return new PgIdentFileMappings(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row7 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row7<Integer, String, Integer, String, String, String, String> fieldsRow() {
-        return (Row7) super.fieldsRow();
-    }
-
     public PgIdentFileMappings call() {
         PgIdentFileMappings result = new PgIdentFileMappings(DSL.name("pg_ident_file_mappings"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function7<? super Integer, ? super String, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Integer, ? super String, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

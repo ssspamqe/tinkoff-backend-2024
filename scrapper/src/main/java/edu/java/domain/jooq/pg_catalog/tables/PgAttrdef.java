@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAttrdefRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -82,26 +71,10 @@ public class PgAttrdef extends TableImpl<PgAttrdefRecord> {
         this(DSL.name("pg_attrdef"), null);
     }
 
-    public <O extends Record> PgAttrdef(Table<O> child, ForeignKey<O, PgAttrdefRecord> key) {
-        super(child, key, PG_ATTRDEF);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgAttrdefRecord> getPrimaryKey() {
-        return Keys.PG_ATTRDEF_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgAttrdefRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_ATTRDEF_ADRELID_ADNUM_INDEX);
     }
 
     @Override
@@ -138,23 +111,5 @@ public class PgAttrdef extends TableImpl<PgAttrdefRecord> {
     @NotNull
     public PgAttrdef rename(Table<?> name) {
         return new PgAttrdef(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Long, Long, Short, Object> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super Short, ? super Object, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super Short, ? super Object, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

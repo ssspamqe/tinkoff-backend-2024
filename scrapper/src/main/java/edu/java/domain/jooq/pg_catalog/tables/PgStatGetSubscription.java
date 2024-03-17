@@ -14,12 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -132,16 +128,6 @@ public class PgStatGetSubscription extends TableImpl<PgStatGetSubscriptionRecord
         return new PgStatGetSubscription(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<Long, Long, Integer, Integer, Object, OffsetDateTime, OffsetDateTime, Object, OffsetDateTime> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
     public PgStatGetSubscription call(
           Long subid
     ) {
@@ -160,13 +146,5 @@ public class PgStatGetSubscription extends TableImpl<PgStatGetSubscriptionRecord
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super Long, ? super Long, ? super Integer, ? super Integer, ? super Object, ? super OffsetDateTime, ? super OffsetDateTime, ? super Object, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super Long, ? super Integer, ? super Integer, ? super Object, ? super OffsetDateTime, ? super OffsetDateTime, ? super Object, ? super OffsetDateTime, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

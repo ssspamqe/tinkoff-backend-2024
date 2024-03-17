@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatisticRecord;
 
@@ -13,14 +12,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -128,20 +124,10 @@ public class PgStatistic extends TableImpl<PgStatisticRecord> {
         this(DSL.name("pg_statistic"), null);
     }
 
-    public <O extends Record> PgStatistic(Table<O> child, ForeignKey<O, PgStatisticRecord> key) {
-        super(child, key, PG_STATISTIC);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgStatisticRecord> getPrimaryKey() {
-        return Keys.PG_STATISTIC_RELID_ATT_INH_INDEX;
     }
 
     @Override

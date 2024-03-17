@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function14;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row14;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -98,10 +92,6 @@ public class Databasechangelog extends TableImpl<DatabasechangelogRecord> {
         this(DSL.name("databasechangelog"), null);
     }
 
-    public <O extends Record> Databasechangelog(Table<O> child, ForeignKey<O, DatabasechangelogRecord> key) {
-        super(child, key, DATABASECHANGELOG);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -142,23 +132,5 @@ public class Databasechangelog extends TableImpl<DatabasechangelogRecord> {
     @NotNull
     public Databasechangelog rename(Table<?> name) {
         return new Databasechangelog(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row14 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row14<String, String, String, LocalDateTime, Integer, String, String, String, String, String, String, String, String, String> fieldsRow() {
-        return (Row14) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function14<? super String, ? super String, ? super String, ? super LocalDateTime, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function14<? super String, ? super String, ? super String, ? super LocalDateTime, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

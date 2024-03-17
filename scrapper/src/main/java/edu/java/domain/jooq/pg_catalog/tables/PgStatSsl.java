@@ -14,14 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -86,10 +80,6 @@ public class PgStatSsl extends TableImpl<PgStatSslRecord> {
         this(DSL.name("pg_stat_ssl"), null);
     }
 
-    public <O extends Record> PgStatSsl(Table<O> child, ForeignKey<O, PgStatSslRecord> key) {
-        super(child, key, PG_STAT_SSL);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -130,23 +120,5 @@ public class PgStatSsl extends TableImpl<PgStatSslRecord> {
     @NotNull
     public PgStatSsl rename(Table<?> name) {
         return new PgStatSsl(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<Integer, Boolean, String, String, Integer, String, BigDecimal, String> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super Integer, ? super Boolean, ? super String, ? super String, ? super Integer, ? super String, ? super BigDecimal, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Integer, ? super Boolean, ? super String, ? super String, ? super Integer, ? super String, ? super BigDecimal, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

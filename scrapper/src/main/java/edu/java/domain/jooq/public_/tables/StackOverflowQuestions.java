@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.public_.tables;
 
 
-import edu.java.domain.jooq.public_.Keys;
 import edu.java.domain.jooq.public_.Public;
 import edu.java.domain.jooq.public_.tables.records.StackOverflowQuestionsRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -81,41 +70,10 @@ public class StackOverflowQuestions extends TableImpl<StackOverflowQuestionsReco
         this(DSL.name("stack_overflow_questions"), null);
     }
 
-    public <O extends Record> StackOverflowQuestions(Table<O> child, ForeignKey<O, StackOverflowQuestionsRecord> key) {
-        super(child, key, STACK_OVERFLOW_QUESTIONS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : Public.PUBLIC;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<StackOverflowQuestionsRecord> getPrimaryKey() {
-        return Keys.STACK_OVERFLOW_QUESTIONS_PKEY;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<StackOverflowQuestionsRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.STACK_OVERFLOW_QUESTIONS_LINK_ID_KEY);
-    }
-
-    @Override
-    @NotNull
-    public List<ForeignKey<StackOverflowQuestionsRecord, ?>> getReferences() {
-        return Arrays.asList(Keys.STACK_OVERFLOW_QUESTIONS__STACK_OVERFLOW_QUESTIONS_LINK_ID_FKEY);
-    }
-
-    private transient Links _links;
-
-    public Links links() {
-        if (_links == null)
-            _links = new Links(this, Keys.STACK_OVERFLOW_QUESTIONS__STACK_OVERFLOW_QUESTIONS_LINK_ID_FKEY);
-
-        return _links;
     }
 
     @Override
@@ -152,23 +110,5 @@ public class StackOverflowQuestions extends TableImpl<StackOverflowQuestionsReco
     @NotNull
     public StackOverflowQuestions rename(Table<?> name) {
         return new StackOverflowQuestions(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Long, Long, String, Long[]> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super String, ? super Long[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super String, ? super Long[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

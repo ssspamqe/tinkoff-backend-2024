@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function11;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row11;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -91,10 +85,6 @@ public class PgSequences extends TableImpl<PgSequencesRecord> {
         this(DSL.name("pg_sequences"), null);
     }
 
-    public <O extends Record> PgSequences(Table<O> child, ForeignKey<O, PgSequencesRecord> key) {
-        super(child, key, PG_SEQUENCES);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -135,23 +125,5 @@ public class PgSequences extends TableImpl<PgSequencesRecord> {
     @NotNull
     public PgSequences rename(Table<?> name) {
         return new PgSequences(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row11 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row11<String, String, String, Object, Long, Long, Long, Long, Boolean, Long, Long> fieldsRow() {
-        return (Row11) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function11<? super String, ? super String, ? super String, ? super Object, ? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function11<? super String, ? super String, ? super String, ? super Object, ? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

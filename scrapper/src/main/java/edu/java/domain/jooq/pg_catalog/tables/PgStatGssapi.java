@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function5;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -78,10 +72,6 @@ public class PgStatGssapi extends TableImpl<PgStatGssapiRecord> {
         this(DSL.name("pg_stat_gssapi"), null);
     }
 
-    public <O extends Record> PgStatGssapi(Table<O> child, ForeignKey<O, PgStatGssapiRecord> key) {
-        super(child, key, PG_STAT_GSSAPI);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -122,23 +112,5 @@ public class PgStatGssapi extends TableImpl<PgStatGssapiRecord> {
     @NotNull
     public PgStatGssapi rename(Table<?> name) {
         return new PgStatGssapi(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row5 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row5<Integer, Boolean, String, Boolean, Boolean> fieldsRow() {
-        return (Row5) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function5<? super Integer, ? super Boolean, ? super String, ? super Boolean, ? super Boolean, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Integer, ? super Boolean, ? super String, ? super Boolean, ? super Boolean, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -75,10 +69,6 @@ public class SqlSizing extends TableImpl<SqlSizingRecord> {
         this(DSL.name("sql_sizing"), null);
     }
 
-    public <O extends Record> SqlSizing(Table<O> child, ForeignKey<O, SqlSizingRecord> key) {
-        super(child, key, SQL_SIZING);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -119,23 +109,5 @@ public class SqlSizing extends TableImpl<SqlSizingRecord> {
     @NotNull
     public SqlSizing rename(Table<?> name) {
         return new SqlSizing(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Integer, String, Integer, String> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Integer, ? super String, ? super Integer, ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Integer, ? super String, ? super Integer, ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

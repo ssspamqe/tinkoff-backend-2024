@@ -4,30 +4,19 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgForeignDataWrapperRecord;
-
-import java.util.Arrays;
-import java.util.List;
 
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function7;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row7;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -87,26 +76,10 @@ public class PgForeignDataWrapper extends TableImpl<PgForeignDataWrapperRecord> 
         this(DSL.name("pg_foreign_data_wrapper"), null);
     }
 
-    public <O extends Record> PgForeignDataWrapper(Table<O> child, ForeignKey<O, PgForeignDataWrapperRecord> key) {
-        super(child, key, PG_FOREIGN_DATA_WRAPPER);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgForeignDataWrapperRecord> getPrimaryKey() {
-        return Keys.PG_FOREIGN_DATA_WRAPPER_OID_INDEX;
-    }
-
-    @Override
-    @NotNull
-    public List<UniqueKey<PgForeignDataWrapperRecord>> getUniqueKeys() {
-        return Arrays.asList(Keys.PG_FOREIGN_DATA_WRAPPER_NAME_INDEX);
     }
 
     @Override
@@ -143,23 +116,5 @@ public class PgForeignDataWrapper extends TableImpl<PgForeignDataWrapperRecord> 
     @NotNull
     public PgForeignDataWrapper rename(Table<?> name) {
         return new PgForeignDataWrapper(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row7 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row7<Long, String, Long, Long, Long, String[], String[]> fieldsRow() {
-        return (Row7) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function7<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super String[], ? super String[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super String[], ? super String[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

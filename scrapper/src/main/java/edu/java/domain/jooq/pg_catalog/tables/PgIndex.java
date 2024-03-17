@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgIndexRecord;
 
@@ -13,18 +12,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function21;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row21;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -114,20 +106,10 @@ public class PgIndex extends TableImpl<PgIndexRecord> {
         this(DSL.name("pg_index"), null);
     }
 
-    public <O extends Record> PgIndex(Table<O> child, ForeignKey<O, PgIndexRecord> key) {
-        super(child, key, PG_INDEX);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgIndexRecord> getPrimaryKey() {
-        return Keys.PG_INDEX_INDEXRELID_INDEX;
     }
 
     @Override
@@ -164,23 +146,5 @@ public class PgIndex extends TableImpl<PgIndexRecord> {
     @NotNull
     public PgIndex rename(Table<?> name) {
         return new PgIndex(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row21 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row21<Long, Long, Short, Short, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Object[], Object[], Object[], Object[], Object, Object> fieldsRow() {
-        return (Row21) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function21<? super Long, ? super Long, ? super Short, ? super Short, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Object[], ? super Object[], ? super Object[], ? super Object[], ? super Object, ? super Object, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function21<? super Long, ? super Long, ? super Short, ? super Short, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Object[], ? super Object[], ? super Object[], ? super Object[], ? super Object, ? super Object, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

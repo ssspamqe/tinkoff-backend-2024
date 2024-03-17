@@ -14,9 +14,7 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Name;
-import org.jooq.Record;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -120,10 +118,6 @@ public class PgStatDatabase extends TableImpl<PgStatDatabaseRecord> {
 
     public PgStatDatabase() {
         this(DSL.name("pg_stat_database"), null);
-    }
-
-    public <O extends Record> PgStatDatabase(Table<O> child, ForeignKey<O, PgStatDatabaseRecord> key) {
-        super(child, key, PG_STAT_DATABASE);
     }
 
     @Override

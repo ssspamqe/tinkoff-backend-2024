@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function9;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row9;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -86,10 +80,6 @@ public class PgBackendMemoryContexts extends TableImpl<PgBackendMemoryContextsRe
         this(DSL.name("pg_backend_memory_contexts"), null);
     }
 
-    public <O extends Record> PgBackendMemoryContexts(Table<O> child, ForeignKey<O, PgBackendMemoryContextsRecord> key) {
-        super(child, key, PG_BACKEND_MEMORY_CONTEXTS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -130,23 +120,5 @@ public class PgBackendMemoryContexts extends TableImpl<PgBackendMemoryContextsRe
     @NotNull
     public PgBackendMemoryContexts rename(Table<?> name) {
         return new PgBackendMemoryContexts(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row9 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row9<String, String, String, Integer, Long, Long, Long, Long, Long> fieldsRow() {
-        return (Row9) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function9<? super String, ? super String, ? super String, ? super Integer, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super String, ? super String, ? super Integer, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

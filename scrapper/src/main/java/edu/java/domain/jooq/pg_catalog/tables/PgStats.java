@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function14;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row14;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -96,10 +90,6 @@ public class PgStats extends TableImpl<PgStatsRecord> {
         this(DSL.name("pg_stats"), null);
     }
 
-    public <O extends Record> PgStats(Table<O> child, ForeignKey<O, PgStatsRecord> key) {
-        super(child, key, PG_STATS);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -140,23 +130,5 @@ public class PgStats extends TableImpl<PgStatsRecord> {
     @NotNull
     public PgStats rename(Table<?> name) {
         return new PgStats(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row14 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row14<String, String, String, Boolean, Float, Integer, Float, Object[], Float[], Object[], Float, Object[], Float[], Float[]> fieldsRow() {
-        return (Row14) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function14<? super String, ? super String, ? super String, ? super Boolean, ? super Float, ? super Integer, ? super Float, ? super Object[], ? super Float[], ? super Object[], ? super Float, ? super Object[], ? super Float[], ? super Float[], ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function14<? super String, ? super String, ? super String, ? super Boolean, ? super Float, ? super Integer, ? super Float, ? super Object[], ? super Float[], ? super Object[], ? super Float, ? super Object[], ? super Float[], ? super Float[], ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

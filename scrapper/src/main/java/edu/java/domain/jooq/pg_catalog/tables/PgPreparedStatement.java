@@ -14,12 +14,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.Function8;
 import org.jooq.Name;
-import org.jooq.Records;
-import org.jooq.Row8;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -127,27 +123,9 @@ public class PgPreparedStatement extends TableImpl<PgPreparedStatementRecord> {
         return new PgPreparedStatement(name.getQualifiedName(), null, parameters);
     }
 
-    // -------------------------------------------------------------------------
-    // Row8 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row8<String, String, OffsetDateTime, Object[], Object[], Boolean, Long, Long> fieldsRow() {
-        return (Row8) super.fieldsRow();
-    }
-
     public PgPreparedStatement call() {
         PgPreparedStatement result = new PgPreparedStatement(DSL.name("pg_prepared_statement"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
-    }
-
-    public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super OffsetDateTime, ? super Object[], ? super Object[], ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super OffsetDateTime, ? super Object[], ? super Object[], ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

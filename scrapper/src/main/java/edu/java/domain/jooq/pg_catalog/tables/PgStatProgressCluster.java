@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function12;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row12;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -92,10 +86,6 @@ public class PgStatProgressCluster extends TableImpl<PgStatProgressClusterRecord
         this(DSL.name("pg_stat_progress_cluster"), null);
     }
 
-    public <O extends Record> PgStatProgressCluster(Table<O> child, ForeignKey<O, PgStatProgressClusterRecord> key) {
-        super(child, key, PG_STAT_PROGRESS_CLUSTER);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -136,23 +126,5 @@ public class PgStatProgressCluster extends TableImpl<PgStatProgressClusterRecord
     @NotNull
     public PgStatProgressCluster rename(Table<?> name) {
         return new PgStatProgressCluster(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row12 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row12<Integer, Long, String, Long, String, String, Long, Long, Long, Long, Long, Long> fieldsRow() {
-        return (Row12) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function12<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

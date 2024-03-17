@@ -4,7 +4,6 @@
 package edu.java.domain.jooq.pg_catalog.tables;
 
 
-import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgSubscriptionRelRecord;
 
@@ -13,18 +12,11 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function4;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row4;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
-import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
@@ -79,20 +71,10 @@ public class PgSubscriptionRel extends TableImpl<PgSubscriptionRelRecord> {
         this(DSL.name("pg_subscription_rel"), null);
     }
 
-    public <O extends Record> PgSubscriptionRel(Table<O> child, ForeignKey<O, PgSubscriptionRelRecord> key) {
-        super(child, key, PG_SUBSCRIPTION_REL);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
         return aliased() ? null : PgCatalog.PG_CATALOG;
-    }
-
-    @Override
-    @NotNull
-    public UniqueKey<PgSubscriptionRelRecord> getPrimaryKey() {
-        return Keys.PG_SUBSCRIPTION_REL_SRRELID_SRSUBID_INDEX;
     }
 
     @Override
@@ -129,23 +111,5 @@ public class PgSubscriptionRel extends TableImpl<PgSubscriptionRelRecord> {
     @NotNull
     public PgSubscriptionRel rename(Table<?> name) {
         return new PgSubscriptionRel(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row4 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row4<Long, Long, String, Object> fieldsRow() {
-        return (Row4) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super String, ? super Object, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super String, ? super Object, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }

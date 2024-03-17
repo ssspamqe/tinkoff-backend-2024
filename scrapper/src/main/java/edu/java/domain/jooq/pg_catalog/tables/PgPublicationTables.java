@@ -12,14 +12,8 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jooq.Field;
-import org.jooq.ForeignKey;
-import org.jooq.Function5;
 import org.jooq.Name;
-import org.jooq.Record;
-import org.jooq.Records;
-import org.jooq.Row5;
 import org.jooq.Schema;
-import org.jooq.SelectField;
 import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
@@ -78,10 +72,6 @@ public class PgPublicationTables extends TableImpl<PgPublicationTablesRecord> {
         this(DSL.name("pg_publication_tables"), null);
     }
 
-    public <O extends Record> PgPublicationTables(Table<O> child, ForeignKey<O, PgPublicationTablesRecord> key) {
-        super(child, key, PG_PUBLICATION_TABLES);
-    }
-
     @Override
     @Nullable
     public Schema getSchema() {
@@ -122,23 +112,5 @@ public class PgPublicationTables extends TableImpl<PgPublicationTablesRecord> {
     @NotNull
     public PgPublicationTables rename(Table<?> name) {
         return new PgPublicationTables(name.getQualifiedName(), null);
-    }
-
-    // -------------------------------------------------------------------------
-    // Row5 type methods
-    // -------------------------------------------------------------------------
-
-    @Override
-    @NotNull
-    public Row5<String, String, String, String[], String> fieldsRow() {
-        return (Row5) super.fieldsRow();
-    }
-
-    public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String[], ? super String, ? extends U> from) {
-        return convertFrom(Records.mapping(from));
-    }
-
-    public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String[], ? super String, ? extends U> from) {
-        return convertFrom(toType, Records.mapping(from));
     }
 }
