@@ -3,11 +3,10 @@ package edu.java.data.dao;
 import edu.java.data.postgres.entities.StackOverflowQuestion;
 import edu.java.data.postgres.repositories.StackOverflowQuestionRepository;
 import java.util.Optional;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository
+@Service
 @Transactional
 public class StackOverflowQuestionDAO implements StackOverflowQuestionDataAccessObject {
 

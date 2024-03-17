@@ -3,11 +3,10 @@ package edu.java.data.dao;
 import edu.java.data.postgres.entities.GitHubRepositoryEntity;
 import edu.java.data.postgres.repositories.GitHubRepositoryEntityRepository;
 import java.util.Optional;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository
+@Service
 @Transactional
 public class GitHubRepositoryDAO implements GitHubRepositoryDataAccessObject {
 
