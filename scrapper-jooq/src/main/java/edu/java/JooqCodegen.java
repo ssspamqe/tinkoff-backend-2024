@@ -14,6 +14,10 @@ public class JooqCodegen {
     private JooqCodegen() {
     }
 
+    public static void main(String[] args) throws Exception {
+        generate();
+    }
+
     @SuppressWarnings("MultipleStringLiterals")
     public static void generate() throws Exception {
         Database database = new Database()
@@ -38,7 +42,8 @@ public class JooqCodegen {
             .withConstructorPropertiesAnnotationOnRecords(true)
             .withFluentSetters(false)
             .withDaos(false)
-            .withPojos(true);
+            .withPojos(true)
+            .withComments(false);
 
         Target target = new Target()
             .withPackageName("edu.java.domain.jooq")
