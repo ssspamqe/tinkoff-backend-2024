@@ -54,9 +54,7 @@ public class InformationSchemaCatalogName extends TableImpl<InformationSchemaCat
     }
 
     private InformationSchemaCatalogName(Name alias, Table<InformationSchemaCatalogNameRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "information_schema_catalog_name" as  SELECT (current_database())::information_schema.sql_identifier AS catalog_name;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public InformationSchemaCatalogName(String alias) {

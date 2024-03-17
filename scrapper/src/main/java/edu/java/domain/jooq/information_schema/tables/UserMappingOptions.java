@@ -62,21 +62,7 @@ public class UserMappingOptions extends TableImpl<UserMappingOptionsRecord> {
     }
 
     private UserMappingOptions(Name alias, Table<UserMappingOptionsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "user_mapping_options" as  SELECT um.authorization_identifier,
-         um.foreign_server_catalog,
-         um.foreign_server_name,
-         (opts.option_name)::information_schema.sql_identifier AS option_name,
-         (
-             CASE
-                 WHEN (((um.umuser <> (0)::oid) AND ((um.authorization_identifier)::name = CURRENT_USER)) OR ((um.umuser = (0)::oid) AND pg_has_role((um.srvowner)::name, 'USAGE'::text)) OR ( SELECT pg_authid.rolsuper
-                    FROM pg_authid
-                   WHERE (pg_authid.rolname = CURRENT_USER))) THEN opts.option_value
-                 ELSE NULL::text
-             END)::information_schema.character_data AS option_value
-        FROM information_schema._pg_user_mappings um,
-         LATERAL pg_options_to_table(um.umoptions) opts(option_name, option_value);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public UserMappingOptions(String alias) {

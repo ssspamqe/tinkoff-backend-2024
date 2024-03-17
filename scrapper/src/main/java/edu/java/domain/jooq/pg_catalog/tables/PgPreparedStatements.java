@@ -71,17 +71,7 @@ public class PgPreparedStatements extends TableImpl<PgPreparedStatementsRecord> 
     }
 
     private PgPreparedStatements(Name alias, Table<PgPreparedStatementsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_prepared_statements" as  SELECT name,
-         statement,
-         prepare_time,
-         parameter_types,
-         result_types,
-         from_sql,
-         generic_plans,
-         custom_plans
-        FROM pg_prepared_statement() p(name, statement, prepare_time, parameter_types, result_types, from_sql, generic_plans, custom_plans);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgPreparedStatements(String alias) {

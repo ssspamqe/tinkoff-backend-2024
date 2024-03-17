@@ -67,16 +67,7 @@ public class PgFileSettings extends TableImpl<PgFileSettingsRecord> {
     }
 
     private PgFileSettings(Name alias, Table<PgFileSettingsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_file_settings" as  SELECT sourcefile,
-         sourceline,
-         seqno,
-         name,
-         setting,
-         applied,
-         error
-        FROM pg_show_all_file_settings() a(sourcefile, sourceline, seqno, name, setting, applied, error);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgFileSettings(String alias) {

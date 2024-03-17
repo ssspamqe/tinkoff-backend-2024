@@ -89,25 +89,7 @@ public class PgStatWalReceiver extends TableImpl<PgStatWalReceiverRecord> {
     }
 
     private PgStatWalReceiver(Name alias, Table<PgStatWalReceiverRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_wal_receiver" as  SELECT pid,
-          status,
-          receive_start_lsn,
-          receive_start_tli,
-          written_lsn,
-          flushed_lsn,
-          received_tli,
-          last_msg_send_time,
-          last_msg_receipt_time,
-          latest_end_lsn,
-          latest_end_time,
-          slot_name,
-          sender_host,
-          sender_port,
-          conninfo
-         FROM pg_stat_get_wal_receiver() s(pid, status, receive_start_lsn, receive_start_tli, written_lsn, flushed_lsn, received_tli, last_msg_send_time, last_msg_receipt_time, latest_end_lsn, latest_end_time, slot_name, sender_host, sender_port, conninfo)
-        WHERE (pid IS NOT NULL);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatWalReceiver(String alias) {

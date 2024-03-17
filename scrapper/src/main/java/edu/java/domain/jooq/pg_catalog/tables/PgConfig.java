@@ -57,11 +57,7 @@ public class PgConfig extends TableImpl<PgConfigRecord> {
     }
 
     private PgConfig(Name alias, Table<PgConfigRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_config" as  SELECT name,
-         setting
-        FROM pg_config() pg_config(name, setting);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgConfig(String alias) {

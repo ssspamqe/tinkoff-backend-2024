@@ -73,18 +73,7 @@ public class PgStatSlru extends TableImpl<PgStatSlruRecord> {
     }
 
     private PgStatSlru(Name alias, Table<PgStatSlruRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_slru" as  SELECT name,
-         blks_zeroed,
-         blks_hit,
-         blks_read,
-         blks_written,
-         blks_exists,
-         flushes,
-         truncates,
-         stats_reset
-        FROM pg_stat_get_slru() s(name, blks_zeroed, blks_hit, blks_read, blks_written, blks_exists, flushes, truncates, stats_reset);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatSlru(String alias) {

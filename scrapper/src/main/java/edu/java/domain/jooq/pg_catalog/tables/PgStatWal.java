@@ -74,18 +74,7 @@ public class PgStatWal extends TableImpl<PgStatWalRecord> {
     }
 
     private PgStatWal(Name alias, Table<PgStatWalRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_wal" as  SELECT wal_records,
-         wal_fpi,
-         wal_bytes,
-         wal_buffers_full,
-         wal_write,
-         wal_sync,
-         wal_write_time,
-         wal_sync_time,
-         stats_reset
-        FROM pg_stat_get_wal() w(wal_records, wal_fpi, wal_bytes, wal_buffers_full, wal_write, wal_sync, wal_write_time, wal_sync_time, stats_reset);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatWal(String alias) {

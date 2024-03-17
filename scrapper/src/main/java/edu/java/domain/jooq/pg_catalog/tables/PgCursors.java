@@ -67,15 +67,7 @@ public class PgCursors extends TableImpl<PgCursorsRecord> {
     }
 
     private PgCursors(Name alias, Table<PgCursorsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_cursors" as  SELECT name,
-         statement,
-         is_holdable,
-         is_binary,
-         is_scrollable,
-         creation_time
-        FROM pg_cursor() c(name, statement, is_holdable, is_binary, is_scrollable, creation_time);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgCursors(String alias) {

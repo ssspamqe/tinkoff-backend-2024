@@ -61,16 +61,7 @@ public class PgRules extends TableImpl<PgRulesRecord> {
     }
 
     private PgRules(Name alias, Table<PgRulesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_rules" as  SELECT n.nspname AS schemaname,
-          c.relname AS tablename,
-          r.rulename,
-          pg_get_ruledef(r.oid) AS definition
-         FROM ((pg_rewrite r
-           JOIN pg_class c ON ((c.oid = r.ev_class)))
-           LEFT JOIN pg_namespace n ON ((n.oid = c.relnamespace)))
-        WHERE (r.rulename <> '_RETURN'::name);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgRules(String alias) {

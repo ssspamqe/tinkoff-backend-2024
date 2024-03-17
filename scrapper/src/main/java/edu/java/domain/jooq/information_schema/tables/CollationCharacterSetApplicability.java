@@ -64,19 +64,7 @@ public class CollationCharacterSetApplicability extends TableImpl<CollationChara
     }
 
     private CollationCharacterSetApplicability(Name alias, Table<CollationCharacterSetApplicabilityRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "collation_character_set_applicability" as  SELECT (current_database())::information_schema.sql_identifier AS collation_catalog,
-          (nc.nspname)::information_schema.sql_identifier AS collation_schema,
-          (c.collname)::information_schema.sql_identifier AS collation_name,
-          (NULL::name)::information_schema.sql_identifier AS character_set_catalog,
-          (NULL::name)::information_schema.sql_identifier AS character_set_schema,
-          (getdatabaseencoding())::information_schema.sql_identifier AS character_set_name
-         FROM pg_collation c,
-          pg_namespace nc
-        WHERE ((c.collnamespace = nc.oid) AND (c.collencoding = ANY (ARRAY['-1'::integer, ( SELECT pg_database.encoding
-                 FROM pg_database
-                WHERE (pg_database.datname = current_database()))])));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public CollationCharacterSetApplicability(String alias) {

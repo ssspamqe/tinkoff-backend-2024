@@ -59,15 +59,7 @@ public class PgGroup extends TableImpl<PgGroupRecord> {
     }
 
     private PgGroup(Name alias, Table<PgGroupRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_group" as  SELECT rolname AS groname,
-          oid AS grosysid,
-          ARRAY( SELECT pg_auth_members.member
-                 FROM pg_auth_members
-                WHERE (pg_auth_members.roleid = pg_authid.oid)) AS grolist
-         FROM pg_authid
-        WHERE (NOT rolcanlogin);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgGroup(String alias) {

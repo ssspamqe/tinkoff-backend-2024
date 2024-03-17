@@ -68,20 +68,7 @@ public class RoleColumnGrants extends TableImpl<RoleColumnGrantsRecord> {
     }
 
     private RoleColumnGrants(Name alias, Table<RoleColumnGrantsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "role_column_grants" as  SELECT grantor,
-          grantee,
-          table_catalog,
-          table_schema,
-          table_name,
-          column_name,
-          privilege_type,
-          is_grantable
-         FROM information_schema.column_privileges
-        WHERE (((grantor)::name IN ( SELECT enabled_roles.role_name
-                 FROM information_schema.enabled_roles)) OR ((grantee)::name IN ( SELECT enabled_roles.role_name
-                 FROM information_schema.enabled_roles)));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public RoleColumnGrants(String alias) {

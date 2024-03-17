@@ -91,27 +91,7 @@ public class PgStatIo extends TableImpl<PgStatIoRecord> {
     }
 
     private PgStatIo(Name alias, Table<PgStatIoRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_io" as  SELECT backend_type,
-         object,
-         context,
-         reads,
-         read_time,
-         writes,
-         write_time,
-         writebacks,
-         writeback_time,
-         extends,
-         extend_time,
-         op_bytes,
-         hits,
-         evictions,
-         reuses,
-         fsyncs,
-         fsync_time,
-         stats_reset
-        FROM pg_stat_get_io() b(backend_type, object, context, reads, read_time, writes, write_time, writebacks, writeback_time, extends, extend_time, op_bytes, hits, evictions, reuses, fsyncs, fsync_time, stats_reset);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatIo(String alias) {

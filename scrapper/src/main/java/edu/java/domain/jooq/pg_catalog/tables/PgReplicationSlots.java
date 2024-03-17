@@ -87,26 +87,7 @@ public class PgReplicationSlots extends TableImpl<PgReplicationSlotsRecord> {
     }
 
     private PgReplicationSlots(Name alias, Table<PgReplicationSlotsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_replication_slots" as  SELECT l.slot_name,
-         l.plugin,
-         l.slot_type,
-         l.datoid,
-         d.datname AS database,
-         l.temporary,
-         l.active,
-         l.active_pid,
-         l.xmin,
-         l.catalog_xmin,
-         l.restart_lsn,
-         l.confirmed_flush_lsn,
-         l.wal_status,
-         l.safe_wal_size,
-         l.two_phase,
-         l.conflicting
-        FROM (pg_get_replication_slots() l(slot_name, plugin, slot_type, datoid, temporary, active, active_pid, xmin, catalog_xmin, restart_lsn, confirmed_flush_lsn, wal_status, safe_wal_size, two_phase, conflicting)
-          LEFT JOIN pg_database d ON ((l.datoid = d.oid)));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgReplicationSlots(String alias) {

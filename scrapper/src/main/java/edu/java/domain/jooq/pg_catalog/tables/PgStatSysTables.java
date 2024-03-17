@@ -103,36 +103,7 @@ public class PgStatSysTables extends TableImpl<PgStatSysTablesRecord> {
     }
 
     private PgStatSysTables(Name alias, Table<PgStatSysTablesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_sys_tables" as  SELECT relid,
-          schemaname,
-          relname,
-          seq_scan,
-          last_seq_scan,
-          seq_tup_read,
-          idx_scan,
-          last_idx_scan,
-          idx_tup_fetch,
-          n_tup_ins,
-          n_tup_upd,
-          n_tup_del,
-          n_tup_hot_upd,
-          n_tup_newpage_upd,
-          n_live_tup,
-          n_dead_tup,
-          n_mod_since_analyze,
-          n_ins_since_vacuum,
-          last_vacuum,
-          last_autovacuum,
-          last_analyze,
-          last_autoanalyze,
-          vacuum_count,
-          autovacuum_count,
-          analyze_count,
-          autoanalyze_count
-         FROM pg_stat_all_tables
-        WHERE ((schemaname = ANY (ARRAY['pg_catalog'::name, 'information_schema'::name])) OR (schemaname ~ '^pg_toast'::text));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatSysTables(String alias) {

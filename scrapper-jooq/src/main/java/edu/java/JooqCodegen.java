@@ -52,9 +52,11 @@ public class JooqCodegen {
             .withRoutines(false)
             .withEmptySchemas(false)
             .withEmbeddables(false)
-            .withFluentSetters(false)
             .withInterfaces(false)
-            .withRelations(false);
+            .withRelations(false)
+            .withEmptyCatalogs(false)
+            .withSequences(false)
+            .withSources(false);
 
         Target target = new Target()
             .withPackageName("edu.java.domain.jooq")

@@ -73,19 +73,7 @@ public class PgStatSysIndexes extends TableImpl<PgStatSysIndexesRecord> {
     }
 
     private PgStatSysIndexes(Name alias, Table<PgStatSysIndexesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_sys_indexes" as  SELECT relid,
-          indexrelid,
-          schemaname,
-          relname,
-          indexrelname,
-          idx_scan,
-          last_idx_scan,
-          idx_tup_read,
-          idx_tup_fetch
-         FROM pg_stat_all_indexes
-        WHERE ((schemaname = ANY (ARRAY['pg_catalog'::name, 'information_schema'::name])) OR (schemaname ~ '^pg_toast'::text));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatSysIndexes(String alias) {

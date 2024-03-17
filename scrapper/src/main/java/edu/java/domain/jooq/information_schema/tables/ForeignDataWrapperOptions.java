@@ -60,13 +60,7 @@ public class ForeignDataWrapperOptions extends TableImpl<ForeignDataWrapperOptio
     }
 
     private ForeignDataWrapperOptions(Name alias, Table<ForeignDataWrapperOptionsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "foreign_data_wrapper_options" as  SELECT foreign_data_wrapper_catalog,
-         foreign_data_wrapper_name,
-         ((pg_options_to_table(fdwoptions)).option_name)::information_schema.sql_identifier AS option_name,
-         ((pg_options_to_table(fdwoptions)).option_value)::information_schema.character_data AS option_value
-        FROM information_schema._pg_foreign_data_wrappers w;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public ForeignDataWrapperOptions(String alias) {

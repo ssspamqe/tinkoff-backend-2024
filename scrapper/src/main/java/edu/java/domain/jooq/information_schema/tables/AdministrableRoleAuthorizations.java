@@ -58,13 +58,7 @@ public class AdministrableRoleAuthorizations extends TableImpl<AdministrableRole
     }
 
     private AdministrableRoleAuthorizations(Name alias, Table<AdministrableRoleAuthorizationsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "administrable_role_authorizations" as  SELECT grantee,
-          role_name,
-          is_grantable
-         FROM information_schema.applicable_roles
-        WHERE ((is_grantable)::text = 'YES'::text);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public AdministrableRoleAuthorizations(String alias) {

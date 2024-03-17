@@ -67,18 +67,7 @@ public class _PgForeignDataWrappers extends TableImpl<_PgForeignDataWrappersReco
     }
 
     private _PgForeignDataWrappers(Name alias, Table<_PgForeignDataWrappersRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "_pg_foreign_data_wrappers" as  SELECT w.oid,
-          w.fdwowner,
-          w.fdwoptions,
-          (current_database())::information_schema.sql_identifier AS foreign_data_wrapper_catalog,
-          (w.fdwname)::information_schema.sql_identifier AS foreign_data_wrapper_name,
-          (u.rolname)::information_schema.sql_identifier AS authorization_identifier,
-          ('c'::character varying)::information_schema.character_data AS foreign_data_wrapper_language
-         FROM pg_foreign_data_wrapper w,
-          pg_authid u
-        WHERE ((u.oid = w.fdwowner) AND (pg_has_role(w.fdwowner, 'USAGE'::text) OR has_foreign_data_wrapper_privilege(w.oid, 'USAGE'::text)));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public _PgForeignDataWrappers(String alias) {

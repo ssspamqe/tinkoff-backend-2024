@@ -68,29 +68,7 @@ public class DomainConstraints extends TableImpl<DomainConstraintsRecord> {
     }
 
     private DomainConstraints(Name alias, Table<DomainConstraintsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "domain_constraints" as  SELECT (current_database())::information_schema.sql_identifier AS constraint_catalog,
-          (rs.nspname)::information_schema.sql_identifier AS constraint_schema,
-          (con.conname)::information_schema.sql_identifier AS constraint_name,
-          (current_database())::information_schema.sql_identifier AS domain_catalog,
-          (n.nspname)::information_schema.sql_identifier AS domain_schema,
-          (t.typname)::information_schema.sql_identifier AS domain_name,
-          (
-              CASE
-                  WHEN con.condeferrable THEN 'YES'::text
-                  ELSE 'NO'::text
-              END)::information_schema.yes_or_no AS is_deferrable,
-          (
-              CASE
-                  WHEN con.condeferred THEN 'YES'::text
-                  ELSE 'NO'::text
-              END)::information_schema.yes_or_no AS initially_deferred
-         FROM pg_namespace rs,
-          pg_namespace n,
-          pg_constraint con,
-          pg_type t
-        WHERE ((rs.oid = con.connamespace) AND (n.oid = t.typnamespace) AND (t.oid = con.contypid) AND (pg_has_role(t.typowner, 'USAGE'::text) OR has_type_privilege(t.oid, 'USAGE'::text)));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public DomainConstraints(String alias) {

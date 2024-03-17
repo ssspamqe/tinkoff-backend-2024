@@ -63,13 +63,7 @@ public class PgReplicationOriginStatus extends TableImpl<PgReplicationOriginStat
     }
 
     private PgReplicationOriginStatus(Name alias, Table<PgReplicationOriginStatusRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_replication_origin_status" as  SELECT local_id,
-         external_id,
-         remote_lsn,
-         local_lsn
-        FROM pg_show_replication_origin_status() pg_show_replication_origin_status(local_id, external_id, remote_lsn, local_lsn);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgReplicationOriginStatus(String alias) {

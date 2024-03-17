@@ -62,14 +62,7 @@ public class ForeignTables extends TableImpl<ForeignTablesRecord> {
     }
 
     private ForeignTables(Name alias, Table<ForeignTablesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "foreign_tables" as  SELECT foreign_table_catalog,
-         foreign_table_schema,
-         foreign_table_name,
-         foreign_server_catalog,
-         foreign_server_name
-        FROM information_schema._pg_foreign_tables;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public ForeignTables(String alias) {

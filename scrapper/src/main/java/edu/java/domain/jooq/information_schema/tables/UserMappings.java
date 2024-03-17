@@ -58,12 +58,7 @@ public class UserMappings extends TableImpl<UserMappingsRecord> {
     }
 
     private UserMappings(Name alias, Table<UserMappingsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "user_mappings" as  SELECT authorization_identifier,
-         foreign_server_catalog,
-         foreign_server_name
-        FROM information_schema._pg_user_mappings;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public UserMappings(String alias) {

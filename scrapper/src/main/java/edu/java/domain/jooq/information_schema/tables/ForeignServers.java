@@ -66,16 +66,7 @@ public class ForeignServers extends TableImpl<ForeignServersRecord> {
     }
 
     private ForeignServers(Name alias, Table<ForeignServersRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "foreign_servers" as  SELECT foreign_server_catalog,
-         foreign_server_name,
-         foreign_data_wrapper_catalog,
-         foreign_data_wrapper_name,
-         foreign_server_type,
-         foreign_server_version,
-         authorization_identifier
-        FROM information_schema._pg_foreign_servers;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public ForeignServers(String alias) {

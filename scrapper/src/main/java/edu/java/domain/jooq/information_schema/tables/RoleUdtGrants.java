@@ -66,19 +66,7 @@ public class RoleUdtGrants extends TableImpl<RoleUdtGrantsRecord> {
     }
 
     private RoleUdtGrants(Name alias, Table<RoleUdtGrantsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "role_udt_grants" as  SELECT grantor,
-          grantee,
-          udt_catalog,
-          udt_schema,
-          udt_name,
-          privilege_type,
-          is_grantable
-         FROM information_schema.udt_privileges
-        WHERE (((grantor)::name IN ( SELECT enabled_roles.role_name
-                 FROM information_schema.enabled_roles)) OR ((grantee)::name IN ( SELECT enabled_roles.role_name
-                 FROM information_schema.enabled_roles)));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public RoleUdtGrants(String alias) {

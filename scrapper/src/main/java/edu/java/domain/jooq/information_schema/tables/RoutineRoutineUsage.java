@@ -64,20 +64,7 @@ public class RoutineRoutineUsage extends TableImpl<RoutineRoutineUsageRecord> {
     }
 
     private RoutineRoutineUsage(Name alias, Table<RoutineRoutineUsageRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "routine_routine_usage" as  SELECT DISTINCT (current_database())::information_schema.sql_identifier AS specific_catalog,
-          (np.nspname)::information_schema.sql_identifier AS specific_schema,
-          (nameconcatoid(p.proname, p.oid))::information_schema.sql_identifier AS specific_name,
-          (current_database())::information_schema.sql_identifier AS routine_catalog,
-          (np1.nspname)::information_schema.sql_identifier AS routine_schema,
-          (nameconcatoid(p1.proname, p1.oid))::information_schema.sql_identifier AS routine_name
-         FROM pg_namespace np,
-          pg_proc p,
-          pg_depend d,
-          pg_proc p1,
-          pg_namespace np1
-        WHERE ((np.oid = p.pronamespace) AND (p.oid = d.objid) AND (d.classid = ('pg_proc'::regclass)::oid) AND (d.refobjid = p1.oid) AND (d.refclassid = ('pg_proc'::regclass)::oid) AND (p1.pronamespace = np1.oid) AND (p.prokind = ANY (ARRAY['f'::"char", 'p'::"char"])) AND (p1.prokind = ANY (ARRAY['f'::"char", 'p'::"char"])) AND pg_has_role(p1.proowner, 'USAGE'::text));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public RoutineRoutineUsage(String alias) {

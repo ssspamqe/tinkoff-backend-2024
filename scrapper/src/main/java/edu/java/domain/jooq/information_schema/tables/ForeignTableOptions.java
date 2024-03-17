@@ -62,14 +62,7 @@ public class ForeignTableOptions extends TableImpl<ForeignTableOptionsRecord> {
     }
 
     private ForeignTableOptions(Name alias, Table<ForeignTableOptionsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "foreign_table_options" as  SELECT foreign_table_catalog,
-         foreign_table_schema,
-         foreign_table_name,
-         ((pg_options_to_table(ftoptions)).option_name)::information_schema.sql_identifier AS option_name,
-         ((pg_options_to_table(ftoptions)).option_value)::information_schema.character_data AS option_value
-        FROM information_schema._pg_foreign_tables t;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public ForeignTableOptions(String alias) {

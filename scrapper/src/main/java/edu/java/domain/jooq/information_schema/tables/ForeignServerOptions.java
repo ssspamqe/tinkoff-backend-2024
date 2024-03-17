@@ -60,13 +60,7 @@ public class ForeignServerOptions extends TableImpl<ForeignServerOptionsRecord> 
     }
 
     private ForeignServerOptions(Name alias, Table<ForeignServerOptionsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "foreign_server_options" as  SELECT foreign_server_catalog,
-         foreign_server_name,
-         ((pg_options_to_table(srvoptions)).option_name)::information_schema.sql_identifier AS option_name,
-         ((pg_options_to_table(srvoptions)).option_value)::information_schema.character_data AS option_value
-        FROM information_schema._pg_foreign_servers s;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public ForeignServerOptions(String alias) {

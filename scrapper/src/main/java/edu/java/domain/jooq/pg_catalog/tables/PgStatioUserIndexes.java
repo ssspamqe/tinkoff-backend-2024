@@ -67,17 +67,7 @@ public class PgStatioUserIndexes extends TableImpl<PgStatioUserIndexesRecord> {
     }
 
     private PgStatioUserIndexes(Name alias, Table<PgStatioUserIndexesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_statio_user_indexes" as  SELECT relid,
-          indexrelid,
-          schemaname,
-          relname,
-          indexrelname,
-          idx_blks_read,
-          idx_blks_hit
-         FROM pg_statio_all_indexes
-        WHERE ((schemaname <> ALL (ARRAY['pg_catalog'::name, 'information_schema'::name])) AND (schemaname !~ '^pg_toast'::text));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatioUserIndexes(String alias) {

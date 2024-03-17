@@ -67,19 +67,7 @@ public class _PgUserMappings extends TableImpl<_PgUserMappingsRecord> {
     }
 
     private _PgUserMappings(Name alias, Table<_PgUserMappingsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "_pg_user_mappings" as  SELECT um.oid,
-          um.umoptions,
-          um.umuser,
-          (COALESCE(u.rolname, 'PUBLIC'::name))::information_schema.sql_identifier AS authorization_identifier,
-          s.foreign_server_catalog,
-          s.foreign_server_name,
-          s.authorization_identifier AS srvowner
-         FROM (pg_user_mapping um
-           LEFT JOIN pg_authid u ON ((u.oid = um.umuser))),
-          information_schema._pg_foreign_servers s
-        WHERE (s.oid = um.umserver);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public _PgUserMappings(String alias) {

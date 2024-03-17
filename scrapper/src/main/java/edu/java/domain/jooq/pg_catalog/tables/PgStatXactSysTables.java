@@ -77,22 +77,7 @@ public class PgStatXactSysTables extends TableImpl<PgStatXactSysTablesRecord> {
     }
 
     private PgStatXactSysTables(Name alias, Table<PgStatXactSysTablesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_xact_sys_tables" as  SELECT relid,
-          schemaname,
-          relname,
-          seq_scan,
-          seq_tup_read,
-          idx_scan,
-          idx_tup_fetch,
-          n_tup_ins,
-          n_tup_upd,
-          n_tup_del,
-          n_tup_hot_upd,
-          n_tup_newpage_upd
-         FROM pg_stat_xact_all_tables
-        WHERE ((schemaname = ANY (ARRAY['pg_catalog'::name, 'information_schema'::name])) OR (schemaname ~ '^pg_toast'::text));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatXactSysTables(String alias) {

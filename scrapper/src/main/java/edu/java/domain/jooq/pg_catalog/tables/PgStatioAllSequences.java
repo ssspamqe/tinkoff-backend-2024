@@ -63,16 +63,7 @@ public class PgStatioAllSequences extends TableImpl<PgStatioAllSequencesRecord> 
     }
 
     private PgStatioAllSequences(Name alias, Table<PgStatioAllSequencesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_statio_all_sequences" as  SELECT c.oid AS relid,
-          n.nspname AS schemaname,
-          c.relname,
-          (pg_stat_get_blocks_fetched(c.oid) - pg_stat_get_blocks_hit(c.oid)) AS blks_read,
-          pg_stat_get_blocks_hit(c.oid) AS blks_hit
-         FROM (pg_class c
-           LEFT JOIN pg_namespace n ON ((n.oid = c.relnamespace)))
-        WHERE (c.relkind = 'S'::"char");
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatioAllSequences(String alias) {

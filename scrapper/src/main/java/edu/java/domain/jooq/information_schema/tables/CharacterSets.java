@@ -68,26 +68,7 @@ public class CharacterSets extends TableImpl<CharacterSetsRecord> {
     }
 
     private CharacterSets(Name alias, Table<CharacterSetsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "character_sets" as  SELECT (NULL::name)::information_schema.sql_identifier AS character_set_catalog,
-           (NULL::name)::information_schema.sql_identifier AS character_set_schema,
-           (getdatabaseencoding())::information_schema.sql_identifier AS character_set_name,
-           (
-               CASE
-                   WHEN (getdatabaseencoding() = 'UTF8'::name) THEN 'UCS'::name
-                   ELSE getdatabaseencoding()
-               END)::information_schema.sql_identifier AS character_repertoire,
-           (getdatabaseencoding())::information_schema.sql_identifier AS form_of_use,
-           (current_database())::information_schema.sql_identifier AS default_collate_catalog,
-           (nc.nspname)::information_schema.sql_identifier AS default_collate_schema,
-           (c.collname)::information_schema.sql_identifier AS default_collate_name
-          FROM (pg_database d
-            LEFT JOIN (pg_collation c
-            JOIN pg_namespace nc ON ((c.collnamespace = nc.oid))) ON (((d.datcollate = c.collcollate) AND (d.datctype = c.collctype))))
-         WHERE (d.datname = current_database())
-         ORDER BY (char_length((c.collname)::text)) DESC, c.collname
-        LIMIT 1;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public CharacterSets(String alias) {

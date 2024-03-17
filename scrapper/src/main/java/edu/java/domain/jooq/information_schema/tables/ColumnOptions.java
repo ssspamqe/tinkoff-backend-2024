@@ -64,15 +64,7 @@ public class ColumnOptions extends TableImpl<ColumnOptionsRecord> {
     }
 
     private ColumnOptions(Name alias, Table<ColumnOptionsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "column_options" as  SELECT (current_database())::information_schema.sql_identifier AS table_catalog,
-         (nspname)::information_schema.sql_identifier AS table_schema,
-         (relname)::information_schema.sql_identifier AS table_name,
-         (attname)::information_schema.sql_identifier AS column_name,
-         ((pg_options_to_table(attfdwoptions)).option_name)::information_schema.sql_identifier AS option_name,
-         ((pg_options_to_table(attfdwoptions)).option_value)::information_schema.character_data AS option_value
-        FROM information_schema._pg_foreign_table_columns c;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public ColumnOptions(String alias) {

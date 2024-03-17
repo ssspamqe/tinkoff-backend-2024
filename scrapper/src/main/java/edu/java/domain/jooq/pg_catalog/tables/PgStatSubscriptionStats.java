@@ -65,15 +65,7 @@ public class PgStatSubscriptionStats extends TableImpl<PgStatSubscriptionStatsRe
     }
 
     private PgStatSubscriptionStats(Name alias, Table<PgStatSubscriptionStatsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_subscription_stats" as  SELECT ss.subid,
-         s.subname,
-         ss.apply_error_count,
-         ss.sync_error_count,
-         ss.stats_reset
-        FROM pg_subscription s,
-         LATERAL pg_stat_get_subscription_stats(s.oid) ss(subid, apply_error_count, sync_error_count, stats_reset);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatSubscriptionStats(String alias) {

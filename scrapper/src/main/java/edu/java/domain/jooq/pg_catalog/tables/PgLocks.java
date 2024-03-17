@@ -87,25 +87,7 @@ public class PgLocks extends TableImpl<PgLocksRecord> {
     }
 
     private PgLocks(Name alias, Table<PgLocksRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_locks" as  SELECT locktype,
-         database,
-         relation,
-         page,
-         tuple,
-         virtualxid,
-         transactionid,
-         classid,
-         objid,
-         objsubid,
-         virtualtransaction,
-         pid,
-         mode,
-         granted,
-         fastpath,
-         waitstart
-        FROM pg_lock_status() l(locktype, database, relation, page, tuple, virtualxid, transactionid, classid, objid, objsubid, virtualtransaction, pid, mode, granted, fastpath, waitstart);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgLocks(String alias) {

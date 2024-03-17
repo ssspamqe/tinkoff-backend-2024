@@ -62,14 +62,7 @@ public class ForeignDataWrappers extends TableImpl<ForeignDataWrappersRecord> {
     }
 
     private ForeignDataWrappers(Name alias, Table<ForeignDataWrappersRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "foreign_data_wrappers" as  SELECT foreign_data_wrapper_catalog,
-         foreign_data_wrapper_name,
-         authorization_identifier,
-         (NULL::character varying)::information_schema.character_data AS library_name,
-         foreign_data_wrapper_language
-        FROM information_schema._pg_foreign_data_wrappers w;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public ForeignDataWrappers(String alias) {

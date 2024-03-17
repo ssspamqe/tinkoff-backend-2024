@@ -73,18 +73,7 @@ public class PgUser extends TableImpl<PgUserRecord> {
     }
 
     private PgUser(Name alias, Table<PgUserRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_user" as  SELECT usename,
-         usesysid,
-         usecreatedb,
-         usesuper,
-         userepl,
-         usebypassrls,
-         '********'::text AS passwd,
-         valuntil,
-         useconfig
-        FROM pg_shadow;
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgUser(String alias) {

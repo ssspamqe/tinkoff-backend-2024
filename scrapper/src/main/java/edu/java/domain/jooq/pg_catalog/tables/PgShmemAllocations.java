@@ -61,13 +61,7 @@ public class PgShmemAllocations extends TableImpl<PgShmemAllocationsRecord> {
     }
 
     private PgShmemAllocations(Name alias, Table<PgShmemAllocationsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_shmem_allocations" as  SELECT name,
-         off,
-         size,
-         allocated_size
-        FROM pg_get_shmem_allocations() pg_get_shmem_allocations(name, off, size, allocated_size);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgShmemAllocations(String alias) {

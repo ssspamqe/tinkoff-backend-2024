@@ -72,22 +72,7 @@ public class RoleRoutineGrants extends TableImpl<RoleRoutineGrantsRecord> {
     }
 
     private RoleRoutineGrants(Name alias, Table<RoleRoutineGrantsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "role_routine_grants" as  SELECT grantor,
-          grantee,
-          specific_catalog,
-          specific_schema,
-          specific_name,
-          routine_catalog,
-          routine_schema,
-          routine_name,
-          privilege_type,
-          is_grantable
-         FROM information_schema.routine_privileges
-        WHERE (((grantor)::name IN ( SELECT enabled_roles.role_name
-                 FROM information_schema.enabled_roles)) OR ((grantee)::name IN ( SELECT enabled_roles.role_name
-                 FROM information_schema.enabled_roles)));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public RoleRoutineGrants(String alias) {

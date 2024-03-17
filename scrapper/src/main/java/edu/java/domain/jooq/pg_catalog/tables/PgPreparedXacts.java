@@ -65,16 +65,7 @@ public class PgPreparedXacts extends TableImpl<PgPreparedXactsRecord> {
     }
 
     private PgPreparedXacts(Name alias, Table<PgPreparedXactsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_prepared_xacts" as  SELECT p.transaction,
-         p.gid,
-         p.prepared,
-         u.rolname AS owner,
-         d.datname AS database
-        FROM ((pg_prepared_xact() p(transaction, gid, prepared, ownerid, dbid)
-          LEFT JOIN pg_authid u ON ((p.ownerid = u.oid)))
-          LEFT JOIN pg_database d ON ((p.dbid = d.oid)));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgPreparedXacts(String alias) {

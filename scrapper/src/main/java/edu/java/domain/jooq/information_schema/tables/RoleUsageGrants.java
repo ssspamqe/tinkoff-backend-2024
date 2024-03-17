@@ -68,20 +68,7 @@ public class RoleUsageGrants extends TableImpl<RoleUsageGrantsRecord> {
     }
 
     private RoleUsageGrants(Name alias, Table<RoleUsageGrantsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "role_usage_grants" as  SELECT grantor,
-          grantee,
-          object_catalog,
-          object_schema,
-          object_name,
-          object_type,
-          privilege_type,
-          is_grantable
-         FROM information_schema.usage_privileges
-        WHERE (((grantor)::name IN ( SELECT enabled_roles.role_name
-                 FROM information_schema.enabled_roles)) OR ((grantee)::name IN ( SELECT enabled_roles.role_name
-                 FROM information_schema.enabled_roles)));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public RoleUsageGrants(String alias) {

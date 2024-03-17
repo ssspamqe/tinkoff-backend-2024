@@ -75,19 +75,7 @@ public class PgStatRecoveryPrefetch extends TableImpl<PgStatRecoveryPrefetchReco
     }
 
     private PgStatRecoveryPrefetch(Name alias, Table<PgStatRecoveryPrefetchRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_recovery_prefetch" as  SELECT stats_reset,
-         prefetch,
-         hit,
-         skip_init,
-         skip_new,
-         skip_fpw,
-         skip_rep,
-         wal_distance,
-         block_distance,
-         io_depth
-        FROM pg_stat_get_recovery_prefetch() s(stats_reset, prefetch, hit, skip_init, skip_new, skip_fpw, skip_rep, wal_distance, block_distance, io_depth);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatRecoveryPrefetch(String alias) {

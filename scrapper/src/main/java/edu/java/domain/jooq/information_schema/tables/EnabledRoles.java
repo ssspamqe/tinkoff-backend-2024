@@ -54,11 +54,7 @@ public class EnabledRoles extends TableImpl<EnabledRolesRecord> {
     }
 
     private EnabledRoles(Name alias, Table<EnabledRolesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "enabled_roles" as  SELECT (rolname)::information_schema.sql_identifier AS role_name
-         FROM pg_authid a
-        WHERE pg_has_role(oid, 'USAGE'::text);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public EnabledRoles(String alias) {

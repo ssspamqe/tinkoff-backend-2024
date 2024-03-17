@@ -69,16 +69,7 @@ public class PgStatArchiver extends TableImpl<PgStatArchiverRecord> {
     }
 
     private PgStatArchiver(Name alias, Table<PgStatArchiverRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_archiver" as  SELECT archived_count,
-         last_archived_wal,
-         last_archived_time,
-         failed_count,
-         last_failed_wal,
-         last_failed_time,
-         stats_reset
-        FROM pg_stat_get_archiver() s(archived_count, last_archived_wal, last_archived_time, failed_count, last_failed_wal, last_failed_time, stats_reset);
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatArchiver(String alias) {

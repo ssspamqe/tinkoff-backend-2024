@@ -65,17 +65,7 @@ public class PgStatXactUserFunctions extends TableImpl<PgStatXactUserFunctionsRe
     }
 
     private PgStatXactUserFunctions(Name alias, Table<PgStatXactUserFunctionsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view("""
-        create view "pg_stat_xact_user_functions" as  SELECT p.oid AS funcid,
-          n.nspname AS schemaname,
-          p.proname AS funcname,
-          pg_stat_get_xact_function_calls(p.oid) AS calls,
-          pg_stat_get_xact_function_total_time(p.oid) AS total_time,
-          pg_stat_get_xact_function_self_time(p.oid) AS self_time
-         FROM (pg_proc p
-           LEFT JOIN pg_namespace n ON ((n.oid = p.pronamespace)))
-        WHERE ((p.prolang <> (12)::oid) AND (pg_stat_get_xact_function_calls(p.oid) IS NOT NULL));
-        """));
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgStatXactUserFunctions(String alias) {
