@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_config</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,80 +30,50 @@ public class PgTsConfigRecord extends UpdatableRecordImpl<PgTsConfigRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.cfgname</code>.
-     */
     public void setCfgname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.cfgname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCfgname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.cfgnamespace</code>.
-     */
     public void setCfgnamespace(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.cfgnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCfgnamespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.cfgowner</code>.
-     */
     public void setCfgowner(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.cfgowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCfgowner() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.cfgparser</code>.
-     */
     public void setCfgparser(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.cfgparser</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCfgparser() {
@@ -279,16 +246,10 @@ public class PgTsConfigRecord extends UpdatableRecordImpl<PgTsConfigRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTsConfigRecord
-     */
     public PgTsConfigRecord() {
         super(PgTsConfig.PG_TS_CONFIG);
     }
 
-    /**
-     * Create a detached, initialised PgTsConfigRecord
-     */
     @ConstructorProperties({ "oid", "cfgname", "cfgnamespace", "cfgowner", "cfgparser" })
     public PgTsConfigRecord(@NotNull Long oid, @NotNull String cfgname, @NotNull Long cfgnamespace, @NotNull Long cfgowner, @NotNull Long cfgparser) {
         super(PgTsConfig.PG_TS_CONFIG);
@@ -301,9 +262,6 @@ public class PgTsConfigRecord extends UpdatableRecordImpl<PgTsConfigRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTsConfigRecord
-     */
     public PgTsConfigRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTsConfig value) {
         super(PgTsConfig.PG_TS_CONFIG);
 

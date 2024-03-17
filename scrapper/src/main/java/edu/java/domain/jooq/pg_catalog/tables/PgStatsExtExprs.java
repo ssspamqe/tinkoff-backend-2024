@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatsExtExprsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stats_ext_exprs</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,106 +40,46 @@ public class PgStatsExtExprs extends TableImpl<PgStatsExtExprsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stats_ext_exprs</code>
-     */
     public static final PgStatsExtExprs PG_STATS_EXT_EXPRS = new PgStatsExtExprs();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatsExtExprsRecord> getRecordType() {
         return PgStatsExtExprsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.schemaname</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.tablename</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, String> TABLENAME = createField(DSL.name("tablename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stats_ext_exprs.statistics_schemaname</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, String> STATISTICS_SCHEMANAME = createField(DSL.name("statistics_schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.statistics_name</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, String> STATISTICS_NAME = createField(DSL.name("statistics_name"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.statistics_owner</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, String> STATISTICS_OWNER = createField(DSL.name("statistics_owner"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.expr</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, String> EXPR = createField(DSL.name("expr"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.inherited</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Boolean> INHERITED = createField(DSL.name("inherited"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.null_frac</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Float> NULL_FRAC = createField(DSL.name("null_frac"), SQLDataType.REAL, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.avg_width</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Integer> AVG_WIDTH = createField(DSL.name("avg_width"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.n_distinct</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Float> N_DISTINCT = createField(DSL.name("n_distinct"), SQLDataType.REAL, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.most_common_vals</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Object[]> MOST_COMMON_VALS = createField(DSL.name("most_common_vals"), SQLDataType.OTHER.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.most_common_freqs</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Float[]> MOST_COMMON_FREQS = createField(DSL.name("most_common_freqs"), SQLDataType.REAL.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.histogram_bounds</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Object[]> HISTOGRAM_BOUNDS = createField(DSL.name("histogram_bounds"), SQLDataType.OTHER.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.correlation</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Float> CORRELATION = createField(DSL.name("correlation"), SQLDataType.REAL, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext_exprs.most_common_elems</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Object[]> MOST_COMMON_ELEMS = createField(DSL.name("most_common_elems"), SQLDataType.OTHER.array(), this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stats_ext_exprs.most_common_elem_freqs</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Float[]> MOST_COMMON_ELEM_FREQS = createField(DSL.name("most_common_elem_freqs"), SQLDataType.REAL.array(), this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stats_ext_exprs.elem_count_histogram</code>.
-     */
     public final TableField<PgStatsExtExprsRecord, Float[]> ELEM_COUNT_HISTOGRAM = createField(DSL.name("elem_count_histogram"), SQLDataType.REAL.array(), this, "");
 
     private PgStatsExtExprs(Name alias, Table<PgStatsExtExprsRecord> aliased) {
@@ -229,25 +164,14 @@ public class PgStatsExtExprs extends TableImpl<PgStatsExtExprsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stats_ext_exprs</code> table
-     * reference
-     */
     public PgStatsExtExprs(String alias) {
         this(DSL.name(alias), PG_STATS_EXT_EXPRS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stats_ext_exprs</code> table
-     * reference
-     */
     public PgStatsExtExprs(Name alias) {
         this(alias, PG_STATS_EXT_EXPRS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stats_ext_exprs</code> table reference
-     */
     public PgStatsExtExprs() {
         this(DSL.name("pg_stats_ext_exprs"), null);
     }
@@ -280,27 +204,18 @@ public class PgStatsExtExprs extends TableImpl<PgStatsExtExprsRecord> {
         return new PgStatsExtExprs(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatsExtExprs rename(String name) {
         return new PgStatsExtExprs(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatsExtExprs rename(Name name) {
         return new PgStatsExtExprs(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatsExtExprs rename(Table<?> name) {
@@ -317,17 +232,10 @@ public class PgStatsExtExprs extends TableImpl<PgStatsExtExprsRecord> {
         return (Row17) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function17<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Float, ? super Integer, ? super Float, ? super Object[], ? super Float[], ? super Object[], ? super Float, ? super Object[], ? super Float[], ? super Float[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function17<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Float, ? super Integer, ? super Float, ? super Object[], ? super Float[], ? super Object[], ? super Float, ? super Object[], ? super Float[], ? super Float[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

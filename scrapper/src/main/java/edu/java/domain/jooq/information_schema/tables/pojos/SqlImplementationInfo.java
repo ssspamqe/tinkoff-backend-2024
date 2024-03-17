@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.sql_implementation_info</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,87 +55,47 @@ public class SqlImplementationInfo implements Serializable {
         this.comments = comments;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.sql_implementation_info.implementation_info_id</code>.
-     */
     @Nullable
     public String getImplementationInfoId() {
         return this.implementationInfoId;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.sql_implementation_info.implementation_info_id</code>.
-     */
     public void setImplementationInfoId(@Nullable String implementationInfoId) {
         this.implementationInfoId = implementationInfoId;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.sql_implementation_info.implementation_info_name</code>.
-     */
     @Nullable
     public String getImplementationInfoName() {
         return this.implementationInfoName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.sql_implementation_info.implementation_info_name</code>.
-     */
     public void setImplementationInfoName(@Nullable String implementationInfoName) {
         this.implementationInfoName = implementationInfoName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.sql_implementation_info.integer_value</code>.
-     */
     @Nullable
     public Integer getIntegerValue() {
         return this.integerValue;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.sql_implementation_info.integer_value</code>.
-     */
     public void setIntegerValue(@Nullable Integer integerValue) {
         this.integerValue = integerValue;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.sql_implementation_info.character_value</code>.
-     */
     @Nullable
     public String getCharacterValue() {
         return this.characterValue;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.sql_implementation_info.character_value</code>.
-     */
     public void setCharacterValue(@Nullable String characterValue) {
         this.characterValue = characterValue;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.sql_implementation_info.comments</code>.
-     */
     @Nullable
     public String getComments() {
         return this.comments;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.sql_implementation_info.comments</code>.
-     */
     public void setComments(@Nullable String comments) {
         this.comments = comments;
     }

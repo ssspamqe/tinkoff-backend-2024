@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.administrable_role_authorizations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -52,54 +49,30 @@ public class AdministrableRoleAuthorizations implements Serializable {
         this.isGrantable = isGrantable;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.administrable_role_authorizations.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return this.grantee;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.administrable_role_authorizations.grantee</code>.
-     */
     public void setGrantee(@Nullable String grantee) {
         this.grantee = grantee;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.administrable_role_authorizations.role_name</code>.
-     */
     @Nullable
     public String getRoleName() {
         return this.roleName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.administrable_role_authorizations.role_name</code>.
-     */
     public void setRoleName(@Nullable String roleName) {
         this.roleName = roleName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.administrable_role_authorizations.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
         return this.isGrantable;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.administrable_role_authorizations.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String isGrantable) {
         this.isGrantable = isGrantable;
     }

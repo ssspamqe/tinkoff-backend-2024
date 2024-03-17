@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatProgressAnalyzeRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_analyze</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,86 +40,36 @@ public class PgStatProgressAnalyze extends TableImpl<PgStatProgressAnalyzeRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_progress_analyze</code>
-     */
     public static final PgStatProgressAnalyze PG_STAT_PROGRESS_ANALYZE = new PgStatProgressAnalyze();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatProgressAnalyzeRecord> getRecordType() {
         return PgStatProgressAnalyzeRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_analyze.pid</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_analyze.datid</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_analyze.datname</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, String> DATNAME = createField(DSL.name("datname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_analyze.relid</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_analyze.phase</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, String> PHASE = createField(DSL.name("phase"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_total</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> SAMPLE_BLKS_TOTAL = createField(DSL.name("sample_blks_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_scanned</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> SAMPLE_BLKS_SCANNED = createField(DSL.name("sample_blks_scanned"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_total</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> EXT_STATS_TOTAL = createField(DSL.name("ext_stats_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_computed</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> EXT_STATS_COMPUTED = createField(DSL.name("ext_stats_computed"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_total</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> CHILD_TABLES_TOTAL = createField(DSL.name("child_tables_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_done</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> CHILD_TABLES_DONE = createField(DSL.name("child_tables_done"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_analyze.current_child_table_relid</code>.
-     */
     public final TableField<PgStatProgressAnalyzeRecord, Long> CURRENT_CHILD_TABLE_RELID = createField(DSL.name("current_child_table_relid"), SQLDataType.BIGINT, this, "");
 
     private PgStatProgressAnalyze(Name alias, Table<PgStatProgressAnalyzeRecord> aliased) {
@@ -158,25 +103,14 @@ public class PgStatProgressAnalyze extends TableImpl<PgStatProgressAnalyzeRecord
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_analyze</code> table
-     * reference
-     */
     public PgStatProgressAnalyze(String alias) {
         this(DSL.name(alias), PG_STAT_PROGRESS_ANALYZE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_analyze</code> table
-     * reference
-     */
     public PgStatProgressAnalyze(Name alias) {
         this(alias, PG_STAT_PROGRESS_ANALYZE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_progress_analyze</code> table reference
-     */
     public PgStatProgressAnalyze() {
         this(DSL.name("pg_stat_progress_analyze"), null);
     }
@@ -209,27 +143,18 @@ public class PgStatProgressAnalyze extends TableImpl<PgStatProgressAnalyzeRecord
         return new PgStatProgressAnalyze(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressAnalyze rename(String name) {
         return new PgStatProgressAnalyze(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressAnalyze rename(Name name) {
         return new PgStatProgressAnalyze(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressAnalyze rename(Table<?> name) {
@@ -246,17 +171,10 @@ public class PgStatProgressAnalyze extends TableImpl<PgStatProgressAnalyzeRecord
         return (Row12) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function12<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -19,9 +19,6 @@ import org.jooq.Row6;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_dict</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,96 +31,60 @@ public class PgTsDictRecord extends UpdatableRecordImpl<PgTsDictRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dictname</code>.
-     */
     public void setDictname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dictname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDictname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dictnamespace</code>.
-     */
     public void setDictnamespace(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dictnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDictnamespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dictowner</code>.
-     */
     public void setDictowner(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dictowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDictowner() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dicttemplate</code>.
-     */
     public void setDicttemplate(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dicttemplate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDicttemplate() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dictinitoption</code>.
-     */
     public void setDictinitoption(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dictinitoption</code>.
-     */
     @Nullable
     public String getDictinitoption() {
         return (String) get(5);
@@ -321,16 +282,10 @@ public class PgTsDictRecord extends UpdatableRecordImpl<PgTsDictRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTsDictRecord
-     */
     public PgTsDictRecord() {
         super(PgTsDict.PG_TS_DICT);
     }
 
-    /**
-     * Create a detached, initialised PgTsDictRecord
-     */
     @ConstructorProperties({ "oid", "dictname", "dictnamespace", "dictowner", "dicttemplate", "dictinitoption" })
     public PgTsDictRecord(@NotNull Long oid, @NotNull String dictname, @NotNull Long dictnamespace, @NotNull Long dictowner, @NotNull Long dicttemplate, @Nullable String dictinitoption) {
         super(PgTsDict.PG_TS_DICT);
@@ -344,9 +299,6 @@ public class PgTsDictRecord extends UpdatableRecordImpl<PgTsDictRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTsDictRecord
-     */
     public PgTsDictRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTsDict value) {
         super(PgTsDict.PG_TS_DICT);
 

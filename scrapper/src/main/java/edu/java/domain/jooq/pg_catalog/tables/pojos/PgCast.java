@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_cast</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,98 +59,62 @@ public class PgCast implements Serializable {
         this.castmethod = castmethod;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.castsource</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCastsource() {
         return this.castsource;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.castsource</code>.
-     */
     public void setCastsource(@NotNull Long castsource) {
         this.castsource = castsource;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.casttarget</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCasttarget() {
         return this.casttarget;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.casttarget</code>.
-     */
     public void setCasttarget(@NotNull Long casttarget) {
         this.casttarget = casttarget;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.castfunc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCastfunc() {
         return this.castfunc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.castfunc</code>.
-     */
     public void setCastfunc(@NotNull Long castfunc) {
         this.castfunc = castfunc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.castcontext</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCastcontext() {
         return this.castcontext;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.castcontext</code>.
-     */
     public void setCastcontext(@NotNull String castcontext) {
         this.castcontext = castcontext;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.castmethod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCastmethod() {
         return this.castmethod;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.castmethod</code>.
-     */
     public void setCastmethod(@NotNull String castmethod) {
         this.castmethod = castmethod;
     }

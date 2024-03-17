@@ -20,9 +20,6 @@ import org.jooq.Row6;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statistic_ext_data</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,129 +32,63 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext_data.stxoid</code>.
-     */
     public void setStxoid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext_data.stxoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStxoid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext_data.stxdinherit</code>.
-     */
     public void setStxdinherit(@NotNull Boolean value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext_data.stxdinherit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getStxdinherit() {
         return (Boolean) get(1);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setStxdndistinct(@Nullable Object value) {
         set(2, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getStxdndistinct() {
         return get(2);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setStxddependencies(@Nullable Object value) {
         set(3, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getStxddependencies() {
         return get(3);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setStxdmcv(@Nullable Object value) {
         set(4, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getStxdmcv() {
         return get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext_data.stxdexpr</code>.
-     */
     public void setStxdexpr(@Nullable PgStatisticRecord[] value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext_data.stxdexpr</code>.
-     */
     @Nullable
     public PgStatisticRecord[] getStxdexpr() {
         return (PgStatisticRecord[]) get(5);
@@ -201,14 +132,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return PgStatisticExtData.PG_STATISTIC_EXT_DATA.STXDINHERIT;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -216,14 +139,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return PgStatisticExtData.PG_STATISTIC_EXT_DATA.STXDNDISTINCT;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -231,14 +146,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return PgStatisticExtData.PG_STATISTIC_EXT_DATA.STXDDEPENDENCIES;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -264,14 +171,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return getStxdinherit();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -279,14 +178,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return getStxdndistinct();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -294,14 +185,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return getStxddependencies();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -327,14 +210,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return getStxdinherit();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -342,14 +217,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return getStxdndistinct();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -357,14 +224,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return getStxddependencies();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -392,14 +251,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -408,14 +259,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -424,14 +267,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -463,16 +298,10 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatisticExtDataRecord
-     */
     public PgStatisticExtDataRecord() {
         super(PgStatisticExtData.PG_STATISTIC_EXT_DATA);
     }
 
-    /**
-     * Create a detached, initialised PgStatisticExtDataRecord
-     */
     @ConstructorProperties({ "stxoid", "stxdinherit", "stxdndistinct", "stxddependencies", "stxdmcv", "stxdexpr" })
     public PgStatisticExtDataRecord(@NotNull Long stxoid, @NotNull Boolean stxdinherit, @Nullable Object stxdndistinct, @Nullable Object stxddependencies, @Nullable Object stxdmcv, @Nullable PgStatisticRecord[] stxdexpr) {
         super(PgStatisticExtData.PG_STATISTIC_EXT_DATA);
@@ -486,9 +315,6 @@ public class PgStatisticExtDataRecord extends UpdatableRecordImpl<PgStatisticExt
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatisticExtDataRecord
-     */
     public PgStatisticExtDataRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatisticExtData value) {
         super(PgStatisticExtData.PG_STATISTIC_EXT_DATA);
 

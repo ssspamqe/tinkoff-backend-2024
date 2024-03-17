@@ -19,9 +19,6 @@ import org.jooq.Row19;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_trigger</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,314 +31,190 @@ public class PgTriggerRecord extends UpdatableRecordImpl<PgTriggerRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgrelid</code>.
-     */
     public void setTgrelid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgrelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgparentid</code>.
-     */
     public void setTgparentid(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgparentid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgparentid() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgname</code>.
-     */
     public void setTgname(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTgname() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgfoid</code>.
-     */
     public void setTgfoid(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgfoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgfoid() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgtype</code>.
-     */
     public void setTgtype(@NotNull Short value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getTgtype() {
         return (Short) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgenabled</code>.
-     */
     public void setTgenabled(@NotNull String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgenabled</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTgenabled() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgisinternal</code>.
-     */
     public void setTgisinternal(@NotNull Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgisinternal</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTgisinternal() {
         return (Boolean) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgconstrrelid</code>.
-     */
     public void setTgconstrrelid(@NotNull Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgconstrrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgconstrrelid() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgconstrindid</code>.
-     */
     public void setTgconstrindid(@NotNull Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgconstrindid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgconstrindid() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgconstraint</code>.
-     */
     public void setTgconstraint(@NotNull Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgconstraint</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgconstraint() {
         return (Long) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgdeferrable</code>.
-     */
     public void setTgdeferrable(@NotNull Boolean value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgdeferrable</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTgdeferrable() {
         return (Boolean) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tginitdeferred</code>.
-     */
     public void setTginitdeferred(@NotNull Boolean value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tginitdeferred</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTginitdeferred() {
         return (Boolean) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgnargs</code>.
-     */
     public void setTgnargs(@NotNull Short value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgnargs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getTgnargs() {
         return (Short) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgattr</code>.
-     */
     public void setTgattr(@NotNull Object[] value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgattr</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getTgattr() {
         return (Object[]) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgargs</code>.
-     */
     public void setTgargs(@NotNull byte[] value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgargs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public byte[] getTgargs() {
         return (byte[]) get(15);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setTgqual(@Nullable Object value) {
         set(16, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getTgqual() {
         return get(16);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgoldtable</code>.
-     */
     public void setTgoldtable(@Nullable String value) {
         set(17, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgoldtable</code>.
-     */
     @Nullable
     public String getTgoldtable() {
         return (String) get(17);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgnewtable</code>.
-     */
     public void setTgnewtable(@Nullable String value) {
         set(18, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgnewtable</code>.
-     */
     @Nullable
     public String getTgnewtable() {
         return (String) get(18);
@@ -469,14 +342,6 @@ public class PgTriggerRecord extends UpdatableRecordImpl<PgTriggerRecord> implem
         return PgTrigger.PG_TRIGGER.TGARGS;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -592,14 +457,6 @@ public class PgTriggerRecord extends UpdatableRecordImpl<PgTriggerRecord> implem
         return getTgargs();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -715,14 +572,6 @@ public class PgTriggerRecord extends UpdatableRecordImpl<PgTriggerRecord> implem
         return getTgargs();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -854,14 +703,6 @@ public class PgTriggerRecord extends UpdatableRecordImpl<PgTriggerRecord> implem
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -913,16 +754,10 @@ public class PgTriggerRecord extends UpdatableRecordImpl<PgTriggerRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTriggerRecord
-     */
     public PgTriggerRecord() {
         super(PgTrigger.PG_TRIGGER);
     }
 
-    /**
-     * Create a detached, initialised PgTriggerRecord
-     */
     @ConstructorProperties({ "oid", "tgrelid", "tgparentid", "tgname", "tgfoid", "tgtype", "tgenabled", "tgisinternal", "tgconstrrelid", "tgconstrindid", "tgconstraint", "tgdeferrable", "tginitdeferred", "tgnargs", "tgattr", "tgargs", "tgqual", "tgoldtable", "tgnewtable" })
     public PgTriggerRecord(@NotNull Long oid, @NotNull Long tgrelid, @NotNull Long tgparentid, @NotNull String tgname, @NotNull Long tgfoid, @NotNull Short tgtype, @NotNull String tgenabled, @NotNull Boolean tgisinternal, @NotNull Long tgconstrrelid, @NotNull Long tgconstrindid, @NotNull Long tgconstraint, @NotNull Boolean tgdeferrable, @NotNull Boolean tginitdeferred, @NotNull Short tgnargs, @NotNull Object[] tgattr, @NotNull byte[] tgargs, @Nullable Object tgqual, @Nullable String tgoldtable, @Nullable String tgnewtable) {
         super(PgTrigger.PG_TRIGGER);
@@ -949,9 +784,6 @@ public class PgTriggerRecord extends UpdatableRecordImpl<PgTriggerRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTriggerRecord
-     */
     public PgTriggerRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTrigger value) {
         super(PgTrigger.PG_TRIGGER);
 

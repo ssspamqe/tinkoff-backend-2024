@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_gssapi</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,76 +30,46 @@ public class PgStatGssapiRecord extends TableRecordImpl<PgStatGssapiRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.gss_authenticated</code>.
-     */
     public void setGssAuthenticated(@Nullable Boolean value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.gss_authenticated</code>.
-     */
     @Nullable
     public Boolean getGssAuthenticated() {
         return (Boolean) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.principal</code>.
-     */
     public void setPrincipal(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.principal</code>.
-     */
     @Nullable
     public String getPrincipal() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.encrypted</code>.
-     */
     public void setEncrypted(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.encrypted</code>.
-     */
     @Nullable
     public Boolean getEncrypted() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.credentials_delegated</code>.
-     */
     public void setCredentialsDelegated(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.credentials_delegated</code>.
-     */
     @Nullable
     public Boolean getCredentialsDelegated() {
         return (Boolean) get(4);
@@ -264,16 +231,10 @@ public class PgStatGssapiRecord extends TableRecordImpl<PgStatGssapiRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatGssapiRecord
-     */
     public PgStatGssapiRecord() {
         super(PgStatGssapi.PG_STAT_GSSAPI);
     }
 
-    /**
-     * Create a detached, initialised PgStatGssapiRecord
-     */
     @ConstructorProperties({ "pid", "gssAuthenticated", "principal", "encrypted", "credentialsDelegated" })
     public PgStatGssapiRecord(@Nullable Integer pid, @Nullable Boolean gssAuthenticated, @Nullable String principal, @Nullable Boolean encrypted, @Nullable Boolean credentialsDelegated) {
         super(PgStatGssapi.PG_STAT_GSSAPI);
@@ -286,9 +247,6 @@ public class PgStatGssapiRecord extends TableRecordImpl<PgStatGssapiRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatGssapiRecord
-     */
     public PgStatGssapiRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatGssapi value) {
         super(PgStatGssapi.PG_STAT_GSSAPI);
 

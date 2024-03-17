@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_index</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -124,359 +121,213 @@ public class PgIndex implements Serializable {
         this.indpred = indpred;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indexrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getIndexrelid() {
         return this.indexrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indexrelid</code>.
-     */
     public void setIndexrelid(@NotNull Long indexrelid) {
         this.indexrelid = indexrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getIndrelid() {
         return this.indrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indrelid</code>.
-     */
     public void setIndrelid(@NotNull Long indrelid) {
         this.indrelid = indrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indnatts</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getIndnatts() {
         return this.indnatts;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indnatts</code>.
-     */
     public void setIndnatts(@NotNull Short indnatts) {
         this.indnatts = indnatts;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indnkeyatts</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getIndnkeyatts() {
         return this.indnkeyatts;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indnkeyatts</code>.
-     */
     public void setIndnkeyatts(@NotNull Short indnkeyatts) {
         this.indnkeyatts = indnkeyatts;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisunique</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisunique() {
         return this.indisunique;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisunique</code>.
-     */
     public void setIndisunique(@NotNull Boolean indisunique) {
         this.indisunique = indisunique;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indnullsnotdistinct</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndnullsnotdistinct() {
         return this.indnullsnotdistinct;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indnullsnotdistinct</code>.
-     */
     public void setIndnullsnotdistinct(@NotNull Boolean indnullsnotdistinct) {
         this.indnullsnotdistinct = indnullsnotdistinct;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisprimary</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisprimary() {
         return this.indisprimary;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisprimary</code>.
-     */
     public void setIndisprimary(@NotNull Boolean indisprimary) {
         this.indisprimary = indisprimary;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisexclusion</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisexclusion() {
         return this.indisexclusion;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisexclusion</code>.
-     */
     public void setIndisexclusion(@NotNull Boolean indisexclusion) {
         this.indisexclusion = indisexclusion;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indimmediate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndimmediate() {
         return this.indimmediate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indimmediate</code>.
-     */
     public void setIndimmediate(@NotNull Boolean indimmediate) {
         this.indimmediate = indimmediate;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisclustered</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisclustered() {
         return this.indisclustered;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisclustered</code>.
-     */
     public void setIndisclustered(@NotNull Boolean indisclustered) {
         this.indisclustered = indisclustered;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisvalid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisvalid() {
         return this.indisvalid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisvalid</code>.
-     */
     public void setIndisvalid(@NotNull Boolean indisvalid) {
         this.indisvalid = indisvalid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indcheckxmin</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndcheckxmin() {
         return this.indcheckxmin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indcheckxmin</code>.
-     */
     public void setIndcheckxmin(@NotNull Boolean indcheckxmin) {
         this.indcheckxmin = indcheckxmin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisready</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisready() {
         return this.indisready;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisready</code>.
-     */
     public void setIndisready(@NotNull Boolean indisready) {
         this.indisready = indisready;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indislive</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndislive() {
         return this.indislive;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indislive</code>.
-     */
     public void setIndislive(@NotNull Boolean indislive) {
         this.indislive = indislive;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisreplident</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisreplident() {
         return this.indisreplident;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisreplident</code>.
-     */
     public void setIndisreplident(@NotNull Boolean indisreplident) {
         this.indisreplident = indisreplident;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indkey</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getIndkey() {
         return this.indkey;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indkey</code>.
-     */
     public void setIndkey(@NotNull Object[] indkey) {
         this.indkey = indkey;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indcollation</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getIndcollation() {
         return this.indcollation;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indcollation</code>.
-     */
     public void setIndcollation(@NotNull Object[] indcollation) {
         this.indcollation = indcollation;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indclass</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getIndclass() {
         return this.indclass;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indclass</code>.
-     */
     public void setIndclass(@NotNull Object[] indclass) {
         this.indclass = indclass;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indoption</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getIndoption() {
         return this.indoption;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indoption</code>.
-     */
     public void setIndoption(@NotNull Object[] indoption) {
         this.indoption = indoption;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getIndexprs() {
         return this.indexprs;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setIndexprs(@Nullable Object indexprs) {
         this.indexprs = indexprs;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getIndpred() {
         return this.indpred;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setIndpred(@Nullable Object indpred) {
         this.indpred = indpred;

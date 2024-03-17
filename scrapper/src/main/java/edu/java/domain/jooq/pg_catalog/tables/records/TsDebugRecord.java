@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.ts_debug</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,103 +30,57 @@ public class TsDebugRecord extends TableRecordImpl<TsDebugRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.alias</code>.
-     */
     public void setAlias(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.alias</code>.
-     */
     @Nullable
     public String getAlias() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.description</code>.
-     */
     public void setDescription(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.description</code>.
-     */
     @Nullable
     public String getDescription() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.token</code>.
-     */
     public void setToken(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.token</code>.
-     */
     @Nullable
     public String getToken() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.dictionaries</code>.
-     */
     public void setDictionaries(@Nullable Object[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.dictionaries</code>.
-     */
     @Nullable
     public Object[] getDictionaries() {
         return (Object[]) get(3);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setDictionary(@Nullable Object value) {
         set(4, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getDictionary() {
         return get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.lexemes</code>.
-     */
     public void setLexemes(@Nullable String[] value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.lexemes</code>.
-     */
     @Nullable
     public String[] getLexemes() {
         return (String[]) get(5);
@@ -175,14 +126,6 @@ public class TsDebugRecord extends TableRecordImpl<TsDebugRecord> implements Rec
         return TsDebug.TS_DEBUG.DICTIONARIES;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -220,14 +163,6 @@ public class TsDebugRecord extends TableRecordImpl<TsDebugRecord> implements Rec
         return getDictionaries();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -265,14 +200,6 @@ public class TsDebugRecord extends TableRecordImpl<TsDebugRecord> implements Rec
         return getDictionaries();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -314,14 +241,6 @@ public class TsDebugRecord extends TableRecordImpl<TsDebugRecord> implements Rec
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -353,16 +272,10 @@ public class TsDebugRecord extends TableRecordImpl<TsDebugRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TsDebugRecord
-     */
     public TsDebugRecord() {
         super(TsDebug.TS_DEBUG);
     }
 
-    /**
-     * Create a detached, initialised TsDebugRecord
-     */
     @ConstructorProperties({ "alias", "description", "token", "dictionaries", "dictionary", "lexemes" })
     public TsDebugRecord(@Nullable String alias, @Nullable String description, @Nullable String token, @Nullable Object[] dictionaries, @Nullable Object dictionary, @Nullable String[] lexemes) {
         super(TsDebug.TS_DEBUG);
@@ -376,9 +289,6 @@ public class TsDebugRecord extends TableRecordImpl<TsDebugRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TsDebugRecord
-     */
     public TsDebugRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.TsDebug value) {
         super(TsDebug.TS_DEBUG);
 

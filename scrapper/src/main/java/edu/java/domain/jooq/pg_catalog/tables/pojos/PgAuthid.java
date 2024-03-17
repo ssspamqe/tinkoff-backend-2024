@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_authid</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -88,192 +85,120 @@ public class PgAuthid implements Serializable {
         this.rolvaliduntil = rolvaliduntil;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRolname() {
         return this.rolname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolname</code>.
-     */
     public void setRolname(@NotNull String rolname) {
         this.rolname = rolname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolsuper</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolsuper() {
         return this.rolsuper;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolsuper</code>.
-     */
     public void setRolsuper(@NotNull Boolean rolsuper) {
         this.rolsuper = rolsuper;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolinherit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolinherit() {
         return this.rolinherit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolinherit</code>.
-     */
     public void setRolinherit(@NotNull Boolean rolinherit) {
         this.rolinherit = rolinherit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolcreaterole</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolcreaterole() {
         return this.rolcreaterole;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolcreaterole</code>.
-     */
     public void setRolcreaterole(@NotNull Boolean rolcreaterole) {
         this.rolcreaterole = rolcreaterole;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolcreatedb</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolcreatedb() {
         return this.rolcreatedb;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolcreatedb</code>.
-     */
     public void setRolcreatedb(@NotNull Boolean rolcreatedb) {
         this.rolcreatedb = rolcreatedb;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolcanlogin</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolcanlogin() {
         return this.rolcanlogin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolcanlogin</code>.
-     */
     public void setRolcanlogin(@NotNull Boolean rolcanlogin) {
         this.rolcanlogin = rolcanlogin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolreplication</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolreplication() {
         return this.rolreplication;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolreplication</code>.
-     */
     public void setRolreplication(@NotNull Boolean rolreplication) {
         this.rolreplication = rolreplication;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolbypassrls</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolbypassrls() {
         return this.rolbypassrls;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolbypassrls</code>.
-     */
     public void setRolbypassrls(@NotNull Boolean rolbypassrls) {
         this.rolbypassrls = rolbypassrls;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolconnlimit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getRolconnlimit() {
         return this.rolconnlimit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolconnlimit</code>.
-     */
     public void setRolconnlimit(@NotNull Integer rolconnlimit) {
         this.rolconnlimit = rolconnlimit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolpassword</code>.
-     */
     @Nullable
     public String getRolpassword() {
         return this.rolpassword;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolpassword</code>.
-     */
     public void setRolpassword(@Nullable String rolpassword) {
         this.rolpassword = rolpassword;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolvaliduntil</code>.
-     */
     @Nullable
     public OffsetDateTime getRolvaliduntil() {
         return this.rolvaliduntil;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolvaliduntil</code>.
-     */
     public void setRolvaliduntil(@Nullable OffsetDateTime rolvaliduntil) {
         this.rolvaliduntil = rolvaliduntil;
     }

@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_dir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,16 +30,10 @@ public class PgLsDirRecord extends TableRecordImpl<PgLsDirRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_dir.pg_ls_dir</code>.
-     */
     public void setPgLsDir(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_dir.pg_ls_dir</code>.
-     */
     @Nullable
     public String getPgLsDir() {
         return (String) get(0);
@@ -100,16 +91,10 @@ public class PgLsDirRecord extends TableRecordImpl<PgLsDirRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLsDirRecord
-     */
     public PgLsDirRecord() {
         super(PgLsDir.PG_LS_DIR);
     }
 
-    /**
-     * Create a detached, initialised PgLsDirRecord
-     */
     @ConstructorProperties({ "pgLsDir" })
     public PgLsDirRecord(@Nullable String pgLsDir) {
         super(PgLsDir.PG_LS_DIR);
@@ -118,9 +103,6 @@ public class PgLsDirRecord extends TableRecordImpl<PgLsDirRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLsDirRecord
-     */
     public PgLsDirRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLsDir value) {
         super(PgLsDir.PG_LS_DIR);
 

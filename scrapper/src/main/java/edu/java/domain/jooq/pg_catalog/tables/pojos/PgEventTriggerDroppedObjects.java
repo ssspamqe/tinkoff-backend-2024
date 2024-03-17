@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_event_trigger_dropped_objects</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -87,206 +84,110 @@ public class PgEventTriggerDroppedObjects implements Serializable {
         this.addressArgs = addressArgs;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.classid</code>.
-     */
     @Nullable
     public Long getClassid() {
         return this.classid;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.classid</code>.
-     */
     public void setClassid(@Nullable Long classid) {
         this.classid = classid;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.objid</code>.
-     */
     @Nullable
     public Long getObjid() {
         return this.objid;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.objid</code>.
-     */
     public void setObjid(@Nullable Long objid) {
         this.objid = objid;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.objsubid</code>.
-     */
     @Nullable
     public Integer getObjsubid() {
         return this.objsubid;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.objsubid</code>.
-     */
     public void setObjsubid(@Nullable Integer objsubid) {
         this.objsubid = objsubid;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.original</code>.
-     */
     @Nullable
     public Boolean getOriginal() {
         return this.original;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.original</code>.
-     */
     public void setOriginal(@Nullable Boolean original) {
         this.original = original;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.normal</code>.
-     */
     @Nullable
     public Boolean getNormal() {
         return this.normal;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.normal</code>.
-     */
     public void setNormal(@Nullable Boolean normal) {
         this.normal = normal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.is_temporary</code>.
-     */
     @Nullable
     public Boolean getIsTemporary() {
         return this.isTemporary;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.is_temporary</code>.
-     */
     public void setIsTemporary(@Nullable Boolean isTemporary) {
         this.isTemporary = isTemporary;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return this.objectType;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_type</code>.
-     */
     public void setObjectType(@Nullable String objectType) {
         this.objectType = objectType;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.schema_name</code>.
-     */
     @Nullable
     public String getSchemaName() {
         return this.schemaName;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.schema_name</code>.
-     */
     public void setSchemaName(@Nullable String schemaName) {
         this.schemaName = schemaName;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_name</code>.
-     */
     @Nullable
     public String getObjectName() {
         return this.objectName;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_name</code>.
-     */
     public void setObjectName(@Nullable String objectName) {
         this.objectName = objectName;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_identity</code>.
-     */
     @Nullable
     public String getObjectIdentity() {
         return this.objectIdentity;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_identity</code>.
-     */
     public void setObjectIdentity(@Nullable String objectIdentity) {
         this.objectIdentity = objectIdentity;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.address_names</code>.
-     */
     @Nullable
     public String[] getAddressNames() {
         return this.addressNames;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.address_names</code>.
-     */
     public void setAddressNames(@Nullable String[] addressNames) {
         this.addressNames = addressNames;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.address_args</code>.
-     */
     @Nullable
     public String[] getAddressArgs() {
         return this.addressArgs;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.address_args</code>.
-     */
     public void setAddressArgs(@Nullable String[] addressArgs) {
         this.addressArgs = addressArgs;
     }

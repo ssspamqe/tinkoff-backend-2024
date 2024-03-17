@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_get_wal_resource_managers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,49 +47,29 @@ public class PgGetWalResourceManagers implements Serializable {
         this.rmBuiltin = rmBuiltin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_wal_resource_managers.rm_id</code>.
-     */
     @Nullable
     public Integer getRmId() {
         return this.rmId;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_wal_resource_managers.rm_id</code>.
-     */
     public void setRmId(@Nullable Integer rmId) {
         this.rmId = rmId;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_wal_resource_managers.rm_name</code>.
-     */
     @Nullable
     public String getRmName() {
         return this.rmName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_wal_resource_managers.rm_name</code>.
-     */
     public void setRmName(@Nullable String rmName) {
         this.rmName = rmName;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_get_wal_resource_managers.rm_builtin</code>.
-     */
     @Nullable
     public Boolean getRmBuiltin() {
         return this.rmBuiltin;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_get_wal_resource_managers.rm_builtin</code>.
-     */
     public void setRmBuiltin(@Nullable Boolean rmBuiltin) {
         this.rmBuiltin = rmBuiltin;
     }

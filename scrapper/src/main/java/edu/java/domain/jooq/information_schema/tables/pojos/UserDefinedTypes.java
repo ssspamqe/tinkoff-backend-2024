@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.user_defined_types</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -156,493 +153,265 @@ public class UserDefinedTypes implements Serializable {
         this.refDtdIdentifier = refDtdIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.user_defined_type_catalog</code>.
-     */
     @Nullable
     public String getUserDefinedTypeCatalog() {
         return this.userDefinedTypeCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.user_defined_type_catalog</code>.
-     */
     public void setUserDefinedTypeCatalog(@Nullable String userDefinedTypeCatalog) {
         this.userDefinedTypeCatalog = userDefinedTypeCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.user_defined_type_schema</code>.
-     */
     @Nullable
     public String getUserDefinedTypeSchema() {
         return this.userDefinedTypeSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.user_defined_type_schema</code>.
-     */
     public void setUserDefinedTypeSchema(@Nullable String userDefinedTypeSchema) {
         this.userDefinedTypeSchema = userDefinedTypeSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.user_defined_type_name</code>.
-     */
     @Nullable
     public String getUserDefinedTypeName() {
         return this.userDefinedTypeName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.user_defined_type_name</code>.
-     */
     public void setUserDefinedTypeName(@Nullable String userDefinedTypeName) {
         this.userDefinedTypeName = userDefinedTypeName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.user_defined_type_category</code>.
-     */
     @Nullable
     public String getUserDefinedTypeCategory() {
         return this.userDefinedTypeCategory;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.user_defined_type_category</code>.
-     */
     public void setUserDefinedTypeCategory(@Nullable String userDefinedTypeCategory) {
         this.userDefinedTypeCategory = userDefinedTypeCategory;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.is_instantiable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsInstantiable() {
         return this.isInstantiable;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.is_instantiable</code>.
-     */
     public void setIsInstantiable(@Nullable String isInstantiable) {
         this.isInstantiable = isInstantiable;
     }
 
-    /**
-     * Getter for <code>information_schema.user_defined_types.is_final</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsFinal() {
         return this.isFinal;
     }
 
-    /**
-     * Setter for <code>information_schema.user_defined_types.is_final</code>.
-     */
     public void setIsFinal(@Nullable String isFinal) {
         this.isFinal = isFinal;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.ordering_form</code>.
-     */
     @Nullable
     public String getOrderingForm() {
         return this.orderingForm;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.ordering_form</code>.
-     */
     public void setOrderingForm(@Nullable String orderingForm) {
         this.orderingForm = orderingForm;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.ordering_category</code>.
-     */
     @Nullable
     public String getOrderingCategory() {
         return this.orderingCategory;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.ordering_category</code>.
-     */
     public void setOrderingCategory(@Nullable String orderingCategory) {
         this.orderingCategory = orderingCategory;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.ordering_routine_catalog</code>.
-     */
     @Nullable
     public String getOrderingRoutineCatalog() {
         return this.orderingRoutineCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.ordering_routine_catalog</code>.
-     */
     public void setOrderingRoutineCatalog(@Nullable String orderingRoutineCatalog) {
         this.orderingRoutineCatalog = orderingRoutineCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.ordering_routine_schema</code>.
-     */
     @Nullable
     public String getOrderingRoutineSchema() {
         return this.orderingRoutineSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.ordering_routine_schema</code>.
-     */
     public void setOrderingRoutineSchema(@Nullable String orderingRoutineSchema) {
         this.orderingRoutineSchema = orderingRoutineSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.ordering_routine_name</code>.
-     */
     @Nullable
     public String getOrderingRoutineName() {
         return this.orderingRoutineName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.ordering_routine_name</code>.
-     */
     public void setOrderingRoutineName(@Nullable String orderingRoutineName) {
         this.orderingRoutineName = orderingRoutineName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.reference_type</code>.
-     */
     @Nullable
     public String getReferenceType() {
         return this.referenceType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.reference_type</code>.
-     */
     public void setReferenceType(@Nullable String referenceType) {
         this.referenceType = referenceType;
     }
 
-    /**
-     * Getter for <code>information_schema.user_defined_types.data_type</code>.
-     */
     @Nullable
     public String getDataType() {
         return this.dataType;
     }
 
-    /**
-     * Setter for <code>information_schema.user_defined_types.data_type</code>.
-     */
     public void setDataType(@Nullable String dataType) {
         this.dataType = dataType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.character_maximum_length</code>.
-     */
     @Nullable
     public Integer getCharacterMaximumLength() {
         return this.characterMaximumLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.character_maximum_length</code>.
-     */
     public void setCharacterMaximumLength(@Nullable Integer characterMaximumLength) {
         this.characterMaximumLength = characterMaximumLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.character_octet_length</code>.
-     */
     @Nullable
     public Integer getCharacterOctetLength() {
         return this.characterOctetLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.character_octet_length</code>.
-     */
     public void setCharacterOctetLength(@Nullable Integer characterOctetLength) {
         this.characterOctetLength = characterOctetLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return this.characterSetCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String characterSetCatalog) {
         this.characterSetCatalog = characterSetCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return this.characterSetSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String characterSetSchema) {
         this.characterSetSchema = characterSetSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return this.characterSetName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String characterSetName) {
         this.characterSetName = characterSetName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return this.collationCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String collationCatalog) {
         this.collationCatalog = collationCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return this.collationSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String collationSchema) {
         this.collationSchema = collationSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return this.collationName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.collation_name</code>.
-     */
     public void setCollationName(@Nullable String collationName) {
         this.collationName = collationName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.numeric_precision</code>.
-     */
     @Nullable
     public Integer getNumericPrecision() {
         return this.numericPrecision;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.numeric_precision</code>.
-     */
     public void setNumericPrecision(@Nullable Integer numericPrecision) {
         this.numericPrecision = numericPrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.numeric_precision_radix</code>.
-     */
     @Nullable
     public Integer getNumericPrecisionRadix() {
         return this.numericPrecisionRadix;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.numeric_precision_radix</code>.
-     */
     public void setNumericPrecisionRadix(@Nullable Integer numericPrecisionRadix) {
         this.numericPrecisionRadix = numericPrecisionRadix;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.numeric_scale</code>.
-     */
     @Nullable
     public Integer getNumericScale() {
         return this.numericScale;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.numeric_scale</code>.
-     */
     public void setNumericScale(@Nullable Integer numericScale) {
         this.numericScale = numericScale;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.datetime_precision</code>.
-     */
     @Nullable
     public Integer getDatetimePrecision() {
         return this.datetimePrecision;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.datetime_precision</code>.
-     */
     public void setDatetimePrecision(@Nullable Integer datetimePrecision) {
         this.datetimePrecision = datetimePrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.interval_type</code>.
-     */
     @Nullable
     public String getIntervalType() {
         return this.intervalType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.interval_type</code>.
-     */
     public void setIntervalType(@Nullable String intervalType) {
         this.intervalType = intervalType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.interval_precision</code>.
-     */
     @Nullable
     public Integer getIntervalPrecision() {
         return this.intervalPrecision;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.interval_precision</code>.
-     */
     public void setIntervalPrecision(@Nullable Integer intervalPrecision) {
         this.intervalPrecision = intervalPrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.source_dtd_identifier</code>.
-     */
     @Nullable
     public String getSourceDtdIdentifier() {
         return this.sourceDtdIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.source_dtd_identifier</code>.
-     */
     public void setSourceDtdIdentifier(@Nullable String sourceDtdIdentifier) {
         this.sourceDtdIdentifier = sourceDtdIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_defined_types.ref_dtd_identifier</code>.
-     */
     @Nullable
     public String getRefDtdIdentifier() {
         return this.refDtdIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_defined_types.ref_dtd_identifier</code>.
-     */
     public void setRefDtdIdentifier(@Nullable String refDtdIdentifier) {
         this.refDtdIdentifier = refDtdIdentifier;
     }

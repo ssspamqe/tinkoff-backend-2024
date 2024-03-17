@@ -19,9 +19,6 @@ import org.jooq.Row9;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_language</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,144 +31,90 @@ public class PgLanguageRecord extends UpdatableRecordImpl<PgLanguageRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanname</code>.
-     */
     public void setLanname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getLanname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanowner</code>.
-     */
     public void setLanowner(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLanowner() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanispl</code>.
-     */
     public void setLanispl(@NotNull Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanispl</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getLanispl() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanpltrusted</code>.
-     */
     public void setLanpltrusted(@NotNull Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanpltrusted</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getLanpltrusted() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanplcallfoid</code>.
-     */
     public void setLanplcallfoid(@NotNull Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanplcallfoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLanplcallfoid() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.laninline</code>.
-     */
     public void setLaninline(@NotNull Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.laninline</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLaninline() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanvalidator</code>.
-     */
     public void setLanvalidator(@NotNull Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanvalidator</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLanvalidator() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanacl</code>.
-     */
     public void setLanacl(@Nullable String[] value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanacl</code>.
-     */
     @Nullable
     public String[] getLanacl() {
         return (String[]) get(8);
@@ -447,16 +390,10 @@ public class PgLanguageRecord extends UpdatableRecordImpl<PgLanguageRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLanguageRecord
-     */
     public PgLanguageRecord() {
         super(PgLanguage.PG_LANGUAGE);
     }
 
-    /**
-     * Create a detached, initialised PgLanguageRecord
-     */
     @ConstructorProperties({ "oid", "lanname", "lanowner", "lanispl", "lanpltrusted", "lanplcallfoid", "laninline", "lanvalidator", "lanacl" })
     public PgLanguageRecord(@NotNull Long oid, @NotNull String lanname, @NotNull Long lanowner, @NotNull Boolean lanispl, @NotNull Boolean lanpltrusted, @NotNull Long lanplcallfoid, @NotNull Long laninline, @NotNull Long lanvalidator, @Nullable String[] lanacl) {
         super(PgLanguage.PG_LANGUAGE);
@@ -473,9 +410,6 @@ public class PgLanguageRecord extends UpdatableRecordImpl<PgLanguageRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLanguageRecord
-     */
     public PgLanguageRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLanguage value) {
         super(PgLanguage.PG_LANGUAGE);
 

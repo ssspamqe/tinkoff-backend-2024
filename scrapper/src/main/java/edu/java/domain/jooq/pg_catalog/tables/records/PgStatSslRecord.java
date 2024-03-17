@@ -19,9 +19,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_ssl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,121 +31,73 @@ public class PgStatSslRecord extends TableRecordImpl<PgStatSslRecord> implements
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.ssl</code>.
-     */
     public void setSsl(@Nullable Boolean value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.ssl</code>.
-     */
     @Nullable
     public Boolean getSsl() {
         return (Boolean) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.version</code>.
-     */
     public void setVersion(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.version</code>.
-     */
     @Nullable
     public String getVersion() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.cipher</code>.
-     */
     public void setCipher(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.cipher</code>.
-     */
     @Nullable
     public String getCipher() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.bits</code>.
-     */
     public void setBits(@Nullable Integer value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.bits</code>.
-     */
     @Nullable
     public Integer getBits() {
         return (Integer) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.client_dn</code>.
-     */
     public void setClientDn(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.client_dn</code>.
-     */
     @Nullable
     public String getClientDn() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.client_serial</code>.
-     */
     public void setClientSerial(@Nullable BigDecimal value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.client_serial</code>.
-     */
     @Nullable
     public BigDecimal getClientSerial() {
         return (BigDecimal) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.issuer_dn</code>.
-     */
     public void setIssuerDn(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.issuer_dn</code>.
-     */
     @Nullable
     public String getIssuerDn() {
         return (String) get(7);
@@ -388,16 +337,10 @@ public class PgStatSslRecord extends TableRecordImpl<PgStatSslRecord> implements
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatSslRecord
-     */
     public PgStatSslRecord() {
         super(PgStatSsl.PG_STAT_SSL);
     }
 
-    /**
-     * Create a detached, initialised PgStatSslRecord
-     */
     @ConstructorProperties({ "pid", "ssl", "version", "cipher", "bits", "clientDn", "clientSerial", "issuerDn" })
     public PgStatSslRecord(@Nullable Integer pid, @Nullable Boolean ssl, @Nullable String version, @Nullable String cipher, @Nullable Integer bits, @Nullable String clientDn, @Nullable BigDecimal clientSerial, @Nullable String issuerDn) {
         super(PgStatSsl.PG_STAT_SSL);
@@ -413,9 +356,6 @@ public class PgStatSslRecord extends TableRecordImpl<PgStatSslRecord> implements
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatSslRecord
-     */
     public PgStatSslRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatSsl value) {
         super(PgStatSsl.PG_STAT_SSL);
 

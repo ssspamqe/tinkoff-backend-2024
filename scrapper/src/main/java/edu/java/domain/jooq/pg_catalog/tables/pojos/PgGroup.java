@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_group</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -51,47 +48,29 @@ public class PgGroup implements Serializable {
         this.grolist = grolist;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_group.groname</code>.
-     */
     @Nullable
     public String getGroname() {
         return this.groname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_group.groname</code>.
-     */
     public void setGroname(@Nullable String groname) {
         this.groname = groname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_group.grosysid</code>.
-     */
     @Nullable
     public Long getGrosysid() {
         return this.grosysid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_group.grosysid</code>.
-     */
     public void setGrosysid(@Nullable Long grosysid) {
         this.grosysid = grosysid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_group.grolist</code>.
-     */
     @Nullable
     public Long[] getGrolist() {
         return this.grolist;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_group.grolist</code>.
-     */
     public void setGrolist(@Nullable Long[] grolist) {
         this.grolist = grolist;
     }

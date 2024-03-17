@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgRulesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_rules</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,38 +40,20 @@ public class PgRules extends TableImpl<PgRulesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_rules</code>
-     */
     public static final PgRules PG_RULES = new PgRules();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgRulesRecord> getRecordType() {
         return PgRulesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_rules.schemaname</code>.
-     */
     public final TableField<PgRulesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_rules.tablename</code>.
-     */
     public final TableField<PgRulesRecord, String> TABLENAME = createField(DSL.name("tablename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_rules.rulename</code>.
-     */
     public final TableField<PgRulesRecord, String> RULENAME = createField(DSL.name("rulename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_rules.definition</code>.
-     */
     public final TableField<PgRulesRecord, String> DEFINITION = createField(DSL.name("definition"), SQLDataType.CLOB, this, "");
 
     private PgRules(Name alias, Table<PgRulesRecord> aliased) {
@@ -96,23 +73,14 @@ public class PgRules extends TableImpl<PgRulesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_rules</code> table reference
-     */
     public PgRules(String alias) {
         this(DSL.name(alias), PG_RULES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_rules</code> table reference
-     */
     public PgRules(Name alias) {
         this(alias, PG_RULES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_rules</code> table reference
-     */
     public PgRules() {
         this(DSL.name("pg_rules"), null);
     }
@@ -145,27 +113,18 @@ public class PgRules extends TableImpl<PgRulesRecord> {
         return new PgRules(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRules rename(String name) {
         return new PgRules(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRules rename(Name name) {
         return new PgRules(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRules rename(Table<?> name) {
@@ -182,17 +141,10 @@ public class PgRules extends TableImpl<PgRulesRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.column_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,91 +30,55 @@ public class ColumnOptionsRecord extends TableRecordImpl<ColumnOptionsRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.column_options.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.column_name</code>.
-     */
     public void setColumnName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.column_name</code>.
-     */
     @Nullable
     public String getColumnName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return (String) get(5);
@@ -305,16 +266,10 @@ public class ColumnOptionsRecord extends TableRecordImpl<ColumnOptionsRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ColumnOptionsRecord
-     */
     public ColumnOptionsRecord() {
         super(ColumnOptions.COLUMN_OPTIONS);
     }
 
-    /**
-     * Create a detached, initialised ColumnOptionsRecord
-     */
     @ConstructorProperties({ "tableCatalog", "tableSchema", "tableName", "columnName", "optionName", "optionValue" })
     public ColumnOptionsRecord(@Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String columnName, @Nullable String optionName, @Nullable String optionValue) {
         super(ColumnOptions.COLUMN_OPTIONS);
@@ -328,9 +283,6 @@ public class ColumnOptionsRecord extends TableRecordImpl<ColumnOptionsRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ColumnOptionsRecord
-     */
     public ColumnOptionsRecord(edu.java.domain.jooq.information_schema.tables.pojos.ColumnOptions value) {
         super(ColumnOptions.COLUMN_OPTIONS);
 

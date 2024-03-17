@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.TsTokenTypeRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.ts_token_type</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,33 +38,18 @@ public class TsTokenType extends TableImpl<TsTokenTypeRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.ts_token_type</code>
-     */
     public static final TsTokenType TS_TOKEN_TYPE = new TsTokenType();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TsTokenTypeRecord> getRecordType() {
         return TsTokenTypeRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.ts_token_type.tokid</code>.
-     */
     public final TableField<TsTokenTypeRecord, Integer> TOKID = createField(DSL.name("tokid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_token_type.alias</code>.
-     */
     public final TableField<TsTokenTypeRecord, String> ALIAS = createField(DSL.name("alias"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_token_type.description</code>.
-     */
     public final TableField<TsTokenTypeRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.CLOB, this, "");
 
     private TsTokenType(Name alias, Table<TsTokenTypeRecord> aliased) {
@@ -82,23 +62,14 @@ public class TsTokenType extends TableImpl<TsTokenTypeRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.ts_token_type</code> table reference
-     */
     public TsTokenType(String alias) {
         this(DSL.name(alias), TS_TOKEN_TYPE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.ts_token_type</code> table reference
-     */
     public TsTokenType(Name alias) {
         this(alias, TS_TOKEN_TYPE);
     }
 
-    /**
-     * Create a <code>pg_catalog.ts_token_type</code> table reference
-     */
     public TsTokenType() {
         this(DSL.name("ts_token_type"), null);
     }
@@ -127,27 +98,18 @@ public class TsTokenType extends TableImpl<TsTokenTypeRecord> {
         return new TsTokenType(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsTokenType rename(String name) {
         return new TsTokenType(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsTokenType rename(Name name) {
         return new TsTokenType(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsTokenType rename(Table<?> name) {
@@ -164,9 +126,6 @@ public class TsTokenType extends TableImpl<TsTokenTypeRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TsTokenType call(
           String parserName
     ) {
@@ -177,9 +136,6 @@ public class TsTokenType extends TableImpl<TsTokenTypeRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TsTokenType call(
           Field<String> parserName
     ) {
@@ -190,17 +146,10 @@ public class TsTokenType extends TableImpl<TsTokenTypeRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Integer, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Integer, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

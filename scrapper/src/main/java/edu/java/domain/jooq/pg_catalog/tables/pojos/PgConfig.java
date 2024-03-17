@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_config</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,32 +43,20 @@ public class PgConfig implements Serializable {
         this.setting = setting;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_config.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_config.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_config.setting</code>.
-     */
     @Nullable
     public String getSetting() {
         return this.setting;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_config.setting</code>.
-     */
     public void setSetting(@Nullable String setting) {
         this.setting = setting;
     }

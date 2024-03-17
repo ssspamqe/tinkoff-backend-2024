@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.referential_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,154 +30,82 @@ public class ReferentialConstraintsRecord extends TableRecordImpl<ReferentialCon
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.unique_constraint_catalog</code>.
-     */
     public void setUniqueConstraintCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.unique_constraint_catalog</code>.
-     */
     @Nullable
     public String getUniqueConstraintCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.unique_constraint_schema</code>.
-     */
     public void setUniqueConstraintSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.unique_constraint_schema</code>.
-     */
     @Nullable
     public String getUniqueConstraintSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.unique_constraint_name</code>.
-     */
     public void setUniqueConstraintName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.unique_constraint_name</code>.
-     */
     @Nullable
     public String getUniqueConstraintName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.match_option</code>.
-     */
     public void setMatchOption(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.match_option</code>.
-     */
     @Nullable
     public String getMatchOption() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.update_rule</code>.
-     */
     public void setUpdateRule(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.update_rule</code>.
-     */
     @Nullable
     public String getUpdateRule() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.delete_rule</code>.
-     */
     public void setDeleteRule(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.delete_rule</code>.
-     */
     @Nullable
     public String getDeleteRule() {
         return (String) get(8);
@@ -446,16 +371,10 @@ public class ReferentialConstraintsRecord extends TableRecordImpl<ReferentialCon
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ReferentialConstraintsRecord
-     */
     public ReferentialConstraintsRecord() {
         super(ReferentialConstraints.REFERENTIAL_CONSTRAINTS);
     }
 
-    /**
-     * Create a detached, initialised ReferentialConstraintsRecord
-     */
     @ConstructorProperties({ "constraintCatalog", "constraintSchema", "constraintName", "uniqueConstraintCatalog", "uniqueConstraintSchema", "uniqueConstraintName", "matchOption", "updateRule", "deleteRule" })
     public ReferentialConstraintsRecord(@Nullable String constraintCatalog, @Nullable String constraintSchema, @Nullable String constraintName, @Nullable String uniqueConstraintCatalog, @Nullable String uniqueConstraintSchema, @Nullable String uniqueConstraintName, @Nullable String matchOption, @Nullable String updateRule, @Nullable String deleteRule) {
         super(ReferentialConstraints.REFERENTIAL_CONSTRAINTS);
@@ -472,9 +391,6 @@ public class ReferentialConstraintsRecord extends TableRecordImpl<ReferentialCon
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ReferentialConstraintsRecord
-     */
     public ReferentialConstraintsRecord(edu.java.domain.jooq.information_schema.tables.pojos.ReferentialConstraints value) {
         super(ReferentialConstraints.REFERENTIAL_CONSTRAINTS);
 

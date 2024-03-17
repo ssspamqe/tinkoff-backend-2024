@@ -19,9 +19,6 @@ import org.jooq.Schema;
 import org.jooq.impl.CatalogImpl;
 
 
-/**
- * The catalog <code></code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,29 +31,14 @@ public class DefaultCatalog extends CatalogImpl {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>DEFAULT_CATALOG</code>
-     */
     public static final DefaultCatalog DEFAULT_CATALOG = new DefaultCatalog();
 
-    /**
-     * The schema <code>information_schema</code>.
-     */
     public final InformationSchema INFORMATION_SCHEMA = InformationSchema.INFORMATION_SCHEMA;
 
-    /**
-     * The schema <code>pg_catalog</code>.
-     */
     public final PgCatalog PG_CATALOG = PgCatalog.PG_CATALOG;
 
-    /**
-     * The schema <code>public</code>.
-     */
     public final Public PUBLIC = Public.PUBLIC;
 
-    /**
-     * No further instances allowed
-     */
     private DefaultCatalog() {
         super("");
     }
@@ -71,11 +53,5 @@ public class DefaultCatalog extends CatalogImpl {
         );
     }
 
-    /**
-     * A reference to the 3.18 minor release of the code generator. If this
-     * doesn't compile, it's because the runtime library uses an older minor
-     * release, namely: 3.18. You can turn off the generation of this reference
-     * by specifying /configuration/generator/generate/jooqVersionReference
-     */
     private static final String REQUIRE_RUNTIME_JOOQ_VERSION = Constants.VERSION_3_18;
 }

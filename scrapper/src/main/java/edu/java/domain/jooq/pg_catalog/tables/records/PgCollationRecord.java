@@ -19,9 +19,6 @@ import org.jooq.Row12;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_collation</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,188 +31,116 @@ public class PgCollationRecord extends UpdatableRecordImpl<PgCollationRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collname</code>.
-     */
     public void setCollname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCollname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collnamespace</code>.
-     */
     public void setCollnamespace(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCollnamespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collowner</code>.
-     */
     public void setCollowner(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCollowner() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collprovider</code>.
-     */
     public void setCollprovider(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collprovider</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCollprovider() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collisdeterministic</code>.
-     */
     public void setCollisdeterministic(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collisdeterministic</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getCollisdeterministic() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collencoding</code>.
-     */
     public void setCollencoding(@NotNull Integer value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collencoding</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getCollencoding() {
         return (Integer) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collcollate</code>.
-     */
     public void setCollcollate(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collcollate</code>.
-     */
     @Nullable
     public String getCollcollate() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collctype</code>.
-     */
     public void setCollctype(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collctype</code>.
-     */
     @Nullable
     public String getCollctype() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.colliculocale</code>.
-     */
     public void setColliculocale(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.colliculocale</code>.
-     */
     @Nullable
     public String getColliculocale() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collicurules</code>.
-     */
     public void setCollicurules(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collicurules</code>.
-     */
     @Nullable
     public String getCollicurules() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collversion</code>.
-     */
     public void setCollversion(@Nullable String value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collversion</code>.
-     */
     @Nullable
     public String getCollversion() {
         return (String) get(11);
@@ -569,16 +494,10 @@ public class PgCollationRecord extends UpdatableRecordImpl<PgCollationRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgCollationRecord
-     */
     public PgCollationRecord() {
         super(PgCollation.PG_COLLATION);
     }
 
-    /**
-     * Create a detached, initialised PgCollationRecord
-     */
     @ConstructorProperties({ "oid", "collname", "collnamespace", "collowner", "collprovider", "collisdeterministic", "collencoding", "collcollate", "collctype", "colliculocale", "collicurules", "collversion" })
     public PgCollationRecord(@NotNull Long oid, @NotNull String collname, @NotNull Long collnamespace, @NotNull Long collowner, @NotNull String collprovider, @NotNull Boolean collisdeterministic, @NotNull Integer collencoding, @Nullable String collcollate, @Nullable String collctype, @Nullable String colliculocale, @Nullable String collicurules, @Nullable String collversion) {
         super(PgCollation.PG_COLLATION);
@@ -598,9 +517,6 @@ public class PgCollationRecord extends UpdatableRecordImpl<PgCollationRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgCollationRecord
-     */
     public PgCollationRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgCollation value) {
         super(PgCollation.PG_COLLATION);
 

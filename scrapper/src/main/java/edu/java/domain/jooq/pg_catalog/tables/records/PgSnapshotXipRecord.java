@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_snapshot_xip</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,27 +30,11 @@ public class PgSnapshotXipRecord extends TableRecordImpl<PgSnapshotXipRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPgSnapshotXip(@Nullable Object value) {
         set(0, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPgSnapshotXip() {
@@ -76,14 +57,6 @@ public class PgSnapshotXipRecord extends TableRecordImpl<PgSnapshotXipRecord> im
         return (Row1) super.valuesRow();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -91,14 +64,6 @@ public class PgSnapshotXipRecord extends TableRecordImpl<PgSnapshotXipRecord> im
         return PgSnapshotXip.PG_SNAPSHOT_XIP.PG_SNAPSHOT_XIP_;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -106,14 +71,6 @@ public class PgSnapshotXipRecord extends TableRecordImpl<PgSnapshotXipRecord> im
         return getPgSnapshotXip();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -121,14 +78,6 @@ public class PgSnapshotXipRecord extends TableRecordImpl<PgSnapshotXipRecord> im
         return getPgSnapshotXip();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -148,16 +97,10 @@ public class PgSnapshotXipRecord extends TableRecordImpl<PgSnapshotXipRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgSnapshotXipRecord
-     */
     public PgSnapshotXipRecord() {
         super(PgSnapshotXip.PG_SNAPSHOT_XIP);
     }
 
-    /**
-     * Create a detached, initialised PgSnapshotXipRecord
-     */
     @ConstructorProperties({ "pgSnapshotXip" })
     public PgSnapshotXipRecord(@Nullable Object pgSnapshotXip) {
         super(PgSnapshotXip.PG_SNAPSHOT_XIP);
@@ -166,9 +109,6 @@ public class PgSnapshotXipRecord extends TableRecordImpl<PgSnapshotXipRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgSnapshotXipRecord
-     */
     public PgSnapshotXipRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgSnapshotXip value) {
         super(PgSnapshotXip.PG_SNAPSHOT_XIP);
 

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonbEachTextRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_each_text</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,28 +39,16 @@ public class JsonbEachText extends TableImpl<JsonbEachTextRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.jsonb_each_text</code>
-     */
     public static final JsonbEachText JSONB_EACH_TEXT = new JsonbEachText();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonbEachTextRecord> getRecordType() {
         return JsonbEachTextRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.jsonb_each_text.key</code>.
-     */
     public final TableField<JsonbEachTextRecord, String> KEY = createField(DSL.name("key"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.jsonb_each_text.value</code>.
-     */
     public final TableField<JsonbEachTextRecord, String> VALUE = createField(DSL.name("value"), SQLDataType.CLOB, this, "");
 
     private JsonbEachText(Name alias, Table<JsonbEachTextRecord> aliased) {
@@ -78,23 +61,14 @@ public class JsonbEachText extends TableImpl<JsonbEachTextRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_each_text</code> table reference
-     */
     public JsonbEachText(String alias) {
         this(DSL.name(alias), JSONB_EACH_TEXT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_each_text</code> table reference
-     */
     public JsonbEachText(Name alias) {
         this(alias, JSONB_EACH_TEXT);
     }
 
-    /**
-     * Create a <code>pg_catalog.jsonb_each_text</code> table reference
-     */
     public JsonbEachText() {
         this(DSL.name("jsonb_each_text"), null);
     }
@@ -123,27 +97,18 @@ public class JsonbEachText extends TableImpl<JsonbEachTextRecord> {
         return new JsonbEachText(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbEachText rename(String name) {
         return new JsonbEachText(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbEachText rename(Name name) {
         return new JsonbEachText(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbEachText rename(Table<?> name) {
@@ -160,9 +125,6 @@ public class JsonbEachText extends TableImpl<JsonbEachTextRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbEachText call(
           JSONB fromJson
     ) {
@@ -173,9 +135,6 @@ public class JsonbEachText extends TableImpl<JsonbEachTextRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbEachText call(
           Field<JSONB> fromJson
     ) {
@@ -186,17 +145,10 @@ public class JsonbEachText extends TableImpl<JsonbEachTextRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

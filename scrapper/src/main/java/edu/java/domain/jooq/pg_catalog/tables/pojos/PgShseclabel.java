@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_shseclabel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,66 +51,42 @@ public class PgShseclabel implements Serializable {
         this.label = label;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shseclabel.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return this.objoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shseclabel.objoid</code>.
-     */
     public void setObjoid(@NotNull Long objoid) {
         this.objoid = objoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shseclabel.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return this.classoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shseclabel.classoid</code>.
-     */
     public void setClassoid(@NotNull Long classoid) {
         this.classoid = classoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shseclabel.provider</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProvider() {
         return this.provider;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shseclabel.provider</code>.
-     */
     public void setProvider(@NotNull String provider) {
         this.provider = provider;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shseclabel.label</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getLabel() {
         return this.label;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shseclabel.label</code>.
-     */
     public void setLabel(@NotNull String label) {
         this.label = label;
     }

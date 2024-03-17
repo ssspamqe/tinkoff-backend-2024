@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.json_object_field</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,24 +28,12 @@ public class JsonObjectField extends AbstractRoutine<JSON> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.json_object_field.RETURN_VALUE</code>.
-     */
     public static final Parameter<JSON> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.JSON, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.json_object_field.from_json</code>.
-     */
     public static final Parameter<JSON> FROM_JSON = Internal.createParameter("from_json", SQLDataType.JSON, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.json_object_field.field_name</code>.
-     */
     public static final Parameter<String> FIELD_NAME = Internal.createParameter("field_name", SQLDataType.CLOB, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public JsonObjectField() {
         super("json_object_field", PgCatalog.PG_CATALOG, SQLDataType.JSON);
 
@@ -57,32 +42,18 @@ public class JsonObjectField extends AbstractRoutine<JSON> {
         addInParameter(FIELD_NAME);
     }
 
-    /**
-     * Set the <code>from_json</code> parameter IN value to the routine
-     */
     public void setFromJson(JSON value) {
         setValue(FROM_JSON, value);
     }
 
-    /**
-     * Set the <code>from_json</code> parameter to the function to be used with
-     * a {@link org.jooq.Select} statement
-     */
     public void setFromJson(Field<JSON> field) {
         setField(FROM_JSON, field);
     }
 
-    /**
-     * Set the <code>field_name</code> parameter IN value to the routine
-     */
     public void setFieldName(String value) {
         setValue(FIELD_NAME, value);
     }
 
-    /**
-     * Set the <code>field_name</code> parameter to the function to be used with
-     * a {@link org.jooq.Select} statement
-     */
     public void setFieldName(Field<String> field) {
         setField(FIELD_NAME, field);
     }

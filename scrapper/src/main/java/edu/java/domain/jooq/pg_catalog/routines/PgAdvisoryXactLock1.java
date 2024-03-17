@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_advisory_xact_lock</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,14 +26,8 @@ public class PgAdvisoryXactLock1 extends AbstractRoutine<java.lang.Void> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_advisory_xact_lock._1</code>.
-     */
     public static final Parameter<Long> _1 = Internal.createParameter("_1", SQLDataType.BIGINT, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgAdvisoryXactLock1() {
         super("pg_advisory_xact_lock", PgCatalog.PG_CATALOG);
 
@@ -44,9 +35,6 @@ public class PgAdvisoryXactLock1 extends AbstractRoutine<java.lang.Void> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Long value) {
         setValue(_1, value);
     }

@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.schemata</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,112 +30,64 @@ public class SchemataRecord extends TableRecordImpl<SchemataRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.schemata.catalog_name</code>.
-     */
     public void setCatalogName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.schemata.catalog_name</code>.
-     */
     @Nullable
     public String getCatalogName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.schemata.schema_name</code>.
-     */
     public void setSchemaName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.schemata.schema_name</code>.
-     */
     @Nullable
     public String getSchemaName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.schemata.schema_owner</code>.
-     */
     public void setSchemaOwner(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.schemata.schema_owner</code>.
-     */
     @Nullable
     public String getSchemaOwner() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.schemata.default_character_set_catalog</code>.
-     */
     public void setDefaultCharacterSetCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.schemata.default_character_set_catalog</code>.
-     */
     @Nullable
     public String getDefaultCharacterSetCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.schemata.default_character_set_schema</code>.
-     */
     public void setDefaultCharacterSetSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.schemata.default_character_set_schema</code>.
-     */
     @Nullable
     public String getDefaultCharacterSetSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.schemata.default_character_set_name</code>.
-     */
     public void setDefaultCharacterSetName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.schemata.default_character_set_name</code>.
-     */
     @Nullable
     public String getDefaultCharacterSetName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.schemata.sql_path</code>.
-     */
     public void setSqlPath(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.schemata.sql_path</code>.
-     */
     @Nullable
     public String getSqlPath() {
         return (String) get(6);
@@ -352,16 +301,10 @@ public class SchemataRecord extends TableRecordImpl<SchemataRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached SchemataRecord
-     */
     public SchemataRecord() {
         super(Schemata.SCHEMATA);
     }
 
-    /**
-     * Create a detached, initialised SchemataRecord
-     */
     @ConstructorProperties({ "catalogName", "schemaName", "schemaOwner", "defaultCharacterSetCatalog", "defaultCharacterSetSchema", "defaultCharacterSetName", "sqlPath" })
     public SchemataRecord(@Nullable String catalogName, @Nullable String schemaName, @Nullable String schemaOwner, @Nullable String defaultCharacterSetCatalog, @Nullable String defaultCharacterSetSchema, @Nullable String defaultCharacterSetName, @Nullable String sqlPath) {
         super(Schemata.SCHEMATA);
@@ -376,9 +319,6 @@ public class SchemataRecord extends TableRecordImpl<SchemataRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised SchemataRecord
-     */
     public SchemataRecord(edu.java.domain.jooq.information_schema.tables.pojos.Schemata value) {
         super(Schemata.SCHEMATA);
 

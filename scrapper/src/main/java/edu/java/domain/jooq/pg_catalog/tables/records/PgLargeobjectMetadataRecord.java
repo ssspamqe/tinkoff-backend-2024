@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_largeobject_metadata</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,48 +31,30 @@ public class PgLargeobjectMetadataRecord extends UpdatableRecordImpl<PgLargeobje
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject_metadata.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject_metadata.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject_metadata.lomowner</code>.
-     */
     public void setLomowner(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject_metadata.lomowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLomowner() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject_metadata.lomacl</code>.
-     */
     public void setLomacl(@Nullable String[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject_metadata.lomacl</code>.
-     */
     @Nullable
     public String[] getLomacl() {
         return (String[]) get(2);
@@ -195,16 +174,10 @@ public class PgLargeobjectMetadataRecord extends UpdatableRecordImpl<PgLargeobje
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLargeobjectMetadataRecord
-     */
     public PgLargeobjectMetadataRecord() {
         super(PgLargeobjectMetadata.PG_LARGEOBJECT_METADATA);
     }
 
-    /**
-     * Create a detached, initialised PgLargeobjectMetadataRecord
-     */
     @ConstructorProperties({ "oid", "lomowner", "lomacl" })
     public PgLargeobjectMetadataRecord(@NotNull Long oid, @NotNull Long lomowner, @Nullable String[] lomacl) {
         super(PgLargeobjectMetadata.PG_LARGEOBJECT_METADATA);
@@ -215,9 +188,6 @@ public class PgLargeobjectMetadataRecord extends UpdatableRecordImpl<PgLargeobje
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLargeobjectMetadataRecord
-     */
     public PgLargeobjectMetadataRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLargeobjectMetadata value) {
         super(PgLargeobjectMetadata.PG_LARGEOBJECT_METADATA);
 

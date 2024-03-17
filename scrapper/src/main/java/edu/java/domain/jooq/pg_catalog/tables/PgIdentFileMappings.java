@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgIdentFileMappingsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ident_file_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,53 +38,26 @@ public class PgIdentFileMappings extends TableImpl<PgIdentFileMappingsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ident_file_mappings</code>
-     */
     public static final PgIdentFileMappings PG_IDENT_FILE_MAPPINGS = new PgIdentFileMappings();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgIdentFileMappingsRecord> getRecordType() {
         return PgIdentFileMappingsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ident_file_mappings.map_number</code>.
-     */
     public final TableField<PgIdentFileMappingsRecord, Integer> MAP_NUMBER = createField(DSL.name("map_number"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ident_file_mappings.file_name</code>.
-     */
     public final TableField<PgIdentFileMappingsRecord, String> FILE_NAME = createField(DSL.name("file_name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ident_file_mappings.line_number</code>.
-     */
     public final TableField<PgIdentFileMappingsRecord, Integer> LINE_NUMBER = createField(DSL.name("line_number"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ident_file_mappings.map_name</code>.
-     */
     public final TableField<PgIdentFileMappingsRecord, String> MAP_NAME = createField(DSL.name("map_name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ident_file_mappings.sys_name</code>.
-     */
     public final TableField<PgIdentFileMappingsRecord, String> SYS_NAME = createField(DSL.name("sys_name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ident_file_mappings.pg_username</code>.
-     */
     public final TableField<PgIdentFileMappingsRecord, String> PG_USERNAME = createField(DSL.name("pg_username"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ident_file_mappings.error</code>.
-     */
     public final TableField<PgIdentFileMappingsRecord, String> ERROR = createField(DSL.name("error"), SQLDataType.CLOB, this, "");
 
     private PgIdentFileMappings(Name alias, Table<PgIdentFileMappingsRecord> aliased) {
@@ -101,25 +69,14 @@ public class PgIdentFileMappings extends TableImpl<PgIdentFileMappingsRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ident_file_mappings</code> table
-     * reference
-     */
     public PgIdentFileMappings(String alias) {
         this(DSL.name(alias), PG_IDENT_FILE_MAPPINGS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ident_file_mappings</code> table
-     * reference
-     */
     public PgIdentFileMappings(Name alias) {
         this(alias, PG_IDENT_FILE_MAPPINGS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ident_file_mappings</code> table reference
-     */
     public PgIdentFileMappings() {
         this(DSL.name("pg_ident_file_mappings"), null);
     }
@@ -148,27 +105,18 @@ public class PgIdentFileMappings extends TableImpl<PgIdentFileMappingsRecord> {
         return new PgIdentFileMappings(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgIdentFileMappings rename(String name) {
         return new PgIdentFileMappings(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgIdentFileMappings rename(Name name) {
         return new PgIdentFileMappings(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgIdentFileMappings rename(Table<?> name) {
@@ -185,26 +133,16 @@ public class PgIdentFileMappings extends TableImpl<PgIdentFileMappingsRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgIdentFileMappings call() {
         PgIdentFileMappings result = new PgIdentFileMappings(DSL.name("pg_ident_file_mappings"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Integer, ? super String, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Integer, ? super String, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

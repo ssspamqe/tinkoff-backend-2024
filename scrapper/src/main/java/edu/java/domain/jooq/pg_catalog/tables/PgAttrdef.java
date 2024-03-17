@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgAttrdefRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_attrdef</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,43 +45,20 @@ public class PgAttrdef extends TableImpl<PgAttrdefRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_attrdef</code>
-     */
     public static final PgAttrdef PG_ATTRDEF = new PgAttrdef();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgAttrdefRecord> getRecordType() {
         return PgAttrdefRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_attrdef.oid</code>.
-     */
     public final TableField<PgAttrdefRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_attrdef.adrelid</code>.
-     */
     public final TableField<PgAttrdefRecord, Long> ADRELID = createField(DSL.name("adrelid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_attrdef.adnum</code>.
-     */
     public final TableField<PgAttrdefRecord, Short> ADNUM = createField(DSL.name("adnum"), SQLDataType.SMALLINT.nullable(false), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgAttrdefRecord, Object> ADBIN = createField(DSL.name("adbin"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_node_tree\"").nullable(false), this, "");
 
@@ -97,23 +70,14 @@ public class PgAttrdef extends TableImpl<PgAttrdefRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_attrdef</code> table reference
-     */
     public PgAttrdef(String alias) {
         this(DSL.name(alias), PG_ATTRDEF);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_attrdef</code> table reference
-     */
     public PgAttrdef(Name alias) {
         this(alias, PG_ATTRDEF);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_attrdef</code> table reference
-     */
     public PgAttrdef() {
         this(DSL.name("pg_attrdef"), null);
     }
@@ -158,27 +122,18 @@ public class PgAttrdef extends TableImpl<PgAttrdefRecord> {
         return new PgAttrdef(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAttrdef rename(String name) {
         return new PgAttrdef(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAttrdef rename(Name name) {
         return new PgAttrdef(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAttrdef rename(Table<?> name) {
@@ -195,17 +150,10 @@ public class PgAttrdef extends TableImpl<PgAttrdefRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super Short, ? super Object, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super Short, ? super Object, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

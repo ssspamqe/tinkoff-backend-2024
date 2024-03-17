@@ -18,9 +18,6 @@ import org.jooq.Row17;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_show_all_settings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,256 +30,154 @@ public class PgShowAllSettingsRecord extends TableRecordImpl<PgShowAllSettingsRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.setting</code>.
-     */
     public void setSetting(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.setting</code>.
-     */
     @Nullable
     public String getSetting() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.unit</code>.
-     */
     public void setUnit(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.unit</code>.
-     */
     @Nullable
     public String getUnit() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.category</code>.
-     */
     public void setCategory(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.category</code>.
-     */
     @Nullable
     public String getCategory() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.short_desc</code>.
-     */
     public void setShortDesc(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.short_desc</code>.
-     */
     @Nullable
     public String getShortDesc() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.extra_desc</code>.
-     */
     public void setExtraDesc(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.extra_desc</code>.
-     */
     @Nullable
     public String getExtraDesc() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.context</code>.
-     */
     public void setContext(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.context</code>.
-     */
     @Nullable
     public String getContext() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.vartype</code>.
-     */
     public void setVartype(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.vartype</code>.
-     */
     @Nullable
     public String getVartype() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.source</code>.
-     */
     public void setSource(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.source</code>.
-     */
     @Nullable
     public String getSource() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.min_val</code>.
-     */
     public void setMinVal(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.min_val</code>.
-     */
     @Nullable
     public String getMinVal() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.max_val</code>.
-     */
     public void setMaxVal(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.max_val</code>.
-     */
     @Nullable
     public String getMaxVal() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.enumvals</code>.
-     */
     public void setEnumvals(@Nullable String[] value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.enumvals</code>.
-     */
     @Nullable
     public String[] getEnumvals() {
         return (String[]) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.boot_val</code>.
-     */
     public void setBootVal(@Nullable String value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.boot_val</code>.
-     */
     @Nullable
     public String getBootVal() {
         return (String) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.reset_val</code>.
-     */
     public void setResetVal(@Nullable String value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.reset_val</code>.
-     */
     @Nullable
     public String getResetVal() {
         return (String) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.sourcefile</code>.
-     */
     public void setSourcefile(@Nullable String value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.sourcefile</code>.
-     */
     @Nullable
     public String getSourcefile() {
         return (String) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.sourceline</code>.
-     */
     public void setSourceline(@Nullable Integer value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.sourceline</code>.
-     */
     @Nullable
     public Integer getSourceline() {
         return (Integer) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.pending_restart</code>.
-     */
     public void setPendingRestart(@Nullable Boolean value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.pending_restart</code>.
-     */
     @Nullable
     public Boolean getPendingRestart() {
         return (Boolean) get(16);
@@ -756,16 +651,10 @@ public class PgShowAllSettingsRecord extends TableRecordImpl<PgShowAllSettingsRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgShowAllSettingsRecord
-     */
     public PgShowAllSettingsRecord() {
         super(PgShowAllSettings.PG_SHOW_ALL_SETTINGS);
     }
 
-    /**
-     * Create a detached, initialised PgShowAllSettingsRecord
-     */
     @ConstructorProperties({ "name", "setting", "unit", "category", "shortDesc", "extraDesc", "context", "vartype", "source", "minVal", "maxVal", "enumvals", "bootVal", "resetVal", "sourcefile", "sourceline", "pendingRestart" })
     public PgShowAllSettingsRecord(@Nullable String name, @Nullable String setting, @Nullable String unit, @Nullable String category, @Nullable String shortDesc, @Nullable String extraDesc, @Nullable String context, @Nullable String vartype, @Nullable String source, @Nullable String minVal, @Nullable String maxVal, @Nullable String[] enumvals, @Nullable String bootVal, @Nullable String resetVal, @Nullable String sourcefile, @Nullable Integer sourceline, @Nullable Boolean pendingRestart) {
         super(PgShowAllSettings.PG_SHOW_ALL_SETTINGS);
@@ -790,9 +679,6 @@ public class PgShowAllSettingsRecord extends TableRecordImpl<PgShowAllSettingsRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgShowAllSettingsRecord
-     */
     public PgShowAllSettingsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgShowAllSettings value) {
         super(PgShowAllSettings.PG_SHOW_ALL_SETTINGS);
 

@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.lo_from_bytea</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,24 +27,12 @@ public class LoFromBytea extends AbstractRoutine<Long> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.lo_from_bytea.RETURN_VALUE</code>.
-     */
     public static final Parameter<Long> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.lo_from_bytea._1</code>.
-     */
     public static final Parameter<Long> _1 = Internal.createParameter("_1", SQLDataType.BIGINT, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.lo_from_bytea._2</code>.
-     */
     public static final Parameter<byte[]> _2 = Internal.createParameter("_2", SQLDataType.BLOB, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public LoFromBytea() {
         super("lo_from_bytea", PgCatalog.PG_CATALOG, SQLDataType.BIGINT);
 
@@ -56,32 +41,18 @@ public class LoFromBytea extends AbstractRoutine<Long> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Long value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Long> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(byte[] value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<byte[]> field) {
         setField(_2, field);
     }

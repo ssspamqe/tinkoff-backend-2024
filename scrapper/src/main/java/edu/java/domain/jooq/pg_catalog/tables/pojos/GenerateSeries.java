@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.generate_series</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,17 +39,11 @@ public class GenerateSeries implements Serializable {
         this.generateSeries = generateSeries;
     }
 
-    /**
-     * Getter for <code>pg_catalog.generate_series.generate_series</code>.
-     */
     @Nullable
     public Long getGenerateSeries() {
         return this.generateSeries;
     }
 
-    /**
-     * Setter for <code>pg_catalog.generate_series.generate_series</code>.
-     */
     public void setGenerateSeries(@Nullable Long generateSeries) {
         this.generateSeries = generateSeries;
     }

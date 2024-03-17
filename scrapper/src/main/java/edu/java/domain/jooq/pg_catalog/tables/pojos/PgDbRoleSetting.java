@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_db_role_setting</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -52,49 +49,31 @@ public class PgDbRoleSetting implements Serializable {
         this.setconfig = setconfig;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_db_role_setting.setdatabase</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSetdatabase() {
         return this.setdatabase;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_db_role_setting.setdatabase</code>.
-     */
     public void setSetdatabase(@NotNull Long setdatabase) {
         this.setdatabase = setdatabase;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_db_role_setting.setrole</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSetrole() {
         return this.setrole;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_db_role_setting.setrole</code>.
-     */
     public void setSetrole(@NotNull Long setrole) {
         this.setrole = setrole;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_db_role_setting.setconfig</code>.
-     */
     @Nullable
     public String[] getSetconfig() {
         return this.setconfig;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_db_role_setting.setconfig</code>.
-     */
     public void setSetconfig(@Nullable String[] setconfig) {
         this.setconfig = setconfig;
     }

@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>information_schema._pg_interval_type</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,25 +27,12 @@ public class _PgIntervalType extends AbstractRoutine<String> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>information_schema._pg_interval_type.RETURN_VALUE</code>.
-     */
     public static final Parameter<String> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.CLOB, false, false);
 
-    /**
-     * The parameter <code>information_schema._pg_interval_type.typid</code>.
-     */
     public static final Parameter<Long> TYPID = Internal.createParameter("typid", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter <code>information_schema._pg_interval_type.mod</code>.
-     */
     public static final Parameter<Integer> MOD = Internal.createParameter("mod", SQLDataType.INTEGER, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public _PgIntervalType() {
         super("_pg_interval_type", InformationSchema.INFORMATION_SCHEMA, SQLDataType.CLOB);
 
@@ -57,32 +41,18 @@ public class _PgIntervalType extends AbstractRoutine<String> {
         addInParameter(MOD);
     }
 
-    /**
-     * Set the <code>typid</code> parameter IN value to the routine
-     */
     public void setTypid(Long value) {
         setValue(TYPID, value);
     }
 
-    /**
-     * Set the <code>typid</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setTypid(Field<Long> field) {
         setField(TYPID, field);
     }
 
-    /**
-     * Set the <code>mod</code> parameter IN value to the routine
-     */
     public void setMod(Integer value) {
         setValue(MOD, value);
     }
 
-    /**
-     * Set the <code>mod</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setMod(Field<Integer> field) {
         setField(MOD, field);
     }

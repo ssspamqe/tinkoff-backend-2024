@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTimezoneNamesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.TableImpl;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The table <code>pg_catalog.pg_timezone_names</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,38 +39,20 @@ public class PgTimezoneNames extends TableImpl<PgTimezoneNamesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_timezone_names</code>
-     */
     public static final PgTimezoneNames PG_TIMEZONE_NAMES = new PgTimezoneNames();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTimezoneNamesRecord> getRecordType() {
         return PgTimezoneNamesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_timezone_names.name</code>.
-     */
     public final TableField<PgTimezoneNamesRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_timezone_names.abbrev</code>.
-     */
     public final TableField<PgTimezoneNamesRecord, String> ABBREV = createField(DSL.name("abbrev"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_timezone_names.utc_offset</code>.
-     */
     public final TableField<PgTimezoneNamesRecord, YearToSecond> UTC_OFFSET = createField(DSL.name("utc_offset"), SQLDataType.INTERVAL, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_timezone_names.is_dst</code>.
-     */
     public final TableField<PgTimezoneNamesRecord, Boolean> IS_DST = createField(DSL.name("is_dst"), SQLDataType.BOOLEAN, this, "");
 
     private PgTimezoneNames(Name alias, Table<PgTimezoneNamesRecord> aliased) {
@@ -87,25 +64,14 @@ public class PgTimezoneNames extends TableImpl<PgTimezoneNamesRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_timezone_names</code> table
-     * reference
-     */
     public PgTimezoneNames(String alias) {
         this(DSL.name(alias), PG_TIMEZONE_NAMES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_timezone_names</code> table
-     * reference
-     */
     public PgTimezoneNames(Name alias) {
         this(alias, PG_TIMEZONE_NAMES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_timezone_names</code> table reference
-     */
     public PgTimezoneNames() {
         this(DSL.name("pg_timezone_names"), null);
     }
@@ -134,27 +100,18 @@ public class PgTimezoneNames extends TableImpl<PgTimezoneNamesRecord> {
         return new PgTimezoneNames(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTimezoneNames rename(String name) {
         return new PgTimezoneNames(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTimezoneNames rename(Name name) {
         return new PgTimezoneNames(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTimezoneNames rename(Table<?> name) {
@@ -171,26 +128,16 @@ public class PgTimezoneNames extends TableImpl<PgTimezoneNamesRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgTimezoneNames call() {
         PgTimezoneNames result = new PgTimezoneNames(DSL.name("pg_timezone_names"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super YearToSecond, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super YearToSecond, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

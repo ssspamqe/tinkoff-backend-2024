@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.CheckConstraintsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.check_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,43 +39,20 @@ public class CheckConstraints extends TableImpl<CheckConstraintsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.check_constraints</code>
-     */
     public static final CheckConstraints CHECK_CONSTRAINTS = new CheckConstraints();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<CheckConstraintsRecord> getRecordType() {
         return CheckConstraintsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.check_constraints.constraint_catalog</code>.
-     */
     public final TableField<CheckConstraintsRecord, String> CONSTRAINT_CATALOG = createField(DSL.name("constraint_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.check_constraints.constraint_schema</code>.
-     */
     public final TableField<CheckConstraintsRecord, String> CONSTRAINT_SCHEMA = createField(DSL.name("constraint_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.check_constraints.constraint_name</code>.
-     */
     public final TableField<CheckConstraintsRecord, String> CONSTRAINT_NAME = createField(DSL.name("constraint_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.check_constraints.check_clause</code>.
-     */
     public final TableField<CheckConstraintsRecord, String> CHECK_CLAUSE = createField(DSL.name("check_clause"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private CheckConstraints(Name alias, Table<CheckConstraintsRecord> aliased) {
@@ -110,26 +82,14 @@ public class CheckConstraints extends TableImpl<CheckConstraintsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.check_constraints</code> table
-     * reference
-     */
     public CheckConstraints(String alias) {
         this(DSL.name(alias), CHECK_CONSTRAINTS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.check_constraints</code> table
-     * reference
-     */
     public CheckConstraints(Name alias) {
         this(alias, CHECK_CONSTRAINTS);
     }
 
-    /**
-     * Create a <code>information_schema.check_constraints</code> table
-     * reference
-     */
     public CheckConstraints() {
         this(DSL.name("check_constraints"), null);
     }
@@ -162,27 +122,18 @@ public class CheckConstraints extends TableImpl<CheckConstraintsRecord> {
         return new CheckConstraints(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CheckConstraints rename(String name) {
         return new CheckConstraints(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CheckConstraints rename(Name name) {
         return new CheckConstraints(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CheckConstraints rename(Table<?> name) {
@@ -199,17 +150,10 @@ public class CheckConstraints extends TableImpl<CheckConstraintsRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pi</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,14 +26,8 @@ public class Pi extends AbstractRoutine<Double> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pi.RETURN_VALUE</code>.
-     */
     public static final Parameter<Double> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.DOUBLE, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public Pi() {
         super("pi", PgCatalog.PG_CATALOG, SQLDataType.DOUBLE);
 

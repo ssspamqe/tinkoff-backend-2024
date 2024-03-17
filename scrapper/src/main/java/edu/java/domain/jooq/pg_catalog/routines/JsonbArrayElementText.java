@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.jsonb_array_element_text</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,26 +28,12 @@ public class JsonbArrayElementText extends AbstractRoutine<String> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.jsonb_array_element_text.RETURN_VALUE</code>.
-     */
     public static final Parameter<String> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.CLOB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.jsonb_array_element_text.from_json</code>.
-     */
     public static final Parameter<JSONB> FROM_JSON = Internal.createParameter("from_json", SQLDataType.JSONB, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.jsonb_array_element_text.element_index</code>.
-     */
     public static final Parameter<Integer> ELEMENT_INDEX = Internal.createParameter("element_index", SQLDataType.INTEGER, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public JsonbArrayElementText() {
         super("jsonb_array_element_text", PgCatalog.PG_CATALOG, SQLDataType.CLOB);
 
@@ -59,32 +42,18 @@ public class JsonbArrayElementText extends AbstractRoutine<String> {
         addInParameter(ELEMENT_INDEX);
     }
 
-    /**
-     * Set the <code>from_json</code> parameter IN value to the routine
-     */
     public void setFromJson(JSONB value) {
         setValue(FROM_JSON, value);
     }
 
-    /**
-     * Set the <code>from_json</code> parameter to the function to be used with
-     * a {@link org.jooq.Select} statement
-     */
     public void setFromJson(Field<JSONB> field) {
         setField(FROM_JSON, field);
     }
 
-    /**
-     * Set the <code>element_index</code> parameter IN value to the routine
-     */
     public void setElementIndex(Integer value) {
         setValue(ELEMENT_INDEX, value);
     }
 
-    /**
-     * Set the <code>element_index</code> parameter to the function to be used
-     * with a {@link org.jooq.Select} statement
-     */
     public void setElementIndex(Field<Integer> field) {
         setField(ELEMENT_INDEX, field);
     }

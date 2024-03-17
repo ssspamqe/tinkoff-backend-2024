@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.string_to_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,16 +30,10 @@ public class StringToTableRecord extends TableRecordImpl<StringToTableRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.string_to_table.string_to_table</code>.
-     */
     public void setStringToTable(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.string_to_table.string_to_table</code>.
-     */
     @Nullable
     public String getStringToTable() {
         return (String) get(0);
@@ -100,16 +91,10 @@ public class StringToTableRecord extends TableRecordImpl<StringToTableRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached StringToTableRecord
-     */
     public StringToTableRecord() {
         super(StringToTable.STRING_TO_TABLE);
     }
 
-    /**
-     * Create a detached, initialised StringToTableRecord
-     */
     @ConstructorProperties({ "stringToTable" })
     public StringToTableRecord(@Nullable String stringToTable) {
         super(StringToTable.STRING_TO_TABLE);
@@ -118,9 +103,6 @@ public class StringToTableRecord extends TableRecordImpl<StringToTableRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised StringToTableRecord
-     */
     public StringToTableRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.StringToTable value) {
         super(StringToTable.STRING_TO_TABLE);
 

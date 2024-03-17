@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_config_map</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,66 +51,42 @@ public class PgTsConfigMap implements Serializable {
         this.mapdict = mapdict;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config_map.mapcfg</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getMapcfg() {
         return this.mapcfg;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config_map.mapcfg</code>.
-     */
     public void setMapcfg(@NotNull Long mapcfg) {
         this.mapcfg = mapcfg;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config_map.maptokentype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getMaptokentype() {
         return this.maptokentype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config_map.maptokentype</code>.
-     */
     public void setMaptokentype(@NotNull Integer maptokentype) {
         this.maptokentype = maptokentype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config_map.mapseqno</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getMapseqno() {
         return this.mapseqno;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config_map.mapseqno</code>.
-     */
     public void setMapseqno(@NotNull Integer mapseqno) {
         this.mapseqno = mapseqno;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config_map.mapdict</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getMapdict() {
         return this.mapdict;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config_map.mapdict</code>.
-     */
     public void setMapdict(@NotNull Long mapdict) {
         this.mapdict = mapdict;
     }

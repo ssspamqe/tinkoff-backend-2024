@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.RoleUsageGrantsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.role_usage_grants</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,63 +39,28 @@ public class RoleUsageGrants extends TableImpl<RoleUsageGrantsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.role_usage_grants</code>
-     */
     public static final RoleUsageGrants ROLE_USAGE_GRANTS = new RoleUsageGrants();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<RoleUsageGrantsRecord> getRecordType() {
         return RoleUsageGrantsRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.role_usage_grants.grantor</code>.
-     */
     public final TableField<RoleUsageGrantsRecord, String> GRANTOR = createField(DSL.name("grantor"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.role_usage_grants.grantee</code>.
-     */
     public final TableField<RoleUsageGrantsRecord, String> GRANTEE = createField(DSL.name("grantee"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.role_usage_grants.object_catalog</code>.
-     */
     public final TableField<RoleUsageGrantsRecord, String> OBJECT_CATALOG = createField(DSL.name("object_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.role_usage_grants.object_schema</code>.
-     */
     public final TableField<RoleUsageGrantsRecord, String> OBJECT_SCHEMA = createField(DSL.name("object_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.role_usage_grants.object_name</code>.
-     */
     public final TableField<RoleUsageGrantsRecord, String> OBJECT_NAME = createField(DSL.name("object_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.role_usage_grants.object_type</code>.
-     */
     public final TableField<RoleUsageGrantsRecord, String> OBJECT_TYPE = createField(DSL.name("object_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.role_usage_grants.privilege_type</code>.
-     */
     public final TableField<RoleUsageGrantsRecord, String> PRIVILEGE_TYPE = createField(DSL.name("privilege_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.role_usage_grants.is_grantable</code>.
-     */
     public final TableField<RoleUsageGrantsRecord, String> IS_GRANTABLE = createField(DSL.name("is_grantable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
     private RoleUsageGrants(Name alias, Table<RoleUsageGrantsRecord> aliased) {
@@ -124,26 +84,14 @@ public class RoleUsageGrants extends TableImpl<RoleUsageGrantsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.role_usage_grants</code> table
-     * reference
-     */
     public RoleUsageGrants(String alias) {
         this(DSL.name(alias), ROLE_USAGE_GRANTS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.role_usage_grants</code> table
-     * reference
-     */
     public RoleUsageGrants(Name alias) {
         this(alias, ROLE_USAGE_GRANTS);
     }
 
-    /**
-     * Create a <code>information_schema.role_usage_grants</code> table
-     * reference
-     */
     public RoleUsageGrants() {
         this(DSL.name("role_usage_grants"), null);
     }
@@ -176,27 +124,18 @@ public class RoleUsageGrants extends TableImpl<RoleUsageGrantsRecord> {
         return new RoleUsageGrants(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoleUsageGrants rename(String name) {
         return new RoleUsageGrants(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoleUsageGrants rename(Name name) {
         return new RoleUsageGrants(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoleUsageGrants rename(Table<?> name) {
@@ -213,17 +152,10 @@ public class RoleUsageGrants extends TableImpl<RoleUsageGrantsRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

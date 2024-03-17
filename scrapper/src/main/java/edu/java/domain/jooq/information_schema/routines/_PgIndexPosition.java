@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>information_schema._pg_index_position</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,25 +27,12 @@ public class _PgIndexPosition extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>information_schema._pg_index_position.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>information_schema._pg_index_position._1</code>.
-     */
     public static final Parameter<Long> _1 = Internal.createParameter("_1", SQLDataType.BIGINT, false, true);
 
-    /**
-     * The parameter <code>information_schema._pg_index_position._2</code>.
-     */
     public static final Parameter<Short> _2 = Internal.createParameter("_2", SQLDataType.SMALLINT, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public _PgIndexPosition() {
         super("_pg_index_position", InformationSchema.INFORMATION_SCHEMA, SQLDataType.INTEGER);
 
@@ -57,32 +41,18 @@ public class _PgIndexPosition extends AbstractRoutine<Integer> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Long value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Long> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(Short value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<Short> field) {
         setField(_2, field);
     }

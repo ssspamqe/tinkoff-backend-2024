@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.txid_current_if_assigned</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,15 +26,8 @@ public class TxidCurrentIfAssigned extends AbstractRoutine<Long> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.txid_current_if_assigned.RETURN_VALUE</code>.
-     */
     public static final Parameter<Long> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BIGINT, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public TxidCurrentIfAssigned() {
         super("txid_current_if_assigned", PgCatalog.PG_CATALOG, SQLDataType.BIGINT);
 

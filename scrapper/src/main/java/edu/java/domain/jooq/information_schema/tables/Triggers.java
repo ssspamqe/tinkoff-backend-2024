@@ -8,7 +8,6 @@ import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.TriggersRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -30,9 +29,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.triggers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,107 +41,46 @@ public class Triggers extends TableImpl<TriggersRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.triggers</code>
-     */
     public static final Triggers TRIGGERS = new Triggers();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TriggersRecord> getRecordType() {
         return TriggersRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.triggers.trigger_catalog</code>.
-     */
     public final TableField<TriggersRecord, String> TRIGGER_CATALOG = createField(DSL.name("trigger_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.trigger_schema</code>.
-     */
     public final TableField<TriggersRecord, String> TRIGGER_SCHEMA = createField(DSL.name("trigger_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.trigger_name</code>.
-     */
     public final TableField<TriggersRecord, String> TRIGGER_NAME = createField(DSL.name("trigger_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.event_manipulation</code>.
-     */
     public final TableField<TriggersRecord, String> EVENT_MANIPULATION = createField(DSL.name("event_manipulation"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.event_object_catalog</code>.
-     */
     public final TableField<TriggersRecord, String> EVENT_OBJECT_CATALOG = createField(DSL.name("event_object_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.event_object_schema</code>.
-     */
     public final TableField<TriggersRecord, String> EVENT_OBJECT_SCHEMA = createField(DSL.name("event_object_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.event_object_table</code>.
-     */
     public final TableField<TriggersRecord, String> EVENT_OBJECT_TABLE = createField(DSL.name("event_object_table"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.action_order</code>.
-     */
     public final TableField<TriggersRecord, Integer> ACTION_ORDER = createField(DSL.name("action_order"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.action_condition</code>.
-     */
     public final TableField<TriggersRecord, String> ACTION_CONDITION = createField(DSL.name("action_condition"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.action_statement</code>.
-     */
     public final TableField<TriggersRecord, String> ACTION_STATEMENT = createField(DSL.name("action_statement"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.action_orientation</code>.
-     */
     public final TableField<TriggersRecord, String> ACTION_ORIENTATION = createField(DSL.name("action_orientation"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.action_timing</code>.
-     */
     public final TableField<TriggersRecord, String> ACTION_TIMING = createField(DSL.name("action_timing"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggers.action_reference_old_table</code>.
-     */
     public final TableField<TriggersRecord, String> ACTION_REFERENCE_OLD_TABLE = createField(DSL.name("action_reference_old_table"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggers.action_reference_new_table</code>.
-     */
     public final TableField<TriggersRecord, String> ACTION_REFERENCE_NEW_TABLE = createField(DSL.name("action_reference_new_table"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggers.action_reference_old_row</code>.
-     */
     public final TableField<TriggersRecord, String> ACTION_REFERENCE_OLD_ROW = createField(DSL.name("action_reference_old_row"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggers.action_reference_new_row</code>.
-     */
     public final TableField<TriggersRecord, String> ACTION_REFERENCE_NEW_ROW = createField(DSL.name("action_reference_new_row"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.triggers.created</code>.
-     */
     public final TableField<TriggersRecord, OffsetDateTime> CREATED = createField(DSL.name("created"), edu.java.domain.jooq.information_schema.Domains.TIME_STAMP.getDataType(), this, "");
 
     private Triggers(Name alias, Table<TriggersRecord> aliased) {
@@ -192,25 +127,14 @@ public class Triggers extends TableImpl<TriggersRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.triggers</code> table
-     * reference
-     */
     public Triggers(String alias) {
         this(DSL.name(alias), TRIGGERS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.triggers</code> table
-     * reference
-     */
     public Triggers(Name alias) {
         this(alias, TRIGGERS);
     }
 
-    /**
-     * Create a <code>information_schema.triggers</code> table reference
-     */
     public Triggers() {
         this(DSL.name("triggers"), null);
     }
@@ -243,27 +167,18 @@ public class Triggers extends TableImpl<TriggersRecord> {
         return new Triggers(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Triggers rename(String name) {
         return new Triggers(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Triggers rename(Name name) {
         return new Triggers(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Triggers rename(Table<?> name) {
@@ -280,17 +195,10 @@ public class Triggers extends TableImpl<TriggersRecord> {
         return (Row17) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function17<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function17<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

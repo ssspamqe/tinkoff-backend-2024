@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.random_normal</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,24 +28,12 @@ public class RandomNormal extends AbstractRoutine<Double> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.random_normal.RETURN_VALUE</code>.
-     */
     public static final Parameter<Double> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.DOUBLE, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.random_normal.mean</code>.
-     */
     public static final Parameter<Double> MEAN = Internal.createParameter("mean", SQLDataType.DOUBLE.defaultValue(DSL.field(DSL.raw("0"), SQLDataType.DOUBLE)), true, false);
 
-    /**
-     * The parameter <code>pg_catalog.random_normal.stddev</code>.
-     */
     public static final Parameter<Double> STDDEV = Internal.createParameter("stddev", SQLDataType.DOUBLE.defaultValue(DSL.field(DSL.raw("1"), SQLDataType.DOUBLE)), true, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public RandomNormal() {
         super("random_normal", PgCatalog.PG_CATALOG, SQLDataType.DOUBLE);
 
@@ -57,32 +42,18 @@ public class RandomNormal extends AbstractRoutine<Double> {
         addInParameter(STDDEV);
     }
 
-    /**
-     * Set the <code>mean</code> parameter IN value to the routine
-     */
     public void setMean(Double value) {
         setValue(MEAN, value);
     }
 
-    /**
-     * Set the <code>mean</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setMean(Field<Double> field) {
         setField(MEAN, field);
     }
 
-    /**
-     * Set the <code>stddev</code> parameter IN value to the routine
-     */
     public void setStddev(Double value) {
         setValue(STDDEV, value);
     }
 
-    /**
-     * Set the <code>stddev</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setStddev(Field<Double> field) {
         setField(STDDEV, field);
     }

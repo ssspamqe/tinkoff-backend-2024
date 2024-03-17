@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ViewTableUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.view_table_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,50 +39,24 @@ public class ViewTableUsage extends TableImpl<ViewTableUsageRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.view_table_usage</code>
-     */
     public static final ViewTableUsage VIEW_TABLE_USAGE = new ViewTableUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ViewTableUsageRecord> getRecordType() {
         return ViewTableUsageRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.view_table_usage.view_catalog</code>.
-     */
     public final TableField<ViewTableUsageRecord, String> VIEW_CATALOG = createField(DSL.name("view_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.view_table_usage.view_schema</code>.
-     */
     public final TableField<ViewTableUsageRecord, String> VIEW_SCHEMA = createField(DSL.name("view_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.view_table_usage.view_name</code>.
-     */
     public final TableField<ViewTableUsageRecord, String> VIEW_NAME = createField(DSL.name("view_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.view_table_usage.table_catalog</code>.
-     */
     public final TableField<ViewTableUsageRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.view_table_usage.table_schema</code>.
-     */
     public final TableField<ViewTableUsageRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.view_table_usage.table_name</code>.
-     */
     public final TableField<ViewTableUsageRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private ViewTableUsage(Name alias, Table<ViewTableUsageRecord> aliased) {
@@ -112,25 +81,14 @@ public class ViewTableUsage extends TableImpl<ViewTableUsageRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.view_table_usage</code> table
-     * reference
-     */
     public ViewTableUsage(String alias) {
         this(DSL.name(alias), VIEW_TABLE_USAGE);
     }
 
-    /**
-     * Create an aliased <code>information_schema.view_table_usage</code> table
-     * reference
-     */
     public ViewTableUsage(Name alias) {
         this(alias, VIEW_TABLE_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.view_table_usage</code> table reference
-     */
     public ViewTableUsage() {
         this(DSL.name("view_table_usage"), null);
     }
@@ -163,27 +121,18 @@ public class ViewTableUsage extends TableImpl<ViewTableUsageRecord> {
         return new ViewTableUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ViewTableUsage rename(String name) {
         return new ViewTableUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ViewTableUsage rename(Name name) {
         return new ViewTableUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ViewTableUsage rename(Table<?> name) {
@@ -200,17 +149,10 @@ public class ViewTableUsage extends TableImpl<ViewTableUsageRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_wal_receiver</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -99,281 +96,145 @@ public class PgStatWalReceiver implements Serializable {
         this.conninfo = conninfo;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal_receiver.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal_receiver.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal_receiver.status</code>.
-     */
     @Nullable
     public String getStatus() {
         return this.status;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal_receiver.status</code>.
-     */
     public void setStatus(@Nullable String status) {
         this.status = status;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getReceiveStartLsn() {
         return this.receiveStartLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setReceiveStartLsn(@Nullable Object receiveStartLsn) {
         this.receiveStartLsn = receiveStartLsn;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_wal_receiver.receive_start_tli</code>.
-     */
     @Nullable
     public Integer getReceiveStartTli() {
         return this.receiveStartTli;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_wal_receiver.receive_start_tli</code>.
-     */
     public void setReceiveStartTli(@Nullable Integer receiveStartTli) {
         this.receiveStartTli = receiveStartTli;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getWrittenLsn() {
         return this.writtenLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setWrittenLsn(@Nullable Object writtenLsn) {
         this.writtenLsn = writtenLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getFlushedLsn() {
         return this.flushedLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setFlushedLsn(@Nullable Object flushedLsn) {
         this.flushedLsn = flushedLsn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal_receiver.received_tli</code>.
-     */
     @Nullable
     public Integer getReceivedTli() {
         return this.receivedTli;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal_receiver.received_tli</code>.
-     */
     public void setReceivedTli(@Nullable Integer receivedTli) {
         this.receivedTli = receivedTli;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_wal_receiver.last_msg_send_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastMsgSendTime() {
         return this.lastMsgSendTime;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_wal_receiver.last_msg_send_time</code>.
-     */
     public void setLastMsgSendTime(@Nullable OffsetDateTime lastMsgSendTime) {
         this.lastMsgSendTime = lastMsgSendTime;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_wal_receiver.last_msg_receipt_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastMsgReceiptTime() {
         return this.lastMsgReceiptTime;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_wal_receiver.last_msg_receipt_time</code>.
-     */
     public void setLastMsgReceiptTime(@Nullable OffsetDateTime lastMsgReceiptTime) {
         this.lastMsgReceiptTime = lastMsgReceiptTime;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getLatestEndLsn() {
         return this.latestEndLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setLatestEndLsn(@Nullable Object latestEndLsn) {
         this.latestEndLsn = latestEndLsn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal_receiver.latest_end_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLatestEndTime() {
         return this.latestEndTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal_receiver.latest_end_time</code>.
-     */
     public void setLatestEndTime(@Nullable OffsetDateTime latestEndTime) {
         this.latestEndTime = latestEndTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal_receiver.slot_name</code>.
-     */
     @Nullable
     public String getSlotName() {
         return this.slotName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal_receiver.slot_name</code>.
-     */
     public void setSlotName(@Nullable String slotName) {
         this.slotName = slotName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal_receiver.sender_host</code>.
-     */
     @Nullable
     public String getSenderHost() {
         return this.senderHost;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal_receiver.sender_host</code>.
-     */
     public void setSenderHost(@Nullable String senderHost) {
         this.senderHost = senderHost;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal_receiver.sender_port</code>.
-     */
     @Nullable
     public Integer getSenderPort() {
         return this.senderPort;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal_receiver.sender_port</code>.
-     */
     public void setSenderPort(@Nullable Integer senderPort) {
         this.senderPort = senderPort;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal_receiver.conninfo</code>.
-     */
     @Nullable
     public String getConninfo() {
         return this.conninfo;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal_receiver.conninfo</code>.
-     */
     public void setConninfo(@Nullable String conninfo) {
         this.conninfo = conninfo;
     }

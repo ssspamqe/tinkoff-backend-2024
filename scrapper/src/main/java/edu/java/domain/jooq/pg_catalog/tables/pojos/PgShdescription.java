@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_shdescription</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,50 +47,32 @@ public class PgShdescription implements Serializable {
         this.description = description;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdescription.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return this.objoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdescription.objoid</code>.
-     */
     public void setObjoid(@NotNull Long objoid) {
         this.objoid = objoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdescription.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return this.classoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdescription.classoid</code>.
-     */
     public void setClassoid(@NotNull Long classoid) {
         this.classoid = classoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdescription.description</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDescription() {
         return this.description;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdescription.description</code>.
-     */
     public void setDescription(@NotNull String description) {
         this.description = description;
     }

@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_slru</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -75,137 +72,83 @@ public class PgStatSlru implements Serializable {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_zeroed</code>.
-     */
     @Nullable
     public Long getBlksZeroed() {
         return this.blksZeroed;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_zeroed</code>.
-     */
     public void setBlksZeroed(@Nullable Long blksZeroed) {
         this.blksZeroed = blksZeroed;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_hit</code>.
-     */
     @Nullable
     public Long getBlksHit() {
         return this.blksHit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_hit</code>.
-     */
     public void setBlksHit(@Nullable Long blksHit) {
         this.blksHit = blksHit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_read</code>.
-     */
     @Nullable
     public Long getBlksRead() {
         return this.blksRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_read</code>.
-     */
     public void setBlksRead(@Nullable Long blksRead) {
         this.blksRead = blksRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_written</code>.
-     */
     @Nullable
     public Long getBlksWritten() {
         return this.blksWritten;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_written</code>.
-     */
     public void setBlksWritten(@Nullable Long blksWritten) {
         this.blksWritten = blksWritten;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_exists</code>.
-     */
     @Nullable
     public Long getBlksExists() {
         return this.blksExists;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_exists</code>.
-     */
     public void setBlksExists(@Nullable Long blksExists) {
         this.blksExists = blksExists;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.flushes</code>.
-     */
     @Nullable
     public Long getFlushes() {
         return this.flushes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.flushes</code>.
-     */
     public void setFlushes(@Nullable Long flushes) {
         this.flushes = flushes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.truncates</code>.
-     */
     @Nullable
     public Long getTruncates() {
         return this.truncates;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.truncates</code>.
-     */
     public void setTruncates(@Nullable Long truncates) {
         this.truncates = truncates;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }

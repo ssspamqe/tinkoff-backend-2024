@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_dir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,17 +39,11 @@ public class PgLsDir implements Serializable {
         this.pgLsDir = pgLsDir;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_dir.pg_ls_dir</code>.
-     */
     @Nullable
     public String getPgLsDir() {
         return this.pgLsDir;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_dir.pg_ls_dir</code>.
-     */
     public void setPgLsDir(@Nullable String pgLsDir) {
         this.pgLsDir = pgLsDir;
     }

@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_show_replication_origin_status</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,88 +30,40 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_show_replication_origin_status.local_id</code>.
-     */
     public void setLocalId(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_show_replication_origin_status.local_id</code>.
-     */
     @Nullable
     public Long getLocalId() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_show_replication_origin_status.external_id</code>.
-     */
     public void setExternalId(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_show_replication_origin_status.external_id</code>.
-     */
     @Nullable
     public String getExternalId() {
         return (String) get(1);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setRemoteLsn(@Nullable Object value) {
         set(2, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getRemoteLsn() {
         return get(2);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setLocalLsn(@Nullable Object value) {
         set(3, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getLocalLsn() {
@@ -149,14 +98,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         return PgShowReplicationOriginStatus.PG_SHOW_REPLICATION_ORIGIN_STATUS.EXTERNAL_ID;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -164,14 +105,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         return PgShowReplicationOriginStatus.PG_SHOW_REPLICATION_ORIGIN_STATUS.REMOTE_LSN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -191,14 +124,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         return getExternalId();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -206,14 +131,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         return getRemoteLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -233,14 +150,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         return getExternalId();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -248,14 +157,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         return getRemoteLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -277,14 +178,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -293,14 +186,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -323,16 +208,10 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgShowReplicationOriginStatusRecord
-     */
     public PgShowReplicationOriginStatusRecord() {
         super(PgShowReplicationOriginStatus.PG_SHOW_REPLICATION_ORIGIN_STATUS);
     }
 
-    /**
-     * Create a detached, initialised PgShowReplicationOriginStatusRecord
-     */
     @ConstructorProperties({ "localId", "externalId", "remoteLsn", "localLsn" })
     public PgShowReplicationOriginStatusRecord(@Nullable Long localId, @Nullable String externalId, @Nullable Object remoteLsn, @Nullable Object localLsn) {
         super(PgShowReplicationOriginStatus.PG_SHOW_REPLICATION_ORIGIN_STATUS);
@@ -344,9 +223,6 @@ public class PgShowReplicationOriginStatusRecord extends TableRecordImpl<PgShowR
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgShowReplicationOriginStatusRecord
-     */
     public PgShowReplicationOriginStatusRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgShowReplicationOriginStatus value) {
         super(PgShowReplicationOriginStatus.PG_SHOW_REPLICATION_ORIGIN_STATUS);
 

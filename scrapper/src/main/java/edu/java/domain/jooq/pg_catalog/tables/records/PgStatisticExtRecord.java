@@ -19,9 +19,6 @@ import org.jooq.Row9;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statistic_ext</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,155 +31,91 @@ public class PgStatisticExtRecord extends UpdatableRecordImpl<PgStatisticExtReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxrelid</code>.
-     */
     public void setStxrelid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStxrelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxname</code>.
-     */
     public void setStxname(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getStxname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxnamespace</code>.
-     */
     public void setStxnamespace(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStxnamespace() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxowner</code>.
-     */
     public void setStxowner(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStxowner() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxstattarget</code>.
-     */
     public void setStxstattarget(@NotNull Integer value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxstattarget</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getStxstattarget() {
         return (Integer) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxkeys</code>.
-     */
     public void setStxkeys(@NotNull Object[] value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxkeys</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getStxkeys() {
         return (Object[]) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxkind</code>.
-     */
     public void setStxkind(@NotNull String[] value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxkind</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String[] getStxkind() {
         return (String[]) get(7);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setStxexprs(@Nullable Object value) {
         set(8, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getStxexprs() {
@@ -263,14 +196,6 @@ public class PgStatisticExtRecord extends UpdatableRecordImpl<PgStatisticExtReco
         return PgStatisticExt.PG_STATISTIC_EXT.STXKIND;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -326,14 +251,6 @@ public class PgStatisticExtRecord extends UpdatableRecordImpl<PgStatisticExtReco
         return getStxkind();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -389,14 +306,6 @@ public class PgStatisticExtRecord extends UpdatableRecordImpl<PgStatisticExtReco
         return getStxkind();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -460,14 +369,6 @@ public class PgStatisticExtRecord extends UpdatableRecordImpl<PgStatisticExtReco
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -495,16 +396,10 @@ public class PgStatisticExtRecord extends UpdatableRecordImpl<PgStatisticExtReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatisticExtRecord
-     */
     public PgStatisticExtRecord() {
         super(PgStatisticExt.PG_STATISTIC_EXT);
     }
 
-    /**
-     * Create a detached, initialised PgStatisticExtRecord
-     */
     @ConstructorProperties({ "oid", "stxrelid", "stxname", "stxnamespace", "stxowner", "stxstattarget", "stxkeys", "stxkind", "stxexprs" })
     public PgStatisticExtRecord(@NotNull Long oid, @NotNull Long stxrelid, @NotNull String stxname, @NotNull Long stxnamespace, @NotNull Long stxowner, @NotNull Integer stxstattarget, @NotNull Object[] stxkeys, @NotNull String[] stxkind, @Nullable Object stxexprs) {
         super(PgStatisticExt.PG_STATISTIC_EXT);
@@ -521,9 +416,6 @@ public class PgStatisticExtRecord extends UpdatableRecordImpl<PgStatisticExtReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatisticExtRecord
-     */
     public PgStatisticExtRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatisticExt value) {
         super(PgStatisticExt.PG_STATISTIC_EXT);
 

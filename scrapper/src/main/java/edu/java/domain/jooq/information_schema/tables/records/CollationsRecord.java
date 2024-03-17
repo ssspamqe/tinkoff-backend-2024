@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.collations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,61 +30,37 @@ public class CollationsRecord extends TableRecordImpl<CollationsRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.collations.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.collations.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.collations.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.collations.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.collations.collation_name</code>.
-     */
     public void setCollationName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.collations.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.collations.pad_attribute</code>.
-     */
     public void setPadAttribute(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.collations.pad_attribute</code>.
-     */
     @Nullable
     public String getPadAttribute() {
         return (String) get(3);
@@ -223,16 +196,10 @@ public class CollationsRecord extends TableRecordImpl<CollationsRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached CollationsRecord
-     */
     public CollationsRecord() {
         super(Collations.COLLATIONS);
     }
 
-    /**
-     * Create a detached, initialised CollationsRecord
-     */
     @ConstructorProperties({ "collationCatalog", "collationSchema", "collationName", "padAttribute" })
     public CollationsRecord(@Nullable String collationCatalog, @Nullable String collationSchema, @Nullable String collationName, @Nullable String padAttribute) {
         super(Collations.COLLATIONS);
@@ -244,9 +211,6 @@ public class CollationsRecord extends TableRecordImpl<CollationsRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised CollationsRecord
-     */
     public CollationsRecord(edu.java.domain.jooq.information_schema.tables.pojos.Collations value) {
         super(Collations.COLLATIONS);
 

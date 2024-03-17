@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_shmem_allocations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,61 +30,37 @@ public class PgShmemAllocationsRecord extends TableRecordImpl<PgShmemAllocations
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_shmem_allocations.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shmem_allocations.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shmem_allocations.off</code>.
-     */
     public void setOff(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shmem_allocations.off</code>.
-     */
     @Nullable
     public Long getOff() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shmem_allocations.size</code>.
-     */
     public void setSize(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shmem_allocations.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shmem_allocations.allocated_size</code>.
-     */
     public void setAllocatedSize(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shmem_allocations.allocated_size</code>.
-     */
     @Nullable
     public Long getAllocatedSize() {
         return (Long) get(3);
@@ -223,16 +196,10 @@ public class PgShmemAllocationsRecord extends TableRecordImpl<PgShmemAllocations
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgShmemAllocationsRecord
-     */
     public PgShmemAllocationsRecord() {
         super(PgShmemAllocations.PG_SHMEM_ALLOCATIONS);
     }
 
-    /**
-     * Create a detached, initialised PgShmemAllocationsRecord
-     */
     @ConstructorProperties({ "name", "off", "size", "allocatedSize" })
     public PgShmemAllocationsRecord(@Nullable String name, @Nullable Long off, @Nullable Long size, @Nullable Long allocatedSize) {
         super(PgShmemAllocations.PG_SHMEM_ALLOCATIONS);
@@ -244,9 +211,6 @@ public class PgShmemAllocationsRecord extends TableRecordImpl<PgShmemAllocations
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgShmemAllocationsRecord
-     */
     public PgShmemAllocationsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgShmemAllocations value) {
         super(PgShmemAllocations.PG_SHMEM_ALLOCATIONS);
 

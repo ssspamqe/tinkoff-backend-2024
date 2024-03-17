@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_last_xact_replay_timestamp</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,15 +28,8 @@ public class PgLastXactReplayTimestamp extends AbstractRoutine<OffsetDateTime> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_last_xact_replay_timestamp.RETURN_VALUE</code>.
-     */
     public static final Parameter<OffsetDateTime> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.TIMESTAMPWITHTIMEZONE(6), false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgLastXactReplayTimestamp() {
         super("pg_last_xact_replay_timestamp", PgCatalog.PG_CATALOG, SQLDataType.TIMESTAMPWITHTIMEZONE(6));
 

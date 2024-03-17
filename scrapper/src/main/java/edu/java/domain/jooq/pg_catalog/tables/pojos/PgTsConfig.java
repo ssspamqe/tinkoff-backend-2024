@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_config</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,82 +55,52 @@ public class PgTsConfig implements Serializable {
         this.cfgparser = cfgparser;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.cfgname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCfgname() {
         return this.cfgname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.cfgname</code>.
-     */
     public void setCfgname(@NotNull String cfgname) {
         this.cfgname = cfgname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.cfgnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCfgnamespace() {
         return this.cfgnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.cfgnamespace</code>.
-     */
     public void setCfgnamespace(@NotNull Long cfgnamespace) {
         this.cfgnamespace = cfgnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.cfgowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCfgowner() {
         return this.cfgowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.cfgowner</code>.
-     */
     public void setCfgowner(@NotNull Long cfgowner) {
         this.cfgowner = cfgowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config.cfgparser</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCfgparser() {
         return this.cfgparser;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config.cfgparser</code>.
-     */
     public void setCfgparser(@NotNull Long cfgparser) {
         this.cfgparser = cfgparser;
     }

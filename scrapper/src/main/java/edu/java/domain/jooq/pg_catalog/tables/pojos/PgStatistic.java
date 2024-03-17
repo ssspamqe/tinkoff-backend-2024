@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_statistic</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -164,488 +161,302 @@ public class PgStatistic implements Serializable {
         this.stavalues5 = stavalues5;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.starelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStarelid() {
         return this.starelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.starelid</code>.
-     */
     public void setStarelid(@NotNull Long starelid) {
         this.starelid = starelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.staattnum</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getStaattnum() {
         return this.staattnum;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.staattnum</code>.
-     */
     public void setStaattnum(@NotNull Short staattnum) {
         this.staattnum = staattnum;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stainherit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getStainherit() {
         return this.stainherit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stainherit</code>.
-     */
     public void setStainherit(@NotNull Boolean stainherit) {
         this.stainherit = stainherit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stanullfrac</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Float getStanullfrac() {
         return this.stanullfrac;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stanullfrac</code>.
-     */
     public void setStanullfrac(@NotNull Float stanullfrac) {
         this.stanullfrac = stanullfrac;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stawidth</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getStawidth() {
         return this.stawidth;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stawidth</code>.
-     */
     public void setStawidth(@NotNull Integer stawidth) {
         this.stawidth = stawidth;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stadistinct</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Float getStadistinct() {
         return this.stadistinct;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stadistinct</code>.
-     */
     public void setStadistinct(@NotNull Float stadistinct) {
         this.stadistinct = stadistinct;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stakind1</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getStakind1() {
         return this.stakind1;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stakind1</code>.
-     */
     public void setStakind1(@NotNull Short stakind1) {
         this.stakind1 = stakind1;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stakind2</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getStakind2() {
         return this.stakind2;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stakind2</code>.
-     */
     public void setStakind2(@NotNull Short stakind2) {
         this.stakind2 = stakind2;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stakind3</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getStakind3() {
         return this.stakind3;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stakind3</code>.
-     */
     public void setStakind3(@NotNull Short stakind3) {
         this.stakind3 = stakind3;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stakind4</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getStakind4() {
         return this.stakind4;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stakind4</code>.
-     */
     public void setStakind4(@NotNull Short stakind4) {
         this.stakind4 = stakind4;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stakind5</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getStakind5() {
         return this.stakind5;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stakind5</code>.
-     */
     public void setStakind5(@NotNull Short stakind5) {
         this.stakind5 = stakind5;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.staop1</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStaop1() {
         return this.staop1;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.staop1</code>.
-     */
     public void setStaop1(@NotNull Long staop1) {
         this.staop1 = staop1;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.staop2</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStaop2() {
         return this.staop2;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.staop2</code>.
-     */
     public void setStaop2(@NotNull Long staop2) {
         this.staop2 = staop2;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.staop3</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStaop3() {
         return this.staop3;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.staop3</code>.
-     */
     public void setStaop3(@NotNull Long staop3) {
         this.staop3 = staop3;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.staop4</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStaop4() {
         return this.staop4;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.staop4</code>.
-     */
     public void setStaop4(@NotNull Long staop4) {
         this.staop4 = staop4;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.staop5</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStaop5() {
         return this.staop5;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.staop5</code>.
-     */
     public void setStaop5(@NotNull Long staop5) {
         this.staop5 = staop5;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stacoll1</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStacoll1() {
         return this.stacoll1;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stacoll1</code>.
-     */
     public void setStacoll1(@NotNull Long stacoll1) {
         this.stacoll1 = stacoll1;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stacoll2</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStacoll2() {
         return this.stacoll2;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stacoll2</code>.
-     */
     public void setStacoll2(@NotNull Long stacoll2) {
         this.stacoll2 = stacoll2;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stacoll3</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStacoll3() {
         return this.stacoll3;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stacoll3</code>.
-     */
     public void setStacoll3(@NotNull Long stacoll3) {
         this.stacoll3 = stacoll3;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stacoll4</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStacoll4() {
         return this.stacoll4;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stacoll4</code>.
-     */
     public void setStacoll4(@NotNull Long stacoll4) {
         this.stacoll4 = stacoll4;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stacoll5</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStacoll5() {
         return this.stacoll5;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stacoll5</code>.
-     */
     public void setStacoll5(@NotNull Long stacoll5) {
         this.stacoll5 = stacoll5;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stanumbers1</code>.
-     */
     @Nullable
     public Float[] getStanumbers1() {
         return this.stanumbers1;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stanumbers1</code>.
-     */
     public void setStanumbers1(@Nullable Float[] stanumbers1) {
         this.stanumbers1 = stanumbers1;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stanumbers2</code>.
-     */
     @Nullable
     public Float[] getStanumbers2() {
         return this.stanumbers2;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stanumbers2</code>.
-     */
     public void setStanumbers2(@Nullable Float[] stanumbers2) {
         this.stanumbers2 = stanumbers2;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stanumbers3</code>.
-     */
     @Nullable
     public Float[] getStanumbers3() {
         return this.stanumbers3;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stanumbers3</code>.
-     */
     public void setStanumbers3(@Nullable Float[] stanumbers3) {
         this.stanumbers3 = stanumbers3;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stanumbers4</code>.
-     */
     @Nullable
     public Float[] getStanumbers4() {
         return this.stanumbers4;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stanumbers4</code>.
-     */
     public void setStanumbers4(@Nullable Float[] stanumbers4) {
         this.stanumbers4 = stanumbers4;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stanumbers5</code>.
-     */
     @Nullable
     public Float[] getStanumbers5() {
         return this.stanumbers5;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stanumbers5</code>.
-     */
     public void setStanumbers5(@Nullable Float[] stanumbers5) {
         this.stanumbers5 = stanumbers5;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stavalues1</code>.
-     */
     @Nullable
     public Object[] getStavalues1() {
         return this.stavalues1;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stavalues1</code>.
-     */
     public void setStavalues1(@Nullable Object[] stavalues1) {
         this.stavalues1 = stavalues1;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stavalues2</code>.
-     */
     @Nullable
     public Object[] getStavalues2() {
         return this.stavalues2;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stavalues2</code>.
-     */
     public void setStavalues2(@Nullable Object[] stavalues2) {
         this.stavalues2 = stavalues2;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stavalues3</code>.
-     */
     @Nullable
     public Object[] getStavalues3() {
         return this.stavalues3;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stavalues3</code>.
-     */
     public void setStavalues3(@Nullable Object[] stavalues3) {
         this.stavalues3 = stavalues3;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stavalues4</code>.
-     */
     @Nullable
     public Object[] getStavalues4() {
         return this.stavalues4;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stavalues4</code>.
-     */
     public void setStavalues4(@Nullable Object[] stavalues4) {
         this.stavalues4 = stavalues4;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic.stavalues5</code>.
-     */
     @Nullable
     public Object[] getStavalues5() {
         return this.stavalues5;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic.stavalues5</code>.
-     */
     public void setStavalues5(@Nullable Object[] stavalues5) {
         this.stavalues5 = stavalues5;
     }

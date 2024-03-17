@@ -16,9 +16,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>public.databasechangeloglock</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,65 +55,41 @@ public class Databasechangeloglock implements Serializable {
         this.lockedby = lockedby;
     }
 
-    /**
-     * Getter for <code>public.databasechangeloglock.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getId() {
         return this.id;
     }
 
-    /**
-     * Setter for <code>public.databasechangeloglock.id</code>.
-     */
     public void setId(@NotNull Integer id) {
         this.id = id;
     }
 
-    /**
-     * Getter for <code>public.databasechangeloglock.locked</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getLocked() {
         return this.locked;
     }
 
-    /**
-     * Setter for <code>public.databasechangeloglock.locked</code>.
-     */
     public void setLocked(@NotNull Boolean locked) {
         this.locked = locked;
     }
 
-    /**
-     * Getter for <code>public.databasechangeloglock.lockgranted</code>.
-     */
     @Nullable
     public LocalDateTime getLockgranted() {
         return this.lockgranted;
     }
 
-    /**
-     * Setter for <code>public.databasechangeloglock.lockgranted</code>.
-     */
     public void setLockgranted(@Nullable LocalDateTime lockgranted) {
         this.lockgranted = lockgranted;
     }
 
-    /**
-     * Getter for <code>public.databasechangeloglock.lockedby</code>.
-     */
     @Size(max = 255)
     @Nullable
     public String getLockedby() {
         return this.lockedby;
     }
 
-    /**
-     * Setter for <code>public.databasechangeloglock.lockedby</code>.
-     */
     public void setLockedby(@Nullable String lockedby) {
         this.lockedby = lockedby;
     }

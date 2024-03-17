@@ -11,7 +11,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgAuthidRecord;
 import java.time.OffsetDateTime;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -35,9 +34,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_authid</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,78 +46,36 @@ public class PgAuthid extends TableImpl<PgAuthidRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_authid</code>
-     */
     public static final PgAuthid PG_AUTHID = new PgAuthid();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgAuthidRecord> getRecordType() {
         return PgAuthidRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_authid.oid</code>.
-     */
     public final TableField<PgAuthidRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolname</code>.
-     */
     public final TableField<PgAuthidRecord, String> ROLNAME = createField(DSL.name("rolname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolsuper</code>.
-     */
     public final TableField<PgAuthidRecord, Boolean> ROLSUPER = createField(DSL.name("rolsuper"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolinherit</code>.
-     */
     public final TableField<PgAuthidRecord, Boolean> ROLINHERIT = createField(DSL.name("rolinherit"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolcreaterole</code>.
-     */
     public final TableField<PgAuthidRecord, Boolean> ROLCREATEROLE = createField(DSL.name("rolcreaterole"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolcreatedb</code>.
-     */
     public final TableField<PgAuthidRecord, Boolean> ROLCREATEDB = createField(DSL.name("rolcreatedb"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolcanlogin</code>.
-     */
     public final TableField<PgAuthidRecord, Boolean> ROLCANLOGIN = createField(DSL.name("rolcanlogin"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolreplication</code>.
-     */
     public final TableField<PgAuthidRecord, Boolean> ROLREPLICATION = createField(DSL.name("rolreplication"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolbypassrls</code>.
-     */
     public final TableField<PgAuthidRecord, Boolean> ROLBYPASSRLS = createField(DSL.name("rolbypassrls"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolconnlimit</code>.
-     */
     public final TableField<PgAuthidRecord, Integer> ROLCONNLIMIT = createField(DSL.name("rolconnlimit"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolpassword</code>.
-     */
     public final TableField<PgAuthidRecord, String> ROLPASSWORD = createField(DSL.name("rolpassword"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_authid.rolvaliduntil</code>.
-     */
     public final TableField<PgAuthidRecord, OffsetDateTime> ROLVALIDUNTIL = createField(DSL.name("rolvaliduntil"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgAuthid(Name alias, Table<PgAuthidRecord> aliased) {
@@ -132,23 +86,14 @@ public class PgAuthid extends TableImpl<PgAuthidRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_authid</code> table reference
-     */
     public PgAuthid(String alias) {
         this(DSL.name(alias), PG_AUTHID);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_authid</code> table reference
-     */
     public PgAuthid(Name alias) {
         this(alias, PG_AUTHID);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_authid</code> table reference
-     */
     public PgAuthid() {
         this(DSL.name("pg_authid"), null);
     }
@@ -193,27 +138,18 @@ public class PgAuthid extends TableImpl<PgAuthidRecord> {
         return new PgAuthid(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAuthid rename(String name) {
         return new PgAuthid(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAuthid rename(Name name) {
         return new PgAuthid(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAuthid rename(Table<?> name) {
@@ -230,17 +166,10 @@ public class PgAuthid extends TableImpl<PgAuthidRecord> {
         return (Row12) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function12<? super Long, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Integer, ? super String, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Long, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Integer, ? super String, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

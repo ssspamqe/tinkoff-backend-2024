@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAvailableExtensionsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_available_extensions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,34 +38,18 @@ public class PgAvailableExtensions extends TableImpl<PgAvailableExtensionsRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_available_extensions</code>
-     */
     public static final PgAvailableExtensions PG_AVAILABLE_EXTENSIONS = new PgAvailableExtensions();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgAvailableExtensionsRecord> getRecordType() {
         return PgAvailableExtensionsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_available_extensions.name</code>.
-     */
     public final TableField<PgAvailableExtensionsRecord, String> NAME = createField(DSL.name("name"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_available_extensions.default_version</code>.
-     */
     public final TableField<PgAvailableExtensionsRecord, String> DEFAULT_VERSION = createField(DSL.name("default_version"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_available_extensions.comment</code>.
-     */
     public final TableField<PgAvailableExtensionsRecord, String> COMMENT = createField(DSL.name("comment"), SQLDataType.CLOB, this, "");
 
     private PgAvailableExtensions(Name alias, Table<PgAvailableExtensionsRecord> aliased) {
@@ -82,25 +61,14 @@ public class PgAvailableExtensions extends TableImpl<PgAvailableExtensionsRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_available_extensions</code> table
-     * reference
-     */
     public PgAvailableExtensions(String alias) {
         this(DSL.name(alias), PG_AVAILABLE_EXTENSIONS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_available_extensions</code> table
-     * reference
-     */
     public PgAvailableExtensions(Name alias) {
         this(alias, PG_AVAILABLE_EXTENSIONS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_available_extensions</code> table reference
-     */
     public PgAvailableExtensions() {
         this(DSL.name("pg_available_extensions"), null);
     }
@@ -129,27 +97,18 @@ public class PgAvailableExtensions extends TableImpl<PgAvailableExtensionsRecord
         return new PgAvailableExtensions(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAvailableExtensions rename(String name) {
         return new PgAvailableExtensions(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAvailableExtensions rename(Name name) {
         return new PgAvailableExtensions(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAvailableExtensions rename(Table<?> name) {
@@ -166,26 +125,16 @@ public class PgAvailableExtensions extends TableImpl<PgAvailableExtensionsRecord
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgAvailableExtensions call() {
         PgAvailableExtensions result = new PgAvailableExtensions(DSL.name("pg_available_extensions"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ForeignTablesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.foreign_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,48 +39,22 @@ public class ForeignTables extends TableImpl<ForeignTablesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.foreign_tables</code>
-     */
     public static final ForeignTables FOREIGN_TABLES = new ForeignTables();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ForeignTablesRecord> getRecordType() {
         return ForeignTablesRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.foreign_tables.foreign_table_catalog</code>.
-     */
     public final TableField<ForeignTablesRecord, String> FOREIGN_TABLE_CATALOG = createField(DSL.name("foreign_table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_tables.foreign_table_schema</code>.
-     */
     public final TableField<ForeignTablesRecord, String> FOREIGN_TABLE_SCHEMA = createField(DSL.name("foreign_table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_tables.foreign_table_name</code>.
-     */
     public final TableField<ForeignTablesRecord, String> FOREIGN_TABLE_NAME = createField(DSL.name("foreign_table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_tables.foreign_server_catalog</code>.
-     */
     public final TableField<ForeignTablesRecord, String> FOREIGN_SERVER_CATALOG = createField(DSL.name("foreign_server_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_tables.foreign_server_name</code>.
-     */
     public final TableField<ForeignTablesRecord, String> FOREIGN_SERVER_NAME = createField(DSL.name("foreign_server_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private ForeignTables(Name alias, Table<ForeignTablesRecord> aliased) {
@@ -103,25 +72,14 @@ public class ForeignTables extends TableImpl<ForeignTablesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.foreign_tables</code> table
-     * reference
-     */
     public ForeignTables(String alias) {
         this(DSL.name(alias), FOREIGN_TABLES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.foreign_tables</code> table
-     * reference
-     */
     public ForeignTables(Name alias) {
         this(alias, FOREIGN_TABLES);
     }
 
-    /**
-     * Create a <code>information_schema.foreign_tables</code> table reference
-     */
     public ForeignTables() {
         this(DSL.name("foreign_tables"), null);
     }
@@ -154,27 +112,18 @@ public class ForeignTables extends TableImpl<ForeignTablesRecord> {
         return new ForeignTables(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignTables rename(String name) {
         return new ForeignTables(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignTables rename(Name name) {
         return new ForeignTables(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignTables rename(Table<?> name) {
@@ -191,17 +140,10 @@ public class ForeignTables extends TableImpl<ForeignTablesRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

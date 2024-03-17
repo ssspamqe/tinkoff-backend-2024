@@ -15,9 +15,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The routine <code>pg_catalog.pg_sleep_for</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,23 +27,14 @@ public class PgSleepFor extends AbstractRoutine<java.lang.Void> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_sleep_for._1</code>.
-     */
     public static final Parameter<YearToSecond> _1 = Internal.createParameter("_1", SQLDataType.INTERVAL, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgSleepFor() {
         super("pg_sleep_for", PgCatalog.PG_CATALOG);
 
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(YearToSecond value) {
         setValue(_1, value);
     }

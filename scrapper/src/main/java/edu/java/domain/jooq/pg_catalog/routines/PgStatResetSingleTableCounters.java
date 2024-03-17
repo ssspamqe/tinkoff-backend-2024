@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_stat_reset_single_table_counters</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,24 +26,14 @@ public class PgStatResetSingleTableCounters extends AbstractRoutine<java.lang.Vo
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_reset_single_table_counters._1</code>.
-     */
     public static final Parameter<Long> _1 = Internal.createParameter("_1", SQLDataType.BIGINT, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgStatResetSingleTableCounters() {
         super("pg_stat_reset_single_table_counters", PgCatalog.PG_CATALOG);
 
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Long value) {
         setValue(_1, value);
     }

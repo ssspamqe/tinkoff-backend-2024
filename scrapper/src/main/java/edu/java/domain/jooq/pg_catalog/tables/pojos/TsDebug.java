@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.ts_debug</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -63,104 +60,58 @@ public class TsDebug implements Serializable {
         this.lexemes = lexemes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.alias</code>.
-     */
     @Nullable
     public String getAlias() {
         return this.alias;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.alias</code>.
-     */
     public void setAlias(@Nullable String alias) {
         this.alias = alias;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.description</code>.
-     */
     @Nullable
     public String getDescription() {
         return this.description;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.description</code>.
-     */
     public void setDescription(@Nullable String description) {
         this.description = description;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.token</code>.
-     */
     @Nullable
     public String getToken() {
         return this.token;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.token</code>.
-     */
     public void setToken(@Nullable String token) {
         this.token = token;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.dictionaries</code>.
-     */
     @Nullable
     public Object[] getDictionaries() {
         return this.dictionaries;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.dictionaries</code>.
-     */
     public void setDictionaries(@Nullable Object[] dictionaries) {
         this.dictionaries = dictionaries;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getDictionary() {
         return this.dictionary;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setDictionary(@Nullable Object dictionary) {
         this.dictionary = dictionary;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_debug.lexemes</code>.
-     */
     @Nullable
     public String[] getLexemes() {
         return this.lexemes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_debug.lexemes</code>.
-     */
     public void setLexemes(@Nullable String[] lexemes) {
         this.lexemes = lexemes;
     }

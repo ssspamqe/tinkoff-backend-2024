@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_conversion</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,130 +67,82 @@ public class PgConversion implements Serializable {
         this.condefault = condefault;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.conname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getConname() {
         return this.conname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.conname</code>.
-     */
     public void setConname(@NotNull String conname) {
         this.conname = conname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.connamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConnamespace() {
         return this.connamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.connamespace</code>.
-     */
     public void setConnamespace(@NotNull Long connamespace) {
         this.connamespace = connamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.conowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConowner() {
         return this.conowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.conowner</code>.
-     */
     public void setConowner(@NotNull Long conowner) {
         this.conowner = conowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.conforencoding</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getConforencoding() {
         return this.conforencoding;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.conforencoding</code>.
-     */
     public void setConforencoding(@NotNull Integer conforencoding) {
         this.conforencoding = conforencoding;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.contoencoding</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getContoencoding() {
         return this.contoencoding;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.contoencoding</code>.
-     */
     public void setContoencoding(@NotNull Integer contoencoding) {
         this.contoencoding = contoencoding;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.conproc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getConproc() {
         return this.conproc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.conproc</code>.
-     */
     public void setConproc(@NotNull String conproc) {
         this.conproc = conproc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.condefault</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getCondefault() {
         return this.condefault;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.condefault</code>.
-     */
     public void setCondefault(@NotNull Boolean condefault) {
         this.condefault = condefault;
     }

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.TablesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,81 +39,36 @@ public class Tables extends TableImpl<TablesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.tables</code>
-     */
     public static final Tables TABLES = new Tables();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TablesRecord> getRecordType() {
         return TablesRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.tables.table_catalog</code>.
-     */
     public final TableField<TablesRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.tables.table_schema</code>.
-     */
     public final TableField<TablesRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.tables.table_name</code>.
-     */
     public final TableField<TablesRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.tables.table_type</code>.
-     */
     public final TableField<TablesRecord, String> TABLE_TYPE = createField(DSL.name("table_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.tables.self_referencing_column_name</code>.
-     */
     public final TableField<TablesRecord, String> SELF_REFERENCING_COLUMN_NAME = createField(DSL.name("self_referencing_column_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.tables.reference_generation</code>.
-     */
     public final TableField<TablesRecord, String> REFERENCE_GENERATION = createField(DSL.name("reference_generation"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.tables.user_defined_type_catalog</code>.
-     */
     public final TableField<TablesRecord, String> USER_DEFINED_TYPE_CATALOG = createField(DSL.name("user_defined_type_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.tables.user_defined_type_schema</code>.
-     */
     public final TableField<TablesRecord, String> USER_DEFINED_TYPE_SCHEMA = createField(DSL.name("user_defined_type_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.tables.user_defined_type_name</code>.
-     */
     public final TableField<TablesRecord, String> USER_DEFINED_TYPE_NAME = createField(DSL.name("user_defined_type_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.tables.is_insertable_into</code>.
-     */
     public final TableField<TablesRecord, String> IS_INSERTABLE_INTO = createField(DSL.name("is_insertable_into"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.tables.is_typed</code>.
-     */
     public final TableField<TablesRecord, String> IS_TYPED = createField(DSL.name("is_typed"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.tables.commit_action</code>.
-     */
     public final TableField<TablesRecord, String> COMMIT_ACTION = createField(DSL.name("commit_action"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private Tables(Name alias, Table<TablesRecord> aliased) {
@@ -166,23 +116,14 @@ public class Tables extends TableImpl<TablesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.tables</code> table reference
-     */
     public Tables(String alias) {
         this(DSL.name(alias), TABLES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.tables</code> table reference
-     */
     public Tables(Name alias) {
         this(alias, TABLES);
     }
 
-    /**
-     * Create a <code>information_schema.tables</code> table reference
-     */
     public Tables() {
         this(DSL.name("tables"), null);
     }
@@ -215,27 +156,18 @@ public class Tables extends TableImpl<TablesRecord> {
         return new Tables(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Tables rename(String name) {
         return new Tables(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Tables rename(Name name) {
         return new Tables(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Tables rename(Table<?> name) {
@@ -252,17 +184,10 @@ public class Tables extends TableImpl<TablesRecord> {
         return (Row12) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function12<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function12<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

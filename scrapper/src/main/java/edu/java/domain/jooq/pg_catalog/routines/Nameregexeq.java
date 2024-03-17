@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.nameregexeq</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,24 +27,12 @@ public class Nameregexeq extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.nameregexeq.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.nameregexeq._1</code>.
-     */
     public static final Parameter<String> _1 = Internal.createParameter("_1", SQLDataType.VARCHAR, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.nameregexeq._2</code>.
-     */
     public static final Parameter<String> _2 = Internal.createParameter("_2", SQLDataType.CLOB, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Nameregexeq() {
         super("nameregexeq", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -56,32 +41,18 @@ public class Nameregexeq extends AbstractRoutine<Boolean> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(String value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<String> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(String value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<String> field) {
         setField(_2, field);
     }

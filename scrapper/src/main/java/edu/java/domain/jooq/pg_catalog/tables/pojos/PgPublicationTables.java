@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -59,77 +56,47 @@ public class PgPublicationTables implements Serializable {
         this.rowfilter = rowfilter;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.pubname</code>.
-     */
     @Nullable
     public String getPubname() {
         return this.pubname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.pubname</code>.
-     */
     public void setPubname(@Nullable String pubname) {
         this.pubname = pubname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return this.tablename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.tablename</code>.
-     */
     public void setTablename(@Nullable String tablename) {
         this.tablename = tablename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.attnames</code>.
-     */
     @Nullable
     public String[] getAttnames() {
         return this.attnames;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.attnames</code>.
-     */
     public void setAttnames(@Nullable String[] attnames) {
         this.attnames = attnames;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.rowfilter</code>.
-     */
     @Nullable
     public String getRowfilter() {
         return this.rowfilter;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.rowfilter</code>.
-     */
     public void setRowfilter(@Nullable String rowfilter) {
         this.rowfilter = rowfilter;
     }

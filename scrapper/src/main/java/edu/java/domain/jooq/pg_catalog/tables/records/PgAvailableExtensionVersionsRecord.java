@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_available_extension_versions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,135 +30,73 @@ public class PgAvailableExtensionVersionsRecord extends TableRecordImpl<PgAvaila
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_available_extension_versions.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_available_extension_versions.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.version</code>.
-     */
     public void setVersion(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.version</code>.
-     */
     @Nullable
     public String getVersion() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.superuser</code>.
-     */
     public void setSuperuser(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.superuser</code>.
-     */
     @Nullable
     public Boolean getSuperuser() {
         return (Boolean) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.trusted</code>.
-     */
     public void setTrusted(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.trusted</code>.
-     */
     @Nullable
     public Boolean getTrusted() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.relocatable</code>.
-     */
     public void setRelocatable(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.relocatable</code>.
-     */
     @Nullable
     public Boolean getRelocatable() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.schema</code>.
-     */
     public void setSchema(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.schema</code>.
-     */
     @Nullable
     public String getSchema() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.requires</code>.
-     */
     public void setRequires(@Nullable String[] value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.requires</code>.
-     */
     @Nullable
     public String[] getRequires() {
         return (String[]) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.comment</code>.
-     */
     public void setComment(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.comment</code>.
-     */
     @Nullable
     public String getComment() {
         return (String) get(7);
@@ -401,16 +336,10 @@ public class PgAvailableExtensionVersionsRecord extends TableRecordImpl<PgAvaila
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAvailableExtensionVersionsRecord
-     */
     public PgAvailableExtensionVersionsRecord() {
         super(PgAvailableExtensionVersions.PG_AVAILABLE_EXTENSION_VERSIONS);
     }
 
-    /**
-     * Create a detached, initialised PgAvailableExtensionVersionsRecord
-     */
     @ConstructorProperties({ "name", "version", "superuser", "trusted", "relocatable", "schema", "requires", "comment" })
     public PgAvailableExtensionVersionsRecord(@Nullable String name, @Nullable String version, @Nullable Boolean superuser, @Nullable Boolean trusted, @Nullable Boolean relocatable, @Nullable String schema, @Nullable String[] requires, @Nullable String comment) {
         super(PgAvailableExtensionVersions.PG_AVAILABLE_EXTENSION_VERSIONS);
@@ -426,9 +355,6 @@ public class PgAvailableExtensionVersionsRecord extends TableRecordImpl<PgAvaila
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAvailableExtensionVersionsRecord
-     */
     public PgAvailableExtensionVersionsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAvailableExtensionVersions value) {
         super(PgAvailableExtensionVersions.PG_AVAILABLE_EXTENSION_VERSIONS);
 

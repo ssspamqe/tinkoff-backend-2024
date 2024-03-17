@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatioSysIndexesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_sys_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,53 +40,26 @@ public class PgStatioSysIndexes extends TableImpl<PgStatioSysIndexesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_statio_sys_indexes</code>
-     */
     public static final PgStatioSysIndexes PG_STATIO_SYS_INDEXES = new PgStatioSysIndexes();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatioSysIndexesRecord> getRecordType() {
         return PgStatioSysIndexesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_statio_sys_indexes.relid</code>.
-     */
     public final TableField<PgStatioSysIndexesRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_sys_indexes.indexrelid</code>.
-     */
     public final TableField<PgStatioSysIndexesRecord, Long> INDEXRELID = createField(DSL.name("indexrelid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_sys_indexes.schemaname</code>.
-     */
     public final TableField<PgStatioSysIndexesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_sys_indexes.relname</code>.
-     */
     public final TableField<PgStatioSysIndexesRecord, String> RELNAME = createField(DSL.name("relname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_sys_indexes.indexrelname</code>.
-     */
     public final TableField<PgStatioSysIndexesRecord, String> INDEXRELNAME = createField(DSL.name("indexrelname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_sys_indexes.idx_blks_read</code>.
-     */
     public final TableField<PgStatioSysIndexesRecord, Long> IDX_BLKS_READ = createField(DSL.name("idx_blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_sys_indexes.idx_blks_hit</code>.
-     */
     public final TableField<PgStatioSysIndexesRecord, Long> IDX_BLKS_HIT = createField(DSL.name("idx_blks_hit"), SQLDataType.BIGINT, this, "");
 
     private PgStatioSysIndexes(Name alias, Table<PgStatioSysIndexesRecord> aliased) {
@@ -112,25 +80,14 @@ public class PgStatioSysIndexes extends TableImpl<PgStatioSysIndexesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_statio_sys_indexes</code> table
-     * reference
-     */
     public PgStatioSysIndexes(String alias) {
         this(DSL.name(alias), PG_STATIO_SYS_INDEXES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_statio_sys_indexes</code> table
-     * reference
-     */
     public PgStatioSysIndexes(Name alias) {
         this(alias, PG_STATIO_SYS_INDEXES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_statio_sys_indexes</code> table reference
-     */
     public PgStatioSysIndexes() {
         this(DSL.name("pg_statio_sys_indexes"), null);
     }
@@ -163,27 +120,18 @@ public class PgStatioSysIndexes extends TableImpl<PgStatioSysIndexesRecord> {
         return new PgStatioSysIndexes(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioSysIndexes rename(String name) {
         return new PgStatioSysIndexes(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioSysIndexes rename(Name name) {
         return new PgStatioSysIndexes(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioSysIndexes rename(Table<?> name) {
@@ -200,17 +148,10 @@ public class PgStatioSysIndexes extends TableImpl<PgStatioSysIndexesRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_shadow</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -76,137 +73,83 @@ public class PgShadow implements Serializable {
         this.useconfig = useconfig;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usename</code>.
-     */
     @Nullable
     public String getUsename() {
         return this.usename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usename</code>.
-     */
     public void setUsename(@Nullable String usename) {
         this.usename = usename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usesysid</code>.
-     */
     @Nullable
     public Long getUsesysid() {
         return this.usesysid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usesysid</code>.
-     */
     public void setUsesysid(@Nullable Long usesysid) {
         this.usesysid = usesysid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usecreatedb</code>.
-     */
     @Nullable
     public Boolean getUsecreatedb() {
         return this.usecreatedb;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usecreatedb</code>.
-     */
     public void setUsecreatedb(@Nullable Boolean usecreatedb) {
         this.usecreatedb = usecreatedb;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usesuper</code>.
-     */
     @Nullable
     public Boolean getUsesuper() {
         return this.usesuper;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usesuper</code>.
-     */
     public void setUsesuper(@Nullable Boolean usesuper) {
         this.usesuper = usesuper;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.userepl</code>.
-     */
     @Nullable
     public Boolean getUserepl() {
         return this.userepl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.userepl</code>.
-     */
     public void setUserepl(@Nullable Boolean userepl) {
         this.userepl = userepl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usebypassrls</code>.
-     */
     @Nullable
     public Boolean getUsebypassrls() {
         return this.usebypassrls;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usebypassrls</code>.
-     */
     public void setUsebypassrls(@Nullable Boolean usebypassrls) {
         this.usebypassrls = usebypassrls;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.passwd</code>.
-     */
     @Nullable
     public String getPasswd() {
         return this.passwd;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.passwd</code>.
-     */
     public void setPasswd(@Nullable String passwd) {
         this.passwd = passwd;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.valuntil</code>.
-     */
     @Nullable
     public OffsetDateTime getValuntil() {
         return this.valuntil;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.valuntil</code>.
-     */
     public void setValuntil(@Nullable OffsetDateTime valuntil) {
         this.valuntil = valuntil;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.useconfig</code>.
-     */
     @Nullable
     public String[] getUseconfig() {
         return this.useconfig;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.useconfig</code>.
-     */
     public void setUseconfig(@Nullable String[] useconfig) {
         this.useconfig = useconfig;
     }

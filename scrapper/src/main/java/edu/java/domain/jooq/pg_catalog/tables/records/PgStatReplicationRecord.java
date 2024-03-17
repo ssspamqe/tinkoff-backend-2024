@@ -20,9 +20,6 @@ import org.jooq.impl.TableRecordImpl;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_replication</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,361 +32,191 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.usesysid</code>.
-     */
     public void setUsesysid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.usesysid</code>.
-     */
     @Nullable
     public Long getUsesysid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.usename</code>.
-     */
     public void setUsename(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.usename</code>.
-     */
     @Nullable
     public String getUsename() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.application_name</code>.
-     */
     public void setApplicationName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.application_name</code>.
-     */
     @Nullable
     public String getApplicationName() {
         return (String) get(3);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setClientAddr(@Nullable Object value) {
         set(4, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getClientAddr() {
         return get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.client_hostname</code>.
-     */
     public void setClientHostname(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.client_hostname</code>.
-     */
     @Nullable
     public String getClientHostname() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.client_port</code>.
-     */
     public void setClientPort(@Nullable Integer value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.client_port</code>.
-     */
     @Nullable
     public Integer getClientPort() {
         return (Integer) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.backend_start</code>.
-     */
     public void setBackendStart(@Nullable OffsetDateTime value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.backend_start</code>.
-     */
     @Nullable
     public OffsetDateTime getBackendStart() {
         return (OffsetDateTime) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.backend_xmin</code>.
-     */
     public void setBackendXmin(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.backend_xmin</code>.
-     */
     @Nullable
     public Long getBackendXmin() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.state</code>.
-     */
     public void setState(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.state</code>.
-     */
     @Nullable
     public String getState() {
         return (String) get(9);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setSentLsn(@Nullable Object value) {
         set(10, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getSentLsn() {
         return get(10);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setWriteLsn(@Nullable Object value) {
         set(11, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getWriteLsn() {
         return get(11);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setFlushLsn(@Nullable Object value) {
         set(12, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getFlushLsn() {
         return get(12);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setReplayLsn(@Nullable Object value) {
         set(13, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getReplayLsn() {
         return get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.write_lag</code>.
-     */
     public void setWriteLag(@Nullable YearToSecond value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.write_lag</code>.
-     */
     @Nullable
     public YearToSecond getWriteLag() {
         return (YearToSecond) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.flush_lag</code>.
-     */
     public void setFlushLag(@Nullable YearToSecond value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.flush_lag</code>.
-     */
     @Nullable
     public YearToSecond getFlushLag() {
         return (YearToSecond) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.replay_lag</code>.
-     */
     public void setReplayLag(@Nullable YearToSecond value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.replay_lag</code>.
-     */
     @Nullable
     public YearToSecond getReplayLag() {
         return (YearToSecond) get(16);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.sync_priority</code>.
-     */
     public void setSyncPriority(@Nullable Integer value) {
         set(17, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.sync_priority</code>.
-     */
     @Nullable
     public Integer getSyncPriority() {
         return (Integer) get(17);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.sync_state</code>.
-     */
     public void setSyncState(@Nullable String value) {
         set(18, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.sync_state</code>.
-     */
     @Nullable
     public String getSyncState() {
         return (String) get(18);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication.reply_time</code>.
-     */
     public void setReplyTime(@Nullable OffsetDateTime value) {
         set(19, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication.reply_time</code>.
-     */
     @Nullable
     public OffsetDateTime getReplyTime() {
         return (OffsetDateTime) get(19);
@@ -435,14 +262,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return PgStatReplication.PG_STAT_REPLICATION.APPLICATION_NAME;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -480,14 +299,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return PgStatReplication.PG_STAT_REPLICATION.STATE;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -495,14 +306,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return PgStatReplication.PG_STAT_REPLICATION.SENT_LSN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -510,14 +313,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return PgStatReplication.PG_STAT_REPLICATION.WRITE_LSN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -525,14 +320,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return PgStatReplication.PG_STAT_REPLICATION.FLUSH_LSN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -600,14 +387,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getApplicationName();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -645,14 +424,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getState();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -660,14 +431,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getSentLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -675,14 +438,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getWriteLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -690,14 +445,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getFlushLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -765,14 +512,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getApplicationName();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -810,14 +549,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getState();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -825,14 +556,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getSentLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -840,14 +563,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getWriteLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -855,14 +570,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return getFlushLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -934,14 +641,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -985,14 +684,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -1001,14 +692,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -1017,14 +700,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -1033,14 +708,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -1121,16 +788,10 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatReplicationRecord
-     */
     public PgStatReplicationRecord() {
         super(PgStatReplication.PG_STAT_REPLICATION);
     }
 
-    /**
-     * Create a detached, initialised PgStatReplicationRecord
-     */
     @ConstructorProperties({ "pid", "usesysid", "usename", "applicationName", "clientAddr", "clientHostname", "clientPort", "backendStart", "backendXmin", "state", "sentLsn", "writeLsn", "flushLsn", "replayLsn", "writeLag", "flushLag", "replayLag", "syncPriority", "syncState", "replyTime" })
     public PgStatReplicationRecord(@Nullable Integer pid, @Nullable Long usesysid, @Nullable String usename, @Nullable String applicationName, @Nullable Object clientAddr, @Nullable String clientHostname, @Nullable Integer clientPort, @Nullable OffsetDateTime backendStart, @Nullable Long backendXmin, @Nullable String state, @Nullable Object sentLsn, @Nullable Object writeLsn, @Nullable Object flushLsn, @Nullable Object replayLsn, @Nullable YearToSecond writeLag, @Nullable YearToSecond flushLag, @Nullable YearToSecond replayLag, @Nullable Integer syncPriority, @Nullable String syncState, @Nullable OffsetDateTime replyTime) {
         super(PgStatReplication.PG_STAT_REPLICATION);
@@ -1158,9 +819,6 @@ public class PgStatReplicationRecord extends TableRecordImpl<PgStatReplicationRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatReplicationRecord
-     */
     public PgStatReplicationRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatReplication value) {
         super(PgStatReplication.PG_STAT_REPLICATION);
 

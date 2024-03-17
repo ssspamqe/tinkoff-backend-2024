@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_parser</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,130 +67,82 @@ public class PgTsParser implements Serializable {
         this.prslextype = prslextype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrsname() {
         return this.prsname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsname</code>.
-     */
     public void setPrsname(@NotNull String prsname) {
         this.prsname = prsname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPrsnamespace() {
         return this.prsnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsnamespace</code>.
-     */
     public void setPrsnamespace(@NotNull Long prsnamespace) {
         this.prsnamespace = prsnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsstart</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrsstart() {
         return this.prsstart;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsstart</code>.
-     */
     public void setPrsstart(@NotNull String prsstart) {
         this.prsstart = prsstart;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prstoken</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrstoken() {
         return this.prstoken;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prstoken</code>.
-     */
     public void setPrstoken(@NotNull String prstoken) {
         this.prstoken = prstoken;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsend</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrsend() {
         return this.prsend;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsend</code>.
-     */
     public void setPrsend(@NotNull String prsend) {
         this.prsend = prsend;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsheadline</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrsheadline() {
         return this.prsheadline;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsheadline</code>.
-     */
     public void setPrsheadline(@NotNull String prsheadline) {
         this.prsheadline = prsheadline;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prslextype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrslextype() {
         return this.prslextype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prslextype</code>.
-     */
     public void setPrslextype(@NotNull String prslextype) {
         this.prslextype = prslextype;
     }

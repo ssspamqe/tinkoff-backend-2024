@@ -20,9 +20,6 @@ import org.jooq.impl.TableRecordImpl;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_wal_senders</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,229 +32,117 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.state</code>.
-     */
     public void setState(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.state</code>.
-     */
     @Nullable
     public String getState() {
         return (String) get(1);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setSentLsn(@Nullable Object value) {
         set(2, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getSentLsn() {
         return get(2);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setWriteLsn(@Nullable Object value) {
         set(3, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getWriteLsn() {
         return get(3);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setFlushLsn(@Nullable Object value) {
         set(4, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getFlushLsn() {
         return get(4);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setReplayLsn(@Nullable Object value) {
         set(5, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getReplayLsn() {
         return get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.write_lag</code>.
-     */
     public void setWriteLag(@Nullable YearToSecond value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.write_lag</code>.
-     */
     @Nullable
     public YearToSecond getWriteLag() {
         return (YearToSecond) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.flush_lag</code>.
-     */
     public void setFlushLag(@Nullable YearToSecond value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.flush_lag</code>.
-     */
     @Nullable
     public YearToSecond getFlushLag() {
         return (YearToSecond) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.replay_lag</code>.
-     */
     public void setReplayLag(@Nullable YearToSecond value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.replay_lag</code>.
-     */
     @Nullable
     public YearToSecond getReplayLag() {
         return (YearToSecond) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.sync_priority</code>.
-     */
     public void setSyncPriority(@Nullable Integer value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.sync_priority</code>.
-     */
     @Nullable
     public Integer getSyncPriority() {
         return (Integer) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.sync_state</code>.
-     */
     public void setSyncState(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.sync_state</code>.
-     */
     @Nullable
     public String getSyncState() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.reply_time</code>.
-     */
     public void setReplyTime(@Nullable OffsetDateTime value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.reply_time</code>.
-     */
     @Nullable
     public OffsetDateTime getReplyTime() {
         return (OffsetDateTime) get(11);
@@ -291,14 +176,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS.STATE;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -306,14 +183,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS.SENT_LSN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -321,14 +190,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS.WRITE_LSN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -336,14 +197,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS.FLUSH_LSN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -399,14 +252,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return getState();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -414,14 +259,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return getSentLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -429,14 +266,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return getWriteLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -444,14 +273,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return getFlushLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -507,14 +328,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return getState();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -522,14 +335,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return getSentLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -537,14 +342,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return getWriteLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -552,14 +349,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return getFlushLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -617,14 +406,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -633,14 +414,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -649,14 +422,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -665,14 +430,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -745,16 +502,10 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatGetWalSendersRecord
-     */
     public PgStatGetWalSendersRecord() {
         super(PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS);
     }
 
-    /**
-     * Create a detached, initialised PgStatGetWalSendersRecord
-     */
     @ConstructorProperties({ "pid", "state", "sentLsn", "writeLsn", "flushLsn", "replayLsn", "writeLag", "flushLag", "replayLag", "syncPriority", "syncState", "replyTime" })
     public PgStatGetWalSendersRecord(@Nullable Integer pid, @Nullable String state, @Nullable Object sentLsn, @Nullable Object writeLsn, @Nullable Object flushLsn, @Nullable Object replayLsn, @Nullable YearToSecond writeLag, @Nullable YearToSecond flushLag, @Nullable YearToSecond replayLag, @Nullable Integer syncPriority, @Nullable String syncState, @Nullable OffsetDateTime replyTime) {
         super(PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS);
@@ -774,9 +525,6 @@ public class PgStatGetWalSendersRecord extends TableRecordImpl<PgStatGetWalSende
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatGetWalSendersRecord
-     */
     public PgStatGetWalSendersRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatGetWalSenders value) {
         super(PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS);
 

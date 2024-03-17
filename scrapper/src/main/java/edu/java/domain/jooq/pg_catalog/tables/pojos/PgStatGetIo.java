@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_io</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -111,272 +108,164 @@ public class PgStatGetIo implements Serializable {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.backend_type</code>.
-     */
     @Nullable
     public String getBackendType() {
         return this.backendType;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.backend_type</code>.
-     */
     public void setBackendType(@Nullable String backendType) {
         this.backendType = backendType;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.object</code>.
-     */
     @Nullable
     public String getObject() {
         return this.object;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.object</code>.
-     */
     public void setObject(@Nullable String object) {
         this.object = object;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.context</code>.
-     */
     @Nullable
     public String getContext() {
         return this.context;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.context</code>.
-     */
     public void setContext(@Nullable String context) {
         this.context = context;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.reads</code>.
-     */
     @Nullable
     public Long getReads() {
         return this.reads;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.reads</code>.
-     */
     public void setReads(@Nullable Long reads) {
         this.reads = reads;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.read_time</code>.
-     */
     @Nullable
     public Double getReadTime() {
         return this.readTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.read_time</code>.
-     */
     public void setReadTime(@Nullable Double readTime) {
         this.readTime = readTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.writes</code>.
-     */
     @Nullable
     public Long getWrites() {
         return this.writes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.writes</code>.
-     */
     public void setWrites(@Nullable Long writes) {
         this.writes = writes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.write_time</code>.
-     */
     @Nullable
     public Double getWriteTime() {
         return this.writeTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.write_time</code>.
-     */
     public void setWriteTime(@Nullable Double writeTime) {
         this.writeTime = writeTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.writebacks</code>.
-     */
     @Nullable
     public Long getWritebacks() {
         return this.writebacks;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.writebacks</code>.
-     */
     public void setWritebacks(@Nullable Long writebacks) {
         this.writebacks = writebacks;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.writeback_time</code>.
-     */
     @Nullable
     public Double getWritebackTime() {
         return this.writebackTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.writeback_time</code>.
-     */
     public void setWritebackTime(@Nullable Double writebackTime) {
         this.writebackTime = writebackTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.extends</code>.
-     */
     @Nullable
     public Long getExtends() {
         return this.extends_;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.extends</code>.
-     */
     public void setExtends(@Nullable Long extends_) {
         this.extends_ = extends_;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.extend_time</code>.
-     */
     @Nullable
     public Double getExtendTime() {
         return this.extendTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.extend_time</code>.
-     */
     public void setExtendTime(@Nullable Double extendTime) {
         this.extendTime = extendTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.op_bytes</code>.
-     */
     @Nullable
     public Long getOpBytes() {
         return this.opBytes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.op_bytes</code>.
-     */
     public void setOpBytes(@Nullable Long opBytes) {
         this.opBytes = opBytes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.hits</code>.
-     */
     @Nullable
     public Long getHits() {
         return this.hits;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.hits</code>.
-     */
     public void setHits(@Nullable Long hits) {
         this.hits = hits;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.evictions</code>.
-     */
     @Nullable
     public Long getEvictions() {
         return this.evictions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.evictions</code>.
-     */
     public void setEvictions(@Nullable Long evictions) {
         this.evictions = evictions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.reuses</code>.
-     */
     @Nullable
     public Long getReuses() {
         return this.reuses;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.reuses</code>.
-     */
     public void setReuses(@Nullable Long reuses) {
         this.reuses = reuses;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.fsyncs</code>.
-     */
     @Nullable
     public Long getFsyncs() {
         return this.fsyncs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.fsyncs</code>.
-     */
     public void setFsyncs(@Nullable Long fsyncs) {
         this.fsyncs = fsyncs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.fsync_time</code>.
-     */
     @Nullable
     public Double getFsyncTime() {
         return this.fsyncTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.fsync_time</code>.
-     */
     public void setFsyncTime(@Nullable Double fsyncTime) {
         this.fsyncTime = fsyncTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_io.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_io.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }

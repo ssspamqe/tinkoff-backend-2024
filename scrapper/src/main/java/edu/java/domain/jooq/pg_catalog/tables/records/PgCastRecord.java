@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_cast</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,96 +30,60 @@ public class PgCastRecord extends UpdatableRecordImpl<PgCastRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.castsource</code>.
-     */
     public void setCastsource(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.castsource</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCastsource() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.casttarget</code>.
-     */
     public void setCasttarget(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.casttarget</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCasttarget() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.castfunc</code>.
-     */
     public void setCastfunc(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.castfunc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCastfunc() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.castcontext</code>.
-     */
     public void setCastcontext(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.castcontext</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCastcontext() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cast.castmethod</code>.
-     */
     public void setCastmethod(@NotNull String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cast.castmethod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCastmethod() {
@@ -321,16 +282,10 @@ public class PgCastRecord extends UpdatableRecordImpl<PgCastRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgCastRecord
-     */
     public PgCastRecord() {
         super(PgCast.PG_CAST);
     }
 
-    /**
-     * Create a detached, initialised PgCastRecord
-     */
     @ConstructorProperties({ "oid", "castsource", "casttarget", "castfunc", "castcontext", "castmethod" })
     public PgCastRecord(@NotNull Long oid, @NotNull Long castsource, @NotNull Long casttarget, @NotNull Long castfunc, @NotNull String castcontext, @NotNull String castmethod) {
         super(PgCast.PG_CAST);
@@ -344,9 +299,6 @@ public class PgCastRecord extends UpdatableRecordImpl<PgCastRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgCastRecord
-     */
     public PgCastRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgCast value) {
         super(PgCast.PG_CAST);
 

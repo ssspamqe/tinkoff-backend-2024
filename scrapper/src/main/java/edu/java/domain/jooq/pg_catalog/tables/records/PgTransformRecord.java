@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_transform</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,80 +30,50 @@ public class PgTransformRecord extends UpdatableRecordImpl<PgTransformRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.trftype</code>.
-     */
     public void setTrftype(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.trftype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTrftype() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.trflang</code>.
-     */
     public void setTrflang(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.trflang</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTrflang() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.trffromsql</code>.
-     */
     public void setTrffromsql(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.trffromsql</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTrffromsql() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.trftosql</code>.
-     */
     public void setTrftosql(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.trftosql</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTrftosql() {
@@ -279,16 +246,10 @@ public class PgTransformRecord extends UpdatableRecordImpl<PgTransformRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTransformRecord
-     */
     public PgTransformRecord() {
         super(PgTransform.PG_TRANSFORM);
     }
 
-    /**
-     * Create a detached, initialised PgTransformRecord
-     */
     @ConstructorProperties({ "oid", "trftype", "trflang", "trffromsql", "trftosql" })
     public PgTransformRecord(@NotNull Long oid, @NotNull Long trftype, @NotNull Long trflang, @NotNull String trffromsql, @NotNull String trftosql) {
         super(PgTransform.PG_TRANSFORM);
@@ -301,9 +262,6 @@ public class PgTransformRecord extends UpdatableRecordImpl<PgTransformRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTransformRecord
-     */
     public PgTransformRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTransform value) {
         super(PgTransform.PG_TRANSFORM);
 

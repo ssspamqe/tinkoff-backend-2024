@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.TsDebugRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.ts_debug</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,54 +38,25 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.ts_debug</code>
-     */
     public static final TsDebug TS_DEBUG = new TsDebug();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TsDebugRecord> getRecordType() {
         return TsDebugRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.ts_debug.alias</code>.
-     */
     public final TableField<TsDebugRecord, String> ALIAS = createField(DSL.name("alias"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_debug.description</code>.
-     */
     public final TableField<TsDebugRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_debug.token</code>.
-     */
     public final TableField<TsDebugRecord, String> TOKEN = createField(DSL.name("token"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_debug.dictionaries</code>.
-     */
     public final TableField<TsDebugRecord, Object[]> DICTIONARIES = createField(DSL.name("dictionaries"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"regdictionary\"").array(), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<TsDebugRecord, Object> DICTIONARY = createField(DSL.name("dictionary"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"regdictionary\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_debug.lexemes</code>.
-     */
     public final TableField<TsDebugRecord, String[]> LEXEMES = createField(DSL.name("lexemes"), SQLDataType.CLOB.array(), this, "");
 
     private TsDebug(Name alias, Table<TsDebugRecord> aliased) {
@@ -104,23 +70,14 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.ts_debug</code> table reference
-     */
     public TsDebug(String alias) {
         this(DSL.name(alias), TS_DEBUG);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.ts_debug</code> table reference
-     */
     public TsDebug(Name alias) {
         this(alias, TS_DEBUG);
     }
 
-    /**
-     * Create a <code>pg_catalog.ts_debug</code> table reference
-     */
     public TsDebug() {
         this(DSL.name("ts_debug"), null);
     }
@@ -149,27 +106,18 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
         return new TsDebug(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsDebug rename(String name) {
         return new TsDebug(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsDebug rename(Name name) {
         return new TsDebug(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsDebug rename(Table<?> name) {
@@ -186,9 +134,6 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TsDebug call(
           Object config
         , String document
@@ -201,9 +146,6 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TsDebug call(
           Field<Object> config
         , Field<String> document
@@ -216,17 +158,10 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super String, ? super Object[], ? super Object, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super String, ? super Object[], ? super Object, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

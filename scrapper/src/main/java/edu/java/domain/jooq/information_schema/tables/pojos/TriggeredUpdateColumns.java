@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.triggered_update_columns</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,121 +63,65 @@ public class TriggeredUpdateColumns implements Serializable {
         this.eventObjectColumn = eventObjectColumn;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.trigger_catalog</code>.
-     */
     @Nullable
     public String getTriggerCatalog() {
         return this.triggerCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.trigger_catalog</code>.
-     */
     public void setTriggerCatalog(@Nullable String triggerCatalog) {
         this.triggerCatalog = triggerCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.trigger_schema</code>.
-     */
     @Nullable
     public String getTriggerSchema() {
         return this.triggerSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.trigger_schema</code>.
-     */
     public void setTriggerSchema(@Nullable String triggerSchema) {
         this.triggerSchema = triggerSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.trigger_name</code>.
-     */
     @Nullable
     public String getTriggerName() {
         return this.triggerName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.trigger_name</code>.
-     */
     public void setTriggerName(@Nullable String triggerName) {
         this.triggerName = triggerName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.event_object_catalog</code>.
-     */
     @Nullable
     public String getEventObjectCatalog() {
         return this.eventObjectCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.event_object_catalog</code>.
-     */
     public void setEventObjectCatalog(@Nullable String eventObjectCatalog) {
         this.eventObjectCatalog = eventObjectCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.event_object_schema</code>.
-     */
     @Nullable
     public String getEventObjectSchema() {
         return this.eventObjectSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.event_object_schema</code>.
-     */
     public void setEventObjectSchema(@Nullable String eventObjectSchema) {
         this.eventObjectSchema = eventObjectSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.event_object_table</code>.
-     */
     @Nullable
     public String getEventObjectTable() {
         return this.eventObjectTable;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.event_object_table</code>.
-     */
     public void setEventObjectTable(@Nullable String eventObjectTable) {
         this.eventObjectTable = eventObjectTable;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.event_object_column</code>.
-     */
     @Nullable
     public String getEventObjectColumn() {
         return this.eventObjectColumn;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.event_object_column</code>.
-     */
     public void setEventObjectColumn(@Nullable String eventObjectColumn) {
         this.eventObjectColumn = eventObjectColumn;
     }

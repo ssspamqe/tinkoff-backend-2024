@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgTablespaceRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_tablespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,43 +45,22 @@ public class PgTablespace extends TableImpl<PgTablespaceRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_tablespace</code>
-     */
     public static final PgTablespace PG_TABLESPACE = new PgTablespace();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTablespaceRecord> getRecordType() {
         return PgTablespaceRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_tablespace.oid</code>.
-     */
     public final TableField<PgTablespaceRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tablespace.spcname</code>.
-     */
     public final TableField<PgTablespaceRecord, String> SPCNAME = createField(DSL.name("spcname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tablespace.spcowner</code>.
-     */
     public final TableField<PgTablespaceRecord, Long> SPCOWNER = createField(DSL.name("spcowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tablespace.spcacl</code>.
-     */
     public final TableField<PgTablespaceRecord, String[]> SPCACL = createField(DSL.name("spcacl"), SQLDataType.VARCHAR.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tablespace.spcoptions</code>.
-     */
     public final TableField<PgTablespaceRecord, String[]> SPCOPTIONS = createField(DSL.name("spcoptions"), SQLDataType.CLOB.array(), this, "");
 
     private PgTablespace(Name alias, Table<PgTablespaceRecord> aliased) {
@@ -96,23 +71,14 @@ public class PgTablespace extends TableImpl<PgTablespaceRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_tablespace</code> table reference
-     */
     public PgTablespace(String alias) {
         this(DSL.name(alias), PG_TABLESPACE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_tablespace</code> table reference
-     */
     public PgTablespace(Name alias) {
         this(alias, PG_TABLESPACE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_tablespace</code> table reference
-     */
     public PgTablespace() {
         this(DSL.name("pg_tablespace"), null);
     }
@@ -157,27 +123,18 @@ public class PgTablespace extends TableImpl<PgTablespaceRecord> {
         return new PgTablespace(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTablespace rename(String name) {
         return new PgTablespace(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTablespace rename(Name name) {
         return new PgTablespace(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTablespace rename(Table<?> name) {
@@ -194,17 +151,10 @@ public class PgTablespace extends TableImpl<PgTablespaceRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super Long, ? super String[], ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super Long, ? super String[], ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

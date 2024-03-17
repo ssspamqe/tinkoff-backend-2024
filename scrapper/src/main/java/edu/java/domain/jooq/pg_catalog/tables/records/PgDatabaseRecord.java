@@ -19,9 +19,6 @@ import org.jooq.Row17;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_database</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,269 +31,167 @@ public class PgDatabaseRecord extends UpdatableRecordImpl<PgDatabaseRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datname</code>.
-     */
     public void setDatname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDatname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datdba</code>.
-     */
     public void setDatdba(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datdba</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDatdba() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.encoding</code>.
-     */
     public void setEncoding(@NotNull Integer value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.encoding</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getEncoding() {
         return (Integer) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datlocprovider</code>.
-     */
     public void setDatlocprovider(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datlocprovider</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDatlocprovider() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datistemplate</code>.
-     */
     public void setDatistemplate(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datistemplate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getDatistemplate() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datallowconn</code>.
-     */
     public void setDatallowconn(@NotNull Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datallowconn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getDatallowconn() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datconnlimit</code>.
-     */
     public void setDatconnlimit(@NotNull Integer value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datconnlimit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getDatconnlimit() {
         return (Integer) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datfrozenxid</code>.
-     */
     public void setDatfrozenxid(@NotNull Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datfrozenxid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDatfrozenxid() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datminmxid</code>.
-     */
     public void setDatminmxid(@NotNull Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datminmxid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDatminmxid() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.dattablespace</code>.
-     */
     public void setDattablespace(@NotNull Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.dattablespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDattablespace() {
         return (Long) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datcollate</code>.
-     */
     public void setDatcollate(@NotNull String value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datcollate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDatcollate() {
         return (String) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datctype</code>.
-     */
     public void setDatctype(@NotNull String value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datctype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDatctype() {
         return (String) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.daticulocale</code>.
-     */
     public void setDaticulocale(@Nullable String value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.daticulocale</code>.
-     */
     @Nullable
     public String getDaticulocale() {
         return (String) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.daticurules</code>.
-     */
     public void setDaticurules(@Nullable String value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.daticurules</code>.
-     */
     @Nullable
     public String getDaticurules() {
         return (String) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datcollversion</code>.
-     */
     public void setDatcollversion(@Nullable String value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datcollversion</code>.
-     */
     @Nullable
     public String getDatcollversion() {
         return (String) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datacl</code>.
-     */
     public void setDatacl(@Nullable String[] value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datacl</code>.
-     */
     @Nullable
     public String[] getDatacl() {
         return (String[]) get(16);
@@ -780,16 +675,10 @@ public class PgDatabaseRecord extends UpdatableRecordImpl<PgDatabaseRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgDatabaseRecord
-     */
     public PgDatabaseRecord() {
         super(PgDatabase.PG_DATABASE);
     }
 
-    /**
-     * Create a detached, initialised PgDatabaseRecord
-     */
     @ConstructorProperties({ "oid", "datname", "datdba", "encoding", "datlocprovider", "datistemplate", "datallowconn", "datconnlimit", "datfrozenxid", "datminmxid", "dattablespace", "datcollate", "datctype", "daticulocale", "daticurules", "datcollversion", "datacl" })
     public PgDatabaseRecord(@NotNull Long oid, @NotNull String datname, @NotNull Long datdba, @NotNull Integer encoding, @NotNull String datlocprovider, @NotNull Boolean datistemplate, @NotNull Boolean datallowconn, @NotNull Integer datconnlimit, @NotNull Long datfrozenxid, @NotNull Long datminmxid, @NotNull Long dattablespace, @NotNull String datcollate, @NotNull String datctype, @Nullable String daticulocale, @Nullable String daticurules, @Nullable String datcollversion, @Nullable String[] datacl) {
         super(PgDatabase.PG_DATABASE);
@@ -814,9 +703,6 @@ public class PgDatabaseRecord extends UpdatableRecordImpl<PgDatabaseRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgDatabaseRecord
-     */
     public PgDatabaseRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgDatabase value) {
         super(PgDatabase.PG_DATABASE);
 

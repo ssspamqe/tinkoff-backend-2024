@@ -9,7 +9,6 @@ import edu.java.domain.jooq.public_.Public;
 import edu.java.domain.jooq.public_.tables.records.DatabasechangeloglockRecord;
 
 import java.time.LocalDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -33,9 +32,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>public.databasechangeloglock</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -48,38 +44,20 @@ public class Databasechangeloglock extends TableImpl<DatabasechangeloglockRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>public.databasechangeloglock</code>
-     */
     public static final Databasechangeloglock DATABASECHANGELOGLOCK = new Databasechangeloglock();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<DatabasechangeloglockRecord> getRecordType() {
         return DatabasechangeloglockRecord.class;
     }
 
-    /**
-     * The column <code>public.databasechangeloglock.id</code>.
-     */
     public final TableField<DatabasechangeloglockRecord, Integer> ID = createField(DSL.name("id"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>public.databasechangeloglock.locked</code>.
-     */
     public final TableField<DatabasechangeloglockRecord, Boolean> LOCKED = createField(DSL.name("locked"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>public.databasechangeloglock.lockgranted</code>.
-     */
     public final TableField<DatabasechangeloglockRecord, LocalDateTime> LOCKGRANTED = createField(DSL.name("lockgranted"), SQLDataType.LOCALDATETIME(6), this, "");
 
-    /**
-     * The column <code>public.databasechangeloglock.lockedby</code>.
-     */
     public final TableField<DatabasechangeloglockRecord, String> LOCKEDBY = createField(DSL.name("lockedby"), SQLDataType.VARCHAR(255), this, "");
 
     private Databasechangeloglock(Name alias, Table<DatabasechangeloglockRecord> aliased) {
@@ -90,25 +68,14 @@ public class Databasechangeloglock extends TableImpl<DatabasechangeloglockRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>public.databasechangeloglock</code> table
-     * reference
-     */
     public Databasechangeloglock(String alias) {
         this(DSL.name(alias), DATABASECHANGELOGLOCK);
     }
 
-    /**
-     * Create an aliased <code>public.databasechangeloglock</code> table
-     * reference
-     */
     public Databasechangeloglock(Name alias) {
         this(alias, DATABASECHANGELOGLOCK);
     }
 
-    /**
-     * Create a <code>public.databasechangeloglock</code> table reference
-     */
     public Databasechangeloglock() {
         this(DSL.name("databasechangeloglock"), null);
     }
@@ -147,27 +114,18 @@ public class Databasechangeloglock extends TableImpl<DatabasechangeloglockRecord
         return new Databasechangeloglock(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Databasechangeloglock rename(String name) {
         return new Databasechangeloglock(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Databasechangeloglock rename(Name name) {
         return new Databasechangeloglock(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Databasechangeloglock rename(Table<?> name) {
@@ -184,17 +142,10 @@ public class Databasechangeloglock extends TableImpl<DatabasechangeloglockRecord
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Integer, ? super Boolean, ? super LocalDateTime, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Integer, ? super Boolean, ? super LocalDateTime, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_xact_user_functions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,95 +30,55 @@ public class PgStatXactUserFunctionsRecord extends TableRecordImpl<PgStatXactUse
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_functions.funcid</code>.
-     */
     public void setFuncid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_functions.funcid</code>.
-     */
     @Nullable
     public Long getFuncid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_functions.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_functions.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_functions.funcname</code>.
-     */
     public void setFuncname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_functions.funcname</code>.
-     */
     @Nullable
     public String getFuncname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_functions.calls</code>.
-     */
     public void setCalls(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_functions.calls</code>.
-     */
     @Nullable
     public Long getCalls() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_functions.total_time</code>.
-     */
     public void setTotalTime(@Nullable Double value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_functions.total_time</code>.
-     */
     @Nullable
     public Double getTotalTime() {
         return (Double) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_functions.self_time</code>.
-     */
     public void setSelfTime(@Nullable Double value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_functions.self_time</code>.
-     */
     @Nullable
     public Double getSelfTime() {
         return (Double) get(5);
@@ -309,16 +266,10 @@ public class PgStatXactUserFunctionsRecord extends TableRecordImpl<PgStatXactUse
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatXactUserFunctionsRecord
-     */
     public PgStatXactUserFunctionsRecord() {
         super(PgStatXactUserFunctions.PG_STAT_XACT_USER_FUNCTIONS);
     }
 
-    /**
-     * Create a detached, initialised PgStatXactUserFunctionsRecord
-     */
     @ConstructorProperties({ "funcid", "schemaname", "funcname", "calls", "totalTime", "selfTime" })
     public PgStatXactUserFunctionsRecord(@Nullable Long funcid, @Nullable String schemaname, @Nullable String funcname, @Nullable Long calls, @Nullable Double totalTime, @Nullable Double selfTime) {
         super(PgStatXactUserFunctions.PG_STAT_XACT_USER_FUNCTIONS);
@@ -332,9 +283,6 @@ public class PgStatXactUserFunctionsRecord extends TableRecordImpl<PgStatXactUse
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatXactUserFunctionsRecord
-     */
     public PgStatXactUserFunctionsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatXactUserFunctions value) {
         super(PgStatXactUserFunctions.PG_STAT_XACT_USER_FUNCTIONS);
 

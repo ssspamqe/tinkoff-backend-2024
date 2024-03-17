@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_logical_slot_peek_changes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,59 +47,31 @@ public class PgLogicalSlotPeekChanges implements Serializable {
         this.data = data;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getLsn() {
         return this.lsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setLsn(@Nullable Object lsn) {
         this.lsn = lsn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_logical_slot_peek_changes.xid</code>.
-     */
     @Nullable
     public Long getXid() {
         return this.xid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_logical_slot_peek_changes.xid</code>.
-     */
     public void setXid(@Nullable Long xid) {
         this.xid = xid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_logical_slot_peek_changes.data</code>.
-     */
     @Nullable
     public String getData() {
         return this.data;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_logical_slot_peek_changes.data</code>.
-     */
     public void setData(@Nullable String data) {
         this.data = data;
     }

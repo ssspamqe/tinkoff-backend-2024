@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_ssl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -71,122 +68,74 @@ public class PgStatSsl implements Serializable {
         this.issuerDn = issuerDn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.ssl</code>.
-     */
     @Nullable
     public Boolean getSsl() {
         return this.ssl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.ssl</code>.
-     */
     public void setSsl(@Nullable Boolean ssl) {
         this.ssl = ssl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.version</code>.
-     */
     @Nullable
     public String getVersion() {
         return this.version;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.version</code>.
-     */
     public void setVersion(@Nullable String version) {
         this.version = version;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.cipher</code>.
-     */
     @Nullable
     public String getCipher() {
         return this.cipher;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.cipher</code>.
-     */
     public void setCipher(@Nullable String cipher) {
         this.cipher = cipher;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.bits</code>.
-     */
     @Nullable
     public Integer getBits() {
         return this.bits;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.bits</code>.
-     */
     public void setBits(@Nullable Integer bits) {
         this.bits = bits;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.client_dn</code>.
-     */
     @Nullable
     public String getClientDn() {
         return this.clientDn;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.client_dn</code>.
-     */
     public void setClientDn(@Nullable String clientDn) {
         this.clientDn = clientDn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.client_serial</code>.
-     */
     @Nullable
     public BigDecimal getClientSerial() {
         return this.clientSerial;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.client_serial</code>.
-     */
     public void setClientSerial(@Nullable BigDecimal clientSerial) {
         this.clientSerial = clientSerial;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_ssl.issuer_dn</code>.
-     */
     @Nullable
     public String getIssuerDn() {
         return this.issuerDn;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_ssl.issuer_dn</code>.
-     */
     public void setIssuerDn(@Nullable String issuerDn) {
         this.issuerDn = issuerDn;
     }

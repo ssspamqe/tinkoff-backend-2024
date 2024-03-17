@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgUserMappingRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_user_mapping</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,38 +45,20 @@ public class PgUserMapping extends TableImpl<PgUserMappingRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_user_mapping</code>
-     */
     public static final PgUserMapping PG_USER_MAPPING = new PgUserMapping();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgUserMappingRecord> getRecordType() {
         return PgUserMappingRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_user_mapping.oid</code>.
-     */
     public final TableField<PgUserMappingRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user_mapping.umuser</code>.
-     */
     public final TableField<PgUserMappingRecord, Long> UMUSER = createField(DSL.name("umuser"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user_mapping.umserver</code>.
-     */
     public final TableField<PgUserMappingRecord, Long> UMSERVER = createField(DSL.name("umserver"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user_mapping.umoptions</code>.
-     */
     public final TableField<PgUserMappingRecord, String[]> UMOPTIONS = createField(DSL.name("umoptions"), SQLDataType.CLOB.array(), this, "");
 
     private PgUserMapping(Name alias, Table<PgUserMappingRecord> aliased) {
@@ -91,23 +69,14 @@ public class PgUserMapping extends TableImpl<PgUserMappingRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_user_mapping</code> table reference
-     */
     public PgUserMapping(String alias) {
         this(DSL.name(alias), PG_USER_MAPPING);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_user_mapping</code> table reference
-     */
     public PgUserMapping(Name alias) {
         this(alias, PG_USER_MAPPING);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_user_mapping</code> table reference
-     */
     public PgUserMapping() {
         this(DSL.name("pg_user_mapping"), null);
     }
@@ -152,27 +121,18 @@ public class PgUserMapping extends TableImpl<PgUserMappingRecord> {
         return new PgUserMapping(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUserMapping rename(String name) {
         return new PgUserMapping(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUserMapping rename(Name name) {
         return new PgUserMapping(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUserMapping rename(Table<?> name) {
@@ -189,17 +149,10 @@ public class PgUserMapping extends TableImpl<PgUserMappingRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

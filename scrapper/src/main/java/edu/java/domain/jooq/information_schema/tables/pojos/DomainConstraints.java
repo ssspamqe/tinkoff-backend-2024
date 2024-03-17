@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.domain_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -72,140 +69,76 @@ public class DomainConstraints implements Serializable {
         this.initiallyDeferred = initiallyDeferred;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return this.constraintCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String constraintCatalog) {
         this.constraintCatalog = constraintCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return this.constraintSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String constraintSchema) {
         this.constraintSchema = constraintSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return this.constraintName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String constraintName) {
         this.constraintName = constraintName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.domain_catalog</code>.
-     */
     @Nullable
     public String getDomainCatalog() {
         return this.domainCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.domain_catalog</code>.
-     */
     public void setDomainCatalog(@Nullable String domainCatalog) {
         this.domainCatalog = domainCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.domain_schema</code>.
-     */
     @Nullable
     public String getDomainSchema() {
         return this.domainSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.domain_schema</code>.
-     */
     public void setDomainSchema(@Nullable String domainSchema) {
         this.domainSchema = domainSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.domain_name</code>.
-     */
     @Nullable
     public String getDomainName() {
         return this.domainName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.domain_name</code>.
-     */
     public void setDomainName(@Nullable String domainName) {
         this.domainName = domainName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.is_deferrable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsDeferrable() {
         return this.isDeferrable;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.is_deferrable</code>.
-     */
     public void setIsDeferrable(@Nullable String isDeferrable) {
         this.isDeferrable = isDeferrable;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.initially_deferred</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getInitiallyDeferred() {
         return this.initiallyDeferred;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.initially_deferred</code>.
-     */
     public void setInitiallyDeferred(@Nullable String initiallyDeferred) {
         this.initiallyDeferred = initiallyDeferred;
     }

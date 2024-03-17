@@ -19,9 +19,6 @@ import org.jooq.Row8;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_partitioned_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,139 +31,81 @@ public class PgPartitionedTableRecord extends UpdatableRecordImpl<PgPartitionedT
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partrelid</code>.
-     */
     public void setPartrelid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPartrelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partstrat</code>.
-     */
     public void setPartstrat(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partstrat</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPartstrat() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partnatts</code>.
-     */
     public void setPartnatts(@NotNull Short value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partnatts</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getPartnatts() {
         return (Short) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partdefid</code>.
-     */
     public void setPartdefid(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partdefid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPartdefid() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partattrs</code>.
-     */
     public void setPartattrs(@NotNull Object[] value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partattrs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getPartattrs() {
         return (Object[]) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partclass</code>.
-     */
     public void setPartclass(@NotNull Object[] value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partclass</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getPartclass() {
         return (Object[]) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partcollation</code>.
-     */
     public void setPartcollation(@NotNull Object[] value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partcollation</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getPartcollation() {
         return (Object[]) get(6);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPartexprs(@Nullable Object value) {
         set(7, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPartexprs() {
@@ -241,14 +180,6 @@ public class PgPartitionedTableRecord extends UpdatableRecordImpl<PgPartitionedT
         return PgPartitionedTable.PG_PARTITIONED_TABLE.PARTCOLLATION;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -298,14 +229,6 @@ public class PgPartitionedTableRecord extends UpdatableRecordImpl<PgPartitionedT
         return getPartcollation();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -355,14 +278,6 @@ public class PgPartitionedTableRecord extends UpdatableRecordImpl<PgPartitionedT
         return getPartcollation();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -419,14 +334,6 @@ public class PgPartitionedTableRecord extends UpdatableRecordImpl<PgPartitionedT
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -453,16 +360,10 @@ public class PgPartitionedTableRecord extends UpdatableRecordImpl<PgPartitionedT
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPartitionedTableRecord
-     */
     public PgPartitionedTableRecord() {
         super(PgPartitionedTable.PG_PARTITIONED_TABLE);
     }
 
-    /**
-     * Create a detached, initialised PgPartitionedTableRecord
-     */
     @ConstructorProperties({ "partrelid", "partstrat", "partnatts", "partdefid", "partattrs", "partclass", "partcollation", "partexprs" })
     public PgPartitionedTableRecord(@NotNull Long partrelid, @NotNull String partstrat, @NotNull Short partnatts, @NotNull Long partdefid, @NotNull Object[] partattrs, @NotNull Object[] partclass, @NotNull Object[] partcollation, @Nullable Object partexprs) {
         super(PgPartitionedTable.PG_PARTITIONED_TABLE);
@@ -478,9 +379,6 @@ public class PgPartitionedTableRecord extends UpdatableRecordImpl<PgPartitionedT
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPartitionedTableRecord
-     */
     public PgPartitionedTableRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPartitionedTable value) {
         super(PgPartitionedTable.PG_PARTITIONED_TABLE);
 

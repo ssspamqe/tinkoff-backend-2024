@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgRangeRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_range</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,53 +45,26 @@ public class PgRange extends TableImpl<PgRangeRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_range</code>
-     */
     public static final PgRange PG_RANGE = new PgRange();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgRangeRecord> getRecordType() {
         return PgRangeRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_range.rngtypid</code>.
-     */
     public final TableField<PgRangeRecord, Long> RNGTYPID = createField(DSL.name("rngtypid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_range.rngsubtype</code>.
-     */
     public final TableField<PgRangeRecord, Long> RNGSUBTYPE = createField(DSL.name("rngsubtype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_range.rngmultitypid</code>.
-     */
     public final TableField<PgRangeRecord, Long> RNGMULTITYPID = createField(DSL.name("rngmultitypid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_range.rngcollation</code>.
-     */
     public final TableField<PgRangeRecord, Long> RNGCOLLATION = createField(DSL.name("rngcollation"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_range.rngsubopc</code>.
-     */
     public final TableField<PgRangeRecord, Long> RNGSUBOPC = createField(DSL.name("rngsubopc"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_range.rngcanonical</code>.
-     */
     public final TableField<PgRangeRecord, String> RNGCANONICAL = createField(DSL.name("rngcanonical"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_range.rngsubdiff</code>.
-     */
     public final TableField<PgRangeRecord, String> RNGSUBDIFF = createField(DSL.name("rngsubdiff"), SQLDataType.VARCHAR.nullable(false), this, "");
 
     private PgRange(Name alias, Table<PgRangeRecord> aliased) {
@@ -106,23 +75,14 @@ public class PgRange extends TableImpl<PgRangeRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_range</code> table reference
-     */
     public PgRange(String alias) {
         this(DSL.name(alias), PG_RANGE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_range</code> table reference
-     */
     public PgRange(Name alias) {
         this(alias, PG_RANGE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_range</code> table reference
-     */
     public PgRange() {
         this(DSL.name("pg_range"), null);
     }
@@ -167,27 +127,18 @@ public class PgRange extends TableImpl<PgRangeRecord> {
         return new PgRange(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRange rename(String name) {
         return new PgRange(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRange rename(Name name) {
         return new PgRange(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRange rename(Table<?> name) {
@@ -204,17 +155,10 @@ public class PgRange extends TableImpl<PgRangeRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

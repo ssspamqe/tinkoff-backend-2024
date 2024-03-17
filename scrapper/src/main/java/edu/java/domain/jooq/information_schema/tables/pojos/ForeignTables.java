@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.foreign_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,87 +55,47 @@ public class ForeignTables implements Serializable {
         this.foreignServerName = foreignServerName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_tables.foreign_table_catalog</code>.
-     */
     @Nullable
     public String getForeignTableCatalog() {
         return this.foreignTableCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_tables.foreign_table_catalog</code>.
-     */
     public void setForeignTableCatalog(@Nullable String foreignTableCatalog) {
         this.foreignTableCatalog = foreignTableCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_tables.foreign_table_schema</code>.
-     */
     @Nullable
     public String getForeignTableSchema() {
         return this.foreignTableSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_tables.foreign_table_schema</code>.
-     */
     public void setForeignTableSchema(@Nullable String foreignTableSchema) {
         this.foreignTableSchema = foreignTableSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_tables.foreign_table_name</code>.
-     */
     @Nullable
     public String getForeignTableName() {
         return this.foreignTableName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_tables.foreign_table_name</code>.
-     */
     public void setForeignTableName(@Nullable String foreignTableName) {
         this.foreignTableName = foreignTableName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_tables.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return this.foreignServerCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_tables.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String foreignServerCatalog) {
         this.foreignServerCatalog = foreignServerCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_tables.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return this.foreignServerName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_tables.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String foreignServerName) {
         this.foreignServerName = foreignServerName;
     }

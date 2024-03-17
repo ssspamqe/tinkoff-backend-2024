@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLogicalSlotGetBinaryChangesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_logical_slot_get_binary_changes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,42 +38,19 @@ public class PgLogicalSlotGetBinaryChanges extends TableImpl<PgLogicalSlotGetBin
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_logical_slot_get_binary_changes</code>
-     */
     public static final PgLogicalSlotGetBinaryChanges PG_LOGICAL_SLOT_GET_BINARY_CHANGES = new PgLogicalSlotGetBinaryChanges();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLogicalSlotGetBinaryChangesRecord> getRecordType() {
         return PgLogicalSlotGetBinaryChangesRecord.class;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgLogicalSlotGetBinaryChangesRecord, Object> LSN = createField(DSL.name("lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_logical_slot_get_binary_changes.xid</code>.
-     */
     public final TableField<PgLogicalSlotGetBinaryChangesRecord, Long> XID = createField(DSL.name("xid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_logical_slot_get_binary_changes.data</code>.
-     */
     public final TableField<PgLogicalSlotGetBinaryChangesRecord, byte[]> DATA = createField(DSL.name("data"), SQLDataType.BLOB, this, "");
 
     private PgLogicalSlotGetBinaryChanges(Name alias, Table<PgLogicalSlotGetBinaryChangesRecord> aliased) {
@@ -94,28 +66,14 @@ public class PgLogicalSlotGetBinaryChanges extends TableImpl<PgLogicalSlotGetBin
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased
-     * <code>pg_catalog.pg_logical_slot_get_binary_changes</code> table
-     * reference
-     */
     public PgLogicalSlotGetBinaryChanges(String alias) {
         this(DSL.name(alias), PG_LOGICAL_SLOT_GET_BINARY_CHANGES);
     }
 
-    /**
-     * Create an aliased
-     * <code>pg_catalog.pg_logical_slot_get_binary_changes</code> table
-     * reference
-     */
     public PgLogicalSlotGetBinaryChanges(Name alias) {
         this(alias, PG_LOGICAL_SLOT_GET_BINARY_CHANGES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_logical_slot_get_binary_changes</code> table
-     * reference
-     */
     public PgLogicalSlotGetBinaryChanges() {
         this(DSL.name("pg_logical_slot_get_binary_changes"), null);
     }
@@ -144,27 +102,18 @@ public class PgLogicalSlotGetBinaryChanges extends TableImpl<PgLogicalSlotGetBin
         return new PgLogicalSlotGetBinaryChanges(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLogicalSlotGetBinaryChanges rename(String name) {
         return new PgLogicalSlotGetBinaryChanges(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLogicalSlotGetBinaryChanges rename(Name name) {
         return new PgLogicalSlotGetBinaryChanges(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLogicalSlotGetBinaryChanges rename(Table<?> name) {
@@ -181,9 +130,6 @@ public class PgLogicalSlotGetBinaryChanges extends TableImpl<PgLogicalSlotGetBin
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLogicalSlotGetBinaryChanges call(
           String slotName
         , Object uptoLsn
@@ -200,9 +146,6 @@ public class PgLogicalSlotGetBinaryChanges extends TableImpl<PgLogicalSlotGetBin
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLogicalSlotGetBinaryChanges call(
           Field<String> slotName
         , Field<Object> uptoLsn
@@ -219,17 +162,10 @@ public class PgLogicalSlotGetBinaryChanges extends TableImpl<PgLogicalSlotGetBin
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Object, ? super Long, ? super byte[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Object, ? super Long, ? super byte[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

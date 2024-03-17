@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_range</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,114 +63,72 @@ public class PgRange implements Serializable {
         this.rngsubdiff = rngsubdiff;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngtypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngtypid() {
         return this.rngtypid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngtypid</code>.
-     */
     public void setRngtypid(@NotNull Long rngtypid) {
         this.rngtypid = rngtypid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngsubtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngsubtype() {
         return this.rngsubtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngsubtype</code>.
-     */
     public void setRngsubtype(@NotNull Long rngsubtype) {
         this.rngsubtype = rngsubtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngmultitypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngmultitypid() {
         return this.rngmultitypid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngmultitypid</code>.
-     */
     public void setRngmultitypid(@NotNull Long rngmultitypid) {
         this.rngmultitypid = rngmultitypid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngcollation</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngcollation() {
         return this.rngcollation;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngcollation</code>.
-     */
     public void setRngcollation(@NotNull Long rngcollation) {
         this.rngcollation = rngcollation;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngsubopc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngsubopc() {
         return this.rngsubopc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngsubopc</code>.
-     */
     public void setRngsubopc(@NotNull Long rngsubopc) {
         this.rngsubopc = rngsubopc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngcanonical</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRngcanonical() {
         return this.rngcanonical;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngcanonical</code>.
-     */
     public void setRngcanonical(@NotNull String rngcanonical) {
         this.rngcanonical = rngcanonical;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngsubdiff</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRngsubdiff() {
         return this.rngsubdiff;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngsubdiff</code>.
-     */
     public void setRngsubdiff(@NotNull String rngsubdiff) {
         this.rngsubdiff = rngsubdiff;
     }

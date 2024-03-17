@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_subscription_stats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -59,83 +56,47 @@ public class PgStatSubscriptionStats implements Serializable {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_subscription_stats.subid</code>.
-     */
     @Nullable
     public Long getSubid() {
         return this.subid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_subscription_stats.subid</code>.
-     */
     public void setSubid(@Nullable Long subid) {
         this.subid = subid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_subscription_stats.subname</code>.
-     */
     @Nullable
     public String getSubname() {
         return this.subname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_subscription_stats.subname</code>.
-     */
     public void setSubname(@Nullable String subname) {
         this.subname = subname;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_subscription_stats.apply_error_count</code>.
-     */
     @Nullable
     public Long getApplyErrorCount() {
         return this.applyErrorCount;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_subscription_stats.apply_error_count</code>.
-     */
     public void setApplyErrorCount(@Nullable Long applyErrorCount) {
         this.applyErrorCount = applyErrorCount;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_subscription_stats.sync_error_count</code>.
-     */
     @Nullable
     public Long getSyncErrorCount() {
         return this.syncErrorCount;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_subscription_stats.sync_error_count</code>.
-     */
     public void setSyncErrorCount(@Nullable Long syncErrorCount) {
         this.syncErrorCount = syncErrorCount;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_subscription_stats.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_subscription_stats.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }

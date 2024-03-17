@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_cursor</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -63,92 +60,56 @@ public class PgCursor implements Serializable {
         this.creationTime = creationTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.statement</code>.
-     */
     @Nullable
     public String getStatement() {
         return this.statement;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.statement</code>.
-     */
     public void setStatement(@Nullable String statement) {
         this.statement = statement;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.is_holdable</code>.
-     */
     @Nullable
     public Boolean getIsHoldable() {
         return this.isHoldable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.is_holdable</code>.
-     */
     public void setIsHoldable(@Nullable Boolean isHoldable) {
         this.isHoldable = isHoldable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.is_binary</code>.
-     */
     @Nullable
     public Boolean getIsBinary() {
         return this.isBinary;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.is_binary</code>.
-     */
     public void setIsBinary(@Nullable Boolean isBinary) {
         this.isBinary = isBinary;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.is_scrollable</code>.
-     */
     @Nullable
     public Boolean getIsScrollable() {
         return this.isScrollable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.is_scrollable</code>.
-     */
     public void setIsScrollable(@Nullable Boolean isScrollable) {
         this.isScrollable = isScrollable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.creation_time</code>.
-     */
     @Nullable
     public OffsetDateTime getCreationTime() {
         return this.creationTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.creation_time</code>.
-     */
     public void setCreationTime(@Nullable OffsetDateTime creationTime) {
         this.creationTime = creationTime;
     }

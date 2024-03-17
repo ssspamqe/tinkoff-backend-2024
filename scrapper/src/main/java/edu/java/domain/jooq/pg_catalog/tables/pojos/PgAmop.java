@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_amop</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -74,146 +71,92 @@ public class PgAmop implements Serializable {
         this.amopsortfamily = amopsortfamily;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopfamily</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmopfamily() {
         return this.amopfamily;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopfamily</code>.
-     */
     public void setAmopfamily(@NotNull Long amopfamily) {
         this.amopfamily = amopfamily;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amoplefttype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmoplefttype() {
         return this.amoplefttype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amoplefttype</code>.
-     */
     public void setAmoplefttype(@NotNull Long amoplefttype) {
         this.amoplefttype = amoplefttype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amoprighttype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmoprighttype() {
         return this.amoprighttype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amoprighttype</code>.
-     */
     public void setAmoprighttype(@NotNull Long amoprighttype) {
         this.amoprighttype = amoprighttype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopstrategy</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAmopstrategy() {
         return this.amopstrategy;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopstrategy</code>.
-     */
     public void setAmopstrategy(@NotNull Short amopstrategy) {
         this.amopstrategy = amopstrategy;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amoppurpose</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmoppurpose() {
         return this.amoppurpose;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amoppurpose</code>.
-     */
     public void setAmoppurpose(@NotNull String amoppurpose) {
         this.amoppurpose = amoppurpose;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopopr</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmopopr() {
         return this.amopopr;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopopr</code>.
-     */
     public void setAmopopr(@NotNull Long amopopr) {
         this.amopopr = amopopr;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopmethod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmopmethod() {
         return this.amopmethod;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopmethod</code>.
-     */
     public void setAmopmethod(@NotNull Long amopmethod) {
         this.amopmethod = amopmethod;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopsortfamily</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmopsortfamily() {
         return this.amopsortfamily;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopsortfamily</code>.
-     */
     public void setAmopsortfamily(@NotNull Long amopsortfamily) {
         this.amopsortfamily = amopsortfamily;
     }

@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.regexp_matches</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,17 +40,11 @@ public class RegexpMatches implements Serializable {
         this.regexpMatches = regexpMatches;
     }
 
-    /**
-     * Getter for <code>pg_catalog.regexp_matches.regexp_matches</code>.
-     */
     @Nullable
     public String[] getRegexpMatches() {
         return this.regexpMatches;
     }
 
-    /**
-     * Setter for <code>pg_catalog.regexp_matches.regexp_matches</code>.
-     */
     public void setRegexpMatches(@Nullable String[] regexpMatches) {
         this.regexpMatches = regexpMatches;
     }

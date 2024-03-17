@@ -19,9 +19,6 @@ import org.jooq.Row21;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_index</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,358 +31,212 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indexrelid</code>.
-     */
     public void setIndexrelid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indexrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getIndexrelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indrelid</code>.
-     */
     public void setIndrelid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getIndrelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indnatts</code>.
-     */
     public void setIndnatts(@NotNull Short value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indnatts</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getIndnatts() {
         return (Short) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indnkeyatts</code>.
-     */
     public void setIndnkeyatts(@NotNull Short value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indnkeyatts</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getIndnkeyatts() {
         return (Short) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisunique</code>.
-     */
     public void setIndisunique(@NotNull Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisunique</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisunique() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indnullsnotdistinct</code>.
-     */
     public void setIndnullsnotdistinct(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indnullsnotdistinct</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndnullsnotdistinct() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisprimary</code>.
-     */
     public void setIndisprimary(@NotNull Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisprimary</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisprimary() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisexclusion</code>.
-     */
     public void setIndisexclusion(@NotNull Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisexclusion</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisexclusion() {
         return (Boolean) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indimmediate</code>.
-     */
     public void setIndimmediate(@NotNull Boolean value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indimmediate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndimmediate() {
         return (Boolean) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisclustered</code>.
-     */
     public void setIndisclustered(@NotNull Boolean value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisclustered</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisclustered() {
         return (Boolean) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisvalid</code>.
-     */
     public void setIndisvalid(@NotNull Boolean value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisvalid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisvalid() {
         return (Boolean) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indcheckxmin</code>.
-     */
     public void setIndcheckxmin(@NotNull Boolean value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indcheckxmin</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndcheckxmin() {
         return (Boolean) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisready</code>.
-     */
     public void setIndisready(@NotNull Boolean value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisready</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisready() {
         return (Boolean) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indislive</code>.
-     */
     public void setIndislive(@NotNull Boolean value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indislive</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndislive() {
         return (Boolean) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indisreplident</code>.
-     */
     public void setIndisreplident(@NotNull Boolean value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indisreplident</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIndisreplident() {
         return (Boolean) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indkey</code>.
-     */
     public void setIndkey(@NotNull Object[] value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indkey</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getIndkey() {
         return (Object[]) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indcollation</code>.
-     */
     public void setIndcollation(@NotNull Object[] value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indcollation</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getIndcollation() {
         return (Object[]) get(16);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indclass</code>.
-     */
     public void setIndclass(@NotNull Object[] value) {
         set(17, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indclass</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getIndclass() {
         return (Object[]) get(17);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_index.indoption</code>.
-     */
     public void setIndoption(@NotNull Object[] value) {
         set(18, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_index.indoption</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getIndoption() {
         return (Object[]) get(18);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setIndexprs(@Nullable Object value) {
         set(19, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getIndexprs() {
         return get(19);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setIndpred(@Nullable Object value) {
         set(20, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getIndpred() {
@@ -532,14 +383,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         return PgIndex.PG_INDEX.INDOPTION;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -547,14 +390,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         return PgIndex.PG_INDEX.INDEXPRS;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -676,14 +511,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         return getIndoption();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -691,14 +518,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         return getIndexprs();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -820,14 +639,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         return getIndoption();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -835,14 +646,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         return getIndexprs();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -983,14 +786,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -999,14 +794,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -1046,16 +833,10 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgIndexRecord
-     */
     public PgIndexRecord() {
         super(PgIndex.PG_INDEX);
     }
 
-    /**
-     * Create a detached, initialised PgIndexRecord
-     */
     @ConstructorProperties({ "indexrelid", "indrelid", "indnatts", "indnkeyatts", "indisunique", "indnullsnotdistinct", "indisprimary", "indisexclusion", "indimmediate", "indisclustered", "indisvalid", "indcheckxmin", "indisready", "indislive", "indisreplident", "indkey", "indcollation", "indclass", "indoption", "indexprs", "indpred" })
     public PgIndexRecord(@NotNull Long indexrelid, @NotNull Long indrelid, @NotNull Short indnatts, @NotNull Short indnkeyatts, @NotNull Boolean indisunique, @NotNull Boolean indnullsnotdistinct, @NotNull Boolean indisprimary, @NotNull Boolean indisexclusion, @NotNull Boolean indimmediate, @NotNull Boolean indisclustered, @NotNull Boolean indisvalid, @NotNull Boolean indcheckxmin, @NotNull Boolean indisready, @NotNull Boolean indislive, @NotNull Boolean indisreplident, @NotNull Object[] indkey, @NotNull Object[] indcollation, @NotNull Object[] indclass, @NotNull Object[] indoption, @Nullable Object indexprs, @Nullable Object indpred) {
         super(PgIndex.PG_INDEX);
@@ -1084,9 +865,6 @@ public class PgIndexRecord extends UpdatableRecordImpl<PgIndexRecord> implements
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgIndexRecord
-     */
     public PgIndexRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgIndex value) {
         super(PgIndex.PG_INDEX);
 

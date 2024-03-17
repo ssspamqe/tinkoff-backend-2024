@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.txid_snapshot_xip</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,16 +30,10 @@ public class TxidSnapshotXipRecord extends TableRecordImpl<TxidSnapshotXipRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.txid_snapshot_xip.txid_snapshot_xip</code>.
-     */
     public void setTxidSnapshotXip(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.txid_snapshot_xip.txid_snapshot_xip</code>.
-     */
     @Nullable
     public Long getTxidSnapshotXip() {
         return (Long) get(0);
@@ -100,16 +91,10 @@ public class TxidSnapshotXipRecord extends TableRecordImpl<TxidSnapshotXipRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TxidSnapshotXipRecord
-     */
     public TxidSnapshotXipRecord() {
         super(TxidSnapshotXip.TXID_SNAPSHOT_XIP);
     }
 
-    /**
-     * Create a detached, initialised TxidSnapshotXipRecord
-     */
     @ConstructorProperties({ "txidSnapshotXip" })
     public TxidSnapshotXipRecord(@Nullable Long txidSnapshotXip) {
         super(TxidSnapshotXip.TXID_SNAPSHOT_XIP);
@@ -118,9 +103,6 @@ public class TxidSnapshotXipRecord extends TableRecordImpl<TxidSnapshotXipRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TxidSnapshotXipRecord
-     */
     public TxidSnapshotXipRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.TxidSnapshotXip value) {
         super(TxidSnapshotXip.TXID_SNAPSHOT_XIP);
 

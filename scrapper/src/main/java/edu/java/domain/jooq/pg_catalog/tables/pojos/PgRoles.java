@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_roles</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -92,197 +89,119 @@ public class PgRoles implements Serializable {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolname</code>.
-     */
     @Nullable
     public String getRolname() {
         return this.rolname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolname</code>.
-     */
     public void setRolname(@Nullable String rolname) {
         this.rolname = rolname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolsuper</code>.
-     */
     @Nullable
     public Boolean getRolsuper() {
         return this.rolsuper;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolsuper</code>.
-     */
     public void setRolsuper(@Nullable Boolean rolsuper) {
         this.rolsuper = rolsuper;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolinherit</code>.
-     */
     @Nullable
     public Boolean getRolinherit() {
         return this.rolinherit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolinherit</code>.
-     */
     public void setRolinherit(@Nullable Boolean rolinherit) {
         this.rolinherit = rolinherit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolcreaterole</code>.
-     */
     @Nullable
     public Boolean getRolcreaterole() {
         return this.rolcreaterole;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolcreaterole</code>.
-     */
     public void setRolcreaterole(@Nullable Boolean rolcreaterole) {
         this.rolcreaterole = rolcreaterole;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolcreatedb</code>.
-     */
     @Nullable
     public Boolean getRolcreatedb() {
         return this.rolcreatedb;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolcreatedb</code>.
-     */
     public void setRolcreatedb(@Nullable Boolean rolcreatedb) {
         this.rolcreatedb = rolcreatedb;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolcanlogin</code>.
-     */
     @Nullable
     public Boolean getRolcanlogin() {
         return this.rolcanlogin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolcanlogin</code>.
-     */
     public void setRolcanlogin(@Nullable Boolean rolcanlogin) {
         this.rolcanlogin = rolcanlogin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolreplication</code>.
-     */
     @Nullable
     public Boolean getRolreplication() {
         return this.rolreplication;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolreplication</code>.
-     */
     public void setRolreplication(@Nullable Boolean rolreplication) {
         this.rolreplication = rolreplication;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolconnlimit</code>.
-     */
     @Nullable
     public Integer getRolconnlimit() {
         return this.rolconnlimit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolconnlimit</code>.
-     */
     public void setRolconnlimit(@Nullable Integer rolconnlimit) {
         this.rolconnlimit = rolconnlimit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolpassword</code>.
-     */
     @Nullable
     public String getRolpassword() {
         return this.rolpassword;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolpassword</code>.
-     */
     public void setRolpassword(@Nullable String rolpassword) {
         this.rolpassword = rolpassword;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolvaliduntil</code>.
-     */
     @Nullable
     public OffsetDateTime getRolvaliduntil() {
         return this.rolvaliduntil;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolvaliduntil</code>.
-     */
     public void setRolvaliduntil(@Nullable OffsetDateTime rolvaliduntil) {
         this.rolvaliduntil = rolvaliduntil;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolbypassrls</code>.
-     */
     @Nullable
     public Boolean getRolbypassrls() {
         return this.rolbypassrls;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolbypassrls</code>.
-     */
     public void setRolbypassrls(@Nullable Boolean rolbypassrls) {
         this.rolbypassrls = rolbypassrls;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolconfig</code>.
-     */
     @Nullable
     public String[] getRolconfig() {
         return this.rolconfig;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolconfig</code>.
-     */
     public void setRolconfig(@Nullable String[] rolconfig) {
         this.rolconfig = rolconfig;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.oid</code>.
-     */
     @Nullable
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.oid</code>.
-     */
     public void setOid(@Nullable Long oid) {
         this.oid = oid;
     }

@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_default_acl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -59,82 +56,52 @@ public class PgDefaultAcl implements Serializable {
         this.defaclacl = defaclacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.defaclrole</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDefaclrole() {
         return this.defaclrole;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.defaclrole</code>.
-     */
     public void setDefaclrole(@NotNull Long defaclrole) {
         this.defaclrole = defaclrole;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.defaclnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDefaclnamespace() {
         return this.defaclnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.defaclnamespace</code>.
-     */
     public void setDefaclnamespace(@NotNull Long defaclnamespace) {
         this.defaclnamespace = defaclnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.defaclobjtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDefaclobjtype() {
         return this.defaclobjtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.defaclobjtype</code>.
-     */
     public void setDefaclobjtype(@NotNull String defaclobjtype) {
         this.defaclobjtype = defaclobjtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.defaclacl</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String[] getDefaclacl() {
         return this.defaclacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.defaclacl</code>.
-     */
     public void setDefaclacl(@NotNull String[] defaclacl) {
         this.defaclacl = defaclacl;
     }

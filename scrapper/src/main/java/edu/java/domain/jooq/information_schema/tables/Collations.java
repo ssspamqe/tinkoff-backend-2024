@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.CollationsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.collations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,38 +39,20 @@ public class Collations extends TableImpl<CollationsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.collations</code>
-     */
     public static final Collations COLLATIONS = new Collations();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<CollationsRecord> getRecordType() {
         return CollationsRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.collations.collation_catalog</code>.
-     */
     public final TableField<CollationsRecord, String> COLLATION_CATALOG = createField(DSL.name("collation_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.collations.collation_schema</code>.
-     */
     public final TableField<CollationsRecord, String> COLLATION_SCHEMA = createField(DSL.name("collation_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.collations.collation_name</code>.
-     */
     public final TableField<CollationsRecord, String> COLLATION_NAME = createField(DSL.name("collation_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.collations.pad_attribute</code>.
-     */
     public final TableField<CollationsRecord, String> PAD_ATTRIBUTE = createField(DSL.name("pad_attribute"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private Collations(Name alias, Table<CollationsRecord> aliased) {
@@ -96,25 +73,14 @@ public class Collations extends TableImpl<CollationsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.collations</code> table
-     * reference
-     */
     public Collations(String alias) {
         this(DSL.name(alias), COLLATIONS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.collations</code> table
-     * reference
-     */
     public Collations(Name alias) {
         this(alias, COLLATIONS);
     }
 
-    /**
-     * Create a <code>information_schema.collations</code> table reference
-     */
     public Collations() {
         this(DSL.name("collations"), null);
     }
@@ -147,27 +113,18 @@ public class Collations extends TableImpl<CollationsRecord> {
         return new Collations(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Collations rename(String name) {
         return new Collations(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Collations rename(Name name) {
         return new Collations(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Collations rename(Table<?> name) {
@@ -184,17 +141,10 @@ public class Collations extends TableImpl<CollationsRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_db_role_setting</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,48 +31,30 @@ public class PgDbRoleSettingRecord extends UpdatableRecordImpl<PgDbRoleSettingRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_db_role_setting.setdatabase</code>.
-     */
     public void setSetdatabase(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_db_role_setting.setdatabase</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSetdatabase() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_db_role_setting.setrole</code>.
-     */
     public void setSetrole(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_db_role_setting.setrole</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSetrole() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_db_role_setting.setconfig</code>.
-     */
     public void setSetconfig(@Nullable String[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_db_role_setting.setconfig</code>.
-     */
     @Nullable
     public String[] getSetconfig() {
         return (String[]) get(2);
@@ -195,16 +174,10 @@ public class PgDbRoleSettingRecord extends UpdatableRecordImpl<PgDbRoleSettingRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgDbRoleSettingRecord
-     */
     public PgDbRoleSettingRecord() {
         super(PgDbRoleSetting.PG_DB_ROLE_SETTING);
     }
 
-    /**
-     * Create a detached, initialised PgDbRoleSettingRecord
-     */
     @ConstructorProperties({ "setdatabase", "setrole", "setconfig" })
     public PgDbRoleSettingRecord(@NotNull Long setdatabase, @NotNull Long setrole, @Nullable String[] setconfig) {
         super(PgDbRoleSetting.PG_DB_ROLE_SETTING);
@@ -215,9 +188,6 @@ public class PgDbRoleSettingRecord extends UpdatableRecordImpl<PgDbRoleSettingRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgDbRoleSettingRecord
-     */
     public PgDbRoleSettingRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgDbRoleSetting value) {
         super(PgDbRoleSetting.PG_DB_ROLE_SETTING);
 

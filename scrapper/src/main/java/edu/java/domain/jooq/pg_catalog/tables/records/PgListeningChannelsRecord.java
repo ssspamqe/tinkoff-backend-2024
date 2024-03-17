@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_listening_channels</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,18 +30,10 @@ public class PgListeningChannelsRecord extends TableRecordImpl<PgListeningChanne
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_listening_channels.pg_listening_channels</code>.
-     */
     public void setPgListeningChannels(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_listening_channels.pg_listening_channels</code>.
-     */
     @Nullable
     public String getPgListeningChannels() {
         return (String) get(0);
@@ -102,16 +91,10 @@ public class PgListeningChannelsRecord extends TableRecordImpl<PgListeningChanne
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgListeningChannelsRecord
-     */
     public PgListeningChannelsRecord() {
         super(PgListeningChannels.PG_LISTENING_CHANNELS);
     }
 
-    /**
-     * Create a detached, initialised PgListeningChannelsRecord
-     */
     @ConstructorProperties({ "pgListeningChannels" })
     public PgListeningChannelsRecord(@Nullable String pgListeningChannels) {
         super(PgListeningChannels.PG_LISTENING_CHANNELS);
@@ -120,9 +103,6 @@ public class PgListeningChannelsRecord extends TableRecordImpl<PgListeningChanne
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgListeningChannelsRecord
-     */
     public PgListeningChannelsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgListeningChannels value) {
         super(PgListeningChannels.PG_LISTENING_CHANNELS);
 

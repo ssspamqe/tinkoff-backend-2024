@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_progress_info</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -130,347 +127,209 @@ public class PgStatGetProgressInfo implements Serializable {
         this.param20 = param20;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return this.datid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.datid</code>.
-     */
     public void setDatid(@Nullable Long datid) {
         this.datid = datid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param1</code>.
-     */
     @Nullable
     public Long getParam1() {
         return this.param1;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param1</code>.
-     */
     public void setParam1(@Nullable Long param1) {
         this.param1 = param1;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param2</code>.
-     */
     @Nullable
     public Long getParam2() {
         return this.param2;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param2</code>.
-     */
     public void setParam2(@Nullable Long param2) {
         this.param2 = param2;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param3</code>.
-     */
     @Nullable
     public Long getParam3() {
         return this.param3;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param3</code>.
-     */
     public void setParam3(@Nullable Long param3) {
         this.param3 = param3;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param4</code>.
-     */
     @Nullable
     public Long getParam4() {
         return this.param4;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param4</code>.
-     */
     public void setParam4(@Nullable Long param4) {
         this.param4 = param4;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param5</code>.
-     */
     @Nullable
     public Long getParam5() {
         return this.param5;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param5</code>.
-     */
     public void setParam5(@Nullable Long param5) {
         this.param5 = param5;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param6</code>.
-     */
     @Nullable
     public Long getParam6() {
         return this.param6;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param6</code>.
-     */
     public void setParam6(@Nullable Long param6) {
         this.param6 = param6;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param7</code>.
-     */
     @Nullable
     public Long getParam7() {
         return this.param7;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param7</code>.
-     */
     public void setParam7(@Nullable Long param7) {
         this.param7 = param7;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param8</code>.
-     */
     @Nullable
     public Long getParam8() {
         return this.param8;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param8</code>.
-     */
     public void setParam8(@Nullable Long param8) {
         this.param8 = param8;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param9</code>.
-     */
     @Nullable
     public Long getParam9() {
         return this.param9;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param9</code>.
-     */
     public void setParam9(@Nullable Long param9) {
         this.param9 = param9;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param10</code>.
-     */
     @Nullable
     public Long getParam10() {
         return this.param10;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param10</code>.
-     */
     public void setParam10(@Nullable Long param10) {
         this.param10 = param10;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param11</code>.
-     */
     @Nullable
     public Long getParam11() {
         return this.param11;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param11</code>.
-     */
     public void setParam11(@Nullable Long param11) {
         this.param11 = param11;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param12</code>.
-     */
     @Nullable
     public Long getParam12() {
         return this.param12;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param12</code>.
-     */
     public void setParam12(@Nullable Long param12) {
         this.param12 = param12;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param13</code>.
-     */
     @Nullable
     public Long getParam13() {
         return this.param13;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param13</code>.
-     */
     public void setParam13(@Nullable Long param13) {
         this.param13 = param13;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param14</code>.
-     */
     @Nullable
     public Long getParam14() {
         return this.param14;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param14</code>.
-     */
     public void setParam14(@Nullable Long param14) {
         this.param14 = param14;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param15</code>.
-     */
     @Nullable
     public Long getParam15() {
         return this.param15;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param15</code>.
-     */
     public void setParam15(@Nullable Long param15) {
         this.param15 = param15;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param16</code>.
-     */
     @Nullable
     public Long getParam16() {
         return this.param16;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param16</code>.
-     */
     public void setParam16(@Nullable Long param16) {
         this.param16 = param16;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param17</code>.
-     */
     @Nullable
     public Long getParam17() {
         return this.param17;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param17</code>.
-     */
     public void setParam17(@Nullable Long param17) {
         this.param17 = param17;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param18</code>.
-     */
     @Nullable
     public Long getParam18() {
         return this.param18;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param18</code>.
-     */
     public void setParam18(@Nullable Long param18) {
         this.param18 = param18;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param19</code>.
-     */
     @Nullable
     public Long getParam19() {
         return this.param19;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param19</code>.
-     */
     public void setParam19(@Nullable Long param19) {
         this.param19 = param19;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param20</code>.
-     */
     @Nullable
     public Long getParam20() {
         return this.param20;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param20</code>.
-     */
     public void setParam20(@Nullable Long param20) {
         this.param20 = param20;
     }

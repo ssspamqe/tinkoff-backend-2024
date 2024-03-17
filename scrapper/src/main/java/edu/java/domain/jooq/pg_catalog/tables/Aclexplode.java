@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.AclexplodeRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.aclexplode</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,38 +38,20 @@ public class Aclexplode extends TableImpl<AclexplodeRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.aclexplode</code>
-     */
     public static final Aclexplode ACLEXPLODE = new Aclexplode();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<AclexplodeRecord> getRecordType() {
         return AclexplodeRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.aclexplode.grantor</code>.
-     */
     public final TableField<AclexplodeRecord, Long> GRANTOR = createField(DSL.name("grantor"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.aclexplode.grantee</code>.
-     */
     public final TableField<AclexplodeRecord, Long> GRANTEE = createField(DSL.name("grantee"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.aclexplode.privilege_type</code>.
-     */
     public final TableField<AclexplodeRecord, String> PRIVILEGE_TYPE = createField(DSL.name("privilege_type"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.aclexplode.is_grantable</code>.
-     */
     public final TableField<AclexplodeRecord, Boolean> IS_GRANTABLE = createField(DSL.name("is_grantable"), SQLDataType.BOOLEAN, this, "");
 
     private Aclexplode(Name alias, Table<AclexplodeRecord> aliased) {
@@ -87,23 +64,14 @@ public class Aclexplode extends TableImpl<AclexplodeRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.aclexplode</code> table reference
-     */
     public Aclexplode(String alias) {
         this(DSL.name(alias), ACLEXPLODE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.aclexplode</code> table reference
-     */
     public Aclexplode(Name alias) {
         this(alias, ACLEXPLODE);
     }
 
-    /**
-     * Create a <code>pg_catalog.aclexplode</code> table reference
-     */
     public Aclexplode() {
         this(DSL.name("aclexplode"), null);
     }
@@ -132,27 +100,18 @@ public class Aclexplode extends TableImpl<AclexplodeRecord> {
         return new Aclexplode(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Aclexplode rename(String name) {
         return new Aclexplode(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Aclexplode rename(Name name) {
         return new Aclexplode(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Aclexplode rename(Table<?> name) {
@@ -169,9 +128,6 @@ public class Aclexplode extends TableImpl<AclexplodeRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public Aclexplode call(
           String[] acl
     ) {
@@ -182,9 +138,6 @@ public class Aclexplode extends TableImpl<AclexplodeRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public Aclexplode call(
           Field<String[]> acl
     ) {
@@ -195,17 +148,10 @@ public class Aclexplode extends TableImpl<AclexplodeRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super String, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super String, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_sleep</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,23 +26,14 @@ public class PgSleep extends AbstractRoutine<java.lang.Void> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_sleep._1</code>.
-     */
     public static final Parameter<Double> _1 = Internal.createParameter("_1", SQLDataType.DOUBLE, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgSleep() {
         super("pg_sleep", PgCatalog.PG_CATALOG);
 
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Double value) {
         setValue(_1, value);
     }

@@ -19,9 +19,6 @@ import org.jooq.Row17;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_subscription</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,59 +31,31 @@ public class PgSubscriptionRecord extends UpdatableRecordImpl<PgSubscriptionReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subdbid</code>.
-     */
     public void setSubdbid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subdbid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSubdbid() {
         return (Long) get(1);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setSubskiplsn(@NotNull Object value) {
         set(2, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @jakarta.validation.constraints.NotNull
     @NotNull
@@ -94,223 +63,139 @@ public class PgSubscriptionRecord extends UpdatableRecordImpl<PgSubscriptionReco
         return get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subname</code>.
-     */
     public void setSubname(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubname() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subowner</code>.
-     */
     public void setSubowner(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSubowner() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subenabled</code>.
-     */
     public void setSubenabled(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subenabled</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubenabled() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subbinary</code>.
-     */
     public void setSubbinary(@NotNull Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subbinary</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubbinary() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.substream</code>.
-     */
     public void setSubstream(@NotNull String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.substream</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubstream() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subtwophasestate</code>.
-     */
     public void setSubtwophasestate(@NotNull String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subtwophasestate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubtwophasestate() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subdisableonerr</code>.
-     */
     public void setSubdisableonerr(@NotNull Boolean value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subdisableonerr</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubdisableonerr() {
         return (Boolean) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subpasswordrequired</code>.
-     */
     public void setSubpasswordrequired(@NotNull Boolean value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subpasswordrequired</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubpasswordrequired() {
         return (Boolean) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subrunasowner</code>.
-     */
     public void setSubrunasowner(@NotNull Boolean value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subrunasowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubrunasowner() {
         return (Boolean) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subconninfo</code>.
-     */
     public void setSubconninfo(@NotNull String value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subconninfo</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubconninfo() {
         return (String) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subslotname</code>.
-     */
     public void setSubslotname(@Nullable String value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subslotname</code>.
-     */
     @Nullable
     public String getSubslotname() {
         return (String) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subsynccommit</code>.
-     */
     public void setSubsynccommit(@NotNull String value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subsynccommit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubsynccommit() {
         return (String) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subpublications</code>.
-     */
     public void setSubpublications(@NotNull String[] value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subpublications</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String[] getSubpublications() {
         return (String[]) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.suborigin</code>.
-     */
     public void setSuborigin(@Nullable String value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.suborigin</code>.
-     */
     @Nullable
     public String getSuborigin() {
         return (String) get(16);
@@ -354,14 +239,6 @@ public class PgSubscriptionRecord extends UpdatableRecordImpl<PgSubscriptionReco
         return PgSubscription.PG_SUBSCRIPTION.SUBDBID;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -465,14 +342,6 @@ public class PgSubscriptionRecord extends UpdatableRecordImpl<PgSubscriptionReco
         return getSubdbid();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -576,14 +445,6 @@ public class PgSubscriptionRecord extends UpdatableRecordImpl<PgSubscriptionReco
         return getSubdbid();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -689,14 +550,6 @@ public class PgSubscriptionRecord extends UpdatableRecordImpl<PgSubscriptionReco
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -830,16 +683,10 @@ public class PgSubscriptionRecord extends UpdatableRecordImpl<PgSubscriptionReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgSubscriptionRecord
-     */
     public PgSubscriptionRecord() {
         super(PgSubscription.PG_SUBSCRIPTION);
     }
 
-    /**
-     * Create a detached, initialised PgSubscriptionRecord
-     */
     @ConstructorProperties({ "oid", "subdbid", "subskiplsn", "subname", "subowner", "subenabled", "subbinary", "substream", "subtwophasestate", "subdisableonerr", "subpasswordrequired", "subrunasowner", "subconninfo", "subslotname", "subsynccommit", "subpublications", "suborigin" })
     public PgSubscriptionRecord(@NotNull Long oid, @NotNull Long subdbid, @NotNull Object subskiplsn, @NotNull String subname, @NotNull Long subowner, @NotNull Boolean subenabled, @NotNull Boolean subbinary, @NotNull String substream, @NotNull String subtwophasestate, @NotNull Boolean subdisableonerr, @NotNull Boolean subpasswordrequired, @NotNull Boolean subrunasowner, @NotNull String subconninfo, @Nullable String subslotname, @NotNull String subsynccommit, @NotNull String[] subpublications, @Nullable String suborigin) {
         super(PgSubscription.PG_SUBSCRIPTION);
@@ -864,9 +711,6 @@ public class PgSubscriptionRecord extends UpdatableRecordImpl<PgSubscriptionReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgSubscriptionRecord
-     */
     public PgSubscriptionRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgSubscription value) {
         super(PgSubscription.PG_SUBSCRIPTION);
 

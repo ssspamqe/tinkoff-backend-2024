@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.sum</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,19 +27,10 @@ public class Sum4 extends AbstractRoutine<Float> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.sum.RETURN_VALUE</code>.
-     */
     public static final Parameter<Float> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.REAL, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.sum._1</code>.
-     */
     public static final Parameter<Float> _1 = Internal.createParameter("_1", SQLDataType.REAL, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Sum4() {
         super("sum", PgCatalog.PG_CATALOG, SQLDataType.REAL);
 
@@ -51,17 +39,10 @@ public class Sum4 extends AbstractRoutine<Float> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Float value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Float> field) {
         setField(_1, field);
     }

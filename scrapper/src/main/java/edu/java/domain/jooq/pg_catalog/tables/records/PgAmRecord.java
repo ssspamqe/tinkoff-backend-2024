@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_am</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,64 +30,40 @@ public class PgAmRecord extends UpdatableRecordImpl<PgAmRecord> implements Recor
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_am.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_am.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_am.amname</code>.
-     */
     public void setAmname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_am.amname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_am.amhandler</code>.
-     */
     public void setAmhandler(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_am.amhandler</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmhandler() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_am.amtype</code>.
-     */
     public void setAmtype(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_am.amtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmtype() {
@@ -237,16 +210,10 @@ public class PgAmRecord extends UpdatableRecordImpl<PgAmRecord> implements Recor
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAmRecord
-     */
     public PgAmRecord() {
         super(PgAm.PG_AM);
     }
 
-    /**
-     * Create a detached, initialised PgAmRecord
-     */
     @ConstructorProperties({ "oid", "amname", "amhandler", "amtype" })
     public PgAmRecord(@NotNull Long oid, @NotNull String amname, @NotNull String amhandler, @NotNull String amtype) {
         super(PgAm.PG_AM);
@@ -258,9 +225,6 @@ public class PgAmRecord extends UpdatableRecordImpl<PgAmRecord> implements Recor
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAmRecord
-     */
     public PgAmRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAm value) {
         super(PgAm.PG_AM);
 

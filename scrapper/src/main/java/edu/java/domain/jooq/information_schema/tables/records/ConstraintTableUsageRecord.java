@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.constraint_table_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,103 +30,55 @@ public class ConstraintTableUsageRecord extends TableRecordImpl<ConstraintTableU
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return (String) get(5);
@@ -317,16 +266,10 @@ public class ConstraintTableUsageRecord extends TableRecordImpl<ConstraintTableU
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ConstraintTableUsageRecord
-     */
     public ConstraintTableUsageRecord() {
         super(ConstraintTableUsage.CONSTRAINT_TABLE_USAGE);
     }
 
-    /**
-     * Create a detached, initialised ConstraintTableUsageRecord
-     */
     @ConstructorProperties({ "tableCatalog", "tableSchema", "tableName", "constraintCatalog", "constraintSchema", "constraintName" })
     public ConstraintTableUsageRecord(@Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String constraintCatalog, @Nullable String constraintSchema, @Nullable String constraintName) {
         super(ConstraintTableUsage.CONSTRAINT_TABLE_USAGE);
@@ -340,9 +283,6 @@ public class ConstraintTableUsageRecord extends TableRecordImpl<ConstraintTableU
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ConstraintTableUsageRecord
-     */
     public ConstraintTableUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.ConstraintTableUsage value) {
         super(ConstraintTableUsage.CONSTRAINT_TABLE_USAGE);
 

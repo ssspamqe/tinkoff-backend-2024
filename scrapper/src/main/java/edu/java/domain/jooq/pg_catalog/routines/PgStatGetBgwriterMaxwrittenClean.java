@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_stat_get_bgwriter_maxwritten_clean</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,15 +26,8 @@ public class PgStatGetBgwriterMaxwrittenClean extends AbstractRoutine<Long> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_bgwriter_maxwritten_clean.RETURN_VALUE</code>.
-     */
     public static final Parameter<Long> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BIGINT, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgStatGetBgwriterMaxwrittenClean() {
         super("pg_stat_get_bgwriter_maxwritten_clean", PgCatalog.PG_CATALOG, SQLDataType.BIGINT);
 

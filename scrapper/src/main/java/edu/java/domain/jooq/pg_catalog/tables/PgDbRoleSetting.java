@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgDbRoleSettingRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_db_role_setting</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,33 +42,18 @@ public class PgDbRoleSetting extends TableImpl<PgDbRoleSettingRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_db_role_setting</code>
-     */
     public static final PgDbRoleSetting PG_DB_ROLE_SETTING = new PgDbRoleSetting();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgDbRoleSettingRecord> getRecordType() {
         return PgDbRoleSettingRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_db_role_setting.setdatabase</code>.
-     */
     public final TableField<PgDbRoleSettingRecord, Long> SETDATABASE = createField(DSL.name("setdatabase"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_db_role_setting.setrole</code>.
-     */
     public final TableField<PgDbRoleSettingRecord, Long> SETROLE = createField(DSL.name("setrole"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_db_role_setting.setconfig</code>.
-     */
     public final TableField<PgDbRoleSettingRecord, String[]> SETCONFIG = createField(DSL.name("setconfig"), SQLDataType.CLOB.array(), this, "");
 
     private PgDbRoleSetting(Name alias, Table<PgDbRoleSettingRecord> aliased) {
@@ -84,25 +64,14 @@ public class PgDbRoleSetting extends TableImpl<PgDbRoleSettingRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_db_role_setting</code> table
-     * reference
-     */
     public PgDbRoleSetting(String alias) {
         this(DSL.name(alias), PG_DB_ROLE_SETTING);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_db_role_setting</code> table
-     * reference
-     */
     public PgDbRoleSetting(Name alias) {
         this(alias, PG_DB_ROLE_SETTING);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_db_role_setting</code> table reference
-     */
     public PgDbRoleSetting() {
         this(DSL.name("pg_db_role_setting"), null);
     }
@@ -141,27 +110,18 @@ public class PgDbRoleSetting extends TableImpl<PgDbRoleSettingRecord> {
         return new PgDbRoleSetting(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDbRoleSetting rename(String name) {
         return new PgDbRoleSetting(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDbRoleSetting rename(Name name) {
         return new PgDbRoleSetting(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDbRoleSetting rename(Table<?> name) {
@@ -178,17 +138,10 @@ public class PgDbRoleSetting extends TableImpl<PgDbRoleSettingRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -10,15 +10,11 @@ import javax.annotation.processing.Generated;
 
 import org.jooq.Field;
 import org.jooq.Parameter;
-import org.jooq.XML;
 import org.jooq.impl.AbstractRoutine;
 import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.xml_send</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,19 +27,11 @@ public class XmlSend extends AbstractRoutine<byte[]> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.xml_send.RETURN_VALUE</code>.
-     */
     public static final Parameter<byte[]> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BLOB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.xml_send._1</code>.
-     */
-    public static final Parameter<XML> _1 = Internal.createParameter("_1", SQLDataType.XML, false, true);
+    @Deprecated
+    public static final Parameter<Object> _1 = Internal.createParameter("_1", SQLDataType.OTHER, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public XmlSend() {
         super("xml_send", PgCatalog.PG_CATALOG, SQLDataType.BLOB);
 
@@ -51,18 +39,11 @@ public class XmlSend extends AbstractRoutine<byte[]> {
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
-    public void set__1(XML value) {
+    public void set__1(Object value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
-    public void set__1(Field<XML> field) {
+    public void set__1(Field<Object> field) {
         setField(_1, field);
     }
 }

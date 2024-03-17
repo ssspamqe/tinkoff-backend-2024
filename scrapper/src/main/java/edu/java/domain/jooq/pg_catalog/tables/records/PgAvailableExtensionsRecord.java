@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_available_extensions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,48 +30,28 @@ public class PgAvailableExtensionsRecord extends TableRecordImpl<PgAvailableExte
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_available_extensions.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_available_extensions.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extensions.default_version</code>.
-     */
     public void setDefaultVersion(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extensions.default_version</code>.
-     */
     @Nullable
     public String getDefaultVersion() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_available_extensions.comment</code>.
-     */
     public void setComment(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_available_extensions.comment</code>.
-     */
     @Nullable
     public String getComment() {
         return (String) get(2);
@@ -184,16 +161,10 @@ public class PgAvailableExtensionsRecord extends TableRecordImpl<PgAvailableExte
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAvailableExtensionsRecord
-     */
     public PgAvailableExtensionsRecord() {
         super(PgAvailableExtensions.PG_AVAILABLE_EXTENSIONS);
     }
 
-    /**
-     * Create a detached, initialised PgAvailableExtensionsRecord
-     */
     @ConstructorProperties({ "name", "defaultVersion", "comment" })
     public PgAvailableExtensionsRecord(@Nullable String name, @Nullable String defaultVersion, @Nullable String comment) {
         super(PgAvailableExtensions.PG_AVAILABLE_EXTENSIONS);
@@ -204,9 +175,6 @@ public class PgAvailableExtensionsRecord extends TableRecordImpl<PgAvailableExte
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAvailableExtensionsRecord
-     */
     public PgAvailableExtensionsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAvailableExtensions value) {
         super(PgAvailableExtensions.PG_AVAILABLE_EXTENSIONS);
 

@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_foreign_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -52,49 +49,31 @@ public class PgForeignTable implements Serializable {
         this.ftoptions = ftoptions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_table.ftrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getFtrelid() {
         return this.ftrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_table.ftrelid</code>.
-     */
     public void setFtrelid(@NotNull Long ftrelid) {
         this.ftrelid = ftrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_table.ftserver</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getFtserver() {
         return this.ftserver;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_table.ftserver</code>.
-     */
     public void setFtserver(@NotNull Long ftserver) {
         this.ftserver = ftserver;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_table.ftoptions</code>.
-     */
     @Nullable
     public String[] getFtoptions() {
         return this.ftoptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_table.ftoptions</code>.
-     */
     public void setFtoptions(@Nullable String[] ftoptions) {
         this.ftoptions = ftoptions;
     }

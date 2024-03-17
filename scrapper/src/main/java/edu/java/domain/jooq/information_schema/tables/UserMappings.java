@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.UserMappingsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.user_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,36 +39,18 @@ public class UserMappings extends TableImpl<UserMappingsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.user_mappings</code>
-     */
     public static final UserMappings USER_MAPPINGS = new UserMappings();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<UserMappingsRecord> getRecordType() {
         return UserMappingsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.user_mappings.authorization_identifier</code>.
-     */
     public final TableField<UserMappingsRecord, String> AUTHORIZATION_IDENTIFIER = createField(DSL.name("authorization_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_mappings.foreign_server_catalog</code>.
-     */
     public final TableField<UserMappingsRecord, String> FOREIGN_SERVER_CATALOG = createField(DSL.name("foreign_server_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_mappings.foreign_server_name</code>.
-     */
     public final TableField<UserMappingsRecord, String> FOREIGN_SERVER_NAME = createField(DSL.name("foreign_server_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private UserMappings(Name alias, Table<UserMappingsRecord> aliased) {
@@ -89,25 +66,14 @@ public class UserMappings extends TableImpl<UserMappingsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.user_mappings</code> table
-     * reference
-     */
     public UserMappings(String alias) {
         this(DSL.name(alias), USER_MAPPINGS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.user_mappings</code> table
-     * reference
-     */
     public UserMappings(Name alias) {
         this(alias, USER_MAPPINGS);
     }
 
-    /**
-     * Create a <code>information_schema.user_mappings</code> table reference
-     */
     public UserMappings() {
         this(DSL.name("user_mappings"), null);
     }
@@ -140,27 +106,18 @@ public class UserMappings extends TableImpl<UserMappingsRecord> {
         return new UserMappings(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserMappings rename(String name) {
         return new UserMappings(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserMappings rename(Name name) {
         return new UserMappings(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserMappings rename(Table<?> name) {
@@ -177,17 +134,10 @@ public class UserMappings extends TableImpl<UserMappingsRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

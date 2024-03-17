@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_policy</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -72,151 +69,83 @@ public class PgPolicy implements Serializable {
         this.polwithcheck = polwithcheck;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policy.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policy.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policy.polname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPolname() {
         return this.polname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policy.polname</code>.
-     */
     public void setPolname(@NotNull String polname) {
         this.polname = polname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policy.polrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPolrelid() {
         return this.polrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policy.polrelid</code>.
-     */
     public void setPolrelid(@NotNull Long polrelid) {
         this.polrelid = polrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policy.polcmd</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPolcmd() {
         return this.polcmd;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policy.polcmd</code>.
-     */
     public void setPolcmd(@NotNull String polcmd) {
         this.polcmd = polcmd;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policy.polpermissive</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPolpermissive() {
         return this.polpermissive;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policy.polpermissive</code>.
-     */
     public void setPolpermissive(@NotNull Boolean polpermissive) {
         this.polpermissive = polpermissive;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policy.polroles</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long[] getPolroles() {
         return this.polroles;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policy.polroles</code>.
-     */
     public void setPolroles(@NotNull Long[] polroles) {
         this.polroles = polroles;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPolqual() {
         return this.polqual;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPolqual(@Nullable Object polqual) {
         this.polqual = polqual;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPolwithcheck() {
         return this.polwithcheck;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPolwithcheck(@Nullable Object polwithcheck) {
         this.polwithcheck = polwithcheck;

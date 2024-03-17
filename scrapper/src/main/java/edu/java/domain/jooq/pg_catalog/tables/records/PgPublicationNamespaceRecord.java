@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_namespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,48 +30,30 @@ public class PgPublicationNamespaceRecord extends UpdatableRecordImpl<PgPublicat
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_namespace.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_namespace.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_namespace.pnpubid</code>.
-     */
     public void setPnpubid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_namespace.pnpubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPnpubid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_namespace.pnnspid</code>.
-     */
     public void setPnnspid(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_namespace.pnnspid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPnnspid() {
@@ -195,16 +174,10 @@ public class PgPublicationNamespaceRecord extends UpdatableRecordImpl<PgPublicat
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPublicationNamespaceRecord
-     */
     public PgPublicationNamespaceRecord() {
         super(PgPublicationNamespace.PG_PUBLICATION_NAMESPACE);
     }
 
-    /**
-     * Create a detached, initialised PgPublicationNamespaceRecord
-     */
     @ConstructorProperties({ "oid", "pnpubid", "pnnspid" })
     public PgPublicationNamespaceRecord(@NotNull Long oid, @NotNull Long pnpubid, @NotNull Long pnnspid) {
         super(PgPublicationNamespace.PG_PUBLICATION_NAMESPACE);
@@ -215,9 +188,6 @@ public class PgPublicationNamespaceRecord extends UpdatableRecordImpl<PgPublicat
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPublicationNamespaceRecord
-     */
     public PgPublicationNamespaceRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPublicationNamespace value) {
         super(PgPublicationNamespace.PG_PUBLICATION_NAMESPACE);
 

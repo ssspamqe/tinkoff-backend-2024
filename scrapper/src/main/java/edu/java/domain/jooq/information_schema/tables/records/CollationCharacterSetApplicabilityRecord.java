@@ -18,10 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table
- * <code>information_schema.collation_character_set_applicability</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,103 +30,55 @@ public class CollationCharacterSetApplicabilityRecord extends TableRecordImpl<Co
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.collation_name</code>.
-     */
     public void setCollationName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return (String) get(5);
@@ -318,16 +266,10 @@ public class CollationCharacterSetApplicabilityRecord extends TableRecordImpl<Co
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached CollationCharacterSetApplicabilityRecord
-     */
     public CollationCharacterSetApplicabilityRecord() {
         super(CollationCharacterSetApplicability.COLLATION_CHARACTER_SET_APPLICABILITY);
     }
 
-    /**
-     * Create a detached, initialised CollationCharacterSetApplicabilityRecord
-     */
     @ConstructorProperties({ "collationCatalog", "collationSchema", "collationName", "characterSetCatalog", "characterSetSchema", "characterSetName" })
     public CollationCharacterSetApplicabilityRecord(@Nullable String collationCatalog, @Nullable String collationSchema, @Nullable String collationName, @Nullable String characterSetCatalog, @Nullable String characterSetSchema, @Nullable String characterSetName) {
         super(CollationCharacterSetApplicability.COLLATION_CHARACTER_SET_APPLICABILITY);
@@ -341,9 +283,6 @@ public class CollationCharacterSetApplicabilityRecord extends TableRecordImpl<Co
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised CollationCharacterSetApplicabilityRecord
-     */
     public CollationCharacterSetApplicabilityRecord(edu.java.domain.jooq.information_schema.tables.pojos.CollationCharacterSetApplicability value) {
         super(CollationCharacterSetApplicability.COLLATION_CHARACTER_SET_APPLICABILITY);
 

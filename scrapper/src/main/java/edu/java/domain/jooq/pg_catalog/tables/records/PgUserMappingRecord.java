@@ -19,9 +19,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_user_mapping</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,64 +31,40 @@ public class PgUserMappingRecord extends UpdatableRecordImpl<PgUserMappingRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mapping.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mapping.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mapping.umuser</code>.
-     */
     public void setUmuser(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mapping.umuser</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getUmuser() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mapping.umserver</code>.
-     */
     public void setUmserver(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mapping.umserver</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getUmserver() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mapping.umoptions</code>.
-     */
     public void setUmoptions(@Nullable String[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mapping.umoptions</code>.
-     */
     @Nullable
     public String[] getUmoptions() {
         return (String[]) get(3);
@@ -237,16 +210,10 @@ public class PgUserMappingRecord extends UpdatableRecordImpl<PgUserMappingRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgUserMappingRecord
-     */
     public PgUserMappingRecord() {
         super(PgUserMapping.PG_USER_MAPPING);
     }
 
-    /**
-     * Create a detached, initialised PgUserMappingRecord
-     */
     @ConstructorProperties({ "oid", "umuser", "umserver", "umoptions" })
     public PgUserMappingRecord(@NotNull Long oid, @NotNull Long umuser, @NotNull Long umserver, @Nullable String[] umoptions) {
         super(PgUserMapping.PG_USER_MAPPING);
@@ -258,9 +225,6 @@ public class PgUserMappingRecord extends UpdatableRecordImpl<PgUserMappingRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgUserMappingRecord
-     */
     public PgUserMappingRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgUserMapping value) {
         super(PgUserMapping.PG_USER_MAPPING);
 

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema._pg_expandarray</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,44 +43,22 @@ public class _PgExpandarray implements Serializable {
         this.n = n;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getX() {
         return this.x;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setX(@Nullable Object x) {
         this.x = x;
     }
 
-    /**
-     * Getter for <code>information_schema._pg_expandarray.n</code>.
-     */
     @Nullable
     public Integer getN() {
         return this.n;
     }
 
-    /**
-     * Setter for <code>information_schema._pg_expandarray.n</code>.
-     */
     public void setN(@Nullable Integer n) {
         this.n = n;
     }

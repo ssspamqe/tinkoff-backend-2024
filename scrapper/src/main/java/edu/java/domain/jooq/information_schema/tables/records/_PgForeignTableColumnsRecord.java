@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema._pg_foreign_table_columns</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,69 +30,37 @@ public class _PgForeignTableColumnsRecord extends TableRecordImpl<_PgForeignTabl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_table_columns.nspname</code>.
-     */
     public void setNspname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_table_columns.nspname</code>.
-     */
     @Nullable
     public String getNspname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_table_columns.relname</code>.
-     */
     public void setRelname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_table_columns.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_table_columns.attname</code>.
-     */
     public void setAttname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_table_columns.attname</code>.
-     */
     @Nullable
     public String getAttname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_table_columns.attfdwoptions</code>.
-     */
     public void setAttfdwoptions(@Nullable String[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_table_columns.attfdwoptions</code>.
-     */
     @Nullable
     public String[] getAttfdwoptions() {
         return (String[]) get(3);
@@ -231,16 +196,10 @@ public class _PgForeignTableColumnsRecord extends TableRecordImpl<_PgForeignTabl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached _PgForeignTableColumnsRecord
-     */
     public _PgForeignTableColumnsRecord() {
         super(_PgForeignTableColumns._PG_FOREIGN_TABLE_COLUMNS);
     }
 
-    /**
-     * Create a detached, initialised _PgForeignTableColumnsRecord
-     */
     @ConstructorProperties({ "nspname", "relname", "attname", "attfdwoptions" })
     public _PgForeignTableColumnsRecord(@Nullable String nspname, @Nullable String relname, @Nullable String attname, @Nullable String[] attfdwoptions) {
         super(_PgForeignTableColumns._PG_FOREIGN_TABLE_COLUMNS);
@@ -252,9 +211,6 @@ public class _PgForeignTableColumnsRecord extends TableRecordImpl<_PgForeignTabl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised _PgForeignTableColumnsRecord
-     */
     public _PgForeignTableColumnsRecord(edu.java.domain.jooq.information_schema.tables.pojos._PgForeignTableColumns value) {
         super(_PgForeignTableColumns._PG_FOREIGN_TABLE_COLUMNS);
 

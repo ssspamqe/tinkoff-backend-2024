@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.information_schema_catalog_name</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,19 +39,11 @@ public class InformationSchemaCatalogName implements Serializable {
         this.catalogName = catalogName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.information_schema_catalog_name.catalog_name</code>.
-     */
     @Nullable
     public String getCatalogName() {
         return this.catalogName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.information_schema_catalog_name.catalog_name</code>.
-     */
     public void setCatalogName(@Nullable String catalogName) {
         this.catalogName = catalogName;
     }

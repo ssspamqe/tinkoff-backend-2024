@@ -20,9 +20,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.role_usage_grants</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,129 +32,73 @@ public class RoleUsageGrantsRecord extends TableRecordImpl<RoleUsageGrantsRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.role_usage_grants.grantor</code>.
-     */
     public void setGrantor(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.role_usage_grants.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.role_usage_grants.grantee</code>.
-     */
     public void setGrantee(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.role_usage_grants.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.role_usage_grants.object_catalog</code>.
-     */
     public void setObjectCatalog(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.role_usage_grants.object_catalog</code>.
-     */
     @Nullable
     public String getObjectCatalog() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.role_usage_grants.object_schema</code>.
-     */
     public void setObjectSchema(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.role_usage_grants.object_schema</code>.
-     */
     @Nullable
     public String getObjectSchema() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.role_usage_grants.object_name</code>.
-     */
     public void setObjectName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.role_usage_grants.object_name</code>.
-     */
     @Nullable
     public String getObjectName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.role_usage_grants.object_type</code>.
-     */
     public void setObjectType(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.role_usage_grants.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.role_usage_grants.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.role_usage_grants.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.role_usage_grants.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.role_usage_grants.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
@@ -398,16 +339,10 @@ public class RoleUsageGrantsRecord extends TableRecordImpl<RoleUsageGrantsRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached RoleUsageGrantsRecord
-     */
     public RoleUsageGrantsRecord() {
         super(RoleUsageGrants.ROLE_USAGE_GRANTS);
     }
 
-    /**
-     * Create a detached, initialised RoleUsageGrantsRecord
-     */
     @ConstructorProperties({ "grantor", "grantee", "objectCatalog", "objectSchema", "objectName", "objectType", "privilegeType", "isGrantable" })
     public RoleUsageGrantsRecord(@Nullable String grantor, @Nullable String grantee, @Nullable String objectCatalog, @Nullable String objectSchema, @Nullable String objectName, @Nullable String objectType, @Nullable String privilegeType, @Nullable String isGrantable) {
         super(RoleUsageGrants.ROLE_USAGE_GRANTS);
@@ -423,9 +358,6 @@ public class RoleUsageGrantsRecord extends TableRecordImpl<RoleUsageGrantsRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised RoleUsageGrantsRecord
-     */
     public RoleUsageGrantsRecord(edu.java.domain.jooq.information_schema.tables.pojos.RoleUsageGrants value) {
         super(RoleUsageGrants.ROLE_USAGE_GRANTS);
 

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_inherits</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,66 +51,42 @@ public class PgInherits implements Serializable {
         this.inhdetachpending = inhdetachpending;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_inherits.inhrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getInhrelid() {
         return this.inhrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_inherits.inhrelid</code>.
-     */
     public void setInhrelid(@NotNull Long inhrelid) {
         this.inhrelid = inhrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_inherits.inhparent</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getInhparent() {
         return this.inhparent;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_inherits.inhparent</code>.
-     */
     public void setInhparent(@NotNull Long inhparent) {
         this.inhparent = inhparent;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_inherits.inhseqno</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getInhseqno() {
         return this.inhseqno;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_inherits.inhseqno</code>.
-     */
     public void setInhseqno(@NotNull Integer inhseqno) {
         this.inhseqno = inhseqno;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_inherits.inhdetachpending</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getInhdetachpending() {
         return this.inhdetachpending;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_inherits.inhdetachpending</code>.
-     */
     public void setInhdetachpending(@NotNull Boolean inhdetachpending) {
         this.inhdetachpending = inhdetachpending;
     }

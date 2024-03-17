@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_shmem_allocations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,62 +51,38 @@ public class PgShmemAllocations implements Serializable {
         this.allocatedSize = allocatedSize;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shmem_allocations.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shmem_allocations.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shmem_allocations.off</code>.
-     */
     @Nullable
     public Long getOff() {
         return this.off;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shmem_allocations.off</code>.
-     */
     public void setOff(@Nullable Long off) {
         this.off = off;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shmem_allocations.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return this.size;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shmem_allocations.size</code>.
-     */
     public void setSize(@Nullable Long size) {
         this.size = size;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shmem_allocations.allocated_size</code>.
-     */
     @Nullable
     public Long getAllocatedSize() {
         return this.allocatedSize;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shmem_allocations.allocated_size</code>.
-     */
     public void setAllocatedSize(@Nullable Long allocatedSize) {
         this.allocatedSize = allocatedSize;
     }

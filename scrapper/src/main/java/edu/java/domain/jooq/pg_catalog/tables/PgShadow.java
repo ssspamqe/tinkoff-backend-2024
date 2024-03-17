@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgShadowRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_shadow</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,63 +42,30 @@ public class PgShadow extends TableImpl<PgShadowRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_shadow</code>
-     */
     public static final PgShadow PG_SHADOW = new PgShadow();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgShadowRecord> getRecordType() {
         return PgShadowRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.usename</code>.
-     */
     public final TableField<PgShadowRecord, String> USENAME = createField(DSL.name("usename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.usesysid</code>.
-     */
     public final TableField<PgShadowRecord, Long> USESYSID = createField(DSL.name("usesysid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.usecreatedb</code>.
-     */
     public final TableField<PgShadowRecord, Boolean> USECREATEDB = createField(DSL.name("usecreatedb"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.usesuper</code>.
-     */
     public final TableField<PgShadowRecord, Boolean> USESUPER = createField(DSL.name("usesuper"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.userepl</code>.
-     */
     public final TableField<PgShadowRecord, Boolean> USEREPL = createField(DSL.name("userepl"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.usebypassrls</code>.
-     */
     public final TableField<PgShadowRecord, Boolean> USEBYPASSRLS = createField(DSL.name("usebypassrls"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.passwd</code>.
-     */
     public final TableField<PgShadowRecord, String> PASSWD = createField(DSL.name("passwd"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.valuntil</code>.
-     */
     public final TableField<PgShadowRecord, OffsetDateTime> VALUNTIL = createField(DSL.name("valuntil"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shadow.useconfig</code>.
-     */
     public final TableField<PgShadowRecord, String[]> USECONFIG = createField(DSL.name("useconfig"), SQLDataType.CLOB.array(), this, "");
 
     private PgShadow(Name alias, Table<PgShadowRecord> aliased) {
@@ -126,23 +89,14 @@ public class PgShadow extends TableImpl<PgShadowRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_shadow</code> table reference
-     */
     public PgShadow(String alias) {
         this(DSL.name(alias), PG_SHADOW);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_shadow</code> table reference
-     */
     public PgShadow(Name alias) {
         this(alias, PG_SHADOW);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_shadow</code> table reference
-     */
     public PgShadow() {
         this(DSL.name("pg_shadow"), null);
     }
@@ -175,27 +129,18 @@ public class PgShadow extends TableImpl<PgShadowRecord> {
         return new PgShadow(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShadow rename(String name) {
         return new PgShadow(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShadow rename(Name name) {
         return new PgShadow(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShadow rename(Table<?> name) {
@@ -212,17 +157,10 @@ public class PgShadow extends TableImpl<PgShadowRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super String, ? super Long, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super OffsetDateTime, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super Long, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super OffsetDateTime, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_logical_slot_peek_binary_changes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,62 +30,30 @@ public class PgLogicalSlotPeekBinaryChangesRecord extends TableRecordImpl<PgLogi
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setLsn(@Nullable Object value) {
         set(0, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getLsn() {
         return get(0);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_logical_slot_peek_binary_changes.xid</code>.
-     */
     public void setXid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_logical_slot_peek_binary_changes.xid</code>.
-     */
     @Nullable
     public Long getXid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_logical_slot_peek_binary_changes.data</code>.
-     */
     public void setData(@Nullable byte[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_logical_slot_peek_binary_changes.data</code>.
-     */
     @Nullable
     public byte[] getData() {
         return (byte[]) get(2);
@@ -110,14 +75,6 @@ public class PgLogicalSlotPeekBinaryChangesRecord extends TableRecordImpl<PgLogi
         return (Row3) super.valuesRow();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -137,14 +94,6 @@ public class PgLogicalSlotPeekBinaryChangesRecord extends TableRecordImpl<PgLogi
         return PgLogicalSlotPeekBinaryChanges.PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES.DATA;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -164,14 +113,6 @@ public class PgLogicalSlotPeekBinaryChangesRecord extends TableRecordImpl<PgLogi
         return getData();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -191,14 +132,6 @@ public class PgLogicalSlotPeekBinaryChangesRecord extends TableRecordImpl<PgLogi
         return getData();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -234,16 +167,10 @@ public class PgLogicalSlotPeekBinaryChangesRecord extends TableRecordImpl<PgLogi
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLogicalSlotPeekBinaryChangesRecord
-     */
     public PgLogicalSlotPeekBinaryChangesRecord() {
         super(PgLogicalSlotPeekBinaryChanges.PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES);
     }
 
-    /**
-     * Create a detached, initialised PgLogicalSlotPeekBinaryChangesRecord
-     */
     @ConstructorProperties({ "lsn", "xid", "data" })
     public PgLogicalSlotPeekBinaryChangesRecord(@Nullable Object lsn, @Nullable Long xid, @Nullable byte[] data) {
         super(PgLogicalSlotPeekBinaryChanges.PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES);
@@ -254,9 +181,6 @@ public class PgLogicalSlotPeekBinaryChangesRecord extends TableRecordImpl<PgLogi
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLogicalSlotPeekBinaryChangesRecord
-     */
     public PgLogicalSlotPeekBinaryChangesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLogicalSlotPeekBinaryChanges value) {
         super(PgLogicalSlotPeekBinaryChanges.PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES);
 

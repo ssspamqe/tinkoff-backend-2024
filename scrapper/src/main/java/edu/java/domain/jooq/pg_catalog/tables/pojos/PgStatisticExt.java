@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_statistic_ext</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -76,156 +73,92 @@ public class PgStatisticExt implements Serializable {
         this.stxexprs = stxexprs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStxrelid() {
         return this.stxrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxrelid</code>.
-     */
     public void setStxrelid(@NotNull Long stxrelid) {
         this.stxrelid = stxrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getStxname() {
         return this.stxname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxname</code>.
-     */
     public void setStxname(@NotNull String stxname) {
         this.stxname = stxname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStxnamespace() {
         return this.stxnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxnamespace</code>.
-     */
     public void setStxnamespace(@NotNull Long stxnamespace) {
         this.stxnamespace = stxnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStxowner() {
         return this.stxowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxowner</code>.
-     */
     public void setStxowner(@NotNull Long stxowner) {
         this.stxowner = stxowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxstattarget</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getStxstattarget() {
         return this.stxstattarget;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxstattarget</code>.
-     */
     public void setStxstattarget(@NotNull Integer stxstattarget) {
         this.stxstattarget = stxstattarget;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxkeys</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getStxkeys() {
         return this.stxkeys;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxkeys</code>.
-     */
     public void setStxkeys(@NotNull Object[] stxkeys) {
         this.stxkeys = stxkeys;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext.stxkind</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String[] getStxkind() {
         return this.stxkind;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext.stxkind</code>.
-     */
     public void setStxkind(@NotNull String[] stxkind) {
         this.stxkind = stxkind;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getStxexprs() {
         return this.stxexprs;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setStxexprs(@Nullable Object stxexprs) {
         this.stxexprs = stxexprs;

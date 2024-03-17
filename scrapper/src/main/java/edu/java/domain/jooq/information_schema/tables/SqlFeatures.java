@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.SqlFeaturesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.sql_features</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,53 +39,26 @@ public class SqlFeatures extends TableImpl<SqlFeaturesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.sql_features</code>
-     */
     public static final SqlFeatures SQL_FEATURES = new SqlFeatures();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<SqlFeaturesRecord> getRecordType() {
         return SqlFeaturesRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.sql_features.feature_id</code>.
-     */
     public final TableField<SqlFeaturesRecord, String> FEATURE_ID = createField(DSL.name("feature_id"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_features.feature_name</code>.
-     */
     public final TableField<SqlFeaturesRecord, String> FEATURE_NAME = createField(DSL.name("feature_name"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_features.sub_feature_id</code>.
-     */
     public final TableField<SqlFeaturesRecord, String> SUB_FEATURE_ID = createField(DSL.name("sub_feature_id"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_features.sub_feature_name</code>.
-     */
     public final TableField<SqlFeaturesRecord, String> SUB_FEATURE_NAME = createField(DSL.name("sub_feature_name"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_features.is_supported</code>.
-     */
     public final TableField<SqlFeaturesRecord, String> IS_SUPPORTED = createField(DSL.name("is_supported"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_features.is_verified_by</code>.
-     */
     public final TableField<SqlFeaturesRecord, String> IS_VERIFIED_BY = createField(DSL.name("is_verified_by"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_features.comments</code>.
-     */
     public final TableField<SqlFeaturesRecord, String> COMMENTS = createField(DSL.name("comments"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private SqlFeatures(Name alias, Table<SqlFeaturesRecord> aliased) {
@@ -101,25 +69,14 @@ public class SqlFeatures extends TableImpl<SqlFeaturesRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>information_schema.sql_features</code> table
-     * reference
-     */
     public SqlFeatures(String alias) {
         this(DSL.name(alias), SQL_FEATURES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.sql_features</code> table
-     * reference
-     */
     public SqlFeatures(Name alias) {
         this(alias, SQL_FEATURES);
     }
 
-    /**
-     * Create a <code>information_schema.sql_features</code> table reference
-     */
     public SqlFeatures() {
         this(DSL.name("sql_features"), null);
     }
@@ -152,27 +109,18 @@ public class SqlFeatures extends TableImpl<SqlFeaturesRecord> {
         return new SqlFeatures(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public SqlFeatures rename(String name) {
         return new SqlFeatures(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public SqlFeatures rename(Name name) {
         return new SqlFeatures(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public SqlFeatures rename(Table<?> name) {
@@ -189,17 +137,10 @@ public class SqlFeatures extends TableImpl<SqlFeaturesRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

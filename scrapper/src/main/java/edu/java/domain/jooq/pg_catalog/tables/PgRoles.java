@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgRolesRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_roles</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,83 +42,38 @@ public class PgRoles extends TableImpl<PgRolesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_roles</code>
-     */
     public static final PgRoles PG_ROLES = new PgRoles();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgRolesRecord> getRecordType() {
         return PgRolesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolname</code>.
-     */
     public final TableField<PgRolesRecord, String> ROLNAME = createField(DSL.name("rolname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolsuper</code>.
-     */
     public final TableField<PgRolesRecord, Boolean> ROLSUPER = createField(DSL.name("rolsuper"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolinherit</code>.
-     */
     public final TableField<PgRolesRecord, Boolean> ROLINHERIT = createField(DSL.name("rolinherit"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolcreaterole</code>.
-     */
     public final TableField<PgRolesRecord, Boolean> ROLCREATEROLE = createField(DSL.name("rolcreaterole"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolcreatedb</code>.
-     */
     public final TableField<PgRolesRecord, Boolean> ROLCREATEDB = createField(DSL.name("rolcreatedb"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolcanlogin</code>.
-     */
     public final TableField<PgRolesRecord, Boolean> ROLCANLOGIN = createField(DSL.name("rolcanlogin"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolreplication</code>.
-     */
     public final TableField<PgRolesRecord, Boolean> ROLREPLICATION = createField(DSL.name("rolreplication"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolconnlimit</code>.
-     */
     public final TableField<PgRolesRecord, Integer> ROLCONNLIMIT = createField(DSL.name("rolconnlimit"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolpassword</code>.
-     */
     public final TableField<PgRolesRecord, String> ROLPASSWORD = createField(DSL.name("rolpassword"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolvaliduntil</code>.
-     */
     public final TableField<PgRolesRecord, OffsetDateTime> ROLVALIDUNTIL = createField(DSL.name("rolvaliduntil"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolbypassrls</code>.
-     */
     public final TableField<PgRolesRecord, Boolean> ROLBYPASSRLS = createField(DSL.name("rolbypassrls"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.rolconfig</code>.
-     */
     public final TableField<PgRolesRecord, String[]> ROLCONFIG = createField(DSL.name("rolconfig"), SQLDataType.CLOB.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_roles.oid</code>.
-     */
     public final TableField<PgRolesRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT, this, "");
 
     private PgRoles(Name alias, Table<PgRolesRecord> aliased) {
@@ -149,23 +100,14 @@ public class PgRoles extends TableImpl<PgRolesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_roles</code> table reference
-     */
     public PgRoles(String alias) {
         this(DSL.name(alias), PG_ROLES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_roles</code> table reference
-     */
     public PgRoles(Name alias) {
         this(alias, PG_ROLES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_roles</code> table reference
-     */
     public PgRoles() {
         this(DSL.name("pg_roles"), null);
     }
@@ -198,27 +140,18 @@ public class PgRoles extends TableImpl<PgRolesRecord> {
         return new PgRoles(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRoles rename(String name) {
         return new PgRoles(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRoles rename(Name name) {
         return new PgRoles(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRoles rename(Table<?> name) {
@@ -235,17 +168,10 @@ public class PgRoles extends TableImpl<PgRolesRecord> {
         return (Row13) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function13<? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Integer, ? super String, ? super OffsetDateTime, ? super Boolean, ? super String[], ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function13<? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super Integer, ? super String, ? super OffsetDateTime, ? super Boolean, ? super String[], ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

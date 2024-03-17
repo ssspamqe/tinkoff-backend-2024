@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgSubscriptionRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_subscription</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,109 +45,47 @@ public class PgSubscription extends TableImpl<PgSubscriptionRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_subscription</code>
-     */
     public static final PgSubscription PG_SUBSCRIPTION = new PgSubscription();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgSubscriptionRecord> getRecordType() {
         return PgSubscriptionRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.oid</code>.
-     */
     public final TableField<PgSubscriptionRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subdbid</code>.
-     */
     public final TableField<PgSubscriptionRecord, Long> SUBDBID = createField(DSL.name("subdbid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgSubscriptionRecord, Object> SUBSKIPLSN = createField(DSL.name("subskiplsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\"").nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subname</code>.
-     */
     public final TableField<PgSubscriptionRecord, String> SUBNAME = createField(DSL.name("subname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subowner</code>.
-     */
     public final TableField<PgSubscriptionRecord, Long> SUBOWNER = createField(DSL.name("subowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subenabled</code>.
-     */
     public final TableField<PgSubscriptionRecord, Boolean> SUBENABLED = createField(DSL.name("subenabled"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subbinary</code>.
-     */
     public final TableField<PgSubscriptionRecord, Boolean> SUBBINARY = createField(DSL.name("subbinary"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.substream</code>.
-     */
     public final TableField<PgSubscriptionRecord, String> SUBSTREAM = createField(DSL.name("substream"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subtwophasestate</code>.
-     */
     public final TableField<PgSubscriptionRecord, String> SUBTWOPHASESTATE = createField(DSL.name("subtwophasestate"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subdisableonerr</code>.
-     */
     public final TableField<PgSubscriptionRecord, Boolean> SUBDISABLEONERR = createField(DSL.name("subdisableonerr"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subpasswordrequired</code>.
-     */
     public final TableField<PgSubscriptionRecord, Boolean> SUBPASSWORDREQUIRED = createField(DSL.name("subpasswordrequired"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subrunasowner</code>.
-     */
     public final TableField<PgSubscriptionRecord, Boolean> SUBRUNASOWNER = createField(DSL.name("subrunasowner"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subconninfo</code>.
-     */
     public final TableField<PgSubscriptionRecord, String> SUBCONNINFO = createField(DSL.name("subconninfo"), SQLDataType.CLOB.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subslotname</code>.
-     */
     public final TableField<PgSubscriptionRecord, String> SUBSLOTNAME = createField(DSL.name("subslotname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subsynccommit</code>.
-     */
     public final TableField<PgSubscriptionRecord, String> SUBSYNCCOMMIT = createField(DSL.name("subsynccommit"), SQLDataType.CLOB.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.subpublications</code>.
-     */
     public final TableField<PgSubscriptionRecord, String[]> SUBPUBLICATIONS = createField(DSL.name("subpublications"), SQLDataType.CLOB.nullable(false).array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_subscription.suborigin</code>.
-     */
     public final TableField<PgSubscriptionRecord, String> SUBORIGIN = createField(DSL.name("suborigin"), SQLDataType.CLOB, this, "");
 
     private PgSubscription(Name alias, Table<PgSubscriptionRecord> aliased) {
@@ -162,23 +96,14 @@ public class PgSubscription extends TableImpl<PgSubscriptionRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_subscription</code> table reference
-     */
     public PgSubscription(String alias) {
         this(DSL.name(alias), PG_SUBSCRIPTION);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_subscription</code> table reference
-     */
     public PgSubscription(Name alias) {
         this(alias, PG_SUBSCRIPTION);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_subscription</code> table reference
-     */
     public PgSubscription() {
         this(DSL.name("pg_subscription"), null);
     }
@@ -223,27 +148,18 @@ public class PgSubscription extends TableImpl<PgSubscriptionRecord> {
         return new PgSubscription(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSubscription rename(String name) {
         return new PgSubscription(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSubscription rename(Name name) {
         return new PgSubscription(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSubscription rename(Table<?> name) {
@@ -260,17 +176,10 @@ public class PgSubscription extends TableImpl<PgSubscriptionRecord> {
         return (Row17) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function17<? super Long, ? super Long, ? super Object, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super String, ? super String[], ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function17<? super Long, ? super Long, ? super Object, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super String, ? super String[], ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

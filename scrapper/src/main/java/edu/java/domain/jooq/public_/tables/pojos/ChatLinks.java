@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>public.chat_links</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -56,65 +53,41 @@ public class ChatLinks implements Serializable {
         this.createdAt = createdAt;
     }
 
-    /**
-     * Getter for <code>public.chat_links.id</code>.
-     */
     @Nullable
     public Long getId() {
         return this.id;
     }
 
-    /**
-     * Setter for <code>public.chat_links.id</code>.
-     */
     public void setId(@Nullable Long id) {
         this.id = id;
     }
 
-    /**
-     * Getter for <code>public.chat_links.chat_id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getChatId() {
         return this.chatId;
     }
 
-    /**
-     * Setter for <code>public.chat_links.chat_id</code>.
-     */
     public void setChatId(@NotNull Long chatId) {
         this.chatId = chatId;
     }
 
-    /**
-     * Getter for <code>public.chat_links.link_id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLinkId() {
         return this.linkId;
     }
 
-    /**
-     * Setter for <code>public.chat_links.link_id</code>.
-     */
     public void setLinkId(@NotNull Long linkId) {
         this.linkId = linkId;
     }
 
-    /**
-     * Getter for <code>public.chat_links.created_at</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public LocalDateTime getCreatedAt() {
         return this.createdAt;
     }
 
-    /**
-     * Setter for <code>public.chat_links.created_at</code>.
-     */
     public void setCreatedAt(@NotNull LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }

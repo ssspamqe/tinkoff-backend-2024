@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_prepared_xact</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -59,77 +56,47 @@ public class PgPreparedXact implements Serializable {
         this.dbid = dbid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.transaction</code>.
-     */
     @Nullable
     public Long getTransaction() {
         return this.transaction;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.transaction</code>.
-     */
     public void setTransaction(@Nullable Long transaction) {
         this.transaction = transaction;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.gid</code>.
-     */
     @Nullable
     public String getGid() {
         return this.gid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.gid</code>.
-     */
     public void setGid(@Nullable String gid) {
         this.gid = gid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.prepared</code>.
-     */
     @Nullable
     public OffsetDateTime getPrepared() {
         return this.prepared;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.prepared</code>.
-     */
     public void setPrepared(@Nullable OffsetDateTime prepared) {
         this.prepared = prepared;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.ownerid</code>.
-     */
     @Nullable
     public Long getOwnerid() {
         return this.ownerid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.ownerid</code>.
-     */
     public void setOwnerid(@Nullable Long ownerid) {
         this.ownerid = ownerid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.dbid</code>.
-     */
     @Nullable
     public Long getDbid() {
         return this.dbid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.dbid</code>.
-     */
     public void setDbid(@Nullable Long dbid) {
         this.dbid = dbid;
     }

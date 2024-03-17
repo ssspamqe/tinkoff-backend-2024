@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_parameter_acl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -52,49 +49,31 @@ public class PgParameterAcl implements Serializable {
         this.paracl = paracl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_parameter_acl.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_parameter_acl.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_parameter_acl.parname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getParname() {
         return this.parname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_parameter_acl.parname</code>.
-     */
     public void setParname(@NotNull String parname) {
         this.parname = parname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_parameter_acl.paracl</code>.
-     */
     @Nullable
     public String[] getParacl() {
         return this.paracl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_parameter_acl.paracl</code>.
-     */
     public void setParacl(@Nullable String[] paracl) {
         this.paracl = paracl;
     }

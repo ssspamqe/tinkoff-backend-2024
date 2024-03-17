@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_tablespace_databases</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,19 +39,11 @@ public class PgTablespaceDatabases implements Serializable {
         this.pgTablespaceDatabases = pgTablespaceDatabases;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_tablespace_databases.pg_tablespace_databases</code>.
-     */
     @Nullable
     public Long getPgTablespaceDatabases() {
         return this.pgTablespaceDatabases;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_tablespace_databases.pg_tablespace_databases</code>.
-     */
     public void setPgTablespaceDatabases(@Nullable Long pgTablespaceDatabases) {
         this.pgTablespaceDatabases = pgTablespaceDatabases;
     }

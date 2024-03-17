@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_waldir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,46 +31,28 @@ public class PgLsWaldirRecord extends TableRecordImpl<PgLsWaldirRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_waldir.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_waldir.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_waldir.size</code>.
-     */
     public void setSize(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_waldir.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_waldir.modification</code>.
-     */
     public void setModification(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_waldir.modification</code>.
-     */
     @Nullable
     public OffsetDateTime getModification() {
         return (OffsetDateTime) get(2);
@@ -183,16 +162,10 @@ public class PgLsWaldirRecord extends TableRecordImpl<PgLsWaldirRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLsWaldirRecord
-     */
     public PgLsWaldirRecord() {
         super(PgLsWaldir.PG_LS_WALDIR);
     }
 
-    /**
-     * Create a detached, initialised PgLsWaldirRecord
-     */
     @ConstructorProperties({ "name", "size", "modification" })
     public PgLsWaldirRecord(@Nullable String name, @Nullable Long size, @Nullable OffsetDateTime modification) {
         super(PgLsWaldir.PG_LS_WALDIR);
@@ -203,9 +176,6 @@ public class PgLsWaldirRecord extends TableRecordImpl<PgLsWaldirRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLsWaldirRecord
-     */
     public PgLsWaldirRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLsWaldir value) {
         super(PgLsWaldir.PG_LS_WALDIR);
 

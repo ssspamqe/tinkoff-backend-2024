@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_shdescription</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,48 +30,30 @@ public class PgShdescriptionRecord extends UpdatableRecordImpl<PgShdescriptionRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdescription.objoid</code>.
-     */
     public void setObjoid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdescription.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdescription.classoid</code>.
-     */
     public void setClassoid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdescription.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdescription.description</code>.
-     */
     public void setDescription(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdescription.description</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDescription() {
@@ -195,16 +174,10 @@ public class PgShdescriptionRecord extends UpdatableRecordImpl<PgShdescriptionRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgShdescriptionRecord
-     */
     public PgShdescriptionRecord() {
         super(PgShdescription.PG_SHDESCRIPTION);
     }
 
-    /**
-     * Create a detached, initialised PgShdescriptionRecord
-     */
     @ConstructorProperties({ "objoid", "classoid", "description" })
     public PgShdescriptionRecord(@NotNull Long objoid, @NotNull Long classoid, @NotNull String description) {
         super(PgShdescription.PG_SHDESCRIPTION);
@@ -215,9 +188,6 @@ public class PgShdescriptionRecord extends UpdatableRecordImpl<PgShdescriptionRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgShdescriptionRecord
-     */
     public PgShdescriptionRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgShdescription value) {
         super(PgShdescription.PG_SHDESCRIPTION);
 

@@ -11,7 +11,6 @@ import edu.java.domain.jooq.public_.tables.records.LinksRecord;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -36,9 +35,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>public.links</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -51,38 +47,20 @@ public class Links extends TableImpl<LinksRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>public.links</code>
-     */
     public static final Links LINKS = new Links();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<LinksRecord> getRecordType() {
         return LinksRecord.class;
     }
 
-    /**
-     * The column <code>public.links.id</code>.
-     */
     public final TableField<LinksRecord, Long> ID = createField(DSL.name("id"), SQLDataType.BIGINT.nullable(false).identity(true), this, "");
 
-    /**
-     * The column <code>public.links.url</code>.
-     */
     public final TableField<LinksRecord, String> URL = createField(DSL.name("url"), SQLDataType.CLOB.nullable(false), this, "");
 
-    /**
-     * The column <code>public.links.created_at</code>.
-     */
     public final TableField<LinksRecord, LocalDateTime> CREATED_AT = createField(DSL.name("created_at"), SQLDataType.LOCALDATETIME(6).nullable(false), this, "");
 
-    /**
-     * The column <code>public.links.last_checked_at</code>.
-     */
     public final TableField<LinksRecord, LocalDateTime> LAST_CHECKED_AT = createField(DSL.name("last_checked_at"), SQLDataType.LOCALDATETIME(6).nullable(false).defaultValue(DSL.field(DSL.raw("'1970-01-01 00:00:00'::timestamp without time zone"), SQLDataType.LOCALDATETIME)), this, "");
 
     private Links(Name alias, Table<LinksRecord> aliased) {
@@ -93,23 +71,14 @@ public class Links extends TableImpl<LinksRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>public.links</code> table reference
-     */
     public Links(String alias) {
         this(DSL.name(alias), LINKS);
     }
 
-    /**
-     * Create an aliased <code>public.links</code> table reference
-     */
     public Links(Name alias) {
         this(alias, LINKS);
     }
 
-    /**
-     * Create a <code>public.links</code> table reference
-     */
     public Links() {
         this(DSL.name("links"), null);
     }
@@ -160,27 +129,18 @@ public class Links extends TableImpl<LinksRecord> {
         return new Links(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Links rename(String name) {
         return new Links(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Links rename(Name name) {
         return new Links(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Links rename(Table<?> name) {
@@ -197,17 +157,10 @@ public class Links extends TableImpl<LinksRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super String, ? super LocalDateTime, ? super LocalDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super String, ? super LocalDateTime, ? super LocalDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

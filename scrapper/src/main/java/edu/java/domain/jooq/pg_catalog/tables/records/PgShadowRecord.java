@@ -19,9 +19,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_shadow</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,136 +31,82 @@ public class PgShadowRecord extends TableRecordImpl<PgShadowRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usename</code>.
-     */
     public void setUsename(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usename</code>.
-     */
     @Nullable
     public String getUsename() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usesysid</code>.
-     */
     public void setUsesysid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usesysid</code>.
-     */
     @Nullable
     public Long getUsesysid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usecreatedb</code>.
-     */
     public void setUsecreatedb(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usecreatedb</code>.
-     */
     @Nullable
     public Boolean getUsecreatedb() {
         return (Boolean) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usesuper</code>.
-     */
     public void setUsesuper(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usesuper</code>.
-     */
     @Nullable
     public Boolean getUsesuper() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.userepl</code>.
-     */
     public void setUserepl(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.userepl</code>.
-     */
     @Nullable
     public Boolean getUserepl() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.usebypassrls</code>.
-     */
     public void setUsebypassrls(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.usebypassrls</code>.
-     */
     @Nullable
     public Boolean getUsebypassrls() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.passwd</code>.
-     */
     public void setPasswd(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.passwd</code>.
-     */
     @Nullable
     public String getPasswd() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.valuntil</code>.
-     */
     public void setValuntil(@Nullable OffsetDateTime value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.valuntil</code>.
-     */
     @Nullable
     public OffsetDateTime getValuntil() {
         return (OffsetDateTime) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shadow.useconfig</code>.
-     */
     public void setUseconfig(@Nullable String[] value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shadow.useconfig</code>.
-     */
     @Nullable
     public String[] getUseconfig() {
         return (String[]) get(8);
@@ -429,16 +372,10 @@ public class PgShadowRecord extends TableRecordImpl<PgShadowRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgShadowRecord
-     */
     public PgShadowRecord() {
         super(PgShadow.PG_SHADOW);
     }
 
-    /**
-     * Create a detached, initialised PgShadowRecord
-     */
     @ConstructorProperties({ "usename", "usesysid", "usecreatedb", "usesuper", "userepl", "usebypassrls", "passwd", "valuntil", "useconfig" })
     public PgShadowRecord(@Nullable String usename, @Nullable Long usesysid, @Nullable Boolean usecreatedb, @Nullable Boolean usesuper, @Nullable Boolean userepl, @Nullable Boolean usebypassrls, @Nullable String passwd, @Nullable OffsetDateTime valuntil, @Nullable String[] useconfig) {
         super(PgShadow.PG_SHADOW);
@@ -455,9 +392,6 @@ public class PgShadowRecord extends TableRecordImpl<PgShadowRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgShadowRecord
-     */
     public PgShadowRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgShadow value) {
         super(PgShadow.PG_SHADOW);
 

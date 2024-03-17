@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonbPopulateRecordsetRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_populate_recordset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,29 +39,14 @@ public class JsonbPopulateRecordset extends TableImpl<JsonbPopulateRecordsetReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.jsonb_populate_recordset</code>
-     */
     public static final JsonbPopulateRecordset JSONB_POPULATE_RECORDSET = new JsonbPopulateRecordset();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonbPopulateRecordsetRecord> getRecordType() {
         return JsonbPopulateRecordsetRecord.class;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<JsonbPopulateRecordsetRecord, Object> JSONB_POPULATE_RECORDSET_ = createField(DSL.name("jsonb_populate_recordset"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"anyelement\""), this, "");
 
@@ -81,25 +61,14 @@ public class JsonbPopulateRecordset extends TableImpl<JsonbPopulateRecordsetReco
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_populate_recordset</code> table
-     * reference
-     */
     public JsonbPopulateRecordset(String alias) {
         this(DSL.name(alias), JSONB_POPULATE_RECORDSET);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_populate_recordset</code> table
-     * reference
-     */
     public JsonbPopulateRecordset(Name alias) {
         this(alias, JSONB_POPULATE_RECORDSET);
     }
 
-    /**
-     * Create a <code>pg_catalog.jsonb_populate_recordset</code> table reference
-     */
     public JsonbPopulateRecordset() {
         this(DSL.name("jsonb_populate_recordset"), null);
     }
@@ -128,27 +97,18 @@ public class JsonbPopulateRecordset extends TableImpl<JsonbPopulateRecordsetReco
         return new JsonbPopulateRecordset(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPopulateRecordset rename(String name) {
         return new JsonbPopulateRecordset(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPopulateRecordset rename(Name name) {
         return new JsonbPopulateRecordset(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPopulateRecordset rename(Table<?> name) {
@@ -165,9 +125,6 @@ public class JsonbPopulateRecordset extends TableImpl<JsonbPopulateRecordsetReco
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbPopulateRecordset call(
           Object __1
         , JSONB __2
@@ -180,9 +137,6 @@ public class JsonbPopulateRecordset extends TableImpl<JsonbPopulateRecordsetReco
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbPopulateRecordset call(
           Field<Object> __1
         , Field<JSONB> __2
@@ -195,17 +149,10 @@ public class JsonbPopulateRecordset extends TableImpl<JsonbPopulateRecordsetReco
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super Object, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Object, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

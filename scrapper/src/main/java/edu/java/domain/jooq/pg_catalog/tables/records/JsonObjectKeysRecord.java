@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.json_object_keys</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,16 +30,10 @@ public class JsonObjectKeysRecord extends TableRecordImpl<JsonObjectKeysRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.json_object_keys.json_object_keys</code>.
-     */
     public void setJsonObjectKeys(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.json_object_keys.json_object_keys</code>.
-     */
     @Nullable
     public String getJsonObjectKeys() {
         return (String) get(0);
@@ -100,16 +91,10 @@ public class JsonObjectKeysRecord extends TableRecordImpl<JsonObjectKeysRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonObjectKeysRecord
-     */
     public JsonObjectKeysRecord() {
         super(JsonObjectKeys.JSON_OBJECT_KEYS);
     }
 
-    /**
-     * Create a detached, initialised JsonObjectKeysRecord
-     */
     @ConstructorProperties({ "jsonObjectKeys" })
     public JsonObjectKeysRecord(@Nullable String jsonObjectKeys) {
         super(JsonObjectKeys.JSON_OBJECT_KEYS);
@@ -118,9 +103,6 @@ public class JsonObjectKeysRecord extends TableRecordImpl<JsonObjectKeysRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonObjectKeysRecord
-     */
     public JsonObjectKeysRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonObjectKeys value) {
         super(JsonObjectKeys.JSON_OBJECT_KEYS);
 

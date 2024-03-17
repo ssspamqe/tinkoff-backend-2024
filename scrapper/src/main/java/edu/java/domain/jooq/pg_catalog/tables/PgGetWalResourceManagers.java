@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgGetWalResourceManagersRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_wal_resource_managers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,35 +38,18 @@ public class PgGetWalResourceManagers extends TableImpl<PgGetWalResourceManagers
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_get_wal_resource_managers</code>
-     */
     public static final PgGetWalResourceManagers PG_GET_WAL_RESOURCE_MANAGERS = new PgGetWalResourceManagers();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgGetWalResourceManagersRecord> getRecordType() {
         return PgGetWalResourceManagersRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_get_wal_resource_managers.rm_id</code>.
-     */
     public final TableField<PgGetWalResourceManagersRecord, Integer> RM_ID = createField(DSL.name("rm_id"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_wal_resource_managers.rm_name</code>.
-     */
     public final TableField<PgGetWalResourceManagersRecord, String> RM_NAME = createField(DSL.name("rm_name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_get_wal_resource_managers.rm_builtin</code>.
-     */
     public final TableField<PgGetWalResourceManagersRecord, Boolean> RM_BUILTIN = createField(DSL.name("rm_builtin"), SQLDataType.BOOLEAN, this, "");
 
     private PgGetWalResourceManagers(Name alias, Table<PgGetWalResourceManagersRecord> aliased) {
@@ -83,26 +61,14 @@ public class PgGetWalResourceManagers extends TableImpl<PgGetWalResourceManagers
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_wal_resource_managers</code>
-     * table reference
-     */
     public PgGetWalResourceManagers(String alias) {
         this(DSL.name(alias), PG_GET_WAL_RESOURCE_MANAGERS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_wal_resource_managers</code>
-     * table reference
-     */
     public PgGetWalResourceManagers(Name alias) {
         this(alias, PG_GET_WAL_RESOURCE_MANAGERS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_get_wal_resource_managers</code> table
-     * reference
-     */
     public PgGetWalResourceManagers() {
         this(DSL.name("pg_get_wal_resource_managers"), null);
     }
@@ -131,27 +97,18 @@ public class PgGetWalResourceManagers extends TableImpl<PgGetWalResourceManagers
         return new PgGetWalResourceManagers(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetWalResourceManagers rename(String name) {
         return new PgGetWalResourceManagers(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetWalResourceManagers rename(Name name) {
         return new PgGetWalResourceManagers(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetWalResourceManagers rename(Table<?> name) {
@@ -168,26 +125,16 @@ public class PgGetWalResourceManagers extends TableImpl<PgGetWalResourceManagers
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgGetWalResourceManagers call() {
         PgGetWalResourceManagers result = new PgGetWalResourceManagers(DSL.name("pg_get_wal_resource_managers"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Integer, ? super String, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Integer, ? super String, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

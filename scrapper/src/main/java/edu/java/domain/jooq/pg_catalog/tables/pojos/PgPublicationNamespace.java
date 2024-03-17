@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_namespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,50 +47,32 @@ public class PgPublicationNamespace implements Serializable {
         this.pnnspid = pnnspid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_namespace.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_namespace.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_namespace.pnpubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPnpubid() {
         return this.pnpubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_namespace.pnpubid</code>.
-     */
     public void setPnpubid(@NotNull Long pnpubid) {
         this.pnpubid = pnpubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_namespace.pnnspid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPnnspid() {
         return this.pnnspid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_namespace.pnnspid</code>.
-     */
     public void setPnnspid(@NotNull Long pnnspid) {
         this.pnnspid = pnnspid;
     }

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatXactAllTablesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_xact_all_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,79 +40,36 @@ public class PgStatXactAllTables extends TableImpl<PgStatXactAllTablesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_xact_all_tables</code>
-     */
     public static final PgStatXactAllTables PG_STAT_XACT_ALL_TABLES = new PgStatXactAllTables();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatXactAllTablesRecord> getRecordType() {
         return PgStatXactAllTablesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.relid</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.schemaname</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.relname</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, String> RELNAME = createField(DSL.name("relname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.seq_scan</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> SEQ_SCAN = createField(DSL.name("seq_scan"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.seq_tup_read</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> SEQ_TUP_READ = createField(DSL.name("seq_tup_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.idx_scan</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> IDX_SCAN = createField(DSL.name("idx_scan"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.idx_tup_fetch</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> IDX_TUP_FETCH = createField(DSL.name("idx_tup_fetch"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.n_tup_ins</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> N_TUP_INS = createField(DSL.name("n_tup_ins"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.n_tup_upd</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> N_TUP_UPD = createField(DSL.name("n_tup_upd"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.n_tup_del</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> N_TUP_DEL = createField(DSL.name("n_tup_del"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_all_tables.n_tup_hot_upd</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> N_TUP_HOT_UPD = createField(DSL.name("n_tup_hot_upd"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_xact_all_tables.n_tup_newpage_upd</code>.
-     */
     public final TableField<PgStatXactAllTablesRecord, Long> N_TUP_NEWPAGE_UPD = createField(DSL.name("n_tup_newpage_upd"), SQLDataType.BIGINT, this, "");
 
     private PgStatXactAllTables(Name alias, Table<PgStatXactAllTablesRecord> aliased) {
@@ -146,25 +98,14 @@ public class PgStatXactAllTables extends TableImpl<PgStatXactAllTablesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_xact_all_tables</code> table
-     * reference
-     */
     public PgStatXactAllTables(String alias) {
         this(DSL.name(alias), PG_STAT_XACT_ALL_TABLES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_xact_all_tables</code> table
-     * reference
-     */
     public PgStatXactAllTables(Name alias) {
         this(alias, PG_STAT_XACT_ALL_TABLES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_xact_all_tables</code> table reference
-     */
     public PgStatXactAllTables() {
         this(DSL.name("pg_stat_xact_all_tables"), null);
     }
@@ -197,27 +138,18 @@ public class PgStatXactAllTables extends TableImpl<PgStatXactAllTablesRecord> {
         return new PgStatXactAllTables(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatXactAllTables rename(String name) {
         return new PgStatXactAllTables(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatXactAllTables rename(Name name) {
         return new PgStatXactAllTables(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatXactAllTables rename(Table<?> name) {
@@ -234,17 +166,10 @@ public class PgStatXactAllTables extends TableImpl<PgStatXactAllTablesRecord> {
         return (Row12) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function12<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

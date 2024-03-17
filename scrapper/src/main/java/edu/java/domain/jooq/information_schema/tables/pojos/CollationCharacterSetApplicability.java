@@ -12,10 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table
- * <code>information_schema.collation_character_set_applicability</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -63,104 +59,56 @@ public class CollationCharacterSetApplicability implements Serializable {
         this.characterSetName = characterSetName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return this.collationCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String collationCatalog) {
         this.collationCatalog = collationCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return this.collationSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String collationSchema) {
         this.collationSchema = collationSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return this.collationName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.collation_name</code>.
-     */
     public void setCollationName(@Nullable String collationName) {
         this.collationName = collationName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return this.characterSetCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String characterSetCatalog) {
         this.characterSetCatalog = characterSetCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return this.characterSetSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String characterSetSchema) {
         this.characterSetSchema = characterSetSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.collation_character_set_applicability.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return this.characterSetName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.collation_character_set_applicability.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String characterSetName) {
         this.characterSetName = characterSetName;
     }

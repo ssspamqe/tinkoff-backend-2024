@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_language</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -76,145 +73,91 @@ public class PgLanguage implements Serializable {
         this.lanacl = lanacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getLanname() {
         return this.lanname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanname</code>.
-     */
     public void setLanname(@NotNull String lanname) {
         this.lanname = lanname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLanowner() {
         return this.lanowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanowner</code>.
-     */
     public void setLanowner(@NotNull Long lanowner) {
         this.lanowner = lanowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanispl</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getLanispl() {
         return this.lanispl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanispl</code>.
-     */
     public void setLanispl(@NotNull Boolean lanispl) {
         this.lanispl = lanispl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanpltrusted</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getLanpltrusted() {
         return this.lanpltrusted;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanpltrusted</code>.
-     */
     public void setLanpltrusted(@NotNull Boolean lanpltrusted) {
         this.lanpltrusted = lanpltrusted;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanplcallfoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLanplcallfoid() {
         return this.lanplcallfoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanplcallfoid</code>.
-     */
     public void setLanplcallfoid(@NotNull Long lanplcallfoid) {
         this.lanplcallfoid = lanplcallfoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.laninline</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLaninline() {
         return this.laninline;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.laninline</code>.
-     */
     public void setLaninline(@NotNull Long laninline) {
         this.laninline = laninline;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanvalidator</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLanvalidator() {
         return this.lanvalidator;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanvalidator</code>.
-     */
     public void setLanvalidator(@NotNull Long lanvalidator) {
         this.lanvalidator = lanvalidator;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_language.lanacl</code>.
-     */
     @Nullable
     public String[] getLanacl() {
         return this.lanacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_language.lanacl</code>.
-     */
     public void setLanacl(@Nullable String[] lanacl) {
         this.lanacl = lanacl;
     }

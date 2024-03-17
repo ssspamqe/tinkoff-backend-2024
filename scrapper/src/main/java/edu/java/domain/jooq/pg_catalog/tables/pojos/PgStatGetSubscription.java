@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_subscription</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -75,167 +72,87 @@ public class PgStatGetSubscription implements Serializable {
         this.latestEndTime = latestEndTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_subscription.subid</code>.
-     */
     @Nullable
     public Long getSubid() {
         return this.subid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_subscription.subid</code>.
-     */
     public void setSubid(@Nullable Long subid) {
         this.subid = subid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_subscription.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_subscription.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_subscription.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_subscription.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_subscription.leader_pid</code>.
-     */
     @Nullable
     public Integer getLeaderPid() {
         return this.leaderPid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_subscription.leader_pid</code>.
-     */
     public void setLeaderPid(@Nullable Integer leaderPid) {
         this.leaderPid = leaderPid;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getReceivedLsn() {
         return this.receivedLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setReceivedLsn(@Nullable Object receivedLsn) {
         this.receivedLsn = receivedLsn;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_get_subscription.last_msg_send_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastMsgSendTime() {
         return this.lastMsgSendTime;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_get_subscription.last_msg_send_time</code>.
-     */
     public void setLastMsgSendTime(@Nullable OffsetDateTime lastMsgSendTime) {
         this.lastMsgSendTime = lastMsgSendTime;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_get_subscription.last_msg_receipt_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastMsgReceiptTime() {
         return this.lastMsgReceiptTime;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_get_subscription.last_msg_receipt_time</code>.
-     */
     public void setLastMsgReceiptTime(@Nullable OffsetDateTime lastMsgReceiptTime) {
         this.lastMsgReceiptTime = lastMsgReceiptTime;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getLatestEndLsn() {
         return this.latestEndLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setLatestEndLsn(@Nullable Object latestEndLsn) {
         this.latestEndLsn = latestEndLsn;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_get_subscription.latest_end_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLatestEndTime() {
         return this.latestEndTime;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_get_subscription.latest_end_time</code>.
-     */
     public void setLatestEndTime(@Nullable OffsetDateTime latestEndTime) {
         this.latestEndTime = latestEndTime;
     }

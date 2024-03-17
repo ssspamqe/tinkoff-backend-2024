@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.ts_stat</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,46 +30,28 @@ public class TsStatRecord extends TableRecordImpl<TsStatRecord> implements Recor
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.ts_stat.word</code>.
-     */
     public void setWord(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_stat.word</code>.
-     */
     @Nullable
     public String getWord() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_stat.ndoc</code>.
-     */
     public void setNdoc(@Nullable Integer value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_stat.ndoc</code>.
-     */
     @Nullable
     public Integer getNdoc() {
         return (Integer) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_stat.nentry</code>.
-     */
     public void setNentry(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_stat.nentry</code>.
-     */
     @Nullable
     public Integer getNentry() {
         return (Integer) get(2);
@@ -182,16 +161,10 @@ public class TsStatRecord extends TableRecordImpl<TsStatRecord> implements Recor
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TsStatRecord
-     */
     public TsStatRecord() {
         super(TsStat.TS_STAT);
     }
 
-    /**
-     * Create a detached, initialised TsStatRecord
-     */
     @ConstructorProperties({ "word", "ndoc", "nentry" })
     public TsStatRecord(@Nullable String word, @Nullable Integer ndoc, @Nullable Integer nentry) {
         super(TsStat.TS_STAT);
@@ -202,9 +175,6 @@ public class TsStatRecord extends TableRecordImpl<TsStatRecord> implements Recor
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TsStatRecord
-     */
     public TsStatRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.TsStat value) {
         super(TsStat.TS_STAT);
 

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgUserMappingsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_user_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,48 +40,24 @@ public class PgUserMappings extends TableImpl<PgUserMappingsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_user_mappings</code>
-     */
     public static final PgUserMappings PG_USER_MAPPINGS = new PgUserMappings();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgUserMappingsRecord> getRecordType() {
         return PgUserMappingsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_user_mappings.umid</code>.
-     */
     public final TableField<PgUserMappingsRecord, Long> UMID = createField(DSL.name("umid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user_mappings.srvid</code>.
-     */
     public final TableField<PgUserMappingsRecord, Long> SRVID = createField(DSL.name("srvid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user_mappings.srvname</code>.
-     */
     public final TableField<PgUserMappingsRecord, String> SRVNAME = createField(DSL.name("srvname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user_mappings.umuser</code>.
-     */
     public final TableField<PgUserMappingsRecord, Long> UMUSER = createField(DSL.name("umuser"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user_mappings.usename</code>.
-     */
     public final TableField<PgUserMappingsRecord, String> USENAME = createField(DSL.name("usename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user_mappings.umoptions</code>.
-     */
     public final TableField<PgUserMappingsRecord, String[]> UMOPTIONS = createField(DSL.name("umoptions"), SQLDataType.CLOB.array(), this, "");
 
     private PgUserMappings(Name alias, Table<PgUserMappingsRecord> aliased) {
@@ -115,25 +86,14 @@ public class PgUserMappings extends TableImpl<PgUserMappingsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_user_mappings</code> table
-     * reference
-     */
     public PgUserMappings(String alias) {
         this(DSL.name(alias), PG_USER_MAPPINGS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_user_mappings</code> table
-     * reference
-     */
     public PgUserMappings(Name alias) {
         this(alias, PG_USER_MAPPINGS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_user_mappings</code> table reference
-     */
     public PgUserMappings() {
         this(DSL.name("pg_user_mappings"), null);
     }
@@ -166,27 +126,18 @@ public class PgUserMappings extends TableImpl<PgUserMappingsRecord> {
         return new PgUserMappings(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUserMappings rename(String name) {
         return new PgUserMappings(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUserMappings rename(Name name) {
         return new PgUserMappings(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUserMappings rename(Table<?> name) {
@@ -203,17 +154,10 @@ public class PgUserMappings extends TableImpl<PgUserMappingsRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super Long, ? super Long, ? super String, ? super Long, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super Long, ? super String, ? super Long, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

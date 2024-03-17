@@ -19,9 +19,6 @@ import org.jooq.Row13;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_roles</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,196 +31,118 @@ public class PgRolesRecord extends TableRecordImpl<PgRolesRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolname</code>.
-     */
     public void setRolname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolname</code>.
-     */
     @Nullable
     public String getRolname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolsuper</code>.
-     */
     public void setRolsuper(@Nullable Boolean value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolsuper</code>.
-     */
     @Nullable
     public Boolean getRolsuper() {
         return (Boolean) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolinherit</code>.
-     */
     public void setRolinherit(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolinherit</code>.
-     */
     @Nullable
     public Boolean getRolinherit() {
         return (Boolean) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolcreaterole</code>.
-     */
     public void setRolcreaterole(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolcreaterole</code>.
-     */
     @Nullable
     public Boolean getRolcreaterole() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolcreatedb</code>.
-     */
     public void setRolcreatedb(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolcreatedb</code>.
-     */
     @Nullable
     public Boolean getRolcreatedb() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolcanlogin</code>.
-     */
     public void setRolcanlogin(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolcanlogin</code>.
-     */
     @Nullable
     public Boolean getRolcanlogin() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolreplication</code>.
-     */
     public void setRolreplication(@Nullable Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolreplication</code>.
-     */
     @Nullable
     public Boolean getRolreplication() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolconnlimit</code>.
-     */
     public void setRolconnlimit(@Nullable Integer value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolconnlimit</code>.
-     */
     @Nullable
     public Integer getRolconnlimit() {
         return (Integer) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolpassword</code>.
-     */
     public void setRolpassword(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolpassword</code>.
-     */
     @Nullable
     public String getRolpassword() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolvaliduntil</code>.
-     */
     public void setRolvaliduntil(@Nullable OffsetDateTime value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolvaliduntil</code>.
-     */
     @Nullable
     public OffsetDateTime getRolvaliduntil() {
         return (OffsetDateTime) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolbypassrls</code>.
-     */
     public void setRolbypassrls(@Nullable Boolean value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolbypassrls</code>.
-     */
     @Nullable
     public Boolean getRolbypassrls() {
         return (Boolean) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.rolconfig</code>.
-     */
     public void setRolconfig(@Nullable String[] value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.rolconfig</code>.
-     */
     @Nullable
     public String[] getRolconfig() {
         return (String[]) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_roles.oid</code>.
-     */
     public void setOid(@Nullable Long value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_roles.oid</code>.
-     */
     @Nullable
     public Long getOid() {
         return (Long) get(12);
@@ -593,16 +512,10 @@ public class PgRolesRecord extends TableRecordImpl<PgRolesRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgRolesRecord
-     */
     public PgRolesRecord() {
         super(PgRoles.PG_ROLES);
     }
 
-    /**
-     * Create a detached, initialised PgRolesRecord
-     */
     @ConstructorProperties({ "rolname", "rolsuper", "rolinherit", "rolcreaterole", "rolcreatedb", "rolcanlogin", "rolreplication", "rolconnlimit", "rolpassword", "rolvaliduntil", "rolbypassrls", "rolconfig", "oid" })
     public PgRolesRecord(@Nullable String rolname, @Nullable Boolean rolsuper, @Nullable Boolean rolinherit, @Nullable Boolean rolcreaterole, @Nullable Boolean rolcreatedb, @Nullable Boolean rolcanlogin, @Nullable Boolean rolreplication, @Nullable Integer rolconnlimit, @Nullable String rolpassword, @Nullable OffsetDateTime rolvaliduntil, @Nullable Boolean rolbypassrls, @Nullable String[] rolconfig, @Nullable Long oid) {
         super(PgRoles.PG_ROLES);
@@ -623,9 +536,6 @@ public class PgRolesRecord extends TableRecordImpl<PgRolesRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgRolesRecord
-     */
     public PgRolesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgRoles value) {
         super(PgRoles.PG_ROLES);
 

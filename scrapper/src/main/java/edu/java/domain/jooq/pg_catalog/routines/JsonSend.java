@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.json_send</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,19 +28,10 @@ public class JsonSend extends AbstractRoutine<byte[]> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.json_send.RETURN_VALUE</code>.
-     */
     public static final Parameter<byte[]> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BLOB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.json_send._1</code>.
-     */
     public static final Parameter<JSON> _1 = Internal.createParameter("_1", SQLDataType.JSON, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public JsonSend() {
         super("json_send", PgCatalog.PG_CATALOG, SQLDataType.BLOB);
 
@@ -51,17 +39,10 @@ public class JsonSend extends AbstractRoutine<byte[]> {
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(JSON value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<JSON> field) {
         setField(_1, field);
     }

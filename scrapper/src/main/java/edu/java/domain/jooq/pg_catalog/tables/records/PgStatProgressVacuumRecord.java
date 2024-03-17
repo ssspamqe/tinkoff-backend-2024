@@ -18,9 +18,6 @@ import org.jooq.Row11;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_vacuum</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,178 +30,100 @@ public class PgStatProgressVacuumRecord extends TableRecordImpl<PgStatProgressVa
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.datid</code>.
-     */
     public void setDatid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.datname</code>.
-     */
     public void setDatname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.phase</code>.
-     */
     public void setPhase(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_total</code>.
-     */
     public void setHeapBlksTotal(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_total</code>.
-     */
     @Nullable
     public Long getHeapBlksTotal() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_scanned</code>.
-     */
     public void setHeapBlksScanned(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_scanned</code>.
-     */
     @Nullable
     public Long getHeapBlksScanned() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_vacuumed</code>.
-     */
     public void setHeapBlksVacuumed(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_vacuumed</code>.
-     */
     @Nullable
     public Long getHeapBlksVacuumed() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.index_vacuum_count</code>.
-     */
     public void setIndexVacuumCount(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.index_vacuum_count</code>.
-     */
     @Nullable
     public Long getIndexVacuumCount() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.max_dead_tuples</code>.
-     */
     public void setMaxDeadTuples(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.max_dead_tuples</code>.
-     */
     @Nullable
     public Long getMaxDeadTuples() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.num_dead_tuples</code>.
-     */
     public void setNumDeadTuples(@Nullable Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.num_dead_tuples</code>.
-     */
     @Nullable
     public Long getNumDeadTuples() {
         return (Long) get(10);
@@ -522,16 +441,10 @@ public class PgStatProgressVacuumRecord extends TableRecordImpl<PgStatProgressVa
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatProgressVacuumRecord
-     */
     public PgStatProgressVacuumRecord() {
         super(PgStatProgressVacuum.PG_STAT_PROGRESS_VACUUM);
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressVacuumRecord
-     */
     @ConstructorProperties({ "pid", "datid", "datname", "relid", "phase", "heapBlksTotal", "heapBlksScanned", "heapBlksVacuumed", "indexVacuumCount", "maxDeadTuples", "numDeadTuples" })
     public PgStatProgressVacuumRecord(@Nullable Integer pid, @Nullable Long datid, @Nullable String datname, @Nullable Long relid, @Nullable String phase, @Nullable Long heapBlksTotal, @Nullable Long heapBlksScanned, @Nullable Long heapBlksVacuumed, @Nullable Long indexVacuumCount, @Nullable Long maxDeadTuples, @Nullable Long numDeadTuples) {
         super(PgStatProgressVacuum.PG_STAT_PROGRESS_VACUUM);
@@ -550,9 +463,6 @@ public class PgStatProgressVacuumRecord extends TableRecordImpl<PgStatProgressVa
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressVacuumRecord
-     */
     public PgStatProgressVacuumRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatProgressVacuum value) {
         super(PgStatProgressVacuum.PG_STAT_PROGRESS_VACUUM);
 

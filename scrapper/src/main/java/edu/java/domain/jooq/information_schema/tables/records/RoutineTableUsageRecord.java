@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.routine_table_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,154 +30,82 @@ public class RoutineTableUsageRecord extends TableRecordImpl<RoutineTableUsageRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.routine_catalog</code>.
-     */
     public void setRoutineCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.routine_catalog</code>.
-     */
     @Nullable
     public String getRoutineCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.routine_schema</code>.
-     */
     public void setRoutineSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.routine_schema</code>.
-     */
     @Nullable
     public String getRoutineSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.routine_name</code>.
-     */
     public void setRoutineName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.routine_name</code>.
-     */
     @Nullable
     public String getRoutineName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_table_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_table_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(8);
@@ -446,16 +371,10 @@ public class RoutineTableUsageRecord extends TableRecordImpl<RoutineTableUsageRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached RoutineTableUsageRecord
-     */
     public RoutineTableUsageRecord() {
         super(RoutineTableUsage.ROUTINE_TABLE_USAGE);
     }
 
-    /**
-     * Create a detached, initialised RoutineTableUsageRecord
-     */
     @ConstructorProperties({ "specificCatalog", "specificSchema", "specificName", "routineCatalog", "routineSchema", "routineName", "tableCatalog", "tableSchema", "tableName" })
     public RoutineTableUsageRecord(@Nullable String specificCatalog, @Nullable String specificSchema, @Nullable String specificName, @Nullable String routineCatalog, @Nullable String routineSchema, @Nullable String routineName, @Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName) {
         super(RoutineTableUsage.ROUTINE_TABLE_USAGE);
@@ -472,9 +391,6 @@ public class RoutineTableUsageRecord extends TableRecordImpl<RoutineTableUsageRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised RoutineTableUsageRecord
-     */
     public RoutineTableUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.RoutineTableUsage value) {
         super(RoutineTableUsage.ROUTINE_TABLE_USAGE);
 

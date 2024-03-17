@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema._pg_user_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -67,113 +64,65 @@ public class _PgUserMappings implements Serializable {
         this.srvowner = srvowner;
     }
 
-    /**
-     * Getter for <code>information_schema._pg_user_mappings.oid</code>.
-     */
     @Nullable
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>information_schema._pg_user_mappings.oid</code>.
-     */
     public void setOid(@Nullable Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>information_schema._pg_user_mappings.umoptions</code>.
-     */
     @Nullable
     public String[] getUmoptions() {
         return this.umoptions;
     }
 
-    /**
-     * Setter for <code>information_schema._pg_user_mappings.umoptions</code>.
-     */
     public void setUmoptions(@Nullable String[] umoptions) {
         this.umoptions = umoptions;
     }
 
-    /**
-     * Getter for <code>information_schema._pg_user_mappings.umuser</code>.
-     */
     @Nullable
     public Long getUmuser() {
         return this.umuser;
     }
 
-    /**
-     * Setter for <code>information_schema._pg_user_mappings.umuser</code>.
-     */
     public void setUmuser(@Nullable Long umuser) {
         this.umuser = umuser;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_user_mappings.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return this.authorizationIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_user_mappings.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String authorizationIdentifier) {
         this.authorizationIdentifier = authorizationIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_user_mappings.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return this.foreignServerCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_user_mappings.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String foreignServerCatalog) {
         this.foreignServerCatalog = foreignServerCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_user_mappings.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return this.foreignServerName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_user_mappings.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String foreignServerName) {
         this.foreignServerName = foreignServerName;
     }
 
-    /**
-     * Getter for <code>information_schema._pg_user_mappings.srvowner</code>.
-     */
     @Nullable
     public String getSrvowner() {
         return this.srvowner;
     }
 
-    /**
-     * Setter for <code>information_schema._pg_user_mappings.srvowner</code>.
-     */
     public void setSrvowner(@Nullable String srvowner) {
         this.srvowner = srvowner;
     }

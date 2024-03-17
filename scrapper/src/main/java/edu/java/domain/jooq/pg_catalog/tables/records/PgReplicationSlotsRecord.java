@@ -18,9 +18,6 @@ import org.jooq.Row16;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_replication_slots</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,265 +30,149 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.slot_name</code>.
-     */
     public void setSlotName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.slot_name</code>.
-     */
     @Nullable
     public String getSlotName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.plugin</code>.
-     */
     public void setPlugin(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.plugin</code>.
-     */
     @Nullable
     public String getPlugin() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.slot_type</code>.
-     */
     public void setSlotType(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.slot_type</code>.
-     */
     @Nullable
     public String getSlotType() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.datoid</code>.
-     */
     public void setDatoid(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.datoid</code>.
-     */
     @Nullable
     public Long getDatoid() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.database</code>.
-     */
     public void setDatabase(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.database</code>.
-     */
     @Nullable
     public String getDatabase() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.temporary</code>.
-     */
     public void setTemporary(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.temporary</code>.
-     */
     @Nullable
     public Boolean getTemporary() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.active</code>.
-     */
     public void setActive(@Nullable Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.active</code>.
-     */
     @Nullable
     public Boolean getActive() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.active_pid</code>.
-     */
     public void setActivePid(@Nullable Integer value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.active_pid</code>.
-     */
     @Nullable
     public Integer getActivePid() {
         return (Integer) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.xmin</code>.
-     */
     public void setXmin(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.xmin</code>.
-     */
     @Nullable
     public Long getXmin() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.catalog_xmin</code>.
-     */
     public void setCatalogXmin(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.catalog_xmin</code>.
-     */
     @Nullable
     public Long getCatalogXmin() {
         return (Long) get(9);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setRestartLsn(@Nullable Object value) {
         set(10, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getRestartLsn() {
         return get(10);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setConfirmedFlushLsn(@Nullable Object value) {
         set(11, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getConfirmedFlushLsn() {
         return get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.wal_status</code>.
-     */
     public void setWalStatus(@Nullable String value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.wal_status</code>.
-     */
     @Nullable
     public String getWalStatus() {
         return (String) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.safe_wal_size</code>.
-     */
     public void setSafeWalSize(@Nullable Long value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.safe_wal_size</code>.
-     */
     @Nullable
     public Long getSafeWalSize() {
         return (Long) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.two_phase</code>.
-     */
     public void setTwoPhase(@Nullable Boolean value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.two_phase</code>.
-     */
     @Nullable
     public Boolean getTwoPhase() {
         return (Boolean) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.conflicting</code>.
-     */
     public void setConflicting(@Nullable Boolean value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.conflicting</code>.
-     */
     @Nullable
     public Boolean getConflicting() {
         return (Boolean) get(15);
@@ -373,14 +254,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         return PgReplicationSlots.PG_REPLICATION_SLOTS.CATALOG_XMIN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -388,14 +261,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         return PgReplicationSlots.PG_REPLICATION_SLOTS.RESTART_LSN;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -487,14 +352,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         return getCatalogXmin();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -502,14 +359,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         return getRestartLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -601,14 +450,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         return getCatalogXmin();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -616,14 +457,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         return getRestartLsn();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -725,14 +558,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -741,14 +566,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -811,16 +628,10 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgReplicationSlotsRecord
-     */
     public PgReplicationSlotsRecord() {
         super(PgReplicationSlots.PG_REPLICATION_SLOTS);
     }
 
-    /**
-     * Create a detached, initialised PgReplicationSlotsRecord
-     */
     @ConstructorProperties({ "slotName", "plugin", "slotType", "datoid", "database", "temporary", "active", "activePid", "xmin", "catalogXmin", "restartLsn", "confirmedFlushLsn", "walStatus", "safeWalSize", "twoPhase", "conflicting" })
     public PgReplicationSlotsRecord(@Nullable String slotName, @Nullable String plugin, @Nullable String slotType, @Nullable Long datoid, @Nullable String database, @Nullable Boolean temporary, @Nullable Boolean active, @Nullable Integer activePid, @Nullable Long xmin, @Nullable Long catalogXmin, @Nullable Object restartLsn, @Nullable Object confirmedFlushLsn, @Nullable String walStatus, @Nullable Long safeWalSize, @Nullable Boolean twoPhase, @Nullable Boolean conflicting) {
         super(PgReplicationSlots.PG_REPLICATION_SLOTS);
@@ -844,9 +655,6 @@ public class PgReplicationSlotsRecord extends TableRecordImpl<PgReplicationSlots
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgReplicationSlotsRecord
-     */
     public PgReplicationSlotsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgReplicationSlots value) {
         super(PgReplicationSlots.PG_REPLICATION_SLOTS);
 

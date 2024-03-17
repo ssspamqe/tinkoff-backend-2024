@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_replication_origin_session_is_setup</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,15 +26,8 @@ public class PgReplicationOriginSessionIsSetup extends AbstractRoutine<Boolean> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_replication_origin_session_is_setup.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgReplicationOriginSessionIsSetup() {
         super("pg_replication_origin_session_is_setup", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 

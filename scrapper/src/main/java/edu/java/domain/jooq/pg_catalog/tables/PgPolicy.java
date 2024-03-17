@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgPolicyRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_policy</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,69 +45,29 @@ public class PgPolicy extends TableImpl<PgPolicyRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_policy</code>
-     */
     public static final PgPolicy PG_POLICY = new PgPolicy();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgPolicyRecord> getRecordType() {
         return PgPolicyRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_policy.oid</code>.
-     */
     public final TableField<PgPolicyRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policy.polname</code>.
-     */
     public final TableField<PgPolicyRecord, String> POLNAME = createField(DSL.name("polname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policy.polrelid</code>.
-     */
     public final TableField<PgPolicyRecord, Long> POLRELID = createField(DSL.name("polrelid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policy.polcmd</code>.
-     */
     public final TableField<PgPolicyRecord, String> POLCMD = createField(DSL.name("polcmd"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policy.polpermissive</code>.
-     */
     public final TableField<PgPolicyRecord, Boolean> POLPERMISSIVE = createField(DSL.name("polpermissive"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policy.polroles</code>.
-     */
     public final TableField<PgPolicyRecord, Long[]> POLROLES = createField(DSL.name("polroles"), SQLDataType.BIGINT.nullable(false).array(), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgPolicyRecord, Object> POLQUAL = createField(DSL.name("polqual"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_node_tree\""), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgPolicyRecord, Object> POLWITHCHECK = createField(DSL.name("polwithcheck"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_node_tree\""), this, "");
 
@@ -123,23 +79,14 @@ public class PgPolicy extends TableImpl<PgPolicyRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_policy</code> table reference
-     */
     public PgPolicy(String alias) {
         this(DSL.name(alias), PG_POLICY);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_policy</code> table reference
-     */
     public PgPolicy(Name alias) {
         this(alias, PG_POLICY);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_policy</code> table reference
-     */
     public PgPolicy() {
         this(DSL.name("pg_policy"), null);
     }
@@ -184,27 +131,18 @@ public class PgPolicy extends TableImpl<PgPolicyRecord> {
         return new PgPolicy(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPolicy rename(String name) {
         return new PgPolicy(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPolicy rename(Name name) {
         return new PgPolicy(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPolicy rename(Table<?> name) {
@@ -221,17 +159,10 @@ public class PgPolicy extends TableImpl<PgPolicyRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Long, ? super String, ? super Boolean, ? super Long[], ? super Object, ? super Object, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Long, ? super String, ? super Boolean, ? super Long[], ? super Object, ? super Object, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

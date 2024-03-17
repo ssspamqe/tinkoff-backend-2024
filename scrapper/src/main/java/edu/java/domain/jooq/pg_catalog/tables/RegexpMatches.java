@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.RegexpMatchesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.regexp_matches</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,23 +38,14 @@ public class RegexpMatches extends TableImpl<RegexpMatchesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.regexp_matches</code>
-     */
     public static final RegexpMatches REGEXP_MATCHES = new RegexpMatches();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<RegexpMatchesRecord> getRecordType() {
         return RegexpMatchesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.regexp_matches.regexp_matches</code>.
-     */
     public final TableField<RegexpMatchesRecord, String[]> REGEXP_MATCHES_ = createField(DSL.name("regexp_matches"), SQLDataType.CLOB.array(), this, "");
 
     private RegexpMatches(Name alias, Table<RegexpMatchesRecord> aliased) {
@@ -74,23 +60,14 @@ public class RegexpMatches extends TableImpl<RegexpMatchesRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.regexp_matches</code> table reference
-     */
     public RegexpMatches(String alias) {
         this(DSL.name(alias), REGEXP_MATCHES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.regexp_matches</code> table reference
-     */
     public RegexpMatches(Name alias) {
         this(alias, REGEXP_MATCHES);
     }
 
-    /**
-     * Create a <code>pg_catalog.regexp_matches</code> table reference
-     */
     public RegexpMatches() {
         this(DSL.name("regexp_matches"), null);
     }
@@ -119,27 +96,18 @@ public class RegexpMatches extends TableImpl<RegexpMatchesRecord> {
         return new RegexpMatches(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RegexpMatches rename(String name) {
         return new RegexpMatches(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RegexpMatches rename(Name name) {
         return new RegexpMatches(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RegexpMatches rename(Table<?> name) {
@@ -156,9 +124,6 @@ public class RegexpMatches extends TableImpl<RegexpMatchesRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public RegexpMatches call(
           String __1
         , String __2
@@ -173,9 +138,6 @@ public class RegexpMatches extends TableImpl<RegexpMatchesRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public RegexpMatches call(
           Field<String> __1
         , Field<String> __2
@@ -190,17 +152,10 @@ public class RegexpMatches extends TableImpl<RegexpMatchesRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

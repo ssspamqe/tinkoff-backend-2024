@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgGetBackendMemoryContextsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_backend_memory_contexts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,69 +38,30 @@ public class PgGetBackendMemoryContexts extends TableImpl<PgGetBackendMemoryCont
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_get_backend_memory_contexts</code>
-     */
     public static final PgGetBackendMemoryContexts PG_GET_BACKEND_MEMORY_CONTEXTS = new PgGetBackendMemoryContexts();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgGetBackendMemoryContextsRecord> getRecordType() {
         return PgGetBackendMemoryContextsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_get_backend_memory_contexts.name</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_backend_memory_contexts.ident</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, String> IDENT = createField(DSL.name("ident"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_backend_memory_contexts.parent</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, String> PARENT = createField(DSL.name("parent"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_backend_memory_contexts.level</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, Integer> LEVEL = createField(DSL.name("level"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_get_backend_memory_contexts.total_bytes</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, Long> TOTAL_BYTES = createField(DSL.name("total_bytes"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_get_backend_memory_contexts.total_nblocks</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, Long> TOTAL_NBLOCKS = createField(DSL.name("total_nblocks"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_get_backend_memory_contexts.free_bytes</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, Long> FREE_BYTES = createField(DSL.name("free_bytes"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_get_backend_memory_contexts.free_chunks</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, Long> FREE_CHUNKS = createField(DSL.name("free_chunks"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_get_backend_memory_contexts.used_bytes</code>.
-     */
     public final TableField<PgGetBackendMemoryContextsRecord, Long> USED_BYTES = createField(DSL.name("used_bytes"), SQLDataType.BIGINT, this, "");
 
     private PgGetBackendMemoryContexts(Name alias, Table<PgGetBackendMemoryContextsRecord> aliased) {
@@ -117,26 +73,14 @@ public class PgGetBackendMemoryContexts extends TableImpl<PgGetBackendMemoryCont
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_backend_memory_contexts</code>
-     * table reference
-     */
     public PgGetBackendMemoryContexts(String alias) {
         this(DSL.name(alias), PG_GET_BACKEND_MEMORY_CONTEXTS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_backend_memory_contexts</code>
-     * table reference
-     */
     public PgGetBackendMemoryContexts(Name alias) {
         this(alias, PG_GET_BACKEND_MEMORY_CONTEXTS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_get_backend_memory_contexts</code> table
-     * reference
-     */
     public PgGetBackendMemoryContexts() {
         this(DSL.name("pg_get_backend_memory_contexts"), null);
     }
@@ -165,27 +109,18 @@ public class PgGetBackendMemoryContexts extends TableImpl<PgGetBackendMemoryCont
         return new PgGetBackendMemoryContexts(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetBackendMemoryContexts rename(String name) {
         return new PgGetBackendMemoryContexts(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetBackendMemoryContexts rename(Name name) {
         return new PgGetBackendMemoryContexts(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetBackendMemoryContexts rename(Table<?> name) {
@@ -202,26 +137,16 @@ public class PgGetBackendMemoryContexts extends TableImpl<PgGetBackendMemoryCont
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgGetBackendMemoryContexts call() {
         PgGetBackendMemoryContexts result = new PgGetBackendMemoryContexts(DSL.name("pg_get_backend_memory_contexts"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super String, ? super String, ? super String, ? super Integer, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super String, ? super String, ? super Integer, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

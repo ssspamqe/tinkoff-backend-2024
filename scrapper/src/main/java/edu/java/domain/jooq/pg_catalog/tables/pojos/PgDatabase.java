@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_database</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -108,270 +105,168 @@ public class PgDatabase implements Serializable {
         this.datacl = datacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDatname() {
         return this.datname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datname</code>.
-     */
     public void setDatname(@NotNull String datname) {
         this.datname = datname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datdba</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDatdba() {
         return this.datdba;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datdba</code>.
-     */
     public void setDatdba(@NotNull Long datdba) {
         this.datdba = datdba;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.encoding</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getEncoding() {
         return this.encoding;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.encoding</code>.
-     */
     public void setEncoding(@NotNull Integer encoding) {
         this.encoding = encoding;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datlocprovider</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDatlocprovider() {
         return this.datlocprovider;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datlocprovider</code>.
-     */
     public void setDatlocprovider(@NotNull String datlocprovider) {
         this.datlocprovider = datlocprovider;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datistemplate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getDatistemplate() {
         return this.datistemplate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datistemplate</code>.
-     */
     public void setDatistemplate(@NotNull Boolean datistemplate) {
         this.datistemplate = datistemplate;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datallowconn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getDatallowconn() {
         return this.datallowconn;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datallowconn</code>.
-     */
     public void setDatallowconn(@NotNull Boolean datallowconn) {
         this.datallowconn = datallowconn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datconnlimit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getDatconnlimit() {
         return this.datconnlimit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datconnlimit</code>.
-     */
     public void setDatconnlimit(@NotNull Integer datconnlimit) {
         this.datconnlimit = datconnlimit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datfrozenxid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDatfrozenxid() {
         return this.datfrozenxid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datfrozenxid</code>.
-     */
     public void setDatfrozenxid(@NotNull Long datfrozenxid) {
         this.datfrozenxid = datfrozenxid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datminmxid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDatminmxid() {
         return this.datminmxid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datminmxid</code>.
-     */
     public void setDatminmxid(@NotNull Long datminmxid) {
         this.datminmxid = datminmxid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.dattablespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDattablespace() {
         return this.dattablespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.dattablespace</code>.
-     */
     public void setDattablespace(@NotNull Long dattablespace) {
         this.dattablespace = dattablespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datcollate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDatcollate() {
         return this.datcollate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datcollate</code>.
-     */
     public void setDatcollate(@NotNull String datcollate) {
         this.datcollate = datcollate;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datctype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDatctype() {
         return this.datctype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datctype</code>.
-     */
     public void setDatctype(@NotNull String datctype) {
         this.datctype = datctype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.daticulocale</code>.
-     */
     @Nullable
     public String getDaticulocale() {
         return this.daticulocale;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.daticulocale</code>.
-     */
     public void setDaticulocale(@Nullable String daticulocale) {
         this.daticulocale = daticulocale;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.daticurules</code>.
-     */
     @Nullable
     public String getDaticurules() {
         return this.daticurules;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.daticurules</code>.
-     */
     public void setDaticurules(@Nullable String daticurules) {
         this.daticurules = daticurules;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datcollversion</code>.
-     */
     @Nullable
     public String getDatcollversion() {
         return this.datcollversion;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datcollversion</code>.
-     */
     public void setDatcollversion(@Nullable String datcollversion) {
         this.datcollversion = datcollversion;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_database.datacl</code>.
-     */
     @Nullable
     public String[] getDatacl() {
         return this.datacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_database.datacl</code>.
-     */
     public void setDatacl(@Nullable String[] datacl) {
         this.datacl = datacl;
     }

@@ -18,9 +18,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The routine <code>pg_catalog.age</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,19 +30,10 @@ public class Age3 extends AbstractRoutine<YearToSecond> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.age.RETURN_VALUE</code>.
-     */
     public static final Parameter<YearToSecond> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTERVAL, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.age._1</code>.
-     */
     public static final Parameter<OffsetDateTime> _1 = Internal.createParameter("_1", SQLDataType.TIMESTAMPWITHTIMEZONE(6), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Age3() {
         super("age", PgCatalog.PG_CATALOG, SQLDataType.INTERVAL);
 
@@ -54,17 +42,10 @@ public class Age3 extends AbstractRoutine<YearToSecond> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(OffsetDateTime value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<OffsetDateTime> field) {
         setField(_1, field);
     }

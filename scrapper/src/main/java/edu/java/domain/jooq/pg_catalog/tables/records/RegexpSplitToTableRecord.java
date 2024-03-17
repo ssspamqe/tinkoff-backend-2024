@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.regexp_split_to_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,18 +30,10 @@ public class RegexpSplitToTableRecord extends TableRecordImpl<RegexpSplitToTable
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>pg_catalog.regexp_split_to_table.regexp_split_to_table</code>.
-     */
     public void setRegexpSplitToTable(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.regexp_split_to_table.regexp_split_to_table</code>.
-     */
     @Nullable
     public String getRegexpSplitToTable() {
         return (String) get(0);
@@ -102,16 +91,10 @@ public class RegexpSplitToTableRecord extends TableRecordImpl<RegexpSplitToTable
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached RegexpSplitToTableRecord
-     */
     public RegexpSplitToTableRecord() {
         super(RegexpSplitToTable.REGEXP_SPLIT_TO_TABLE);
     }
 
-    /**
-     * Create a detached, initialised RegexpSplitToTableRecord
-     */
     @ConstructorProperties({ "regexpSplitToTable" })
     public RegexpSplitToTableRecord(@Nullable String regexpSplitToTable) {
         super(RegexpSplitToTable.REGEXP_SPLIT_TO_TABLE);
@@ -120,9 +103,6 @@ public class RegexpSplitToTableRecord extends TableRecordImpl<RegexpSplitToTable
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised RegexpSplitToTableRecord
-     */
     public RegexpSplitToTableRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.RegexpSplitToTable value) {
         super(RegexpSplitToTable.REGEXP_SPLIT_TO_TABLE);
 

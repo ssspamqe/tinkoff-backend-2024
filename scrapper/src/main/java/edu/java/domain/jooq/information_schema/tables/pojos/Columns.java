@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.columns</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -216,673 +213,403 @@ public class Columns implements Serializable {
         this.isUpdatable = isUpdatable;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.column_name</code>.
-     */
     @Nullable
     public String getColumnName() {
         return this.columnName;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.column_name</code>.
-     */
     public void setColumnName(@Nullable String columnName) {
         this.columnName = columnName;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.ordinal_position</code>.
-     */
     @Nullable
     public Integer getOrdinalPosition() {
         return this.ordinalPosition;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.ordinal_position</code>.
-     */
     public void setOrdinalPosition(@Nullable Integer ordinalPosition) {
         this.ordinalPosition = ordinalPosition;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.column_default</code>.
-     */
     @Nullable
     public String getColumnDefault() {
         return this.columnDefault;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.column_default</code>.
-     */
     public void setColumnDefault(@Nullable String columnDefault) {
         this.columnDefault = columnDefault;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.is_nullable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsNullable() {
         return this.isNullable;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.is_nullable</code>.
-     */
     public void setIsNullable(@Nullable String isNullable) {
         this.isNullable = isNullable;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.data_type</code>.
-     */
     @Nullable
     public String getDataType() {
         return this.dataType;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.data_type</code>.
-     */
     public void setDataType(@Nullable String dataType) {
         this.dataType = dataType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.columns.character_maximum_length</code>.
-     */
     @Nullable
     public Integer getCharacterMaximumLength() {
         return this.characterMaximumLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.columns.character_maximum_length</code>.
-     */
     public void setCharacterMaximumLength(@Nullable Integer characterMaximumLength) {
         this.characterMaximumLength = characterMaximumLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.columns.character_octet_length</code>.
-     */
     @Nullable
     public Integer getCharacterOctetLength() {
         return this.characterOctetLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.columns.character_octet_length</code>.
-     */
     public void setCharacterOctetLength(@Nullable Integer characterOctetLength) {
         this.characterOctetLength = characterOctetLength;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.numeric_precision</code>.
-     */
     @Nullable
     public Integer getNumericPrecision() {
         return this.numericPrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.numeric_precision</code>.
-     */
     public void setNumericPrecision(@Nullable Integer numericPrecision) {
         this.numericPrecision = numericPrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.columns.numeric_precision_radix</code>.
-     */
     @Nullable
     public Integer getNumericPrecisionRadix() {
         return this.numericPrecisionRadix;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.columns.numeric_precision_radix</code>.
-     */
     public void setNumericPrecisionRadix(@Nullable Integer numericPrecisionRadix) {
         this.numericPrecisionRadix = numericPrecisionRadix;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.numeric_scale</code>.
-     */
     @Nullable
     public Integer getNumericScale() {
         return this.numericScale;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.numeric_scale</code>.
-     */
     public void setNumericScale(@Nullable Integer numericScale) {
         this.numericScale = numericScale;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.datetime_precision</code>.
-     */
     @Nullable
     public Integer getDatetimePrecision() {
         return this.datetimePrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.datetime_precision</code>.
-     */
     public void setDatetimePrecision(@Nullable Integer datetimePrecision) {
         this.datetimePrecision = datetimePrecision;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.interval_type</code>.
-     */
     @Nullable
     public String getIntervalType() {
         return this.intervalType;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.interval_type</code>.
-     */
     public void setIntervalType(@Nullable String intervalType) {
         this.intervalType = intervalType;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.interval_precision</code>.
-     */
     @Nullable
     public Integer getIntervalPrecision() {
         return this.intervalPrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.interval_precision</code>.
-     */
     public void setIntervalPrecision(@Nullable Integer intervalPrecision) {
         this.intervalPrecision = intervalPrecision;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return this.characterSetCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String characterSetCatalog) {
         this.characterSetCatalog = characterSetCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return this.characterSetSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String characterSetSchema) {
         this.characterSetSchema = characterSetSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return this.characterSetName;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String characterSetName) {
         this.characterSetName = characterSetName;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return this.collationCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String collationCatalog) {
         this.collationCatalog = collationCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return this.collationSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String collationSchema) {
         this.collationSchema = collationSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return this.collationName;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.collation_name</code>.
-     */
     public void setCollationName(@Nullable String collationName) {
         this.collationName = collationName;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.domain_catalog</code>.
-     */
     @Nullable
     public String getDomainCatalog() {
         return this.domainCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.domain_catalog</code>.
-     */
     public void setDomainCatalog(@Nullable String domainCatalog) {
         this.domainCatalog = domainCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.domain_schema</code>.
-     */
     @Nullable
     public String getDomainSchema() {
         return this.domainSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.domain_schema</code>.
-     */
     public void setDomainSchema(@Nullable String domainSchema) {
         this.domainSchema = domainSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.domain_name</code>.
-     */
     @Nullable
     public String getDomainName() {
         return this.domainName;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.domain_name</code>.
-     */
     public void setDomainName(@Nullable String domainName) {
         this.domainName = domainName;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return this.udtCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String udtCatalog) {
         this.udtCatalog = udtCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return this.udtSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String udtSchema) {
         this.udtSchema = udtSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return this.udtName;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.udt_name</code>.
-     */
     public void setUdtName(@Nullable String udtName) {
         this.udtName = udtName;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.scope_catalog</code>.
-     */
     @Nullable
     public String getScopeCatalog() {
         return this.scopeCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.scope_catalog</code>.
-     */
     public void setScopeCatalog(@Nullable String scopeCatalog) {
         this.scopeCatalog = scopeCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.scope_schema</code>.
-     */
     @Nullable
     public String getScopeSchema() {
         return this.scopeSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.scope_schema</code>.
-     */
     public void setScopeSchema(@Nullable String scopeSchema) {
         this.scopeSchema = scopeSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.scope_name</code>.
-     */
     @Nullable
     public String getScopeName() {
         return this.scopeName;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.scope_name</code>.
-     */
     public void setScopeName(@Nullable String scopeName) {
         this.scopeName = scopeName;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.maximum_cardinality</code>.
-     */
     @Nullable
     public Integer getMaximumCardinality() {
         return this.maximumCardinality;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.maximum_cardinality</code>.
-     */
     public void setMaximumCardinality(@Nullable Integer maximumCardinality) {
         this.maximumCardinality = maximumCardinality;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.dtd_identifier</code>.
-     */
     @Nullable
     public String getDtdIdentifier() {
         return this.dtdIdentifier;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.dtd_identifier</code>.
-     */
     public void setDtdIdentifier(@Nullable String dtdIdentifier) {
         this.dtdIdentifier = dtdIdentifier;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.is_self_referencing</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsSelfReferencing() {
         return this.isSelfReferencing;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.is_self_referencing</code>.
-     */
     public void setIsSelfReferencing(@Nullable String isSelfReferencing) {
         this.isSelfReferencing = isSelfReferencing;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.is_identity</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsIdentity() {
         return this.isIdentity;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.is_identity</code>.
-     */
     public void setIsIdentity(@Nullable String isIdentity) {
         this.isIdentity = isIdentity;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.identity_generation</code>.
-     */
     @Nullable
     public String getIdentityGeneration() {
         return this.identityGeneration;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.identity_generation</code>.
-     */
     public void setIdentityGeneration(@Nullable String identityGeneration) {
         this.identityGeneration = identityGeneration;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.identity_start</code>.
-     */
     @Nullable
     public String getIdentityStart() {
         return this.identityStart;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.identity_start</code>.
-     */
     public void setIdentityStart(@Nullable String identityStart) {
         this.identityStart = identityStart;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.identity_increment</code>.
-     */
     @Nullable
     public String getIdentityIncrement() {
         return this.identityIncrement;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.identity_increment</code>.
-     */
     public void setIdentityIncrement(@Nullable String identityIncrement) {
         this.identityIncrement = identityIncrement;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.identity_maximum</code>.
-     */
     @Nullable
     public String getIdentityMaximum() {
         return this.identityMaximum;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.identity_maximum</code>.
-     */
     public void setIdentityMaximum(@Nullable String identityMaximum) {
         this.identityMaximum = identityMaximum;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.identity_minimum</code>.
-     */
     @Nullable
     public String getIdentityMinimum() {
         return this.identityMinimum;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.identity_minimum</code>.
-     */
     public void setIdentityMinimum(@Nullable String identityMinimum) {
         this.identityMinimum = identityMinimum;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.identity_cycle</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIdentityCycle() {
         return this.identityCycle;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.identity_cycle</code>.
-     */
     public void setIdentityCycle(@Nullable String identityCycle) {
         this.identityCycle = identityCycle;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.is_generated</code>.
-     */
     @Nullable
     public String getIsGenerated() {
         return this.isGenerated;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.is_generated</code>.
-     */
     public void setIsGenerated(@Nullable String isGenerated) {
         this.isGenerated = isGenerated;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.generation_expression</code>.
-     */
     @Nullable
     public String getGenerationExpression() {
         return this.generationExpression;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.generation_expression</code>.
-     */
     public void setGenerationExpression(@Nullable String generationExpression) {
         this.generationExpression = generationExpression;
     }
 
-    /**
-     * Getter for <code>information_schema.columns.is_updatable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsUpdatable() {
         return this.isUpdatable;
     }
 
-    /**
-     * Setter for <code>information_schema.columns.is_updatable</code>.
-     */
     public void setIsUpdatable(@Nullable String isUpdatable) {
         this.isUpdatable = isUpdatable;
     }

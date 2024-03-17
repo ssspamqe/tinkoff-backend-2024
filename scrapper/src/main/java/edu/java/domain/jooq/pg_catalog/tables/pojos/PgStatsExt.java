@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stats_ext</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -99,251 +96,141 @@ public class PgStatsExt implements Serializable {
         this.mostCommonBaseFreqs = mostCommonBaseFreqs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return this.tablename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.tablename</code>.
-     */
     public void setTablename(@Nullable String tablename) {
         this.tablename = tablename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.statistics_schemaname</code>.
-     */
     @Nullable
     public String getStatisticsSchemaname() {
         return this.statisticsSchemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.statistics_schemaname</code>.
-     */
     public void setStatisticsSchemaname(@Nullable String statisticsSchemaname) {
         this.statisticsSchemaname = statisticsSchemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.statistics_name</code>.
-     */
     @Nullable
     public String getStatisticsName() {
         return this.statisticsName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.statistics_name</code>.
-     */
     public void setStatisticsName(@Nullable String statisticsName) {
         this.statisticsName = statisticsName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.statistics_owner</code>.
-     */
     @Nullable
     public String getStatisticsOwner() {
         return this.statisticsOwner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.statistics_owner</code>.
-     */
     public void setStatisticsOwner(@Nullable String statisticsOwner) {
         this.statisticsOwner = statisticsOwner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.attnames</code>.
-     */
     @Nullable
     public String[] getAttnames() {
         return this.attnames;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.attnames</code>.
-     */
     public void setAttnames(@Nullable String[] attnames) {
         this.attnames = attnames;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.exprs</code>.
-     */
     @Nullable
     public String[] getExprs() {
         return this.exprs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.exprs</code>.
-     */
     public void setExprs(@Nullable String[] exprs) {
         this.exprs = exprs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.kinds</code>.
-     */
     @Nullable
     public String[] getKinds() {
         return this.kinds;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.kinds</code>.
-     */
     public void setKinds(@Nullable String[] kinds) {
         this.kinds = kinds;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.inherited</code>.
-     */
     @Nullable
     public Boolean getInherited() {
         return this.inherited;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.inherited</code>.
-     */
     public void setInherited(@Nullable Boolean inherited) {
         this.inherited = inherited;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getNDistinct() {
         return this.nDistinct;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setNDistinct(@Nullable Object nDistinct) {
         this.nDistinct = nDistinct;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getDependencies() {
         return this.dependencies;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setDependencies(@Nullable Object dependencies) {
         this.dependencies = dependencies;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.most_common_vals</code>.
-     */
     @Nullable
     public String[] getMostCommonVals() {
         return this.mostCommonVals;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.most_common_vals</code>.
-     */
     public void setMostCommonVals(@Nullable String[] mostCommonVals) {
         this.mostCommonVals = mostCommonVals;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.most_common_val_nulls</code>.
-     */
     @Nullable
     public Boolean[] getMostCommonValNulls() {
         return this.mostCommonValNulls;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.most_common_val_nulls</code>.
-     */
     public void setMostCommonValNulls(@Nullable Boolean[] mostCommonValNulls) {
         this.mostCommonValNulls = mostCommonValNulls;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.most_common_freqs</code>.
-     */
     @Nullable
     public Double[] getMostCommonFreqs() {
         return this.mostCommonFreqs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.most_common_freqs</code>.
-     */
     public void setMostCommonFreqs(@Nullable Double[] mostCommonFreqs) {
         this.mostCommonFreqs = mostCommonFreqs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.most_common_base_freqs</code>.
-     */
     @Nullable
     public Double[] getMostCommonBaseFreqs() {
         return this.mostCommonBaseFreqs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.most_common_base_freqs</code>.
-     */
     public void setMostCommonBaseFreqs(@Nullable Double[] mostCommonBaseFreqs) {
         this.mostCommonBaseFreqs = mostCommonBaseFreqs;
     }

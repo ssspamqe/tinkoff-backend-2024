@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.aclexplode</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,62 +51,38 @@ public class Aclexplode implements Serializable {
         this.isGrantable = isGrantable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.aclexplode.grantor</code>.
-     */
     @Nullable
     public Long getGrantor() {
         return this.grantor;
     }
 
-    /**
-     * Setter for <code>pg_catalog.aclexplode.grantor</code>.
-     */
     public void setGrantor(@Nullable Long grantor) {
         this.grantor = grantor;
     }
 
-    /**
-     * Getter for <code>pg_catalog.aclexplode.grantee</code>.
-     */
     @Nullable
     public Long getGrantee() {
         return this.grantee;
     }
 
-    /**
-     * Setter for <code>pg_catalog.aclexplode.grantee</code>.
-     */
     public void setGrantee(@Nullable Long grantee) {
         this.grantee = grantee;
     }
 
-    /**
-     * Getter for <code>pg_catalog.aclexplode.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return this.privilegeType;
     }
 
-    /**
-     * Setter for <code>pg_catalog.aclexplode.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String privilegeType) {
         this.privilegeType = privilegeType;
     }
 
-    /**
-     * Getter for <code>pg_catalog.aclexplode.is_grantable</code>.
-     */
     @Nullable
     public Boolean getIsGrantable() {
         return this.isGrantable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.aclexplode.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable Boolean isGrantable) {
         this.isGrantable = isGrantable;
     }

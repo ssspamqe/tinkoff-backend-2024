@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_listening_channels</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,19 +39,11 @@ public class PgListeningChannels implements Serializable {
         this.pgListeningChannels = pgListeningChannels;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_listening_channels.pg_listening_channels</code>.
-     */
     @Nullable
     public String getPgListeningChannels() {
         return this.pgListeningChannels;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_listening_channels.pg_listening_channels</code>.
-     */
     public void setPgListeningChannels(@Nullable String pgListeningChannels) {
         this.pgListeningChannels = pgListeningChannels;
     }

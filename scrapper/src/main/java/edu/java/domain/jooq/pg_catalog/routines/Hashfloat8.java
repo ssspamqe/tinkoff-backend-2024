@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.hashfloat8</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,19 +27,10 @@ public class Hashfloat8 extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.hashfloat8.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.hashfloat8._1</code>.
-     */
     public static final Parameter<Double> _1 = Internal.createParameter("_1", SQLDataType.DOUBLE, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Hashfloat8() {
         super("hashfloat8", PgCatalog.PG_CATALOG, SQLDataType.INTEGER);
 
@@ -50,17 +38,10 @@ public class Hashfloat8 extends AbstractRoutine<Integer> {
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Double value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Double> field) {
         setField(_1, field);
     }

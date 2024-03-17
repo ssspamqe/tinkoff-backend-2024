@@ -19,9 +19,6 @@ import org.jooq.Row2;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>public.chats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,32 +31,20 @@ public class ChatsRecord extends UpdatableRecordImpl<ChatsRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>public.chats.id</code>.
-     */
     public void setId(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>public.chats.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getId() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>public.chats.created_at</code>.
-     */
     public void setCreatedAt(@NotNull OffsetDateTime value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>public.chats.created_at</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public OffsetDateTime getCreatedAt() {
@@ -154,16 +139,10 @@ public class ChatsRecord extends UpdatableRecordImpl<ChatsRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ChatsRecord
-     */
     public ChatsRecord() {
         super(Chats.CHATS);
     }
 
-    /**
-     * Create a detached, initialised ChatsRecord
-     */
     @ConstructorProperties({ "id", "createdAt" })
     public ChatsRecord(@NotNull Long id, @NotNull OffsetDateTime createdAt) {
         super(Chats.CHATS);
@@ -173,9 +152,6 @@ public class ChatsRecord extends UpdatableRecordImpl<ChatsRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ChatsRecord
-     */
     public ChatsRecord(edu.java.domain.jooq.public_.tables.pojos.Chats value) {
         super(Chats.CHATS);
 

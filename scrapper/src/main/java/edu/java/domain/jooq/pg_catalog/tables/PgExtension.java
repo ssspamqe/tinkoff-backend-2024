@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgExtensionRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_extension</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,58 +45,28 @@ public class PgExtension extends TableImpl<PgExtensionRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_extension</code>
-     */
     public static final PgExtension PG_EXTENSION = new PgExtension();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgExtensionRecord> getRecordType() {
         return PgExtensionRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_extension.oid</code>.
-     */
     public final TableField<PgExtensionRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension.extname</code>.
-     */
     public final TableField<PgExtensionRecord, String> EXTNAME = createField(DSL.name("extname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension.extowner</code>.
-     */
     public final TableField<PgExtensionRecord, Long> EXTOWNER = createField(DSL.name("extowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension.extnamespace</code>.
-     */
     public final TableField<PgExtensionRecord, Long> EXTNAMESPACE = createField(DSL.name("extnamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension.extrelocatable</code>.
-     */
     public final TableField<PgExtensionRecord, Boolean> EXTRELOCATABLE = createField(DSL.name("extrelocatable"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension.extversion</code>.
-     */
     public final TableField<PgExtensionRecord, String> EXTVERSION = createField(DSL.name("extversion"), SQLDataType.CLOB.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension.extconfig</code>.
-     */
     public final TableField<PgExtensionRecord, Long[]> EXTCONFIG = createField(DSL.name("extconfig"), SQLDataType.BIGINT.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension.extcondition</code>.
-     */
     public final TableField<PgExtensionRecord, String[]> EXTCONDITION = createField(DSL.name("extcondition"), SQLDataType.CLOB.array(), this, "");
 
     private PgExtension(Name alias, Table<PgExtensionRecord> aliased) {
@@ -111,23 +77,14 @@ public class PgExtension extends TableImpl<PgExtensionRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_extension</code> table reference
-     */
     public PgExtension(String alias) {
         this(DSL.name(alias), PG_EXTENSION);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_extension</code> table reference
-     */
     public PgExtension(Name alias) {
         this(alias, PG_EXTENSION);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_extension</code> table reference
-     */
     public PgExtension() {
         this(DSL.name("pg_extension"), null);
     }
@@ -172,27 +129,18 @@ public class PgExtension extends TableImpl<PgExtensionRecord> {
         return new PgExtension(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgExtension rename(String name) {
         return new PgExtension(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgExtension rename(Name name) {
         return new PgExtension(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgExtension rename(Table<?> name) {
@@ -209,17 +157,10 @@ public class PgExtension extends TableImpl<PgExtensionRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Long, ? super Long, ? super Boolean, ? super String, ? super Long[], ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Long, ? super Long, ? super Boolean, ? super String, ? super Long[], ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

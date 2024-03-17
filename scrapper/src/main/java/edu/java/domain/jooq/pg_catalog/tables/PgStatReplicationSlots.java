@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatReplicationSlotsRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_replication_slots</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,71 +42,32 @@ public class PgStatReplicationSlots extends TableImpl<PgStatReplicationSlotsReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_replication_slots</code>
-     */
     public static final PgStatReplicationSlots PG_STAT_REPLICATION_SLOTS = new PgStatReplicationSlots();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatReplicationSlotsRecord> getRecordType() {
         return PgStatReplicationSlotsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_replication_slots.slot_name</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, String> SLOT_NAME = createField(DSL.name("slot_name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_replication_slots.spill_txns</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, Long> SPILL_TXNS = createField(DSL.name("spill_txns"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_replication_slots.spill_count</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, Long> SPILL_COUNT = createField(DSL.name("spill_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_replication_slots.spill_bytes</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, Long> SPILL_BYTES = createField(DSL.name("spill_bytes"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_replication_slots.stream_txns</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, Long> STREAM_TXNS = createField(DSL.name("stream_txns"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_replication_slots.stream_count</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, Long> STREAM_COUNT = createField(DSL.name("stream_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_replication_slots.stream_bytes</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, Long> STREAM_BYTES = createField(DSL.name("stream_bytes"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_replication_slots.total_txns</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, Long> TOTAL_TXNS = createField(DSL.name("total_txns"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_replication_slots.total_bytes</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, Long> TOTAL_BYTES = createField(DSL.name("total_bytes"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_replication_slots.stats_reset</code>.
-     */
     public final TableField<PgStatReplicationSlotsRecord, OffsetDateTime> STATS_RESET = createField(DSL.name("stats_reset"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgStatReplicationSlots(Name alias, Table<PgStatReplicationSlotsRecord> aliased) {
@@ -135,26 +92,14 @@ public class PgStatReplicationSlots extends TableImpl<PgStatReplicationSlotsReco
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_replication_slots</code> table
-     * reference
-     */
     public PgStatReplicationSlots(String alias) {
         this(DSL.name(alias), PG_STAT_REPLICATION_SLOTS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_replication_slots</code> table
-     * reference
-     */
     public PgStatReplicationSlots(Name alias) {
         this(alias, PG_STAT_REPLICATION_SLOTS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_replication_slots</code> table
-     * reference
-     */
     public PgStatReplicationSlots() {
         this(DSL.name("pg_stat_replication_slots"), null);
     }
@@ -187,27 +132,18 @@ public class PgStatReplicationSlots extends TableImpl<PgStatReplicationSlotsReco
         return new PgStatReplicationSlots(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatReplicationSlots rename(String name) {
         return new PgStatReplicationSlots(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatReplicationSlots rename(Name name) {
         return new PgStatReplicationSlots(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatReplicationSlots rename(Table<?> name) {
@@ -224,17 +160,10 @@ public class PgStatReplicationSlots extends TableImpl<PgStatReplicationSlotsReco
         return (Row10) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function10<? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function10<? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

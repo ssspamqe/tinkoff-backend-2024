@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatProgressVacuumRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_vacuum</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,79 +40,34 @@ public class PgStatProgressVacuum extends TableImpl<PgStatProgressVacuumRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_progress_vacuum</code>
-     */
     public static final PgStatProgressVacuum PG_STAT_PROGRESS_VACUUM = new PgStatProgressVacuum();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatProgressVacuumRecord> getRecordType() {
         return PgStatProgressVacuumRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_vacuum.pid</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_vacuum.datid</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_vacuum.datname</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, String> DATNAME = createField(DSL.name("datname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_vacuum.relid</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_vacuum.phase</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, String> PHASE = createField(DSL.name("phase"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_total</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Long> HEAP_BLKS_TOTAL = createField(DSL.name("heap_blks_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_scanned</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Long> HEAP_BLKS_SCANNED = createField(DSL.name("heap_blks_scanned"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_vacuumed</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Long> HEAP_BLKS_VACUUMED = createField(DSL.name("heap_blks_vacuumed"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_vacuum.index_vacuum_count</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Long> INDEX_VACUUM_COUNT = createField(DSL.name("index_vacuum_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_vacuum.max_dead_tuples</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Long> MAX_DEAD_TUPLES = createField(DSL.name("max_dead_tuples"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_vacuum.num_dead_tuples</code>.
-     */
     public final TableField<PgStatProgressVacuumRecord, Long> NUM_DEAD_TUPLES = createField(DSL.name("num_dead_tuples"), SQLDataType.BIGINT, this, "");
 
     private PgStatProgressVacuum(Name alias, Table<PgStatProgressVacuumRecord> aliased) {
@@ -151,25 +101,14 @@ public class PgStatProgressVacuum extends TableImpl<PgStatProgressVacuumRecord> 
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_vacuum</code> table
-     * reference
-     */
     public PgStatProgressVacuum(String alias) {
         this(DSL.name(alias), PG_STAT_PROGRESS_VACUUM);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_vacuum</code> table
-     * reference
-     */
     public PgStatProgressVacuum(Name alias) {
         this(alias, PG_STAT_PROGRESS_VACUUM);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_progress_vacuum</code> table reference
-     */
     public PgStatProgressVacuum() {
         this(DSL.name("pg_stat_progress_vacuum"), null);
     }
@@ -202,27 +141,18 @@ public class PgStatProgressVacuum extends TableImpl<PgStatProgressVacuumRecord> 
         return new PgStatProgressVacuum(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressVacuum rename(String name) {
         return new PgStatProgressVacuum(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressVacuum rename(Name name) {
         return new PgStatProgressVacuum(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressVacuum rename(Table<?> name) {
@@ -239,17 +169,10 @@ public class PgStatProgressVacuum extends TableImpl<PgStatProgressVacuumRecord> 
         return (Row11) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function11<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function11<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

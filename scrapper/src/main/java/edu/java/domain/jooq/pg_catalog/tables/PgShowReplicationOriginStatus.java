@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgShowReplicationOriginStatusRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_show_replication_origin_status</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,52 +38,21 @@ public class PgShowReplicationOriginStatus extends TableImpl<PgShowReplicationOr
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_show_replication_origin_status</code>
-     */
     public static final PgShowReplicationOriginStatus PG_SHOW_REPLICATION_ORIGIN_STATUS = new PgShowReplicationOriginStatus();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgShowReplicationOriginStatusRecord> getRecordType() {
         return PgShowReplicationOriginStatusRecord.class;
     }
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_show_replication_origin_status.local_id</code>.
-     */
     public final TableField<PgShowReplicationOriginStatusRecord, Long> LOCAL_ID = createField(DSL.name("local_id"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_show_replication_origin_status.external_id</code>.
-     */
     public final TableField<PgShowReplicationOriginStatusRecord, String> EXTERNAL_ID = createField(DSL.name("external_id"), SQLDataType.CLOB, this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgShowReplicationOriginStatusRecord, Object> REMOTE_LSN = createField(DSL.name("remote_lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgShowReplicationOriginStatusRecord, Object> LOCAL_LSN = createField(DSL.name("local_lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
@@ -101,26 +65,14 @@ public class PgShowReplicationOriginStatus extends TableImpl<PgShowReplicationOr
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased
-     * <code>pg_catalog.pg_show_replication_origin_status</code> table reference
-     */
     public PgShowReplicationOriginStatus(String alias) {
         this(DSL.name(alias), PG_SHOW_REPLICATION_ORIGIN_STATUS);
     }
 
-    /**
-     * Create an aliased
-     * <code>pg_catalog.pg_show_replication_origin_status</code> table reference
-     */
     public PgShowReplicationOriginStatus(Name alias) {
         this(alias, PG_SHOW_REPLICATION_ORIGIN_STATUS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_show_replication_origin_status</code> table
-     * reference
-     */
     public PgShowReplicationOriginStatus() {
         this(DSL.name("pg_show_replication_origin_status"), null);
     }
@@ -149,27 +101,18 @@ public class PgShowReplicationOriginStatus extends TableImpl<PgShowReplicationOr
         return new PgShowReplicationOriginStatus(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShowReplicationOriginStatus rename(String name) {
         return new PgShowReplicationOriginStatus(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShowReplicationOriginStatus rename(Name name) {
         return new PgShowReplicationOriginStatus(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShowReplicationOriginStatus rename(Table<?> name) {
@@ -186,26 +129,16 @@ public class PgShowReplicationOriginStatus extends TableImpl<PgShowReplicationOr
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgShowReplicationOriginStatus call() {
         PgShowReplicationOriginStatus result = new PgShowReplicationOriginStatus(DSL.name("pg_show_replication_origin_status"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super String, ? super Object, ? super Object, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super String, ? super Object, ? super Object, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

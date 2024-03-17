@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_notify</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,19 +26,10 @@ public class PgNotify extends AbstractRoutine<java.lang.Void> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_notify._1</code>.
-     */
     public static final Parameter<String> _1 = Internal.createParameter("_1", SQLDataType.CLOB, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.pg_notify._2</code>.
-     */
     public static final Parameter<String> _2 = Internal.createParameter("_2", SQLDataType.CLOB, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgNotify() {
         super("pg_notify", PgCatalog.PG_CATALOG);
 
@@ -49,16 +37,10 @@ public class PgNotify extends AbstractRoutine<java.lang.Void> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(String value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(String value) {
         setValue(_2, value);
     }

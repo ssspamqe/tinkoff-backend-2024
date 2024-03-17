@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.view_table_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,94 +59,56 @@ public class ViewTableUsage implements Serializable {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.view_catalog</code>.
-     */
     @Nullable
     public String getViewCatalog() {
         return this.viewCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.view_catalog</code>.
-     */
     public void setViewCatalog(@Nullable String viewCatalog) {
         this.viewCatalog = viewCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.view_schema</code>.
-     */
     @Nullable
     public String getViewSchema() {
         return this.viewSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.view_schema</code>.
-     */
     public void setViewSchema(@Nullable String viewSchema) {
         this.viewSchema = viewSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.view_name</code>.
-     */
     @Nullable
     public String getViewName() {
         return this.viewName;
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.view_name</code>.
-     */
     public void setViewName(@Nullable String viewName) {
         this.viewName = viewName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.view_table_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.view_table_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_transform</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,82 +55,52 @@ public class PgTransform implements Serializable {
         this.trftosql = trftosql;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.trftype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTrftype() {
         return this.trftype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.trftype</code>.
-     */
     public void setTrftype(@NotNull Long trftype) {
         this.trftype = trftype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.trflang</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTrflang() {
         return this.trflang;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.trflang</code>.
-     */
     public void setTrflang(@NotNull Long trflang) {
         this.trflang = trflang;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.trffromsql</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTrffromsql() {
         return this.trffromsql;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.trffromsql</code>.
-     */
     public void setTrffromsql(@NotNull String trffromsql) {
         this.trffromsql = trffromsql;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_transform.trftosql</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTrftosql() {
         return this.trftosql;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_transform.trftosql</code>.
-     */
     public void setTrftosql(@NotNull String trftosql) {
         this.trftosql = trftosql;
     }

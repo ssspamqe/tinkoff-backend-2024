@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.transforms</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,122 +67,74 @@ public class Transforms implements Serializable {
         this.transformType = transformType;
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return this.udtCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String udtCatalog) {
         this.udtCatalog = udtCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return this.udtSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String udtSchema) {
         this.udtSchema = udtSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return this.udtName;
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.udt_name</code>.
-     */
     public void setUdtName(@Nullable String udtName) {
         this.udtName = udtName;
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return this.specificCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String specificCatalog) {
         this.specificCatalog = specificCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return this.specificSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String specificSchema) {
         this.specificSchema = specificSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return this.specificName;
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String specificName) {
         this.specificName = specificName;
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.group_name</code>.
-     */
     @Nullable
     public String getGroupName() {
         return this.groupName;
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.group_name</code>.
-     */
     public void setGroupName(@Nullable String groupName) {
         this.groupName = groupName;
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.transform_type</code>.
-     */
     @Nullable
     public String getTransformType() {
         return this.transformType;
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.transform_type</code>.
-     */
     public void setTransformType(@Nullable String transformType) {
         this.transformType = transformType;
     }

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_extension_update_paths</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,47 +47,29 @@ public class PgExtensionUpdatePaths implements Serializable {
         this.path = path;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension_update_paths.source</code>.
-     */
     @Nullable
     public String getSource() {
         return this.source;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension_update_paths.source</code>.
-     */
     public void setSource(@Nullable String source) {
         this.source = source;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension_update_paths.target</code>.
-     */
     @Nullable
     public String getTarget() {
         return this.target;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension_update_paths.target</code>.
-     */
     public void setTarget(@Nullable String target) {
         this.target = target;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension_update_paths.path</code>.
-     */
     @Nullable
     public String getPath() {
         return this.path;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension_update_paths.path</code>.
-     */
     public void setPath(@Nullable String path) {
         this.path = path;
     }

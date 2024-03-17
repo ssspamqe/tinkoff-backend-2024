@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatioAllTablesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_all_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,73 +40,34 @@ public class PgStatioAllTables extends TableImpl<PgStatioAllTablesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_statio_all_tables</code>
-     */
     public static final PgStatioAllTables PG_STATIO_ALL_TABLES = new PgStatioAllTables();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatioAllTablesRecord> getRecordType() {
         return PgStatioAllTablesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.relid</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.schemaname</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.relname</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, String> RELNAME = createField(DSL.name("relname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.heap_blks_read</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> HEAP_BLKS_READ = createField(DSL.name("heap_blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.heap_blks_hit</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> HEAP_BLKS_HIT = createField(DSL.name("heap_blks_hit"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.idx_blks_read</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> IDX_BLKS_READ = createField(DSL.name("idx_blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.idx_blks_hit</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> IDX_BLKS_HIT = createField(DSL.name("idx_blks_hit"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.toast_blks_read</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> TOAST_BLKS_READ = createField(DSL.name("toast_blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.toast_blks_hit</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> TOAST_BLKS_HIT = createField(DSL.name("toast_blks_hit"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.tidx_blks_read</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> TIDX_BLKS_READ = createField(DSL.name("tidx_blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_tables.tidx_blks_hit</code>.
-     */
     public final TableField<PgStatioAllTablesRecord, Long> TIDX_BLKS_HIT = createField(DSL.name("tidx_blks_hit"), SQLDataType.BIGINT, this, "");
 
     private PgStatioAllTables(Name alias, Table<PgStatioAllTablesRecord> aliased) {
@@ -146,25 +102,14 @@ public class PgStatioAllTables extends TableImpl<PgStatioAllTablesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_statio_all_tables</code> table
-     * reference
-     */
     public PgStatioAllTables(String alias) {
         this(DSL.name(alias), PG_STATIO_ALL_TABLES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_statio_all_tables</code> table
-     * reference
-     */
     public PgStatioAllTables(Name alias) {
         this(alias, PG_STATIO_ALL_TABLES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_statio_all_tables</code> table reference
-     */
     public PgStatioAllTables() {
         this(DSL.name("pg_statio_all_tables"), null);
     }
@@ -197,27 +142,18 @@ public class PgStatioAllTables extends TableImpl<PgStatioAllTablesRecord> {
         return new PgStatioAllTables(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioAllTables rename(String name) {
         return new PgStatioAllTables(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioAllTables rename(Name name) {
         return new PgStatioAllTables(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioAllTables rename(Table<?> name) {
@@ -234,17 +170,10 @@ public class PgStatioAllTables extends TableImpl<PgStatioAllTablesRecord> {
         return (Row11) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function11<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function11<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

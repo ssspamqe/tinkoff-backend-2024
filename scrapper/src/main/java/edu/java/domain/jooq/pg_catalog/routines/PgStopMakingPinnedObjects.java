@@ -11,9 +11,6 @@ import javax.annotation.processing.Generated;
 import org.jooq.impl.AbstractRoutine;
 
 
-/**
- * The routine <code>pg_catalog.pg_stop_making_pinned_objects</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -26,9 +23,6 @@ public class PgStopMakingPinnedObjects extends AbstractRoutine<java.lang.Void> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Create a new routine call instance
-     */
     public PgStopMakingPinnedObjects() {
         super("pg_stop_making_pinned_objects", PgCatalog.PG_CATALOG);
     }

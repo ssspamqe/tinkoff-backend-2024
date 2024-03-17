@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_amproc</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,98 +59,62 @@ public class PgAmproc implements Serializable {
         this.amproc = amproc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amprocfamily</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmprocfamily() {
         return this.amprocfamily;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amprocfamily</code>.
-     */
     public void setAmprocfamily(@NotNull Long amprocfamily) {
         this.amprocfamily = amprocfamily;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amproclefttype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmproclefttype() {
         return this.amproclefttype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amproclefttype</code>.
-     */
     public void setAmproclefttype(@NotNull Long amproclefttype) {
         this.amproclefttype = amproclefttype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amprocrighttype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmprocrighttype() {
         return this.amprocrighttype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amprocrighttype</code>.
-     */
     public void setAmprocrighttype(@NotNull Long amprocrighttype) {
         this.amprocrighttype = amprocrighttype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amprocnum</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAmprocnum() {
         return this.amprocnum;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amprocnum</code>.
-     */
     public void setAmprocnum(@NotNull Short amprocnum) {
         this.amprocnum = amprocnum;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amproc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmproc() {
         return this.amproc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amproc</code>.
-     */
     public void setAmproc(@NotNull String amproc) {
         this.amproc = amproc;
     }

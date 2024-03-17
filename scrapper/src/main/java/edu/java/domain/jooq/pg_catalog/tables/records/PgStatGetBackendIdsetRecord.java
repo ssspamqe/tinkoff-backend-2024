@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_backend_idset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,18 +30,10 @@ public class PgStatGetBackendIdsetRecord extends TableRecordImpl<PgStatGetBacken
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_get_backend_idset.pg_stat_get_backend_idset</code>.
-     */
     public void setPgStatGetBackendIdset(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_get_backend_idset.pg_stat_get_backend_idset</code>.
-     */
     @Nullable
     public Integer getPgStatGetBackendIdset() {
         return (Integer) get(0);
@@ -102,16 +91,10 @@ public class PgStatGetBackendIdsetRecord extends TableRecordImpl<PgStatGetBacken
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatGetBackendIdsetRecord
-     */
     public PgStatGetBackendIdsetRecord() {
         super(PgStatGetBackendIdset.PG_STAT_GET_BACKEND_IDSET);
     }
 
-    /**
-     * Create a detached, initialised PgStatGetBackendIdsetRecord
-     */
     @ConstructorProperties({ "pgStatGetBackendIdset" })
     public PgStatGetBackendIdsetRecord(@Nullable Integer pgStatGetBackendIdset) {
         super(PgStatGetBackendIdset.PG_STAT_GET_BACKEND_IDSET);
@@ -120,9 +103,6 @@ public class PgStatGetBackendIdsetRecord extends TableRecordImpl<PgStatGetBacken
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatGetBackendIdsetRecord
-     */
     public PgStatGetBackendIdsetRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatGetBackendIdset value) {
         super(PgStatGetBackendIdset.PG_STAT_GET_BACKEND_IDSET);
 

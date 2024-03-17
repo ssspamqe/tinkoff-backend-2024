@@ -13,9 +13,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_subscription_rel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -55,76 +52,42 @@ public class PgSubscriptionRel implements Serializable {
         this.srsublsn = srsublsn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription_rel.srsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSrsubid() {
         return this.srsubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription_rel.srsubid</code>.
-     */
     public void setSrsubid(@NotNull Long srsubid) {
         this.srsubid = srsubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription_rel.srrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSrrelid() {
         return this.srrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription_rel.srrelid</code>.
-     */
     public void setSrrelid(@NotNull Long srrelid) {
         this.srrelid = srrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription_rel.srsubstate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSrsubstate() {
         return this.srsubstate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription_rel.srsubstate</code>.
-     */
     public void setSrsubstate(@NotNull String srsubstate) {
         this.srsubstate = srsubstate;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getSrsublsn() {
         return this.srsublsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setSrsublsn(@Nullable Object srsublsn) {
         this.srsublsn = srsublsn;

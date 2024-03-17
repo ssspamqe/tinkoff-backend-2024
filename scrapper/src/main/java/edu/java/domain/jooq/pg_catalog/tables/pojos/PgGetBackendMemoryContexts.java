@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_get_backend_memory_contexts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -74,147 +71,83 @@ public class PgGetBackendMemoryContexts implements Serializable {
         this.usedBytes = usedBytes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_backend_memory_contexts.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_backend_memory_contexts.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_backend_memory_contexts.ident</code>.
-     */
     @Nullable
     public String getIdent() {
         return this.ident;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_backend_memory_contexts.ident</code>.
-     */
     public void setIdent(@Nullable String ident) {
         this.ident = ident;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_backend_memory_contexts.parent</code>.
-     */
     @Nullable
     public String getParent() {
         return this.parent;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_backend_memory_contexts.parent</code>.
-     */
     public void setParent(@Nullable String parent) {
         this.parent = parent;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_backend_memory_contexts.level</code>.
-     */
     @Nullable
     public Integer getLevel() {
         return this.level;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_backend_memory_contexts.level</code>.
-     */
     public void setLevel(@Nullable Integer level) {
         this.level = level;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.total_bytes</code>.
-     */
     @Nullable
     public Long getTotalBytes() {
         return this.totalBytes;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.total_bytes</code>.
-     */
     public void setTotalBytes(@Nullable Long totalBytes) {
         this.totalBytes = totalBytes;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.total_nblocks</code>.
-     */
     @Nullable
     public Long getTotalNblocks() {
         return this.totalNblocks;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.total_nblocks</code>.
-     */
     public void setTotalNblocks(@Nullable Long totalNblocks) {
         this.totalNblocks = totalNblocks;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.free_bytes</code>.
-     */
     @Nullable
     public Long getFreeBytes() {
         return this.freeBytes;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.free_bytes</code>.
-     */
     public void setFreeBytes(@Nullable Long freeBytes) {
         this.freeBytes = freeBytes;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.free_chunks</code>.
-     */
     @Nullable
     public Long getFreeChunks() {
         return this.freeChunks;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.free_chunks</code>.
-     */
     public void setFreeChunks(@Nullable Long freeChunks) {
         this.freeChunks = freeChunks;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.used_bytes</code>.
-     */
     @Nullable
     public Long getUsedBytes() {
         return this.usedBytes;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_get_backend_memory_contexts.used_bytes</code>.
-     */
     public void setUsedBytes(@Nullable Long usedBytes) {
         this.usedBytes = usedBytes;
     }

@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.character_sets</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,135 +30,73 @@ public class CharacterSetsRecord extends TableRecordImpl<CharacterSetsRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.character_repertoire</code>.
-     */
     public void setCharacterRepertoire(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.character_repertoire</code>.
-     */
     @Nullable
     public String getCharacterRepertoire() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.character_sets.form_of_use</code>.
-     */
     public void setFormOfUse(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.character_sets.form_of_use</code>.
-     */
     @Nullable
     public String getFormOfUse() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.default_collate_catalog</code>.
-     */
     public void setDefaultCollateCatalog(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.default_collate_catalog</code>.
-     */
     @Nullable
     public String getDefaultCollateCatalog() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.default_collate_schema</code>.
-     */
     public void setDefaultCollateSchema(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.default_collate_schema</code>.
-     */
     @Nullable
     public String getDefaultCollateSchema() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.default_collate_name</code>.
-     */
     public void setDefaultCollateName(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.default_collate_name</code>.
-     */
     @Nullable
     public String getDefaultCollateName() {
         return (String) get(7);
@@ -401,16 +336,10 @@ public class CharacterSetsRecord extends TableRecordImpl<CharacterSetsRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached CharacterSetsRecord
-     */
     public CharacterSetsRecord() {
         super(CharacterSets.CHARACTER_SETS);
     }
 
-    /**
-     * Create a detached, initialised CharacterSetsRecord
-     */
     @ConstructorProperties({ "characterSetCatalog", "characterSetSchema", "characterSetName", "characterRepertoire", "formOfUse", "defaultCollateCatalog", "defaultCollateSchema", "defaultCollateName" })
     public CharacterSetsRecord(@Nullable String characterSetCatalog, @Nullable String characterSetSchema, @Nullable String characterSetName, @Nullable String characterRepertoire, @Nullable String formOfUse, @Nullable String defaultCollateCatalog, @Nullable String defaultCollateSchema, @Nullable String defaultCollateName) {
         super(CharacterSets.CHARACTER_SETS);
@@ -426,9 +355,6 @@ public class CharacterSetsRecord extends TableRecordImpl<CharacterSetsRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised CharacterSetsRecord
-     */
     public CharacterSetsRecord(edu.java.domain.jooq.information_schema.tables.pojos.CharacterSets value) {
         super(CharacterSets.CHARACTER_SETS);
 

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.foreign_table_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,87 +55,47 @@ public class ForeignTableOptions implements Serializable {
         this.optionValue = optionValue;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.foreign_table_catalog</code>.
-     */
     @Nullable
     public String getForeignTableCatalog() {
         return this.foreignTableCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.foreign_table_catalog</code>.
-     */
     public void setForeignTableCatalog(@Nullable String foreignTableCatalog) {
         this.foreignTableCatalog = foreignTableCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.foreign_table_schema</code>.
-     */
     @Nullable
     public String getForeignTableSchema() {
         return this.foreignTableSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.foreign_table_schema</code>.
-     */
     public void setForeignTableSchema(@Nullable String foreignTableSchema) {
         this.foreignTableSchema = foreignTableSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.foreign_table_name</code>.
-     */
     @Nullable
     public String getForeignTableName() {
         return this.foreignTableName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.foreign_table_name</code>.
-     */
     public void setForeignTableName(@Nullable String foreignTableName) {
         this.foreignTableName = foreignTableName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return this.optionName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String optionName) {
         this.optionName = optionName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return this.optionValue;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String optionValue) {
         this.optionValue = optionValue;
     }

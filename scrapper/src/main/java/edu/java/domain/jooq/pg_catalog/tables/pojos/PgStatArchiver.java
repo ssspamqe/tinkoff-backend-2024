@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_archiver</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -67,107 +64,65 @@ public class PgStatArchiver implements Serializable {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.archived_count</code>.
-     */
     @Nullable
     public Long getArchivedCount() {
         return this.archivedCount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.archived_count</code>.
-     */
     public void setArchivedCount(@Nullable Long archivedCount) {
         this.archivedCount = archivedCount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.last_archived_wal</code>.
-     */
     @Nullable
     public String getLastArchivedWal() {
         return this.lastArchivedWal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.last_archived_wal</code>.
-     */
     public void setLastArchivedWal(@Nullable String lastArchivedWal) {
         this.lastArchivedWal = lastArchivedWal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.last_archived_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastArchivedTime() {
         return this.lastArchivedTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.last_archived_time</code>.
-     */
     public void setLastArchivedTime(@Nullable OffsetDateTime lastArchivedTime) {
         this.lastArchivedTime = lastArchivedTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.failed_count</code>.
-     */
     @Nullable
     public Long getFailedCount() {
         return this.failedCount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.failed_count</code>.
-     */
     public void setFailedCount(@Nullable Long failedCount) {
         this.failedCount = failedCount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.last_failed_wal</code>.
-     */
     @Nullable
     public String getLastFailedWal() {
         return this.lastFailedWal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.last_failed_wal</code>.
-     */
     public void setLastFailedWal(@Nullable String lastFailedWal) {
         this.lastFailedWal = lastFailedWal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.last_failed_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastFailedTime() {
         return this.lastFailedTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.last_failed_time</code>.
-     */
     public void setLastFailedTime(@Nullable OffsetDateTime lastFailedTime) {
         this.lastFailedTime = lastFailedTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }

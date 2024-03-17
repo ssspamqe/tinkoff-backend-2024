@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_logicalmapdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,46 +31,28 @@ public class PgLsLogicalmapdirRecord extends TableRecordImpl<PgLsLogicalmapdirRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalmapdir.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalmapdir.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalmapdir.size</code>.
-     */
     public void setSize(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalmapdir.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalmapdir.modification</code>.
-     */
     public void setModification(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalmapdir.modification</code>.
-     */
     @Nullable
     public OffsetDateTime getModification() {
         return (OffsetDateTime) get(2);
@@ -183,16 +162,10 @@ public class PgLsLogicalmapdirRecord extends TableRecordImpl<PgLsLogicalmapdirRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLsLogicalmapdirRecord
-     */
     public PgLsLogicalmapdirRecord() {
         super(PgLsLogicalmapdir.PG_LS_LOGICALMAPDIR);
     }
 
-    /**
-     * Create a detached, initialised PgLsLogicalmapdirRecord
-     */
     @ConstructorProperties({ "name", "size", "modification" })
     public PgLsLogicalmapdirRecord(@Nullable String name, @Nullable Long size, @Nullable OffsetDateTime modification) {
         super(PgLsLogicalmapdir.PG_LS_LOGICALMAPDIR);
@@ -203,9 +176,6 @@ public class PgLsLogicalmapdirRecord extends TableRecordImpl<PgLsLogicalmapdirRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLsLogicalmapdirRecord
-     */
     public PgLsLogicalmapdirRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLsLogicalmapdir value) {
         super(PgLsLogicalmapdir.PG_LS_LOGICALMAPDIR);
 

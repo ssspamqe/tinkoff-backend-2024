@@ -14,10 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine
- * <code>pg_catalog.pg_stat_get_bgwriter_requested_checkpoints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,15 +26,8 @@ public class PgStatGetBgwriterRequestedCheckpoints extends AbstractRoutine<Long>
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_bgwriter_requested_checkpoints.RETURN_VALUE</code>.
-     */
     public static final Parameter<Long> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BIGINT, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgStatGetBgwriterRequestedCheckpoints() {
         super("pg_stat_get_bgwriter_requested_checkpoints", PgCatalog.PG_CATALOG, SQLDataType.BIGINT);
 

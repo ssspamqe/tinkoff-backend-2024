@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_my_temp_schema</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,14 +26,8 @@ public class PgMyTempSchema extends AbstractRoutine<Long> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_my_temp_schema.RETURN_VALUE</code>.
-     */
     public static final Parameter<Long> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BIGINT, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgMyTempSchema() {
         super("pg_my_temp_schema", PgCatalog.PG_CATALOG, SQLDataType.BIGINT);
 

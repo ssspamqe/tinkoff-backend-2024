@@ -13,9 +13,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.Record;
 
 
-/**
- * The table <code>pg_catalog.jsonb_to_recordset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,17 +40,11 @@ public class JsonbToRecordset implements Serializable {
         this.jsonbToRecordset = jsonbToRecordset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_to_recordset.jsonb_to_recordset</code>.
-     */
     @Nullable
     public Record getJsonbToRecordset() {
         return this.jsonbToRecordset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_to_recordset.jsonb_to_recordset</code>.
-     */
     public void setJsonbToRecordset(@Nullable Record jsonbToRecordset) {
         this.jsonbToRecordset = jsonbToRecordset;
     }

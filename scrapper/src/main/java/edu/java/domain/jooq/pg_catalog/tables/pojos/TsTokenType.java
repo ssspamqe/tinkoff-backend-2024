@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.ts_token_type</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,47 +47,29 @@ public class TsTokenType implements Serializable {
         this.description = description;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_token_type.tokid</code>.
-     */
     @Nullable
     public Integer getTokid() {
         return this.tokid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_token_type.tokid</code>.
-     */
     public void setTokid(@Nullable Integer tokid) {
         this.tokid = tokid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_token_type.alias</code>.
-     */
     @Nullable
     public String getAlias() {
         return this.alias;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_token_type.alias</code>.
-     */
     public void setAlias(@Nullable String alias) {
         this.alias = alias;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_token_type.description</code>.
-     */
     @Nullable
     public String getDescription() {
         return this.description;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_token_type.description</code>.
-     */
     public void setDescription(@Nullable String description) {
         this.description = description;
     }

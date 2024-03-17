@@ -20,9 +20,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.domain_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,138 +32,74 @@ public class DomainConstraintsRecord extends TableRecordImpl<DomainConstraintsRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.domain_catalog</code>.
-     */
     public void setDomainCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.domain_catalog</code>.
-     */
     @Nullable
     public String getDomainCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.domain_schema</code>.
-     */
     public void setDomainSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.domain_schema</code>.
-     */
     @Nullable
     public String getDomainSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.domain_name</code>.
-     */
     public void setDomainName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.domain_name</code>.
-     */
     @Nullable
     public String getDomainName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.is_deferrable</code>.
-     */
     public void setIsDeferrable(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.is_deferrable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsDeferrable() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_constraints.initially_deferred</code>.
-     */
     public void setInitiallyDeferred(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_constraints.initially_deferred</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getInitiallyDeferred() {
@@ -407,16 +340,10 @@ public class DomainConstraintsRecord extends TableRecordImpl<DomainConstraintsRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached DomainConstraintsRecord
-     */
     public DomainConstraintsRecord() {
         super(DomainConstraints.DOMAIN_CONSTRAINTS);
     }
 
-    /**
-     * Create a detached, initialised DomainConstraintsRecord
-     */
     @ConstructorProperties({ "constraintCatalog", "constraintSchema", "constraintName", "domainCatalog", "domainSchema", "domainName", "isDeferrable", "initiallyDeferred" })
     public DomainConstraintsRecord(@Nullable String constraintCatalog, @Nullable String constraintSchema, @Nullable String constraintName, @Nullable String domainCatalog, @Nullable String domainSchema, @Nullable String domainName, @Nullable String isDeferrable, @Nullable String initiallyDeferred) {
         super(DomainConstraints.DOMAIN_CONSTRAINTS);
@@ -432,9 +359,6 @@ public class DomainConstraintsRecord extends TableRecordImpl<DomainConstraintsRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised DomainConstraintsRecord
-     */
     public DomainConstraintsRecord(edu.java.domain.jooq.information_schema.tables.pojos.DomainConstraints value) {
         super(DomainConstraints.DOMAIN_CONSTRAINTS);
 

@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatSlruRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_slru</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,63 +42,30 @@ public class PgStatSlru extends TableImpl<PgStatSlruRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_slru</code>
-     */
     public static final PgStatSlru PG_STAT_SLRU = new PgStatSlru();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatSlruRecord> getRecordType() {
         return PgStatSlruRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.name</code>.
-     */
     public final TableField<PgStatSlruRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.blks_zeroed</code>.
-     */
     public final TableField<PgStatSlruRecord, Long> BLKS_ZEROED = createField(DSL.name("blks_zeroed"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.blks_hit</code>.
-     */
     public final TableField<PgStatSlruRecord, Long> BLKS_HIT = createField(DSL.name("blks_hit"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.blks_read</code>.
-     */
     public final TableField<PgStatSlruRecord, Long> BLKS_READ = createField(DSL.name("blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.blks_written</code>.
-     */
     public final TableField<PgStatSlruRecord, Long> BLKS_WRITTEN = createField(DSL.name("blks_written"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.blks_exists</code>.
-     */
     public final TableField<PgStatSlruRecord, Long> BLKS_EXISTS = createField(DSL.name("blks_exists"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.flushes</code>.
-     */
     public final TableField<PgStatSlruRecord, Long> FLUSHES = createField(DSL.name("flushes"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.truncates</code>.
-     */
     public final TableField<PgStatSlruRecord, Long> TRUNCATES = createField(DSL.name("truncates"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_slru.stats_reset</code>.
-     */
     public final TableField<PgStatSlruRecord, OffsetDateTime> STATS_RESET = createField(DSL.name("stats_reset"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgStatSlru(Name alias, Table<PgStatSlruRecord> aliased) {
@@ -124,23 +87,14 @@ public class PgStatSlru extends TableImpl<PgStatSlruRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_slru</code> table reference
-     */
     public PgStatSlru(String alias) {
         this(DSL.name(alias), PG_STAT_SLRU);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_slru</code> table reference
-     */
     public PgStatSlru(Name alias) {
         this(alias, PG_STAT_SLRU);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_slru</code> table reference
-     */
     public PgStatSlru() {
         this(DSL.name("pg_stat_slru"), null);
     }
@@ -173,27 +127,18 @@ public class PgStatSlru extends TableImpl<PgStatSlruRecord> {
         return new PgStatSlru(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSlru rename(String name) {
         return new PgStatSlru(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSlru rename(Name name) {
         return new PgStatSlru(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSlru rename(Table<?> name) {
@@ -210,17 +155,10 @@ public class PgStatSlru extends TableImpl<PgStatSlruRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

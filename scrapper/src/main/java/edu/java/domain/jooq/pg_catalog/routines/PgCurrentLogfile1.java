@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_current_logfile</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,14 +26,8 @@ public class PgCurrentLogfile1 extends AbstractRoutine<String> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_current_logfile.RETURN_VALUE</code>.
-     */
     public static final Parameter<String> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.CLOB, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgCurrentLogfile1() {
         super("pg_current_logfile", PgCatalog.PG_CATALOG, SQLDataType.CLOB);
 

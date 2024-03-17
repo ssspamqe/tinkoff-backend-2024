@@ -20,9 +20,6 @@ import org.jooq.Row11;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.table_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,187 +32,103 @@ public class TableConstraintsRecord extends TableRecordImpl<TableConstraintsReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.table_constraints.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.table_constraints.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.constraint_type</code>.
-     */
     public void setConstraintType(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.constraint_type</code>.
-     */
     @Nullable
     public String getConstraintType() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.is_deferrable</code>.
-     */
     public void setIsDeferrable(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.is_deferrable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsDeferrable() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.initially_deferred</code>.
-     */
     public void setInitiallyDeferred(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.initially_deferred</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getInitiallyDeferred() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>information_schema.table_constraints.enforced</code>.
-     */
     public void setEnforced(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>information_schema.table_constraints.enforced</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getEnforced() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.nulls_distinct</code>.
-     */
     public void setNullsDistinct(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.nulls_distinct</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getNullsDistinct() {
@@ -534,16 +447,10 @@ public class TableConstraintsRecord extends TableRecordImpl<TableConstraintsReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TableConstraintsRecord
-     */
     public TableConstraintsRecord() {
         super(TableConstraints.TABLE_CONSTRAINTS);
     }
 
-    /**
-     * Create a detached, initialised TableConstraintsRecord
-     */
     @ConstructorProperties({ "constraintCatalog", "constraintSchema", "constraintName", "tableCatalog", "tableSchema", "tableName", "constraintType", "isDeferrable", "initiallyDeferred", "enforced", "nullsDistinct" })
     public TableConstraintsRecord(@Nullable String constraintCatalog, @Nullable String constraintSchema, @Nullable String constraintName, @Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String constraintType, @Nullable String isDeferrable, @Nullable String initiallyDeferred, @Nullable String enforced, @Nullable String nullsDistinct) {
         super(TableConstraints.TABLE_CONSTRAINTS);
@@ -562,9 +469,6 @@ public class TableConstraintsRecord extends TableRecordImpl<TableConstraintsReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TableConstraintsRecord
-     */
     public TableConstraintsRecord(edu.java.domain.jooq.information_schema.tables.pojos.TableConstraints value) {
         super(TableConstraints.TABLE_CONSTRAINTS);
 

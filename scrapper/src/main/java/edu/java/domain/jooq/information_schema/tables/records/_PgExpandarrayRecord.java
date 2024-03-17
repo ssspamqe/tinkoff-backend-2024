@@ -18,9 +18,6 @@ import org.jooq.Row2;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema._pg_expandarray</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,43 +30,21 @@ public class _PgExpandarrayRecord extends TableRecordImpl<_PgExpandarrayRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setX(@Nullable Object value) {
         set(0, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getX() {
         return get(0);
     }
 
-    /**
-     * Setter for <code>information_schema._pg_expandarray.n</code>.
-     */
     public void setN(@Nullable Integer value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema._pg_expandarray.n</code>.
-     */
     @Nullable
     public Integer getN() {
         return (Integer) get(1);
@@ -91,14 +66,6 @@ public class _PgExpandarrayRecord extends TableRecordImpl<_PgExpandarrayRecord> 
         return (Row2) super.valuesRow();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -112,14 +79,6 @@ public class _PgExpandarrayRecord extends TableRecordImpl<_PgExpandarrayRecord> 
         return _PgExpandarray._PG_EXPANDARRAY.N;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -133,14 +92,6 @@ public class _PgExpandarrayRecord extends TableRecordImpl<_PgExpandarrayRecord> 
         return getN();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -154,14 +105,6 @@ public class _PgExpandarrayRecord extends TableRecordImpl<_PgExpandarrayRecord> 
         return getN();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -189,16 +132,10 @@ public class _PgExpandarrayRecord extends TableRecordImpl<_PgExpandarrayRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached _PgExpandarrayRecord
-     */
     public _PgExpandarrayRecord() {
         super(_PgExpandarray._PG_EXPANDARRAY);
     }
 
-    /**
-     * Create a detached, initialised _PgExpandarrayRecord
-     */
     @ConstructorProperties({ "x", "n" })
     public _PgExpandarrayRecord(@Nullable Object x, @Nullable Integer n) {
         super(_PgExpandarray._PG_EXPANDARRAY);
@@ -208,9 +145,6 @@ public class _PgExpandarrayRecord extends TableRecordImpl<_PgExpandarrayRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised _PgExpandarrayRecord
-     */
     public _PgExpandarrayRecord(edu.java.domain.jooq.information_schema.tables.pojos._PgExpandarray value) {
         super(_PgExpandarray._PG_EXPANDARRAY);
 

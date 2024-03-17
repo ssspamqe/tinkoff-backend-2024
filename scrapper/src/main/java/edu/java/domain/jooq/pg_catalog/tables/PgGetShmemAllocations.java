@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgGetShmemAllocationsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_shmem_allocations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,40 +38,20 @@ public class PgGetShmemAllocations extends TableImpl<PgGetShmemAllocationsRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_get_shmem_allocations</code>
-     */
     public static final PgGetShmemAllocations PG_GET_SHMEM_ALLOCATIONS = new PgGetShmemAllocations();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgGetShmemAllocationsRecord> getRecordType() {
         return PgGetShmemAllocationsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_get_shmem_allocations.name</code>.
-     */
     public final TableField<PgGetShmemAllocationsRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_shmem_allocations.off</code>.
-     */
     public final TableField<PgGetShmemAllocationsRecord, Long> OFF = createField(DSL.name("off"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_shmem_allocations.size</code>.
-     */
     public final TableField<PgGetShmemAllocationsRecord, Long> SIZE = createField(DSL.name("size"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_get_shmem_allocations.allocated_size</code>.
-     */
     public final TableField<PgGetShmemAllocationsRecord, Long> ALLOCATED_SIZE = createField(DSL.name("allocated_size"), SQLDataType.BIGINT, this, "");
 
     private PgGetShmemAllocations(Name alias, Table<PgGetShmemAllocationsRecord> aliased) {
@@ -88,25 +63,14 @@ public class PgGetShmemAllocations extends TableImpl<PgGetShmemAllocationsRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_shmem_allocations</code> table
-     * reference
-     */
     public PgGetShmemAllocations(String alias) {
         this(DSL.name(alias), PG_GET_SHMEM_ALLOCATIONS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_shmem_allocations</code> table
-     * reference
-     */
     public PgGetShmemAllocations(Name alias) {
         this(alias, PG_GET_SHMEM_ALLOCATIONS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_get_shmem_allocations</code> table reference
-     */
     public PgGetShmemAllocations() {
         this(DSL.name("pg_get_shmem_allocations"), null);
     }
@@ -135,27 +99,18 @@ public class PgGetShmemAllocations extends TableImpl<PgGetShmemAllocationsRecord
         return new PgGetShmemAllocations(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetShmemAllocations rename(String name) {
         return new PgGetShmemAllocations(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetShmemAllocations rename(Name name) {
         return new PgGetShmemAllocations(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetShmemAllocations rename(Table<?> name) {
@@ -172,26 +127,16 @@ public class PgGetShmemAllocations extends TableImpl<PgGetShmemAllocationsRecord
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgGetShmemAllocations call() {
         PgGetShmemAllocations result = new PgGetShmemAllocations(DSL.name("pg_get_shmem_allocations"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super String, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

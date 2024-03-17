@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_matviews</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,107 +63,65 @@ public class PgMatviews implements Serializable {
         this.definition = definition;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.matviewname</code>.
-     */
     @Nullable
     public String getMatviewname() {
         return this.matviewname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.matviewname</code>.
-     */
     public void setMatviewname(@Nullable String matviewname) {
         this.matviewname = matviewname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.matviewowner</code>.
-     */
     @Nullable
     public String getMatviewowner() {
         return this.matviewowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.matviewowner</code>.
-     */
     public void setMatviewowner(@Nullable String matviewowner) {
         this.matviewowner = matviewowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.tablespace</code>.
-     */
     @Nullable
     public String getTablespace() {
         return this.tablespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.tablespace</code>.
-     */
     public void setTablespace(@Nullable String tablespace) {
         this.tablespace = tablespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.hasindexes</code>.
-     */
     @Nullable
     public Boolean getHasindexes() {
         return this.hasindexes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.hasindexes</code>.
-     */
     public void setHasindexes(@Nullable Boolean hasindexes) {
         this.hasindexes = hasindexes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.ispopulated</code>.
-     */
     @Nullable
     public Boolean getIspopulated() {
         return this.ispopulated;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.ispopulated</code>.
-     */
     public void setIspopulated(@Nullable Boolean ispopulated) {
         this.ispopulated = ispopulated;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.definition</code>.
-     */
     @Nullable
     public String getDefinition() {
         return this.definition;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.definition</code>.
-     */
     public void setDefinition(@Nullable String definition) {
         this.definition = definition;
     }

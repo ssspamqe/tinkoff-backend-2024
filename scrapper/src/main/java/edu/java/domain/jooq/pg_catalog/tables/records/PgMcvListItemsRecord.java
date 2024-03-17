@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_mcv_list_items</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,76 +30,46 @@ public class PgMcvListItemsRecord extends TableRecordImpl<PgMcvListItemsRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.index</code>.
-     */
     public void setIndex(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.index</code>.
-     */
     @Nullable
     public Integer getIndex() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.values</code>.
-     */
     public void setValues(@Nullable String[] value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.values</code>.
-     */
     @Nullable
     public String[] getValues() {
         return (String[]) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.nulls</code>.
-     */
     public void setNulls(@Nullable Boolean[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.nulls</code>.
-     */
     @Nullable
     public Boolean[] getNulls() {
         return (Boolean[]) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.frequency</code>.
-     */
     public void setFrequency(@Nullable Double value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.frequency</code>.
-     */
     @Nullable
     public Double getFrequency() {
         return (Double) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.base_frequency</code>.
-     */
     public void setBaseFrequency(@Nullable Double value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.base_frequency</code>.
-     */
     @Nullable
     public Double getBaseFrequency() {
         return (Double) get(4);
@@ -264,16 +231,10 @@ public class PgMcvListItemsRecord extends TableRecordImpl<PgMcvListItemsRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgMcvListItemsRecord
-     */
     public PgMcvListItemsRecord() {
         super(PgMcvListItems.PG_MCV_LIST_ITEMS);
     }
 
-    /**
-     * Create a detached, initialised PgMcvListItemsRecord
-     */
     @ConstructorProperties({ "index", "values", "nulls", "frequency", "baseFrequency" })
     public PgMcvListItemsRecord(@Nullable Integer index, @Nullable String[] values, @Nullable Boolean[] nulls, @Nullable Double frequency, @Nullable Double baseFrequency) {
         super(PgMcvListItems.PG_MCV_LIST_ITEMS);
@@ -286,9 +247,6 @@ public class PgMcvListItemsRecord extends TableRecordImpl<PgMcvListItemsRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgMcvListItemsRecord
-     */
     public PgMcvListItemsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgMcvListItems value) {
         super(PgMcvListItems.PG_MCV_LIST_ITEMS);
 

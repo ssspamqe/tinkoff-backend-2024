@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ReferentialConstraintsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.referential_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,73 +39,30 @@ public class ReferentialConstraints extends TableImpl<ReferentialConstraintsReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.referential_constraints</code>
-     */
     public static final ReferentialConstraints REFERENTIAL_CONSTRAINTS = new ReferentialConstraints();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ReferentialConstraintsRecord> getRecordType() {
         return ReferentialConstraintsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.constraint_catalog</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> CONSTRAINT_CATALOG = createField(DSL.name("constraint_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.constraint_schema</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> CONSTRAINT_SCHEMA = createField(DSL.name("constraint_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.constraint_name</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> CONSTRAINT_NAME = createField(DSL.name("constraint_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.unique_constraint_catalog</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> UNIQUE_CONSTRAINT_CATALOG = createField(DSL.name("unique_constraint_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.unique_constraint_schema</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> UNIQUE_CONSTRAINT_SCHEMA = createField(DSL.name("unique_constraint_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.unique_constraint_name</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> UNIQUE_CONSTRAINT_NAME = createField(DSL.name("unique_constraint_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.match_option</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> MATCH_OPTION = createField(DSL.name("match_option"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.update_rule</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> UPDATE_RULE = createField(DSL.name("update_rule"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.referential_constraints.delete_rule</code>.
-     */
     public final TableField<ReferentialConstraintsRecord, String> DELETE_RULE = createField(DSL.name("delete_rule"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private ReferentialConstraints(Name alias, Table<ReferentialConstraintsRecord> aliased) {
@@ -165,26 +117,14 @@ public class ReferentialConstraints extends TableImpl<ReferentialConstraintsReco
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.referential_constraints</code>
-     * table reference
-     */
     public ReferentialConstraints(String alias) {
         this(DSL.name(alias), REFERENTIAL_CONSTRAINTS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.referential_constraints</code>
-     * table reference
-     */
     public ReferentialConstraints(Name alias) {
         this(alias, REFERENTIAL_CONSTRAINTS);
     }
 
-    /**
-     * Create a <code>information_schema.referential_constraints</code> table
-     * reference
-     */
     public ReferentialConstraints() {
         this(DSL.name("referential_constraints"), null);
     }
@@ -217,27 +157,18 @@ public class ReferentialConstraints extends TableImpl<ReferentialConstraintsReco
         return new ReferentialConstraints(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ReferentialConstraints rename(String name) {
         return new ReferentialConstraints(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ReferentialConstraints rename(Name name) {
         return new ReferentialConstraints(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ReferentialConstraints rename(Table<?> name) {
@@ -254,17 +185,10 @@ public class ReferentialConstraints extends TableImpl<ReferentialConstraintsReco
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

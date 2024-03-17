@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.bytealike</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,24 +27,12 @@ public class Bytealike extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.bytealike.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.bytealike._1</code>.
-     */
     public static final Parameter<byte[]> _1 = Internal.createParameter("_1", SQLDataType.BLOB, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.bytealike._2</code>.
-     */
     public static final Parameter<byte[]> _2 = Internal.createParameter("_2", SQLDataType.BLOB, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Bytealike() {
         super("bytealike", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -56,32 +41,18 @@ public class Bytealike extends AbstractRoutine<Boolean> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(byte[] value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<byte[]> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(byte[] value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<byte[]> field) {
         setField(_2, field);
     }

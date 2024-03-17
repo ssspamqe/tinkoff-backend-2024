@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_publication_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,72 +30,38 @@ public class PgGetPublicationTablesRecord extends TableRecordImpl<PgGetPublicati
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_publication_tables.pubid</code>.
-     */
     public void setPubid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_publication_tables.pubid</code>.
-     */
     @Nullable
     public Long getPubid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_publication_tables.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_publication_tables.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_publication_tables.attrs</code>.
-     */
     public void setAttrs(@Nullable Object[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_publication_tables.attrs</code>.
-     */
     @Nullable
     public Object[] getAttrs() {
         return (Object[]) get(2);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setQual(@Nullable Object value) {
         set(3, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getQual() {
@@ -139,14 +102,6 @@ public class PgGetPublicationTablesRecord extends TableRecordImpl<PgGetPublicati
         return PgGetPublicationTables.PG_GET_PUBLICATION_TABLES.ATTRS;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -172,14 +127,6 @@ public class PgGetPublicationTablesRecord extends TableRecordImpl<PgGetPublicati
         return getAttrs();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -205,14 +152,6 @@ public class PgGetPublicationTablesRecord extends TableRecordImpl<PgGetPublicati
         return getAttrs();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -241,14 +180,6 @@ public class PgGetPublicationTablesRecord extends TableRecordImpl<PgGetPublicati
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -271,16 +202,10 @@ public class PgGetPublicationTablesRecord extends TableRecordImpl<PgGetPublicati
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgGetPublicationTablesRecord
-     */
     public PgGetPublicationTablesRecord() {
         super(PgGetPublicationTables.PG_GET_PUBLICATION_TABLES);
     }
 
-    /**
-     * Create a detached, initialised PgGetPublicationTablesRecord
-     */
     @ConstructorProperties({ "pubid", "relid", "attrs", "qual" })
     public PgGetPublicationTablesRecord(@Nullable Long pubid, @Nullable Long relid, @Nullable Object[] attrs, @Nullable Object qual) {
         super(PgGetPublicationTables.PG_GET_PUBLICATION_TABLES);
@@ -292,9 +217,6 @@ public class PgGetPublicationTablesRecord extends TableRecordImpl<PgGetPublicati
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgGetPublicationTablesRecord
-     */
     public PgGetPublicationTablesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgGetPublicationTables value) {
         super(PgGetPublicationTables.PG_GET_PUBLICATION_TABLES);
 

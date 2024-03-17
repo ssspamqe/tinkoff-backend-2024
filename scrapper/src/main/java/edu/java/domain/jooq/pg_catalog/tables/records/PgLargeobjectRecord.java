@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_largeobject</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,48 +30,30 @@ public class PgLargeobjectRecord extends UpdatableRecordImpl<PgLargeobjectRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject.loid</code>.
-     */
     public void setLoid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject.loid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLoid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject.pageno</code>.
-     */
     public void setPageno(@NotNull Integer value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject.pageno</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getPageno() {
         return (Integer) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject.data</code>.
-     */
     public void setData(@NotNull byte[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject.data</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public byte[] getData() {
@@ -195,16 +174,10 @@ public class PgLargeobjectRecord extends UpdatableRecordImpl<PgLargeobjectRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLargeobjectRecord
-     */
     public PgLargeobjectRecord() {
         super(PgLargeobject.PG_LARGEOBJECT);
     }
 
-    /**
-     * Create a detached, initialised PgLargeobjectRecord
-     */
     @ConstructorProperties({ "loid", "pageno", "data" })
     public PgLargeobjectRecord(@NotNull Long loid, @NotNull Integer pageno, @NotNull byte[] data) {
         super(PgLargeobject.PG_LARGEOBJECT);
@@ -215,9 +188,6 @@ public class PgLargeobjectRecord extends UpdatableRecordImpl<PgLargeobjectRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLargeobjectRecord
-     */
     public PgLargeobjectRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLargeobject value) {
         super(PgLargeobject.PG_LARGEOBJECT);
 

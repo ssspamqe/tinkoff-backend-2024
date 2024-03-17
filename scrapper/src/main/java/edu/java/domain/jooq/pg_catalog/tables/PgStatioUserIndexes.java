@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatioUserIndexesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_user_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,53 +40,26 @@ public class PgStatioUserIndexes extends TableImpl<PgStatioUserIndexesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_statio_user_indexes</code>
-     */
     public static final PgStatioUserIndexes PG_STATIO_USER_INDEXES = new PgStatioUserIndexes();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatioUserIndexesRecord> getRecordType() {
         return PgStatioUserIndexesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_statio_user_indexes.relid</code>.
-     */
     public final TableField<PgStatioUserIndexesRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_user_indexes.indexrelid</code>.
-     */
     public final TableField<PgStatioUserIndexesRecord, Long> INDEXRELID = createField(DSL.name("indexrelid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_user_indexes.schemaname</code>.
-     */
     public final TableField<PgStatioUserIndexesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_user_indexes.relname</code>.
-     */
     public final TableField<PgStatioUserIndexesRecord, String> RELNAME = createField(DSL.name("relname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_user_indexes.indexrelname</code>.
-     */
     public final TableField<PgStatioUserIndexesRecord, String> INDEXRELNAME = createField(DSL.name("indexrelname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_user_indexes.idx_blks_read</code>.
-     */
     public final TableField<PgStatioUserIndexesRecord, Long> IDX_BLKS_READ = createField(DSL.name("idx_blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_user_indexes.idx_blks_hit</code>.
-     */
     public final TableField<PgStatioUserIndexesRecord, Long> IDX_BLKS_HIT = createField(DSL.name("idx_blks_hit"), SQLDataType.BIGINT, this, "");
 
     private PgStatioUserIndexes(Name alias, Table<PgStatioUserIndexesRecord> aliased) {
@@ -112,25 +80,14 @@ public class PgStatioUserIndexes extends TableImpl<PgStatioUserIndexesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_statio_user_indexes</code> table
-     * reference
-     */
     public PgStatioUserIndexes(String alias) {
         this(DSL.name(alias), PG_STATIO_USER_INDEXES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_statio_user_indexes</code> table
-     * reference
-     */
     public PgStatioUserIndexes(Name alias) {
         this(alias, PG_STATIO_USER_INDEXES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_statio_user_indexes</code> table reference
-     */
     public PgStatioUserIndexes() {
         this(DSL.name("pg_statio_user_indexes"), null);
     }
@@ -163,27 +120,18 @@ public class PgStatioUserIndexes extends TableImpl<PgStatioUserIndexesRecord> {
         return new PgStatioUserIndexes(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioUserIndexes rename(String name) {
         return new PgStatioUserIndexes(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioUserIndexes rename(Name name) {
         return new PgStatioUserIndexes(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioUserIndexes rename(Table<?> name) {
@@ -200,17 +148,10 @@ public class PgStatioUserIndexes extends TableImpl<PgStatioUserIndexesRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

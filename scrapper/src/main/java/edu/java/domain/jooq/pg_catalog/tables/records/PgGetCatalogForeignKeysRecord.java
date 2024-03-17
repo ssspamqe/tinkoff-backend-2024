@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_catalog_foreign_keys</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,115 +30,59 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setFktable(@Nullable Object value) {
         set(0, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getFktable() {
         return get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_catalog_foreign_keys.fkcols</code>.
-     */
     public void setFkcols(@Nullable String[] value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_catalog_foreign_keys.fkcols</code>.
-     */
     @Nullable
     public String[] getFkcols() {
         return (String[]) get(1);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPktable(@Nullable Object value) {
         set(2, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPktable() {
         return get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_catalog_foreign_keys.pkcols</code>.
-     */
     public void setPkcols(@Nullable String[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_catalog_foreign_keys.pkcols</code>.
-     */
     @Nullable
     public String[] getPkcols() {
         return (String[]) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_catalog_foreign_keys.is_array</code>.
-     */
     public void setIsArray(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_catalog_foreign_keys.is_array</code>.
-     */
     @Nullable
     public Boolean getIsArray() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_catalog_foreign_keys.is_opt</code>.
-     */
     public void setIsOpt(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_catalog_foreign_keys.is_opt</code>.
-     */
     @Nullable
     public Boolean getIsOpt() {
         return (Boolean) get(5);
@@ -163,14 +104,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         return (Row6) super.valuesRow();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -184,14 +117,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         return PgGetCatalogForeignKeys.PG_GET_CATALOG_FOREIGN_KEYS.FKCOLS;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -217,14 +142,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         return PgGetCatalogForeignKeys.PG_GET_CATALOG_FOREIGN_KEYS.IS_OPT;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -238,14 +155,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         return getFkcols();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -271,14 +180,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         return getIsOpt();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -292,14 +193,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         return getFkcols();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -325,14 +218,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         return getIsOpt();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -348,14 +233,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -401,16 +278,10 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgGetCatalogForeignKeysRecord
-     */
     public PgGetCatalogForeignKeysRecord() {
         super(PgGetCatalogForeignKeys.PG_GET_CATALOG_FOREIGN_KEYS);
     }
 
-    /**
-     * Create a detached, initialised PgGetCatalogForeignKeysRecord
-     */
     @ConstructorProperties({ "fktable", "fkcols", "pktable", "pkcols", "isArray", "isOpt" })
     public PgGetCatalogForeignKeysRecord(@Nullable Object fktable, @Nullable String[] fkcols, @Nullable Object pktable, @Nullable String[] pkcols, @Nullable Boolean isArray, @Nullable Boolean isOpt) {
         super(PgGetCatalogForeignKeys.PG_GET_CATALOG_FOREIGN_KEYS);
@@ -424,9 +295,6 @@ public class PgGetCatalogForeignKeysRecord extends TableRecordImpl<PgGetCatalogF
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgGetCatalogForeignKeysRecord
-     */
     public PgGetCatalogForeignKeysRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgGetCatalogForeignKeys value) {
         super(PgGetCatalogForeignKeys.PG_GET_CATALOG_FOREIGN_KEYS);
 

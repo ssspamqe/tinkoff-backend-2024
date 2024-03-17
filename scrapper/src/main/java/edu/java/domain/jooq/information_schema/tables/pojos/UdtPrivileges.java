@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.udt_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -68,108 +65,66 @@ public class UdtPrivileges implements Serializable {
         this.isGrantable = isGrantable;
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return this.grantor;
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.grantor</code>.
-     */
     public void setGrantor(@Nullable String grantor) {
         this.grantor = grantor;
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return this.grantee;
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.grantee</code>.
-     */
     public void setGrantee(@Nullable String grantee) {
         this.grantee = grantee;
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return this.udtCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String udtCatalog) {
         this.udtCatalog = udtCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return this.udtSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String udtSchema) {
         this.udtSchema = udtSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return this.udtName;
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.udt_name</code>.
-     */
     public void setUdtName(@Nullable String udtName) {
         this.udtName = udtName;
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return this.privilegeType;
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String privilegeType) {
         this.privilegeType = privilegeType;
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
         return this.isGrantable;
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String isGrantable) {
         this.isGrantable = isGrantable;
     }

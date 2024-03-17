@@ -19,9 +19,6 @@ import org.jooq.impl.TableRecordImpl;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The table <code>pg_catalog.pg_timezone_names</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,61 +31,37 @@ public class PgTimezoneNamesRecord extends TableRecordImpl<PgTimezoneNamesRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_names.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_names.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_names.abbrev</code>.
-     */
     public void setAbbrev(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_names.abbrev</code>.
-     */
     @Nullable
     public String getAbbrev() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_names.utc_offset</code>.
-     */
     public void setUtcOffset(@Nullable YearToSecond value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_names.utc_offset</code>.
-     */
     @Nullable
     public YearToSecond getUtcOffset() {
         return (YearToSecond) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_names.is_dst</code>.
-     */
     public void setIsDst(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_names.is_dst</code>.
-     */
     @Nullable
     public Boolean getIsDst() {
         return (Boolean) get(3);
@@ -224,16 +197,10 @@ public class PgTimezoneNamesRecord extends TableRecordImpl<PgTimezoneNamesRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTimezoneNamesRecord
-     */
     public PgTimezoneNamesRecord() {
         super(PgTimezoneNames.PG_TIMEZONE_NAMES);
     }
 
-    /**
-     * Create a detached, initialised PgTimezoneNamesRecord
-     */
     @ConstructorProperties({ "name", "abbrev", "utcOffset", "isDst" })
     public PgTimezoneNamesRecord(@Nullable String name, @Nullable String abbrev, @Nullable YearToSecond utcOffset, @Nullable Boolean isDst) {
         super(PgTimezoneNames.PG_TIMEZONE_NAMES);
@@ -245,9 +212,6 @@ public class PgTimezoneNamesRecord extends TableRecordImpl<PgTimezoneNamesRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTimezoneNamesRecord
-     */
     public PgTimezoneNamesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTimezoneNames value) {
         super(PgTimezoneNames.PG_TIMEZONE_NAMES);
 

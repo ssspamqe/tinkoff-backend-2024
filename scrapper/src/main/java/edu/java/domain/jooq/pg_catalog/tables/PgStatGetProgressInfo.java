@@ -22,9 +22,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_progress_info</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -37,134 +34,58 @@ public class PgStatGetProgressInfo extends TableImpl<PgStatGetProgressInfoRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_get_progress_info</code>
-     */
     public static final PgStatGetProgressInfo PG_STAT_GET_PROGRESS_INFO = new PgStatGetProgressInfo();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatGetProgressInfoRecord> getRecordType() {
         return PgStatGetProgressInfoRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.pid</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.datid</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.relid</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param1</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM1 = createField(DSL.name("param1"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param2</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM2 = createField(DSL.name("param2"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param3</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM3 = createField(DSL.name("param3"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param4</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM4 = createField(DSL.name("param4"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param5</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM5 = createField(DSL.name("param5"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param6</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM6 = createField(DSL.name("param6"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param7</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM7 = createField(DSL.name("param7"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param8</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM8 = createField(DSL.name("param8"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param9</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM9 = createField(DSL.name("param9"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param10</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM10 = createField(DSL.name("param10"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param11</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM11 = createField(DSL.name("param11"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param12</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM12 = createField(DSL.name("param12"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param13</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM13 = createField(DSL.name("param13"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param14</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM14 = createField(DSL.name("param14"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param15</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM15 = createField(DSL.name("param15"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param16</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM16 = createField(DSL.name("param16"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param17</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM17 = createField(DSL.name("param17"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param18</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM18 = createField(DSL.name("param18"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param19</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM19 = createField(DSL.name("param19"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_get_progress_info.param20</code>.
-     */
     public final TableField<PgStatGetProgressInfoRecord, Long> PARAM20 = createField(DSL.name("param20"), SQLDataType.BIGINT, this, "");
 
     private PgStatGetProgressInfo(Name alias, Table<PgStatGetProgressInfoRecord> aliased) {
@@ -177,26 +98,14 @@ public class PgStatGetProgressInfo extends TableImpl<PgStatGetProgressInfoRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_get_progress_info</code> table
-     * reference
-     */
     public PgStatGetProgressInfo(String alias) {
         this(DSL.name(alias), PG_STAT_GET_PROGRESS_INFO);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_get_progress_info</code> table
-     * reference
-     */
     public PgStatGetProgressInfo(Name alias) {
         this(alias, PG_STAT_GET_PROGRESS_INFO);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_get_progress_info</code> table
-     * reference
-     */
     public PgStatGetProgressInfo() {
         this(DSL.name("pg_stat_get_progress_info"), null);
     }
@@ -225,36 +134,24 @@ public class PgStatGetProgressInfo extends TableImpl<PgStatGetProgressInfoRecord
         return new PgStatGetProgressInfo(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGetProgressInfo rename(String name) {
         return new PgStatGetProgressInfo(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGetProgressInfo rename(Name name) {
         return new PgStatGetProgressInfo(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGetProgressInfo rename(Table<?> name) {
         return new PgStatGetProgressInfo(name.getQualifiedName(), null, parameters);
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgStatGetProgressInfo call(
           String cmdtype
     ) {
@@ -265,9 +162,6 @@ public class PgStatGetProgressInfo extends TableImpl<PgStatGetProgressInfoRecord
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgStatGetProgressInfo call(
           Field<String> cmdtype
     ) {

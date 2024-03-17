@@ -18,9 +18,6 @@ import org.jooq.Row2;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.ts_parse</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,31 +30,19 @@ public class TsParseRecord extends TableRecordImpl<TsParseRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.ts_parse.tokid</code>.
-     */
     public void setTokid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_parse.tokid</code>.
-     */
     @Nullable
     public Integer getTokid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_parse.token</code>.
-     */
     public void setToken(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_parse.token</code>.
-     */
     @Nullable
     public String getToken() {
         return (String) get(1);
@@ -141,16 +126,10 @@ public class TsParseRecord extends TableRecordImpl<TsParseRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TsParseRecord
-     */
     public TsParseRecord() {
         super(TsParse.TS_PARSE);
     }
 
-    /**
-     * Create a detached, initialised TsParseRecord
-     */
     @ConstructorProperties({ "tokid", "token" })
     public TsParseRecord(@Nullable Integer tokid, @Nullable String token) {
         super(TsParse.TS_PARSE);
@@ -160,9 +139,6 @@ public class TsParseRecord extends TableRecordImpl<TsParseRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TsParseRecord
-     */
     public TsParseRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.TsParse value) {
         super(TsParse.TS_PARSE);
 

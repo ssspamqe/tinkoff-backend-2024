@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgUserRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_user</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,63 +42,30 @@ public class PgUser extends TableImpl<PgUserRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_user</code>
-     */
     public static final PgUser PG_USER = new PgUser();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgUserRecord> getRecordType() {
         return PgUserRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_user.usename</code>.
-     */
     public final TableField<PgUserRecord, String> USENAME = createField(DSL.name("usename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user.usesysid</code>.
-     */
     public final TableField<PgUserRecord, Long> USESYSID = createField(DSL.name("usesysid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user.usecreatedb</code>.
-     */
     public final TableField<PgUserRecord, Boolean> USECREATEDB = createField(DSL.name("usecreatedb"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user.usesuper</code>.
-     */
     public final TableField<PgUserRecord, Boolean> USESUPER = createField(DSL.name("usesuper"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user.userepl</code>.
-     */
     public final TableField<PgUserRecord, Boolean> USEREPL = createField(DSL.name("userepl"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user.usebypassrls</code>.
-     */
     public final TableField<PgUserRecord, Boolean> USEBYPASSRLS = createField(DSL.name("usebypassrls"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user.passwd</code>.
-     */
     public final TableField<PgUserRecord, String> PASSWD = createField(DSL.name("passwd"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user.valuntil</code>.
-     */
     public final TableField<PgUserRecord, OffsetDateTime> VALUNTIL = createField(DSL.name("valuntil"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_user.useconfig</code>.
-     */
     public final TableField<PgUserRecord, String[]> USECONFIG = createField(DSL.name("useconfig"), SQLDataType.CLOB.array(), this, "");
 
     private PgUser(Name alias, Table<PgUserRecord> aliased) {
@@ -124,23 +87,14 @@ public class PgUser extends TableImpl<PgUserRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_user</code> table reference
-     */
     public PgUser(String alias) {
         this(DSL.name(alias), PG_USER);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_user</code> table reference
-     */
     public PgUser(Name alias) {
         this(alias, PG_USER);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_user</code> table reference
-     */
     public PgUser() {
         this(DSL.name("pg_user"), null);
     }
@@ -173,27 +127,18 @@ public class PgUser extends TableImpl<PgUserRecord> {
         return new PgUser(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUser rename(String name) {
         return new PgUser(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUser rename(Name name) {
         return new PgUser(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgUser rename(Table<?> name) {
@@ -210,17 +155,10 @@ public class PgUser extends TableImpl<PgUserRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super String, ? super Long, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super OffsetDateTime, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super Long, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? super String, ? super OffsetDateTime, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

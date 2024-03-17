@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ViewsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.views</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,69 +39,32 @@ public class Views extends TableImpl<ViewsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.views</code>
-     */
     public static final Views VIEWS = new Views();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ViewsRecord> getRecordType() {
         return ViewsRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.views.table_catalog</code>.
-     */
     public final TableField<ViewsRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.views.table_schema</code>.
-     */
     public final TableField<ViewsRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.views.table_name</code>.
-     */
     public final TableField<ViewsRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.views.view_definition</code>.
-     */
     public final TableField<ViewsRecord, String> VIEW_DEFINITION = createField(DSL.name("view_definition"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.views.check_option</code>.
-     */
     public final TableField<ViewsRecord, String> CHECK_OPTION = createField(DSL.name("check_option"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.views.is_updatable</code>.
-     */
     public final TableField<ViewsRecord, String> IS_UPDATABLE = createField(DSL.name("is_updatable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.views.is_insertable_into</code>.
-     */
     public final TableField<ViewsRecord, String> IS_INSERTABLE_INTO = createField(DSL.name("is_insertable_into"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.views.is_trigger_updatable</code>.
-     */
     public final TableField<ViewsRecord, String> IS_TRIGGER_UPDATABLE = createField(DSL.name("is_trigger_updatable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.views.is_trigger_deletable</code>.
-     */
     public final TableField<ViewsRecord, String> IS_TRIGGER_DELETABLE = createField(DSL.name("is_trigger_deletable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.views.is_trigger_insertable_into</code>.
-     */
     public final TableField<ViewsRecord, String> IS_TRIGGER_INSERTABLE_INTO = createField(DSL.name("is_trigger_insertable_into"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
     private Views(Name alias, Table<ViewsRecord> aliased) {
@@ -166,23 +124,14 @@ public class Views extends TableImpl<ViewsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.views</code> table reference
-     */
     public Views(String alias) {
         this(DSL.name(alias), VIEWS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.views</code> table reference
-     */
     public Views(Name alias) {
         this(alias, VIEWS);
     }
 
-    /**
-     * Create a <code>information_schema.views</code> table reference
-     */
     public Views() {
         this(DSL.name("views"), null);
     }
@@ -215,27 +164,18 @@ public class Views extends TableImpl<ViewsRecord> {
         return new Views(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Views rename(String name) {
         return new Views(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Views rename(Name name) {
         return new Views(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Views rename(Table<?> name) {
@@ -252,17 +192,10 @@ public class Views extends TableImpl<ViewsRecord> {
         return (Row10) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function10<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function10<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

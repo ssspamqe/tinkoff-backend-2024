@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatSslRecord;
 
 import java.math.BigDecimal;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_ssl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,58 +42,28 @@ public class PgStatSsl extends TableImpl<PgStatSslRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_ssl</code>
-     */
     public static final PgStatSsl PG_STAT_SSL = new PgStatSsl();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatSslRecord> getRecordType() {
         return PgStatSslRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_ssl.pid</code>.
-     */
     public final TableField<PgStatSslRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_ssl.ssl</code>.
-     */
     public final TableField<PgStatSslRecord, Boolean> SSL = createField(DSL.name("ssl"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_ssl.version</code>.
-     */
     public final TableField<PgStatSslRecord, String> VERSION = createField(DSL.name("version"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_ssl.cipher</code>.
-     */
     public final TableField<PgStatSslRecord, String> CIPHER = createField(DSL.name("cipher"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_ssl.bits</code>.
-     */
     public final TableField<PgStatSslRecord, Integer> BITS = createField(DSL.name("bits"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_ssl.client_dn</code>.
-     */
     public final TableField<PgStatSslRecord, String> CLIENT_DN = createField(DSL.name("client_dn"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_ssl.client_serial</code>.
-     */
     public final TableField<PgStatSslRecord, BigDecimal> CLIENT_SERIAL = createField(DSL.name("client_serial"), SQLDataType.NUMERIC, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_ssl.issuer_dn</code>.
-     */
     public final TableField<PgStatSslRecord, String> ISSUER_DN = createField(DSL.name("issuer_dn"), SQLDataType.CLOB, this, "");
 
     private PgStatSsl(Name alias, Table<PgStatSslRecord> aliased) {
@@ -119,23 +85,14 @@ public class PgStatSsl extends TableImpl<PgStatSslRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_ssl</code> table reference
-     */
     public PgStatSsl(String alias) {
         this(DSL.name(alias), PG_STAT_SSL);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_ssl</code> table reference
-     */
     public PgStatSsl(Name alias) {
         this(alias, PG_STAT_SSL);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_ssl</code> table reference
-     */
     public PgStatSsl() {
         this(DSL.name("pg_stat_ssl"), null);
     }
@@ -168,27 +125,18 @@ public class PgStatSsl extends TableImpl<PgStatSslRecord> {
         return new PgStatSsl(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSsl rename(String name) {
         return new PgStatSsl(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSsl rename(Name name) {
         return new PgStatSsl(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSsl rename(Table<?> name) {
@@ -205,17 +153,10 @@ public class PgStatSsl extends TableImpl<PgStatSslRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Integer, ? super Boolean, ? super String, ? super String, ? super Integer, ? super String, ? super BigDecimal, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Integer, ? super Boolean, ? super String, ? super String, ? super Integer, ? super String, ? super BigDecimal, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

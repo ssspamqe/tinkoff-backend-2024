@@ -18,9 +18,6 @@ import org.jooq.Row2;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_multixact_members</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,31 +30,19 @@ public class PgGetMultixactMembersRecord extends TableRecordImpl<PgGetMultixactM
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_multixact_members.xid</code>.
-     */
     public void setXid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_multixact_members.xid</code>.
-     */
     @Nullable
     public Long getXid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_multixact_members.mode</code>.
-     */
     public void setMode(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_multixact_members.mode</code>.
-     */
     @Nullable
     public String getMode() {
         return (String) get(1);
@@ -141,16 +126,10 @@ public class PgGetMultixactMembersRecord extends TableRecordImpl<PgGetMultixactM
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgGetMultixactMembersRecord
-     */
     public PgGetMultixactMembersRecord() {
         super(PgGetMultixactMembers.PG_GET_MULTIXACT_MEMBERS);
     }
 
-    /**
-     * Create a detached, initialised PgGetMultixactMembersRecord
-     */
     @ConstructorProperties({ "xid", "mode" })
     public PgGetMultixactMembersRecord(@Nullable Long xid, @Nullable String mode) {
         super(PgGetMultixactMembers.PG_GET_MULTIXACT_MEMBERS);
@@ -160,9 +139,6 @@ public class PgGetMultixactMembersRecord extends TableRecordImpl<PgGetMultixactM
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgGetMultixactMembersRecord
-     */
     public PgGetMultixactMembersRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgGetMultixactMembers value) {
         super(PgGetMultixactMembers.PG_GET_MULTIXACT_MEMBERS);
 

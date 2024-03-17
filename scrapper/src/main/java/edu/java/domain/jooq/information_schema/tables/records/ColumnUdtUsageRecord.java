@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.column_udt_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,108 +30,64 @@ public class ColumnUdtUsageRecord extends TableRecordImpl<ColumnUdtUsageRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.column_udt_usage.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_udt_usage.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.column_udt_usage.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_udt_usage.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.column_udt_usage.udt_name</code>.
-     */
     public void setUdtName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_udt_usage.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_udt_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_udt_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.column_udt_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_udt_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.column_udt_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_udt_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.column_udt_usage.column_name</code>.
-     */
     public void setColumnName(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_udt_usage.column_name</code>.
-     */
     @Nullable
     public String getColumnName() {
         return (String) get(6);
@@ -348,16 +301,10 @@ public class ColumnUdtUsageRecord extends TableRecordImpl<ColumnUdtUsageRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ColumnUdtUsageRecord
-     */
     public ColumnUdtUsageRecord() {
         super(ColumnUdtUsage.COLUMN_UDT_USAGE);
     }
 
-    /**
-     * Create a detached, initialised ColumnUdtUsageRecord
-     */
     @ConstructorProperties({ "udtCatalog", "udtSchema", "udtName", "tableCatalog", "tableSchema", "tableName", "columnName" })
     public ColumnUdtUsageRecord(@Nullable String udtCatalog, @Nullable String udtSchema, @Nullable String udtName, @Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String columnName) {
         super(ColumnUdtUsage.COLUMN_UDT_USAGE);
@@ -372,9 +319,6 @@ public class ColumnUdtUsageRecord extends TableRecordImpl<ColumnUdtUsageRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ColumnUdtUsageRecord
-     */
     public ColumnUdtUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.ColumnUdtUsage value) {
         super(ColumnUdtUsage.COLUMN_UDT_USAGE);
 

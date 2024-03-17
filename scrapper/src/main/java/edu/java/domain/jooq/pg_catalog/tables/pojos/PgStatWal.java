@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_wal</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -76,137 +73,83 @@ public class PgStatWal implements Serializable {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_records</code>.
-     */
     @Nullable
     public Long getWalRecords() {
         return this.walRecords;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_records</code>.
-     */
     public void setWalRecords(@Nullable Long walRecords) {
         this.walRecords = walRecords;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_fpi</code>.
-     */
     @Nullable
     public Long getWalFpi() {
         return this.walFpi;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_fpi</code>.
-     */
     public void setWalFpi(@Nullable Long walFpi) {
         this.walFpi = walFpi;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_bytes</code>.
-     */
     @Nullable
     public BigDecimal getWalBytes() {
         return this.walBytes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_bytes</code>.
-     */
     public void setWalBytes(@Nullable BigDecimal walBytes) {
         this.walBytes = walBytes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_buffers_full</code>.
-     */
     @Nullable
     public Long getWalBuffersFull() {
         return this.walBuffersFull;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_buffers_full</code>.
-     */
     public void setWalBuffersFull(@Nullable Long walBuffersFull) {
         this.walBuffersFull = walBuffersFull;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_write</code>.
-     */
     @Nullable
     public Long getWalWrite() {
         return this.walWrite;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_write</code>.
-     */
     public void setWalWrite(@Nullable Long walWrite) {
         this.walWrite = walWrite;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_sync</code>.
-     */
     @Nullable
     public Long getWalSync() {
         return this.walSync;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_sync</code>.
-     */
     public void setWalSync(@Nullable Long walSync) {
         this.walSync = walSync;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_write_time</code>.
-     */
     @Nullable
     public Double getWalWriteTime() {
         return this.walWriteTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_write_time</code>.
-     */
     public void setWalWriteTime(@Nullable Double walWriteTime) {
         this.walWriteTime = walWriteTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_sync_time</code>.
-     */
     @Nullable
     public Double getWalSyncTime() {
         return this.walSyncTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_sync_time</code>.
-     */
     public void setWalSyncTime(@Nullable Double walSyncTime) {
         this.walSyncTime = walSyncTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }

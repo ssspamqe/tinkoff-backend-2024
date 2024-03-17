@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.foreign_table_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,86 +30,46 @@ public class ForeignTableOptionsRecord extends TableRecordImpl<ForeignTableOptio
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.foreign_table_catalog</code>.
-     */
     public void setForeignTableCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.foreign_table_catalog</code>.
-     */
     @Nullable
     public String getForeignTableCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.foreign_table_schema</code>.
-     */
     public void setForeignTableSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.foreign_table_schema</code>.
-     */
     @Nullable
     public String getForeignTableSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.foreign_table_name</code>.
-     */
     public void setForeignTableName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.foreign_table_name</code>.
-     */
     @Nullable
     public String getForeignTableName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_table_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_table_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return (String) get(4);
@@ -274,16 +231,10 @@ public class ForeignTableOptionsRecord extends TableRecordImpl<ForeignTableOptio
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ForeignTableOptionsRecord
-     */
     public ForeignTableOptionsRecord() {
         super(ForeignTableOptions.FOREIGN_TABLE_OPTIONS);
     }
 
-    /**
-     * Create a detached, initialised ForeignTableOptionsRecord
-     */
     @ConstructorProperties({ "foreignTableCatalog", "foreignTableSchema", "foreignTableName", "optionName", "optionValue" })
     public ForeignTableOptionsRecord(@Nullable String foreignTableCatalog, @Nullable String foreignTableSchema, @Nullable String foreignTableName, @Nullable String optionName, @Nullable String optionValue) {
         super(ForeignTableOptions.FOREIGN_TABLE_OPTIONS);
@@ -296,9 +247,6 @@ public class ForeignTableOptionsRecord extends TableRecordImpl<ForeignTableOptio
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ForeignTableOptionsRecord
-     */
     public ForeignTableOptionsRecord(edu.java.domain.jooq.information_schema.tables.pojos.ForeignTableOptions value) {
         super(ForeignTableOptions.FOREIGN_TABLE_OPTIONS);
 

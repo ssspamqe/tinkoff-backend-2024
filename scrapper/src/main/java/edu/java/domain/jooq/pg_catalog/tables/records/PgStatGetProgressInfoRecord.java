@@ -14,9 +14,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_progress_info</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,346 +26,208 @@ public class PgStatGetProgressInfoRecord extends TableRecordImpl<PgStatGetProgre
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.datid</code>.
-     */
     public void setDatid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param1</code>.
-     */
     public void setParam1(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param1</code>.
-     */
     @Nullable
     public Long getParam1() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param2</code>.
-     */
     public void setParam2(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param2</code>.
-     */
     @Nullable
     public Long getParam2() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param3</code>.
-     */
     public void setParam3(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param3</code>.
-     */
     @Nullable
     public Long getParam3() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param4</code>.
-     */
     public void setParam4(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param4</code>.
-     */
     @Nullable
     public Long getParam4() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param5</code>.
-     */
     public void setParam5(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param5</code>.
-     */
     @Nullable
     public Long getParam5() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param6</code>.
-     */
     public void setParam6(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param6</code>.
-     */
     @Nullable
     public Long getParam6() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param7</code>.
-     */
     public void setParam7(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param7</code>.
-     */
     @Nullable
     public Long getParam7() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param8</code>.
-     */
     public void setParam8(@Nullable Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param8</code>.
-     */
     @Nullable
     public Long getParam8() {
         return (Long) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param9</code>.
-     */
     public void setParam9(@Nullable Long value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param9</code>.
-     */
     @Nullable
     public Long getParam9() {
         return (Long) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param10</code>.
-     */
     public void setParam10(@Nullable Long value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param10</code>.
-     */
     @Nullable
     public Long getParam10() {
         return (Long) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param11</code>.
-     */
     public void setParam11(@Nullable Long value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param11</code>.
-     */
     @Nullable
     public Long getParam11() {
         return (Long) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param12</code>.
-     */
     public void setParam12(@Nullable Long value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param12</code>.
-     */
     @Nullable
     public Long getParam12() {
         return (Long) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param13</code>.
-     */
     public void setParam13(@Nullable Long value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param13</code>.
-     */
     @Nullable
     public Long getParam13() {
         return (Long) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param14</code>.
-     */
     public void setParam14(@Nullable Long value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param14</code>.
-     */
     @Nullable
     public Long getParam14() {
         return (Long) get(16);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param15</code>.
-     */
     public void setParam15(@Nullable Long value) {
         set(17, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param15</code>.
-     */
     @Nullable
     public Long getParam15() {
         return (Long) get(17);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param16</code>.
-     */
     public void setParam16(@Nullable Long value) {
         set(18, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param16</code>.
-     */
     @Nullable
     public Long getParam16() {
         return (Long) get(18);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param17</code>.
-     */
     public void setParam17(@Nullable Long value) {
         set(19, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param17</code>.
-     */
     @Nullable
     public Long getParam17() {
         return (Long) get(19);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param18</code>.
-     */
     public void setParam18(@Nullable Long value) {
         set(20, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param18</code>.
-     */
     @Nullable
     public Long getParam18() {
         return (Long) get(20);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param19</code>.
-     */
     public void setParam19(@Nullable Long value) {
         set(21, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param19</code>.
-     */
     @Nullable
     public Long getParam19() {
         return (Long) get(21);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_progress_info.param20</code>.
-     */
     public void setParam20(@Nullable Long value) {
         set(22, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_progress_info.param20</code>.
-     */
     @Nullable
     public Long getParam20() {
         return (Long) get(22);
@@ -378,16 +237,10 @@ public class PgStatGetProgressInfoRecord extends TableRecordImpl<PgStatGetProgre
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatGetProgressInfoRecord
-     */
     public PgStatGetProgressInfoRecord() {
         super(PgStatGetProgressInfo.PG_STAT_GET_PROGRESS_INFO);
     }
 
-    /**
-     * Create a detached, initialised PgStatGetProgressInfoRecord
-     */
     @ConstructorProperties({ "pid", "datid", "relid", "param1", "param2", "param3", "param4", "param5", "param6", "param7", "param8", "param9", "param10", "param11", "param12", "param13", "param14", "param15", "param16", "param17", "param18", "param19", "param20" })
     public PgStatGetProgressInfoRecord(@Nullable Integer pid, @Nullable Long datid, @Nullable Long relid, @Nullable Long param1, @Nullable Long param2, @Nullable Long param3, @Nullable Long param4, @Nullable Long param5, @Nullable Long param6, @Nullable Long param7, @Nullable Long param8, @Nullable Long param9, @Nullable Long param10, @Nullable Long param11, @Nullable Long param12, @Nullable Long param13, @Nullable Long param14, @Nullable Long param15, @Nullable Long param16, @Nullable Long param17, @Nullable Long param18, @Nullable Long param19, @Nullable Long param20) {
         super(PgStatGetProgressInfo.PG_STAT_GET_PROGRESS_INFO);
@@ -418,9 +271,6 @@ public class PgStatGetProgressInfoRecord extends TableRecordImpl<PgStatGetProgre
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatGetProgressInfoRecord
-     */
     public PgStatGetProgressInfoRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatGetProgressInfo value) {
         super(PgStatGetProgressInfo.PG_STAT_GET_PROGRESS_INFO);
 

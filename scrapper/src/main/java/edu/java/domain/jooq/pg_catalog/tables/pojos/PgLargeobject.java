@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_largeobject</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -51,50 +48,32 @@ public class PgLargeobject implements Serializable {
         this.data = data;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject.loid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLoid() {
         return this.loid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject.loid</code>.
-     */
     public void setLoid(@NotNull Long loid) {
         this.loid = loid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject.pageno</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getPageno() {
         return this.pageno;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject.pageno</code>.
-     */
     public void setPageno(@NotNull Integer pageno) {
         this.pageno = pageno;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject.data</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public byte[] getData() {
         return this.data;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject.data</code>.
-     */
     public void setData(@NotNull byte[] data) {
         this.data = data;
     }

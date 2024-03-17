@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_trigger_depth</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,14 +26,8 @@ public class PgTriggerDepth extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_trigger_depth.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgTriggerDepth() {
         super("pg_trigger_depth", PgCatalog.PG_CATALOG, SQLDataType.INTEGER);
 

@@ -19,9 +19,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_rel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,91 +31,51 @@ public class PgPublicationRelRecord extends UpdatableRecordImpl<PgPublicationRel
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_rel.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_rel.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_rel.prpubid</code>.
-     */
     public void setPrpubid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_rel.prpubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPrpubid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_rel.prrelid</code>.
-     */
     public void setPrrelid(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_rel.prrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPrrelid() {
         return (Long) get(2);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPrqual(@Nullable Object value) {
         set(3, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPrqual() {
         return get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_rel.prattrs</code>.
-     */
     public void setPrattrs(@Nullable Object[] value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_rel.prattrs</code>.
-     */
     @Nullable
     public Object[] getPrattrs() {
         return (Object[]) get(4);
@@ -168,14 +125,6 @@ public class PgPublicationRelRecord extends UpdatableRecordImpl<PgPublicationRel
         return PgPublicationRel.PG_PUBLICATION_REL.PRRELID;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -207,14 +156,6 @@ public class PgPublicationRelRecord extends UpdatableRecordImpl<PgPublicationRel
         return getPrrelid();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -246,14 +187,6 @@ public class PgPublicationRelRecord extends UpdatableRecordImpl<PgPublicationRel
         return getPrrelid();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -288,14 +221,6 @@ public class PgPublicationRelRecord extends UpdatableRecordImpl<PgPublicationRel
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -326,16 +251,10 @@ public class PgPublicationRelRecord extends UpdatableRecordImpl<PgPublicationRel
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPublicationRelRecord
-     */
     public PgPublicationRelRecord() {
         super(PgPublicationRel.PG_PUBLICATION_REL);
     }
 
-    /**
-     * Create a detached, initialised PgPublicationRelRecord
-     */
     @ConstructorProperties({ "oid", "prpubid", "prrelid", "prqual", "prattrs" })
     public PgPublicationRelRecord(@NotNull Long oid, @NotNull Long prpubid, @NotNull Long prrelid, @Nullable Object prqual, @Nullable Object[] prattrs) {
         super(PgPublicationRel.PG_PUBLICATION_REL);
@@ -348,9 +267,6 @@ public class PgPublicationRelRecord extends UpdatableRecordImpl<PgPublicationRel
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPublicationRelRecord
-     */
     public PgPublicationRelRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPublicationRel value) {
         super(PgPublicationRel.PG_PUBLICATION_REL);
 

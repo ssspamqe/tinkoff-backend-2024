@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.string_to_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,17 +39,11 @@ public class StringToTable implements Serializable {
         this.stringToTable = stringToTable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.string_to_table.string_to_table</code>.
-     */
     @Nullable
     public String getStringToTable() {
         return this.stringToTable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.string_to_table.string_to_table</code>.
-     */
     public void setStringToTable(@Nullable String stringToTable) {
         this.stringToTable = stringToTable;
     }

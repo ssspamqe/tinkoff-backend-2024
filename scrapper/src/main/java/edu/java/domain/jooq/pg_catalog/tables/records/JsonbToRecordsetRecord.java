@@ -19,9 +19,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_to_recordset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,16 +31,10 @@ public class JsonbToRecordsetRecord extends TableRecordImpl<JsonbToRecordsetReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_to_recordset.jsonb_to_recordset</code>.
-     */
     public void setJsonbToRecordset(@Nullable Record value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_to_recordset.jsonb_to_recordset</code>.
-     */
     @Nullable
     public Record getJsonbToRecordset() {
         return (Record) get(0);
@@ -101,16 +92,10 @@ public class JsonbToRecordsetRecord extends TableRecordImpl<JsonbToRecordsetReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonbToRecordsetRecord
-     */
     public JsonbToRecordsetRecord() {
         super(JsonbToRecordset.JSONB_TO_RECORDSET);
     }
 
-    /**
-     * Create a detached, initialised JsonbToRecordsetRecord
-     */
     @ConstructorProperties({ "jsonbToRecordset" })
     public JsonbToRecordsetRecord(@Nullable Record jsonbToRecordset) {
         super(JsonbToRecordset.JSONB_TO_RECORDSET);
@@ -119,9 +104,6 @@ public class JsonbToRecordsetRecord extends TableRecordImpl<JsonbToRecordsetReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonbToRecordsetRecord
-     */
     public JsonbToRecordsetRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonbToRecordset value) {
         super(JsonbToRecordset.JSONB_TO_RECORDSET);
 

@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.min</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,19 +27,10 @@ public class Min3 extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.min.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.min._1</code>.
-     */
     public static final Parameter<Integer> _1 = Internal.createParameter("_1", SQLDataType.INTEGER, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Min3() {
         super("min", PgCatalog.PG_CATALOG, SQLDataType.INTEGER);
 
@@ -51,17 +39,10 @@ public class Min3 extends AbstractRoutine<Integer> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Integer value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Integer> field) {
         setField(_1, field);
     }

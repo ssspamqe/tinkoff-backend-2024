@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonObjectKeysRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.json_object_keys</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,23 +39,14 @@ public class JsonObjectKeys extends TableImpl<JsonObjectKeysRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.json_object_keys</code>
-     */
     public static final JsonObjectKeys JSON_OBJECT_KEYS = new JsonObjectKeys();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonObjectKeysRecord> getRecordType() {
         return JsonObjectKeysRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.json_object_keys.json_object_keys</code>.
-     */
     public final TableField<JsonObjectKeysRecord, String> JSON_OBJECT_KEYS_ = createField(DSL.name("json_object_keys"), SQLDataType.CLOB, this, "");
 
     private JsonObjectKeys(Name alias, Table<JsonObjectKeysRecord> aliased) {
@@ -73,25 +59,14 @@ public class JsonObjectKeys extends TableImpl<JsonObjectKeysRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_object_keys</code> table
-     * reference
-     */
     public JsonObjectKeys(String alias) {
         this(DSL.name(alias), JSON_OBJECT_KEYS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_object_keys</code> table
-     * reference
-     */
     public JsonObjectKeys(Name alias) {
         this(alias, JSON_OBJECT_KEYS);
     }
 
-    /**
-     * Create a <code>pg_catalog.json_object_keys</code> table reference
-     */
     public JsonObjectKeys() {
         this(DSL.name("json_object_keys"), null);
     }
@@ -120,27 +95,18 @@ public class JsonObjectKeys extends TableImpl<JsonObjectKeysRecord> {
         return new JsonObjectKeys(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonObjectKeys rename(String name) {
         return new JsonObjectKeys(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonObjectKeys rename(Name name) {
         return new JsonObjectKeys(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonObjectKeys rename(Table<?> name) {
@@ -157,9 +123,6 @@ public class JsonObjectKeys extends TableImpl<JsonObjectKeysRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonObjectKeys call(
           JSON __1
     ) {
@@ -170,9 +133,6 @@ public class JsonObjectKeys extends TableImpl<JsonObjectKeysRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonObjectKeys call(
           Field<JSON> __1
     ) {
@@ -183,17 +143,10 @@ public class JsonObjectKeys extends TableImpl<JsonObjectKeysRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

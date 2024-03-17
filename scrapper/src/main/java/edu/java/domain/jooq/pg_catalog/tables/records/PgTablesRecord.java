@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,121 +30,73 @@ public class PgTablesRecord extends TableRecordImpl<PgTablesRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.tablename</code>.
-     */
     public void setTablename(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.tableowner</code>.
-     */
     public void setTableowner(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.tableowner</code>.
-     */
     @Nullable
     public String getTableowner() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.tablespace</code>.
-     */
     public void setTablespace(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.tablespace</code>.
-     */
     @Nullable
     public String getTablespace() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.hasindexes</code>.
-     */
     public void setHasindexes(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.hasindexes</code>.
-     */
     @Nullable
     public Boolean getHasindexes() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.hasrules</code>.
-     */
     public void setHasrules(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.hasrules</code>.
-     */
     @Nullable
     public Boolean getHasrules() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.hastriggers</code>.
-     */
     public void setHastriggers(@Nullable Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.hastriggers</code>.
-     */
     @Nullable
     public Boolean getHastriggers() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.rowsecurity</code>.
-     */
     public void setRowsecurity(@Nullable Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.rowsecurity</code>.
-     */
     @Nullable
     public Boolean getRowsecurity() {
         return (Boolean) get(7);
@@ -387,16 +336,10 @@ public class PgTablesRecord extends TableRecordImpl<PgTablesRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTablesRecord
-     */
     public PgTablesRecord() {
         super(PgTables.PG_TABLES);
     }
 
-    /**
-     * Create a detached, initialised PgTablesRecord
-     */
     @ConstructorProperties({ "schemaname", "tablename", "tableowner", "tablespace", "hasindexes", "hasrules", "hastriggers", "rowsecurity" })
     public PgTablesRecord(@Nullable String schemaname, @Nullable String tablename, @Nullable String tableowner, @Nullable String tablespace, @Nullable Boolean hasindexes, @Nullable Boolean hasrules, @Nullable Boolean hastriggers, @Nullable Boolean rowsecurity) {
         super(PgTables.PG_TABLES);
@@ -412,9 +355,6 @@ public class PgTablesRecord extends TableRecordImpl<PgTablesRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTablesRecord
-     */
     public PgTablesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTables value) {
         super(PgTables.PG_TABLES);
 

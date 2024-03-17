@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgConfigRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_config</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,28 +40,16 @@ public class PgConfig extends TableImpl<PgConfigRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_config</code>
-     */
     public static final PgConfig PG_CONFIG = new PgConfig();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgConfigRecord> getRecordType() {
         return PgConfigRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_config.name</code>.
-     */
     public final TableField<PgConfigRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_config.setting</code>.
-     */
     public final TableField<PgConfigRecord, String> SETTING = createField(DSL.name("setting"), SQLDataType.CLOB, this, "");
 
     private PgConfig(Name alias, Table<PgConfigRecord> aliased) {
@@ -81,23 +64,14 @@ public class PgConfig extends TableImpl<PgConfigRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_config</code> table reference
-     */
     public PgConfig(String alias) {
         this(DSL.name(alias), PG_CONFIG);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_config</code> table reference
-     */
     public PgConfig(Name alias) {
         this(alias, PG_CONFIG);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_config</code> table reference
-     */
     public PgConfig() {
         this(DSL.name("pg_config"), null);
     }
@@ -130,27 +104,18 @@ public class PgConfig extends TableImpl<PgConfigRecord> {
         return new PgConfig(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgConfig rename(String name) {
         return new PgConfig(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgConfig rename(Name name) {
         return new PgConfig(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgConfig rename(Table<?> name) {
@@ -167,17 +132,10 @@ public class PgConfig extends TableImpl<PgConfigRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

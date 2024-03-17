@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.generate_series</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,16 +30,10 @@ public class GenerateSeriesRecord extends TableRecordImpl<GenerateSeriesRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.generate_series.generate_series</code>.
-     */
     public void setGenerateSeries(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.generate_series.generate_series</code>.
-     */
     @Nullable
     public Long getGenerateSeries() {
         return (Long) get(0);
@@ -100,16 +91,10 @@ public class GenerateSeriesRecord extends TableRecordImpl<GenerateSeriesRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached GenerateSeriesRecord
-     */
     public GenerateSeriesRecord() {
         super(GenerateSeries.GENERATE_SERIES);
     }
 
-    /**
-     * Create a detached, initialised GenerateSeriesRecord
-     */
     @ConstructorProperties({ "generateSeries" })
     public GenerateSeriesRecord(@Nullable Long generateSeries) {
         super(GenerateSeries.GENERATE_SERIES);
@@ -118,9 +103,6 @@ public class GenerateSeriesRecord extends TableRecordImpl<GenerateSeriesRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised GenerateSeriesRecord
-     */
     public GenerateSeriesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.GenerateSeries value) {
         super(GenerateSeries.GENERATE_SERIES);
 

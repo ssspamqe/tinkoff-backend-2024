@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.check_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,70 +51,38 @@ public class CheckConstraints implements Serializable {
         this.checkClause = checkClause;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraints.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return this.constraintCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraints.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String constraintCatalog) {
         this.constraintCatalog = constraintCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraints.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return this.constraintSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraints.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String constraintSchema) {
         this.constraintSchema = constraintSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraints.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return this.constraintName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraints.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String constraintName) {
         this.constraintName = constraintName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraints.check_clause</code>.
-     */
     @Nullable
     public String getCheckClause() {
         return this.checkClause;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraints.check_clause</code>.
-     */
     public void setCheckClause(@Nullable String checkClause) {
         this.checkClause = checkClause;
     }

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ColumnColumnUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.column_column_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,49 +39,22 @@ public class ColumnColumnUsage extends TableImpl<ColumnColumnUsageRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.column_column_usage</code>
-     */
     public static final ColumnColumnUsage COLUMN_COLUMN_USAGE = new ColumnColumnUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ColumnColumnUsageRecord> getRecordType() {
         return ColumnColumnUsageRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.column_column_usage.table_catalog</code>.
-     */
     public final TableField<ColumnColumnUsageRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_column_usage.table_schema</code>.
-     */
     public final TableField<ColumnColumnUsageRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_column_usage.table_name</code>.
-     */
     public final TableField<ColumnColumnUsageRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_column_usage.column_name</code>.
-     */
     public final TableField<ColumnColumnUsageRecord, String> COLUMN_NAME = createField(DSL.name("column_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_column_usage.dependent_column</code>.
-     */
     public final TableField<ColumnColumnUsageRecord, String> DEPENDENT_COLUMN = createField(DSL.name("dependent_column"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private ColumnColumnUsage(Name alias, Table<ColumnColumnUsageRecord> aliased) {
@@ -110,26 +78,14 @@ public class ColumnColumnUsage extends TableImpl<ColumnColumnUsageRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.column_column_usage</code>
-     * table reference
-     */
     public ColumnColumnUsage(String alias) {
         this(DSL.name(alias), COLUMN_COLUMN_USAGE);
     }
 
-    /**
-     * Create an aliased <code>information_schema.column_column_usage</code>
-     * table reference
-     */
     public ColumnColumnUsage(Name alias) {
         this(alias, COLUMN_COLUMN_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.column_column_usage</code> table
-     * reference
-     */
     public ColumnColumnUsage() {
         this(DSL.name("column_column_usage"), null);
     }
@@ -162,27 +118,18 @@ public class ColumnColumnUsage extends TableImpl<ColumnColumnUsageRecord> {
         return new ColumnColumnUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnColumnUsage rename(String name) {
         return new ColumnColumnUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnColumnUsage rename(Name name) {
         return new ColumnColumnUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnColumnUsage rename(Table<?> name) {
@@ -199,17 +146,10 @@ public class ColumnColumnUsage extends TableImpl<ColumnColumnUsageRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

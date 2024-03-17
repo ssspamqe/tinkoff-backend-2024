@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_xact_user_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -86,188 +83,110 @@ public class PgStatXactUserTables implements Serializable {
         this.nTupNewpageUpd = nTupNewpageUpd;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return this.relname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.relname</code>.
-     */
     public void setRelname(@Nullable String relname) {
         this.relname = relname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.seq_scan</code>.
-     */
     @Nullable
     public Long getSeqScan() {
         return this.seqScan;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.seq_scan</code>.
-     */
     public void setSeqScan(@Nullable Long seqScan) {
         this.seqScan = seqScan;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.seq_tup_read</code>.
-     */
     @Nullable
     public Long getSeqTupRead() {
         return this.seqTupRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.seq_tup_read</code>.
-     */
     public void setSeqTupRead(@Nullable Long seqTupRead) {
         this.seqTupRead = seqTupRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.idx_scan</code>.
-     */
     @Nullable
     public Long getIdxScan() {
         return this.idxScan;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.idx_scan</code>.
-     */
     public void setIdxScan(@Nullable Long idxScan) {
         this.idxScan = idxScan;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.idx_tup_fetch</code>.
-     */
     @Nullable
     public Long getIdxTupFetch() {
         return this.idxTupFetch;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.idx_tup_fetch</code>.
-     */
     public void setIdxTupFetch(@Nullable Long idxTupFetch) {
         this.idxTupFetch = idxTupFetch;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_ins</code>.
-     */
     @Nullable
     public Long getNTupIns() {
         return this.nTupIns;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_ins</code>.
-     */
     public void setNTupIns(@Nullable Long nTupIns) {
         this.nTupIns = nTupIns;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_upd</code>.
-     */
     @Nullable
     public Long getNTupUpd() {
         return this.nTupUpd;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_upd</code>.
-     */
     public void setNTupUpd(@Nullable Long nTupUpd) {
         this.nTupUpd = nTupUpd;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_del</code>.
-     */
     @Nullable
     public Long getNTupDel() {
         return this.nTupDel;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_del</code>.
-     */
     public void setNTupDel(@Nullable Long nTupDel) {
         this.nTupDel = nTupDel;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.n_tup_hot_upd</code>.
-     */
     @Nullable
     public Long getNTupHotUpd() {
         return this.nTupHotUpd;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.n_tup_hot_upd</code>.
-     */
     public void setNTupHotUpd(@Nullable Long nTupHotUpd) {
         this.nTupHotUpd = nTupHotUpd;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.n_tup_newpage_upd</code>.
-     */
     @Nullable
     public Long getNTupNewpageUpd() {
         return this.nTupNewpageUpd;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.n_tup_newpage_upd</code>.
-     */
     public void setNTupNewpageUpd(@Nullable Long nTupNewpageUpd) {
         this.nTupNewpageUpd = nTupNewpageUpd;
     }

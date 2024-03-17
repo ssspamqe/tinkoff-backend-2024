@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_rotate_logfile</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,14 +26,8 @@ public class PgRotateLogfile extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_rotate_logfile.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgRotateLogfile() {
         super("pg_rotate_logfile", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 

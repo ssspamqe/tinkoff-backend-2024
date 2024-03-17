@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_auth_members</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,112 +30,70 @@ public class PgAuthMembersRecord extends UpdatableRecordImpl<PgAuthMembersRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.roleid</code>.
-     */
     public void setRoleid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.roleid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRoleid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.member</code>.
-     */
     public void setMember(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.member</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getMember() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.grantor</code>.
-     */
     public void setGrantor(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.grantor</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getGrantor() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.admin_option</code>.
-     */
     public void setAdminOption(@NotNull Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.admin_option</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAdminOption() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.inherit_option</code>.
-     */
     public void setInheritOption(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.inherit_option</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getInheritOption() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.set_option</code>.
-     */
     public void setSetOption(@NotNull Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.set_option</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSetOption() {
@@ -363,16 +318,10 @@ public class PgAuthMembersRecord extends UpdatableRecordImpl<PgAuthMembersRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAuthMembersRecord
-     */
     public PgAuthMembersRecord() {
         super(PgAuthMembers.PG_AUTH_MEMBERS);
     }
 
-    /**
-     * Create a detached, initialised PgAuthMembersRecord
-     */
     @ConstructorProperties({ "oid", "roleid", "member", "grantor", "adminOption", "inheritOption", "setOption" })
     public PgAuthMembersRecord(@NotNull Long oid, @NotNull Long roleid, @NotNull Long member, @NotNull Long grantor, @NotNull Boolean adminOption, @NotNull Boolean inheritOption, @NotNull Boolean setOption) {
         super(PgAuthMembers.PG_AUTH_MEMBERS);
@@ -387,9 +336,6 @@ public class PgAuthMembersRecord extends UpdatableRecordImpl<PgAuthMembersRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAuthMembersRecord
-     */
     public PgAuthMembersRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAuthMembers value) {
         super(PgAuthMembers.PG_AUTH_MEMBERS);
 

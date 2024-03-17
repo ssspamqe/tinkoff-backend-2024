@@ -20,9 +20,6 @@ import org.jooq.Row12;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,189 +32,111 @@ public class TablesRecord extends TableRecordImpl<TablesRecord> implements Recor
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.tables.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.tables.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.tables.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.tables.table_type</code>.
-     */
     public void setTableType(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.table_type</code>.
-     */
     @Nullable
     public String getTableType() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.tables.self_referencing_column_name</code>.
-     */
     public void setSelfReferencingColumnName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.tables.self_referencing_column_name</code>.
-     */
     @Nullable
     public String getSelfReferencingColumnName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.tables.reference_generation</code>.
-     */
     public void setReferenceGeneration(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.reference_generation</code>.
-     */
     @Nullable
     public String getReferenceGeneration() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.tables.user_defined_type_catalog</code>.
-     */
     public void setUserDefinedTypeCatalog(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.tables.user_defined_type_catalog</code>.
-     */
     @Nullable
     public String getUserDefinedTypeCatalog() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.tables.user_defined_type_schema</code>.
-     */
     public void setUserDefinedTypeSchema(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.tables.user_defined_type_schema</code>.
-     */
     @Nullable
     public String getUserDefinedTypeSchema() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>information_schema.tables.user_defined_type_name</code>.
-     */
     public void setUserDefinedTypeName(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.user_defined_type_name</code>.
-     */
     @Nullable
     public String getUserDefinedTypeName() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>information_schema.tables.is_insertable_into</code>.
-     */
     public void setIsInsertableInto(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.is_insertable_into</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsInsertableInto() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for <code>information_schema.tables.is_typed</code>.
-     */
     public void setIsTyped(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.is_typed</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsTyped() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>information_schema.tables.commit_action</code>.
-     */
     public void setCommitAction(@Nullable String value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>information_schema.tables.commit_action</code>.
-     */
     @Nullable
     public String getCommitAction() {
         return (String) get(11);
@@ -561,16 +480,10 @@ public class TablesRecord extends TableRecordImpl<TablesRecord> implements Recor
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TablesRecord
-     */
     public TablesRecord() {
         super(Tables.TABLES);
     }
 
-    /**
-     * Create a detached, initialised TablesRecord
-     */
     @ConstructorProperties({ "tableCatalog", "tableSchema", "tableName", "tableType", "selfReferencingColumnName", "referenceGeneration", "userDefinedTypeCatalog", "userDefinedTypeSchema", "userDefinedTypeName", "isInsertableInto", "isTyped", "commitAction" })
     public TablesRecord(@Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String tableType, @Nullable String selfReferencingColumnName, @Nullable String referenceGeneration, @Nullable String userDefinedTypeCatalog, @Nullable String userDefinedTypeSchema, @Nullable String userDefinedTypeName, @Nullable String isInsertableInto, @Nullable String isTyped, @Nullable String commitAction) {
         super(Tables.TABLES);
@@ -590,9 +503,6 @@ public class TablesRecord extends TableRecordImpl<TablesRecord> implements Recor
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TablesRecord
-     */
     public TablesRecord(edu.java.domain.jooq.information_schema.tables.pojos.Tables value) {
         super(Tables.TABLES);
 

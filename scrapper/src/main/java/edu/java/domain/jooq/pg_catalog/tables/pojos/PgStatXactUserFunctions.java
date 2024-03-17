@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_xact_user_functions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,96 +59,56 @@ public class PgStatXactUserFunctions implements Serializable {
         this.selfTime = selfTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_functions.funcid</code>.
-     */
     @Nullable
     public Long getFuncid() {
         return this.funcid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_functions.funcid</code>.
-     */
     public void setFuncid(@Nullable Long funcid) {
         this.funcid = funcid;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_functions.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_functions.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_functions.funcname</code>.
-     */
     @Nullable
     public String getFuncname() {
         return this.funcname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_functions.funcname</code>.
-     */
     public void setFuncname(@Nullable String funcname) {
         this.funcname = funcname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_functions.calls</code>.
-     */
     @Nullable
     public Long getCalls() {
         return this.calls;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_functions.calls</code>.
-     */
     public void setCalls(@Nullable Long calls) {
         this.calls = calls;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_functions.total_time</code>.
-     */
     @Nullable
     public Double getTotalTime() {
         return this.totalTime;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_functions.total_time</code>.
-     */
     public void setTotalTime(@Nullable Double totalTime) {
         this.totalTime = totalTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_functions.self_time</code>.
-     */
     @Nullable
     public Double getSelfTime() {
         return this.selfTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_functions.self_time</code>.
-     */
     public void setSelfTime(@Nullable Double selfTime) {
         this.selfTime = selfTime;
     }

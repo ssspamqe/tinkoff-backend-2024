@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.ts_token_type</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,46 +30,28 @@ public class TsTokenTypeRecord extends TableRecordImpl<TsTokenTypeRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.ts_token_type.tokid</code>.
-     */
     public void setTokid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_token_type.tokid</code>.
-     */
     @Nullable
     public Integer getTokid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_token_type.alias</code>.
-     */
     public void setAlias(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_token_type.alias</code>.
-     */
     @Nullable
     public String getAlias() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_token_type.description</code>.
-     */
     public void setDescription(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_token_type.description</code>.
-     */
     @Nullable
     public String getDescription() {
         return (String) get(2);
@@ -182,16 +161,10 @@ public class TsTokenTypeRecord extends TableRecordImpl<TsTokenTypeRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TsTokenTypeRecord
-     */
     public TsTokenTypeRecord() {
         super(TsTokenType.TS_TOKEN_TYPE);
     }
 
-    /**
-     * Create a detached, initialised TsTokenTypeRecord
-     */
     @ConstructorProperties({ "tokid", "alias", "description" })
     public TsTokenTypeRecord(@Nullable Integer tokid, @Nullable String alias, @Nullable String description) {
         super(TsTokenType.TS_TOKEN_TYPE);
@@ -202,9 +175,6 @@ public class TsTokenTypeRecord extends TableRecordImpl<TsTokenTypeRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TsTokenTypeRecord
-     */
     public TsTokenTypeRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.TsTokenType value) {
         super(TsTokenType.TS_TOKEN_TYPE);
 

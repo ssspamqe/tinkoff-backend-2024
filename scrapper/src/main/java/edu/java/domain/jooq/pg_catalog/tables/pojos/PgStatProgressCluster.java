@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_cluster</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -86,194 +83,110 @@ public class PgStatProgressCluster implements Serializable {
         this.indexRebuildCount = indexRebuildCount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return this.datid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.datid</code>.
-     */
     public void setDatid(@Nullable Long datid) {
         this.datid = datid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return this.datname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.datname</code>.
-     */
     public void setDatname(@Nullable String datname) {
         this.datname = datname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.command</code>.
-     */
     @Nullable
     public String getCommand() {
         return this.command;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.command</code>.
-     */
     public void setCommand(@Nullable String command) {
         this.command = command;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return this.phase;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.phase</code>.
-     */
     public void setPhase(@Nullable String phase) {
         this.phase = phase;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.cluster_index_relid</code>.
-     */
     @Nullable
     public Long getClusterIndexRelid() {
         return this.clusterIndexRelid;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.cluster_index_relid</code>.
-     */
     public void setClusterIndexRelid(@Nullable Long clusterIndexRelid) {
         this.clusterIndexRelid = clusterIndexRelid;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_scanned</code>.
-     */
     @Nullable
     public Long getHeapTuplesScanned() {
         return this.heapTuplesScanned;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_scanned</code>.
-     */
     public void setHeapTuplesScanned(@Nullable Long heapTuplesScanned) {
         this.heapTuplesScanned = heapTuplesScanned;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_written</code>.
-     */
     @Nullable
     public Long getHeapTuplesWritten() {
         return this.heapTuplesWritten;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_written</code>.
-     */
     public void setHeapTuplesWritten(@Nullable Long heapTuplesWritten) {
         this.heapTuplesWritten = heapTuplesWritten;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_total</code>.
-     */
     @Nullable
     public Long getHeapBlksTotal() {
         return this.heapBlksTotal;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_total</code>.
-     */
     public void setHeapBlksTotal(@Nullable Long heapBlksTotal) {
         this.heapBlksTotal = heapBlksTotal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_scanned</code>.
-     */
     @Nullable
     public Long getHeapBlksScanned() {
         return this.heapBlksScanned;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_scanned</code>.
-     */
     public void setHeapBlksScanned(@Nullable Long heapBlksScanned) {
         this.heapBlksScanned = heapBlksScanned;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.index_rebuild_count</code>.
-     */
     @Nullable
     public Long getIndexRebuildCount() {
         return this.indexRebuildCount;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.index_rebuild_count</code>.
-     */
     public void setIndexRebuildCount(@Nullable Long indexRebuildCount) {
         this.indexRebuildCount = indexRebuildCount;
     }

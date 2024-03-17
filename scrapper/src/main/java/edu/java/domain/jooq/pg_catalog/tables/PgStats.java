@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,88 +40,40 @@ public class PgStats extends TableImpl<PgStatsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stats</code>
-     */
     public static final PgStats PG_STATS = new PgStats();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatsRecord> getRecordType() {
         return PgStatsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stats.schemaname</code>.
-     */
     public final TableField<PgStatsRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.tablename</code>.
-     */
     public final TableField<PgStatsRecord, String> TABLENAME = createField(DSL.name("tablename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.attname</code>.
-     */
     public final TableField<PgStatsRecord, String> ATTNAME = createField(DSL.name("attname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.inherited</code>.
-     */
     public final TableField<PgStatsRecord, Boolean> INHERITED = createField(DSL.name("inherited"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.null_frac</code>.
-     */
     public final TableField<PgStatsRecord, Float> NULL_FRAC = createField(DSL.name("null_frac"), SQLDataType.REAL, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.avg_width</code>.
-     */
     public final TableField<PgStatsRecord, Integer> AVG_WIDTH = createField(DSL.name("avg_width"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.n_distinct</code>.
-     */
     public final TableField<PgStatsRecord, Float> N_DISTINCT = createField(DSL.name("n_distinct"), SQLDataType.REAL, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.most_common_vals</code>.
-     */
     public final TableField<PgStatsRecord, Object[]> MOST_COMMON_VALS = createField(DSL.name("most_common_vals"), SQLDataType.OTHER.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.most_common_freqs</code>.
-     */
     public final TableField<PgStatsRecord, Float[]> MOST_COMMON_FREQS = createField(DSL.name("most_common_freqs"), SQLDataType.REAL.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.histogram_bounds</code>.
-     */
     public final TableField<PgStatsRecord, Object[]> HISTOGRAM_BOUNDS = createField(DSL.name("histogram_bounds"), SQLDataType.OTHER.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.correlation</code>.
-     */
     public final TableField<PgStatsRecord, Float> CORRELATION = createField(DSL.name("correlation"), SQLDataType.REAL, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.most_common_elems</code>.
-     */
     public final TableField<PgStatsRecord, Object[]> MOST_COMMON_ELEMS = createField(DSL.name("most_common_elems"), SQLDataType.OTHER.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.most_common_elem_freqs</code>.
-     */
     public final TableField<PgStatsRecord, Float[]> MOST_COMMON_ELEM_FREQS = createField(DSL.name("most_common_elem_freqs"), SQLDataType.REAL.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats.elem_count_histogram</code>.
-     */
     public final TableField<PgStatsRecord, Float[]> ELEM_COUNT_HISTOGRAM = createField(DSL.name("elem_count_histogram"), SQLDataType.REAL.array(), this, "");
 
     private PgStats(Name alias, Table<PgStatsRecord> aliased) {
@@ -206,23 +153,14 @@ public class PgStats extends TableImpl<PgStatsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stats</code> table reference
-     */
     public PgStats(String alias) {
         this(DSL.name(alias), PG_STATS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stats</code> table reference
-     */
     public PgStats(Name alias) {
         this(alias, PG_STATS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stats</code> table reference
-     */
     public PgStats() {
         this(DSL.name("pg_stats"), null);
     }
@@ -255,27 +193,18 @@ public class PgStats extends TableImpl<PgStatsRecord> {
         return new PgStats(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStats rename(String name) {
         return new PgStats(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStats rename(Name name) {
         return new PgStats(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStats rename(Table<?> name) {
@@ -292,17 +221,10 @@ public class PgStats extends TableImpl<PgStatsRecord> {
         return (Row14) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function14<? super String, ? super String, ? super String, ? super Boolean, ? super Float, ? super Integer, ? super Float, ? super Object[], ? super Float[], ? super Object[], ? super Float, ? super Object[], ? super Float[], ? super Float[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function14<? super String, ? super String, ? super String, ? super Boolean, ? super Float, ? super Integer, ? super Float, ? super Object[], ? super Float[], ? super Object[], ? super Float, ? super Object[], ? super Float[], ? super Float[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

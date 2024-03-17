@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_vacuum</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -82,179 +79,101 @@ public class PgStatProgressVacuum implements Serializable {
         this.numDeadTuples = numDeadTuples;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return this.datid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.datid</code>.
-     */
     public void setDatid(@Nullable Long datid) {
         this.datid = datid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return this.datname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.datname</code>.
-     */
     public void setDatname(@Nullable String datname) {
         this.datname = datname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_vacuum.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return this.phase;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_vacuum.phase</code>.
-     */
     public void setPhase(@Nullable String phase) {
         this.phase = phase;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_total</code>.
-     */
     @Nullable
     public Long getHeapBlksTotal() {
         return this.heapBlksTotal;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_total</code>.
-     */
     public void setHeapBlksTotal(@Nullable Long heapBlksTotal) {
         this.heapBlksTotal = heapBlksTotal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_scanned</code>.
-     */
     @Nullable
     public Long getHeapBlksScanned() {
         return this.heapBlksScanned;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_scanned</code>.
-     */
     public void setHeapBlksScanned(@Nullable Long heapBlksScanned) {
         this.heapBlksScanned = heapBlksScanned;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_vacuumed</code>.
-     */
     @Nullable
     public Long getHeapBlksVacuumed() {
         return this.heapBlksVacuumed;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.heap_blks_vacuumed</code>.
-     */
     public void setHeapBlksVacuumed(@Nullable Long heapBlksVacuumed) {
         this.heapBlksVacuumed = heapBlksVacuumed;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.index_vacuum_count</code>.
-     */
     @Nullable
     public Long getIndexVacuumCount() {
         return this.indexVacuumCount;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.index_vacuum_count</code>.
-     */
     public void setIndexVacuumCount(@Nullable Long indexVacuumCount) {
         this.indexVacuumCount = indexVacuumCount;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.max_dead_tuples</code>.
-     */
     @Nullable
     public Long getMaxDeadTuples() {
         return this.maxDeadTuples;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.max_dead_tuples</code>.
-     */
     public void setMaxDeadTuples(@Nullable Long maxDeadTuples) {
         this.maxDeadTuples = maxDeadTuples;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.num_dead_tuples</code>.
-     */
     @Nullable
     public Long getNumDeadTuples() {
         return this.numDeadTuples;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_vacuum.num_dead_tuples</code>.
-     */
     public void setNumDeadTuples(@Nullable Long numDeadTuples) {
         this.numDeadTuples = numDeadTuples;
     }

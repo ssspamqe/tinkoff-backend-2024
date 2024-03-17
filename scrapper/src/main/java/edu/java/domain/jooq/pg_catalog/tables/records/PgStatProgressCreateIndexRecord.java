@@ -18,9 +18,6 @@ import org.jooq.Row16;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_create_index</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,261 +30,145 @@ public class PgStatProgressCreateIndexRecord extends TableRecordImpl<PgStatProgr
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_create_index.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_create_index.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_create_index.datid</code>.
-     */
     public void setDatid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_create_index.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_create_index.datname</code>.
-     */
     public void setDatname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_create_index.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_create_index.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_create_index.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.index_relid</code>.
-     */
     public void setIndexRelid(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.index_relid</code>.
-     */
     @Nullable
     public Long getIndexRelid() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_create_index.command</code>.
-     */
     public void setCommand(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_create_index.command</code>.
-     */
     @Nullable
     public String getCommand() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_create_index.phase</code>.
-     */
     public void setPhase(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_create_index.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.lockers_total</code>.
-     */
     public void setLockersTotal(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.lockers_total</code>.
-     */
     @Nullable
     public Long getLockersTotal() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.lockers_done</code>.
-     */
     public void setLockersDone(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.lockers_done</code>.
-     */
     @Nullable
     public Long getLockersDone() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.current_locker_pid</code>.
-     */
     public void setCurrentLockerPid(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.current_locker_pid</code>.
-     */
     @Nullable
     public Long getCurrentLockerPid() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.blocks_total</code>.
-     */
     public void setBlocksTotal(@Nullable Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.blocks_total</code>.
-     */
     @Nullable
     public Long getBlocksTotal() {
         return (Long) get(10);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.blocks_done</code>.
-     */
     public void setBlocksDone(@Nullable Long value) {
         set(11, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.blocks_done</code>.
-     */
     @Nullable
     public Long getBlocksDone() {
         return (Long) get(11);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.tuples_total</code>.
-     */
     public void setTuplesTotal(@Nullable Long value) {
         set(12, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.tuples_total</code>.
-     */
     @Nullable
     public Long getTuplesTotal() {
         return (Long) get(12);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.tuples_done</code>.
-     */
     public void setTuplesDone(@Nullable Long value) {
         set(13, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.tuples_done</code>.
-     */
     @Nullable
     public Long getTuplesDone() {
         return (Long) get(13);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.partitions_total</code>.
-     */
     public void setPartitionsTotal(@Nullable Long value) {
         set(14, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.partitions_total</code>.
-     */
     @Nullable
     public Long getPartitionsTotal() {
         return (Long) get(14);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_create_index.partitions_done</code>.
-     */
     public void setPartitionsDone(@Nullable Long value) {
         set(15, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_create_index.partitions_done</code>.
-     */
     @Nullable
     public Long getPartitionsDone() {
         return (Long) get(15);
@@ -735,16 +616,10 @@ public class PgStatProgressCreateIndexRecord extends TableRecordImpl<PgStatProgr
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatProgressCreateIndexRecord
-     */
     public PgStatProgressCreateIndexRecord() {
         super(PgStatProgressCreateIndex.PG_STAT_PROGRESS_CREATE_INDEX);
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressCreateIndexRecord
-     */
     @ConstructorProperties({ "pid", "datid", "datname", "relid", "indexRelid", "command", "phase", "lockersTotal", "lockersDone", "currentLockerPid", "blocksTotal", "blocksDone", "tuplesTotal", "tuplesDone", "partitionsTotal", "partitionsDone" })
     public PgStatProgressCreateIndexRecord(@Nullable Integer pid, @Nullable Long datid, @Nullable String datname, @Nullable Long relid, @Nullable Long indexRelid, @Nullable String command, @Nullable String phase, @Nullable Long lockersTotal, @Nullable Long lockersDone, @Nullable Long currentLockerPid, @Nullable Long blocksTotal, @Nullable Long blocksDone, @Nullable Long tuplesTotal, @Nullable Long tuplesDone, @Nullable Long partitionsTotal, @Nullable Long partitionsDone) {
         super(PgStatProgressCreateIndex.PG_STAT_PROGRESS_CREATE_INDEX);
@@ -768,9 +643,6 @@ public class PgStatProgressCreateIndexRecord extends TableRecordImpl<PgStatProgr
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressCreateIndexRecord
-     */
     public PgStatProgressCreateIndexRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatProgressCreateIndex value) {
         super(PgStatProgressCreateIndex.PG_STAT_PROGRESS_CREATE_INDEX);
 

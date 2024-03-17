@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_foreign_server</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -72,126 +69,78 @@ public class PgForeignServer implements Serializable {
         this.srvoptions = srvoptions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSrvname() {
         return this.srvname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvname</code>.
-     */
     public void setSrvname(@NotNull String srvname) {
         this.srvname = srvname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSrvowner() {
         return this.srvowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvowner</code>.
-     */
     public void setSrvowner(@NotNull Long srvowner) {
         this.srvowner = srvowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvfdw</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSrvfdw() {
         return this.srvfdw;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvfdw</code>.
-     */
     public void setSrvfdw(@NotNull Long srvfdw) {
         this.srvfdw = srvfdw;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvtype</code>.
-     */
     @Nullable
     public String getSrvtype() {
         return this.srvtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvtype</code>.
-     */
     public void setSrvtype(@Nullable String srvtype) {
         this.srvtype = srvtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvversion</code>.
-     */
     @Nullable
     public String getSrvversion() {
         return this.srvversion;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvversion</code>.
-     */
     public void setSrvversion(@Nullable String srvversion) {
         this.srvversion = srvversion;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvacl</code>.
-     */
     @Nullable
     public String[] getSrvacl() {
         return this.srvacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvacl</code>.
-     */
     public void setSrvacl(@Nullable String[] srvacl) {
         this.srvacl = srvacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvoptions</code>.
-     */
     @Nullable
     public String[] getSrvoptions() {
         return this.srvoptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvoptions</code>.
-     */
     public void setSrvoptions(@Nullable String[] srvoptions) {
         this.srvoptions = srvoptions;
     }

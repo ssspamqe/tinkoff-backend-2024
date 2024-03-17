@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.user_mapping_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,87 +55,47 @@ public class UserMappingOptions implements Serializable {
         this.optionValue = optionValue;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return this.authorizationIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String authorizationIdentifier) {
         this.authorizationIdentifier = authorizationIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return this.foreignServerCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String foreignServerCatalog) {
         this.foreignServerCatalog = foreignServerCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return this.foreignServerName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String foreignServerName) {
         this.foreignServerName = foreignServerName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return this.optionName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String optionName) {
         this.optionName = optionName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return this.optionValue;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String optionValue) {
         this.optionValue = optionValue;
     }

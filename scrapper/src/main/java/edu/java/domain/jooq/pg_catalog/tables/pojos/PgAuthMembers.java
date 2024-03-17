@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_auth_members</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,114 +63,72 @@ public class PgAuthMembers implements Serializable {
         this.setOption = setOption;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.roleid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRoleid() {
         return this.roleid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.roleid</code>.
-     */
     public void setRoleid(@NotNull Long roleid) {
         this.roleid = roleid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.member</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getMember() {
         return this.member;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.member</code>.
-     */
     public void setMember(@NotNull Long member) {
         this.member = member;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.grantor</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getGrantor() {
         return this.grantor;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.grantor</code>.
-     */
     public void setGrantor(@NotNull Long grantor) {
         this.grantor = grantor;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.admin_option</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAdminOption() {
         return this.adminOption;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.admin_option</code>.
-     */
     public void setAdminOption(@NotNull Boolean adminOption) {
         this.adminOption = adminOption;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.inherit_option</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getInheritOption() {
         return this.inheritOption;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.inherit_option</code>.
-     */
     public void setInheritOption(@NotNull Boolean inheritOption) {
         this.inheritOption = inheritOption;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_auth_members.set_option</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSetOption() {
         return this.setOption;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_auth_members.set_option</code>.
-     */
     public void setSetOption(@NotNull Boolean setOption) {
         this.setOption = setOption;
     }

@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgNamespaceRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_namespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,38 +45,20 @@ public class PgNamespace extends TableImpl<PgNamespaceRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_namespace</code>
-     */
     public static final PgNamespace PG_NAMESPACE = new PgNamespace();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgNamespaceRecord> getRecordType() {
         return PgNamespaceRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_namespace.oid</code>.
-     */
     public final TableField<PgNamespaceRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_namespace.nspname</code>.
-     */
     public final TableField<PgNamespaceRecord, String> NSPNAME = createField(DSL.name("nspname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_namespace.nspowner</code>.
-     */
     public final TableField<PgNamespaceRecord, Long> NSPOWNER = createField(DSL.name("nspowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_namespace.nspacl</code>.
-     */
     public final TableField<PgNamespaceRecord, String[]> NSPACL = createField(DSL.name("nspacl"), SQLDataType.VARCHAR.array(), this, "");
 
     private PgNamespace(Name alias, Table<PgNamespaceRecord> aliased) {
@@ -91,23 +69,14 @@ public class PgNamespace extends TableImpl<PgNamespaceRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_namespace</code> table reference
-     */
     public PgNamespace(String alias) {
         this(DSL.name(alias), PG_NAMESPACE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_namespace</code> table reference
-     */
     public PgNamespace(Name alias) {
         this(alias, PG_NAMESPACE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_namespace</code> table reference
-     */
     public PgNamespace() {
         this(DSL.name("pg_namespace"), null);
     }
@@ -152,27 +121,18 @@ public class PgNamespace extends TableImpl<PgNamespaceRecord> {
         return new PgNamespace(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgNamespace rename(String name) {
         return new PgNamespace(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgNamespace rename(Name name) {
         return new PgNamespace(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgNamespace rename(Table<?> name) {
@@ -189,17 +149,10 @@ public class PgNamespace extends TableImpl<PgNamespaceRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super String, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super String, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

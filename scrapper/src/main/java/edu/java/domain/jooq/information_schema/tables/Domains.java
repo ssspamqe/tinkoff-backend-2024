@@ -23,9 +23,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.domains</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -38,156 +35,66 @@ public class Domains extends TableImpl<DomainsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.domains</code>
-     */
     public static final Domains DOMAINS = new Domains();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<DomainsRecord> getRecordType() {
         return DomainsRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.domains.domain_catalog</code>.
-     */
     public final TableField<DomainsRecord, String> DOMAIN_CATALOG = createField(DSL.name("domain_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.domain_schema</code>.
-     */
     public final TableField<DomainsRecord, String> DOMAIN_SCHEMA = createField(DSL.name("domain_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.domain_name</code>.
-     */
     public final TableField<DomainsRecord, String> DOMAIN_NAME = createField(DSL.name("domain_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.data_type</code>.
-     */
     public final TableField<DomainsRecord, String> DATA_TYPE = createField(DSL.name("data_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domains.character_maximum_length</code>.
-     */
     public final TableField<DomainsRecord, Integer> CHARACTER_MAXIMUM_LENGTH = createField(DSL.name("character_maximum_length"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domains.character_octet_length</code>.
-     */
     public final TableField<DomainsRecord, Integer> CHARACTER_OCTET_LENGTH = createField(DSL.name("character_octet_length"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.character_set_catalog</code>.
-     */
     public final TableField<DomainsRecord, String> CHARACTER_SET_CATALOG = createField(DSL.name("character_set_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.character_set_schema</code>.
-     */
     public final TableField<DomainsRecord, String> CHARACTER_SET_SCHEMA = createField(DSL.name("character_set_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.character_set_name</code>.
-     */
     public final TableField<DomainsRecord, String> CHARACTER_SET_NAME = createField(DSL.name("character_set_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.collation_catalog</code>.
-     */
     public final TableField<DomainsRecord, String> COLLATION_CATALOG = createField(DSL.name("collation_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.collation_schema</code>.
-     */
     public final TableField<DomainsRecord, String> COLLATION_SCHEMA = createField(DSL.name("collation_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.collation_name</code>.
-     */
     public final TableField<DomainsRecord, String> COLLATION_NAME = createField(DSL.name("collation_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.numeric_precision</code>.
-     */
     public final TableField<DomainsRecord, Integer> NUMERIC_PRECISION = createField(DSL.name("numeric_precision"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domains.numeric_precision_radix</code>.
-     */
     public final TableField<DomainsRecord, Integer> NUMERIC_PRECISION_RADIX = createField(DSL.name("numeric_precision_radix"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.numeric_scale</code>.
-     */
     public final TableField<DomainsRecord, Integer> NUMERIC_SCALE = createField(DSL.name("numeric_scale"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.datetime_precision</code>.
-     */
     public final TableField<DomainsRecord, Integer> DATETIME_PRECISION = createField(DSL.name("datetime_precision"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.interval_type</code>.
-     */
     public final TableField<DomainsRecord, String> INTERVAL_TYPE = createField(DSL.name("interval_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.interval_precision</code>.
-     */
     public final TableField<DomainsRecord, Integer> INTERVAL_PRECISION = createField(DSL.name("interval_precision"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.domain_default</code>.
-     */
     public final TableField<DomainsRecord, String> DOMAIN_DEFAULT = createField(DSL.name("domain_default"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.udt_catalog</code>.
-     */
     public final TableField<DomainsRecord, String> UDT_CATALOG = createField(DSL.name("udt_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.udt_schema</code>.
-     */
     public final TableField<DomainsRecord, String> UDT_SCHEMA = createField(DSL.name("udt_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.udt_name</code>.
-     */
     public final TableField<DomainsRecord, String> UDT_NAME = createField(DSL.name("udt_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.scope_catalog</code>.
-     */
     public final TableField<DomainsRecord, String> SCOPE_CATALOG = createField(DSL.name("scope_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.scope_schema</code>.
-     */
     public final TableField<DomainsRecord, String> SCOPE_SCHEMA = createField(DSL.name("scope_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.scope_name</code>.
-     */
     public final TableField<DomainsRecord, String> SCOPE_NAME = createField(DSL.name("scope_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.maximum_cardinality</code>.
-     */
     public final TableField<DomainsRecord, Integer> MAXIMUM_CARDINALITY = createField(DSL.name("maximum_cardinality"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domains.dtd_identifier</code>.
-     */
     public final TableField<DomainsRecord, String> DTD_IDENTIFIER = createField(DSL.name("dtd_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private Domains(Name alias, Table<DomainsRecord> aliased) {
@@ -242,23 +149,14 @@ public class Domains extends TableImpl<DomainsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.domains</code> table reference
-     */
     public Domains(String alias) {
         this(DSL.name(alias), DOMAINS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.domains</code> table reference
-     */
     public Domains(Name alias) {
         this(alias, DOMAINS);
     }
 
-    /**
-     * Create a <code>information_schema.domains</code> table reference
-     */
     public Domains() {
         this(DSL.name("domains"), null);
     }
@@ -291,27 +189,18 @@ public class Domains extends TableImpl<DomainsRecord> {
         return new Domains(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Domains rename(String name) {
         return new Domains(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Domains rename(Name name) {
         return new Domains(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Domains rename(Table<?> name) {

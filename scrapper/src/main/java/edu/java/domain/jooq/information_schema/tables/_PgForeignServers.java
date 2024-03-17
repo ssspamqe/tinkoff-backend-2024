@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records._PgForeignServersRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema._pg_foreign_servers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,72 +40,30 @@ public class _PgForeignServers extends TableImpl<_PgForeignServersRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema._pg_foreign_servers</code>
-     */
     public static final _PgForeignServers _PG_FOREIGN_SERVERS = new _PgForeignServers();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<_PgForeignServersRecord> getRecordType() {
         return _PgForeignServersRecord.class;
     }
 
-    /**
-     * The column <code>information_schema._pg_foreign_servers.oid</code>.
-     */
     public final TableField<_PgForeignServersRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_servers.srvoptions</code>.
-     */
     public final TableField<_PgForeignServersRecord, String[]> SRVOPTIONS = createField(DSL.name("srvoptions"), SQLDataType.CLOB.array(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_servers.foreign_server_catalog</code>.
-     */
     public final TableField<_PgForeignServersRecord, String> FOREIGN_SERVER_CATALOG = createField(DSL.name("foreign_server_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_servers.foreign_server_name</code>.
-     */
     public final TableField<_PgForeignServersRecord, String> FOREIGN_SERVER_NAME = createField(DSL.name("foreign_server_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_servers.foreign_data_wrapper_catalog</code>.
-     */
     public final TableField<_PgForeignServersRecord, String> FOREIGN_DATA_WRAPPER_CATALOG = createField(DSL.name("foreign_data_wrapper_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_servers.foreign_data_wrapper_name</code>.
-     */
     public final TableField<_PgForeignServersRecord, String> FOREIGN_DATA_WRAPPER_NAME = createField(DSL.name("foreign_data_wrapper_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_servers.foreign_server_type</code>.
-     */
     public final TableField<_PgForeignServersRecord, String> FOREIGN_SERVER_TYPE = createField(DSL.name("foreign_server_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_servers.foreign_server_version</code>.
-     */
     public final TableField<_PgForeignServersRecord, String> FOREIGN_SERVER_VERSION = createField(DSL.name("foreign_server_version"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_servers.authorization_identifier</code>.
-     */
     public final TableField<_PgForeignServersRecord, String> AUTHORIZATION_IDENTIFIER = createField(DSL.name("authorization_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private _PgForeignServers(Name alias, Table<_PgForeignServersRecord> aliased) {
@@ -135,26 +88,14 @@ public class _PgForeignServers extends TableImpl<_PgForeignServersRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema._pg_foreign_servers</code>
-     * table reference
-     */
     public _PgForeignServers(String alias) {
         this(DSL.name(alias), _PG_FOREIGN_SERVERS);
     }
 
-    /**
-     * Create an aliased <code>information_schema._pg_foreign_servers</code>
-     * table reference
-     */
     public _PgForeignServers(Name alias) {
         this(alias, _PG_FOREIGN_SERVERS);
     }
 
-    /**
-     * Create a <code>information_schema._pg_foreign_servers</code> table
-     * reference
-     */
     public _PgForeignServers() {
         this(DSL.name("_pg_foreign_servers"), null);
     }
@@ -187,27 +128,18 @@ public class _PgForeignServers extends TableImpl<_PgForeignServersRecord> {
         return new _PgForeignServers(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignServers rename(String name) {
         return new _PgForeignServers(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignServers rename(Name name) {
         return new _PgForeignServers(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignServers rename(Table<?> name) {
@@ -224,17 +156,10 @@ public class _PgForeignServers extends TableImpl<_PgForeignServersRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super Long, ? super String[], ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super String[], ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

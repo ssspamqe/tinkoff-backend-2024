@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_attrdef</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,62 +51,36 @@ public class PgAttrdef implements Serializable {
         this.adbin = adbin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attrdef.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attrdef.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attrdef.adrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAdrelid() {
         return this.adrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attrdef.adrelid</code>.
-     */
     public void setAdrelid(@NotNull Long adrelid) {
         this.adrelid = adrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attrdef.adnum</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAdnum() {
         return this.adnum;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attrdef.adnum</code>.
-     */
     public void setAdnum(@NotNull Short adnum) {
         this.adnum = adnum;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @jakarta.validation.constraints.NotNull
     @NotNull
@@ -117,14 +88,6 @@ public class PgAttrdef implements Serializable {
         return this.adbin;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setAdbin(@NotNull Object adbin) {
         this.adbin = adbin;

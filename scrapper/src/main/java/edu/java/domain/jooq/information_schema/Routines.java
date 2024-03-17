@@ -26,10 +26,6 @@ import org.jooq.Field;
 import org.jooq.Result;
 
 
-/**
- * Convenience access to all stored procedures and functions in
- * information_schema.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -40,9 +36,6 @@ import org.jooq.Result;
 @SuppressWarnings({ "all", "unchecked", "rawtypes", "this-escape" })
 public class Routines {
 
-    /**
-     * Call <code>information_schema._pg_char_max_length</code>
-     */
     public static Integer _PgCharMaxLength(
           Configuration configuration
         , Long typid
@@ -56,9 +49,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_char_max_length</code> as a field.
-     */
     public static Field<Integer> _PgCharMaxLength(
           Long typid
         , Integer typmod
@@ -70,9 +60,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_char_max_length</code> as a field.
-     */
     public static Field<Integer> _PgCharMaxLength(
           Field<Long> typid
         , Field<Integer> typmod
@@ -84,9 +71,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_char_octet_length</code>
-     */
     public static Integer _PgCharOctetLength(
           Configuration configuration
         , Long typid
@@ -100,9 +84,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_char_octet_length</code> as a field.
-     */
     public static Field<Integer> _PgCharOctetLength(
           Long typid
         , Integer typmod
@@ -114,9 +95,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_char_octet_length</code> as a field.
-     */
     public static Field<Integer> _PgCharOctetLength(
           Field<Long> typid
         , Field<Integer> typmod
@@ -128,9 +106,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_datetime_precision</code>
-     */
     public static Integer _PgDatetimePrecision(
           Configuration configuration
         , Long typid
@@ -144,9 +119,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_datetime_precision</code> as a field.
-     */
     public static Field<Integer> _PgDatetimePrecision(
           Long typid
         , Integer typmod
@@ -158,9 +130,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_datetime_precision</code> as a field.
-     */
     public static Field<Integer> _PgDatetimePrecision(
           Field<Long> typid
         , Field<Integer> typmod
@@ -172,9 +141,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_index_position</code>
-     */
     public static Integer _PgIndexPosition(
           Configuration configuration
         , Long __1
@@ -188,9 +154,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_index_position</code> as a field.
-     */
     public static Field<Integer> _PgIndexPosition(
           Long __1
         , Short __2
@@ -202,9 +165,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_index_position</code> as a field.
-     */
     public static Field<Integer> _PgIndexPosition(
           Field<Long> __1
         , Field<Short> __2
@@ -216,9 +176,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_interval_type</code>
-     */
     public static String _PgIntervalType(
           Configuration configuration
         , Long typid
@@ -232,9 +189,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_interval_type</code> as a field.
-     */
     public static Field<String> _PgIntervalType(
           Long typid
         , Integer mod
@@ -246,9 +200,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_interval_type</code> as a field.
-     */
     public static Field<String> _PgIntervalType(
           Field<Long> typid
         , Field<Integer> mod
@@ -260,9 +211,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_numeric_precision</code>
-     */
     public static Integer _PgNumericPrecision(
           Configuration configuration
         , Long typid
@@ -276,9 +224,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_numeric_precision</code> as a field.
-     */
     public static Field<Integer> _PgNumericPrecision(
           Long typid
         , Integer typmod
@@ -290,9 +235,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_numeric_precision</code> as a field.
-     */
     public static Field<Integer> _PgNumericPrecision(
           Field<Long> typid
         , Field<Integer> typmod
@@ -304,9 +246,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_numeric_precision_radix</code>
-     */
     public static Integer _PgNumericPrecisionRadix(
           Configuration configuration
         , Long typid
@@ -320,10 +259,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_numeric_precision_radix</code> as a
-     * field.
-     */
     public static Field<Integer> _PgNumericPrecisionRadix(
           Long typid
         , Integer typmod
@@ -335,10 +270,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_numeric_precision_radix</code> as a
-     * field.
-     */
     public static Field<Integer> _PgNumericPrecisionRadix(
           Field<Long> typid
         , Field<Integer> typmod
@@ -350,9 +281,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_numeric_scale</code>
-     */
     public static Integer _PgNumericScale(
           Configuration configuration
         , Long typid
@@ -366,9 +294,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_numeric_scale</code> as a field.
-     */
     public static Field<Integer> _PgNumericScale(
           Long typid
         , Integer typmod
@@ -380,9 +305,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_numeric_scale</code> as a field.
-     */
     public static Field<Integer> _PgNumericScale(
           Field<Long> typid
         , Field<Integer> typmod
@@ -394,9 +316,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_truetypid</code>
-     */
     public static Long _PgTruetypid(
           Configuration configuration
         , PgAttributeRecord __1
@@ -410,9 +329,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_truetypid</code> as a field.
-     */
     public static Field<Long> _PgTruetypid(
           PgAttributeRecord __1
         , PgTypeRecord __2
@@ -424,9 +340,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_truetypid</code> as a field.
-     */
     public static Field<Long> _PgTruetypid(
           Field<PgAttributeRecord> __1
         , Field<PgTypeRecord> __2
@@ -438,9 +351,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_truetypmod</code>
-     */
     public static Integer _PgTruetypmod(
           Configuration configuration
         , PgAttributeRecord __1
@@ -454,9 +364,6 @@ public class Routines {
         return f.getReturnValue();
     }
 
-    /**
-     * Get <code>information_schema._pg_truetypmod</code> as a field.
-     */
     public static Field<Integer> _PgTruetypmod(
           PgAttributeRecord __1
         , PgTypeRecord __2
@@ -468,9 +375,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Get <code>information_schema._pg_truetypmod</code> as a field.
-     */
     public static Field<Integer> _PgTruetypmod(
           Field<PgAttributeRecord> __1
         , Field<PgTypeRecord> __2
@@ -482,9 +386,6 @@ public class Routines {
         return f.asField();
     }
 
-    /**
-     * Call <code>information_schema._pg_expandarray</code>.
-     */
     public static Result<_PgExpandarrayRecord> _PgExpandarray(
           Configuration configuration
         , Object[] __1
@@ -494,9 +395,6 @@ public class Routines {
         )).fetch();
     }
 
-    /**
-     * Get <code>information_schema._pg_expandarray</code> as a table.
-     */
     public static _PgExpandarray _PgExpandarray(
           Object[] __1
     ) {
@@ -505,9 +403,6 @@ public class Routines {
         );
     }
 
-    /**
-     * Get <code>information_schema._pg_expandarray</code> as a table.
-     */
     public static _PgExpandarray _PgExpandarray(
           Field<Object[]> __1
     ) {

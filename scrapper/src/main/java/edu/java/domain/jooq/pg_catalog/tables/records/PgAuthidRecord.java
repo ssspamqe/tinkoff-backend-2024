@@ -20,9 +20,6 @@ import org.jooq.Row12;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_authid</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,191 +32,119 @@ public class PgAuthidRecord extends UpdatableRecordImpl<PgAuthidRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolname</code>.
-     */
     public void setRolname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRolname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolsuper</code>.
-     */
     public void setRolsuper(@NotNull Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolsuper</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolsuper() {
         return (Boolean) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolinherit</code>.
-     */
     public void setRolinherit(@NotNull Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolinherit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolinherit() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolcreaterole</code>.
-     */
     public void setRolcreaterole(@NotNull Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolcreaterole</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolcreaterole() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolcreatedb</code>.
-     */
     public void setRolcreatedb(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolcreatedb</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolcreatedb() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolcanlogin</code>.
-     */
     public void setRolcanlogin(@NotNull Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolcanlogin</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolcanlogin() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolreplication</code>.
-     */
     public void setRolreplication(@NotNull Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolreplication</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolreplication() {
         return (Boolean) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolbypassrls</code>.
-     */
     public void setRolbypassrls(@NotNull Boolean value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolbypassrls</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRolbypassrls() {
         return (Boolean) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolconnlimit</code>.
-     */
     public void setRolconnlimit(@NotNull Integer value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolconnlimit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getRolconnlimit() {
         return (Integer) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolpassword</code>.
-     */
     public void setRolpassword(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolpassword</code>.
-     */
     @Nullable
     public String getRolpassword() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_authid.rolvaliduntil</code>.
-     */
     public void setRolvaliduntil(@Nullable OffsetDateTime value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_authid.rolvaliduntil</code>.
-     */
     @Nullable
     public OffsetDateTime getRolvaliduntil() {
         return (OffsetDateTime) get(11);
@@ -573,16 +498,10 @@ public class PgAuthidRecord extends UpdatableRecordImpl<PgAuthidRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAuthidRecord
-     */
     public PgAuthidRecord() {
         super(PgAuthid.PG_AUTHID);
     }
 
-    /**
-     * Create a detached, initialised PgAuthidRecord
-     */
     @ConstructorProperties({ "oid", "rolname", "rolsuper", "rolinherit", "rolcreaterole", "rolcreatedb", "rolcanlogin", "rolreplication", "rolbypassrls", "rolconnlimit", "rolpassword", "rolvaliduntil" })
     public PgAuthidRecord(@NotNull Long oid, @NotNull String rolname, @NotNull Boolean rolsuper, @NotNull Boolean rolinherit, @NotNull Boolean rolcreaterole, @NotNull Boolean rolcreatedb, @NotNull Boolean rolcanlogin, @NotNull Boolean rolreplication, @NotNull Boolean rolbypassrls, @NotNull Integer rolconnlimit, @Nullable String rolpassword, @Nullable OffsetDateTime rolvaliduntil) {
         super(PgAuthid.PG_AUTHID);
@@ -602,9 +521,6 @@ public class PgAuthidRecord extends UpdatableRecordImpl<PgAuthidRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAuthidRecord
-     */
     public PgAuthidRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAuthid value) {
         super(PgAuthid.PG_AUTHID);
 

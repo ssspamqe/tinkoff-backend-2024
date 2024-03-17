@@ -18,9 +18,6 @@ import org.jooq.Row12;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_xact_user_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,187 +30,109 @@ public class PgStatXactUserTablesRecord extends TableRecordImpl<PgStatXactUserTa
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.relname</code>.
-     */
     public void setRelname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.seq_scan</code>.
-     */
     public void setSeqScan(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.seq_scan</code>.
-     */
     @Nullable
     public Long getSeqScan() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.seq_tup_read</code>.
-     */
     public void setSeqTupRead(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.seq_tup_read</code>.
-     */
     @Nullable
     public Long getSeqTupRead() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.idx_scan</code>.
-     */
     public void setIdxScan(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.idx_scan</code>.
-     */
     @Nullable
     public Long getIdxScan() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.idx_tup_fetch</code>.
-     */
     public void setIdxTupFetch(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.idx_tup_fetch</code>.
-     */
     @Nullable
     public Long getIdxTupFetch() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_ins</code>.
-     */
     public void setNTupIns(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_ins</code>.
-     */
     @Nullable
     public Long getNTupIns() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_upd</code>.
-     */
     public void setNTupUpd(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_upd</code>.
-     */
     @Nullable
     public Long getNTupUpd() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_del</code>.
-     */
     public void setNTupDel(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_xact_user_tables.n_tup_del</code>.
-     */
     @Nullable
     public Long getNTupDel() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.n_tup_hot_upd</code>.
-     */
     public void setNTupHotUpd(@Nullable Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.n_tup_hot_upd</code>.
-     */
     @Nullable
     public Long getNTupHotUpd() {
         return (Long) get(10);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.n_tup_newpage_upd</code>.
-     */
     public void setNTupNewpageUpd(@Nullable Long value) {
         set(11, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_xact_user_tables.n_tup_newpage_upd</code>.
-     */
     @Nullable
     public Long getNTupNewpageUpd() {
         return (Long) get(11);
@@ -557,16 +476,10 @@ public class PgStatXactUserTablesRecord extends TableRecordImpl<PgStatXactUserTa
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatXactUserTablesRecord
-     */
     public PgStatXactUserTablesRecord() {
         super(PgStatXactUserTables.PG_STAT_XACT_USER_TABLES);
     }
 
-    /**
-     * Create a detached, initialised PgStatXactUserTablesRecord
-     */
     @ConstructorProperties({ "relid", "schemaname", "relname", "seqScan", "seqTupRead", "idxScan", "idxTupFetch", "nTupIns", "nTupUpd", "nTupDel", "nTupHotUpd", "nTupNewpageUpd" })
     public PgStatXactUserTablesRecord(@Nullable Long relid, @Nullable String schemaname, @Nullable String relname, @Nullable Long seqScan, @Nullable Long seqTupRead, @Nullable Long idxScan, @Nullable Long idxTupFetch, @Nullable Long nTupIns, @Nullable Long nTupUpd, @Nullable Long nTupDel, @Nullable Long nTupHotUpd, @Nullable Long nTupNewpageUpd) {
         super(PgStatXactUserTables.PG_STAT_XACT_USER_TABLES);
@@ -586,9 +499,6 @@ public class PgStatXactUserTablesRecord extends TableRecordImpl<PgStatXactUserTa
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatXactUserTablesRecord
-     */
     public PgStatXactUserTablesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatXactUserTables value) {
         super(PgStatXactUserTables.PG_STAT_XACT_USER_TABLES);
 

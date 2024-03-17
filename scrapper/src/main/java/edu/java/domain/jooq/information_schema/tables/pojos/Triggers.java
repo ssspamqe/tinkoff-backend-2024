@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.triggers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -107,265 +104,155 @@ public class Triggers implements Serializable {
         this.created = created;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.trigger_catalog</code>.
-     */
     @Nullable
     public String getTriggerCatalog() {
         return this.triggerCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.trigger_catalog</code>.
-     */
     public void setTriggerCatalog(@Nullable String triggerCatalog) {
         this.triggerCatalog = triggerCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.trigger_schema</code>.
-     */
     @Nullable
     public String getTriggerSchema() {
         return this.triggerSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.trigger_schema</code>.
-     */
     public void setTriggerSchema(@Nullable String triggerSchema) {
         this.triggerSchema = triggerSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.trigger_name</code>.
-     */
     @Nullable
     public String getTriggerName() {
         return this.triggerName;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.trigger_name</code>.
-     */
     public void setTriggerName(@Nullable String triggerName) {
         this.triggerName = triggerName;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.event_manipulation</code>.
-     */
     @Nullable
     public String getEventManipulation() {
         return this.eventManipulation;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.event_manipulation</code>.
-     */
     public void setEventManipulation(@Nullable String eventManipulation) {
         this.eventManipulation = eventManipulation;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.event_object_catalog</code>.
-     */
     @Nullable
     public String getEventObjectCatalog() {
         return this.eventObjectCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.event_object_catalog</code>.
-     */
     public void setEventObjectCatalog(@Nullable String eventObjectCatalog) {
         this.eventObjectCatalog = eventObjectCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.event_object_schema</code>.
-     */
     @Nullable
     public String getEventObjectSchema() {
         return this.eventObjectSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.event_object_schema</code>.
-     */
     public void setEventObjectSchema(@Nullable String eventObjectSchema) {
         this.eventObjectSchema = eventObjectSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.event_object_table</code>.
-     */
     @Nullable
     public String getEventObjectTable() {
         return this.eventObjectTable;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.event_object_table</code>.
-     */
     public void setEventObjectTable(@Nullable String eventObjectTable) {
         this.eventObjectTable = eventObjectTable;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_order</code>.
-     */
     @Nullable
     public Integer getActionOrder() {
         return this.actionOrder;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_order</code>.
-     */
     public void setActionOrder(@Nullable Integer actionOrder) {
         this.actionOrder = actionOrder;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_condition</code>.
-     */
     @Nullable
     public String getActionCondition() {
         return this.actionCondition;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_condition</code>.
-     */
     public void setActionCondition(@Nullable String actionCondition) {
         this.actionCondition = actionCondition;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_statement</code>.
-     */
     @Nullable
     public String getActionStatement() {
         return this.actionStatement;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_statement</code>.
-     */
     public void setActionStatement(@Nullable String actionStatement) {
         this.actionStatement = actionStatement;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_orientation</code>.
-     */
     @Nullable
     public String getActionOrientation() {
         return this.actionOrientation;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_orientation</code>.
-     */
     public void setActionOrientation(@Nullable String actionOrientation) {
         this.actionOrientation = actionOrientation;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_timing</code>.
-     */
     @Nullable
     public String getActionTiming() {
         return this.actionTiming;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_timing</code>.
-     */
     public void setActionTiming(@Nullable String actionTiming) {
         this.actionTiming = actionTiming;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggers.action_reference_old_table</code>.
-     */
     @Nullable
     public String getActionReferenceOldTable() {
         return this.actionReferenceOldTable;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggers.action_reference_old_table</code>.
-     */
     public void setActionReferenceOldTable(@Nullable String actionReferenceOldTable) {
         this.actionReferenceOldTable = actionReferenceOldTable;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggers.action_reference_new_table</code>.
-     */
     @Nullable
     public String getActionReferenceNewTable() {
         return this.actionReferenceNewTable;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggers.action_reference_new_table</code>.
-     */
     public void setActionReferenceNewTable(@Nullable String actionReferenceNewTable) {
         this.actionReferenceNewTable = actionReferenceNewTable;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggers.action_reference_old_row</code>.
-     */
     @Nullable
     public String getActionReferenceOldRow() {
         return this.actionReferenceOldRow;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggers.action_reference_old_row</code>.
-     */
     public void setActionReferenceOldRow(@Nullable String actionReferenceOldRow) {
         this.actionReferenceOldRow = actionReferenceOldRow;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggers.action_reference_new_row</code>.
-     */
     @Nullable
     public String getActionReferenceNewRow() {
         return this.actionReferenceNewRow;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggers.action_reference_new_row</code>.
-     */
     public void setActionReferenceNewRow(@Nullable String actionReferenceNewRow) {
         this.actionReferenceNewRow = actionReferenceNewRow;
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.created</code>.
-     */
     @Nullable
     public OffsetDateTime getCreated() {
         return this.created;
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.created</code>.
-     */
     public void setCreated(@Nullable OffsetDateTime created) {
         this.created = created;
     }

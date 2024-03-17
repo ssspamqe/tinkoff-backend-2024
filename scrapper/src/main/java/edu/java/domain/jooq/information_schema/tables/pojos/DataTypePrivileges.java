@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.data_type_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,87 +55,47 @@ public class DataTypePrivileges implements Serializable {
         this.dtdIdentifier = dtdIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.object_catalog</code>.
-     */
     @Nullable
     public String getObjectCatalog() {
         return this.objectCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.object_catalog</code>.
-     */
     public void setObjectCatalog(@Nullable String objectCatalog) {
         this.objectCatalog = objectCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.object_schema</code>.
-     */
     @Nullable
     public String getObjectSchema() {
         return this.objectSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.object_schema</code>.
-     */
     public void setObjectSchema(@Nullable String objectSchema) {
         this.objectSchema = objectSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.object_name</code>.
-     */
     @Nullable
     public String getObjectName() {
         return this.objectName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.object_name</code>.
-     */
     public void setObjectName(@Nullable String objectName) {
         this.objectName = objectName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return this.objectType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.object_type</code>.
-     */
     public void setObjectType(@Nullable String objectType) {
         this.objectType = objectType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.dtd_identifier</code>.
-     */
     @Nullable
     public String getDtdIdentifier() {
         return this.dtdIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.dtd_identifier</code>.
-     */
     public void setDtdIdentifier(@Nullable String dtdIdentifier) {
         this.dtdIdentifier = dtdIdentifier;
     }

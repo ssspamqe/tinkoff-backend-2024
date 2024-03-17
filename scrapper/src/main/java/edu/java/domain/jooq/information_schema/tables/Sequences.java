@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.SequencesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,79 +39,36 @@ public class Sequences extends TableImpl<SequencesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.sequences</code>
-     */
     public static final Sequences SEQUENCES = new Sequences();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<SequencesRecord> getRecordType() {
         return SequencesRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.sequences.sequence_catalog</code>.
-     */
     public final TableField<SequencesRecord, String> SEQUENCE_CATALOG = createField(DSL.name("sequence_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.sequence_schema</code>.
-     */
     public final TableField<SequencesRecord, String> SEQUENCE_SCHEMA = createField(DSL.name("sequence_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.sequence_name</code>.
-     */
     public final TableField<SequencesRecord, String> SEQUENCE_NAME = createField(DSL.name("sequence_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.data_type</code>.
-     */
     public final TableField<SequencesRecord, String> DATA_TYPE = createField(DSL.name("data_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.numeric_precision</code>.
-     */
     public final TableField<SequencesRecord, Integer> NUMERIC_PRECISION = createField(DSL.name("numeric_precision"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.sequences.numeric_precision_radix</code>.
-     */
     public final TableField<SequencesRecord, Integer> NUMERIC_PRECISION_RADIX = createField(DSL.name("numeric_precision_radix"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.numeric_scale</code>.
-     */
     public final TableField<SequencesRecord, Integer> NUMERIC_SCALE = createField(DSL.name("numeric_scale"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.start_value</code>.
-     */
     public final TableField<SequencesRecord, String> START_VALUE = createField(DSL.name("start_value"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.minimum_value</code>.
-     */
     public final TableField<SequencesRecord, String> MINIMUM_VALUE = createField(DSL.name("minimum_value"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.maximum_value</code>.
-     */
     public final TableField<SequencesRecord, String> MAXIMUM_VALUE = createField(DSL.name("maximum_value"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.increment</code>.
-     */
     public final TableField<SequencesRecord, String> INCREMENT = createField(DSL.name("increment"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sequences.cycle_option</code>.
-     */
     public final TableField<SequencesRecord, String> CYCLE_OPTION = createField(DSL.name("cycle_option"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
     private Sequences(Name alias, Table<SequencesRecord> aliased) {
@@ -150,25 +102,14 @@ public class Sequences extends TableImpl<SequencesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.sequences</code> table
-     * reference
-     */
     public Sequences(String alias) {
         this(DSL.name(alias), SEQUENCES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.sequences</code> table
-     * reference
-     */
     public Sequences(Name alias) {
         this(alias, SEQUENCES);
     }
 
-    /**
-     * Create a <code>information_schema.sequences</code> table reference
-     */
     public Sequences() {
         this(DSL.name("sequences"), null);
     }
@@ -201,27 +142,18 @@ public class Sequences extends TableImpl<SequencesRecord> {
         return new Sequences(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Sequences rename(String name) {
         return new Sequences(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Sequences rename(Name name) {
         return new Sequences(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Sequences rename(Table<?> name) {
@@ -238,17 +170,10 @@ public class Sequences extends TableImpl<SequencesRecord> {
         return (Row12) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function12<? super String, ? super String, ? super String, ? super String, ? super Integer, ? super Integer, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function12<? super String, ? super String, ? super String, ? super String, ? super Integer, ? super Integer, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

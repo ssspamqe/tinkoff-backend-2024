@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgPreparedStatementRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -29,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_prepared_statement</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,58 +40,28 @@ public class PgPreparedStatement extends TableImpl<PgPreparedStatementRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_prepared_statement</code>
-     */
     public static final PgPreparedStatement PG_PREPARED_STATEMENT = new PgPreparedStatement();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgPreparedStatementRecord> getRecordType() {
         return PgPreparedStatementRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_statement.name</code>.
-     */
     public final TableField<PgPreparedStatementRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_statement.statement</code>.
-     */
     public final TableField<PgPreparedStatementRecord, String> STATEMENT = createField(DSL.name("statement"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_statement.prepare_time</code>.
-     */
     public final TableField<PgPreparedStatementRecord, OffsetDateTime> PREPARE_TIME = createField(DSL.name("prepare_time"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_statement.parameter_types</code>.
-     */
     public final TableField<PgPreparedStatementRecord, Object[]> PARAMETER_TYPES = createField(DSL.name("parameter_types"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"regtype\"").array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_statement.result_types</code>.
-     */
     public final TableField<PgPreparedStatementRecord, Object[]> RESULT_TYPES = createField(DSL.name("result_types"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"regtype\"").array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_statement.from_sql</code>.
-     */
     public final TableField<PgPreparedStatementRecord, Boolean> FROM_SQL = createField(DSL.name("from_sql"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_statement.generic_plans</code>.
-     */
     public final TableField<PgPreparedStatementRecord, Long> GENERIC_PLANS = createField(DSL.name("generic_plans"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_statement.custom_plans</code>.
-     */
     public final TableField<PgPreparedStatementRecord, Long> CUSTOM_PLANS = createField(DSL.name("custom_plans"), SQLDataType.BIGINT, this, "");
 
     private PgPreparedStatement(Name alias, Table<PgPreparedStatementRecord> aliased) {
@@ -107,25 +73,14 @@ public class PgPreparedStatement extends TableImpl<PgPreparedStatementRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_prepared_statement</code> table
-     * reference
-     */
     public PgPreparedStatement(String alias) {
         this(DSL.name(alias), PG_PREPARED_STATEMENT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_prepared_statement</code> table
-     * reference
-     */
     public PgPreparedStatement(Name alias) {
         this(alias, PG_PREPARED_STATEMENT);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_prepared_statement</code> table reference
-     */
     public PgPreparedStatement() {
         this(DSL.name("pg_prepared_statement"), null);
     }
@@ -154,27 +109,18 @@ public class PgPreparedStatement extends TableImpl<PgPreparedStatementRecord> {
         return new PgPreparedStatement(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPreparedStatement rename(String name) {
         return new PgPreparedStatement(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPreparedStatement rename(Name name) {
         return new PgPreparedStatement(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPreparedStatement rename(Table<?> name) {
@@ -191,26 +137,16 @@ public class PgPreparedStatement extends TableImpl<PgPreparedStatementRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgPreparedStatement call() {
         PgPreparedStatement result = new PgPreparedStatement(DSL.name("pg_prepared_statement"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super OffsetDateTime, ? super Object[], ? super Object[], ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super OffsetDateTime, ? super Object[], ? super Object[], ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

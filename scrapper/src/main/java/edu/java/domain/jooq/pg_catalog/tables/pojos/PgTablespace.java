@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_tablespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -60,80 +57,50 @@ public class PgTablespace implements Serializable {
         this.spcoptions = spcoptions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.spcname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSpcname() {
         return this.spcname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.spcname</code>.
-     */
     public void setSpcname(@NotNull String spcname) {
         this.spcname = spcname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.spcowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSpcowner() {
         return this.spcowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.spcowner</code>.
-     */
     public void setSpcowner(@NotNull Long spcowner) {
         this.spcowner = spcowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.spcacl</code>.
-     */
     @Nullable
     public String[] getSpcacl() {
         return this.spcacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.spcacl</code>.
-     */
     public void setSpcacl(@Nullable String[] spcacl) {
         this.spcacl = spcacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.spcoptions</code>.
-     */
     @Nullable
     public String[] getSpcoptions() {
         return this.spcoptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.spcoptions</code>.
-     */
     public void setSpcoptions(@Nullable String[] spcoptions) {
         this.spcoptions = spcoptions;
     }

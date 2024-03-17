@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonArrayElementsTextRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.json_array_elements_text</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,24 +39,14 @@ public class JsonArrayElementsText extends TableImpl<JsonArrayElementsTextRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.json_array_elements_text</code>
-     */
     public static final JsonArrayElementsText JSON_ARRAY_ELEMENTS_TEXT = new JsonArrayElementsText();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonArrayElementsTextRecord> getRecordType() {
         return JsonArrayElementsTextRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.json_array_elements_text.value</code>.
-     */
     public final TableField<JsonArrayElementsTextRecord, String> VALUE = createField(DSL.name("value"), SQLDataType.CLOB, this, "");
 
     private JsonArrayElementsText(Name alias, Table<JsonArrayElementsTextRecord> aliased) {
@@ -74,25 +59,14 @@ public class JsonArrayElementsText extends TableImpl<JsonArrayElementsTextRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_array_elements_text</code> table
-     * reference
-     */
     public JsonArrayElementsText(String alias) {
         this(DSL.name(alias), JSON_ARRAY_ELEMENTS_TEXT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_array_elements_text</code> table
-     * reference
-     */
     public JsonArrayElementsText(Name alias) {
         this(alias, JSON_ARRAY_ELEMENTS_TEXT);
     }
 
-    /**
-     * Create a <code>pg_catalog.json_array_elements_text</code> table reference
-     */
     public JsonArrayElementsText() {
         this(DSL.name("json_array_elements_text"), null);
     }
@@ -121,27 +95,18 @@ public class JsonArrayElementsText extends TableImpl<JsonArrayElementsTextRecord
         return new JsonArrayElementsText(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonArrayElementsText rename(String name) {
         return new JsonArrayElementsText(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonArrayElementsText rename(Name name) {
         return new JsonArrayElementsText(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonArrayElementsText rename(Table<?> name) {
@@ -158,9 +123,6 @@ public class JsonArrayElementsText extends TableImpl<JsonArrayElementsTextRecord
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonArrayElementsText call(
           JSON fromJson
     ) {
@@ -171,9 +133,6 @@ public class JsonArrayElementsText extends TableImpl<JsonArrayElementsTextRecord
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonArrayElementsText call(
           Field<JSON> fromJson
     ) {
@@ -184,17 +143,10 @@ public class JsonArrayElementsText extends TableImpl<JsonArrayElementsTextRecord
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

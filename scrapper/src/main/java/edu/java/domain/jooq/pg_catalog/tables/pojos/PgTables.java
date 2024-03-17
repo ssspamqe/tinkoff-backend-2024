@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,122 +67,74 @@ public class PgTables implements Serializable {
         this.rowsecurity = rowsecurity;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return this.tablename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.tablename</code>.
-     */
     public void setTablename(@Nullable String tablename) {
         this.tablename = tablename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.tableowner</code>.
-     */
     @Nullable
     public String getTableowner() {
         return this.tableowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.tableowner</code>.
-     */
     public void setTableowner(@Nullable String tableowner) {
         this.tableowner = tableowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.tablespace</code>.
-     */
     @Nullable
     public String getTablespace() {
         return this.tablespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.tablespace</code>.
-     */
     public void setTablespace(@Nullable String tablespace) {
         this.tablespace = tablespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.hasindexes</code>.
-     */
     @Nullable
     public Boolean getHasindexes() {
         return this.hasindexes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.hasindexes</code>.
-     */
     public void setHasindexes(@Nullable Boolean hasindexes) {
         this.hasindexes = hasindexes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.hasrules</code>.
-     */
     @Nullable
     public Boolean getHasrules() {
         return this.hasrules;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.hasrules</code>.
-     */
     public void setHasrules(@Nullable Boolean hasrules) {
         this.hasrules = hasrules;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.hastriggers</code>.
-     */
     @Nullable
     public Boolean getHastriggers() {
         return this.hastriggers;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.hastriggers</code>.
-     */
     public void setHastriggers(@Nullable Boolean hastriggers) {
         this.hastriggers = hastriggers;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tables.rowsecurity</code>.
-     */
     @Nullable
     public Boolean getRowsecurity() {
         return this.rowsecurity;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tables.rowsecurity</code>.
-     */
     public void setRowsecurity(@Nullable Boolean rowsecurity) {
         this.rowsecurity = rowsecurity;
     }

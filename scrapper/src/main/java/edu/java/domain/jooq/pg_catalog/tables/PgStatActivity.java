@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatActivityRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_activity</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,134 +42,57 @@ public class PgStatActivity extends TableImpl<PgStatActivityRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_activity</code>
-     */
     public static final PgStatActivity PG_STAT_ACTIVITY = new PgStatActivity();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatActivityRecord> getRecordType() {
         return PgStatActivityRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.datid</code>.
-     */
     public final TableField<PgStatActivityRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.datname</code>.
-     */
     public final TableField<PgStatActivityRecord, String> DATNAME = createField(DSL.name("datname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.pid</code>.
-     */
     public final TableField<PgStatActivityRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.leader_pid</code>.
-     */
     public final TableField<PgStatActivityRecord, Integer> LEADER_PID = createField(DSL.name("leader_pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.usesysid</code>.
-     */
     public final TableField<PgStatActivityRecord, Long> USESYSID = createField(DSL.name("usesysid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.usename</code>.
-     */
     public final TableField<PgStatActivityRecord, String> USENAME = createField(DSL.name("usename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.application_name</code>.
-     */
     public final TableField<PgStatActivityRecord, String> APPLICATION_NAME = createField(DSL.name("application_name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgStatActivityRecord, Object> CLIENT_ADDR = createField(DSL.name("client_addr"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"inet\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.client_hostname</code>.
-     */
     public final TableField<PgStatActivityRecord, String> CLIENT_HOSTNAME = createField(DSL.name("client_hostname"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.client_port</code>.
-     */
     public final TableField<PgStatActivityRecord, Integer> CLIENT_PORT = createField(DSL.name("client_port"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.backend_start</code>.
-     */
     public final TableField<PgStatActivityRecord, OffsetDateTime> BACKEND_START = createField(DSL.name("backend_start"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.xact_start</code>.
-     */
     public final TableField<PgStatActivityRecord, OffsetDateTime> XACT_START = createField(DSL.name("xact_start"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.query_start</code>.
-     */
     public final TableField<PgStatActivityRecord, OffsetDateTime> QUERY_START = createField(DSL.name("query_start"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.state_change</code>.
-     */
     public final TableField<PgStatActivityRecord, OffsetDateTime> STATE_CHANGE = createField(DSL.name("state_change"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.wait_event_type</code>.
-     */
     public final TableField<PgStatActivityRecord, String> WAIT_EVENT_TYPE = createField(DSL.name("wait_event_type"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.wait_event</code>.
-     */
     public final TableField<PgStatActivityRecord, String> WAIT_EVENT = createField(DSL.name("wait_event"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.state</code>.
-     */
     public final TableField<PgStatActivityRecord, String> STATE = createField(DSL.name("state"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.backend_xid</code>.
-     */
     public final TableField<PgStatActivityRecord, Long> BACKEND_XID = createField(DSL.name("backend_xid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.backend_xmin</code>.
-     */
     public final TableField<PgStatActivityRecord, Long> BACKEND_XMIN = createField(DSL.name("backend_xmin"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.query_id</code>.
-     */
     public final TableField<PgStatActivityRecord, Long> QUERY_ID = createField(DSL.name("query_id"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.query</code>.
-     */
     public final TableField<PgStatActivityRecord, String> QUERY = createField(DSL.name("query"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_activity.backend_type</code>.
-     */
     public final TableField<PgStatActivityRecord, String> BACKEND_TYPE = createField(DSL.name("backend_type"), SQLDataType.CLOB, this, "");
 
     private PgStatActivity(Name alias, Table<PgStatActivityRecord> aliased) {
@@ -210,25 +129,14 @@ public class PgStatActivity extends TableImpl<PgStatActivityRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_activity</code> table
-     * reference
-     */
     public PgStatActivity(String alias) {
         this(DSL.name(alias), PG_STAT_ACTIVITY);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_activity</code> table
-     * reference
-     */
     public PgStatActivity(Name alias) {
         this(alias, PG_STAT_ACTIVITY);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_activity</code> table reference
-     */
     public PgStatActivity() {
         this(DSL.name("pg_stat_activity"), null);
     }
@@ -261,27 +169,18 @@ public class PgStatActivity extends TableImpl<PgStatActivityRecord> {
         return new PgStatActivity(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatActivity rename(String name) {
         return new PgStatActivity(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatActivity rename(Name name) {
         return new PgStatActivity(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatActivity rename(Table<?> name) {
@@ -298,17 +197,10 @@ public class PgStatActivity extends TableImpl<PgStatActivityRecord> {
         return (Row22) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function22<? super Long, ? super String, ? super Integer, ? super Integer, ? super Long, ? super String, ? super String, ? super Object, ? super String, ? super Integer, ? super OffsetDateTime, ? super OffsetDateTime, ? super OffsetDateTime, ? super OffsetDateTime, ? super String, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function22<? super Long, ? super String, ? super Integer, ? super Integer, ? super Long, ? super String, ? super String, ? super Object, ? super String, ? super Integer, ? super OffsetDateTime, ? super OffsetDateTime, ? super OffsetDateTime, ? super OffsetDateTime, ? super String, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

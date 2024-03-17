@@ -43,7 +43,10 @@ public class JooqCodegen {
             .withFluentSetters(false)
             .withDaos(false)
             .withPojos(true)
-            .withComments(false);
+            .withComments(false)
+            .withDeprecated(false)
+            .withJavadoc(false)
+            .withXmlTypes(false);
 
         Target target = new Target()
             .withPackageName("edu.java.domain.jooq")

@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLsLogicalmapdirRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -29,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_logicalmapdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,33 +40,18 @@ public class PgLsLogicalmapdir extends TableImpl<PgLsLogicalmapdirRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ls_logicalmapdir</code>
-     */
     public static final PgLsLogicalmapdir PG_LS_LOGICALMAPDIR = new PgLsLogicalmapdir();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLsLogicalmapdirRecord> getRecordType() {
         return PgLsLogicalmapdirRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ls_logicalmapdir.name</code>.
-     */
     public final TableField<PgLsLogicalmapdirRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ls_logicalmapdir.size</code>.
-     */
     public final TableField<PgLsLogicalmapdirRecord, Long> SIZE = createField(DSL.name("size"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ls_logicalmapdir.modification</code>.
-     */
     public final TableField<PgLsLogicalmapdirRecord, OffsetDateTime> MODIFICATION = createField(DSL.name("modification"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgLsLogicalmapdir(Name alias, Table<PgLsLogicalmapdirRecord> aliased) {
@@ -82,25 +63,14 @@ public class PgLsLogicalmapdir extends TableImpl<PgLsLogicalmapdirRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_logicalmapdir</code> table
-     * reference
-     */
     public PgLsLogicalmapdir(String alias) {
         this(DSL.name(alias), PG_LS_LOGICALMAPDIR);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_logicalmapdir</code> table
-     * reference
-     */
     public PgLsLogicalmapdir(Name alias) {
         this(alias, PG_LS_LOGICALMAPDIR);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ls_logicalmapdir</code> table reference
-     */
     public PgLsLogicalmapdir() {
         this(DSL.name("pg_ls_logicalmapdir"), null);
     }
@@ -129,27 +99,18 @@ public class PgLsLogicalmapdir extends TableImpl<PgLsLogicalmapdirRecord> {
         return new PgLsLogicalmapdir(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsLogicalmapdir rename(String name) {
         return new PgLsLogicalmapdir(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsLogicalmapdir rename(Name name) {
         return new PgLsLogicalmapdir(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsLogicalmapdir rename(Table<?> name) {
@@ -166,26 +127,16 @@ public class PgLsLogicalmapdir extends TableImpl<PgLsLogicalmapdirRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLsLogicalmapdir call() {
         PgLsLogicalmapdir result = new PgLsLogicalmapdir(DSL.name("pg_ls_logicalmapdir"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_all_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -82,167 +79,101 @@ public class PgStatioAllTables implements Serializable {
         this.tidxBlksHit = tidxBlksHit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return this.relname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.relname</code>.
-     */
     public void setRelname(@Nullable String relname) {
         this.relname = relname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.heap_blks_read</code>.
-     */
     @Nullable
     public Long getHeapBlksRead() {
         return this.heapBlksRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.heap_blks_read</code>.
-     */
     public void setHeapBlksRead(@Nullable Long heapBlksRead) {
         this.heapBlksRead = heapBlksRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.heap_blks_hit</code>.
-     */
     @Nullable
     public Long getHeapBlksHit() {
         return this.heapBlksHit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.heap_blks_hit</code>.
-     */
     public void setHeapBlksHit(@Nullable Long heapBlksHit) {
         this.heapBlksHit = heapBlksHit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.idx_blks_read</code>.
-     */
     @Nullable
     public Long getIdxBlksRead() {
         return this.idxBlksRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.idx_blks_read</code>.
-     */
     public void setIdxBlksRead(@Nullable Long idxBlksRead) {
         this.idxBlksRead = idxBlksRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.idx_blks_hit</code>.
-     */
     @Nullable
     public Long getIdxBlksHit() {
         return this.idxBlksHit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.idx_blks_hit</code>.
-     */
     public void setIdxBlksHit(@Nullable Long idxBlksHit) {
         this.idxBlksHit = idxBlksHit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.toast_blks_read</code>.
-     */
     @Nullable
     public Long getToastBlksRead() {
         return this.toastBlksRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.toast_blks_read</code>.
-     */
     public void setToastBlksRead(@Nullable Long toastBlksRead) {
         this.toastBlksRead = toastBlksRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.toast_blks_hit</code>.
-     */
     @Nullable
     public Long getToastBlksHit() {
         return this.toastBlksHit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.toast_blks_hit</code>.
-     */
     public void setToastBlksHit(@Nullable Long toastBlksHit) {
         this.toastBlksHit = toastBlksHit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.tidx_blks_read</code>.
-     */
     @Nullable
     public Long getTidxBlksRead() {
         return this.tidxBlksRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.tidx_blks_read</code>.
-     */
     public void setTidxBlksRead(@Nullable Long tidxBlksRead) {
         this.tidxBlksRead = tidxBlksRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.tidx_blks_hit</code>.
-     */
     @Nullable
     public Long getTidxBlksHit() {
         return this.tidxBlksHit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.tidx_blks_hit</code>.
-     */
     public void setTidxBlksHit(@Nullable Long tidxBlksHit) {
         this.tidxBlksHit = tidxBlksHit;
     }

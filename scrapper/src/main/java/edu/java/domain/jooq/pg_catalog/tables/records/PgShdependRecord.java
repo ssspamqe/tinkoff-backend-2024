@@ -17,9 +17,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_shdepend</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -32,112 +29,70 @@ public class PgShdependRecord extends TableRecordImpl<PgShdependRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdepend.dbid</code>.
-     */
     public void setDbid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdepend.dbid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDbid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdepend.classid</code>.
-     */
     public void setClassid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdepend.classid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdepend.objid</code>.
-     */
     public void setObjid(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdepend.objid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjid() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdepend.objsubid</code>.
-     */
     public void setObjsubid(@NotNull Integer value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdepend.objsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getObjsubid() {
         return (Integer) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdepend.refclassid</code>.
-     */
     public void setRefclassid(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdepend.refclassid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRefclassid() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdepend.refobjid</code>.
-     */
     public void setRefobjid(@NotNull Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdepend.refobjid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRefobjid() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shdepend.deptype</code>.
-     */
     public void setDeptype(@NotNull String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shdepend.deptype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDeptype() {
@@ -352,16 +307,10 @@ public class PgShdependRecord extends TableRecordImpl<PgShdependRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgShdependRecord
-     */
     public PgShdependRecord() {
         super(PgShdepend.PG_SHDEPEND);
     }
 
-    /**
-     * Create a detached, initialised PgShdependRecord
-     */
     @ConstructorProperties({ "dbid", "classid", "objid", "objsubid", "refclassid", "refobjid", "deptype" })
     public PgShdependRecord(@NotNull Long dbid, @NotNull Long classid, @NotNull Long objid, @NotNull Integer objsubid, @NotNull Long refclassid, @NotNull Long refobjid, @NotNull String deptype) {
         super(PgShdepend.PG_SHDEPEND);
@@ -376,9 +325,6 @@ public class PgShdependRecord extends TableRecordImpl<PgShdependRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgShdependRecord
-     */
     public PgShdependRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgShdepend value) {
         super(PgShdepend.PG_SHDEPEND);
 

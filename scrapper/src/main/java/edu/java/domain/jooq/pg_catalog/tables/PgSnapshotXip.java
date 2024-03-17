@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgSnapshotXipRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -27,9 +25,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_snapshot_xip</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,28 +37,14 @@ public class PgSnapshotXip extends TableImpl<PgSnapshotXipRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_snapshot_xip</code>
-     */
     public static final PgSnapshotXip PG_SNAPSHOT_XIP = new PgSnapshotXip();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgSnapshotXipRecord> getRecordType() {
         return PgSnapshotXipRecord.class;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgSnapshotXipRecord, Object> PG_SNAPSHOT_XIP_ = createField(DSL.name("pg_snapshot_xip"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"xid8\""), this, "");
 
@@ -77,23 +58,14 @@ public class PgSnapshotXip extends TableImpl<PgSnapshotXipRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_snapshot_xip</code> table reference
-     */
     public PgSnapshotXip(String alias) {
         this(DSL.name(alias), PG_SNAPSHOT_XIP);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_snapshot_xip</code> table reference
-     */
     public PgSnapshotXip(Name alias) {
         this(alias, PG_SNAPSHOT_XIP);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_snapshot_xip</code> table reference
-     */
     public PgSnapshotXip() {
         this(DSL.name("pg_snapshot_xip"), null);
     }
@@ -122,27 +94,18 @@ public class PgSnapshotXip extends TableImpl<PgSnapshotXipRecord> {
         return new PgSnapshotXip(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSnapshotXip rename(String name) {
         return new PgSnapshotXip(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSnapshotXip rename(Name name) {
         return new PgSnapshotXip(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSnapshotXip rename(Table<?> name) {
@@ -159,9 +122,6 @@ public class PgSnapshotXip extends TableImpl<PgSnapshotXipRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgSnapshotXip call(
           Object __1
     ) {
@@ -172,9 +132,6 @@ public class PgSnapshotXip extends TableImpl<PgSnapshotXipRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgSnapshotXip call(
           Field<Object> __1
     ) {
@@ -185,17 +142,10 @@ public class PgSnapshotXip extends TableImpl<PgSnapshotXipRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super Object, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Object, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

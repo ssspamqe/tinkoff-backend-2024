@@ -19,9 +19,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The routine <code>pg_catalog.date_mi_interval</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,24 +31,12 @@ public class DateMiInterval extends AbstractRoutine<LocalDateTime> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.date_mi_interval.RETURN_VALUE</code>.
-     */
     public static final Parameter<LocalDateTime> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.LOCALDATETIME(6), false, false);
 
-    /**
-     * The parameter <code>pg_catalog.date_mi_interval._1</code>.
-     */
     public static final Parameter<LocalDate> _1 = Internal.createParameter("_1", SQLDataType.LOCALDATE, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.date_mi_interval._2</code>.
-     */
     public static final Parameter<YearToSecond> _2 = Internal.createParameter("_2", SQLDataType.INTERVAL, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public DateMiInterval() {
         super("date_mi_interval", PgCatalog.PG_CATALOG, SQLDataType.LOCALDATETIME(6));
 
@@ -60,32 +45,18 @@ public class DateMiInterval extends AbstractRoutine<LocalDateTime> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(LocalDate value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<LocalDate> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(YearToSecond value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<YearToSecond> field) {
         setField(_2, field);
     }

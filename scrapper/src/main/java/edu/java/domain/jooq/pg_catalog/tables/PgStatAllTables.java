@@ -26,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_all_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -41,149 +38,64 @@ public class PgStatAllTables extends TableImpl<PgStatAllTablesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_all_tables</code>
-     */
     public static final PgStatAllTables PG_STAT_ALL_TABLES = new PgStatAllTables();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatAllTablesRecord> getRecordType() {
         return PgStatAllTablesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.relid</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.schemaname</code>.
-     */
     public final TableField<PgStatAllTablesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.relname</code>.
-     */
     public final TableField<PgStatAllTablesRecord, String> RELNAME = createField(DSL.name("relname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.seq_scan</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> SEQ_SCAN = createField(DSL.name("seq_scan"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.last_seq_scan</code>.
-     */
     public final TableField<PgStatAllTablesRecord, OffsetDateTime> LAST_SEQ_SCAN = createField(DSL.name("last_seq_scan"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.seq_tup_read</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> SEQ_TUP_READ = createField(DSL.name("seq_tup_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.idx_scan</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> IDX_SCAN = createField(DSL.name("idx_scan"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.last_idx_scan</code>.
-     */
     public final TableField<PgStatAllTablesRecord, OffsetDateTime> LAST_IDX_SCAN = createField(DSL.name("last_idx_scan"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.idx_tup_fetch</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> IDX_TUP_FETCH = createField(DSL.name("idx_tup_fetch"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.n_tup_ins</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_TUP_INS = createField(DSL.name("n_tup_ins"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.n_tup_upd</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_TUP_UPD = createField(DSL.name("n_tup_upd"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.n_tup_del</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_TUP_DEL = createField(DSL.name("n_tup_del"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.n_tup_hot_upd</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_TUP_HOT_UPD = createField(DSL.name("n_tup_hot_upd"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.n_tup_newpage_upd</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_TUP_NEWPAGE_UPD = createField(DSL.name("n_tup_newpage_upd"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.n_live_tup</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_LIVE_TUP = createField(DSL.name("n_live_tup"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.n_dead_tup</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_DEAD_TUP = createField(DSL.name("n_dead_tup"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_all_tables.n_mod_since_analyze</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_MOD_SINCE_ANALYZE = createField(DSL.name("n_mod_since_analyze"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.n_ins_since_vacuum</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> N_INS_SINCE_VACUUM = createField(DSL.name("n_ins_since_vacuum"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.last_vacuum</code>.
-     */
     public final TableField<PgStatAllTablesRecord, OffsetDateTime> LAST_VACUUM = createField(DSL.name("last_vacuum"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.last_autovacuum</code>.
-     */
     public final TableField<PgStatAllTablesRecord, OffsetDateTime> LAST_AUTOVACUUM = createField(DSL.name("last_autovacuum"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.last_analyze</code>.
-     */
     public final TableField<PgStatAllTablesRecord, OffsetDateTime> LAST_ANALYZE = createField(DSL.name("last_analyze"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.last_autoanalyze</code>.
-     */
     public final TableField<PgStatAllTablesRecord, OffsetDateTime> LAST_AUTOANALYZE = createField(DSL.name("last_autoanalyze"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.vacuum_count</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> VACUUM_COUNT = createField(DSL.name("vacuum_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.autovacuum_count</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> AUTOVACUUM_COUNT = createField(DSL.name("autovacuum_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.analyze_count</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> ANALYZE_COUNT = createField(DSL.name("analyze_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_tables.autoanalyze_count</code>.
-     */
     public final TableField<PgStatAllTablesRecord, Long> AUTOANALYZE_COUNT = createField(DSL.name("autoanalyze_count"), SQLDataType.BIGINT, this, "");
 
     private PgStatAllTables(Name alias, Table<PgStatAllTablesRecord> aliased) {
@@ -226,25 +138,14 @@ public class PgStatAllTables extends TableImpl<PgStatAllTablesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_all_tables</code> table
-     * reference
-     */
     public PgStatAllTables(String alias) {
         this(DSL.name(alias), PG_STAT_ALL_TABLES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_all_tables</code> table
-     * reference
-     */
     public PgStatAllTables(Name alias) {
         this(alias, PG_STAT_ALL_TABLES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_all_tables</code> table reference
-     */
     public PgStatAllTables() {
         this(DSL.name("pg_stat_all_tables"), null);
     }
@@ -277,27 +178,18 @@ public class PgStatAllTables extends TableImpl<PgStatAllTablesRecord> {
         return new PgStatAllTables(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatAllTables rename(String name) {
         return new PgStatAllTables(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatAllTables rename(Name name) {
         return new PgStatAllTables(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatAllTables rename(Table<?> name) {

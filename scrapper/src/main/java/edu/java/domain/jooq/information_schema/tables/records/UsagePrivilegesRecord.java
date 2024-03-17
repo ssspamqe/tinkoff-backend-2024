@@ -20,9 +20,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.usage_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,127 +32,73 @@ public class UsagePrivilegesRecord extends TableRecordImpl<UsagePrivilegesRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.grantor</code>.
-     */
     public void setGrantor(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.grantee</code>.
-     */
     public void setGrantee(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.usage_privileges.object_catalog</code>.
-     */
     public void setObjectCatalog(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.usage_privileges.object_catalog</code>.
-     */
     @Nullable
     public String getObjectCatalog() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.usage_privileges.object_schema</code>.
-     */
     public void setObjectSchema(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.usage_privileges.object_schema</code>.
-     */
     @Nullable
     public String getObjectSchema() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.object_name</code>.
-     */
     public void setObjectName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.object_name</code>.
-     */
     @Nullable
     public String getObjectName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.object_type</code>.
-     */
     public void setObjectType(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.usage_privileges.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.usage_privileges.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
@@ -396,16 +339,10 @@ public class UsagePrivilegesRecord extends TableRecordImpl<UsagePrivilegesRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached UsagePrivilegesRecord
-     */
     public UsagePrivilegesRecord() {
         super(UsagePrivileges.USAGE_PRIVILEGES);
     }
 
-    /**
-     * Create a detached, initialised UsagePrivilegesRecord
-     */
     @ConstructorProperties({ "grantor", "grantee", "objectCatalog", "objectSchema", "objectName", "objectType", "privilegeType", "isGrantable" })
     public UsagePrivilegesRecord(@Nullable String grantor, @Nullable String grantee, @Nullable String objectCatalog, @Nullable String objectSchema, @Nullable String objectName, @Nullable String objectType, @Nullable String privilegeType, @Nullable String isGrantable) {
         super(UsagePrivileges.USAGE_PRIVILEGES);
@@ -421,9 +358,6 @@ public class UsagePrivilegesRecord extends TableRecordImpl<UsagePrivilegesRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised UsagePrivilegesRecord
-     */
     public UsagePrivilegesRecord(edu.java.domain.jooq.information_schema.tables.pojos.UsagePrivileges value) {
         super(UsagePrivileges.USAGE_PRIVILEGES);
 

@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_prepared_statement</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -72,122 +69,74 @@ public class PgPreparedStatement implements Serializable {
         this.customPlans = customPlans;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.statement</code>.
-     */
     @Nullable
     public String getStatement() {
         return this.statement;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.statement</code>.
-     */
     public void setStatement(@Nullable String statement) {
         this.statement = statement;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.prepare_time</code>.
-     */
     @Nullable
     public OffsetDateTime getPrepareTime() {
         return this.prepareTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.prepare_time</code>.
-     */
     public void setPrepareTime(@Nullable OffsetDateTime prepareTime) {
         this.prepareTime = prepareTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.parameter_types</code>.
-     */
     @Nullable
     public Object[] getParameterTypes() {
         return this.parameterTypes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.parameter_types</code>.
-     */
     public void setParameterTypes(@Nullable Object[] parameterTypes) {
         this.parameterTypes = parameterTypes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.result_types</code>.
-     */
     @Nullable
     public Object[] getResultTypes() {
         return this.resultTypes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.result_types</code>.
-     */
     public void setResultTypes(@Nullable Object[] resultTypes) {
         this.resultTypes = resultTypes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.from_sql</code>.
-     */
     @Nullable
     public Boolean getFromSql() {
         return this.fromSql;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.from_sql</code>.
-     */
     public void setFromSql(@Nullable Boolean fromSql) {
         this.fromSql = fromSql;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.generic_plans</code>.
-     */
     @Nullable
     public Long getGenericPlans() {
         return this.genericPlans;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.generic_plans</code>.
-     */
     public void setGenericPlans(@Nullable Long genericPlans) {
         this.genericPlans = genericPlans;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.custom_plans</code>.
-     */
     @Nullable
     public Long getCustomPlans() {
         return this.customPlans;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.custom_plans</code>.
-     */
     public void setCustomPlans(@Nullable Long customPlans) {
         this.customPlans = customPlans;
     }

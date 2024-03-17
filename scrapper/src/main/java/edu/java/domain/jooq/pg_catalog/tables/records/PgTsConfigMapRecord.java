@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_config_map</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,64 +30,40 @@ public class PgTsConfigMapRecord extends UpdatableRecordImpl<PgTsConfigMapRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config_map.mapcfg</code>.
-     */
     public void setMapcfg(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config_map.mapcfg</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getMapcfg() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config_map.maptokentype</code>.
-     */
     public void setMaptokentype(@NotNull Integer value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config_map.maptokentype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getMaptokentype() {
         return (Integer) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config_map.mapseqno</code>.
-     */
     public void setMapseqno(@NotNull Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config_map.mapseqno</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getMapseqno() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_config_map.mapdict</code>.
-     */
     public void setMapdict(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_config_map.mapdict</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getMapdict() {
@@ -237,16 +210,10 @@ public class PgTsConfigMapRecord extends UpdatableRecordImpl<PgTsConfigMapRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTsConfigMapRecord
-     */
     public PgTsConfigMapRecord() {
         super(PgTsConfigMap.PG_TS_CONFIG_MAP);
     }
 
-    /**
-     * Create a detached, initialised PgTsConfigMapRecord
-     */
     @ConstructorProperties({ "mapcfg", "maptokentype", "mapseqno", "mapdict" })
     public PgTsConfigMapRecord(@NotNull Long mapcfg, @NotNull Integer maptokentype, @NotNull Integer mapseqno, @NotNull Long mapdict) {
         super(PgTsConfigMap.PG_TS_CONFIG_MAP);
@@ -258,9 +225,6 @@ public class PgTsConfigMapRecord extends UpdatableRecordImpl<PgTsConfigMapRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTsConfigMapRecord
-     */
     public PgTsConfigMapRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTsConfigMap value) {
         super(PgTsConfigMap.PG_TS_CONFIG_MAP);
 

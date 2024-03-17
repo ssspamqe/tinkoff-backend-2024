@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_parameter_acl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,48 +31,30 @@ public class PgParameterAclRecord extends UpdatableRecordImpl<PgParameterAclReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_parameter_acl.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_parameter_acl.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_parameter_acl.parname</code>.
-     */
     public void setParname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_parameter_acl.parname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getParname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_parameter_acl.paracl</code>.
-     */
     public void setParacl(@Nullable String[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_parameter_acl.paracl</code>.
-     */
     @Nullable
     public String[] getParacl() {
         return (String[]) get(2);
@@ -195,16 +174,10 @@ public class PgParameterAclRecord extends UpdatableRecordImpl<PgParameterAclReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgParameterAclRecord
-     */
     public PgParameterAclRecord() {
         super(PgParameterAcl.PG_PARAMETER_ACL);
     }
 
-    /**
-     * Create a detached, initialised PgParameterAclRecord
-     */
     @ConstructorProperties({ "oid", "parname", "paracl" })
     public PgParameterAclRecord(@NotNull Long oid, @NotNull String parname, @Nullable String[] paracl) {
         super(PgParameterAcl.PG_PARAMETER_ACL);
@@ -215,9 +188,6 @@ public class PgParameterAclRecord extends UpdatableRecordImpl<PgParameterAclReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgParameterAclRecord
-     */
     public PgParameterAclRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgParameterAcl value) {
         super(PgParameterAcl.PG_PARAMETER_ACL);
 

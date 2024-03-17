@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -88,185 +85,111 @@ public class Sequences implements Serializable {
         this.cycleOption = cycleOption;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.sequence_catalog</code>.
-     */
     @Nullable
     public String getSequenceCatalog() {
         return this.sequenceCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.sequence_catalog</code>.
-     */
     public void setSequenceCatalog(@Nullable String sequenceCatalog) {
         this.sequenceCatalog = sequenceCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.sequence_schema</code>.
-     */
     @Nullable
     public String getSequenceSchema() {
         return this.sequenceSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.sequence_schema</code>.
-     */
     public void setSequenceSchema(@Nullable String sequenceSchema) {
         this.sequenceSchema = sequenceSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.sequence_name</code>.
-     */
     @Nullable
     public String getSequenceName() {
         return this.sequenceName;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.sequence_name</code>.
-     */
     public void setSequenceName(@Nullable String sequenceName) {
         this.sequenceName = sequenceName;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.data_type</code>.
-     */
     @Nullable
     public String getDataType() {
         return this.dataType;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.data_type</code>.
-     */
     public void setDataType(@Nullable String dataType) {
         this.dataType = dataType;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.numeric_precision</code>.
-     */
     @Nullable
     public Integer getNumericPrecision() {
         return this.numericPrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.numeric_precision</code>.
-     */
     public void setNumericPrecision(@Nullable Integer numericPrecision) {
         this.numericPrecision = numericPrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.sequences.numeric_precision_radix</code>.
-     */
     @Nullable
     public Integer getNumericPrecisionRadix() {
         return this.numericPrecisionRadix;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.sequences.numeric_precision_radix</code>.
-     */
     public void setNumericPrecisionRadix(@Nullable Integer numericPrecisionRadix) {
         this.numericPrecisionRadix = numericPrecisionRadix;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.numeric_scale</code>.
-     */
     @Nullable
     public Integer getNumericScale() {
         return this.numericScale;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.numeric_scale</code>.
-     */
     public void setNumericScale(@Nullable Integer numericScale) {
         this.numericScale = numericScale;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.start_value</code>.
-     */
     @Nullable
     public String getStartValue() {
         return this.startValue;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.start_value</code>.
-     */
     public void setStartValue(@Nullable String startValue) {
         this.startValue = startValue;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.minimum_value</code>.
-     */
     @Nullable
     public String getMinimumValue() {
         return this.minimumValue;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.minimum_value</code>.
-     */
     public void setMinimumValue(@Nullable String minimumValue) {
         this.minimumValue = minimumValue;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.maximum_value</code>.
-     */
     @Nullable
     public String getMaximumValue() {
         return this.maximumValue;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.maximum_value</code>.
-     */
     public void setMaximumValue(@Nullable String maximumValue) {
         this.maximumValue = maximumValue;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.increment</code>.
-     */
     @Nullable
     public String getIncrement() {
         return this.increment;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.increment</code>.
-     */
     public void setIncrement(@Nullable String increment) {
         this.increment = increment;
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.cycle_option</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getCycleOption() {
         return this.cycleOption;
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.cycle_option</code>.
-     */
     public void setCycleOption(@Nullable String cycleOption) {
         this.cycleOption = cycleOption;
     }

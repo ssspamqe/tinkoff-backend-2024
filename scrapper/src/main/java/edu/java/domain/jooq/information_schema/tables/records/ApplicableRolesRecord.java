@@ -20,9 +20,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.applicable_roles</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,46 +32,28 @@ public class ApplicableRolesRecord extends TableRecordImpl<ApplicableRolesRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.applicable_roles.grantee</code>.
-     */
     public void setGrantee(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.applicable_roles.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.applicable_roles.role_name</code>.
-     */
     public void setRoleName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.applicable_roles.role_name</code>.
-     */
     @Nullable
     public String getRoleName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.applicable_roles.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.applicable_roles.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
@@ -185,16 +164,10 @@ public class ApplicableRolesRecord extends TableRecordImpl<ApplicableRolesRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ApplicableRolesRecord
-     */
     public ApplicableRolesRecord() {
         super(ApplicableRoles.APPLICABLE_ROLES);
     }
 
-    /**
-     * Create a detached, initialised ApplicableRolesRecord
-     */
     @ConstructorProperties({ "grantee", "roleName", "isGrantable" })
     public ApplicableRolesRecord(@Nullable String grantee, @Nullable String roleName, @Nullable String isGrantable) {
         super(ApplicableRoles.APPLICABLE_ROLES);
@@ -205,9 +178,6 @@ public class ApplicableRolesRecord extends TableRecordImpl<ApplicableRolesRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ApplicableRolesRecord
-     */
     public ApplicableRolesRecord(edu.java.domain.jooq.information_schema.tables.pojos.ApplicableRoles value) {
         super(ApplicableRoles.APPLICABLE_ROLES);
 

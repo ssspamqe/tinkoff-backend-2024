@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_rules</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,62 +51,38 @@ public class PgRules implements Serializable {
         this.definition = definition;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rules.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rules.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rules.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return this.tablename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rules.tablename</code>.
-     */
     public void setTablename(@Nullable String tablename) {
         this.tablename = tablename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rules.rulename</code>.
-     */
     @Nullable
     public String getRulename() {
         return this.rulename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rules.rulename</code>.
-     */
     public void setRulename(@Nullable String rulename) {
         this.rulename = rulename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rules.definition</code>.
-     */
     @Nullable
     public String getDefinition() {
         return this.definition;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rules.definition</code>.
-     */
     public void setDefinition(@Nullable String definition) {
         this.definition = definition;
     }

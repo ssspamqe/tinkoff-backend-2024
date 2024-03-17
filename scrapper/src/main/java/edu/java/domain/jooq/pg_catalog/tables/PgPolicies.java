@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgPoliciesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_policies</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,58 +40,28 @@ public class PgPolicies extends TableImpl<PgPoliciesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_policies</code>
-     */
     public static final PgPolicies PG_POLICIES = new PgPolicies();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgPoliciesRecord> getRecordType() {
         return PgPoliciesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_policies.schemaname</code>.
-     */
     public final TableField<PgPoliciesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policies.tablename</code>.
-     */
     public final TableField<PgPoliciesRecord, String> TABLENAME = createField(DSL.name("tablename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policies.policyname</code>.
-     */
     public final TableField<PgPoliciesRecord, String> POLICYNAME = createField(DSL.name("policyname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policies.permissive</code>.
-     */
     public final TableField<PgPoliciesRecord, String> PERMISSIVE = createField(DSL.name("permissive"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policies.roles</code>.
-     */
     public final TableField<PgPoliciesRecord, String[]> ROLES = createField(DSL.name("roles"), SQLDataType.VARCHAR.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policies.cmd</code>.
-     */
     public final TableField<PgPoliciesRecord, String> CMD = createField(DSL.name("cmd"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policies.qual</code>.
-     */
     public final TableField<PgPoliciesRecord, String> QUAL = createField(DSL.name("qual"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_policies.with_check</code>.
-     */
     public final TableField<PgPoliciesRecord, String> WITH_CHECK = createField(DSL.name("with_check"), SQLDataType.CLOB, this, "");
 
     private PgPolicies(Name alias, Table<PgPoliciesRecord> aliased) {
@@ -135,23 +100,14 @@ public class PgPolicies extends TableImpl<PgPoliciesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_policies</code> table reference
-     */
     public PgPolicies(String alias) {
         this(DSL.name(alias), PG_POLICIES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_policies</code> table reference
-     */
     public PgPolicies(Name alias) {
         this(alias, PG_POLICIES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_policies</code> table reference
-     */
     public PgPolicies() {
         this(DSL.name("pg_policies"), null);
     }
@@ -184,27 +140,18 @@ public class PgPolicies extends TableImpl<PgPoliciesRecord> {
         return new PgPolicies(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPolicies rename(String name) {
         return new PgPolicies(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPolicies rename(Name name) {
         return new PgPolicies(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPolicies rename(Table<?> name) {
@@ -221,17 +168,10 @@ public class PgPolicies extends TableImpl<PgPoliciesRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super String, ? super String, ? super String[], ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super String, ? super String, ? super String[], ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

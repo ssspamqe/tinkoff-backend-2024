@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_stat_have_stats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,29 +27,14 @@ public class PgStatHaveStats extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_stat_have_stats.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_stat_have_stats._1</code>.
-     */
     public static final Parameter<String> _1 = Internal.createParameter("_1", SQLDataType.CLOB, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.pg_stat_have_stats._2</code>.
-     */
     public static final Parameter<Long> _2 = Internal.createParameter("_2", SQLDataType.BIGINT, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.pg_stat_have_stats._3</code>.
-     */
     public static final Parameter<Long> _3 = Internal.createParameter("_3", SQLDataType.BIGINT, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgStatHaveStats() {
         super("pg_stat_have_stats", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -62,47 +44,26 @@ public class PgStatHaveStats extends AbstractRoutine<Boolean> {
         addInParameter(_3);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(String value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<String> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(Long value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<Long> field) {
         setField(_2, field);
     }
 
-    /**
-     * Set the <code>_3</code> parameter IN value to the routine
-     */
     public void set__3(Long value) {
         setValue(_3, value);
     }
 
-    /**
-     * Set the <code>_3</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__3(Field<Long> field) {
         setField(_3, field);
     }

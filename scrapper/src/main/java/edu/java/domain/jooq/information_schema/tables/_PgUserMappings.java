@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records._PgUserMappingsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema._pg_user_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,57 +40,26 @@ public class _PgUserMappings extends TableImpl<_PgUserMappingsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema._pg_user_mappings</code>
-     */
     public static final _PgUserMappings _PG_USER_MAPPINGS = new _PgUserMappings();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<_PgUserMappingsRecord> getRecordType() {
         return _PgUserMappingsRecord.class;
     }
 
-    /**
-     * The column <code>information_schema._pg_user_mappings.oid</code>.
-     */
     public final TableField<_PgUserMappingsRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>information_schema._pg_user_mappings.umoptions</code>.
-     */
     public final TableField<_PgUserMappingsRecord, String[]> UMOPTIONS = createField(DSL.name("umoptions"), SQLDataType.CLOB.array(), this, "");
 
-    /**
-     * The column <code>information_schema._pg_user_mappings.umuser</code>.
-     */
     public final TableField<_PgUserMappingsRecord, Long> UMUSER = createField(DSL.name("umuser"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_user_mappings.authorization_identifier</code>.
-     */
     public final TableField<_PgUserMappingsRecord, String> AUTHORIZATION_IDENTIFIER = createField(DSL.name("authorization_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_user_mappings.foreign_server_catalog</code>.
-     */
     public final TableField<_PgUserMappingsRecord, String> FOREIGN_SERVER_CATALOG = createField(DSL.name("foreign_server_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_user_mappings.foreign_server_name</code>.
-     */
     public final TableField<_PgUserMappingsRecord, String> FOREIGN_SERVER_NAME = createField(DSL.name("foreign_server_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema._pg_user_mappings.srvowner</code>.
-     */
     public final TableField<_PgUserMappingsRecord, String> SRVOWNER = createField(DSL.name("srvowner"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private _PgUserMappings(Name alias, Table<_PgUserMappingsRecord> aliased) {
@@ -118,26 +82,14 @@ public class _PgUserMappings extends TableImpl<_PgUserMappingsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema._pg_user_mappings</code> table
-     * reference
-     */
     public _PgUserMappings(String alias) {
         this(DSL.name(alias), _PG_USER_MAPPINGS);
     }
 
-    /**
-     * Create an aliased <code>information_schema._pg_user_mappings</code> table
-     * reference
-     */
     public _PgUserMappings(Name alias) {
         this(alias, _PG_USER_MAPPINGS);
     }
 
-    /**
-     * Create a <code>information_schema._pg_user_mappings</code> table
-     * reference
-     */
     public _PgUserMappings() {
         this(DSL.name("_pg_user_mappings"), null);
     }
@@ -170,27 +122,18 @@ public class _PgUserMappings extends TableImpl<_PgUserMappingsRecord> {
         return new _PgUserMappings(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgUserMappings rename(String name) {
         return new _PgUserMappings(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgUserMappings rename(Name name) {
         return new _PgUserMappings(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgUserMappings rename(Table<?> name) {
@@ -207,17 +150,10 @@ public class _PgUserMappings extends TableImpl<_PgUserMappingsRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super String[], ? super Long, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super String[], ? super Long, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.referential_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -74,155 +71,83 @@ public class ReferentialConstraints implements Serializable {
         this.deleteRule = deleteRule;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return this.constraintCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String constraintCatalog) {
         this.constraintCatalog = constraintCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return this.constraintSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String constraintSchema) {
         this.constraintSchema = constraintSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return this.constraintName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String constraintName) {
         this.constraintName = constraintName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.unique_constraint_catalog</code>.
-     */
     @Nullable
     public String getUniqueConstraintCatalog() {
         return this.uniqueConstraintCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.unique_constraint_catalog</code>.
-     */
     public void setUniqueConstraintCatalog(@Nullable String uniqueConstraintCatalog) {
         this.uniqueConstraintCatalog = uniqueConstraintCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.unique_constraint_schema</code>.
-     */
     @Nullable
     public String getUniqueConstraintSchema() {
         return this.uniqueConstraintSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.unique_constraint_schema</code>.
-     */
     public void setUniqueConstraintSchema(@Nullable String uniqueConstraintSchema) {
         this.uniqueConstraintSchema = uniqueConstraintSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.unique_constraint_name</code>.
-     */
     @Nullable
     public String getUniqueConstraintName() {
         return this.uniqueConstraintName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.unique_constraint_name</code>.
-     */
     public void setUniqueConstraintName(@Nullable String uniqueConstraintName) {
         this.uniqueConstraintName = uniqueConstraintName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.match_option</code>.
-     */
     @Nullable
     public String getMatchOption() {
         return this.matchOption;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.match_option</code>.
-     */
     public void setMatchOption(@Nullable String matchOption) {
         this.matchOption = matchOption;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.update_rule</code>.
-     */
     @Nullable
     public String getUpdateRule() {
         return this.updateRule;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.update_rule</code>.
-     */
     public void setUpdateRule(@Nullable String updateRule) {
         this.updateRule = updateRule;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.referential_constraints.delete_rule</code>.
-     */
     @Nullable
     public String getDeleteRule() {
         return this.deleteRule;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.referential_constraints.delete_rule</code>.
-     */
     public void setDeleteRule(@Nullable String deleteRule) {
         this.deleteRule = deleteRule;
     }

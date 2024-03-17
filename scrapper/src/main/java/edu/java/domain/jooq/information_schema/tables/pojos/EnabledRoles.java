@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.enabled_roles</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,17 +39,11 @@ public class EnabledRoles implements Serializable {
         this.roleName = roleName;
     }
 
-    /**
-     * Getter for <code>information_schema.enabled_roles.role_name</code>.
-     */
     @Nullable
     public String getRoleName() {
         return this.roleName;
     }
 
-    /**
-     * Setter for <code>information_schema.enabled_roles.role_name</code>.
-     */
     public void setRoleName(@Nullable String roleName) {
         this.roleName = roleName;
     }

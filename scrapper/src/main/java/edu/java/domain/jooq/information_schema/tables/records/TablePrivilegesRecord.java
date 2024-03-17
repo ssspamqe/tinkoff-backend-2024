@@ -20,9 +20,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.table_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,128 +32,74 @@ public class TablePrivilegesRecord extends TableRecordImpl<TablePrivilegesRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.table_privileges.grantor</code>.
-     */
     public void setGrantor(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.grantee</code>.
-     */
     public void setGrantee(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_privileges.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_privileges.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_privileges.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_privileges.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_privileges.with_hierarchy</code>.
-     */
     public void setWithHierarchy(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_privileges.with_hierarchy</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getWithHierarchy() {
@@ -397,16 +340,10 @@ public class TablePrivilegesRecord extends TableRecordImpl<TablePrivilegesRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TablePrivilegesRecord
-     */
     public TablePrivilegesRecord() {
         super(TablePrivileges.TABLE_PRIVILEGES);
     }
 
-    /**
-     * Create a detached, initialised TablePrivilegesRecord
-     */
     @ConstructorProperties({ "grantor", "grantee", "tableCatalog", "tableSchema", "tableName", "privilegeType", "isGrantable", "withHierarchy" })
     public TablePrivilegesRecord(@Nullable String grantor, @Nullable String grantee, @Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String privilegeType, @Nullable String isGrantable, @Nullable String withHierarchy) {
         super(TablePrivileges.TABLE_PRIVILEGES);
@@ -422,9 +359,6 @@ public class TablePrivilegesRecord extends TableRecordImpl<TablePrivilegesRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TablePrivilegesRecord
-     */
     public TablePrivilegesRecord(edu.java.domain.jooq.information_schema.tables.pojos.TablePrivileges value) {
         super(TablePrivileges.TABLE_PRIVILEGES);
 

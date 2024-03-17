@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgShmemAllocationsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_shmem_allocations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,38 +40,20 @@ public class PgShmemAllocations extends TableImpl<PgShmemAllocationsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_shmem_allocations</code>
-     */
     public static final PgShmemAllocations PG_SHMEM_ALLOCATIONS = new PgShmemAllocations();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgShmemAllocationsRecord> getRecordType() {
         return PgShmemAllocationsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_shmem_allocations.name</code>.
-     */
     public final TableField<PgShmemAllocationsRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shmem_allocations.off</code>.
-     */
     public final TableField<PgShmemAllocationsRecord, Long> OFF = createField(DSL.name("off"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shmem_allocations.size</code>.
-     */
     public final TableField<PgShmemAllocationsRecord, Long> SIZE = createField(DSL.name("size"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shmem_allocations.allocated_size</code>.
-     */
     public final TableField<PgShmemAllocationsRecord, Long> ALLOCATED_SIZE = createField(DSL.name("allocated_size"), SQLDataType.BIGINT, this, "");
 
     private PgShmemAllocations(Name alias, Table<PgShmemAllocationsRecord> aliased) {
@@ -93,25 +70,14 @@ public class PgShmemAllocations extends TableImpl<PgShmemAllocationsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_shmem_allocations</code> table
-     * reference
-     */
     public PgShmemAllocations(String alias) {
         this(DSL.name(alias), PG_SHMEM_ALLOCATIONS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_shmem_allocations</code> table
-     * reference
-     */
     public PgShmemAllocations(Name alias) {
         this(alias, PG_SHMEM_ALLOCATIONS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_shmem_allocations</code> table reference
-     */
     public PgShmemAllocations() {
         this(DSL.name("pg_shmem_allocations"), null);
     }
@@ -144,27 +110,18 @@ public class PgShmemAllocations extends TableImpl<PgShmemAllocationsRecord> {
         return new PgShmemAllocations(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShmemAllocations rename(String name) {
         return new PgShmemAllocations(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShmemAllocations rename(Name name) {
         return new PgShmemAllocations(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShmemAllocations rename(Table<?> name) {
@@ -181,17 +138,10 @@ public class PgShmemAllocations extends TableImpl<PgShmemAllocationsRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super String, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

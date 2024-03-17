@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_basebackup</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,100 +59,56 @@ public class PgStatProgressBasebackup implements Serializable {
         this.tablespacesStreamed = tablespacesStreamed;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_basebackup.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_basebackup.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_basebackup.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return this.phase;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_basebackup.phase</code>.
-     */
     public void setPhase(@Nullable String phase) {
         this.phase = phase;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_total</code>.
-     */
     @Nullable
     public Long getBackupTotal() {
         return this.backupTotal;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_total</code>.
-     */
     public void setBackupTotal(@Nullable Long backupTotal) {
         this.backupTotal = backupTotal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_streamed</code>.
-     */
     @Nullable
     public Long getBackupStreamed() {
         return this.backupStreamed;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_streamed</code>.
-     */
     public void setBackupStreamed(@Nullable Long backupStreamed) {
         this.backupStreamed = backupStreamed;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_total</code>.
-     */
     @Nullable
     public Long getTablespacesTotal() {
         return this.tablespacesTotal;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_total</code>.
-     */
     public void setTablespacesTotal(@Nullable Long tablespacesTotal) {
         this.tablespacesTotal = tablespacesTotal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_streamed</code>.
-     */
     @Nullable
     public Long getTablespacesStreamed() {
         return this.tablespacesStreamed;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_streamed</code>.
-     */
     public void setTablespacesStreamed(@Nullable Long tablespacesStreamed) {
         this.tablespacesStreamed = tablespacesStreamed;
     }

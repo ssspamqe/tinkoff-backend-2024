@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.DomainUdtUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.domain_udt_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,51 +39,24 @@ public class DomainUdtUsage extends TableImpl<DomainUdtUsageRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.domain_udt_usage</code>
-     */
     public static final DomainUdtUsage DOMAIN_UDT_USAGE = new DomainUdtUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<DomainUdtUsageRecord> getRecordType() {
         return DomainUdtUsageRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.domain_udt_usage.udt_catalog</code>.
-     */
     public final TableField<DomainUdtUsageRecord, String> UDT_CATALOG = createField(DSL.name("udt_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domain_udt_usage.udt_schema</code>.
-     */
     public final TableField<DomainUdtUsageRecord, String> UDT_SCHEMA = createField(DSL.name("udt_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domain_udt_usage.udt_name</code>.
-     */
     public final TableField<DomainUdtUsageRecord, String> UDT_NAME = createField(DSL.name("udt_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_udt_usage.domain_catalog</code>.
-     */
     public final TableField<DomainUdtUsageRecord, String> DOMAIN_CATALOG = createField(DSL.name("domain_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_udt_usage.domain_schema</code>.
-     */
     public final TableField<DomainUdtUsageRecord, String> DOMAIN_SCHEMA = createField(DSL.name("domain_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.domain_udt_usage.domain_name</code>.
-     */
     public final TableField<DomainUdtUsageRecord, String> DOMAIN_NAME = createField(DSL.name("domain_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private DomainUdtUsage(Name alias, Table<DomainUdtUsageRecord> aliased) {
@@ -111,25 +79,14 @@ public class DomainUdtUsage extends TableImpl<DomainUdtUsageRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.domain_udt_usage</code> table
-     * reference
-     */
     public DomainUdtUsage(String alias) {
         this(DSL.name(alias), DOMAIN_UDT_USAGE);
     }
 
-    /**
-     * Create an aliased <code>information_schema.domain_udt_usage</code> table
-     * reference
-     */
     public DomainUdtUsage(Name alias) {
         this(alias, DOMAIN_UDT_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.domain_udt_usage</code> table reference
-     */
     public DomainUdtUsage() {
         this(DSL.name("domain_udt_usage"), null);
     }
@@ -162,27 +119,18 @@ public class DomainUdtUsage extends TableImpl<DomainUdtUsageRecord> {
         return new DomainUdtUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DomainUdtUsage rename(String name) {
         return new DomainUdtUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DomainUdtUsage rename(Name name) {
         return new DomainUdtUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DomainUdtUsage rename(Table<?> name) {
@@ -199,17 +147,10 @@ public class DomainUdtUsage extends TableImpl<DomainUdtUsageRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

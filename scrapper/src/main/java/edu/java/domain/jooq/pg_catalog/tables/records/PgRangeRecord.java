@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_range</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,112 +30,70 @@ public class PgRangeRecord extends UpdatableRecordImpl<PgRangeRecord> implements
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngtypid</code>.
-     */
     public void setRngtypid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngtypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngtypid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngsubtype</code>.
-     */
     public void setRngsubtype(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngsubtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngsubtype() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngmultitypid</code>.
-     */
     public void setRngmultitypid(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngmultitypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngmultitypid() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngcollation</code>.
-     */
     public void setRngcollation(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngcollation</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngcollation() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngsubopc</code>.
-     */
     public void setRngsubopc(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngsubopc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRngsubopc() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngcanonical</code>.
-     */
     public void setRngcanonical(@NotNull String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngcanonical</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRngcanonical() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_range.rngsubdiff</code>.
-     */
     public void setRngsubdiff(@NotNull String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_range.rngsubdiff</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRngsubdiff() {
@@ -363,16 +318,10 @@ public class PgRangeRecord extends UpdatableRecordImpl<PgRangeRecord> implements
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgRangeRecord
-     */
     public PgRangeRecord() {
         super(PgRange.PG_RANGE);
     }
 
-    /**
-     * Create a detached, initialised PgRangeRecord
-     */
     @ConstructorProperties({ "rngtypid", "rngsubtype", "rngmultitypid", "rngcollation", "rngsubopc", "rngcanonical", "rngsubdiff" })
     public PgRangeRecord(@NotNull Long rngtypid, @NotNull Long rngsubtype, @NotNull Long rngmultitypid, @NotNull Long rngcollation, @NotNull Long rngsubopc, @NotNull String rngcanonical, @NotNull String rngsubdiff) {
         super(PgRange.PG_RANGE);
@@ -387,9 +336,6 @@ public class PgRangeRecord extends UpdatableRecordImpl<PgRangeRecord> implements
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgRangeRecord
-     */
     public PgRangeRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgRange value) {
         super(PgRange.PG_RANGE);
 

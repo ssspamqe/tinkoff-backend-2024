@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.check_constraint_routine_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,104 +59,56 @@ public class CheckConstraintRoutineUsage implements Serializable {
         this.specificName = specificName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return this.constraintCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String constraintCatalog) {
         this.constraintCatalog = constraintCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return this.constraintSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String constraintSchema) {
         this.constraintSchema = constraintSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return this.constraintName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String constraintName) {
         this.constraintName = constraintName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return this.specificCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String specificCatalog) {
         this.specificCatalog = specificCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return this.specificSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String specificSchema) {
         this.specificSchema = specificSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return this.specificName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String specificName) {
         this.specificName = specificName;
     }

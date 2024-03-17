@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgFileSettingsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_file_settings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,53 +40,26 @@ public class PgFileSettings extends TableImpl<PgFileSettingsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_file_settings</code>
-     */
     public static final PgFileSettings PG_FILE_SETTINGS = new PgFileSettings();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgFileSettingsRecord> getRecordType() {
         return PgFileSettingsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_file_settings.sourcefile</code>.
-     */
     public final TableField<PgFileSettingsRecord, String> SOURCEFILE = createField(DSL.name("sourcefile"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_file_settings.sourceline</code>.
-     */
     public final TableField<PgFileSettingsRecord, Integer> SOURCELINE = createField(DSL.name("sourceline"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_file_settings.seqno</code>.
-     */
     public final TableField<PgFileSettingsRecord, Integer> SEQNO = createField(DSL.name("seqno"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_file_settings.name</code>.
-     */
     public final TableField<PgFileSettingsRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_file_settings.setting</code>.
-     */
     public final TableField<PgFileSettingsRecord, String> SETTING = createField(DSL.name("setting"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_file_settings.applied</code>.
-     */
     public final TableField<PgFileSettingsRecord, Boolean> APPLIED = createField(DSL.name("applied"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_file_settings.error</code>.
-     */
     public final TableField<PgFileSettingsRecord, String> ERROR = createField(DSL.name("error"), SQLDataType.CLOB, this, "");
 
     private PgFileSettings(Name alias, Table<PgFileSettingsRecord> aliased) {
@@ -111,25 +79,14 @@ public class PgFileSettings extends TableImpl<PgFileSettingsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_file_settings</code> table
-     * reference
-     */
     public PgFileSettings(String alias) {
         this(DSL.name(alias), PG_FILE_SETTINGS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_file_settings</code> table
-     * reference
-     */
     public PgFileSettings(Name alias) {
         this(alias, PG_FILE_SETTINGS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_file_settings</code> table reference
-     */
     public PgFileSettings() {
         this(DSL.name("pg_file_settings"), null);
     }
@@ -162,27 +119,18 @@ public class PgFileSettings extends TableImpl<PgFileSettingsRecord> {
         return new PgFileSettings(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgFileSettings rename(String name) {
         return new PgFileSettings(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgFileSettings rename(Name name) {
         return new PgFileSettings(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgFileSettings rename(Table<?> name) {
@@ -199,17 +147,10 @@ public class PgFileSettings extends TableImpl<PgFileSettingsRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super Integer, ? super Integer, ? super String, ? super String, ? super Boolean, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super Integer, ? super Integer, ? super String, ? super String, ? super Boolean, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

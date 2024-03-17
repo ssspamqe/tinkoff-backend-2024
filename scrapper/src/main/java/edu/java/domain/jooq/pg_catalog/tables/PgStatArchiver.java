@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatArchiverRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_archiver</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,53 +42,26 @@ public class PgStatArchiver extends TableImpl<PgStatArchiverRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_archiver</code>
-     */
     public static final PgStatArchiver PG_STAT_ARCHIVER = new PgStatArchiver();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatArchiverRecord> getRecordType() {
         return PgStatArchiverRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_archiver.archived_count</code>.
-     */
     public final TableField<PgStatArchiverRecord, Long> ARCHIVED_COUNT = createField(DSL.name("archived_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_archiver.last_archived_wal</code>.
-     */
     public final TableField<PgStatArchiverRecord, String> LAST_ARCHIVED_WAL = createField(DSL.name("last_archived_wal"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_archiver.last_archived_time</code>.
-     */
     public final TableField<PgStatArchiverRecord, OffsetDateTime> LAST_ARCHIVED_TIME = createField(DSL.name("last_archived_time"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_archiver.failed_count</code>.
-     */
     public final TableField<PgStatArchiverRecord, Long> FAILED_COUNT = createField(DSL.name("failed_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_archiver.last_failed_wal</code>.
-     */
     public final TableField<PgStatArchiverRecord, String> LAST_FAILED_WAL = createField(DSL.name("last_failed_wal"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_archiver.last_failed_time</code>.
-     */
     public final TableField<PgStatArchiverRecord, OffsetDateTime> LAST_FAILED_TIME = createField(DSL.name("last_failed_time"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_archiver.stats_reset</code>.
-     */
     public final TableField<PgStatArchiverRecord, OffsetDateTime> STATS_RESET = createField(DSL.name("stats_reset"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgStatArchiver(Name alias, Table<PgStatArchiverRecord> aliased) {
@@ -112,25 +81,14 @@ public class PgStatArchiver extends TableImpl<PgStatArchiverRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_archiver</code> table
-     * reference
-     */
     public PgStatArchiver(String alias) {
         this(DSL.name(alias), PG_STAT_ARCHIVER);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_archiver</code> table
-     * reference
-     */
     public PgStatArchiver(Name alias) {
         this(alias, PG_STAT_ARCHIVER);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_archiver</code> table reference
-     */
     public PgStatArchiver() {
         this(DSL.name("pg_stat_archiver"), null);
     }
@@ -163,27 +121,18 @@ public class PgStatArchiver extends TableImpl<PgStatArchiverRecord> {
         return new PgStatArchiver(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatArchiver rename(String name) {
         return new PgStatArchiver(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatArchiver rename(Name name) {
         return new PgStatArchiver(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatArchiver rename(Table<?> name) {
@@ -200,17 +149,10 @@ public class PgStatArchiver extends TableImpl<PgStatArchiverRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super String, ? super OffsetDateTime, ? super Long, ? super String, ? super OffsetDateTime, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super String, ? super OffsetDateTime, ? super Long, ? super String, ? super OffsetDateTime, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

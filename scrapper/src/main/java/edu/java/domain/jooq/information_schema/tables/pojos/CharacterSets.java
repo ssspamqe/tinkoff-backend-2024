@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.character_sets</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,136 +67,74 @@ public class CharacterSets implements Serializable {
         this.defaultCollateName = defaultCollateName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return this.characterSetCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String characterSetCatalog) {
         this.characterSetCatalog = characterSetCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return this.characterSetSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String characterSetSchema) {
         this.characterSetSchema = characterSetSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return this.characterSetName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String characterSetName) {
         this.characterSetName = characterSetName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.character_repertoire</code>.
-     */
     @Nullable
     public String getCharacterRepertoire() {
         return this.characterRepertoire;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.character_repertoire</code>.
-     */
     public void setCharacterRepertoire(@Nullable String characterRepertoire) {
         this.characterRepertoire = characterRepertoire;
     }
 
-    /**
-     * Getter for <code>information_schema.character_sets.form_of_use</code>.
-     */
     @Nullable
     public String getFormOfUse() {
         return this.formOfUse;
     }
 
-    /**
-     * Setter for <code>information_schema.character_sets.form_of_use</code>.
-     */
     public void setFormOfUse(@Nullable String formOfUse) {
         this.formOfUse = formOfUse;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.default_collate_catalog</code>.
-     */
     @Nullable
     public String getDefaultCollateCatalog() {
         return this.defaultCollateCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.default_collate_catalog</code>.
-     */
     public void setDefaultCollateCatalog(@Nullable String defaultCollateCatalog) {
         this.defaultCollateCatalog = defaultCollateCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.default_collate_schema</code>.
-     */
     @Nullable
     public String getDefaultCollateSchema() {
         return this.defaultCollateSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.default_collate_schema</code>.
-     */
     public void setDefaultCollateSchema(@Nullable String defaultCollateSchema) {
         this.defaultCollateSchema = defaultCollateSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.character_sets.default_collate_name</code>.
-     */
     @Nullable
     public String getDefaultCollateName() {
         return this.defaultCollateName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.character_sets.default_collate_name</code>.
-     */
     public void setDefaultCollateName(@Nullable String defaultCollateName) {
         this.defaultCollateName = defaultCollateName;
     }

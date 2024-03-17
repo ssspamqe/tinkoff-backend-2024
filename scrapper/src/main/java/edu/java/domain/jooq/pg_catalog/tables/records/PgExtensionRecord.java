@@ -19,9 +19,6 @@ import org.jooq.Row8;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_extension</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,127 +31,79 @@ public class PgExtensionRecord extends UpdatableRecordImpl<PgExtensionRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extname</code>.
-     */
     public void setExtname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getExtname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extowner</code>.
-     */
     public void setExtowner(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getExtowner() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extnamespace</code>.
-     */
     public void setExtnamespace(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getExtnamespace() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extrelocatable</code>.
-     */
     public void setExtrelocatable(@NotNull Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extrelocatable</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getExtrelocatable() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extversion</code>.
-     */
     public void setExtversion(@NotNull String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extversion</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getExtversion() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extconfig</code>.
-     */
     public void setExtconfig(@Nullable Long[] value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extconfig</code>.
-     */
     @Nullable
     public Long[] getExtconfig() {
         return (Long[]) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extcondition</code>.
-     */
     public void setExtcondition(@Nullable String[] value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extcondition</code>.
-     */
     @Nullable
     public String[] getExtcondition() {
         return (String[]) get(7);
@@ -404,16 +353,10 @@ public class PgExtensionRecord extends UpdatableRecordImpl<PgExtensionRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgExtensionRecord
-     */
     public PgExtensionRecord() {
         super(PgExtension.PG_EXTENSION);
     }
 
-    /**
-     * Create a detached, initialised PgExtensionRecord
-     */
     @ConstructorProperties({ "oid", "extname", "extowner", "extnamespace", "extrelocatable", "extversion", "extconfig", "extcondition" })
     public PgExtensionRecord(@NotNull Long oid, @NotNull String extname, @NotNull Long extowner, @NotNull Long extnamespace, @NotNull Boolean extrelocatable, @NotNull String extversion, @Nullable Long[] extconfig, @Nullable String[] extcondition) {
         super(PgExtension.PG_EXTENSION);
@@ -429,9 +372,6 @@ public class PgExtensionRecord extends UpdatableRecordImpl<PgExtensionRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgExtensionRecord
-     */
     public PgExtensionRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgExtension value) {
         super(PgExtension.PG_EXTENSION);
 

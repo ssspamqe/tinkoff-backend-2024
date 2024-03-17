@@ -19,9 +19,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.json_array_elements</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,16 +31,10 @@ public class JsonArrayElementsRecord extends TableRecordImpl<JsonArrayElementsRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.json_array_elements.value</code>.
-     */
     public void setValue(@Nullable JSON value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.json_array_elements.value</code>.
-     */
     @Nullable
     public JSON getValue() {
         return (JSON) get(0);
@@ -101,16 +92,10 @@ public class JsonArrayElementsRecord extends TableRecordImpl<JsonArrayElementsRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonArrayElementsRecord
-     */
     public JsonArrayElementsRecord() {
         super(JsonArrayElements.JSON_ARRAY_ELEMENTS);
     }
 
-    /**
-     * Create a detached, initialised JsonArrayElementsRecord
-     */
     @ConstructorProperties({ "value" })
     public JsonArrayElementsRecord(@Nullable JSON value) {
         super(JsonArrayElements.JSON_ARRAY_ELEMENTS);
@@ -119,9 +104,6 @@ public class JsonArrayElementsRecord extends TableRecordImpl<JsonArrayElementsRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonArrayElementsRecord
-     */
     public JsonArrayElementsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonArrayElements value) {
         super(JsonArrayElements.JSON_ARRAY_ELEMENTS);
 

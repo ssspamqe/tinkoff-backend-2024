@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLsReplslotdirRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -29,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_replslotdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,33 +40,18 @@ public class PgLsReplslotdir extends TableImpl<PgLsReplslotdirRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ls_replslotdir</code>
-     */
     public static final PgLsReplslotdir PG_LS_REPLSLOTDIR = new PgLsReplslotdir();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLsReplslotdirRecord> getRecordType() {
         return PgLsReplslotdirRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ls_replslotdir.name</code>.
-     */
     public final TableField<PgLsReplslotdirRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ls_replslotdir.size</code>.
-     */
     public final TableField<PgLsReplslotdirRecord, Long> SIZE = createField(DSL.name("size"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ls_replslotdir.modification</code>.
-     */
     public final TableField<PgLsReplslotdirRecord, OffsetDateTime> MODIFICATION = createField(DSL.name("modification"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgLsReplslotdir(Name alias, Table<PgLsReplslotdirRecord> aliased) {
@@ -83,25 +64,14 @@ public class PgLsReplslotdir extends TableImpl<PgLsReplslotdirRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_replslotdir</code> table
-     * reference
-     */
     public PgLsReplslotdir(String alias) {
         this(DSL.name(alias), PG_LS_REPLSLOTDIR);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_replslotdir</code> table
-     * reference
-     */
     public PgLsReplslotdir(Name alias) {
         this(alias, PG_LS_REPLSLOTDIR);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ls_replslotdir</code> table reference
-     */
     public PgLsReplslotdir() {
         this(DSL.name("pg_ls_replslotdir"), null);
     }
@@ -130,27 +100,18 @@ public class PgLsReplslotdir extends TableImpl<PgLsReplslotdirRecord> {
         return new PgLsReplslotdir(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsReplslotdir rename(String name) {
         return new PgLsReplslotdir(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsReplslotdir rename(Name name) {
         return new PgLsReplslotdir(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsReplslotdir rename(Table<?> name) {
@@ -167,9 +128,6 @@ public class PgLsReplslotdir extends TableImpl<PgLsReplslotdirRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLsReplslotdir call(
           String slotName
     ) {
@@ -180,9 +138,6 @@ public class PgLsReplslotdir extends TableImpl<PgLsReplslotdirRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLsReplslotdir call(
           Field<String> slotName
     ) {
@@ -193,17 +148,10 @@ public class PgLsReplslotdir extends TableImpl<PgLsReplslotdirRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

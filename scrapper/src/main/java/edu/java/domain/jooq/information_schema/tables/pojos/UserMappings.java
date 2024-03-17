@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.user_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,53 +47,29 @@ public class UserMappings implements Serializable {
         this.foreignServerName = foreignServerName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mappings.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return this.authorizationIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mappings.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String authorizationIdentifier) {
         this.authorizationIdentifier = authorizationIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mappings.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return this.foreignServerCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mappings.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String foreignServerCatalog) {
         this.foreignServerCatalog = foreignServerCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mappings.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return this.foreignServerName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mappings.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String foreignServerName) {
         this.foreignServerName = foreignServerName;
     }

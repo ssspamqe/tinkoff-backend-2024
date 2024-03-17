@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.user_mapping_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,86 +30,46 @@ public class UserMappingOptionsRecord extends TableRecordImpl<UserMappingOptions
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mapping_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mapping_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return (String) get(4);
@@ -274,16 +231,10 @@ public class UserMappingOptionsRecord extends TableRecordImpl<UserMappingOptions
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached UserMappingOptionsRecord
-     */
     public UserMappingOptionsRecord() {
         super(UserMappingOptions.USER_MAPPING_OPTIONS);
     }
 
-    /**
-     * Create a detached, initialised UserMappingOptionsRecord
-     */
     @ConstructorProperties({ "authorizationIdentifier", "foreignServerCatalog", "foreignServerName", "optionName", "optionValue" })
     public UserMappingOptionsRecord(@Nullable String authorizationIdentifier, @Nullable String foreignServerCatalog, @Nullable String foreignServerName, @Nullable String optionName, @Nullable String optionValue) {
         super(UserMappingOptions.USER_MAPPING_OPTIONS);
@@ -296,9 +247,6 @@ public class UserMappingOptionsRecord extends TableRecordImpl<UserMappingOptions
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised UserMappingOptionsRecord
-     */
     public UserMappingOptionsRecord(edu.java.domain.jooq.information_schema.tables.pojos.UserMappingOptions value) {
         super(UserMappingOptions.USER_MAPPING_OPTIONS);
 

@@ -17,9 +17,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.width_bucket</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -32,34 +29,16 @@ public class WidthBucket1 extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.width_bucket.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.width_bucket._1</code>.
-     */
     public static final Parameter<BigDecimal> _1 = Internal.createParameter("_1", SQLDataType.NUMERIC, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.width_bucket._2</code>.
-     */
     public static final Parameter<BigDecimal> _2 = Internal.createParameter("_2", SQLDataType.NUMERIC, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.width_bucket._3</code>.
-     */
     public static final Parameter<BigDecimal> _3 = Internal.createParameter("_3", SQLDataType.NUMERIC, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.width_bucket._4</code>.
-     */
     public static final Parameter<Integer> _4 = Internal.createParameter("_4", SQLDataType.INTEGER, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public WidthBucket1() {
         super("width_bucket", PgCatalog.PG_CATALOG, SQLDataType.INTEGER);
 
@@ -71,62 +50,34 @@ public class WidthBucket1 extends AbstractRoutine<Integer> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(BigDecimal value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<BigDecimal> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(BigDecimal value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<BigDecimal> field) {
         setField(_2, field);
     }
 
-    /**
-     * Set the <code>_3</code> parameter IN value to the routine
-     */
     public void set__3(BigDecimal value) {
         setValue(_3, value);
     }
 
-    /**
-     * Set the <code>_3</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__3(Field<BigDecimal> field) {
         setField(_3, field);
     }
 
-    /**
-     * Set the <code>_4</code> parameter IN value to the routine
-     */
     public void set__4(Integer value) {
         setValue(_4, value);
     }
 
-    /**
-     * Set the <code>_4</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__4(Field<Integer> field) {
         setField(_4, field);
     }

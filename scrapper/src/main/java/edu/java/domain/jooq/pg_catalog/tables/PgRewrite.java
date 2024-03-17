@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgRewriteRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_rewrite</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,69 +45,29 @@ public class PgRewrite extends TableImpl<PgRewriteRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_rewrite</code>
-     */
     public static final PgRewrite PG_REWRITE = new PgRewrite();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgRewriteRecord> getRecordType() {
         return PgRewriteRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_rewrite.oid</code>.
-     */
     public final TableField<PgRewriteRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_rewrite.rulename</code>.
-     */
     public final TableField<PgRewriteRecord, String> RULENAME = createField(DSL.name("rulename"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_rewrite.ev_class</code>.
-     */
     public final TableField<PgRewriteRecord, Long> EV_CLASS = createField(DSL.name("ev_class"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_rewrite.ev_type</code>.
-     */
     public final TableField<PgRewriteRecord, String> EV_TYPE = createField(DSL.name("ev_type"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_rewrite.ev_enabled</code>.
-     */
     public final TableField<PgRewriteRecord, String> EV_ENABLED = createField(DSL.name("ev_enabled"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_rewrite.is_instead</code>.
-     */
     public final TableField<PgRewriteRecord, Boolean> IS_INSTEAD = createField(DSL.name("is_instead"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgRewriteRecord, Object> EV_QUAL = createField(DSL.name("ev_qual"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_node_tree\"").nullable(false), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgRewriteRecord, Object> EV_ACTION = createField(DSL.name("ev_action"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_node_tree\"").nullable(false), this, "");
 
@@ -123,23 +79,14 @@ public class PgRewrite extends TableImpl<PgRewriteRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_rewrite</code> table reference
-     */
     public PgRewrite(String alias) {
         this(DSL.name(alias), PG_REWRITE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_rewrite</code> table reference
-     */
     public PgRewrite(Name alias) {
         this(alias, PG_REWRITE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_rewrite</code> table reference
-     */
     public PgRewrite() {
         this(DSL.name("pg_rewrite"), null);
     }
@@ -184,27 +131,18 @@ public class PgRewrite extends TableImpl<PgRewriteRecord> {
         return new PgRewrite(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRewrite rename(String name) {
         return new PgRewrite(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRewrite rename(Name name) {
         return new PgRewrite(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgRewrite rename(Table<?> name) {
@@ -221,17 +159,10 @@ public class PgRewrite extends TableImpl<PgRewriteRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Boolean, ? super Object, ? super Object, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Boolean, ? super Object, ? super Object, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

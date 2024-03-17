@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_show_all_file_settings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,106 +30,64 @@ public class PgShowAllFileSettingsRecord extends TableRecordImpl<PgShowAllFileSe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.sourcefile</code>.
-     */
     public void setSourcefile(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.sourcefile</code>.
-     */
     @Nullable
     public String getSourcefile() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.sourceline</code>.
-     */
     public void setSourceline(@Nullable Integer value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.sourceline</code>.
-     */
     @Nullable
     public Integer getSourceline() {
         return (Integer) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.seqno</code>.
-     */
     public void setSeqno(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.seqno</code>.
-     */
     @Nullable
     public Integer getSeqno() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.setting</code>.
-     */
     public void setSetting(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.setting</code>.
-     */
     @Nullable
     public String getSetting() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.applied</code>.
-     */
     public void setApplied(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.applied</code>.
-     */
     @Nullable
     public Boolean getApplied() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.error</code>.
-     */
     public void setError(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.error</code>.
-     */
     @Nullable
     public String getError() {
         return (String) get(6);
@@ -346,16 +301,10 @@ public class PgShowAllFileSettingsRecord extends TableRecordImpl<PgShowAllFileSe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgShowAllFileSettingsRecord
-     */
     public PgShowAllFileSettingsRecord() {
         super(PgShowAllFileSettings.PG_SHOW_ALL_FILE_SETTINGS);
     }
 
-    /**
-     * Create a detached, initialised PgShowAllFileSettingsRecord
-     */
     @ConstructorProperties({ "sourcefile", "sourceline", "seqno", "name", "setting", "applied", "error" })
     public PgShowAllFileSettingsRecord(@Nullable String sourcefile, @Nullable Integer sourceline, @Nullable Integer seqno, @Nullable String name, @Nullable String setting, @Nullable Boolean applied, @Nullable String error) {
         super(PgShowAllFileSettings.PG_SHOW_ALL_FILE_SETTINGS);
@@ -370,9 +319,6 @@ public class PgShowAllFileSettingsRecord extends TableRecordImpl<PgShowAllFileSe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgShowAllFileSettingsRecord
-     */
     public PgShowAllFileSettingsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgShowAllFileSettings value) {
         super(PgShowAllFileSettings.PG_SHOW_ALL_FILE_SETTINGS);
 

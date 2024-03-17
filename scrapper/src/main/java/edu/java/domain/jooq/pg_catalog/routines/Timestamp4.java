@@ -18,9 +18,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.timestamp</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,19 +30,10 @@ public class Timestamp4 extends AbstractRoutine<LocalDateTime> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.timestamp.RETURN_VALUE</code>.
-     */
     public static final Parameter<LocalDateTime> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.LOCALDATETIME(6), false, false);
 
-    /**
-     * The parameter <code>pg_catalog.timestamp._1</code>.
-     */
     public static final Parameter<OffsetDateTime> _1 = Internal.createParameter("_1", SQLDataType.TIMESTAMPWITHTIMEZONE(6), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Timestamp4() {
         super("timestamp", PgCatalog.PG_CATALOG, SQLDataType.LOCALDATETIME(6));
 
@@ -54,17 +42,10 @@ public class Timestamp4 extends AbstractRoutine<LocalDateTime> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(OffsetDateTime value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<OffsetDateTime> field) {
         setField(_1, field);
     }

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -82,179 +79,103 @@ public class PgSequences implements Serializable {
         this.lastValue = lastValue;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.sequencename</code>.
-     */
     @Nullable
     public String getSequencename() {
         return this.sequencename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.sequencename</code>.
-     */
     public void setSequencename(@Nullable String sequencename) {
         this.sequencename = sequencename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.sequenceowner</code>.
-     */
     @Nullable
     public String getSequenceowner() {
         return this.sequenceowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.sequenceowner</code>.
-     */
     public void setSequenceowner(@Nullable String sequenceowner) {
         this.sequenceowner = sequenceowner;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getDataType() {
         return this.dataType;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setDataType(@Nullable Object dataType) {
         this.dataType = dataType;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.start_value</code>.
-     */
     @Nullable
     public Long getStartValue() {
         return this.startValue;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.start_value</code>.
-     */
     public void setStartValue(@Nullable Long startValue) {
         this.startValue = startValue;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.min_value</code>.
-     */
     @Nullable
     public Long getMinValue() {
         return this.minValue;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.min_value</code>.
-     */
     public void setMinValue(@Nullable Long minValue) {
         this.minValue = minValue;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.max_value</code>.
-     */
     @Nullable
     public Long getMaxValue() {
         return this.maxValue;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.max_value</code>.
-     */
     public void setMaxValue(@Nullable Long maxValue) {
         this.maxValue = maxValue;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.increment_by</code>.
-     */
     @Nullable
     public Long getIncrementBy() {
         return this.incrementBy;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.increment_by</code>.
-     */
     public void setIncrementBy(@Nullable Long incrementBy) {
         this.incrementBy = incrementBy;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.cycle</code>.
-     */
     @Nullable
     public Boolean getCycle() {
         return this.cycle;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.cycle</code>.
-     */
     public void setCycle(@Nullable Boolean cycle) {
         this.cycle = cycle;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.cache_size</code>.
-     */
     @Nullable
     public Long getCacheSize() {
         return this.cacheSize;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.cache_size</code>.
-     */
     public void setCacheSize(@Nullable Long cacheSize) {
         this.cacheSize = cacheSize;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.last_value</code>.
-     */
     @Nullable
     public Long getLastValue() {
         return this.lastValue;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.last_value</code>.
-     */
     public void setLastValue(@Nullable Long lastValue) {
         this.lastValue = lastValue;
     }

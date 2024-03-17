@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgGetMultixactMembersRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_multixact_members</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,29 +38,16 @@ public class PgGetMultixactMembers extends TableImpl<PgGetMultixactMembersRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_get_multixact_members</code>
-     */
     public static final PgGetMultixactMembers PG_GET_MULTIXACT_MEMBERS = new PgGetMultixactMembers();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgGetMultixactMembersRecord> getRecordType() {
         return PgGetMultixactMembersRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_get_multixact_members.xid</code>.
-     */
     public final TableField<PgGetMultixactMembersRecord, Long> XID = createField(DSL.name("xid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_multixact_members.mode</code>.
-     */
     public final TableField<PgGetMultixactMembersRecord, String> MODE = createField(DSL.name("mode"), SQLDataType.CLOB, this, "");
 
     private PgGetMultixactMembers(Name alias, Table<PgGetMultixactMembersRecord> aliased) {
@@ -78,25 +60,14 @@ public class PgGetMultixactMembers extends TableImpl<PgGetMultixactMembersRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_multixact_members</code> table
-     * reference
-     */
     public PgGetMultixactMembers(String alias) {
         this(DSL.name(alias), PG_GET_MULTIXACT_MEMBERS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_multixact_members</code> table
-     * reference
-     */
     public PgGetMultixactMembers(Name alias) {
         this(alias, PG_GET_MULTIXACT_MEMBERS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_get_multixact_members</code> table reference
-     */
     public PgGetMultixactMembers() {
         this(DSL.name("pg_get_multixact_members"), null);
     }
@@ -125,27 +96,18 @@ public class PgGetMultixactMembers extends TableImpl<PgGetMultixactMembersRecord
         return new PgGetMultixactMembers(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetMultixactMembers rename(String name) {
         return new PgGetMultixactMembers(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetMultixactMembers rename(Name name) {
         return new PgGetMultixactMembers(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetMultixactMembers rename(Table<?> name) {
@@ -162,9 +124,6 @@ public class PgGetMultixactMembers extends TableImpl<PgGetMultixactMembersRecord
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgGetMultixactMembers call(
           Long multixid
     ) {
@@ -175,9 +134,6 @@ public class PgGetMultixactMembers extends TableImpl<PgGetMultixactMembersRecord
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgGetMultixactMembers call(
           Field<Long> multixid
     ) {
@@ -188,17 +144,10 @@ public class PgGetMultixactMembers extends TableImpl<PgGetMultixactMembersRecord
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super Long, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super Long, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

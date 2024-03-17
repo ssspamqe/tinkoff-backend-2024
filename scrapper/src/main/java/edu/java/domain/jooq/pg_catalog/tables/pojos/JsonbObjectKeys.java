@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.jsonb_object_keys</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,17 +39,11 @@ public class JsonbObjectKeys implements Serializable {
         this.jsonbObjectKeys = jsonbObjectKeys;
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_object_keys.jsonb_object_keys</code>.
-     */
     @Nullable
     public String getJsonbObjectKeys() {
         return this.jsonbObjectKeys;
     }
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_object_keys.jsonb_object_keys</code>.
-     */
     public void setJsonbObjectKeys(@Nullable String jsonbObjectKeys) {
         this.jsonbObjectKeys = jsonbObjectKeys;
     }

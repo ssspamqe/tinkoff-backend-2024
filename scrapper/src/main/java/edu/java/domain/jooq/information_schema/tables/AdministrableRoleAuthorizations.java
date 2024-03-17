@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.AdministrableRoleAuthorizationsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.administrable_role_authorizations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,37 +39,18 @@ public class AdministrableRoleAuthorizations extends TableImpl<AdministrableRole
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.administrable_role_authorizations</code>
-     */
     public static final AdministrableRoleAuthorizations ADMINISTRABLE_ROLE_AUTHORIZATIONS = new AdministrableRoleAuthorizations();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<AdministrableRoleAuthorizationsRecord> getRecordType() {
         return AdministrableRoleAuthorizationsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.administrable_role_authorizations.grantee</code>.
-     */
     public final TableField<AdministrableRoleAuthorizationsRecord, String> GRANTEE = createField(DSL.name("grantee"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.administrable_role_authorizations.role_name</code>.
-     */
     public final TableField<AdministrableRoleAuthorizationsRecord, String> ROLE_NAME = createField(DSL.name("role_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.administrable_role_authorizations.is_grantable</code>.
-     */
     public final TableField<AdministrableRoleAuthorizationsRecord, String> IS_GRANTABLE = createField(DSL.name("is_grantable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
     private AdministrableRoleAuthorizations(Name alias, Table<AdministrableRoleAuthorizationsRecord> aliased) {
@@ -91,29 +67,14 @@ public class AdministrableRoleAuthorizations extends TableImpl<AdministrableRole
         """));
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.administrable_role_authorizations</code> table
-     * reference
-     */
     public AdministrableRoleAuthorizations(String alias) {
         this(DSL.name(alias), ADMINISTRABLE_ROLE_AUTHORIZATIONS);
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.administrable_role_authorizations</code> table
-     * reference
-     */
     public AdministrableRoleAuthorizations(Name alias) {
         this(alias, ADMINISTRABLE_ROLE_AUTHORIZATIONS);
     }
 
-    /**
-     * Create a
-     * <code>information_schema.administrable_role_authorizations</code> table
-     * reference
-     */
     public AdministrableRoleAuthorizations() {
         this(DSL.name("administrable_role_authorizations"), null);
     }
@@ -146,27 +107,18 @@ public class AdministrableRoleAuthorizations extends TableImpl<AdministrableRole
         return new AdministrableRoleAuthorizations(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public AdministrableRoleAuthorizations rename(String name) {
         return new AdministrableRoleAuthorizations(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public AdministrableRoleAuthorizations rename(Name name) {
         return new AdministrableRoleAuthorizations(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public AdministrableRoleAuthorizations rename(Table<?> name) {
@@ -183,17 +135,10 @@ public class AdministrableRoleAuthorizations extends TableImpl<AdministrableRole
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.txid_snapshot_xip</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,17 +39,11 @@ public class TxidSnapshotXip implements Serializable {
         this.txidSnapshotXip = txidSnapshotXip;
     }
 
-    /**
-     * Getter for <code>pg_catalog.txid_snapshot_xip.txid_snapshot_xip</code>.
-     */
     @Nullable
     public Long getTxidSnapshotXip() {
         return this.txidSnapshotXip;
     }
 
-    /**
-     * Setter for <code>pg_catalog.txid_snapshot_xip.txid_snapshot_xip</code>.
-     */
     public void setTxidSnapshotXip(@Nullable Long txidSnapshotXip) {
         this.txidSnapshotXip = txidSnapshotXip;
     }

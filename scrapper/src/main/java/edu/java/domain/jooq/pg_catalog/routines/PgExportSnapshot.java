@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_export_snapshot</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,14 +26,8 @@ public class PgExportSnapshot extends AbstractRoutine<String> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_export_snapshot.RETURN_VALUE</code>.
-     */
     public static final Parameter<String> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.CLOB, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgExportSnapshot() {
         super("pg_export_snapshot", PgCatalog.PG_CATALOG, SQLDataType.CLOB);
 

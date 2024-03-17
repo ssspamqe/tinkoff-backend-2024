@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.current_query</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,14 +26,8 @@ public class CurrentQuery extends AbstractRoutine<String> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.current_query.RETURN_VALUE</code>.
-     */
     public static final Parameter<String> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.CLOB, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public CurrentQuery() {
         super("current_query", PgCatalog.PG_CATALOG, SQLDataType.CLOB);
 

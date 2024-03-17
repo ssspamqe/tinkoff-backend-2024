@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_views</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,62 +51,38 @@ public class PgViews implements Serializable {
         this.definition = definition;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_views.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_views.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_views.viewname</code>.
-     */
     @Nullable
     public String getViewname() {
         return this.viewname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_views.viewname</code>.
-     */
     public void setViewname(@Nullable String viewname) {
         this.viewname = viewname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_views.viewowner</code>.
-     */
     @Nullable
     public String getViewowner() {
         return this.viewowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_views.viewowner</code>.
-     */
     public void setViewowner(@Nullable String viewowner) {
         this.viewowner = viewowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_views.definition</code>.
-     */
     @Nullable
     public String getDefinition() {
         return this.definition;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_views.definition</code>.
-     */
     public void setDefinition(@Nullable String definition) {
         this.definition = definition;
     }

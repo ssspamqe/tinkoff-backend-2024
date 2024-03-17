@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ColumnUdtUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.column_udt_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,55 +39,26 @@ public class ColumnUdtUsage extends TableImpl<ColumnUdtUsageRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.column_udt_usage</code>
-     */
     public static final ColumnUdtUsage COLUMN_UDT_USAGE = new ColumnUdtUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ColumnUdtUsageRecord> getRecordType() {
         return ColumnUdtUsageRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.column_udt_usage.udt_catalog</code>.
-     */
     public final TableField<ColumnUdtUsageRecord, String> UDT_CATALOG = createField(DSL.name("udt_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.column_udt_usage.udt_schema</code>.
-     */
     public final TableField<ColumnUdtUsageRecord, String> UDT_SCHEMA = createField(DSL.name("udt_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.column_udt_usage.udt_name</code>.
-     */
     public final TableField<ColumnUdtUsageRecord, String> UDT_NAME = createField(DSL.name("udt_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_udt_usage.table_catalog</code>.
-     */
     public final TableField<ColumnUdtUsageRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.column_udt_usage.table_schema</code>.
-     */
     public final TableField<ColumnUdtUsageRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.column_udt_usage.table_name</code>.
-     */
     public final TableField<ColumnUdtUsageRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.column_udt_usage.column_name</code>.
-     */
     public final TableField<ColumnUdtUsageRecord, String> COLUMN_NAME = createField(DSL.name("column_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private ColumnUdtUsage(Name alias, Table<ColumnUdtUsageRecord> aliased) {
@@ -119,25 +85,14 @@ public class ColumnUdtUsage extends TableImpl<ColumnUdtUsageRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.column_udt_usage</code> table
-     * reference
-     */
     public ColumnUdtUsage(String alias) {
         this(DSL.name(alias), COLUMN_UDT_USAGE);
     }
 
-    /**
-     * Create an aliased <code>information_schema.column_udt_usage</code> table
-     * reference
-     */
     public ColumnUdtUsage(Name alias) {
         this(alias, COLUMN_UDT_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.column_udt_usage</code> table reference
-     */
     public ColumnUdtUsage() {
         this(DSL.name("column_udt_usage"), null);
     }
@@ -170,27 +125,18 @@ public class ColumnUdtUsage extends TableImpl<ColumnUdtUsageRecord> {
         return new ColumnUdtUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnUdtUsage rename(String name) {
         return new ColumnUdtUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnUdtUsage rename(Name name) {
         return new ColumnUdtUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnUdtUsage rename(Table<?> name) {
@@ -207,17 +153,10 @@ public class ColumnUdtUsage extends TableImpl<ColumnUdtUsageRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

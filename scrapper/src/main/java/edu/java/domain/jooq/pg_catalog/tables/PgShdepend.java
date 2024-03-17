@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgShdependRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_shdepend</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,53 +45,26 @@ public class PgShdepend extends TableImpl<PgShdependRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_shdepend</code>
-     */
     public static final PgShdepend PG_SHDEPEND = new PgShdepend();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgShdependRecord> getRecordType() {
         return PgShdependRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_shdepend.dbid</code>.
-     */
     public final TableField<PgShdependRecord, Long> DBID = createField(DSL.name("dbid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shdepend.classid</code>.
-     */
     public final TableField<PgShdependRecord, Long> CLASSID = createField(DSL.name("classid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shdepend.objid</code>.
-     */
     public final TableField<PgShdependRecord, Long> OBJID = createField(DSL.name("objid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shdepend.objsubid</code>.
-     */
     public final TableField<PgShdependRecord, Integer> OBJSUBID = createField(DSL.name("objsubid"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shdepend.refclassid</code>.
-     */
     public final TableField<PgShdependRecord, Long> REFCLASSID = createField(DSL.name("refclassid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shdepend.refobjid</code>.
-     */
     public final TableField<PgShdependRecord, Long> REFOBJID = createField(DSL.name("refobjid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_shdepend.deptype</code>.
-     */
     public final TableField<PgShdependRecord, String> DEPTYPE = createField(DSL.name("deptype"), SQLDataType.CHAR.nullable(false), this, "");
 
     private PgShdepend(Name alias, Table<PgShdependRecord> aliased) {
@@ -106,23 +75,14 @@ public class PgShdepend extends TableImpl<PgShdependRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_shdepend</code> table reference
-     */
     public PgShdepend(String alias) {
         this(DSL.name(alias), PG_SHDEPEND);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_shdepend</code> table reference
-     */
     public PgShdepend(Name alias) {
         this(alias, PG_SHDEPEND);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_shdepend</code> table reference
-     */
     public PgShdepend() {
         this(DSL.name("pg_shdepend"), null);
     }
@@ -161,27 +121,18 @@ public class PgShdepend extends TableImpl<PgShdependRecord> {
         return new PgShdepend(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShdepend rename(String name) {
         return new PgShdepend(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShdepend rename(Name name) {
         return new PgShdepend(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgShdepend rename(Table<?> name) {
@@ -198,17 +149,10 @@ public class PgShdepend extends TableImpl<PgShdependRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super Long, ? super Long, ? super Integer, ? super Long, ? super Long, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super Long, ? super Long, ? super Integer, ? super Long, ? super Long, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

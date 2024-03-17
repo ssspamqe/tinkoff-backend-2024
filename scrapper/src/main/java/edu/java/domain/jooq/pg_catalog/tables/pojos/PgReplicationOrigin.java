@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_replication_origin</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,34 +43,22 @@ public class PgReplicationOrigin implements Serializable {
         this.roname = roname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_origin.roident</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRoident() {
         return this.roident;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_origin.roident</code>.
-     */
     public void setRoident(@NotNull Long roident) {
         this.roident = roident;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_origin.roname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRoname() {
         return this.roname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_origin.roname</code>.
-     */
     public void setRoname(@NotNull String roname) {
         this.roname = roname;
     }

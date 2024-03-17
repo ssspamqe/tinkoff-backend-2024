@@ -19,9 +19,6 @@ import org.jooq.Row7;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_event_trigger</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,112 +31,70 @@ public class PgEventTriggerRecord extends UpdatableRecordImpl<PgEventTriggerReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtname</code>.
-     */
     public void setEvtname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvtname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtevent</code>.
-     */
     public void setEvtevent(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtevent</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvtevent() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtowner</code>.
-     */
     public void setEvtowner(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getEvtowner() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtfoid</code>.
-     */
     public void setEvtfoid(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtfoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getEvtfoid() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtenabled</code>.
-     */
     public void setEvtenabled(@NotNull String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtenabled</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvtenabled() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evttags</code>.
-     */
     public void setEvttags(@Nullable String[] value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evttags</code>.
-     */
     @Nullable
     public String[] getEvttags() {
         return (String[]) get(6);
@@ -363,16 +318,10 @@ public class PgEventTriggerRecord extends UpdatableRecordImpl<PgEventTriggerReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgEventTriggerRecord
-     */
     public PgEventTriggerRecord() {
         super(PgEventTrigger.PG_EVENT_TRIGGER);
     }
 
-    /**
-     * Create a detached, initialised PgEventTriggerRecord
-     */
     @ConstructorProperties({ "oid", "evtname", "evtevent", "evtowner", "evtfoid", "evtenabled", "evttags" })
     public PgEventTriggerRecord(@NotNull Long oid, @NotNull String evtname, @NotNull String evtevent, @NotNull Long evtowner, @NotNull Long evtfoid, @NotNull String evtenabled, @Nullable String[] evttags) {
         super(PgEventTrigger.PG_EVENT_TRIGGER);
@@ -387,9 +336,6 @@ public class PgEventTriggerRecord extends UpdatableRecordImpl<PgEventTriggerReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgEventTriggerRecord
-     */
     public PgEventTriggerRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgEventTrigger value) {
         super(PgEventTrigger.PG_EVENT_TRIGGER);
 

@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatAllIndexesRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_all_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,63 +42,30 @@ public class PgStatAllIndexes extends TableImpl<PgStatAllIndexesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_all_indexes</code>
-     */
     public static final PgStatAllIndexes PG_STAT_ALL_INDEXES = new PgStatAllIndexes();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatAllIndexesRecord> getRecordType() {
         return PgStatAllIndexesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.relid</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.indexrelid</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, Long> INDEXRELID = createField(DSL.name("indexrelid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.schemaname</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.relname</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, String> RELNAME = createField(DSL.name("relname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.indexrelname</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, String> INDEXRELNAME = createField(DSL.name("indexrelname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.idx_scan</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, Long> IDX_SCAN = createField(DSL.name("idx_scan"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.last_idx_scan</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, OffsetDateTime> LAST_IDX_SCAN = createField(DSL.name("last_idx_scan"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.idx_tup_read</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, Long> IDX_TUP_READ = createField(DSL.name("idx_tup_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_all_indexes.idx_tup_fetch</code>.
-     */
     public final TableField<PgStatAllIndexesRecord, Long> IDX_TUP_FETCH = createField(DSL.name("idx_tup_fetch"), SQLDataType.BIGINT, this, "");
 
     private PgStatAllIndexes(Name alias, Table<PgStatAllIndexesRecord> aliased) {
@@ -128,25 +91,14 @@ public class PgStatAllIndexes extends TableImpl<PgStatAllIndexesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_all_indexes</code> table
-     * reference
-     */
     public PgStatAllIndexes(String alias) {
         this(DSL.name(alias), PG_STAT_ALL_INDEXES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_all_indexes</code> table
-     * reference
-     */
     public PgStatAllIndexes(Name alias) {
         this(alias, PG_STAT_ALL_INDEXES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_all_indexes</code> table reference
-     */
     public PgStatAllIndexes() {
         this(DSL.name("pg_stat_all_indexes"), null);
     }
@@ -179,27 +131,18 @@ public class PgStatAllIndexes extends TableImpl<PgStatAllIndexesRecord> {
         return new PgStatAllIndexes(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatAllIndexes rename(String name) {
         return new PgStatAllIndexes(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatAllIndexes rename(Name name) {
         return new PgStatAllIndexes(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatAllIndexes rename(Table<?> name) {
@@ -216,17 +159,10 @@ public class PgStatAllIndexes extends TableImpl<PgStatAllIndexesRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long, ? super OffsetDateTime, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long, ? super OffsetDateTime, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

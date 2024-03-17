@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.EnabledRolesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.enabled_roles</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,23 +39,14 @@ public class EnabledRoles extends TableImpl<EnabledRolesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.enabled_roles</code>
-     */
     public static final EnabledRoles ENABLED_ROLES = new EnabledRoles();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<EnabledRolesRecord> getRecordType() {
         return EnabledRolesRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.enabled_roles.role_name</code>.
-     */
     public final TableField<EnabledRolesRecord, String> ROLE_NAME = createField(DSL.name("role_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private EnabledRoles(Name alias, Table<EnabledRolesRecord> aliased) {
@@ -75,25 +61,14 @@ public class EnabledRoles extends TableImpl<EnabledRolesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.enabled_roles</code> table
-     * reference
-     */
     public EnabledRoles(String alias) {
         this(DSL.name(alias), ENABLED_ROLES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.enabled_roles</code> table
-     * reference
-     */
     public EnabledRoles(Name alias) {
         this(alias, ENABLED_ROLES);
     }
 
-    /**
-     * Create a <code>information_schema.enabled_roles</code> table reference
-     */
     public EnabledRoles() {
         this(DSL.name("enabled_roles"), null);
     }
@@ -126,27 +101,18 @@ public class EnabledRoles extends TableImpl<EnabledRolesRecord> {
         return new EnabledRoles(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public EnabledRoles rename(String name) {
         return new EnabledRoles(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public EnabledRoles rename(Name name) {
         return new EnabledRoles(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public EnabledRoles rename(Table<?> name) {
@@ -163,17 +129,10 @@ public class EnabledRoles extends TableImpl<EnabledRolesRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

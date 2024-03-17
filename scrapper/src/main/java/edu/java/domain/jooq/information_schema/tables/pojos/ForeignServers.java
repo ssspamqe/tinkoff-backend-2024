@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.foreign_servers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,121 +63,65 @@ public class ForeignServers implements Serializable {
         this.authorizationIdentifier = authorizationIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return this.foreignServerCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String foreignServerCatalog) {
         this.foreignServerCatalog = foreignServerCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return this.foreignServerName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String foreignServerName) {
         this.foreignServerName = foreignServerName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return this.foreignDataWrapperCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String foreignDataWrapperCatalog) {
         this.foreignDataWrapperCatalog = foreignDataWrapperCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return this.foreignDataWrapperName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String foreignDataWrapperName) {
         this.foreignDataWrapperName = foreignDataWrapperName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_server_type</code>.
-     */
     @Nullable
     public String getForeignServerType() {
         return this.foreignServerType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_server_type</code>.
-     */
     public void setForeignServerType(@Nullable String foreignServerType) {
         this.foreignServerType = foreignServerType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_server_version</code>.
-     */
     @Nullable
     public String getForeignServerVersion() {
         return this.foreignServerVersion;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_server_version</code>.
-     */
     public void setForeignServerVersion(@Nullable String foreignServerVersion) {
         this.foreignServerVersion = foreignServerVersion;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return this.authorizationIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String authorizationIdentifier) {
         this.authorizationIdentifier = authorizationIdentifier;
     }

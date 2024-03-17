@@ -20,9 +20,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.sql_features</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,107 +32,65 @@ public class SqlFeaturesRecord extends TableRecordImpl<SqlFeaturesRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.sql_features.feature_id</code>.
-     */
     public void setFeatureId(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.feature_id</code>.
-     */
     @Nullable
     public String getFeatureId() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.feature_name</code>.
-     */
     public void setFeatureName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.feature_name</code>.
-     */
     @Nullable
     public String getFeatureName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.sub_feature_id</code>.
-     */
     public void setSubFeatureId(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.sub_feature_id</code>.
-     */
     @Nullable
     public String getSubFeatureId() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.sub_feature_name</code>.
-     */
     public void setSubFeatureName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.sub_feature_name</code>.
-     */
     @Nullable
     public String getSubFeatureName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.is_supported</code>.
-     */
     public void setIsSupported(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.is_supported</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsSupported() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.is_verified_by</code>.
-     */
     public void setIsVerifiedBy(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.is_verified_by</code>.
-     */
     @Nullable
     public String getIsVerifiedBy() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.comments</code>.
-     */
     public void setComments(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.comments</code>.
-     */
     @Nullable
     public String getComments() {
         return (String) get(6);
@@ -349,16 +304,10 @@ public class SqlFeaturesRecord extends TableRecordImpl<SqlFeaturesRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached SqlFeaturesRecord
-     */
     public SqlFeaturesRecord() {
         super(SqlFeatures.SQL_FEATURES);
     }
 
-    /**
-     * Create a detached, initialised SqlFeaturesRecord
-     */
     @ConstructorProperties({ "featureId", "featureName", "subFeatureId", "subFeatureName", "isSupported", "isVerifiedBy", "comments" })
     public SqlFeaturesRecord(@Nullable String featureId, @Nullable String featureName, @Nullable String subFeatureId, @Nullable String subFeatureName, @Nullable String isSupported, @Nullable String isVerifiedBy, @Nullable String comments) {
         super(SqlFeatures.SQL_FEATURES);
@@ -373,9 +322,6 @@ public class SqlFeaturesRecord extends TableRecordImpl<SqlFeaturesRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised SqlFeaturesRecord
-     */
     public SqlFeaturesRecord(edu.java.domain.jooq.information_schema.tables.pojos.SqlFeatures value) {
         super(SqlFeatures.SQL_FEATURES);
 

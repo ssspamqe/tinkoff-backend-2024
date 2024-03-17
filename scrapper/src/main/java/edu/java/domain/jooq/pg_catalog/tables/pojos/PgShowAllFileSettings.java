@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_show_all_file_settings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,107 +63,65 @@ public class PgShowAllFileSettings implements Serializable {
         this.error = error;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.sourcefile</code>.
-     */
     @Nullable
     public String getSourcefile() {
         return this.sourcefile;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.sourcefile</code>.
-     */
     public void setSourcefile(@Nullable String sourcefile) {
         this.sourcefile = sourcefile;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.sourceline</code>.
-     */
     @Nullable
     public Integer getSourceline() {
         return this.sourceline;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.sourceline</code>.
-     */
     public void setSourceline(@Nullable Integer sourceline) {
         this.sourceline = sourceline;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.seqno</code>.
-     */
     @Nullable
     public Integer getSeqno() {
         return this.seqno;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.seqno</code>.
-     */
     public void setSeqno(@Nullable Integer seqno) {
         this.seqno = seqno;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.setting</code>.
-     */
     @Nullable
     public String getSetting() {
         return this.setting;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.setting</code>.
-     */
     public void setSetting(@Nullable String setting) {
         this.setting = setting;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.applied</code>.
-     */
     @Nullable
     public Boolean getApplied() {
         return this.applied;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.applied</code>.
-     */
     public void setApplied(@Nullable Boolean applied) {
         this.applied = applied;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_file_settings.error</code>.
-     */
     @Nullable
     public String getError() {
         return this.error;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_file_settings.error</code>.
-     */
     public void setError(@Nullable String error) {
         this.error = error;
     }

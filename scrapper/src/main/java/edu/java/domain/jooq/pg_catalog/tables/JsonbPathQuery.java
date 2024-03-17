@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonbPathQueryRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_path_query</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,23 +39,14 @@ public class JsonbPathQuery extends TableImpl<JsonbPathQueryRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.jsonb_path_query</code>
-     */
     public static final JsonbPathQuery JSONB_PATH_QUERY = new JsonbPathQuery();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonbPathQueryRecord> getRecordType() {
         return JsonbPathQueryRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.jsonb_path_query.jsonb_path_query</code>.
-     */
     public final TableField<JsonbPathQueryRecord, JSONB> JSONB_PATH_QUERY_ = createField(DSL.name("jsonb_path_query"), SQLDataType.JSONB, this, "");
 
     private JsonbPathQuery(Name alias, Table<JsonbPathQueryRecord> aliased) {
@@ -76,25 +62,14 @@ public class JsonbPathQuery extends TableImpl<JsonbPathQueryRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_path_query</code> table
-     * reference
-     */
     public JsonbPathQuery(String alias) {
         this(DSL.name(alias), JSONB_PATH_QUERY);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_path_query</code> table
-     * reference
-     */
     public JsonbPathQuery(Name alias) {
         this(alias, JSONB_PATH_QUERY);
     }
 
-    /**
-     * Create a <code>pg_catalog.jsonb_path_query</code> table reference
-     */
     public JsonbPathQuery() {
         this(DSL.name("jsonb_path_query"), null);
     }
@@ -123,27 +98,18 @@ public class JsonbPathQuery extends TableImpl<JsonbPathQueryRecord> {
         return new JsonbPathQuery(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPathQuery rename(String name) {
         return new JsonbPathQuery(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPathQuery rename(Name name) {
         return new JsonbPathQuery(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPathQuery rename(Table<?> name) {
@@ -160,9 +126,6 @@ public class JsonbPathQuery extends TableImpl<JsonbPathQueryRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbPathQuery call(
           JSONB target
         , Object path
@@ -179,9 +142,6 @@ public class JsonbPathQuery extends TableImpl<JsonbPathQueryRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbPathQuery call(
           Field<JSONB> target
         , Field<Object> path
@@ -198,17 +158,10 @@ public class JsonbPathQuery extends TableImpl<JsonbPathQueryRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super JSONB, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super JSONB, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

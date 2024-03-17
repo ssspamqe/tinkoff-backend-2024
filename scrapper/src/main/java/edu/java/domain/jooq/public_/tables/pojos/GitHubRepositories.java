@@ -15,9 +15,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>public.git_hub_repositories</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -65,41 +62,26 @@ public class GitHubRepositories implements Serializable {
         this.activitiesIds = activitiesIds;
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getId() {
         return this.id;
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.id</code>.
-     */
     public void setId(@NotNull Long id) {
         this.id = id;
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.link_id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLinkId() {
         return this.linkId;
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.link_id</code>.
-     */
     public void setLinkId(@NotNull Long linkId) {
         this.linkId = linkId;
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.name</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @Size(max = 128)
     @NotNull
@@ -107,16 +89,10 @@ public class GitHubRepositories implements Serializable {
         return this.name;
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.name</code>.
-     */
     public void setName(@NotNull String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.owner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @Size(max = 128)
     @NotNull
@@ -124,41 +100,26 @@ public class GitHubRepositories implements Serializable {
         return this.owner;
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.owner</code>.
-     */
     public void setOwner(@NotNull String owner) {
         this.owner = owner;
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.description_md5_hash</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDescriptionMd5Hash() {
         return this.descriptionMd5Hash;
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.description_md5_hash</code>.
-     */
     public void setDescriptionMd5Hash(@NotNull String descriptionMd5Hash) {
         this.descriptionMd5Hash = descriptionMd5Hash;
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.activities_ids</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long[] getActivitiesIds() {
         return this.activitiesIds;
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.activities_ids</code>.
-     */
     public void setActivitiesIds(@NotNull Long[] activitiesIds) {
         this.activitiesIds = activitiesIds;
     }

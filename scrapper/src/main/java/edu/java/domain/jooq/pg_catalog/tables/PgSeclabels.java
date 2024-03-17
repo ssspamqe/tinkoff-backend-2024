@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgSeclabelsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_seclabels</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,58 +40,28 @@ public class PgSeclabels extends TableImpl<PgSeclabelsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_seclabels</code>
-     */
     public static final PgSeclabels PG_SECLABELS = new PgSeclabels();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgSeclabelsRecord> getRecordType() {
         return PgSeclabelsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_seclabels.objoid</code>.
-     */
     public final TableField<PgSeclabelsRecord, Long> OBJOID = createField(DSL.name("objoid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_seclabels.classoid</code>.
-     */
     public final TableField<PgSeclabelsRecord, Long> CLASSOID = createField(DSL.name("classoid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_seclabels.objsubid</code>.
-     */
     public final TableField<PgSeclabelsRecord, Integer> OBJSUBID = createField(DSL.name("objsubid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_seclabels.objtype</code>.
-     */
     public final TableField<PgSeclabelsRecord, String> OBJTYPE = createField(DSL.name("objtype"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_seclabels.objnamespace</code>.
-     */
     public final TableField<PgSeclabelsRecord, Long> OBJNAMESPACE = createField(DSL.name("objnamespace"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_seclabels.objname</code>.
-     */
     public final TableField<PgSeclabelsRecord, String> OBJNAME = createField(DSL.name("objname"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_seclabels.provider</code>.
-     */
     public final TableField<PgSeclabelsRecord, String> PROVIDER = createField(DSL.name("provider"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_seclabels.label</code>.
-     */
     public final TableField<PgSeclabelsRecord, String> LABEL = createField(DSL.name("label"), SQLDataType.CLOB, this, "");
 
     private PgSeclabels(Name alias, Table<PgSeclabelsRecord> aliased) {
@@ -294,23 +259,14 @@ public class PgSeclabels extends TableImpl<PgSeclabelsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_seclabels</code> table reference
-     */
     public PgSeclabels(String alias) {
         this(DSL.name(alias), PG_SECLABELS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_seclabels</code> table reference
-     */
     public PgSeclabels(Name alias) {
         this(alias, PG_SECLABELS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_seclabels</code> table reference
-     */
     public PgSeclabels() {
         this(DSL.name("pg_seclabels"), null);
     }
@@ -343,27 +299,18 @@ public class PgSeclabels extends TableImpl<PgSeclabelsRecord> {
         return new PgSeclabels(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSeclabels rename(String name) {
         return new PgSeclabels(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSeclabels rename(Name name) {
         return new PgSeclabels(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSeclabels rename(Table<?> name) {
@@ -380,17 +327,10 @@ public class PgSeclabels extends TableImpl<PgSeclabelsRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super Long, ? super Integer, ? super String, ? super Long, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super Long, ? super Integer, ? super String, ? super Long, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

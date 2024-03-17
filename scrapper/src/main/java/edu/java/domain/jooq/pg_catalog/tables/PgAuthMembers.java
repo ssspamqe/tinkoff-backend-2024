@@ -11,7 +11,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgAuthMembersRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -36,9 +35,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_auth_members</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -51,53 +47,26 @@ public class PgAuthMembers extends TableImpl<PgAuthMembersRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_auth_members</code>
-     */
     public static final PgAuthMembers PG_AUTH_MEMBERS = new PgAuthMembers();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgAuthMembersRecord> getRecordType() {
         return PgAuthMembersRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_auth_members.oid</code>.
-     */
     public final TableField<PgAuthMembersRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_auth_members.roleid</code>.
-     */
     public final TableField<PgAuthMembersRecord, Long> ROLEID = createField(DSL.name("roleid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_auth_members.member</code>.
-     */
     public final TableField<PgAuthMembersRecord, Long> MEMBER = createField(DSL.name("member"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_auth_members.grantor</code>.
-     */
     public final TableField<PgAuthMembersRecord, Long> GRANTOR = createField(DSL.name("grantor"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_auth_members.admin_option</code>.
-     */
     public final TableField<PgAuthMembersRecord, Boolean> ADMIN_OPTION = createField(DSL.name("admin_option"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_auth_members.inherit_option</code>.
-     */
     public final TableField<PgAuthMembersRecord, Boolean> INHERIT_OPTION = createField(DSL.name("inherit_option"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_auth_members.set_option</code>.
-     */
     public final TableField<PgAuthMembersRecord, Boolean> SET_OPTION = createField(DSL.name("set_option"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
     private PgAuthMembers(Name alias, Table<PgAuthMembersRecord> aliased) {
@@ -108,23 +77,14 @@ public class PgAuthMembers extends TableImpl<PgAuthMembersRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_auth_members</code> table reference
-     */
     public PgAuthMembers(String alias) {
         this(DSL.name(alias), PG_AUTH_MEMBERS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_auth_members</code> table reference
-     */
     public PgAuthMembers(Name alias) {
         this(alias, PG_AUTH_MEMBERS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_auth_members</code> table reference
-     */
     public PgAuthMembers() {
         this(DSL.name("pg_auth_members"), null);
     }
@@ -175,27 +135,18 @@ public class PgAuthMembers extends TableImpl<PgAuthMembersRecord> {
         return new PgAuthMembers(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAuthMembers rename(String name) {
         return new PgAuthMembers(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAuthMembers rename(Name name) {
         return new PgAuthMembers(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAuthMembers rename(Table<?> name) {
@@ -212,17 +163,10 @@ public class PgAuthMembers extends TableImpl<PgAuthMembersRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Boolean, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Boolean, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

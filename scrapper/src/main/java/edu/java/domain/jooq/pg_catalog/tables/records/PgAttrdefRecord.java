@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_attrdef</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,75 +30,41 @@ public class PgAttrdefRecord extends UpdatableRecordImpl<PgAttrdefRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_attrdef.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attrdef.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attrdef.adrelid</code>.
-     */
     public void setAdrelid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attrdef.adrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAdrelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attrdef.adnum</code>.
-     */
     public void setAdnum(@NotNull Short value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attrdef.adnum</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAdnum() {
         return (Short) get(2);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setAdbin(@NotNull Object value) {
         set(3, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @jakarta.validation.constraints.NotNull
     @NotNull
@@ -153,14 +116,6 @@ public class PgAttrdefRecord extends UpdatableRecordImpl<PgAttrdefRecord> implem
         return PgAttrdef.PG_ATTRDEF.ADNUM;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -186,14 +141,6 @@ public class PgAttrdefRecord extends UpdatableRecordImpl<PgAttrdefRecord> implem
         return getAdnum();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -219,14 +166,6 @@ public class PgAttrdefRecord extends UpdatableRecordImpl<PgAttrdefRecord> implem
         return getAdnum();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -255,14 +194,6 @@ public class PgAttrdefRecord extends UpdatableRecordImpl<PgAttrdefRecord> implem
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -285,16 +216,10 @@ public class PgAttrdefRecord extends UpdatableRecordImpl<PgAttrdefRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAttrdefRecord
-     */
     public PgAttrdefRecord() {
         super(PgAttrdef.PG_ATTRDEF);
     }
 
-    /**
-     * Create a detached, initialised PgAttrdefRecord
-     */
     @ConstructorProperties({ "oid", "adrelid", "adnum", "adbin" })
     public PgAttrdefRecord(@NotNull Long oid, @NotNull Long adrelid, @NotNull Short adnum, @NotNull Object adbin) {
         super(PgAttrdef.PG_ATTRDEF);
@@ -306,9 +231,6 @@ public class PgAttrdefRecord extends UpdatableRecordImpl<PgAttrdefRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAttrdefRecord
-     */
     public PgAttrdefRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAttrdef value) {
         super(PgAttrdef.PG_ATTRDEF);
 

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.constraint_table_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,104 +59,56 @@ public class ConstraintTableUsage implements Serializable {
         this.constraintName = constraintName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return this.constraintCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String constraintCatalog) {
         this.constraintCatalog = constraintCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return this.constraintSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String constraintSchema) {
         this.constraintSchema = constraintSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.constraint_table_usage.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return this.constraintName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.constraint_table_usage.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String constraintName) {
         this.constraintName = constraintName;
     }

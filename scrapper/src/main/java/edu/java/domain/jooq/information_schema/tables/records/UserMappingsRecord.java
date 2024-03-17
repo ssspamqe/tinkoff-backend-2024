@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.user_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,52 +30,28 @@ public class UserMappingsRecord extends TableRecordImpl<UserMappingsRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mappings.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mappings.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mappings.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mappings.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.user_mappings.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.user_mappings.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return (String) get(2);
@@ -188,16 +161,10 @@ public class UserMappingsRecord extends TableRecordImpl<UserMappingsRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached UserMappingsRecord
-     */
     public UserMappingsRecord() {
         super(UserMappings.USER_MAPPINGS);
     }
 
-    /**
-     * Create a detached, initialised UserMappingsRecord
-     */
     @ConstructorProperties({ "authorizationIdentifier", "foreignServerCatalog", "foreignServerName" })
     public UserMappingsRecord(@Nullable String authorizationIdentifier, @Nullable String foreignServerCatalog, @Nullable String foreignServerName) {
         super(UserMappings.USER_MAPPINGS);
@@ -208,9 +175,6 @@ public class UserMappingsRecord extends TableRecordImpl<UserMappingsRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised UserMappingsRecord
-     */
     public UserMappingsRecord(edu.java.domain.jooq.information_schema.tables.pojos.UserMappings value) {
         super(UserMappings.USER_MAPPINGS);
 

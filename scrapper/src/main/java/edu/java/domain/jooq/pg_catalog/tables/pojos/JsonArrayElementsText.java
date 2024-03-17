@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.json_array_elements_text</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,17 +39,11 @@ public class JsonArrayElementsText implements Serializable {
         this.value = value;
     }
 
-    /**
-     * Getter for <code>pg_catalog.json_array_elements_text.value</code>.
-     */
     @Nullable
     public String getValue() {
         return this.value;
     }
 
-    /**
-     * Setter for <code>pg_catalog.json_array_elements_text.value</code>.
-     */
     public void setValue(@Nullable String value) {
         this.value = value;
     }

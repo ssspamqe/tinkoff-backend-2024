@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_partition_tree</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,86 +51,42 @@ public class PgPartitionTree implements Serializable {
         this.level = level;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getRelid() {
         return this.relid;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setRelid(@Nullable Object relid) {
         this.relid = relid;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getParentrelid() {
         return this.parentrelid;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setParentrelid(@Nullable Object parentrelid) {
         this.parentrelid = parentrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partition_tree.isleaf</code>.
-     */
     @Nullable
     public Boolean getIsleaf() {
         return this.isleaf;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partition_tree.isleaf</code>.
-     */
     public void setIsleaf(@Nullable Boolean isleaf) {
         this.isleaf = isleaf;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partition_tree.level</code>.
-     */
     @Nullable
     public Integer getLevel() {
         return this.level;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partition_tree.level</code>.
-     */
     public void setLevel(@Nullable Integer level) {
         this.level = level;
     }

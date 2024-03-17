@@ -20,9 +20,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.column_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,129 +32,73 @@ public class ColumnPrivilegesRecord extends TableRecordImpl<ColumnPrivilegesReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.column_privileges.grantor</code>.
-     */
     public void setGrantor(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_privileges.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.column_privileges.grantee</code>.
-     */
     public void setGrantee(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_privileges.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_privileges.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_privileges.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_privileges.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_privileges.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.column_privileges.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_privileges.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.column_privileges.column_name</code>.
-     */
     public void setColumnName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.column_privileges.column_name</code>.
-     */
     @Nullable
     public String getColumnName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_privileges.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_privileges.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_privileges.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_privileges.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
@@ -398,16 +339,10 @@ public class ColumnPrivilegesRecord extends TableRecordImpl<ColumnPrivilegesReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ColumnPrivilegesRecord
-     */
     public ColumnPrivilegesRecord() {
         super(ColumnPrivileges.COLUMN_PRIVILEGES);
     }
 
-    /**
-     * Create a detached, initialised ColumnPrivilegesRecord
-     */
     @ConstructorProperties({ "grantor", "grantee", "tableCatalog", "tableSchema", "tableName", "columnName", "privilegeType", "isGrantable" })
     public ColumnPrivilegesRecord(@Nullable String grantor, @Nullable String grantee, @Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String columnName, @Nullable String privilegeType, @Nullable String isGrantable) {
         super(ColumnPrivileges.COLUMN_PRIVILEGES);
@@ -423,9 +358,6 @@ public class ColumnPrivilegesRecord extends TableRecordImpl<ColumnPrivilegesReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ColumnPrivilegesRecord
-     */
     public ColumnPrivilegesRecord(edu.java.domain.jooq.information_schema.tables.pojos.ColumnPrivileges value) {
         super(ColumnPrivileges.COLUMN_PRIVILEGES);
 

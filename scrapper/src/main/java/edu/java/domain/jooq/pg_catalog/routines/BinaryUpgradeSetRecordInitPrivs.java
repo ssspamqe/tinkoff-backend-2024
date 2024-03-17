@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.binary_upgrade_set_record_init_privs</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,24 +26,14 @@ public class BinaryUpgradeSetRecordInitPrivs extends AbstractRoutine<java.lang.V
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_set_record_init_privs._1</code>.
-     */
     public static final Parameter<Boolean> _1 = Internal.createParameter("_1", SQLDataType.BOOLEAN, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public BinaryUpgradeSetRecordInitPrivs() {
         super("binary_upgrade_set_record_init_privs", PgCatalog.PG_CATALOG);
 
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Boolean value) {
         setValue(_1, value);
     }

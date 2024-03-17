@@ -19,9 +19,6 @@ import org.jooq.Row18;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_io</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,271 +31,163 @@ public class PgStatIoRecord extends TableRecordImpl<PgStatIoRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.backend_type</code>.
-     */
     public void setBackendType(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.backend_type</code>.
-     */
     @Nullable
     public String getBackendType() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.object</code>.
-     */
     public void setObject(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.object</code>.
-     */
     @Nullable
     public String getObject() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.context</code>.
-     */
     public void setContext(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.context</code>.
-     */
     @Nullable
     public String getContext() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.reads</code>.
-     */
     public void setReads(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.reads</code>.
-     */
     @Nullable
     public Long getReads() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.read_time</code>.
-     */
     public void setReadTime(@Nullable Double value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.read_time</code>.
-     */
     @Nullable
     public Double getReadTime() {
         return (Double) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.writes</code>.
-     */
     public void setWrites(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.writes</code>.
-     */
     @Nullable
     public Long getWrites() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.write_time</code>.
-     */
     public void setWriteTime(@Nullable Double value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.write_time</code>.
-     */
     @Nullable
     public Double getWriteTime() {
         return (Double) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.writebacks</code>.
-     */
     public void setWritebacks(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.writebacks</code>.
-     */
     @Nullable
     public Long getWritebacks() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.writeback_time</code>.
-     */
     public void setWritebackTime(@Nullable Double value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.writeback_time</code>.
-     */
     @Nullable
     public Double getWritebackTime() {
         return (Double) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.extends</code>.
-     */
     public void setExtends(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.extends</code>.
-     */
     @Nullable
     public Long getExtends() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.extend_time</code>.
-     */
     public void setExtendTime(@Nullable Double value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.extend_time</code>.
-     */
     @Nullable
     public Double getExtendTime() {
         return (Double) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.op_bytes</code>.
-     */
     public void setOpBytes(@Nullable Long value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.op_bytes</code>.
-     */
     @Nullable
     public Long getOpBytes() {
         return (Long) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.hits</code>.
-     */
     public void setHits(@Nullable Long value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.hits</code>.
-     */
     @Nullable
     public Long getHits() {
         return (Long) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.evictions</code>.
-     */
     public void setEvictions(@Nullable Long value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.evictions</code>.
-     */
     @Nullable
     public Long getEvictions() {
         return (Long) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.reuses</code>.
-     */
     public void setReuses(@Nullable Long value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.reuses</code>.
-     */
     @Nullable
     public Long getReuses() {
         return (Long) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.fsyncs</code>.
-     */
     public void setFsyncs(@Nullable Long value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.fsyncs</code>.
-     */
     @Nullable
     public Long getFsyncs() {
         return (Long) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.fsync_time</code>.
-     */
     public void setFsyncTime(@Nullable Double value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.fsync_time</code>.
-     */
     @Nullable
     public Double getFsyncTime() {
         return (Double) get(16);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_io.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime value) {
         set(17, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_io.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return (OffsetDateTime) get(17);
@@ -798,16 +687,10 @@ public class PgStatIoRecord extends TableRecordImpl<PgStatIoRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatIoRecord
-     */
     public PgStatIoRecord() {
         super(PgStatIo.PG_STAT_IO);
     }
 
-    /**
-     * Create a detached, initialised PgStatIoRecord
-     */
     @ConstructorProperties({ "backendType", "object", "context", "reads", "readTime", "writes", "writeTime", "writebacks", "writebackTime", "extends_", "extendTime", "opBytes", "hits", "evictions", "reuses", "fsyncs", "fsyncTime", "statsReset" })
     public PgStatIoRecord(@Nullable String backendType, @Nullable String object, @Nullable String context, @Nullable Long reads, @Nullable Double readTime, @Nullable Long writes, @Nullable Double writeTime, @Nullable Long writebacks, @Nullable Double writebackTime, @Nullable Long extends_, @Nullable Double extendTime, @Nullable Long opBytes, @Nullable Long hits, @Nullable Long evictions, @Nullable Long reuses, @Nullable Long fsyncs, @Nullable Double fsyncTime, @Nullable OffsetDateTime statsReset) {
         super(PgStatIo.PG_STAT_IO);
@@ -833,9 +716,6 @@ public class PgStatIoRecord extends TableRecordImpl<PgStatIoRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatIoRecord
-     */
     public PgStatIoRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatIo value) {
         super(PgStatIo.PG_STAT_IO);
 

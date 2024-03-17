@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -88,190 +85,112 @@ public class Tables implements Serializable {
         this.commitAction = commitAction;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.table_type</code>.
-     */
     @Nullable
     public String getTableType() {
         return this.tableType;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.table_type</code>.
-     */
     public void setTableType(@Nullable String tableType) {
         this.tableType = tableType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.tables.self_referencing_column_name</code>.
-     */
     @Nullable
     public String getSelfReferencingColumnName() {
         return this.selfReferencingColumnName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.tables.self_referencing_column_name</code>.
-     */
     public void setSelfReferencingColumnName(@Nullable String selfReferencingColumnName) {
         this.selfReferencingColumnName = selfReferencingColumnName;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.reference_generation</code>.
-     */
     @Nullable
     public String getReferenceGeneration() {
         return this.referenceGeneration;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.reference_generation</code>.
-     */
     public void setReferenceGeneration(@Nullable String referenceGeneration) {
         this.referenceGeneration = referenceGeneration;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.tables.user_defined_type_catalog</code>.
-     */
     @Nullable
     public String getUserDefinedTypeCatalog() {
         return this.userDefinedTypeCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.tables.user_defined_type_catalog</code>.
-     */
     public void setUserDefinedTypeCatalog(@Nullable String userDefinedTypeCatalog) {
         this.userDefinedTypeCatalog = userDefinedTypeCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.tables.user_defined_type_schema</code>.
-     */
     @Nullable
     public String getUserDefinedTypeSchema() {
         return this.userDefinedTypeSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.tables.user_defined_type_schema</code>.
-     */
     public void setUserDefinedTypeSchema(@Nullable String userDefinedTypeSchema) {
         this.userDefinedTypeSchema = userDefinedTypeSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.user_defined_type_name</code>.
-     */
     @Nullable
     public String getUserDefinedTypeName() {
         return this.userDefinedTypeName;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.user_defined_type_name</code>.
-     */
     public void setUserDefinedTypeName(@Nullable String userDefinedTypeName) {
         this.userDefinedTypeName = userDefinedTypeName;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.is_insertable_into</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsInsertableInto() {
         return this.isInsertableInto;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.is_insertable_into</code>.
-     */
     public void setIsInsertableInto(@Nullable String isInsertableInto) {
         this.isInsertableInto = isInsertableInto;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.is_typed</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsTyped() {
         return this.isTyped;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.is_typed</code>.
-     */
     public void setIsTyped(@Nullable String isTyped) {
         this.isTyped = isTyped;
     }
 
-    /**
-     * Getter for <code>information_schema.tables.commit_action</code>.
-     */
     @Nullable
     public String getCommitAction() {
         return this.commitAction;
     }
 
-    /**
-     * Setter for <code>information_schema.tables.commit_action</code>.
-     */
     public void setCommitAction(@Nullable String commitAction) {
         this.commitAction = commitAction;
     }

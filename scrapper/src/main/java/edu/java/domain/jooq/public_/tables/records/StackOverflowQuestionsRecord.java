@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>public.stack_overflow_questions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,66 +30,40 @@ public class StackOverflowQuestionsRecord extends UpdatableRecordImpl<StackOverf
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>public.stack_overflow_questions.id</code>.
-     */
     public void setId(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>public.stack_overflow_questions.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getId() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>public.stack_overflow_questions.link_id</code>.
-     */
     public void setLinkId(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>public.stack_overflow_questions.link_id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLinkId() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>public.stack_overflow_questions.description_md5_hash</code>.
-     */
     public void setDescriptionMd5Hash(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>public.stack_overflow_questions.description_md5_hash</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDescriptionMd5Hash() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>public.stack_overflow_questions.answers_ids</code>.
-     */
     public void setAnswersIds(@NotNull Long[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>public.stack_overflow_questions.answers_ids</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long[] getAnswersIds() {
@@ -239,16 +210,10 @@ public class StackOverflowQuestionsRecord extends UpdatableRecordImpl<StackOverf
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached StackOverflowQuestionsRecord
-     */
     public StackOverflowQuestionsRecord() {
         super(StackOverflowQuestions.STACK_OVERFLOW_QUESTIONS);
     }
 
-    /**
-     * Create a detached, initialised StackOverflowQuestionsRecord
-     */
     @ConstructorProperties({ "id", "linkId", "descriptionMd5Hash", "answersIds" })
     public StackOverflowQuestionsRecord(@NotNull Long id, @NotNull Long linkId, @NotNull String descriptionMd5Hash, @NotNull Long[] answersIds) {
         super(StackOverflowQuestions.STACK_OVERFLOW_QUESTIONS);
@@ -260,9 +225,6 @@ public class StackOverflowQuestionsRecord extends UpdatableRecordImpl<StackOverf
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised StackOverflowQuestionsRecord
-     */
     public StackOverflowQuestionsRecord(edu.java.domain.jooq.public_.tables.pojos.StackOverflowQuestions value) {
         super(StackOverflowQuestions.STACK_OVERFLOW_QUESTIONS);
 

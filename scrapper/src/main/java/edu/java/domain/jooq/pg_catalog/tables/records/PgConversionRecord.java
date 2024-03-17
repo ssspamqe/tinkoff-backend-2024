@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_conversion</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,128 +30,80 @@ public class PgConversionRecord extends UpdatableRecordImpl<PgConversionRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.conname</code>.
-     */
     public void setConname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.conname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getConname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.connamespace</code>.
-     */
     public void setConnamespace(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.connamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConnamespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.conowner</code>.
-     */
     public void setConowner(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.conowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConowner() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.conforencoding</code>.
-     */
     public void setConforencoding(@NotNull Integer value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.conforencoding</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getConforencoding() {
         return (Integer) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.contoencoding</code>.
-     */
     public void setContoencoding(@NotNull Integer value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.contoencoding</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getContoencoding() {
         return (Integer) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.conproc</code>.
-     */
     public void setConproc(@NotNull String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.conproc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getConproc() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_conversion.condefault</code>.
-     */
     public void setCondefault(@NotNull Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_conversion.condefault</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getCondefault() {
@@ -405,16 +354,10 @@ public class PgConversionRecord extends UpdatableRecordImpl<PgConversionRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgConversionRecord
-     */
     public PgConversionRecord() {
         super(PgConversion.PG_CONVERSION);
     }
 
-    /**
-     * Create a detached, initialised PgConversionRecord
-     */
     @ConstructorProperties({ "oid", "conname", "connamespace", "conowner", "conforencoding", "contoencoding", "conproc", "condefault" })
     public PgConversionRecord(@NotNull Long oid, @NotNull String conname, @NotNull Long connamespace, @NotNull Long conowner, @NotNull Integer conforencoding, @NotNull Integer contoencoding, @NotNull String conproc, @NotNull Boolean condefault) {
         super(PgConversion.PG_CONVERSION);
@@ -430,9 +373,6 @@ public class PgConversionRecord extends UpdatableRecordImpl<PgConversionRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgConversionRecord
-     */
     public PgConversionRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgConversion value) {
         super(PgConversion.PG_CONVERSION);
 

@@ -19,9 +19,6 @@ import org.jooq.Row17;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.triggers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,264 +31,154 @@ public class TriggersRecord extends TableRecordImpl<TriggersRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.triggers.trigger_catalog</code>.
-     */
     public void setTriggerCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.trigger_catalog</code>.
-     */
     @Nullable
     public String getTriggerCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.trigger_schema</code>.
-     */
     public void setTriggerSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.trigger_schema</code>.
-     */
     @Nullable
     public String getTriggerSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.trigger_name</code>.
-     */
     public void setTriggerName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.trigger_name</code>.
-     */
     @Nullable
     public String getTriggerName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.event_manipulation</code>.
-     */
     public void setEventManipulation(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.event_manipulation</code>.
-     */
     @Nullable
     public String getEventManipulation() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.event_object_catalog</code>.
-     */
     public void setEventObjectCatalog(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.event_object_catalog</code>.
-     */
     @Nullable
     public String getEventObjectCatalog() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.event_object_schema</code>.
-     */
     public void setEventObjectSchema(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.event_object_schema</code>.
-     */
     @Nullable
     public String getEventObjectSchema() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.event_object_table</code>.
-     */
     public void setEventObjectTable(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.event_object_table</code>.
-     */
     @Nullable
     public String getEventObjectTable() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_order</code>.
-     */
     public void setActionOrder(@Nullable Integer value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_order</code>.
-     */
     @Nullable
     public Integer getActionOrder() {
         return (Integer) get(7);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_condition</code>.
-     */
     public void setActionCondition(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_condition</code>.
-     */
     @Nullable
     public String getActionCondition() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_statement</code>.
-     */
     public void setActionStatement(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_statement</code>.
-     */
     @Nullable
     public String getActionStatement() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_orientation</code>.
-     */
     public void setActionOrientation(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_orientation</code>.
-     */
     @Nullable
     public String getActionOrientation() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.action_timing</code>.
-     */
     public void setActionTiming(@Nullable String value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.action_timing</code>.
-     */
     @Nullable
     public String getActionTiming() {
         return (String) get(11);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggers.action_reference_old_table</code>.
-     */
     public void setActionReferenceOldTable(@Nullable String value) {
         set(12, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggers.action_reference_old_table</code>.
-     */
     @Nullable
     public String getActionReferenceOldTable() {
         return (String) get(12);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggers.action_reference_new_table</code>.
-     */
     public void setActionReferenceNewTable(@Nullable String value) {
         set(13, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggers.action_reference_new_table</code>.
-     */
     @Nullable
     public String getActionReferenceNewTable() {
         return (String) get(13);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggers.action_reference_old_row</code>.
-     */
     public void setActionReferenceOldRow(@Nullable String value) {
         set(14, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggers.action_reference_old_row</code>.
-     */
     @Nullable
     public String getActionReferenceOldRow() {
         return (String) get(14);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggers.action_reference_new_row</code>.
-     */
     public void setActionReferenceNewRow(@Nullable String value) {
         set(15, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggers.action_reference_new_row</code>.
-     */
     @Nullable
     public String getActionReferenceNewRow() {
         return (String) get(15);
     }
 
-    /**
-     * Setter for <code>information_schema.triggers.created</code>.
-     */
     public void setCreated(@Nullable OffsetDateTime value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>information_schema.triggers.created</code>.
-     */
     @Nullable
     public OffsetDateTime getCreated() {
         return (OffsetDateTime) get(16);
@@ -765,16 +652,10 @@ public class TriggersRecord extends TableRecordImpl<TriggersRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TriggersRecord
-     */
     public TriggersRecord() {
         super(Triggers.TRIGGERS);
     }
 
-    /**
-     * Create a detached, initialised TriggersRecord
-     */
     @ConstructorProperties({ "triggerCatalog", "triggerSchema", "triggerName", "eventManipulation", "eventObjectCatalog", "eventObjectSchema", "eventObjectTable", "actionOrder", "actionCondition", "actionStatement", "actionOrientation", "actionTiming", "actionReferenceOldTable", "actionReferenceNewTable", "actionReferenceOldRow", "actionReferenceNewRow", "created" })
     public TriggersRecord(@Nullable String triggerCatalog, @Nullable String triggerSchema, @Nullable String triggerName, @Nullable String eventManipulation, @Nullable String eventObjectCatalog, @Nullable String eventObjectSchema, @Nullable String eventObjectTable, @Nullable Integer actionOrder, @Nullable String actionCondition, @Nullable String actionStatement, @Nullable String actionOrientation, @Nullable String actionTiming, @Nullable String actionReferenceOldTable, @Nullable String actionReferenceNewTable, @Nullable String actionReferenceOldRow, @Nullable String actionReferenceNewRow, @Nullable OffsetDateTime created) {
         super(Triggers.TRIGGERS);
@@ -799,9 +680,6 @@ public class TriggersRecord extends TableRecordImpl<TriggersRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TriggersRecord
-     */
     public TriggersRecord(edu.java.domain.jooq.information_schema.tables.pojos.Triggers value) {
         super(Triggers.TRIGGERS);
 

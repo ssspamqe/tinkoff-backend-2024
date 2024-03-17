@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.binary_upgrade_set_next_heap_relfilenode</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,24 +26,14 @@ public class BinaryUpgradeSetNextHeapRelfilenode extends AbstractRoutine<java.la
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_set_next_heap_relfilenode._1</code>.
-     */
     public static final Parameter<Long> _1 = Internal.createParameter("_1", SQLDataType.BIGINT, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public BinaryUpgradeSetNextHeapRelfilenode() {
         super("binary_upgrade_set_next_heap_relfilenode", PgCatalog.PG_CATALOG);
 
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Long value) {
         setValue(_1, value);
     }

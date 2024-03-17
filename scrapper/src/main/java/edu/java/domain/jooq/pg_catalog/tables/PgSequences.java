@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgSequencesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,79 +40,35 @@ public class PgSequences extends TableImpl<PgSequencesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_sequences</code>
-     */
     public static final PgSequences PG_SEQUENCES = new PgSequences();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgSequencesRecord> getRecordType() {
         return PgSequencesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.schemaname</code>.
-     */
     public final TableField<PgSequencesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.sequencename</code>.
-     */
     public final TableField<PgSequencesRecord, String> SEQUENCENAME = createField(DSL.name("sequencename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.sequenceowner</code>.
-     */
     public final TableField<PgSequencesRecord, String> SEQUENCEOWNER = createField(DSL.name("sequenceowner"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgSequencesRecord, Object> DATA_TYPE = createField(DSL.name("data_type"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"regtype\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.start_value</code>.
-     */
     public final TableField<PgSequencesRecord, Long> START_VALUE = createField(DSL.name("start_value"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.min_value</code>.
-     */
     public final TableField<PgSequencesRecord, Long> MIN_VALUE = createField(DSL.name("min_value"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.max_value</code>.
-     */
     public final TableField<PgSequencesRecord, Long> MAX_VALUE = createField(DSL.name("max_value"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.increment_by</code>.
-     */
     public final TableField<PgSequencesRecord, Long> INCREMENT_BY = createField(DSL.name("increment_by"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.cycle</code>.
-     */
     public final TableField<PgSequencesRecord, Boolean> CYCLE = createField(DSL.name("cycle"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.cache_size</code>.
-     */
     public final TableField<PgSequencesRecord, Long> CACHE_SIZE = createField(DSL.name("cache_size"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequences.last_value</code>.
-     */
     public final TableField<PgSequencesRecord, Long> LAST_VALUE = createField(DSL.name("last_value"), SQLDataType.BIGINT, this, "");
 
     private PgSequences(Name alias, Table<PgSequencesRecord> aliased) {
@@ -147,23 +98,14 @@ public class PgSequences extends TableImpl<PgSequencesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_sequences</code> table reference
-     */
     public PgSequences(String alias) {
         this(DSL.name(alias), PG_SEQUENCES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_sequences</code> table reference
-     */
     public PgSequences(Name alias) {
         this(alias, PG_SEQUENCES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_sequences</code> table reference
-     */
     public PgSequences() {
         this(DSL.name("pg_sequences"), null);
     }
@@ -196,27 +138,18 @@ public class PgSequences extends TableImpl<PgSequencesRecord> {
         return new PgSequences(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSequences rename(String name) {
         return new PgSequences(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSequences rename(Name name) {
         return new PgSequences(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSequences rename(Table<?> name) {
@@ -233,17 +166,10 @@ public class PgSequences extends TableImpl<PgSequencesRecord> {
         return (Row11) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function11<? super String, ? super String, ? super String, ? super Object, ? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function11<? super String, ? super String, ? super String, ? super Object, ? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

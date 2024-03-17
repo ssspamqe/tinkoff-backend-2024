@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_rel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -60,92 +57,52 @@ public class PgPublicationRel implements Serializable {
         this.prattrs = prattrs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_rel.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_rel.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_rel.prpubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPrpubid() {
         return this.prpubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_rel.prpubid</code>.
-     */
     public void setPrpubid(@NotNull Long prpubid) {
         this.prpubid = prpubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_rel.prrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPrrelid() {
         return this.prrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_rel.prrelid</code>.
-     */
     public void setPrrelid(@NotNull Long prrelid) {
         this.prrelid = prrelid;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPrqual() {
         return this.prqual;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPrqual(@Nullable Object prqual) {
         this.prqual = prqual;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_rel.prattrs</code>.
-     */
     @Nullable
     public Object[] getPrattrs() {
         return this.prattrs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_rel.prattrs</code>.
-     */
     public void setPrattrs(@Nullable Object[] prattrs) {
         this.prattrs = prattrs;
     }

@@ -19,9 +19,6 @@ import org.jooq.Row11;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_bgwriter</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,170 +31,100 @@ public class PgStatBgwriterRecord extends TableRecordImpl<PgStatBgwriterRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.checkpoints_timed</code>.
-     */
     public void setCheckpointsTimed(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.checkpoints_timed</code>.
-     */
     @Nullable
     public Long getCheckpointsTimed() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.checkpoints_req</code>.
-     */
     public void setCheckpointsReq(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.checkpoints_req</code>.
-     */
     @Nullable
     public Long getCheckpointsReq() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_bgwriter.checkpoint_write_time</code>.
-     */
     public void setCheckpointWriteTime(@Nullable Double value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_bgwriter.checkpoint_write_time</code>.
-     */
     @Nullable
     public Double getCheckpointWriteTime() {
         return (Double) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.checkpoint_sync_time</code>.
-     */
     public void setCheckpointSyncTime(@Nullable Double value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.checkpoint_sync_time</code>.
-     */
     @Nullable
     public Double getCheckpointSyncTime() {
         return (Double) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.buffers_checkpoint</code>.
-     */
     public void setBuffersCheckpoint(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.buffers_checkpoint</code>.
-     */
     @Nullable
     public Long getBuffersCheckpoint() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.buffers_clean</code>.
-     */
     public void setBuffersClean(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.buffers_clean</code>.
-     */
     @Nullable
     public Long getBuffersClean() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.maxwritten_clean</code>.
-     */
     public void setMaxwrittenClean(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.maxwritten_clean</code>.
-     */
     @Nullable
     public Long getMaxwrittenClean() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.buffers_backend</code>.
-     */
     public void setBuffersBackend(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.buffers_backend</code>.
-     */
     @Nullable
     public Long getBuffersBackend() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_bgwriter.buffers_backend_fsync</code>.
-     */
     public void setBuffersBackendFsync(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_bgwriter.buffers_backend_fsync</code>.
-     */
     @Nullable
     public Long getBuffersBackendFsync() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.buffers_alloc</code>.
-     */
     public void setBuffersAlloc(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.buffers_alloc</code>.
-     */
     @Nullable
     public Long getBuffersAlloc() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return (OffsetDateTime) get(10);
@@ -515,16 +442,10 @@ public class PgStatBgwriterRecord extends TableRecordImpl<PgStatBgwriterRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatBgwriterRecord
-     */
     public PgStatBgwriterRecord() {
         super(PgStatBgwriter.PG_STAT_BGWRITER);
     }
 
-    /**
-     * Create a detached, initialised PgStatBgwriterRecord
-     */
     @ConstructorProperties({ "checkpointsTimed", "checkpointsReq", "checkpointWriteTime", "checkpointSyncTime", "buffersCheckpoint", "buffersClean", "maxwrittenClean", "buffersBackend", "buffersBackendFsync", "buffersAlloc", "statsReset" })
     public PgStatBgwriterRecord(@Nullable Long checkpointsTimed, @Nullable Long checkpointsReq, @Nullable Double checkpointWriteTime, @Nullable Double checkpointSyncTime, @Nullable Long buffersCheckpoint, @Nullable Long buffersClean, @Nullable Long maxwrittenClean, @Nullable Long buffersBackend, @Nullable Long buffersBackendFsync, @Nullable Long buffersAlloc, @Nullable OffsetDateTime statsReset) {
         super(PgStatBgwriter.PG_STAT_BGWRITER);
@@ -543,9 +464,6 @@ public class PgStatBgwriterRecord extends TableRecordImpl<PgStatBgwriterRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatBgwriterRecord
-     */
     public PgStatBgwriterRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatBgwriter value) {
         super(PgStatBgwriter.PG_STAT_BGWRITER);
 

@@ -10,7 +10,6 @@ import edu.java.domain.jooq.public_.tables.records.GitHubRepositoriesRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>public.git_hub_repositories</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,48 +45,24 @@ public class GitHubRepositories extends TableImpl<GitHubRepositoriesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>public.git_hub_repositories</code>
-     */
     public static final GitHubRepositories GIT_HUB_REPOSITORIES = new GitHubRepositories();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<GitHubRepositoriesRecord> getRecordType() {
         return GitHubRepositoriesRecord.class;
     }
 
-    /**
-     * The column <code>public.git_hub_repositories.id</code>.
-     */
     public final TableField<GitHubRepositoriesRecord, Long> ID = createField(DSL.name("id"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>public.git_hub_repositories.link_id</code>.
-     */
     public final TableField<GitHubRepositoriesRecord, Long> LINK_ID = createField(DSL.name("link_id"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>public.git_hub_repositories.name</code>.
-     */
     public final TableField<GitHubRepositoriesRecord, String> NAME = createField(DSL.name("name"), SQLDataType.VARCHAR(128).nullable(false), this, "");
 
-    /**
-     * The column <code>public.git_hub_repositories.owner</code>.
-     */
     public final TableField<GitHubRepositoriesRecord, String> OWNER = createField(DSL.name("owner"), SQLDataType.VARCHAR(128).nullable(false), this, "");
 
-    /**
-     * The column <code>public.git_hub_repositories.description_md5_hash</code>.
-     */
     public final TableField<GitHubRepositoriesRecord, String> DESCRIPTION_MD5_HASH = createField(DSL.name("description_md5_hash"), SQLDataType.CLOB.nullable(false), this, "");
 
-    /**
-     * The column <code>public.git_hub_repositories.activities_ids</code>.
-     */
     public final TableField<GitHubRepositoriesRecord, Long[]> ACTIVITIES_IDS = createField(DSL.name("activities_ids"), SQLDataType.BIGINT.nullable(false).array(), this, "");
 
     private GitHubRepositories(Name alias, Table<GitHubRepositoriesRecord> aliased) {
@@ -101,25 +73,14 @@ public class GitHubRepositories extends TableImpl<GitHubRepositoriesRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>public.git_hub_repositories</code> table
-     * reference
-     */
     public GitHubRepositories(String alias) {
         this(DSL.name(alias), GIT_HUB_REPOSITORIES);
     }
 
-    /**
-     * Create an aliased <code>public.git_hub_repositories</code> table
-     * reference
-     */
     public GitHubRepositories(Name alias) {
         this(alias, GIT_HUB_REPOSITORIES);
     }
 
-    /**
-     * Create a <code>public.git_hub_repositories</code> table reference
-     */
     public GitHubRepositories() {
         this(DSL.name("git_hub_repositories"), null);
     }
@@ -154,9 +115,6 @@ public class GitHubRepositories extends TableImpl<GitHubRepositoriesRecord> {
 
     private transient Links _links;
 
-    /**
-     * Get the implicit join path to the <code>public.links</code> table.
-     */
     public Links links() {
         if (_links == null)
             _links = new Links(this, Keys.GIT_HUB_REPOSITORIES__GIT_HUB_REPOSITORIES_LINK_ID_FKEY);
@@ -182,27 +140,18 @@ public class GitHubRepositories extends TableImpl<GitHubRepositoriesRecord> {
         return new GitHubRepositories(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GitHubRepositories rename(String name) {
         return new GitHubRepositories(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GitHubRepositories rename(Name name) {
         return new GitHubRepositories(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GitHubRepositories rename(Table<?> name) {
@@ -219,17 +168,10 @@ public class GitHubRepositories extends TableImpl<GitHubRepositoriesRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super Long, ? super String, ? super String, ? super String, ? super Long[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -20,9 +20,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_wal</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,136 +32,82 @@ public class PgStatWalRecord extends TableRecordImpl<PgStatWalRecord> implements
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_records</code>.
-     */
     public void setWalRecords(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_records</code>.
-     */
     @Nullable
     public Long getWalRecords() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_fpi</code>.
-     */
     public void setWalFpi(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_fpi</code>.
-     */
     @Nullable
     public Long getWalFpi() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_bytes</code>.
-     */
     public void setWalBytes(@Nullable BigDecimal value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_bytes</code>.
-     */
     @Nullable
     public BigDecimal getWalBytes() {
         return (BigDecimal) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_buffers_full</code>.
-     */
     public void setWalBuffersFull(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_buffers_full</code>.
-     */
     @Nullable
     public Long getWalBuffersFull() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_write</code>.
-     */
     public void setWalWrite(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_write</code>.
-     */
     @Nullable
     public Long getWalWrite() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_sync</code>.
-     */
     public void setWalSync(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_sync</code>.
-     */
     @Nullable
     public Long getWalSync() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_write_time</code>.
-     */
     public void setWalWriteTime(@Nullable Double value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_write_time</code>.
-     */
     @Nullable
     public Double getWalWriteTime() {
         return (Double) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.wal_sync_time</code>.
-     */
     public void setWalSyncTime(@Nullable Double value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.wal_sync_time</code>.
-     */
     @Nullable
     public Double getWalSyncTime() {
         return (Double) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_wal.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_wal.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return (OffsetDateTime) get(8);
@@ -430,16 +373,10 @@ public class PgStatWalRecord extends TableRecordImpl<PgStatWalRecord> implements
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatWalRecord
-     */
     public PgStatWalRecord() {
         super(PgStatWal.PG_STAT_WAL);
     }
 
-    /**
-     * Create a detached, initialised PgStatWalRecord
-     */
     @ConstructorProperties({ "walRecords", "walFpi", "walBytes", "walBuffersFull", "walWrite", "walSync", "walWriteTime", "walSyncTime", "statsReset" })
     public PgStatWalRecord(@Nullable Long walRecords, @Nullable Long walFpi, @Nullable BigDecimal walBytes, @Nullable Long walBuffersFull, @Nullable Long walWrite, @Nullable Long walSync, @Nullable Double walWriteTime, @Nullable Double walSyncTime, @Nullable OffsetDateTime statsReset) {
         super(PgStatWal.PG_STAT_WAL);
@@ -456,9 +393,6 @@ public class PgStatWalRecord extends TableRecordImpl<PgStatWalRecord> implements
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatWalRecord
-     */
     public PgStatWalRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatWal value) {
         super(PgStatWal.PG_STAT_WAL);
 

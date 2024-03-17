@@ -18,9 +18,6 @@ import org.jooq.Row12;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_analyze</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,195 +30,109 @@ public class PgStatProgressAnalyzeRecord extends TableRecordImpl<PgStatProgressA
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.datid</code>.
-     */
     public void setDatid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.datname</code>.
-     */
     public void setDatname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.phase</code>.
-     */
     public void setPhase(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_total</code>.
-     */
     public void setSampleBlksTotal(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_total</code>.
-     */
     @Nullable
     public Long getSampleBlksTotal() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_scanned</code>.
-     */
     public void setSampleBlksScanned(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_scanned</code>.
-     */
     @Nullable
     public Long getSampleBlksScanned() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_total</code>.
-     */
     public void setExtStatsTotal(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_total</code>.
-     */
     @Nullable
     public Long getExtStatsTotal() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_computed</code>.
-     */
     public void setExtStatsComputed(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_computed</code>.
-     */
     @Nullable
     public Long getExtStatsComputed() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_total</code>.
-     */
     public void setChildTablesTotal(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_total</code>.
-     */
     @Nullable
     public Long getChildTablesTotal() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_done</code>.
-     */
     public void setChildTablesDone(@Nullable Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_done</code>.
-     */
     @Nullable
     public Long getChildTablesDone() {
         return (Long) get(10);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.current_child_table_relid</code>.
-     */
     public void setCurrentChildTableRelid(@Nullable Long value) {
         set(11, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.current_child_table_relid</code>.
-     */
     @Nullable
     public Long getCurrentChildTableRelid() {
         return (Long) get(11);
@@ -565,16 +476,10 @@ public class PgStatProgressAnalyzeRecord extends TableRecordImpl<PgStatProgressA
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatProgressAnalyzeRecord
-     */
     public PgStatProgressAnalyzeRecord() {
         super(PgStatProgressAnalyze.PG_STAT_PROGRESS_ANALYZE);
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressAnalyzeRecord
-     */
     @ConstructorProperties({ "pid", "datid", "datname", "relid", "phase", "sampleBlksTotal", "sampleBlksScanned", "extStatsTotal", "extStatsComputed", "childTablesTotal", "childTablesDone", "currentChildTableRelid" })
     public PgStatProgressAnalyzeRecord(@Nullable Integer pid, @Nullable Long datid, @Nullable String datname, @Nullable Long relid, @Nullable String phase, @Nullable Long sampleBlksTotal, @Nullable Long sampleBlksScanned, @Nullable Long extStatsTotal, @Nullable Long extStatsComputed, @Nullable Long childTablesTotal, @Nullable Long childTablesDone, @Nullable Long currentChildTableRelid) {
         super(PgStatProgressAnalyze.PG_STAT_PROGRESS_ANALYZE);
@@ -594,9 +499,6 @@ public class PgStatProgressAnalyzeRecord extends TableRecordImpl<PgStatProgressA
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressAnalyzeRecord
-     */
     public PgStatProgressAnalyzeRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatProgressAnalyze value) {
         super(PgStatProgressAnalyze.PG_STAT_PROGRESS_ANALYZE);
 

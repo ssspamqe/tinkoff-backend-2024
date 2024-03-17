@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>public.links</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -56,64 +53,40 @@ public class Links implements Serializable {
         this.lastCheckedAt = lastCheckedAt;
     }
 
-    /**
-     * Getter for <code>public.links.id</code>.
-     */
     @Nullable
     public Long getId() {
         return this.id;
     }
 
-    /**
-     * Setter for <code>public.links.id</code>.
-     */
     public void setId(@Nullable Long id) {
         this.id = id;
     }
 
-    /**
-     * Getter for <code>public.links.url</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getUrl() {
         return this.url;
     }
 
-    /**
-     * Setter for <code>public.links.url</code>.
-     */
     public void setUrl(@NotNull String url) {
         this.url = url;
     }
 
-    /**
-     * Getter for <code>public.links.created_at</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public LocalDateTime getCreatedAt() {
         return this.createdAt;
     }
 
-    /**
-     * Setter for <code>public.links.created_at</code>.
-     */
     public void setCreatedAt(@NotNull LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
-    /**
-     * Getter for <code>public.links.last_checked_at</code>.
-     */
     @Nullable
     public LocalDateTime getLastCheckedAt() {
         return this.lastCheckedAt;
     }
 
-    /**
-     * Setter for <code>public.links.last_checked_at</code>.
-     */
     public void setLastCheckedAt(@Nullable LocalDateTime lastCheckedAt) {
         this.lastCheckedAt = lastCheckedAt;
     }

@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgLanguageRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_language</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,63 +45,30 @@ public class PgLanguage extends TableImpl<PgLanguageRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_language</code>
-     */
     public static final PgLanguage PG_LANGUAGE = new PgLanguage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLanguageRecord> getRecordType() {
         return PgLanguageRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_language.oid</code>.
-     */
     public final TableField<PgLanguageRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_language.lanname</code>.
-     */
     public final TableField<PgLanguageRecord, String> LANNAME = createField(DSL.name("lanname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_language.lanowner</code>.
-     */
     public final TableField<PgLanguageRecord, Long> LANOWNER = createField(DSL.name("lanowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_language.lanispl</code>.
-     */
     public final TableField<PgLanguageRecord, Boolean> LANISPL = createField(DSL.name("lanispl"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_language.lanpltrusted</code>.
-     */
     public final TableField<PgLanguageRecord, Boolean> LANPLTRUSTED = createField(DSL.name("lanpltrusted"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_language.lanplcallfoid</code>.
-     */
     public final TableField<PgLanguageRecord, Long> LANPLCALLFOID = createField(DSL.name("lanplcallfoid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_language.laninline</code>.
-     */
     public final TableField<PgLanguageRecord, Long> LANINLINE = createField(DSL.name("laninline"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_language.lanvalidator</code>.
-     */
     public final TableField<PgLanguageRecord, Long> LANVALIDATOR = createField(DSL.name("lanvalidator"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_language.lanacl</code>.
-     */
     public final TableField<PgLanguageRecord, String[]> LANACL = createField(DSL.name("lanacl"), SQLDataType.VARCHAR.array(), this, "");
 
     private PgLanguage(Name alias, Table<PgLanguageRecord> aliased) {
@@ -116,23 +79,14 @@ public class PgLanguage extends TableImpl<PgLanguageRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_language</code> table reference
-     */
     public PgLanguage(String alias) {
         this(DSL.name(alias), PG_LANGUAGE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_language</code> table reference
-     */
     public PgLanguage(Name alias) {
         this(alias, PG_LANGUAGE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_language</code> table reference
-     */
     public PgLanguage() {
         this(DSL.name("pg_language"), null);
     }
@@ -177,27 +131,18 @@ public class PgLanguage extends TableImpl<PgLanguageRecord> {
         return new PgLanguage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLanguage rename(String name) {
         return new PgLanguage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLanguage rename(Name name) {
         return new PgLanguage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLanguage rename(Table<?> name) {
@@ -214,17 +159,10 @@ public class PgLanguage extends TableImpl<PgLanguageRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super Long, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? super Long, ? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? super Long, ? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

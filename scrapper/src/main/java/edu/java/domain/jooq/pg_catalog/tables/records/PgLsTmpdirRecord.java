@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_tmpdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,46 +31,28 @@ public class PgLsTmpdirRecord extends TableRecordImpl<PgLsTmpdirRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_tmpdir.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_tmpdir.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_tmpdir.size</code>.
-     */
     public void setSize(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_tmpdir.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_tmpdir.modification</code>.
-     */
     public void setModification(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_tmpdir.modification</code>.
-     */
     @Nullable
     public OffsetDateTime getModification() {
         return (OffsetDateTime) get(2);
@@ -183,16 +162,10 @@ public class PgLsTmpdirRecord extends TableRecordImpl<PgLsTmpdirRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLsTmpdirRecord
-     */
     public PgLsTmpdirRecord() {
         super(PgLsTmpdir.PG_LS_TMPDIR);
     }
 
-    /**
-     * Create a detached, initialised PgLsTmpdirRecord
-     */
     @ConstructorProperties({ "name", "size", "modification" })
     public PgLsTmpdirRecord(@Nullable String name, @Nullable Long size, @Nullable OffsetDateTime modification) {
         super(PgLsTmpdir.PG_LS_TMPDIR);
@@ -203,9 +176,6 @@ public class PgLsTmpdirRecord extends TableRecordImpl<PgLsTmpdirRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLsTmpdirRecord
-     */
     public PgLsTmpdirRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLsTmpdir value) {
         super(PgLsTmpdir.PG_LS_TMPDIR);
 

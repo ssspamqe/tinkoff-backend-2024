@@ -19,9 +19,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_subscription_stats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,82 +31,46 @@ public class PgStatSubscriptionStatsRecord extends TableRecordImpl<PgStatSubscri
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_subscription_stats.subid</code>.
-     */
     public void setSubid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_subscription_stats.subid</code>.
-     */
     @Nullable
     public Long getSubid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_subscription_stats.subname</code>.
-     */
     public void setSubname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_subscription_stats.subname</code>.
-     */
     @Nullable
     public String getSubname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_subscription_stats.apply_error_count</code>.
-     */
     public void setApplyErrorCount(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_subscription_stats.apply_error_count</code>.
-     */
     @Nullable
     public Long getApplyErrorCount() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_subscription_stats.sync_error_count</code>.
-     */
     public void setSyncErrorCount(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_subscription_stats.sync_error_count</code>.
-     */
     @Nullable
     public Long getSyncErrorCount() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_subscription_stats.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_subscription_stats.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return (OffsetDateTime) get(4);
@@ -271,16 +232,10 @@ public class PgStatSubscriptionStatsRecord extends TableRecordImpl<PgStatSubscri
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatSubscriptionStatsRecord
-     */
     public PgStatSubscriptionStatsRecord() {
         super(PgStatSubscriptionStats.PG_STAT_SUBSCRIPTION_STATS);
     }
 
-    /**
-     * Create a detached, initialised PgStatSubscriptionStatsRecord
-     */
     @ConstructorProperties({ "subid", "subname", "applyErrorCount", "syncErrorCount", "statsReset" })
     public PgStatSubscriptionStatsRecord(@Nullable Long subid, @Nullable String subname, @Nullable Long applyErrorCount, @Nullable Long syncErrorCount, @Nullable OffsetDateTime statsReset) {
         super(PgStatSubscriptionStats.PG_STAT_SUBSCRIPTION_STATS);
@@ -293,9 +248,6 @@ public class PgStatSubscriptionStatsRecord extends TableRecordImpl<PgStatSubscri
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatSubscriptionStatsRecord
-     */
     public PgStatSubscriptionStatsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatSubscriptionStats value) {
         super(PgStatSubscriptionStats.PG_STAT_SUBSCRIPTION_STATS);
 

@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_parser</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,128 +30,80 @@ public class PgTsParserRecord extends UpdatableRecordImpl<PgTsParserRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsname</code>.
-     */
     public void setPrsname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrsname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsnamespace</code>.
-     */
     public void setPrsnamespace(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPrsnamespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsstart</code>.
-     */
     public void setPrsstart(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsstart</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrsstart() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prstoken</code>.
-     */
     public void setPrstoken(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prstoken</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrstoken() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsend</code>.
-     */
     public void setPrsend(@NotNull String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsend</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrsend() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prsheadline</code>.
-     */
     public void setPrsheadline(@NotNull String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prsheadline</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrsheadline() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_parser.prslextype</code>.
-     */
     public void setPrslextype(@NotNull String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_parser.prslextype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrslextype() {
@@ -405,16 +354,10 @@ public class PgTsParserRecord extends UpdatableRecordImpl<PgTsParserRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTsParserRecord
-     */
     public PgTsParserRecord() {
         super(PgTsParser.PG_TS_PARSER);
     }
 
-    /**
-     * Create a detached, initialised PgTsParserRecord
-     */
     @ConstructorProperties({ "oid", "prsname", "prsnamespace", "prsstart", "prstoken", "prsend", "prsheadline", "prslextype" })
     public PgTsParserRecord(@NotNull Long oid, @NotNull String prsname, @NotNull Long prsnamespace, @NotNull String prsstart, @NotNull String prstoken, @NotNull String prsend, @NotNull String prsheadline, @NotNull String prslextype) {
         super(PgTsParser.PG_TS_PARSER);
@@ -430,9 +373,6 @@ public class PgTsParserRecord extends UpdatableRecordImpl<PgTsParserRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTsParserRecord
-     */
     public PgTsParserRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTsParser value) {
         super(PgTsParser.PG_TS_PARSER);
 

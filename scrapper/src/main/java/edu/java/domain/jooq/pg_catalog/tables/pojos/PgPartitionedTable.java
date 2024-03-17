@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_partitioned_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -72,140 +69,82 @@ public class PgPartitionedTable implements Serializable {
         this.partexprs = partexprs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPartrelid() {
         return this.partrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partrelid</code>.
-     */
     public void setPartrelid(@NotNull Long partrelid) {
         this.partrelid = partrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partstrat</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPartstrat() {
         return this.partstrat;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partstrat</code>.
-     */
     public void setPartstrat(@NotNull String partstrat) {
         this.partstrat = partstrat;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partnatts</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getPartnatts() {
         return this.partnatts;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partnatts</code>.
-     */
     public void setPartnatts(@NotNull Short partnatts) {
         this.partnatts = partnatts;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partdefid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPartdefid() {
         return this.partdefid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partdefid</code>.
-     */
     public void setPartdefid(@NotNull Long partdefid) {
         this.partdefid = partdefid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partattrs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getPartattrs() {
         return this.partattrs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partattrs</code>.
-     */
     public void setPartattrs(@NotNull Object[] partattrs) {
         this.partattrs = partattrs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partclass</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getPartclass() {
         return this.partclass;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partclass</code>.
-     */
     public void setPartclass(@NotNull Object[] partclass) {
         this.partclass = partclass;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partitioned_table.partcollation</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getPartcollation() {
         return this.partcollation;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partitioned_table.partcollation</code>.
-     */
     public void setPartcollation(@NotNull Object[] partcollation) {
         this.partcollation = partcollation;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPartexprs() {
         return this.partexprs;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPartexprs(@Nullable Object partexprs) {
         this.partexprs = partexprs;

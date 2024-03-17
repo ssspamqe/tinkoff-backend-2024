@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgInitPrivsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_init_privs</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,43 +42,22 @@ public class PgInitPrivs extends TableImpl<PgInitPrivsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_init_privs</code>
-     */
     public static final PgInitPrivs PG_INIT_PRIVS = new PgInitPrivs();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgInitPrivsRecord> getRecordType() {
         return PgInitPrivsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_init_privs.objoid</code>.
-     */
     public final TableField<PgInitPrivsRecord, Long> OBJOID = createField(DSL.name("objoid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_init_privs.classoid</code>.
-     */
     public final TableField<PgInitPrivsRecord, Long> CLASSOID = createField(DSL.name("classoid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_init_privs.objsubid</code>.
-     */
     public final TableField<PgInitPrivsRecord, Integer> OBJSUBID = createField(DSL.name("objsubid"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_init_privs.privtype</code>.
-     */
     public final TableField<PgInitPrivsRecord, String> PRIVTYPE = createField(DSL.name("privtype"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_init_privs.initprivs</code>.
-     */
     public final TableField<PgInitPrivsRecord, String[]> INITPRIVS = createField(DSL.name("initprivs"), SQLDataType.VARCHAR.nullable(false).array(), this, "");
 
     private PgInitPrivs(Name alias, Table<PgInitPrivsRecord> aliased) {
@@ -94,23 +68,14 @@ public class PgInitPrivs extends TableImpl<PgInitPrivsRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_init_privs</code> table reference
-     */
     public PgInitPrivs(String alias) {
         this(DSL.name(alias), PG_INIT_PRIVS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_init_privs</code> table reference
-     */
     public PgInitPrivs(Name alias) {
         this(alias, PG_INIT_PRIVS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_init_privs</code> table reference
-     */
     public PgInitPrivs() {
         this(DSL.name("pg_init_privs"), null);
     }
@@ -149,27 +114,18 @@ public class PgInitPrivs extends TableImpl<PgInitPrivsRecord> {
         return new PgInitPrivs(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgInitPrivs rename(String name) {
         return new PgInitPrivs(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgInitPrivs rename(Name name) {
         return new PgInitPrivs(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgInitPrivs rename(Table<?> name) {
@@ -186,17 +142,10 @@ public class PgInitPrivs extends TableImpl<PgInitPrivsRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super Long, ? super Integer, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super Long, ? super Integer, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

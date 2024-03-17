@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatProgressClusterRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_cluster</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,85 +40,36 @@ public class PgStatProgressCluster extends TableImpl<PgStatProgressClusterRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_progress_cluster</code>
-     */
     public static final PgStatProgressCluster PG_STAT_PROGRESS_CLUSTER = new PgStatProgressCluster();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatProgressClusterRecord> getRecordType() {
         return PgStatProgressClusterRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_cluster.pid</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_cluster.datid</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_cluster.datname</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, String> DATNAME = createField(DSL.name("datname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_cluster.relid</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_cluster.command</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, String> COMMAND = createField(DSL.name("command"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_cluster.phase</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, String> PHASE = createField(DSL.name("phase"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_cluster.cluster_index_relid</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Long> CLUSTER_INDEX_RELID = createField(DSL.name("cluster_index_relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_scanned</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Long> HEAP_TUPLES_SCANNED = createField(DSL.name("heap_tuples_scanned"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_written</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Long> HEAP_TUPLES_WRITTEN = createField(DSL.name("heap_tuples_written"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_total</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Long> HEAP_BLKS_TOTAL = createField(DSL.name("heap_blks_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_scanned</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Long> HEAP_BLKS_SCANNED = createField(DSL.name("heap_blks_scanned"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_cluster.index_rebuild_count</code>.
-     */
     public final TableField<PgStatProgressClusterRecord, Long> INDEX_REBUILD_COUNT = createField(DSL.name("index_rebuild_count"), SQLDataType.BIGINT, this, "");
 
     private PgStatProgressCluster(Name alias, Table<PgStatProgressClusterRecord> aliased) {
@@ -163,25 +109,14 @@ public class PgStatProgressCluster extends TableImpl<PgStatProgressClusterRecord
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_cluster</code> table
-     * reference
-     */
     public PgStatProgressCluster(String alias) {
         this(DSL.name(alias), PG_STAT_PROGRESS_CLUSTER);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_cluster</code> table
-     * reference
-     */
     public PgStatProgressCluster(Name alias) {
         this(alias, PG_STAT_PROGRESS_CLUSTER);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_progress_cluster</code> table reference
-     */
     public PgStatProgressCluster() {
         this(DSL.name("pg_stat_progress_cluster"), null);
     }
@@ -214,27 +149,18 @@ public class PgStatProgressCluster extends TableImpl<PgStatProgressClusterRecord
         return new PgStatProgressCluster(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCluster rename(String name) {
         return new PgStatProgressCluster(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCluster rename(Name name) {
         return new PgStatProgressCluster(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCluster rename(Table<?> name) {
@@ -251,17 +177,10 @@ public class PgStatProgressCluster extends TableImpl<PgStatProgressClusterRecord
         return (Row12) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function12<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

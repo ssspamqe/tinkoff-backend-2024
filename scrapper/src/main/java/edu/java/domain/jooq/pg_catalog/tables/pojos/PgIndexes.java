@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,77 +55,47 @@ public class PgIndexes implements Serializable {
         this.indexdef = indexdef;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return this.tablename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.tablename</code>.
-     */
     public void setTablename(@Nullable String tablename) {
         this.tablename = tablename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.indexname</code>.
-     */
     @Nullable
     public String getIndexname() {
         return this.indexname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.indexname</code>.
-     */
     public void setIndexname(@Nullable String indexname) {
         this.indexname = indexname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.tablespace</code>.
-     */
     @Nullable
     public String getTablespace() {
         return this.tablespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.tablespace</code>.
-     */
     public void setTablespace(@Nullable String tablespace) {
         this.tablespace = tablespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.indexdef</code>.
-     */
     @Nullable
     public String getIndexdef() {
         return this.indexdef;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.indexdef</code>.
-     */
     public void setIndexdef(@Nullable String indexdef) {
         this.indexdef = indexdef;
     }

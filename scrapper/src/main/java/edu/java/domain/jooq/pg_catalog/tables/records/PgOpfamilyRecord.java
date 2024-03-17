@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_opfamily</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,80 +30,50 @@ public class PgOpfamilyRecord extends UpdatableRecordImpl<PgOpfamilyRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.opfmethod</code>.
-     */
     public void setOpfmethod(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.opfmethod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpfmethod() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.opfname</code>.
-     */
     public void setOpfname(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.opfname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOpfname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.opfnamespace</code>.
-     */
     public void setOpfnamespace(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.opfnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpfnamespace() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.opfowner</code>.
-     */
     public void setOpfowner(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.opfowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpfowner() {
@@ -279,16 +246,10 @@ public class PgOpfamilyRecord extends UpdatableRecordImpl<PgOpfamilyRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgOpfamilyRecord
-     */
     public PgOpfamilyRecord() {
         super(PgOpfamily.PG_OPFAMILY);
     }
 
-    /**
-     * Create a detached, initialised PgOpfamilyRecord
-     */
     @ConstructorProperties({ "oid", "opfmethod", "opfname", "opfnamespace", "opfowner" })
     public PgOpfamilyRecord(@NotNull Long oid, @NotNull Long opfmethod, @NotNull String opfname, @NotNull Long opfnamespace, @NotNull Long opfowner) {
         super(PgOpfamily.PG_OPFAMILY);
@@ -301,9 +262,6 @@ public class PgOpfamilyRecord extends UpdatableRecordImpl<PgOpfamilyRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgOpfamilyRecord
-     */
     public PgOpfamilyRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgOpfamily value) {
         super(PgOpfamily.PG_OPFAMILY);
 

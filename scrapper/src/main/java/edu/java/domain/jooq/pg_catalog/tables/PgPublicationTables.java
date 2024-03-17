@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgPublicationTablesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,43 +40,22 @@ public class PgPublicationTables extends TableImpl<PgPublicationTablesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_publication_tables</code>
-     */
     public static final PgPublicationTables PG_PUBLICATION_TABLES = new PgPublicationTables();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgPublicationTablesRecord> getRecordType() {
         return PgPublicationTablesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_publication_tables.pubname</code>.
-     */
     public final TableField<PgPublicationTablesRecord, String> PUBNAME = createField(DSL.name("pubname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_tables.schemaname</code>.
-     */
     public final TableField<PgPublicationTablesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_tables.tablename</code>.
-     */
     public final TableField<PgPublicationTablesRecord, String> TABLENAME = createField(DSL.name("tablename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_tables.attnames</code>.
-     */
     public final TableField<PgPublicationTablesRecord, String[]> ATTNAMES = createField(DSL.name("attnames"), SQLDataType.VARCHAR.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_tables.rowfilter</code>.
-     */
     public final TableField<PgPublicationTablesRecord, String> ROWFILTER = createField(DSL.name("rowfilter"), SQLDataType.CLOB, this, "");
 
     private PgPublicationTables(Name alias, Table<PgPublicationTablesRecord> aliased) {
@@ -105,25 +79,14 @@ public class PgPublicationTables extends TableImpl<PgPublicationTablesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_publication_tables</code> table
-     * reference
-     */
     public PgPublicationTables(String alias) {
         this(DSL.name(alias), PG_PUBLICATION_TABLES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_publication_tables</code> table
-     * reference
-     */
     public PgPublicationTables(Name alias) {
         this(alias, PG_PUBLICATION_TABLES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_publication_tables</code> table reference
-     */
     public PgPublicationTables() {
         this(DSL.name("pg_publication_tables"), null);
     }
@@ -156,27 +119,18 @@ public class PgPublicationTables extends TableImpl<PgPublicationTablesRecord> {
         return new PgPublicationTables(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationTables rename(String name) {
         return new PgPublicationTables(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationTables rename(Name name) {
         return new PgPublicationTables(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationTables rename(Table<?> name) {
@@ -193,17 +147,10 @@ public class PgPublicationTables extends TableImpl<PgPublicationTablesRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String[], ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String[], ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

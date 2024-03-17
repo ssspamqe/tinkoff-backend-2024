@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgPreparedXactRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -29,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_prepared_xact</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,43 +40,22 @@ public class PgPreparedXact extends TableImpl<PgPreparedXactRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_prepared_xact</code>
-     */
     public static final PgPreparedXact PG_PREPARED_XACT = new PgPreparedXact();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgPreparedXactRecord> getRecordType() {
         return PgPreparedXactRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_xact.transaction</code>.
-     */
     public final TableField<PgPreparedXactRecord, Long> TRANSACTION = createField(DSL.name("transaction"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_xact.gid</code>.
-     */
     public final TableField<PgPreparedXactRecord, String> GID = createField(DSL.name("gid"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_xact.prepared</code>.
-     */
     public final TableField<PgPreparedXactRecord, OffsetDateTime> PREPARED = createField(DSL.name("prepared"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_xact.ownerid</code>.
-     */
     public final TableField<PgPreparedXactRecord, Long> OWNERID = createField(DSL.name("ownerid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_prepared_xact.dbid</code>.
-     */
     public final TableField<PgPreparedXactRecord, Long> DBID = createField(DSL.name("dbid"), SQLDataType.BIGINT, this, "");
 
     private PgPreparedXact(Name alias, Table<PgPreparedXactRecord> aliased) {
@@ -92,25 +67,14 @@ public class PgPreparedXact extends TableImpl<PgPreparedXactRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_prepared_xact</code> table
-     * reference
-     */
     public PgPreparedXact(String alias) {
         this(DSL.name(alias), PG_PREPARED_XACT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_prepared_xact</code> table
-     * reference
-     */
     public PgPreparedXact(Name alias) {
         this(alias, PG_PREPARED_XACT);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_prepared_xact</code> table reference
-     */
     public PgPreparedXact() {
         this(DSL.name("pg_prepared_xact"), null);
     }
@@ -139,27 +103,18 @@ public class PgPreparedXact extends TableImpl<PgPreparedXactRecord> {
         return new PgPreparedXact(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPreparedXact rename(String name) {
         return new PgPreparedXact(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPreparedXact rename(Name name) {
         return new PgPreparedXact(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPreparedXact rename(Table<?> name) {
@@ -176,26 +131,16 @@ public class PgPreparedXact extends TableImpl<PgPreparedXactRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgPreparedXact call() {
         PgPreparedXact result = new PgPreparedXact(DSL.name("pg_prepared_xact"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super OffsetDateTime, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super OffsetDateTime, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

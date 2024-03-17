@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.sql_sizing</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,62 +51,38 @@ public class SqlSizing implements Serializable {
         this.comments = comments;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_sizing.sizing_id</code>.
-     */
     @Nullable
     public Integer getSizingId() {
         return this.sizingId;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_sizing.sizing_id</code>.
-     */
     public void setSizingId(@Nullable Integer sizingId) {
         this.sizingId = sizingId;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_sizing.sizing_name</code>.
-     */
     @Nullable
     public String getSizingName() {
         return this.sizingName;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_sizing.sizing_name</code>.
-     */
     public void setSizingName(@Nullable String sizingName) {
         this.sizingName = sizingName;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_sizing.supported_value</code>.
-     */
     @Nullable
     public Integer getSupportedValue() {
         return this.supportedValue;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_sizing.supported_value</code>.
-     */
     public void setSupportedValue(@Nullable Integer supportedValue) {
         this.supportedValue = supportedValue;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_sizing.comments</code>.
-     */
     @Nullable
     public String getComments() {
         return this.comments;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_sizing.comments</code>.
-     */
     public void setComments(@Nullable String comments) {
         this.comments = comments;
     }

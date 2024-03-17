@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_show_replication_origin_status</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,89 +51,41 @@ public class PgShowReplicationOriginStatus implements Serializable {
         this.localLsn = localLsn;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_show_replication_origin_status.local_id</code>.
-     */
     @Nullable
     public Long getLocalId() {
         return this.localId;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_show_replication_origin_status.local_id</code>.
-     */
     public void setLocalId(@Nullable Long localId) {
         this.localId = localId;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_show_replication_origin_status.external_id</code>.
-     */
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_show_replication_origin_status.external_id</code>.
-     */
     public void setExternalId(@Nullable String externalId) {
         this.externalId = externalId;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getRemoteLsn() {
         return this.remoteLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setRemoteLsn(@Nullable Object remoteLsn) {
         this.remoteLsn = remoteLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getLocalLsn() {
         return this.localLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setLocalLsn(@Nullable Object localLsn) {
         this.localLsn = localLsn;

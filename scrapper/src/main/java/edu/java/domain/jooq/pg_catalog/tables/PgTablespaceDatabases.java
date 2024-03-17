@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTablespaceDatabasesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_tablespace_databases</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,24 +38,14 @@ public class PgTablespaceDatabases extends TableImpl<PgTablespaceDatabasesRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_tablespace_databases</code>
-     */
     public static final PgTablespaceDatabases PG_TABLESPACE_DATABASES = new PgTablespaceDatabases();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTablespaceDatabasesRecord> getRecordType() {
         return PgTablespaceDatabasesRecord.class;
     }
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_tablespace_databases.pg_tablespace_databases</code>.
-     */
     public final TableField<PgTablespaceDatabasesRecord, Long> PG_TABLESPACE_DATABASES_ = createField(DSL.name("pg_tablespace_databases"), SQLDataType.BIGINT, this, "");
 
     private PgTablespaceDatabases(Name alias, Table<PgTablespaceDatabasesRecord> aliased) {
@@ -73,25 +58,14 @@ public class PgTablespaceDatabases extends TableImpl<PgTablespaceDatabasesRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_tablespace_databases</code> table
-     * reference
-     */
     public PgTablespaceDatabases(String alias) {
         this(DSL.name(alias), PG_TABLESPACE_DATABASES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_tablespace_databases</code> table
-     * reference
-     */
     public PgTablespaceDatabases(Name alias) {
         this(alias, PG_TABLESPACE_DATABASES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_tablespace_databases</code> table reference
-     */
     public PgTablespaceDatabases() {
         this(DSL.name("pg_tablespace_databases"), null);
     }
@@ -120,27 +94,18 @@ public class PgTablespaceDatabases extends TableImpl<PgTablespaceDatabasesRecord
         return new PgTablespaceDatabases(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTablespaceDatabases rename(String name) {
         return new PgTablespaceDatabases(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTablespaceDatabases rename(Name name) {
         return new PgTablespaceDatabases(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTablespaceDatabases rename(Table<?> name) {
@@ -157,9 +122,6 @@ public class PgTablespaceDatabases extends TableImpl<PgTablespaceDatabasesRecord
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgTablespaceDatabases call(
           Long __1
     ) {
@@ -170,9 +132,6 @@ public class PgTablespaceDatabases extends TableImpl<PgTablespaceDatabasesRecord
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgTablespaceDatabases call(
           Field<Long> __1
     ) {
@@ -183,17 +142,10 @@ public class PgTablespaceDatabases extends TableImpl<PgTablespaceDatabasesRecord
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

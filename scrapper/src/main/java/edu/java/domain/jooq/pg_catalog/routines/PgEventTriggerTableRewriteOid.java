@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_event_trigger_table_rewrite_oid</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,24 +26,14 @@ public class PgEventTriggerTableRewriteOid extends AbstractRoutine<java.lang.Voi
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_event_trigger_table_rewrite_oid.oid</code>.
-     */
     public static final Parameter<Long> OID = Internal.createParameter("oid", SQLDataType.BIGINT, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgEventTriggerTableRewriteOid() {
         super("pg_event_trigger_table_rewrite_oid", PgCatalog.PG_CATALOG);
 
         addOutParameter(OID);
     }
 
-    /**
-     * Get the <code>oid</code> parameter OUT value from the routine
-     */
     public Long getOid() {
         return get(OID);
     }

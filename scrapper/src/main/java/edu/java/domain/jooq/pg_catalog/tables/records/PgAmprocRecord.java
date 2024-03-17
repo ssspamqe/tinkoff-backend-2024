@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_amproc</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,96 +30,60 @@ public class PgAmprocRecord extends UpdatableRecordImpl<PgAmprocRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amprocfamily</code>.
-     */
     public void setAmprocfamily(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amprocfamily</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmprocfamily() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amproclefttype</code>.
-     */
     public void setAmproclefttype(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amproclefttype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmproclefttype() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amprocrighttype</code>.
-     */
     public void setAmprocrighttype(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amprocrighttype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmprocrighttype() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amprocnum</code>.
-     */
     public void setAmprocnum(@NotNull Short value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amprocnum</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAmprocnum() {
         return (Short) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amproc.amproc</code>.
-     */
     public void setAmproc(@NotNull String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amproc.amproc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmproc() {
@@ -321,16 +282,10 @@ public class PgAmprocRecord extends UpdatableRecordImpl<PgAmprocRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAmprocRecord
-     */
     public PgAmprocRecord() {
         super(PgAmproc.PG_AMPROC);
     }
 
-    /**
-     * Create a detached, initialised PgAmprocRecord
-     */
     @ConstructorProperties({ "oid", "amprocfamily", "amproclefttype", "amprocrighttype", "amprocnum", "amproc" })
     public PgAmprocRecord(@NotNull Long oid, @NotNull Long amprocfamily, @NotNull Long amproclefttype, @NotNull Long amprocrighttype, @NotNull Short amprocnum, @NotNull String amproc) {
         super(PgAmproc.PG_AMPROC);
@@ -344,9 +299,6 @@ public class PgAmprocRecord extends UpdatableRecordImpl<PgAmprocRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAmprocRecord
-     */
     public PgAmprocRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAmproc value) {
         super(PgAmproc.PG_AMPROC);
 

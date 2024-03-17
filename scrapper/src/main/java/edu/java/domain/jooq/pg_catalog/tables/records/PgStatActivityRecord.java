@@ -19,9 +19,6 @@ import org.jooq.Row22;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_activity</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,343 +31,201 @@ public class PgStatActivityRecord extends TableRecordImpl<PgStatActivityRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.datid</code>.
-     */
     public void setDatid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.datname</code>.
-     */
     public void setDatname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.leader_pid</code>.
-     */
     public void setLeaderPid(@Nullable Integer value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.leader_pid</code>.
-     */
     @Nullable
     public Integer getLeaderPid() {
         return (Integer) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.usesysid</code>.
-     */
     public void setUsesysid(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.usesysid</code>.
-     */
     @Nullable
     public Long getUsesysid() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.usename</code>.
-     */
     public void setUsename(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.usename</code>.
-     */
     @Nullable
     public String getUsename() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.application_name</code>.
-     */
     public void setApplicationName(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.application_name</code>.
-     */
     @Nullable
     public String getApplicationName() {
         return (String) get(6);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setClientAddr(@Nullable Object value) {
         set(7, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getClientAddr() {
         return get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.client_hostname</code>.
-     */
     public void setClientHostname(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.client_hostname</code>.
-     */
     @Nullable
     public String getClientHostname() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.client_port</code>.
-     */
     public void setClientPort(@Nullable Integer value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.client_port</code>.
-     */
     @Nullable
     public Integer getClientPort() {
         return (Integer) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.backend_start</code>.
-     */
     public void setBackendStart(@Nullable OffsetDateTime value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.backend_start</code>.
-     */
     @Nullable
     public OffsetDateTime getBackendStart() {
         return (OffsetDateTime) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.xact_start</code>.
-     */
     public void setXactStart(@Nullable OffsetDateTime value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.xact_start</code>.
-     */
     @Nullable
     public OffsetDateTime getXactStart() {
         return (OffsetDateTime) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.query_start</code>.
-     */
     public void setQueryStart(@Nullable OffsetDateTime value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.query_start</code>.
-     */
     @Nullable
     public OffsetDateTime getQueryStart() {
         return (OffsetDateTime) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.state_change</code>.
-     */
     public void setStateChange(@Nullable OffsetDateTime value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.state_change</code>.
-     */
     @Nullable
     public OffsetDateTime getStateChange() {
         return (OffsetDateTime) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.wait_event_type</code>.
-     */
     public void setWaitEventType(@Nullable String value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.wait_event_type</code>.
-     */
     @Nullable
     public String getWaitEventType() {
         return (String) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.wait_event</code>.
-     */
     public void setWaitEvent(@Nullable String value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.wait_event</code>.
-     */
     @Nullable
     public String getWaitEvent() {
         return (String) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.state</code>.
-     */
     public void setState(@Nullable String value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.state</code>.
-     */
     @Nullable
     public String getState() {
         return (String) get(16);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.backend_xid</code>.
-     */
     public void setBackendXid(@Nullable Long value) {
         set(17, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.backend_xid</code>.
-     */
     @Nullable
     public Long getBackendXid() {
         return (Long) get(17);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.backend_xmin</code>.
-     */
     public void setBackendXmin(@Nullable Long value) {
         set(18, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.backend_xmin</code>.
-     */
     @Nullable
     public Long getBackendXmin() {
         return (Long) get(18);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.query_id</code>.
-     */
     public void setQueryId(@Nullable Long value) {
         set(19, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.query_id</code>.
-     */
     @Nullable
     public Long getQueryId() {
         return (Long) get(19);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.query</code>.
-     */
     public void setQuery(@Nullable String value) {
         set(20, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.query</code>.
-     */
     @Nullable
     public String getQuery() {
         return (String) get(20);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.backend_type</code>.
-     */
     public void setBackendType(@Nullable String value) {
         set(21, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.backend_type</code>.
-     */
     @Nullable
     public String getBackendType() {
         return (String) get(21);
@@ -434,14 +289,6 @@ public class PgStatActivityRecord extends TableRecordImpl<PgStatActivityRecord> 
         return PgStatActivity.PG_STAT_ACTIVITY.APPLICATION_NAME;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -575,14 +422,6 @@ public class PgStatActivityRecord extends TableRecordImpl<PgStatActivityRecord> 
         return getApplicationName();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -716,14 +555,6 @@ public class PgStatActivityRecord extends TableRecordImpl<PgStatActivityRecord> 
         return getApplicationName();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -864,14 +695,6 @@ public class PgStatActivityRecord extends TableRecordImpl<PgStatActivityRecord> 
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -1010,16 +833,10 @@ public class PgStatActivityRecord extends TableRecordImpl<PgStatActivityRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatActivityRecord
-     */
     public PgStatActivityRecord() {
         super(PgStatActivity.PG_STAT_ACTIVITY);
     }
 
-    /**
-     * Create a detached, initialised PgStatActivityRecord
-     */
     @ConstructorProperties({ "datid", "datname", "pid", "leaderPid", "usesysid", "usename", "applicationName", "clientAddr", "clientHostname", "clientPort", "backendStart", "xactStart", "queryStart", "stateChange", "waitEventType", "waitEvent", "state", "backendXid", "backendXmin", "queryId", "query", "backendType" })
     public PgStatActivityRecord(@Nullable Long datid, @Nullable String datname, @Nullable Integer pid, @Nullable Integer leaderPid, @Nullable Long usesysid, @Nullable String usename, @Nullable String applicationName, @Nullable Object clientAddr, @Nullable String clientHostname, @Nullable Integer clientPort, @Nullable OffsetDateTime backendStart, @Nullable OffsetDateTime xactStart, @Nullable OffsetDateTime queryStart, @Nullable OffsetDateTime stateChange, @Nullable String waitEventType, @Nullable String waitEvent, @Nullable String state, @Nullable Long backendXid, @Nullable Long backendXmin, @Nullable Long queryId, @Nullable String query, @Nullable String backendType) {
         super(PgStatActivity.PG_STAT_ACTIVITY);
@@ -1049,9 +866,6 @@ public class PgStatActivityRecord extends TableRecordImpl<PgStatActivityRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatActivityRecord
-     */
     public PgStatActivityRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatActivity value) {
         super(PgStatActivity.PG_STAT_ACTIVITY);
 

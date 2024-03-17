@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.UserMappingOptionsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.user_mapping_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,49 +39,22 @@ public class UserMappingOptions extends TableImpl<UserMappingOptionsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.user_mapping_options</code>
-     */
     public static final UserMappingOptions USER_MAPPING_OPTIONS = new UserMappingOptions();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<UserMappingOptionsRecord> getRecordType() {
         return UserMappingOptionsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.user_mapping_options.authorization_identifier</code>.
-     */
     public final TableField<UserMappingOptionsRecord, String> AUTHORIZATION_IDENTIFIER = createField(DSL.name("authorization_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_mapping_options.foreign_server_catalog</code>.
-     */
     public final TableField<UserMappingOptionsRecord, String> FOREIGN_SERVER_CATALOG = createField(DSL.name("foreign_server_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_mapping_options.foreign_server_name</code>.
-     */
     public final TableField<UserMappingOptionsRecord, String> FOREIGN_SERVER_NAME = createField(DSL.name("foreign_server_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_mapping_options.option_name</code>.
-     */
     public final TableField<UserMappingOptionsRecord, String> OPTION_NAME = createField(DSL.name("option_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_mapping_options.option_value</code>.
-     */
     public final TableField<UserMappingOptionsRecord, String> OPTION_VALUE = createField(DSL.name("option_value"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private UserMappingOptions(Name alias, Table<UserMappingOptionsRecord> aliased) {
@@ -111,26 +79,14 @@ public class UserMappingOptions extends TableImpl<UserMappingOptionsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.user_mapping_options</code>
-     * table reference
-     */
     public UserMappingOptions(String alias) {
         this(DSL.name(alias), USER_MAPPING_OPTIONS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.user_mapping_options</code>
-     * table reference
-     */
     public UserMappingOptions(Name alias) {
         this(alias, USER_MAPPING_OPTIONS);
     }
 
-    /**
-     * Create a <code>information_schema.user_mapping_options</code> table
-     * reference
-     */
     public UserMappingOptions() {
         this(DSL.name("user_mapping_options"), null);
     }
@@ -163,27 +119,18 @@ public class UserMappingOptions extends TableImpl<UserMappingOptionsRecord> {
         return new UserMappingOptions(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserMappingOptions rename(String name) {
         return new UserMappingOptions(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserMappingOptions rename(Name name) {
         return new UserMappingOptions(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserMappingOptions rename(Table<?> name) {
@@ -200,17 +147,10 @@ public class UserMappingOptions extends TableImpl<UserMappingOptionsRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

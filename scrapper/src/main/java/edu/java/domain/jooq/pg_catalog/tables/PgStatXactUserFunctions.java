@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatXactUserFunctionsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_xact_user_functions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,51 +40,24 @@ public class PgStatXactUserFunctions extends TableImpl<PgStatXactUserFunctionsRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_xact_user_functions</code>
-     */
     public static final PgStatXactUserFunctions PG_STAT_XACT_USER_FUNCTIONS = new PgStatXactUserFunctions();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatXactUserFunctionsRecord> getRecordType() {
         return PgStatXactUserFunctionsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_user_functions.funcid</code>.
-     */
     public final TableField<PgStatXactUserFunctionsRecord, Long> FUNCID = createField(DSL.name("funcid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_xact_user_functions.schemaname</code>.
-     */
     public final TableField<PgStatXactUserFunctionsRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_user_functions.funcname</code>.
-     */
     public final TableField<PgStatXactUserFunctionsRecord, String> FUNCNAME = createField(DSL.name("funcname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_user_functions.calls</code>.
-     */
     public final TableField<PgStatXactUserFunctionsRecord, Long> CALLS = createField(DSL.name("calls"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_xact_user_functions.total_time</code>.
-     */
     public final TableField<PgStatXactUserFunctionsRecord, Double> TOTAL_TIME = createField(DSL.name("total_time"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_xact_user_functions.self_time</code>.
-     */
     public final TableField<PgStatXactUserFunctionsRecord, Double> SELF_TIME = createField(DSL.name("self_time"), SQLDataType.DOUBLE, this, "");
 
     private PgStatXactUserFunctions(Name alias, Table<PgStatXactUserFunctionsRecord> aliased) {
@@ -110,26 +78,14 @@ public class PgStatXactUserFunctions extends TableImpl<PgStatXactUserFunctionsRe
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_xact_user_functions</code>
-     * table reference
-     */
     public PgStatXactUserFunctions(String alias) {
         this(DSL.name(alias), PG_STAT_XACT_USER_FUNCTIONS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_xact_user_functions</code>
-     * table reference
-     */
     public PgStatXactUserFunctions(Name alias) {
         this(alias, PG_STAT_XACT_USER_FUNCTIONS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_xact_user_functions</code> table
-     * reference
-     */
     public PgStatXactUserFunctions() {
         this(DSL.name("pg_stat_xact_user_functions"), null);
     }
@@ -162,27 +118,18 @@ public class PgStatXactUserFunctions extends TableImpl<PgStatXactUserFunctionsRe
         return new PgStatXactUserFunctions(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatXactUserFunctions rename(String name) {
         return new PgStatXactUserFunctions(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatXactUserFunctions rename(Name name) {
         return new PgStatXactUserFunctions(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatXactUserFunctions rename(Table<?> name) {
@@ -199,17 +146,10 @@ public class PgStatXactUserFunctions extends TableImpl<PgStatXactUserFunctionsRe
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super Long, ? super String, ? super String, ? super Long, ? super Double, ? super Double, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super String, ? super String, ? super Long, ? super Double, ? super Double, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

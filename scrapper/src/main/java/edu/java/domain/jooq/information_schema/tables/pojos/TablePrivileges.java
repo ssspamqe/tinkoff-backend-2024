@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.table_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -72,130 +69,76 @@ public class TablePrivileges implements Serializable {
         this.withHierarchy = withHierarchy;
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return this.grantor;
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.grantor</code>.
-     */
     public void setGrantor(@Nullable String grantor) {
         this.grantor = grantor;
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return this.grantee;
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.grantee</code>.
-     */
     public void setGrantee(@Nullable String grantee) {
         this.grantee = grantee;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_privileges.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_privileges.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_privileges.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return this.privilegeType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_privileges.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String privilegeType) {
         this.privilegeType = privilegeType;
     }
 
-    /**
-     * Getter for <code>information_schema.table_privileges.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
         return this.isGrantable;
     }
 
-    /**
-     * Setter for <code>information_schema.table_privileges.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String isGrantable) {
         this.isGrantable = isGrantable;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_privileges.with_hierarchy</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getWithHierarchy() {
         return this.withHierarchy;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_privileges.with_hierarchy</code>.
-     */
     public void setWithHierarchy(@Nullable String withHierarchy) {
         this.withHierarchy = withHierarchy;
     }

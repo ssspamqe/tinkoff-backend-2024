@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_database_conflicts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,131 +30,73 @@ public class PgStatDatabaseConflictsRecord extends TableRecordImpl<PgStatDatabas
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database_conflicts.datid</code>.
-     */
     public void setDatid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database_conflicts.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database_conflicts.datname</code>.
-     */
     public void setDatname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database_conflicts.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_tablespace</code>.
-     */
     public void setConflTablespace(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_tablespace</code>.
-     */
     @Nullable
     public Long getConflTablespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database_conflicts.confl_lock</code>.
-     */
     public void setConflLock(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database_conflicts.confl_lock</code>.
-     */
     @Nullable
     public Long getConflLock() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_snapshot</code>.
-     */
     public void setConflSnapshot(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_snapshot</code>.
-     */
     @Nullable
     public Long getConflSnapshot() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_bufferpin</code>.
-     */
     public void setConflBufferpin(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_bufferpin</code>.
-     */
     @Nullable
     public Long getConflBufferpin() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_deadlock</code>.
-     */
     public void setConflDeadlock(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_deadlock</code>.
-     */
     @Nullable
     public Long getConflDeadlock() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_active_logicalslot</code>.
-     */
     public void setConflActiveLogicalslot(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_active_logicalslot</code>.
-     */
     @Nullable
     public Long getConflActiveLogicalslot() {
         return (Long) get(7);
@@ -397,16 +336,10 @@ public class PgStatDatabaseConflictsRecord extends TableRecordImpl<PgStatDatabas
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatDatabaseConflictsRecord
-     */
     public PgStatDatabaseConflictsRecord() {
         super(PgStatDatabaseConflicts.PG_STAT_DATABASE_CONFLICTS);
     }
 
-    /**
-     * Create a detached, initialised PgStatDatabaseConflictsRecord
-     */
     @ConstructorProperties({ "datid", "datname", "conflTablespace", "conflLock", "conflSnapshot", "conflBufferpin", "conflDeadlock", "conflActiveLogicalslot" })
     public PgStatDatabaseConflictsRecord(@Nullable Long datid, @Nullable String datname, @Nullable Long conflTablespace, @Nullable Long conflLock, @Nullable Long conflSnapshot, @Nullable Long conflBufferpin, @Nullable Long conflDeadlock, @Nullable Long conflActiveLogicalslot) {
         super(PgStatDatabaseConflicts.PG_STAT_DATABASE_CONFLICTS);
@@ -422,9 +355,6 @@ public class PgStatDatabaseConflictsRecord extends TableRecordImpl<PgStatDatabas
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatDatabaseConflictsRecord
-     */
     public PgStatDatabaseConflictsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatDatabaseConflicts value) {
         super(PgStatDatabaseConflicts.PG_STAT_DATABASE_CONFLICTS);
 

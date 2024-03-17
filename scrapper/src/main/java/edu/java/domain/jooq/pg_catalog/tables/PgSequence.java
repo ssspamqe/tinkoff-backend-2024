@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgSequenceRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_sequence</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,58 +42,28 @@ public class PgSequence extends TableImpl<PgSequenceRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_sequence</code>
-     */
     public static final PgSequence PG_SEQUENCE = new PgSequence();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgSequenceRecord> getRecordType() {
         return PgSequenceRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_sequence.seqrelid</code>.
-     */
     public final TableField<PgSequenceRecord, Long> SEQRELID = createField(DSL.name("seqrelid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequence.seqtypid</code>.
-     */
     public final TableField<PgSequenceRecord, Long> SEQTYPID = createField(DSL.name("seqtypid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequence.seqstart</code>.
-     */
     public final TableField<PgSequenceRecord, Long> SEQSTART = createField(DSL.name("seqstart"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequence.seqincrement</code>.
-     */
     public final TableField<PgSequenceRecord, Long> SEQINCREMENT = createField(DSL.name("seqincrement"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequence.seqmax</code>.
-     */
     public final TableField<PgSequenceRecord, Long> SEQMAX = createField(DSL.name("seqmax"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequence.seqmin</code>.
-     */
     public final TableField<PgSequenceRecord, Long> SEQMIN = createField(DSL.name("seqmin"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequence.seqcache</code>.
-     */
     public final TableField<PgSequenceRecord, Long> SEQCACHE = createField(DSL.name("seqcache"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_sequence.seqcycle</code>.
-     */
     public final TableField<PgSequenceRecord, Boolean> SEQCYCLE = createField(DSL.name("seqcycle"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
     private PgSequence(Name alias, Table<PgSequenceRecord> aliased) {
@@ -109,23 +74,14 @@ public class PgSequence extends TableImpl<PgSequenceRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_sequence</code> table reference
-     */
     public PgSequence(String alias) {
         this(DSL.name(alias), PG_SEQUENCE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_sequence</code> table reference
-     */
     public PgSequence(Name alias) {
         this(alias, PG_SEQUENCE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_sequence</code> table reference
-     */
     public PgSequence() {
         this(DSL.name("pg_sequence"), null);
     }
@@ -164,27 +120,18 @@ public class PgSequence extends TableImpl<PgSequenceRecord> {
         return new PgSequence(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSequence rename(String name) {
         return new PgSequence(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSequence rename(Name name) {
         return new PgSequence(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgSequence rename(Table<?> name) {
@@ -201,17 +148,10 @@ public class PgSequence extends TableImpl<PgSequenceRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

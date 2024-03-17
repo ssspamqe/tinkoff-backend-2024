@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatWalReceiverRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_wal_receiver</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,120 +42,46 @@ public class PgStatWalReceiver extends TableImpl<PgStatWalReceiverRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_wal_receiver</code>
-     */
     public static final PgStatWalReceiver PG_STAT_WAL_RECEIVER = new PgStatWalReceiver();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatWalReceiverRecord> getRecordType() {
         return PgStatWalReceiverRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_wal_receiver.pid</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_wal_receiver.status</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, String> STATUS = createField(DSL.name("status"), SQLDataType.CLOB, this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgStatWalReceiverRecord, Object> RECEIVE_START_LSN = createField(DSL.name("receive_start_lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_wal_receiver.receive_start_tli</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, Integer> RECEIVE_START_TLI = createField(DSL.name("receive_start_tli"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgStatWalReceiverRecord, Object> WRITTEN_LSN = createField(DSL.name("written_lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgStatWalReceiverRecord, Object> FLUSHED_LSN = createField(DSL.name("flushed_lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_wal_receiver.received_tli</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, Integer> RECEIVED_TLI = createField(DSL.name("received_tli"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_wal_receiver.last_msg_send_time</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, OffsetDateTime> LAST_MSG_SEND_TIME = createField(DSL.name("last_msg_send_time"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_wal_receiver.last_msg_receipt_time</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, OffsetDateTime> LAST_MSG_RECEIPT_TIME = createField(DSL.name("last_msg_receipt_time"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgStatWalReceiverRecord, Object> LATEST_END_LSN = createField(DSL.name("latest_end_lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_wal_receiver.latest_end_time</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, OffsetDateTime> LATEST_END_TIME = createField(DSL.name("latest_end_time"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_wal_receiver.slot_name</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, String> SLOT_NAME = createField(DSL.name("slot_name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_wal_receiver.sender_host</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, String> SENDER_HOST = createField(DSL.name("sender_host"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_wal_receiver.sender_port</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, Integer> SENDER_PORT = createField(DSL.name("sender_port"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_wal_receiver.conninfo</code>.
-     */
     public final TableField<PgStatWalReceiverRecord, String> CONNINFO = createField(DSL.name("conninfo"), SQLDataType.CLOB, this, "");
 
     private PgStatWalReceiver(Name alias, Table<PgStatWalReceiverRecord> aliased) {
@@ -188,25 +110,14 @@ public class PgStatWalReceiver extends TableImpl<PgStatWalReceiverRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_wal_receiver</code> table
-     * reference
-     */
     public PgStatWalReceiver(String alias) {
         this(DSL.name(alias), PG_STAT_WAL_RECEIVER);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_wal_receiver</code> table
-     * reference
-     */
     public PgStatWalReceiver(Name alias) {
         this(alias, PG_STAT_WAL_RECEIVER);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_wal_receiver</code> table reference
-     */
     public PgStatWalReceiver() {
         this(DSL.name("pg_stat_wal_receiver"), null);
     }
@@ -239,27 +150,18 @@ public class PgStatWalReceiver extends TableImpl<PgStatWalReceiverRecord> {
         return new PgStatWalReceiver(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatWalReceiver rename(String name) {
         return new PgStatWalReceiver(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatWalReceiver rename(Name name) {
         return new PgStatWalReceiver(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatWalReceiver rename(Table<?> name) {
@@ -276,17 +178,10 @@ public class PgStatWalReceiver extends TableImpl<PgStatWalReceiverRecord> {
         return (Row15) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function15<? super Integer, ? super String, ? super Object, ? super Integer, ? super Object, ? super Object, ? super Integer, ? super OffsetDateTime, ? super OffsetDateTime, ? super Object, ? super OffsetDateTime, ? super String, ? super String, ? super Integer, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function15<? super Integer, ? super String, ? super Object, ? super Integer, ? super Object, ? super Object, ? super Integer, ? super OffsetDateTime, ? super OffsetDateTime, ? super Object, ? super OffsetDateTime, ? super String, ? super String, ? super Integer, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

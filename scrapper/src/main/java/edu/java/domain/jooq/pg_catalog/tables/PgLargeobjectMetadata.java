@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLargeobjectMetadataRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_largeobject_metadata</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,33 +42,18 @@ public class PgLargeobjectMetadata extends TableImpl<PgLargeobjectMetadataRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_largeobject_metadata</code>
-     */
     public static final PgLargeobjectMetadata PG_LARGEOBJECT_METADATA = new PgLargeobjectMetadata();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLargeobjectMetadataRecord> getRecordType() {
         return PgLargeobjectMetadataRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_largeobject_metadata.oid</code>.
-     */
     public final TableField<PgLargeobjectMetadataRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_largeobject_metadata.lomowner</code>.
-     */
     public final TableField<PgLargeobjectMetadataRecord, Long> LOMOWNER = createField(DSL.name("lomowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_largeobject_metadata.lomacl</code>.
-     */
     public final TableField<PgLargeobjectMetadataRecord, String[]> LOMACL = createField(DSL.name("lomacl"), SQLDataType.VARCHAR.array(), this, "");
 
     private PgLargeobjectMetadata(Name alias, Table<PgLargeobjectMetadataRecord> aliased) {
@@ -84,25 +64,14 @@ public class PgLargeobjectMetadata extends TableImpl<PgLargeobjectMetadataRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_largeobject_metadata</code> table
-     * reference
-     */
     public PgLargeobjectMetadata(String alias) {
         this(DSL.name(alias), PG_LARGEOBJECT_METADATA);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_largeobject_metadata</code> table
-     * reference
-     */
     public PgLargeobjectMetadata(Name alias) {
         this(alias, PG_LARGEOBJECT_METADATA);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_largeobject_metadata</code> table reference
-     */
     public PgLargeobjectMetadata() {
         this(DSL.name("pg_largeobject_metadata"), null);
     }
@@ -141,27 +110,18 @@ public class PgLargeobjectMetadata extends TableImpl<PgLargeobjectMetadataRecord
         return new PgLargeobjectMetadata(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLargeobjectMetadata rename(String name) {
         return new PgLargeobjectMetadata(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLargeobjectMetadata rename(Name name) {
         return new PgLargeobjectMetadata(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLargeobjectMetadata rename(Table<?> name) {
@@ -178,17 +138,10 @@ public class PgLargeobjectMetadata extends TableImpl<PgLargeobjectMetadataRecord
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

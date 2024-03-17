@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgCastRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_cast</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,48 +45,24 @@ public class PgCast extends TableImpl<PgCastRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_cast</code>
-     */
     public static final PgCast PG_CAST = new PgCast();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgCastRecord> getRecordType() {
         return PgCastRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_cast.oid</code>.
-     */
     public final TableField<PgCastRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cast.castsource</code>.
-     */
     public final TableField<PgCastRecord, Long> CASTSOURCE = createField(DSL.name("castsource"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cast.casttarget</code>.
-     */
     public final TableField<PgCastRecord, Long> CASTTARGET = createField(DSL.name("casttarget"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cast.castfunc</code>.
-     */
     public final TableField<PgCastRecord, Long> CASTFUNC = createField(DSL.name("castfunc"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cast.castcontext</code>.
-     */
     public final TableField<PgCastRecord, String> CASTCONTEXT = createField(DSL.name("castcontext"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cast.castmethod</code>.
-     */
     public final TableField<PgCastRecord, String> CASTMETHOD = createField(DSL.name("castmethod"), SQLDataType.CHAR.nullable(false), this, "");
 
     private PgCast(Name alias, Table<PgCastRecord> aliased) {
@@ -101,23 +73,14 @@ public class PgCast extends TableImpl<PgCastRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_cast</code> table reference
-     */
     public PgCast(String alias) {
         this(DSL.name(alias), PG_CAST);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_cast</code> table reference
-     */
     public PgCast(Name alias) {
         this(alias, PG_CAST);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_cast</code> table reference
-     */
     public PgCast() {
         this(DSL.name("pg_cast"), null);
     }
@@ -162,27 +125,18 @@ public class PgCast extends TableImpl<PgCastRecord> {
         return new PgCast(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCast rename(String name) {
         return new PgCast(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCast rename(Name name) {
         return new PgCast(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCast rename(Table<?> name) {
@@ -199,17 +153,10 @@ public class PgCast extends TableImpl<PgCastRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super Long, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

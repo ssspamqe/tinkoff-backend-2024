@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgExtensionUpdatePathsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_extension_update_paths</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,34 +38,18 @@ public class PgExtensionUpdatePaths extends TableImpl<PgExtensionUpdatePathsReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_extension_update_paths</code>
-     */
     public static final PgExtensionUpdatePaths PG_EXTENSION_UPDATE_PATHS = new PgExtensionUpdatePaths();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgExtensionUpdatePathsRecord> getRecordType() {
         return PgExtensionUpdatePathsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_extension_update_paths.source</code>.
-     */
     public final TableField<PgExtensionUpdatePathsRecord, String> SOURCE = createField(DSL.name("source"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension_update_paths.target</code>.
-     */
     public final TableField<PgExtensionUpdatePathsRecord, String> TARGET = createField(DSL.name("target"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_extension_update_paths.path</code>.
-     */
     public final TableField<PgExtensionUpdatePathsRecord, String> PATH = createField(DSL.name("path"), SQLDataType.CLOB, this, "");
 
     private PgExtensionUpdatePaths(Name alias, Table<PgExtensionUpdatePathsRecord> aliased) {
@@ -83,26 +62,14 @@ public class PgExtensionUpdatePaths extends TableImpl<PgExtensionUpdatePathsReco
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_extension_update_paths</code> table
-     * reference
-     */
     public PgExtensionUpdatePaths(String alias) {
         this(DSL.name(alias), PG_EXTENSION_UPDATE_PATHS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_extension_update_paths</code> table
-     * reference
-     */
     public PgExtensionUpdatePaths(Name alias) {
         this(alias, PG_EXTENSION_UPDATE_PATHS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_extension_update_paths</code> table
-     * reference
-     */
     public PgExtensionUpdatePaths() {
         this(DSL.name("pg_extension_update_paths"), null);
     }
@@ -131,27 +98,18 @@ public class PgExtensionUpdatePaths extends TableImpl<PgExtensionUpdatePathsReco
         return new PgExtensionUpdatePaths(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgExtensionUpdatePaths rename(String name) {
         return new PgExtensionUpdatePaths(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgExtensionUpdatePaths rename(Name name) {
         return new PgExtensionUpdatePaths(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgExtensionUpdatePaths rename(Table<?> name) {
@@ -168,9 +126,6 @@ public class PgExtensionUpdatePaths extends TableImpl<PgExtensionUpdatePathsReco
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgExtensionUpdatePaths call(
           String name
     ) {
@@ -181,9 +136,6 @@ public class PgExtensionUpdatePaths extends TableImpl<PgExtensionUpdatePathsReco
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgExtensionUpdatePaths call(
           Field<String> name
     ) {
@@ -194,17 +146,10 @@ public class PgExtensionUpdatePaths extends TableImpl<PgExtensionUpdatePathsReco
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

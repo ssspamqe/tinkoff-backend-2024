@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.SqlSizingRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.sql_sizing</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,38 +39,20 @@ public class SqlSizing extends TableImpl<SqlSizingRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.sql_sizing</code>
-     */
     public static final SqlSizing SQL_SIZING = new SqlSizing();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<SqlSizingRecord> getRecordType() {
         return SqlSizingRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.sql_sizing.sizing_id</code>.
-     */
     public final TableField<SqlSizingRecord, Integer> SIZING_ID = createField(DSL.name("sizing_id"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_sizing.sizing_name</code>.
-     */
     public final TableField<SqlSizingRecord, String> SIZING_NAME = createField(DSL.name("sizing_name"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_sizing.supported_value</code>.
-     */
     public final TableField<SqlSizingRecord, Integer> SUPPORTED_VALUE = createField(DSL.name("supported_value"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.sql_sizing.comments</code>.
-     */
     public final TableField<SqlSizingRecord, String> COMMENTS = createField(DSL.name("comments"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private SqlSizing(Name alias, Table<SqlSizingRecord> aliased) {
@@ -86,25 +63,14 @@ public class SqlSizing extends TableImpl<SqlSizingRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>information_schema.sql_sizing</code> table
-     * reference
-     */
     public SqlSizing(String alias) {
         this(DSL.name(alias), SQL_SIZING);
     }
 
-    /**
-     * Create an aliased <code>information_schema.sql_sizing</code> table
-     * reference
-     */
     public SqlSizing(Name alias) {
         this(alias, SQL_SIZING);
     }
 
-    /**
-     * Create a <code>information_schema.sql_sizing</code> table reference
-     */
     public SqlSizing() {
         this(DSL.name("sql_sizing"), null);
     }
@@ -137,27 +103,18 @@ public class SqlSizing extends TableImpl<SqlSizingRecord> {
         return new SqlSizing(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public SqlSizing rename(String name) {
         return new SqlSizing(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public SqlSizing rename(Name name) {
         return new SqlSizing(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public SqlSizing rename(Table<?> name) {
@@ -174,17 +131,10 @@ public class SqlSizing extends TableImpl<SqlSizingRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Integer, ? super String, ? super Integer, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Integer, ? super String, ? super Integer, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgCursorRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -29,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_cursor</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,48 +40,24 @@ public class PgCursor extends TableImpl<PgCursorRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_cursor</code>
-     */
     public static final PgCursor PG_CURSOR = new PgCursor();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgCursorRecord> getRecordType() {
         return PgCursorRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_cursor.name</code>.
-     */
     public final TableField<PgCursorRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cursor.statement</code>.
-     */
     public final TableField<PgCursorRecord, String> STATEMENT = createField(DSL.name("statement"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cursor.is_holdable</code>.
-     */
     public final TableField<PgCursorRecord, Boolean> IS_HOLDABLE = createField(DSL.name("is_holdable"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cursor.is_binary</code>.
-     */
     public final TableField<PgCursorRecord, Boolean> IS_BINARY = createField(DSL.name("is_binary"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cursor.is_scrollable</code>.
-     */
     public final TableField<PgCursorRecord, Boolean> IS_SCROLLABLE = createField(DSL.name("is_scrollable"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_cursor.creation_time</code>.
-     */
     public final TableField<PgCursorRecord, OffsetDateTime> CREATION_TIME = createField(DSL.name("creation_time"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgCursor(Name alias, Table<PgCursorRecord> aliased) {
@@ -97,23 +69,14 @@ public class PgCursor extends TableImpl<PgCursorRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_cursor</code> table reference
-     */
     public PgCursor(String alias) {
         this(DSL.name(alias), PG_CURSOR);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_cursor</code> table reference
-     */
     public PgCursor(Name alias) {
         this(alias, PG_CURSOR);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_cursor</code> table reference
-     */
     public PgCursor() {
         this(DSL.name("pg_cursor"), null);
     }
@@ -142,27 +105,18 @@ public class PgCursor extends TableImpl<PgCursorRecord> {
         return new PgCursor(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCursor rename(String name) {
         return new PgCursor(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCursor rename(Name name) {
         return new PgCursor(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCursor rename(Table<?> name) {
@@ -179,26 +133,16 @@ public class PgCursor extends TableImpl<PgCursorRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgCursor call() {
         PgCursor result = new PgCursor(DSL.name("pg_cursor"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema._pg_user_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,112 +30,64 @@ public class _PgUserMappingsRecord extends TableRecordImpl<_PgUserMappingsRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema._pg_user_mappings.oid</code>.
-     */
     public void setOid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema._pg_user_mappings.oid</code>.
-     */
     @Nullable
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema._pg_user_mappings.umoptions</code>.
-     */
     public void setUmoptions(@Nullable String[] value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema._pg_user_mappings.umoptions</code>.
-     */
     @Nullable
     public String[] getUmoptions() {
         return (String[]) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema._pg_user_mappings.umuser</code>.
-     */
     public void setUmuser(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema._pg_user_mappings.umuser</code>.
-     */
     @Nullable
     public Long getUmuser() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_user_mappings.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_user_mappings.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_user_mappings.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_user_mappings.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_user_mappings.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_user_mappings.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema._pg_user_mappings.srvowner</code>.
-     */
     public void setSrvowner(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema._pg_user_mappings.srvowner</code>.
-     */
     @Nullable
     public String getSrvowner() {
         return (String) get(6);
@@ -352,16 +301,10 @@ public class _PgUserMappingsRecord extends TableRecordImpl<_PgUserMappingsRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached _PgUserMappingsRecord
-     */
     public _PgUserMappingsRecord() {
         super(_PgUserMappings._PG_USER_MAPPINGS);
     }
 
-    /**
-     * Create a detached, initialised _PgUserMappingsRecord
-     */
     @ConstructorProperties({ "oid", "umoptions", "umuser", "authorizationIdentifier", "foreignServerCatalog", "foreignServerName", "srvowner" })
     public _PgUserMappingsRecord(@Nullable Long oid, @Nullable String[] umoptions, @Nullable Long umuser, @Nullable String authorizationIdentifier, @Nullable String foreignServerCatalog, @Nullable String foreignServerName, @Nullable String srvowner) {
         super(_PgUserMappings._PG_USER_MAPPINGS);
@@ -376,9 +319,6 @@ public class _PgUserMappingsRecord extends TableRecordImpl<_PgUserMappingsRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised _PgUserMappingsRecord
-     */
     public _PgUserMappingsRecord(edu.java.domain.jooq.information_schema.tables.pojos._PgUserMappings value) {
         super(_PgUserMappings._PG_USER_MAPPINGS);
 

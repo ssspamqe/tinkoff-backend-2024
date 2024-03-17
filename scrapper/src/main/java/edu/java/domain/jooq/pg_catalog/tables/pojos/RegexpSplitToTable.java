@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.regexp_split_to_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,19 +39,11 @@ public class RegexpSplitToTable implements Serializable {
         this.regexpSplitToTable = regexpSplitToTable;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.regexp_split_to_table.regexp_split_to_table</code>.
-     */
     @Nullable
     public String getRegexpSplitToTable() {
         return this.regexpSplitToTable;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.regexp_split_to_table.regexp_split_to_table</code>.
-     */
     public void setRegexpSplitToTable(@Nullable String regexpSplitToTable) {
         this.regexpSplitToTable = regexpSplitToTable;
     }

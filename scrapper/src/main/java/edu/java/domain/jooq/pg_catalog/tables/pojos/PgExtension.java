@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_extension</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -72,128 +69,80 @@ public class PgExtension implements Serializable {
         this.extcondition = extcondition;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getExtname() {
         return this.extname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extname</code>.
-     */
     public void setExtname(@NotNull String extname) {
         this.extname = extname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getExtowner() {
         return this.extowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extowner</code>.
-     */
     public void setExtowner(@NotNull Long extowner) {
         this.extowner = extowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getExtnamespace() {
         return this.extnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extnamespace</code>.
-     */
     public void setExtnamespace(@NotNull Long extnamespace) {
         this.extnamespace = extnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extrelocatable</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getExtrelocatable() {
         return this.extrelocatable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extrelocatable</code>.
-     */
     public void setExtrelocatable(@NotNull Boolean extrelocatable) {
         this.extrelocatable = extrelocatable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extversion</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getExtversion() {
         return this.extversion;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extversion</code>.
-     */
     public void setExtversion(@NotNull String extversion) {
         this.extversion = extversion;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extconfig</code>.
-     */
     @Nullable
     public Long[] getExtconfig() {
         return this.extconfig;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extconfig</code>.
-     */
     public void setExtconfig(@Nullable Long[] extconfig) {
         this.extconfig = extconfig;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension.extcondition</code>.
-     */
     @Nullable
     public String[] getExtcondition() {
         return this.extcondition;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension.extcondition</code>.
-     */
     public void setExtcondition(@Nullable String[] extcondition) {
         this.extcondition = extcondition;
     }

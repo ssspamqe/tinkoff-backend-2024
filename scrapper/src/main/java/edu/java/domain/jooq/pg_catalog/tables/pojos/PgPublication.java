@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_publication</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -74,146 +71,92 @@ public class PgPublication implements Serializable {
         this.pubviaroot = pubviaroot;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPubname() {
         return this.pubname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubname</code>.
-     */
     public void setPubname(@NotNull String pubname) {
         this.pubname = pubname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPubowner() {
         return this.pubowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubowner</code>.
-     */
     public void setPubowner(@NotNull Long pubowner) {
         this.pubowner = pubowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.puballtables</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPuballtables() {
         return this.puballtables;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.puballtables</code>.
-     */
     public void setPuballtables(@NotNull Boolean puballtables) {
         this.puballtables = puballtables;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubinsert</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubinsert() {
         return this.pubinsert;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubinsert</code>.
-     */
     public void setPubinsert(@NotNull Boolean pubinsert) {
         this.pubinsert = pubinsert;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubupdate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubupdate() {
         return this.pubupdate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubupdate</code>.
-     */
     public void setPubupdate(@NotNull Boolean pubupdate) {
         this.pubupdate = pubupdate;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubdelete</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubdelete() {
         return this.pubdelete;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubdelete</code>.
-     */
     public void setPubdelete(@NotNull Boolean pubdelete) {
         this.pubdelete = pubdelete;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubtruncate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubtruncate() {
         return this.pubtruncate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubtruncate</code>.
-     */
     public void setPubtruncate(@NotNull Boolean pubtruncate) {
         this.pubtruncate = pubtruncate;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubviaroot</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubviaroot() {
         return this.pubviaroot;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubviaroot</code>.
-     */
     public void setPubviaroot(@NotNull Boolean pubviaroot) {
         this.pubviaroot = pubviaroot;
     }

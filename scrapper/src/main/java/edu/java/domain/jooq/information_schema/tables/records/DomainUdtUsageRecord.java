@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.domain_udt_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,95 +30,55 @@ public class DomainUdtUsageRecord extends TableRecordImpl<DomainUdtUsageRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.domain_udt_usage.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domain_udt_usage.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.domain_udt_usage.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domain_udt_usage.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.domain_udt_usage.udt_name</code>.
-     */
     public void setUdtName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domain_udt_usage.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_udt_usage.domain_catalog</code>.
-     */
     public void setDomainCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_udt_usage.domain_catalog</code>.
-     */
     @Nullable
     public String getDomainCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_udt_usage.domain_schema</code>.
-     */
     public void setDomainSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_udt_usage.domain_schema</code>.
-     */
     @Nullable
     public String getDomainSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.domain_udt_usage.domain_name</code>.
-     */
     public void setDomainName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domain_udt_usage.domain_name</code>.
-     */
     @Nullable
     public String getDomainName() {
         return (String) get(5);
@@ -309,16 +266,10 @@ public class DomainUdtUsageRecord extends TableRecordImpl<DomainUdtUsageRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached DomainUdtUsageRecord
-     */
     public DomainUdtUsageRecord() {
         super(DomainUdtUsage.DOMAIN_UDT_USAGE);
     }
 
-    /**
-     * Create a detached, initialised DomainUdtUsageRecord
-     */
     @ConstructorProperties({ "udtCatalog", "udtSchema", "udtName", "domainCatalog", "domainSchema", "domainName" })
     public DomainUdtUsageRecord(@Nullable String udtCatalog, @Nullable String udtSchema, @Nullable String udtName, @Nullable String domainCatalog, @Nullable String domainSchema, @Nullable String domainName) {
         super(DomainUdtUsage.DOMAIN_UDT_USAGE);
@@ -332,9 +283,6 @@ public class DomainUdtUsageRecord extends TableRecordImpl<DomainUdtUsageRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised DomainUdtUsageRecord
-     */
     public DomainUdtUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.DomainUdtUsage value) {
         super(DomainUdtUsage.DOMAIN_UDT_USAGE);
 

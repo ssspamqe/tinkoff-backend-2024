@@ -19,9 +19,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_prepared_statement</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,121 +31,73 @@ public class PgPreparedStatementRecord extends TableRecordImpl<PgPreparedStateme
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.statement</code>.
-     */
     public void setStatement(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.statement</code>.
-     */
     @Nullable
     public String getStatement() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.prepare_time</code>.
-     */
     public void setPrepareTime(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.prepare_time</code>.
-     */
     @Nullable
     public OffsetDateTime getPrepareTime() {
         return (OffsetDateTime) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.parameter_types</code>.
-     */
     public void setParameterTypes(@Nullable Object[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.parameter_types</code>.
-     */
     @Nullable
     public Object[] getParameterTypes() {
         return (Object[]) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.result_types</code>.
-     */
     public void setResultTypes(@Nullable Object[] value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.result_types</code>.
-     */
     @Nullable
     public Object[] getResultTypes() {
         return (Object[]) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.from_sql</code>.
-     */
     public void setFromSql(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.from_sql</code>.
-     */
     @Nullable
     public Boolean getFromSql() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.generic_plans</code>.
-     */
     public void setGenericPlans(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.generic_plans</code>.
-     */
     @Nullable
     public Long getGenericPlans() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_statement.custom_plans</code>.
-     */
     public void setCustomPlans(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_statement.custom_plans</code>.
-     */
     @Nullable
     public Long getCustomPlans() {
         return (Long) get(7);
@@ -388,16 +337,10 @@ public class PgPreparedStatementRecord extends TableRecordImpl<PgPreparedStateme
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPreparedStatementRecord
-     */
     public PgPreparedStatementRecord() {
         super(PgPreparedStatement.PG_PREPARED_STATEMENT);
     }
 
-    /**
-     * Create a detached, initialised PgPreparedStatementRecord
-     */
     @ConstructorProperties({ "name", "statement", "prepareTime", "parameterTypes", "resultTypes", "fromSql", "genericPlans", "customPlans" })
     public PgPreparedStatementRecord(@Nullable String name, @Nullable String statement, @Nullable OffsetDateTime prepareTime, @Nullable Object[] parameterTypes, @Nullable Object[] resultTypes, @Nullable Boolean fromSql, @Nullable Long genericPlans, @Nullable Long customPlans) {
         super(PgPreparedStatement.PG_PREPARED_STATEMENT);
@@ -413,9 +356,6 @@ public class PgPreparedStatementRecord extends TableRecordImpl<PgPreparedStateme
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPreparedStatementRecord
-     */
     public PgPreparedStatementRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPreparedStatement value) {
         super(PgPreparedStatement.PG_PREPARED_STATEMENT);
 

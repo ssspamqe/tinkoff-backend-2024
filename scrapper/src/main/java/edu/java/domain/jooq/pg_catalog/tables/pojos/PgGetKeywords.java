@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_get_keywords</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,77 +55,47 @@ public class PgGetKeywords implements Serializable {
         this.baredesc = baredesc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.word</code>.
-     */
     @Nullable
     public String getWord() {
         return this.word;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.word</code>.
-     */
     public void setWord(@Nullable String word) {
         this.word = word;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.catcode</code>.
-     */
     @Nullable
     public String getCatcode() {
         return this.catcode;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.catcode</code>.
-     */
     public void setCatcode(@Nullable String catcode) {
         this.catcode = catcode;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.barelabel</code>.
-     */
     @Nullable
     public Boolean getBarelabel() {
         return this.barelabel;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.barelabel</code>.
-     */
     public void setBarelabel(@Nullable Boolean barelabel) {
         this.barelabel = barelabel;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.catdesc</code>.
-     */
     @Nullable
     public String getCatdesc() {
         return this.catdesc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.catdesc</code>.
-     */
     public void setCatdesc(@Nullable String catdesc) {
         this.catdesc = catdesc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.baredesc</code>.
-     */
     @Nullable
     public String getBaredesc() {
         return this.baredesc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.baredesc</code>.
-     */
     public void setBaredesc(@Nullable String baredesc) {
         this.baredesc = baredesc;
     }

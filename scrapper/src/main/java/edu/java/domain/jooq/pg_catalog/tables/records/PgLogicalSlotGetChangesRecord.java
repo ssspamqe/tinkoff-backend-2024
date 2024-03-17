@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_logical_slot_get_changes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,58 +30,30 @@ public class PgLogicalSlotGetChangesRecord extends TableRecordImpl<PgLogicalSlot
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setLsn(@Nullable Object value) {
         set(0, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getLsn() {
         return get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_logical_slot_get_changes.xid</code>.
-     */
     public void setXid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_logical_slot_get_changes.xid</code>.
-     */
     @Nullable
     public Long getXid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_logical_slot_get_changes.data</code>.
-     */
     public void setData(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_logical_slot_get_changes.data</code>.
-     */
     @Nullable
     public String getData() {
         return (String) get(2);
@@ -106,14 +75,6 @@ public class PgLogicalSlotGetChangesRecord extends TableRecordImpl<PgLogicalSlot
         return (Row3) super.valuesRow();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -133,14 +94,6 @@ public class PgLogicalSlotGetChangesRecord extends TableRecordImpl<PgLogicalSlot
         return PgLogicalSlotGetChanges.PG_LOGICAL_SLOT_GET_CHANGES.DATA;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -160,14 +113,6 @@ public class PgLogicalSlotGetChangesRecord extends TableRecordImpl<PgLogicalSlot
         return getData();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -187,14 +132,6 @@ public class PgLogicalSlotGetChangesRecord extends TableRecordImpl<PgLogicalSlot
         return getData();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -230,16 +167,10 @@ public class PgLogicalSlotGetChangesRecord extends TableRecordImpl<PgLogicalSlot
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLogicalSlotGetChangesRecord
-     */
     public PgLogicalSlotGetChangesRecord() {
         super(PgLogicalSlotGetChanges.PG_LOGICAL_SLOT_GET_CHANGES);
     }
 
-    /**
-     * Create a detached, initialised PgLogicalSlotGetChangesRecord
-     */
     @ConstructorProperties({ "lsn", "xid", "data" })
     public PgLogicalSlotGetChangesRecord(@Nullable Object lsn, @Nullable Long xid, @Nullable String data) {
         super(PgLogicalSlotGetChanges.PG_LOGICAL_SLOT_GET_CHANGES);
@@ -250,9 +181,6 @@ public class PgLogicalSlotGetChangesRecord extends TableRecordImpl<PgLogicalSlot
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLogicalSlotGetChangesRecord
-     */
     public PgLogicalSlotGetChangesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLogicalSlotGetChanges value) {
         super(PgLogicalSlotGetChanges.PG_LOGICAL_SLOT_GET_CHANGES);
 

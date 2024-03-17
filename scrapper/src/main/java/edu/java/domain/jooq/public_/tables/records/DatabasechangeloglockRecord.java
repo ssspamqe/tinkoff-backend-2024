@@ -22,9 +22,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>public.databasechangeloglock</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -37,63 +34,39 @@ public class DatabasechangeloglockRecord extends UpdatableRecordImpl<Databasecha
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>public.databasechangeloglock.id</code>.
-     */
     public void setId(@NotNull Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>public.databasechangeloglock.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getId() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>public.databasechangeloglock.locked</code>.
-     */
     public void setLocked(@NotNull Boolean value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>public.databasechangeloglock.locked</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getLocked() {
         return (Boolean) get(1);
     }
 
-    /**
-     * Setter for <code>public.databasechangeloglock.lockgranted</code>.
-     */
     public void setLockgranted(@Nullable LocalDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>public.databasechangeloglock.lockgranted</code>.
-     */
     @Nullable
     public LocalDateTime getLockgranted() {
         return (LocalDateTime) get(2);
     }
 
-    /**
-     * Setter for <code>public.databasechangeloglock.lockedby</code>.
-     */
     public void setLockedby(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>public.databasechangeloglock.lockedby</code>.
-     */
     @Size(max = 255)
     @Nullable
     public String getLockedby() {
@@ -240,16 +213,10 @@ public class DatabasechangeloglockRecord extends UpdatableRecordImpl<Databasecha
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached DatabasechangeloglockRecord
-     */
     public DatabasechangeloglockRecord() {
         super(Databasechangeloglock.DATABASECHANGELOGLOCK);
     }
 
-    /**
-     * Create a detached, initialised DatabasechangeloglockRecord
-     */
     @ConstructorProperties({ "id", "locked", "lockgranted", "lockedby" })
     public DatabasechangeloglockRecord(@NotNull Integer id, @NotNull Boolean locked, @Nullable LocalDateTime lockgranted, @Nullable String lockedby) {
         super(Databasechangeloglock.DATABASECHANGELOGLOCK);
@@ -261,9 +228,6 @@ public class DatabasechangeloglockRecord extends UpdatableRecordImpl<Databasecha
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised DatabasechangeloglockRecord
-     */
     public DatabasechangeloglockRecord(edu.java.domain.jooq.public_.tables.pojos.Databasechangeloglock value) {
         super(Databasechangeloglock.DATABASECHANGELOGLOCK);
 

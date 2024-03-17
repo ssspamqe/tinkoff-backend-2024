@@ -18,9 +18,6 @@ import org.jooq.Row12;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_event_trigger_dropped_objects</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,205 +30,109 @@ public class PgEventTriggerDroppedObjectsRecord extends TableRecordImpl<PgEventT
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.classid</code>.
-     */
     public void setClassid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.classid</code>.
-     */
     @Nullable
     public Long getClassid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.objid</code>.
-     */
     public void setObjid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.objid</code>.
-     */
     @Nullable
     public Long getObjid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.objsubid</code>.
-     */
     public void setObjsubid(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.objsubid</code>.
-     */
     @Nullable
     public Integer getObjsubid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.original</code>.
-     */
     public void setOriginal(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.original</code>.
-     */
     @Nullable
     public Boolean getOriginal() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.normal</code>.
-     */
     public void setNormal(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.normal</code>.
-     */
     @Nullable
     public Boolean getNormal() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.is_temporary</code>.
-     */
     public void setIsTemporary(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.is_temporary</code>.
-     */
     @Nullable
     public Boolean getIsTemporary() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_type</code>.
-     */
     public void setObjectType(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.schema_name</code>.
-     */
     public void setSchemaName(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.schema_name</code>.
-     */
     @Nullable
     public String getSchemaName() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_name</code>.
-     */
     public void setObjectName(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_name</code>.
-     */
     @Nullable
     public String getObjectName() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_identity</code>.
-     */
     public void setObjectIdentity(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.object_identity</code>.
-     */
     @Nullable
     public String getObjectIdentity() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.address_names</code>.
-     */
     public void setAddressNames(@Nullable String[] value) {
         set(10, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.address_names</code>.
-     */
     @Nullable
     public String[] getAddressNames() {
         return (String[]) get(10);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.address_args</code>.
-     */
     public void setAddressArgs(@Nullable String[] value) {
         set(11, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_dropped_objects.address_args</code>.
-     */
     @Nullable
     public String[] getAddressArgs() {
         return (String[]) get(11);
@@ -575,16 +476,10 @@ public class PgEventTriggerDroppedObjectsRecord extends TableRecordImpl<PgEventT
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgEventTriggerDroppedObjectsRecord
-     */
     public PgEventTriggerDroppedObjectsRecord() {
         super(PgEventTriggerDroppedObjects.PG_EVENT_TRIGGER_DROPPED_OBJECTS);
     }
 
-    /**
-     * Create a detached, initialised PgEventTriggerDroppedObjectsRecord
-     */
     @ConstructorProperties({ "classid", "objid", "objsubid", "original", "normal", "isTemporary", "objectType", "schemaName", "objectName", "objectIdentity", "addressNames", "addressArgs" })
     public PgEventTriggerDroppedObjectsRecord(@Nullable Long classid, @Nullable Long objid, @Nullable Integer objsubid, @Nullable Boolean original, @Nullable Boolean normal, @Nullable Boolean isTemporary, @Nullable String objectType, @Nullable String schemaName, @Nullable String objectName, @Nullable String objectIdentity, @Nullable String[] addressNames, @Nullable String[] addressArgs) {
         super(PgEventTriggerDroppedObjects.PG_EVENT_TRIGGER_DROPPED_OBJECTS);
@@ -604,9 +499,6 @@ public class PgEventTriggerDroppedObjectsRecord extends TableRecordImpl<PgEventT
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgEventTriggerDroppedObjectsRecord
-     */
     public PgEventTriggerDroppedObjectsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgEventTriggerDroppedObjects value) {
         super(PgEventTriggerDroppedObjects.PG_EVENT_TRIGGER_DROPPED_OBJECTS);
 

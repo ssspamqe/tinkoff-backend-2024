@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgTsDictRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_dict</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,48 +45,24 @@ public class PgTsDict extends TableImpl<PgTsDictRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ts_dict</code>
-     */
     public static final PgTsDict PG_TS_DICT = new PgTsDict();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTsDictRecord> getRecordType() {
         return PgTsDictRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ts_dict.oid</code>.
-     */
     public final TableField<PgTsDictRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_dict.dictname</code>.
-     */
     public final TableField<PgTsDictRecord, String> DICTNAME = createField(DSL.name("dictname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_dict.dictnamespace</code>.
-     */
     public final TableField<PgTsDictRecord, Long> DICTNAMESPACE = createField(DSL.name("dictnamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_dict.dictowner</code>.
-     */
     public final TableField<PgTsDictRecord, Long> DICTOWNER = createField(DSL.name("dictowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_dict.dicttemplate</code>.
-     */
     public final TableField<PgTsDictRecord, Long> DICTTEMPLATE = createField(DSL.name("dicttemplate"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_dict.dictinitoption</code>.
-     */
     public final TableField<PgTsDictRecord, String> DICTINITOPTION = createField(DSL.name("dictinitoption"), SQLDataType.CLOB, this, "");
 
     private PgTsDict(Name alias, Table<PgTsDictRecord> aliased) {
@@ -101,23 +73,14 @@ public class PgTsDict extends TableImpl<PgTsDictRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ts_dict</code> table reference
-     */
     public PgTsDict(String alias) {
         this(DSL.name(alias), PG_TS_DICT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ts_dict</code> table reference
-     */
     public PgTsDict(Name alias) {
         this(alias, PG_TS_DICT);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ts_dict</code> table reference
-     */
     public PgTsDict() {
         this(DSL.name("pg_ts_dict"), null);
     }
@@ -162,27 +125,18 @@ public class PgTsDict extends TableImpl<PgTsDictRecord> {
         return new PgTsDict(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsDict rename(String name) {
         return new PgTsDict(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsDict rename(Name name) {
         return new PgTsDict(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsDict rename(Table<?> name) {
@@ -199,17 +153,10 @@ public class PgTsDict extends TableImpl<PgTsDictRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

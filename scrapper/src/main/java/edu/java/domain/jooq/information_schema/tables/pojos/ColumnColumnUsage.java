@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.column_column_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,87 +55,47 @@ public class ColumnColumnUsage implements Serializable {
         this.dependentColumn = dependentColumn;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_column_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_column_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_column_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_column_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_column_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_column_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_column_usage.column_name</code>.
-     */
     @Nullable
     public String getColumnName() {
         return this.columnName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_column_usage.column_name</code>.
-     */
     public void setColumnName(@Nullable String columnName) {
         this.columnName = columnName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_column_usage.dependent_column</code>.
-     */
     @Nullable
     public String getDependentColumn() {
         return this.dependentColumn;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_column_usage.dependent_column</code>.
-     */
     public void setDependentColumn(@Nullable String dependentColumn) {
         this.dependentColumn = dependentColumn;
     }

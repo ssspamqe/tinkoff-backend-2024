@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLsDirRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_dir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,23 +38,14 @@ public class PgLsDir extends TableImpl<PgLsDirRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ls_dir</code>
-     */
     public static final PgLsDir PG_LS_DIR = new PgLsDir();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLsDirRecord> getRecordType() {
         return PgLsDirRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ls_dir.pg_ls_dir</code>.
-     */
     public final TableField<PgLsDirRecord, String> PG_LS_DIR_ = createField(DSL.name("pg_ls_dir"), SQLDataType.CLOB, this, "");
 
     private PgLsDir(Name alias, Table<PgLsDirRecord> aliased) {
@@ -74,23 +60,14 @@ public class PgLsDir extends TableImpl<PgLsDirRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_dir</code> table reference
-     */
     public PgLsDir(String alias) {
         this(DSL.name(alias), PG_LS_DIR);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_dir</code> table reference
-     */
     public PgLsDir(Name alias) {
         this(alias, PG_LS_DIR);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ls_dir</code> table reference
-     */
     public PgLsDir() {
         this(DSL.name("pg_ls_dir"), null);
     }
@@ -119,27 +96,18 @@ public class PgLsDir extends TableImpl<PgLsDirRecord> {
         return new PgLsDir(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsDir rename(String name) {
         return new PgLsDir(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsDir rename(Name name) {
         return new PgLsDir(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsDir rename(Table<?> name) {
@@ -156,9 +124,6 @@ public class PgLsDir extends TableImpl<PgLsDirRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLsDir call(
           String __1
         , Boolean __2
@@ -173,9 +138,6 @@ public class PgLsDir extends TableImpl<PgLsDirRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLsDir call(
           Field<String> __1
         , Field<Boolean> __2
@@ -190,17 +152,10 @@ public class PgLsDir extends TableImpl<PgLsDirRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

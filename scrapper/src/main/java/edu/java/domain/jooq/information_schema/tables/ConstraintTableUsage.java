@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ConstraintTableUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.constraint_table_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,55 +39,24 @@ public class ConstraintTableUsage extends TableImpl<ConstraintTableUsageRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.constraint_table_usage</code>
-     */
     public static final ConstraintTableUsage CONSTRAINT_TABLE_USAGE = new ConstraintTableUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ConstraintTableUsageRecord> getRecordType() {
         return ConstraintTableUsageRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.constraint_table_usage.table_catalog</code>.
-     */
     public final TableField<ConstraintTableUsageRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.constraint_table_usage.table_schema</code>.
-     */
     public final TableField<ConstraintTableUsageRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.constraint_table_usage.table_name</code>.
-     */
     public final TableField<ConstraintTableUsageRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.constraint_table_usage.constraint_catalog</code>.
-     */
     public final TableField<ConstraintTableUsageRecord, String> CONSTRAINT_CATALOG = createField(DSL.name("constraint_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.constraint_table_usage.constraint_schema</code>.
-     */
     public final TableField<ConstraintTableUsageRecord, String> CONSTRAINT_SCHEMA = createField(DSL.name("constraint_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.constraint_table_usage.constraint_name</code>.
-     */
     public final TableField<ConstraintTableUsageRecord, String> CONSTRAINT_NAME = createField(DSL.name("constraint_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private ConstraintTableUsage(Name alias, Table<ConstraintTableUsageRecord> aliased) {
@@ -115,26 +79,14 @@ public class ConstraintTableUsage extends TableImpl<ConstraintTableUsageRecord> 
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.constraint_table_usage</code>
-     * table reference
-     */
     public ConstraintTableUsage(String alias) {
         this(DSL.name(alias), CONSTRAINT_TABLE_USAGE);
     }
 
-    /**
-     * Create an aliased <code>information_schema.constraint_table_usage</code>
-     * table reference
-     */
     public ConstraintTableUsage(Name alias) {
         this(alias, CONSTRAINT_TABLE_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.constraint_table_usage</code> table
-     * reference
-     */
     public ConstraintTableUsage() {
         this(DSL.name("constraint_table_usage"), null);
     }
@@ -167,27 +119,18 @@ public class ConstraintTableUsage extends TableImpl<ConstraintTableUsageRecord> 
         return new ConstraintTableUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ConstraintTableUsage rename(String name) {
         return new ConstraintTableUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ConstraintTableUsage rename(Name name) {
         return new ConstraintTableUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ConstraintTableUsage rename(Table<?> name) {
@@ -204,17 +147,10 @@ public class ConstraintTableUsage extends TableImpl<ConstraintTableUsageRecord> 
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

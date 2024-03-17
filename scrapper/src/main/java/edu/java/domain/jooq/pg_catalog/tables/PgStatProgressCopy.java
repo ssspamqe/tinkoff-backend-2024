@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatProgressCopyRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_copy</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,69 +40,32 @@ public class PgStatProgressCopy extends TableImpl<PgStatProgressCopyRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_progress_copy</code>
-     */
     public static final PgStatProgressCopy PG_STAT_PROGRESS_COPY = new PgStatProgressCopy();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatProgressCopyRecord> getRecordType() {
         return PgStatProgressCopyRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.pid</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.datid</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.datname</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, String> DATNAME = createField(DSL.name("datname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.relid</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.command</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, String> COMMAND = createField(DSL.name("command"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.type</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, String> TYPE = createField(DSL.name("type"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.bytes_processed</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, Long> BYTES_PROCESSED = createField(DSL.name("bytes_processed"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.bytes_total</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, Long> BYTES_TOTAL = createField(DSL.name("bytes_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_copy.tuples_processed</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, Long> TUPLES_PROCESSED = createField(DSL.name("tuples_processed"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_copy.tuples_excluded</code>.
-     */
     public final TableField<PgStatProgressCopyRecord, Long> TUPLES_EXCLUDED = createField(DSL.name("tuples_excluded"), SQLDataType.BIGINT, this, "");
 
     private PgStatProgressCopy(Name alias, Table<PgStatProgressCopyRecord> aliased) {
@@ -141,25 +99,14 @@ public class PgStatProgressCopy extends TableImpl<PgStatProgressCopyRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_copy</code> table
-     * reference
-     */
     public PgStatProgressCopy(String alias) {
         this(DSL.name(alias), PG_STAT_PROGRESS_COPY);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_copy</code> table
-     * reference
-     */
     public PgStatProgressCopy(Name alias) {
         this(alias, PG_STAT_PROGRESS_COPY);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_progress_copy</code> table reference
-     */
     public PgStatProgressCopy() {
         this(DSL.name("pg_stat_progress_copy"), null);
     }
@@ -192,27 +139,18 @@ public class PgStatProgressCopy extends TableImpl<PgStatProgressCopyRecord> {
         return new PgStatProgressCopy(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCopy rename(String name) {
         return new PgStatProgressCopy(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCopy rename(Name name) {
         return new PgStatProgressCopy(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCopy rename(Table<?> name) {
@@ -229,17 +167,10 @@ public class PgStatProgressCopy extends TableImpl<PgStatProgressCopyRecord> {
         return (Row10) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function10<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function10<? super Integer, ? super Long, ? super String, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

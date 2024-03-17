@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_recovery_prefetch</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -79,156 +76,92 @@ public class PgStatRecoveryPrefetch implements Serializable {
         this.ioDepth = ioDepth;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.prefetch</code>.
-     */
     @Nullable
     public Long getPrefetch() {
         return this.prefetch;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.prefetch</code>.
-     */
     public void setPrefetch(@Nullable Long prefetch) {
         this.prefetch = prefetch;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.hit</code>.
-     */
     @Nullable
     public Long getHit() {
         return this.hit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.hit</code>.
-     */
     public void setHit(@Nullable Long hit) {
         this.hit = hit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_init</code>.
-     */
     @Nullable
     public Long getSkipInit() {
         return this.skipInit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_init</code>.
-     */
     public void setSkipInit(@Nullable Long skipInit) {
         this.skipInit = skipInit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_new</code>.
-     */
     @Nullable
     public Long getSkipNew() {
         return this.skipNew;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_new</code>.
-     */
     public void setSkipNew(@Nullable Long skipNew) {
         this.skipNew = skipNew;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_fpw</code>.
-     */
     @Nullable
     public Long getSkipFpw() {
         return this.skipFpw;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_fpw</code>.
-     */
     public void setSkipFpw(@Nullable Long skipFpw) {
         this.skipFpw = skipFpw;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_rep</code>.
-     */
     @Nullable
     public Long getSkipRep() {
         return this.skipRep;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_rep</code>.
-     */
     public void setSkipRep(@Nullable Long skipRep) {
         this.skipRep = skipRep;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_recovery_prefetch.wal_distance</code>.
-     */
     @Nullable
     public Integer getWalDistance() {
         return this.walDistance;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_recovery_prefetch.wal_distance</code>.
-     */
     public void setWalDistance(@Nullable Integer walDistance) {
         this.walDistance = walDistance;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_recovery_prefetch.block_distance</code>.
-     */
     @Nullable
     public Integer getBlockDistance() {
         return this.blockDistance;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_recovery_prefetch.block_distance</code>.
-     */
     public void setBlockDistance(@Nullable Integer blockDistance) {
         this.blockDistance = blockDistance;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.io_depth</code>.
-     */
     @Nullable
     public Integer getIoDepth() {
         return this.ioDepth;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.io_depth</code>.
-     */
     public void setIoDepth(@Nullable Integer ioDepth) {
         this.ioDepth = ioDepth;
     }

@@ -19,9 +19,6 @@ import org.jooq.Row8;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_foreign_server</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,125 +31,77 @@ public class PgForeignServerRecord extends UpdatableRecordImpl<PgForeignServerRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvname</code>.
-     */
     public void setSrvname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSrvname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvowner</code>.
-     */
     public void setSrvowner(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSrvowner() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvfdw</code>.
-     */
     public void setSrvfdw(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvfdw</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSrvfdw() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvtype</code>.
-     */
     public void setSrvtype(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvtype</code>.
-     */
     @Nullable
     public String getSrvtype() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvversion</code>.
-     */
     public void setSrvversion(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvversion</code>.
-     */
     @Nullable
     public String getSrvversion() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvacl</code>.
-     */
     public void setSrvacl(@Nullable String[] value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvacl</code>.
-     */
     @Nullable
     public String[] getSrvacl() {
         return (String[]) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_server.srvoptions</code>.
-     */
     public void setSrvoptions(@Nullable String[] value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_server.srvoptions</code>.
-     */
     @Nullable
     public String[] getSrvoptions() {
         return (String[]) get(7);
@@ -402,16 +351,10 @@ public class PgForeignServerRecord extends UpdatableRecordImpl<PgForeignServerRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgForeignServerRecord
-     */
     public PgForeignServerRecord() {
         super(PgForeignServer.PG_FOREIGN_SERVER);
     }
 
-    /**
-     * Create a detached, initialised PgForeignServerRecord
-     */
     @ConstructorProperties({ "oid", "srvname", "srvowner", "srvfdw", "srvtype", "srvversion", "srvacl", "srvoptions" })
     public PgForeignServerRecord(@NotNull Long oid, @NotNull String srvname, @NotNull Long srvowner, @NotNull Long srvfdw, @Nullable String srvtype, @Nullable String srvversion, @Nullable String[] srvacl, @Nullable String[] srvoptions) {
         super(PgForeignServer.PG_FOREIGN_SERVER);
@@ -427,9 +370,6 @@ public class PgForeignServerRecord extends UpdatableRecordImpl<PgForeignServerRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgForeignServerRecord
-     */
     public PgForeignServerRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgForeignServer value) {
         super(PgForeignServer.PG_FOREIGN_SERVER);
 

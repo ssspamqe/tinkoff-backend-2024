@@ -18,9 +18,6 @@ import org.jooq.Row15;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stats_ext</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,250 +30,140 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.tablename</code>.
-     */
     public void setTablename(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.statistics_schemaname</code>.
-     */
     public void setStatisticsSchemaname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.statistics_schemaname</code>.
-     */
     @Nullable
     public String getStatisticsSchemaname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.statistics_name</code>.
-     */
     public void setStatisticsName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.statistics_name</code>.
-     */
     @Nullable
     public String getStatisticsName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.statistics_owner</code>.
-     */
     public void setStatisticsOwner(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.statistics_owner</code>.
-     */
     @Nullable
     public String getStatisticsOwner() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.attnames</code>.
-     */
     public void setAttnames(@Nullable String[] value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.attnames</code>.
-     */
     @Nullable
     public String[] getAttnames() {
         return (String[]) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.exprs</code>.
-     */
     public void setExprs(@Nullable String[] value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.exprs</code>.
-     */
     @Nullable
     public String[] getExprs() {
         return (String[]) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.kinds</code>.
-     */
     public void setKinds(@Nullable String[] value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.kinds</code>.
-     */
     @Nullable
     public String[] getKinds() {
         return (String[]) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.inherited</code>.
-     */
     public void setInherited(@Nullable Boolean value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.inherited</code>.
-     */
     @Nullable
     public Boolean getInherited() {
         return (Boolean) get(8);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setNDistinct(@Nullable Object value) {
         set(9, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getNDistinct() {
         return get(9);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setDependencies(@Nullable Object value) {
         set(10, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getDependencies() {
         return get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.most_common_vals</code>.
-     */
     public void setMostCommonVals(@Nullable String[] value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.most_common_vals</code>.
-     */
     @Nullable
     public String[] getMostCommonVals() {
         return (String[]) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.most_common_val_nulls</code>.
-     */
     public void setMostCommonValNulls(@Nullable Boolean[] value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.most_common_val_nulls</code>.
-     */
     @Nullable
     public Boolean[] getMostCommonValNulls() {
         return (Boolean[]) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.most_common_freqs</code>.
-     */
     public void setMostCommonFreqs(@Nullable Double[] value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.most_common_freqs</code>.
-     */
     @Nullable
     public Double[] getMostCommonFreqs() {
         return (Double[]) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext.most_common_base_freqs</code>.
-     */
     public void setMostCommonBaseFreqs(@Nullable Double[] value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext.most_common_base_freqs</code>.
-     */
     @Nullable
     public Double[] getMostCommonBaseFreqs() {
         return (Double[]) get(14);
@@ -352,14 +239,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         return PgStatsExt.PG_STATS_EXT.INHERITED;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -367,14 +246,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         return PgStatsExt.PG_STATS_EXT.N_DISTINCT;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -460,14 +331,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         return getInherited();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -475,14 +338,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         return getNDistinct();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -568,14 +423,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         return getInherited();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -583,14 +430,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         return getNDistinct();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -685,14 +524,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -701,14 +532,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -770,16 +593,10 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatsExtRecord
-     */
     public PgStatsExtRecord() {
         super(PgStatsExt.PG_STATS_EXT);
     }
 
-    /**
-     * Create a detached, initialised PgStatsExtRecord
-     */
     @ConstructorProperties({ "schemaname", "tablename", "statisticsSchemaname", "statisticsName", "statisticsOwner", "attnames", "exprs", "kinds", "inherited", "nDistinct", "dependencies", "mostCommonVals", "mostCommonValNulls", "mostCommonFreqs", "mostCommonBaseFreqs" })
     public PgStatsExtRecord(@Nullable String schemaname, @Nullable String tablename, @Nullable String statisticsSchemaname, @Nullable String statisticsName, @Nullable String statisticsOwner, @Nullable String[] attnames, @Nullable String[] exprs, @Nullable String[] kinds, @Nullable Boolean inherited, @Nullable Object nDistinct, @Nullable Object dependencies, @Nullable String[] mostCommonVals, @Nullable Boolean[] mostCommonValNulls, @Nullable Double[] mostCommonFreqs, @Nullable Double[] mostCommonBaseFreqs) {
         super(PgStatsExt.PG_STATS_EXT);
@@ -802,9 +619,6 @@ public class PgStatsExtRecord extends TableRecordImpl<PgStatsExtRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatsExtRecord
-     */
     public PgStatsExtRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatsExt value) {
         super(PgStatsExt.PG_STATS_EXT);
 

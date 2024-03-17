@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgDescriptionRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_description</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,38 +42,20 @@ public class PgDescription extends TableImpl<PgDescriptionRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_description</code>
-     */
     public static final PgDescription PG_DESCRIPTION = new PgDescription();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgDescriptionRecord> getRecordType() {
         return PgDescriptionRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_description.objoid</code>.
-     */
     public final TableField<PgDescriptionRecord, Long> OBJOID = createField(DSL.name("objoid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_description.classoid</code>.
-     */
     public final TableField<PgDescriptionRecord, Long> CLASSOID = createField(DSL.name("classoid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_description.objsubid</code>.
-     */
     public final TableField<PgDescriptionRecord, Integer> OBJSUBID = createField(DSL.name("objsubid"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_description.description</code>.
-     */
     public final TableField<PgDescriptionRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.CLOB.nullable(false), this, "");
 
     private PgDescription(Name alias, Table<PgDescriptionRecord> aliased) {
@@ -89,23 +66,14 @@ public class PgDescription extends TableImpl<PgDescriptionRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_description</code> table reference
-     */
     public PgDescription(String alias) {
         this(DSL.name(alias), PG_DESCRIPTION);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_description</code> table reference
-     */
     public PgDescription(Name alias) {
         this(alias, PG_DESCRIPTION);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_description</code> table reference
-     */
     public PgDescription() {
         this(DSL.name("pg_description"), null);
     }
@@ -144,27 +112,18 @@ public class PgDescription extends TableImpl<PgDescriptionRecord> {
         return new PgDescription(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDescription rename(String name) {
         return new PgDescription(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDescription rename(Name name) {
         return new PgDescription(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDescription rename(Table<?> name) {
@@ -181,17 +140,10 @@ public class PgDescription extends TableImpl<PgDescriptionRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super Integer, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super Integer, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

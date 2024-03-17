@@ -17,9 +17,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.int8_sum</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -32,24 +29,12 @@ public class Int8Sum extends AbstractRoutine<BigDecimal> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.int8_sum.RETURN_VALUE</code>.
-     */
     public static final Parameter<BigDecimal> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.NUMERIC, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.int8_sum._1</code>.
-     */
     public static final Parameter<BigDecimal> _1 = Internal.createParameter("_1", SQLDataType.NUMERIC, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.int8_sum._2</code>.
-     */
     public static final Parameter<Long> _2 = Internal.createParameter("_2", SQLDataType.BIGINT, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Int8Sum() {
         super("int8_sum", PgCatalog.PG_CATALOG, SQLDataType.NUMERIC);
 
@@ -58,32 +43,18 @@ public class Int8Sum extends AbstractRoutine<BigDecimal> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(BigDecimal value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<BigDecimal> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(Long value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<Long> field) {
         setField(_2, field);
     }

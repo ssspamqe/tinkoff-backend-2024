@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.schemata</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,113 +63,65 @@ public class Schemata implements Serializable {
         this.sqlPath = sqlPath;
     }
 
-    /**
-     * Getter for <code>information_schema.schemata.catalog_name</code>.
-     */
     @Nullable
     public String getCatalogName() {
         return this.catalogName;
     }
 
-    /**
-     * Setter for <code>information_schema.schemata.catalog_name</code>.
-     */
     public void setCatalogName(@Nullable String catalogName) {
         this.catalogName = catalogName;
     }
 
-    /**
-     * Getter for <code>information_schema.schemata.schema_name</code>.
-     */
     @Nullable
     public String getSchemaName() {
         return this.schemaName;
     }
 
-    /**
-     * Setter for <code>information_schema.schemata.schema_name</code>.
-     */
     public void setSchemaName(@Nullable String schemaName) {
         this.schemaName = schemaName;
     }
 
-    /**
-     * Getter for <code>information_schema.schemata.schema_owner</code>.
-     */
     @Nullable
     public String getSchemaOwner() {
         return this.schemaOwner;
     }
 
-    /**
-     * Setter for <code>information_schema.schemata.schema_owner</code>.
-     */
     public void setSchemaOwner(@Nullable String schemaOwner) {
         this.schemaOwner = schemaOwner;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.schemata.default_character_set_catalog</code>.
-     */
     @Nullable
     public String getDefaultCharacterSetCatalog() {
         return this.defaultCharacterSetCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.schemata.default_character_set_catalog</code>.
-     */
     public void setDefaultCharacterSetCatalog(@Nullable String defaultCharacterSetCatalog) {
         this.defaultCharacterSetCatalog = defaultCharacterSetCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.schemata.default_character_set_schema</code>.
-     */
     @Nullable
     public String getDefaultCharacterSetSchema() {
         return this.defaultCharacterSetSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.schemata.default_character_set_schema</code>.
-     */
     public void setDefaultCharacterSetSchema(@Nullable String defaultCharacterSetSchema) {
         this.defaultCharacterSetSchema = defaultCharacterSetSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.schemata.default_character_set_name</code>.
-     */
     @Nullable
     public String getDefaultCharacterSetName() {
         return this.defaultCharacterSetName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.schemata.default_character_set_name</code>.
-     */
     public void setDefaultCharacterSetName(@Nullable String defaultCharacterSetName) {
         this.defaultCharacterSetName = defaultCharacterSetName;
     }
 
-    /**
-     * Getter for <code>information_schema.schemata.sql_path</code>.
-     */
     @Nullable
     public String getSqlPath() {
         return this.sqlPath;
     }
 
-    /**
-     * Setter for <code>information_schema.schemata.sql_path</code>.
-     */
     public void setSqlPath(@Nullable String sqlPath) {
         this.sqlPath = sqlPath;
     }

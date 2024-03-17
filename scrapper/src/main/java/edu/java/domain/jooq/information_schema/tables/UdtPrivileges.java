@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.UdtPrivilegesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.udt_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,53 +39,26 @@ public class UdtPrivileges extends TableImpl<UdtPrivilegesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.udt_privileges</code>
-     */
     public static final UdtPrivileges UDT_PRIVILEGES = new UdtPrivileges();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<UdtPrivilegesRecord> getRecordType() {
         return UdtPrivilegesRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.udt_privileges.grantor</code>.
-     */
     public final TableField<UdtPrivilegesRecord, String> GRANTOR = createField(DSL.name("grantor"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.udt_privileges.grantee</code>.
-     */
     public final TableField<UdtPrivilegesRecord, String> GRANTEE = createField(DSL.name("grantee"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.udt_privileges.udt_catalog</code>.
-     */
     public final TableField<UdtPrivilegesRecord, String> UDT_CATALOG = createField(DSL.name("udt_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.udt_privileges.udt_schema</code>.
-     */
     public final TableField<UdtPrivilegesRecord, String> UDT_SCHEMA = createField(DSL.name("udt_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.udt_privileges.udt_name</code>.
-     */
     public final TableField<UdtPrivilegesRecord, String> UDT_NAME = createField(DSL.name("udt_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.udt_privileges.privilege_type</code>.
-     */
     public final TableField<UdtPrivilegesRecord, String> PRIVILEGE_TYPE = createField(DSL.name("privilege_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.udt_privileges.is_grantable</code>.
-     */
     public final TableField<UdtPrivilegesRecord, String> IS_GRANTABLE = createField(DSL.name("is_grantable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
     private UdtPrivileges(Name alias, Table<UdtPrivilegesRecord> aliased) {
@@ -132,25 +100,14 @@ public class UdtPrivileges extends TableImpl<UdtPrivilegesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.udt_privileges</code> table
-     * reference
-     */
     public UdtPrivileges(String alias) {
         this(DSL.name(alias), UDT_PRIVILEGES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.udt_privileges</code> table
-     * reference
-     */
     public UdtPrivileges(Name alias) {
         this(alias, UDT_PRIVILEGES);
     }
 
-    /**
-     * Create a <code>information_schema.udt_privileges</code> table reference
-     */
     public UdtPrivileges() {
         this(DSL.name("udt_privileges"), null);
     }
@@ -183,27 +140,18 @@ public class UdtPrivileges extends TableImpl<UdtPrivilegesRecord> {
         return new UdtPrivileges(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UdtPrivileges rename(String name) {
         return new UdtPrivileges(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UdtPrivileges rename(Name name) {
         return new UdtPrivileges(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UdtPrivileges rename(Table<?> name) {
@@ -220,17 +168,10 @@ public class UdtPrivileges extends TableImpl<UdtPrivilegesRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

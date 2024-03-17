@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.triggered_update_columns</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,120 +30,64 @@ public class TriggeredUpdateColumnsRecord extends TableRecordImpl<TriggeredUpdat
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.trigger_catalog</code>.
-     */
     public void setTriggerCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.trigger_catalog</code>.
-     */
     @Nullable
     public String getTriggerCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.trigger_schema</code>.
-     */
     public void setTriggerSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.trigger_schema</code>.
-     */
     @Nullable
     public String getTriggerSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.trigger_name</code>.
-     */
     public void setTriggerName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.trigger_name</code>.
-     */
     @Nullable
     public String getTriggerName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.event_object_catalog</code>.
-     */
     public void setEventObjectCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.event_object_catalog</code>.
-     */
     @Nullable
     public String getEventObjectCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.event_object_schema</code>.
-     */
     public void setEventObjectSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.event_object_schema</code>.
-     */
     @Nullable
     public String getEventObjectSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.event_object_table</code>.
-     */
     public void setEventObjectTable(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.event_object_table</code>.
-     */
     @Nullable
     public String getEventObjectTable() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.triggered_update_columns.event_object_column</code>.
-     */
     public void setEventObjectColumn(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.triggered_update_columns.event_object_column</code>.
-     */
     @Nullable
     public String getEventObjectColumn() {
         return (String) get(6);
@@ -360,16 +301,10 @@ public class TriggeredUpdateColumnsRecord extends TableRecordImpl<TriggeredUpdat
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TriggeredUpdateColumnsRecord
-     */
     public TriggeredUpdateColumnsRecord() {
         super(TriggeredUpdateColumns.TRIGGERED_UPDATE_COLUMNS);
     }
 
-    /**
-     * Create a detached, initialised TriggeredUpdateColumnsRecord
-     */
     @ConstructorProperties({ "triggerCatalog", "triggerSchema", "triggerName", "eventObjectCatalog", "eventObjectSchema", "eventObjectTable", "eventObjectColumn" })
     public TriggeredUpdateColumnsRecord(@Nullable String triggerCatalog, @Nullable String triggerSchema, @Nullable String triggerName, @Nullable String eventObjectCatalog, @Nullable String eventObjectSchema, @Nullable String eventObjectTable, @Nullable String eventObjectColumn) {
         super(TriggeredUpdateColumns.TRIGGERED_UPDATE_COLUMNS);
@@ -384,9 +319,6 @@ public class TriggeredUpdateColumnsRecord extends TableRecordImpl<TriggeredUpdat
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TriggeredUpdateColumnsRecord
-     */
     public TriggeredUpdateColumnsRecord(edu.java.domain.jooq.information_schema.tables.pojos.TriggeredUpdateColumns value) {
         super(TriggeredUpdateColumns.TRIGGERED_UPDATE_COLUMNS);
 

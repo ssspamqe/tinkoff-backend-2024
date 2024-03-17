@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_policies</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -71,122 +68,74 @@ public class PgPolicies implements Serializable {
         this.withCheck = withCheck;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return this.tablename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.tablename</code>.
-     */
     public void setTablename(@Nullable String tablename) {
         this.tablename = tablename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.policyname</code>.
-     */
     @Nullable
     public String getPolicyname() {
         return this.policyname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.policyname</code>.
-     */
     public void setPolicyname(@Nullable String policyname) {
         this.policyname = policyname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.permissive</code>.
-     */
     @Nullable
     public String getPermissive() {
         return this.permissive;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.permissive</code>.
-     */
     public void setPermissive(@Nullable String permissive) {
         this.permissive = permissive;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.roles</code>.
-     */
     @Nullable
     public String[] getRoles() {
         return this.roles;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.roles</code>.
-     */
     public void setRoles(@Nullable String[] roles) {
         this.roles = roles;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.cmd</code>.
-     */
     @Nullable
     public String getCmd() {
         return this.cmd;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.cmd</code>.
-     */
     public void setCmd(@Nullable String cmd) {
         this.cmd = cmd;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.qual</code>.
-     */
     @Nullable
     public String getQual() {
         return this.qual;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.qual</code>.
-     */
     public void setQual(@Nullable String qual) {
         this.qual = qual;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.with_check</code>.
-     */
     @Nullable
     public String getWithCheck() {
         return this.withCheck;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.with_check</code>.
-     */
     public void setWithCheck(@Nullable String withCheck) {
         this.withCheck = withCheck;
     }

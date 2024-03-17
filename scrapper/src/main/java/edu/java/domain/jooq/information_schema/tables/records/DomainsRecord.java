@@ -14,9 +14,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.domains</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,412 +26,244 @@ public class DomainsRecord extends TableRecordImpl<DomainsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.domains.domain_catalog</code>.
-     */
     public void setDomainCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.domain_catalog</code>.
-     */
     @Nullable
     public String getDomainCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.domain_schema</code>.
-     */
     public void setDomainSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.domain_schema</code>.
-     */
     @Nullable
     public String getDomainSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.domain_name</code>.
-     */
     public void setDomainName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.domain_name</code>.
-     */
     @Nullable
     public String getDomainName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.data_type</code>.
-     */
     public void setDataType(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.data_type</code>.
-     */
     @Nullable
     public String getDataType() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domains.character_maximum_length</code>.
-     */
     public void setCharacterMaximumLength(@Nullable Integer value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domains.character_maximum_length</code>.
-     */
     @Nullable
     public Integer getCharacterMaximumLength() {
         return (Integer) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domains.character_octet_length</code>.
-     */
     public void setCharacterOctetLength(@Nullable Integer value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domains.character_octet_length</code>.
-     */
     @Nullable
     public Integer getCharacterOctetLength() {
         return (Integer) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.collation_name</code>.
-     */
     public void setCollationName(@Nullable String value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return (String) get(11);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.numeric_precision</code>.
-     */
     public void setNumericPrecision(@Nullable Integer value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.numeric_precision</code>.
-     */
     @Nullable
     public Integer getNumericPrecision() {
         return (Integer) get(12);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domains.numeric_precision_radix</code>.
-     */
     public void setNumericPrecisionRadix(@Nullable Integer value) {
         set(13, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domains.numeric_precision_radix</code>.
-     */
     @Nullable
     public Integer getNumericPrecisionRadix() {
         return (Integer) get(13);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.numeric_scale</code>.
-     */
     public void setNumericScale(@Nullable Integer value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.numeric_scale</code>.
-     */
     @Nullable
     public Integer getNumericScale() {
         return (Integer) get(14);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.datetime_precision</code>.
-     */
     public void setDatetimePrecision(@Nullable Integer value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.datetime_precision</code>.
-     */
     @Nullable
     public Integer getDatetimePrecision() {
         return (Integer) get(15);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.interval_type</code>.
-     */
     public void setIntervalType(@Nullable String value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.interval_type</code>.
-     */
     @Nullable
     public String getIntervalType() {
         return (String) get(16);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.interval_precision</code>.
-     */
     public void setIntervalPrecision(@Nullable Integer value) {
         set(17, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.interval_precision</code>.
-     */
     @Nullable
     public Integer getIntervalPrecision() {
         return (Integer) get(17);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.domain_default</code>.
-     */
     public void setDomainDefault(@Nullable String value) {
         set(18, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.domain_default</code>.
-     */
     @Nullable
     public String getDomainDefault() {
         return (String) get(18);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String value) {
         set(19, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return (String) get(19);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String value) {
         set(20, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return (String) get(20);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.udt_name</code>.
-     */
     public void setUdtName(@Nullable String value) {
         set(21, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return (String) get(21);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.scope_catalog</code>.
-     */
     public void setScopeCatalog(@Nullable String value) {
         set(22, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.scope_catalog</code>.
-     */
     @Nullable
     public String getScopeCatalog() {
         return (String) get(22);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.scope_schema</code>.
-     */
     public void setScopeSchema(@Nullable String value) {
         set(23, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.scope_schema</code>.
-     */
     @Nullable
     public String getScopeSchema() {
         return (String) get(23);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.scope_name</code>.
-     */
     public void setScopeName(@Nullable String value) {
         set(24, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.scope_name</code>.
-     */
     @Nullable
     public String getScopeName() {
         return (String) get(24);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.maximum_cardinality</code>.
-     */
     public void setMaximumCardinality(@Nullable Integer value) {
         set(25, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.maximum_cardinality</code>.
-     */
     @Nullable
     public Integer getMaximumCardinality() {
         return (Integer) get(25);
     }
 
-    /**
-     * Setter for <code>information_schema.domains.dtd_identifier</code>.
-     */
     public void setDtdIdentifier(@Nullable String value) {
         set(26, value);
     }
 
-    /**
-     * Getter for <code>information_schema.domains.dtd_identifier</code>.
-     */
     @Nullable
     public String getDtdIdentifier() {
         return (String) get(26);
@@ -444,16 +273,10 @@ public class DomainsRecord extends TableRecordImpl<DomainsRecord> {
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached DomainsRecord
-     */
     public DomainsRecord() {
         super(Domains.DOMAINS);
     }
 
-    /**
-     * Create a detached, initialised DomainsRecord
-     */
     @ConstructorProperties({ "domainCatalog", "domainSchema", "domainName", "dataType", "characterMaximumLength", "characterOctetLength", "characterSetCatalog", "characterSetSchema", "characterSetName", "collationCatalog", "collationSchema", "collationName", "numericPrecision", "numericPrecisionRadix", "numericScale", "datetimePrecision", "intervalType", "intervalPrecision", "domainDefault", "udtCatalog", "udtSchema", "udtName", "scopeCatalog", "scopeSchema", "scopeName", "maximumCardinality", "dtdIdentifier" })
     public DomainsRecord(@Nullable String domainCatalog, @Nullable String domainSchema, @Nullable String domainName, @Nullable String dataType, @Nullable Integer characterMaximumLength, @Nullable Integer characterOctetLength, @Nullable String characterSetCatalog, @Nullable String characterSetSchema, @Nullable String characterSetName, @Nullable String collationCatalog, @Nullable String collationSchema, @Nullable String collationName, @Nullable Integer numericPrecision, @Nullable Integer numericPrecisionRadix, @Nullable Integer numericScale, @Nullable Integer datetimePrecision, @Nullable String intervalType, @Nullable Integer intervalPrecision, @Nullable String domainDefault, @Nullable String udtCatalog, @Nullable String udtSchema, @Nullable String udtName, @Nullable String scopeCatalog, @Nullable String scopeSchema, @Nullable String scopeName, @Nullable Integer maximumCardinality, @Nullable String dtdIdentifier) {
         super(Domains.DOMAINS);
@@ -488,9 +311,6 @@ public class DomainsRecord extends TableRecordImpl<DomainsRecord> {
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised DomainsRecord
-     */
     public DomainsRecord(edu.java.domain.jooq.information_schema.tables.pojos.Domains value) {
         super(Domains.DOMAINS);
 

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.InformationSchemaCatalogNameRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.information_schema_catalog_name</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,25 +39,14 @@ public class InformationSchemaCatalogName extends TableImpl<InformationSchemaCat
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.information_schema_catalog_name</code>
-     */
     public static final InformationSchemaCatalogName INFORMATION_SCHEMA_CATALOG_NAME = new InformationSchemaCatalogName();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<InformationSchemaCatalogNameRecord> getRecordType() {
         return InformationSchemaCatalogNameRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.information_schema_catalog_name.catalog_name</code>.
-     */
     public final TableField<InformationSchemaCatalogNameRecord, String> CATALOG_NAME = createField(DSL.name("catalog_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private InformationSchemaCatalogName(Name alias, Table<InformationSchemaCatalogNameRecord> aliased) {
@@ -75,28 +59,14 @@ public class InformationSchemaCatalogName extends TableImpl<InformationSchemaCat
         """));
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.information_schema_catalog_name</code> table
-     * reference
-     */
     public InformationSchemaCatalogName(String alias) {
         this(DSL.name(alias), INFORMATION_SCHEMA_CATALOG_NAME);
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.information_schema_catalog_name</code> table
-     * reference
-     */
     public InformationSchemaCatalogName(Name alias) {
         this(alias, INFORMATION_SCHEMA_CATALOG_NAME);
     }
 
-    /**
-     * Create a <code>information_schema.information_schema_catalog_name</code>
-     * table reference
-     */
     public InformationSchemaCatalogName() {
         this(DSL.name("information_schema_catalog_name"), null);
     }
@@ -129,27 +99,18 @@ public class InformationSchemaCatalogName extends TableImpl<InformationSchemaCat
         return new InformationSchemaCatalogName(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public InformationSchemaCatalogName rename(String name) {
         return new InformationSchemaCatalogName(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public InformationSchemaCatalogName rename(Name name) {
         return new InformationSchemaCatalogName(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public InformationSchemaCatalogName rename(Table<?> name) {
@@ -166,17 +127,10 @@ public class InformationSchemaCatalogName extends TableImpl<InformationSchemaCat
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

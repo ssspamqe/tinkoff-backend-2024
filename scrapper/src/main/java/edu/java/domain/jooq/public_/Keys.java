@@ -26,10 +26,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.Internal;
 
 
-/**
- * A class modelling foreign key relationships and constraints of tables in
- * public.
- */
 @Generated(
     value = {
         "https://www.jooq.org",

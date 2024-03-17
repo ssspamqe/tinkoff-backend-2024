@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_identify_object</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,44 +26,20 @@ public class PgIdentifyObject extends AbstractRoutine<java.lang.Void> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_identify_object.classid</code>.
-     */
     public static final Parameter<Long> CLASSID = Internal.createParameter("classid", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_identify_object.objid</code>.
-     */
     public static final Parameter<Long> OBJID = Internal.createParameter("objid", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_identify_object.objsubid</code>.
-     */
     public static final Parameter<Integer> OBJSUBID = Internal.createParameter("objsubid", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_identify_object.type</code>.
-     */
     public static final Parameter<String> TYPE = Internal.createParameter("type", SQLDataType.CLOB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_identify_object.schema</code>.
-     */
     public static final Parameter<String> SCHEMA = Internal.createParameter("schema", SQLDataType.CLOB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_identify_object.name</code>.
-     */
     public static final Parameter<String> NAME = Internal.createParameter("name", SQLDataType.CLOB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_identify_object.identity</code>.
-     */
     public static final Parameter<String> IDENTITY = Internal.createParameter("identity", SQLDataType.CLOB, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgIdentifyObject() {
         super("pg_identify_object", PgCatalog.PG_CATALOG);
 
@@ -79,51 +52,30 @@ public class PgIdentifyObject extends AbstractRoutine<java.lang.Void> {
         addOutParameter(IDENTITY);
     }
 
-    /**
-     * Set the <code>classid</code> parameter IN value to the routine
-     */
     public void setClassid(Long value) {
         setValue(CLASSID, value);
     }
 
-    /**
-     * Set the <code>objid</code> parameter IN value to the routine
-     */
     public void setObjid(Long value) {
         setValue(OBJID, value);
     }
 
-    /**
-     * Set the <code>objsubid</code> parameter IN value to the routine
-     */
     public void setObjsubid(Integer value) {
         setValue(OBJSUBID, value);
     }
 
-    /**
-     * Get the <code>type</code> parameter OUT value from the routine
-     */
     public String getType() {
         return get(TYPE);
     }
 
-    /**
-     * Get the <code>schema</code> parameter OUT value from the routine
-     */
     public String getSchema_() {
         return get(SCHEMA);
     }
 
-    /**
-     * Get the <code>name</code> parameter OUT value from the routine
-     */
     public String getName_() {
         return get(NAME);
     }
 
-    /**
-     * Get the <code>identity</code> parameter OUT value from the routine
-     */
     public String getIdentity() {
         return get(IDENTITY);
     }

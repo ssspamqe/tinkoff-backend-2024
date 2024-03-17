@@ -11,7 +11,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgPublicationRelRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -36,9 +35,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_rel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -51,49 +47,23 @@ public class PgPublicationRel extends TableImpl<PgPublicationRelRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_publication_rel</code>
-     */
     public static final PgPublicationRel PG_PUBLICATION_REL = new PgPublicationRel();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgPublicationRelRecord> getRecordType() {
         return PgPublicationRelRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_publication_rel.oid</code>.
-     */
     public final TableField<PgPublicationRelRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_rel.prpubid</code>.
-     */
     public final TableField<PgPublicationRelRecord, Long> PRPUBID = createField(DSL.name("prpubid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_rel.prrelid</code>.
-     */
     public final TableField<PgPublicationRelRecord, Long> PRRELID = createField(DSL.name("prrelid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgPublicationRelRecord, Object> PRQUAL = createField(DSL.name("prqual"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_node_tree\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_rel.prattrs</code>.
-     */
     public final TableField<PgPublicationRelRecord, Object[]> PRATTRS = createField(DSL.name("prattrs"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"nt2vector\"").array(), this, "");
 
     private PgPublicationRel(Name alias, Table<PgPublicationRelRecord> aliased) {
@@ -104,25 +74,14 @@ public class PgPublicationRel extends TableImpl<PgPublicationRelRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_publication_rel</code> table
-     * reference
-     */
     public PgPublicationRel(String alias) {
         this(DSL.name(alias), PG_PUBLICATION_REL);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_publication_rel</code> table
-     * reference
-     */
     public PgPublicationRel(Name alias) {
         this(alias, PG_PUBLICATION_REL);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_publication_rel</code> table reference
-     */
     public PgPublicationRel() {
         this(DSL.name("pg_publication_rel"), null);
     }
@@ -173,27 +132,18 @@ public class PgPublicationRel extends TableImpl<PgPublicationRelRecord> {
         return new PgPublicationRel(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationRel rename(String name) {
         return new PgPublicationRel(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationRel rename(Name name) {
         return new PgPublicationRel(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationRel rename(Table<?> name) {
@@ -210,17 +160,10 @@ public class PgPublicationRel extends TableImpl<PgPublicationRelRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super Long, ? super Long, ? super Object, ? super Object[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super Long, ? super Long, ? super Object, ? super Object[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

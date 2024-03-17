@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_opclass</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -74,146 +71,92 @@ public class PgOpclass implements Serializable {
         this.opckeytype = opckeytype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcmethod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcmethod() {
         return this.opcmethod;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcmethod</code>.
-     */
     public void setOpcmethod(@NotNull Long opcmethod) {
         this.opcmethod = opcmethod;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOpcname() {
         return this.opcname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcname</code>.
-     */
     public void setOpcname(@NotNull String opcname) {
         this.opcname = opcname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcnamespace() {
         return this.opcnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcnamespace</code>.
-     */
     public void setOpcnamespace(@NotNull Long opcnamespace) {
         this.opcnamespace = opcnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcowner() {
         return this.opcowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcowner</code>.
-     */
     public void setOpcowner(@NotNull Long opcowner) {
         this.opcowner = opcowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcfamily</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcfamily() {
         return this.opcfamily;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcfamily</code>.
-     */
     public void setOpcfamily(@NotNull Long opcfamily) {
         this.opcfamily = opcfamily;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcintype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcintype() {
         return this.opcintype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcintype</code>.
-     */
     public void setOpcintype(@NotNull Long opcintype) {
         this.opcintype = opcintype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcdefault</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getOpcdefault() {
         return this.opcdefault;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcdefault</code>.
-     */
     public void setOpcdefault(@NotNull Boolean opcdefault) {
         this.opcdefault = opcdefault;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opckeytype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpckeytype() {
         return this.opckeytype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opckeytype</code>.
-     */
     public void setOpckeytype(@NotNull Long opckeytype) {
         this.opckeytype = opckeytype;
     }

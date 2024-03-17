@@ -18,9 +18,6 @@ import org.jooq.Row11;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,178 +30,102 @@ public class PgSequencesRecord extends TableRecordImpl<PgSequencesRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.sequencename</code>.
-     */
     public void setSequencename(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.sequencename</code>.
-     */
     @Nullable
     public String getSequencename() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.sequenceowner</code>.
-     */
     public void setSequenceowner(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.sequenceowner</code>.
-     */
     @Nullable
     public String getSequenceowner() {
         return (String) get(2);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setDataType(@Nullable Object value) {
         set(3, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getDataType() {
         return get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.start_value</code>.
-     */
     public void setStartValue(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.start_value</code>.
-     */
     @Nullable
     public Long getStartValue() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.min_value</code>.
-     */
     public void setMinValue(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.min_value</code>.
-     */
     @Nullable
     public Long getMinValue() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.max_value</code>.
-     */
     public void setMaxValue(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.max_value</code>.
-     */
     @Nullable
     public Long getMaxValue() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.increment_by</code>.
-     */
     public void setIncrementBy(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.increment_by</code>.
-     */
     @Nullable
     public Long getIncrementBy() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.cycle</code>.
-     */
     public void setCycle(@Nullable Boolean value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.cycle</code>.
-     */
     @Nullable
     public Boolean getCycle() {
         return (Boolean) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.cache_size</code>.
-     */
     public void setCacheSize(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.cache_size</code>.
-     */
     @Nullable
     public Long getCacheSize() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequences.last_value</code>.
-     */
     public void setLastValue(@Nullable Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequences.last_value</code>.
-     */
     @Nullable
     public Long getLastValue() {
         return (Long) get(10);
@@ -244,14 +165,6 @@ public class PgSequencesRecord extends TableRecordImpl<PgSequencesRecord> implem
         return PgSequences.PG_SEQUENCES.SEQUENCEOWNER;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -319,14 +232,6 @@ public class PgSequencesRecord extends TableRecordImpl<PgSequencesRecord> implem
         return getSequenceowner();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -394,14 +299,6 @@ public class PgSequencesRecord extends TableRecordImpl<PgSequencesRecord> implem
         return getSequenceowner();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -472,14 +369,6 @@ public class PgSequencesRecord extends TableRecordImpl<PgSequencesRecord> implem
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -558,16 +447,10 @@ public class PgSequencesRecord extends TableRecordImpl<PgSequencesRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgSequencesRecord
-     */
     public PgSequencesRecord() {
         super(PgSequences.PG_SEQUENCES);
     }
 
-    /**
-     * Create a detached, initialised PgSequencesRecord
-     */
     @ConstructorProperties({ "schemaname", "sequencename", "sequenceowner", "dataType", "startValue", "minValue", "maxValue", "incrementBy", "cycle", "cacheSize", "lastValue" })
     public PgSequencesRecord(@Nullable String schemaname, @Nullable String sequencename, @Nullable String sequenceowner, @Nullable Object dataType, @Nullable Long startValue, @Nullable Long minValue, @Nullable Long maxValue, @Nullable Long incrementBy, @Nullable Boolean cycle, @Nullable Long cacheSize, @Nullable Long lastValue) {
         super(PgSequences.PG_SEQUENCES);
@@ -586,9 +469,6 @@ public class PgSequencesRecord extends TableRecordImpl<PgSequencesRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgSequencesRecord
-     */
     public PgSequencesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgSequences value) {
         super(PgSequences.PG_SEQUENCES);
 

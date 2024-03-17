@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_lock_status</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -103,242 +100,146 @@ public class PgLockStatus implements Serializable {
         this.waitstart = waitstart;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.locktype</code>.
-     */
     @Nullable
     public String getLocktype() {
         return this.locktype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.locktype</code>.
-     */
     public void setLocktype(@Nullable String locktype) {
         this.locktype = locktype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.database</code>.
-     */
     @Nullable
     public Long getDatabase() {
         return this.database;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.database</code>.
-     */
     public void setDatabase(@Nullable Long database) {
         this.database = database;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.relation</code>.
-     */
     @Nullable
     public Long getRelation() {
         return this.relation;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.relation</code>.
-     */
     public void setRelation(@Nullable Long relation) {
         this.relation = relation;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.page</code>.
-     */
     @Nullable
     public Integer getPage() {
         return this.page;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.page</code>.
-     */
     public void setPage(@Nullable Integer page) {
         this.page = page;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.tuple</code>.
-     */
     @Nullable
     public Short getTuple() {
         return this.tuple;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.tuple</code>.
-     */
     public void setTuple(@Nullable Short tuple) {
         this.tuple = tuple;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.virtualxid</code>.
-     */
     @Nullable
     public String getVirtualxid() {
         return this.virtualxid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.virtualxid</code>.
-     */
     public void setVirtualxid(@Nullable String virtualxid) {
         this.virtualxid = virtualxid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.transactionid</code>.
-     */
     @Nullable
     public Long getTransactionid() {
         return this.transactionid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.transactionid</code>.
-     */
     public void setTransactionid(@Nullable Long transactionid) {
         this.transactionid = transactionid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.classid</code>.
-     */
     @Nullable
     public Long getClassid() {
         return this.classid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.classid</code>.
-     */
     public void setClassid(@Nullable Long classid) {
         this.classid = classid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.objid</code>.
-     */
     @Nullable
     public Long getObjid() {
         return this.objid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.objid</code>.
-     */
     public void setObjid(@Nullable Long objid) {
         this.objid = objid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.objsubid</code>.
-     */
     @Nullable
     public Short getObjsubid() {
         return this.objsubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.objsubid</code>.
-     */
     public void setObjsubid(@Nullable Short objsubid) {
         this.objsubid = objsubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.virtualtransaction</code>.
-     */
     @Nullable
     public String getVirtualtransaction() {
         return this.virtualtransaction;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.virtualtransaction</code>.
-     */
     public void setVirtualtransaction(@Nullable String virtualtransaction) {
         this.virtualtransaction = virtualtransaction;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.mode</code>.
-     */
     @Nullable
     public String getMode() {
         return this.mode;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.mode</code>.
-     */
     public void setMode(@Nullable String mode) {
         this.mode = mode;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.granted</code>.
-     */
     @Nullable
     public Boolean getGranted() {
         return this.granted;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.granted</code>.
-     */
     public void setGranted(@Nullable Boolean granted) {
         this.granted = granted;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.fastpath</code>.
-     */
     @Nullable
     public Boolean getFastpath() {
         return this.fastpath;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.fastpath</code>.
-     */
     public void setFastpath(@Nullable Boolean fastpath) {
         this.fastpath = fastpath;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_lock_status.waitstart</code>.
-     */
     @Nullable
     public OffsetDateTime getWaitstart() {
         return this.waitstart;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_lock_status.waitstart</code>.
-     */
     public void setWaitstart(@Nullable OffsetDateTime waitstart) {
         this.waitstart = waitstart;
     }

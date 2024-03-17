@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_all_sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,76 +30,46 @@ public class PgStatioAllSequencesRecord extends TableRecordImpl<PgStatioAllSeque
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_sequences.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_sequences.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_sequences.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_sequences.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_sequences.relname</code>.
-     */
     public void setRelname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_sequences.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_sequences.blks_read</code>.
-     */
     public void setBlksRead(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_sequences.blks_read</code>.
-     */
     @Nullable
     public Long getBlksRead() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_sequences.blks_hit</code>.
-     */
     public void setBlksHit(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_sequences.blks_hit</code>.
-     */
     @Nullable
     public Long getBlksHit() {
         return (Long) get(4);
@@ -264,16 +231,10 @@ public class PgStatioAllSequencesRecord extends TableRecordImpl<PgStatioAllSeque
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatioAllSequencesRecord
-     */
     public PgStatioAllSequencesRecord() {
         super(PgStatioAllSequences.PG_STATIO_ALL_SEQUENCES);
     }
 
-    /**
-     * Create a detached, initialised PgStatioAllSequencesRecord
-     */
     @ConstructorProperties({ "relid", "schemaname", "relname", "blksRead", "blksHit" })
     public PgStatioAllSequencesRecord(@Nullable Long relid, @Nullable String schemaname, @Nullable String relname, @Nullable Long blksRead, @Nullable Long blksHit) {
         super(PgStatioAllSequences.PG_STATIO_ALL_SEQUENCES);
@@ -286,9 +247,6 @@ public class PgStatioAllSequencesRecord extends TableRecordImpl<PgStatioAllSeque
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatioAllSequencesRecord
-     */
     public PgStatioAllSequencesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatioAllSequences value) {
         super(PgStatioAllSequences.PG_STATIO_ALL_SEQUENCES);
 

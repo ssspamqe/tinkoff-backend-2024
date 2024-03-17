@@ -19,9 +19,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_path_query</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,16 +31,10 @@ public class JsonbPathQueryRecord extends TableRecordImpl<JsonbPathQueryRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_path_query.jsonb_path_query</code>.
-     */
     public void setJsonbPathQuery(@Nullable JSONB value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_path_query.jsonb_path_query</code>.
-     */
     @Nullable
     public JSONB getJsonbPathQuery() {
         return (JSONB) get(0);
@@ -101,16 +92,10 @@ public class JsonbPathQueryRecord extends TableRecordImpl<JsonbPathQueryRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonbPathQueryRecord
-     */
     public JsonbPathQueryRecord() {
         super(JsonbPathQuery.JSONB_PATH_QUERY);
     }
 
-    /**
-     * Create a detached, initialised JsonbPathQueryRecord
-     */
     @ConstructorProperties({ "jsonbPathQuery" })
     public JsonbPathQueryRecord(@Nullable JSONB jsonbPathQuery) {
         super(JsonbPathQuery.JSONB_PATH_QUERY);
@@ -119,9 +104,6 @@ public class JsonbPathQueryRecord extends TableRecordImpl<JsonbPathQueryRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonbPathQueryRecord
-     */
     public JsonbPathQueryRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonbPathQuery value) {
         super(JsonbPathQuery.JSONB_PATH_QUERY);
 

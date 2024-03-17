@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ident_file_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,106 +30,64 @@ public class PgIdentFileMappingsRecord extends TableRecordImpl<PgIdentFileMappin
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.map_number</code>.
-     */
     public void setMapNumber(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.map_number</code>.
-     */
     @Nullable
     public Integer getMapNumber() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.file_name</code>.
-     */
     public void setFileName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.file_name</code>.
-     */
     @Nullable
     public String getFileName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.line_number</code>.
-     */
     public void setLineNumber(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.line_number</code>.
-     */
     @Nullable
     public Integer getLineNumber() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.map_name</code>.
-     */
     public void setMapName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.map_name</code>.
-     */
     @Nullable
     public String getMapName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.sys_name</code>.
-     */
     public void setSysName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.sys_name</code>.
-     */
     @Nullable
     public String getSysName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.pg_username</code>.
-     */
     public void setPgUsername(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.pg_username</code>.
-     */
     @Nullable
     public String getPgUsername() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.error</code>.
-     */
     public void setError(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.error</code>.
-     */
     @Nullable
     public String getError() {
         return (String) get(6);
@@ -346,16 +301,10 @@ public class PgIdentFileMappingsRecord extends TableRecordImpl<PgIdentFileMappin
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgIdentFileMappingsRecord
-     */
     public PgIdentFileMappingsRecord() {
         super(PgIdentFileMappings.PG_IDENT_FILE_MAPPINGS);
     }
 
-    /**
-     * Create a detached, initialised PgIdentFileMappingsRecord
-     */
     @ConstructorProperties({ "mapNumber", "fileName", "lineNumber", "mapName", "sysName", "pgUsername", "error" })
     public PgIdentFileMappingsRecord(@Nullable Integer mapNumber, @Nullable String fileName, @Nullable Integer lineNumber, @Nullable String mapName, @Nullable String sysName, @Nullable String pgUsername, @Nullable String error) {
         super(PgIdentFileMappings.PG_IDENT_FILE_MAPPINGS);
@@ -370,9 +319,6 @@ public class PgIdentFileMappingsRecord extends TableRecordImpl<PgIdentFileMappin
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgIdentFileMappingsRecord
-     */
     public PgIdentFileMappingsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgIdentFileMappings value) {
         super(PgIdentFileMappings.PG_IDENT_FILE_MAPPINGS);
 

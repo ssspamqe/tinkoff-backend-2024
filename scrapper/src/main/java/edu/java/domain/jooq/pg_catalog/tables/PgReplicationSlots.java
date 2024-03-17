@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgReplicationSlotsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_replication_slots</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,110 +40,46 @@ public class PgReplicationSlots extends TableImpl<PgReplicationSlotsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_replication_slots</code>
-     */
     public static final PgReplicationSlots PG_REPLICATION_SLOTS = new PgReplicationSlots();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgReplicationSlotsRecord> getRecordType() {
         return PgReplicationSlotsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.slot_name</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, String> SLOT_NAME = createField(DSL.name("slot_name"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.plugin</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, String> PLUGIN = createField(DSL.name("plugin"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.slot_type</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, String> SLOT_TYPE = createField(DSL.name("slot_type"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.datoid</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Long> DATOID = createField(DSL.name("datoid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.database</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, String> DATABASE = createField(DSL.name("database"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.temporary</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Boolean> TEMPORARY = createField(DSL.name("temporary"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.active</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Boolean> ACTIVE = createField(DSL.name("active"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.active_pid</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Integer> ACTIVE_PID = createField(DSL.name("active_pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.xmin</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Long> XMIN = createField(DSL.name("xmin"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.catalog_xmin</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Long> CATALOG_XMIN = createField(DSL.name("catalog_xmin"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgReplicationSlotsRecord, Object> RESTART_LSN = createField(DSL.name("restart_lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgReplicationSlotsRecord, Object> CONFIRMED_FLUSH_LSN = createField(DSL.name("confirmed_flush_lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.wal_status</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, String> WAL_STATUS = createField(DSL.name("wal_status"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.safe_wal_size</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Long> SAFE_WAL_SIZE = createField(DSL.name("safe_wal_size"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.two_phase</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Boolean> TWO_PHASE = createField(DSL.name("two_phase"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_slots.conflicting</code>.
-     */
     public final TableField<PgReplicationSlotsRecord, Boolean> CONFLICTING = createField(DSL.name("conflicting"), SQLDataType.BOOLEAN, this, "");
 
     private PgReplicationSlots(Name alias, Table<PgReplicationSlotsRecord> aliased) {
@@ -178,25 +109,14 @@ public class PgReplicationSlots extends TableImpl<PgReplicationSlotsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_replication_slots</code> table
-     * reference
-     */
     public PgReplicationSlots(String alias) {
         this(DSL.name(alias), PG_REPLICATION_SLOTS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_replication_slots</code> table
-     * reference
-     */
     public PgReplicationSlots(Name alias) {
         this(alias, PG_REPLICATION_SLOTS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_replication_slots</code> table reference
-     */
     public PgReplicationSlots() {
         this(DSL.name("pg_replication_slots"), null);
     }
@@ -229,27 +149,18 @@ public class PgReplicationSlots extends TableImpl<PgReplicationSlotsRecord> {
         return new PgReplicationSlots(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgReplicationSlots rename(String name) {
         return new PgReplicationSlots(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgReplicationSlots rename(Name name) {
         return new PgReplicationSlots(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgReplicationSlots rename(Table<?> name) {
@@ -266,17 +177,10 @@ public class PgReplicationSlots extends TableImpl<PgReplicationSlotsRecord> {
         return (Row16) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function16<? super String, ? super String, ? super String, ? super Long, ? super String, ? super Boolean, ? super Boolean, ? super Integer, ? super Long, ? super Long, ? super Object, ? super Object, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function16<? super String, ? super String, ? super String, ? super Long, ? super String, ? super Boolean, ? super Boolean, ? super Integer, ? super Long, ? super Long, ? super Object, ? super Object, ? super String, ? super Long, ? super Boolean, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

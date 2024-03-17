@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.routine_sequence_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -74,155 +71,83 @@ public class RoutineSequenceUsage implements Serializable {
         this.sequenceName = sequenceName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return this.specificCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String specificCatalog) {
         this.specificCatalog = specificCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return this.specificSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String specificSchema) {
         this.specificSchema = specificSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return this.specificName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String specificName) {
         this.specificName = specificName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.routine_catalog</code>.
-     */
     @Nullable
     public String getRoutineCatalog() {
         return this.routineCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.routine_catalog</code>.
-     */
     public void setRoutineCatalog(@Nullable String routineCatalog) {
         this.routineCatalog = routineCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.routine_schema</code>.
-     */
     @Nullable
     public String getRoutineSchema() {
         return this.routineSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.routine_schema</code>.
-     */
     public void setRoutineSchema(@Nullable String routineSchema) {
         this.routineSchema = routineSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.routine_name</code>.
-     */
     @Nullable
     public String getRoutineName() {
         return this.routineName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.routine_name</code>.
-     */
     public void setRoutineName(@Nullable String routineName) {
         this.routineName = routineName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.sequence_catalog</code>.
-     */
     @Nullable
     public String getSequenceCatalog() {
         return this.sequenceCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.sequence_catalog</code>.
-     */
     public void setSequenceCatalog(@Nullable String sequenceCatalog) {
         this.sequenceCatalog = sequenceCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.sequence_schema</code>.
-     */
     @Nullable
     public String getSequenceSchema() {
         return this.sequenceSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.sequence_schema</code>.
-     */
     public void setSequenceSchema(@Nullable String sequenceSchema) {
         this.sequenceSchema = sequenceSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.sequence_name</code>.
-     */
     @Nullable
     public String getSequenceName() {
         return this.sequenceName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.sequence_name</code>.
-     */
     public void setSequenceName(@Nullable String sequenceName) {
         this.sequenceName = sequenceName;
     }

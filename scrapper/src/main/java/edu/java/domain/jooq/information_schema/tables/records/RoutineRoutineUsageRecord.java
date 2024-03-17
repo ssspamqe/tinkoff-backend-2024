@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.routine_routine_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,103 +30,55 @@ public class RoutineRoutineUsageRecord extends TableRecordImpl<RoutineRoutineUsa
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_routine_usage.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_routine_usage.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_routine_usage.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_routine_usage.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_routine_usage.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_routine_usage.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_routine_usage.routine_catalog</code>.
-     */
     public void setRoutineCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_routine_usage.routine_catalog</code>.
-     */
     @Nullable
     public String getRoutineCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_routine_usage.routine_schema</code>.
-     */
     public void setRoutineSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_routine_usage.routine_schema</code>.
-     */
     @Nullable
     public String getRoutineSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_routine_usage.routine_name</code>.
-     */
     public void setRoutineName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_routine_usage.routine_name</code>.
-     */
     @Nullable
     public String getRoutineName() {
         return (String) get(5);
@@ -317,16 +266,10 @@ public class RoutineRoutineUsageRecord extends TableRecordImpl<RoutineRoutineUsa
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached RoutineRoutineUsageRecord
-     */
     public RoutineRoutineUsageRecord() {
         super(RoutineRoutineUsage.ROUTINE_ROUTINE_USAGE);
     }
 
-    /**
-     * Create a detached, initialised RoutineRoutineUsageRecord
-     */
     @ConstructorProperties({ "specificCatalog", "specificSchema", "specificName", "routineCatalog", "routineSchema", "routineName" })
     public RoutineRoutineUsageRecord(@Nullable String specificCatalog, @Nullable String specificSchema, @Nullable String specificName, @Nullable String routineCatalog, @Nullable String routineSchema, @Nullable String routineName) {
         super(RoutineRoutineUsage.ROUTINE_ROUTINE_USAGE);
@@ -340,9 +283,6 @@ public class RoutineRoutineUsageRecord extends TableRecordImpl<RoutineRoutineUsa
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised RoutineRoutineUsageRecord
-     */
     public RoutineRoutineUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.RoutineRoutineUsage value) {
         super(RoutineRoutineUsage.ROUTINE_ROUTINE_USAGE);
 

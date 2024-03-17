@@ -19,9 +19,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_subscription</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,166 +31,86 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_subscription.subid</code>.
-     */
     public void setSubid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_subscription.subid</code>.
-     */
     @Nullable
     public Long getSubid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_subscription.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_subscription.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_subscription.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_subscription.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_subscription.leader_pid</code>.
-     */
     public void setLeaderPid(@Nullable Integer value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_subscription.leader_pid</code>.
-     */
     @Nullable
     public Integer getLeaderPid() {
         return (Integer) get(3);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setReceivedLsn(@Nullable Object value) {
         set(4, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getReceivedLsn() {
         return get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_get_subscription.last_msg_send_time</code>.
-     */
     public void setLastMsgSendTime(@Nullable OffsetDateTime value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_get_subscription.last_msg_send_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastMsgSendTime() {
         return (OffsetDateTime) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_get_subscription.last_msg_receipt_time</code>.
-     */
     public void setLastMsgReceiptTime(@Nullable OffsetDateTime value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_get_subscription.last_msg_receipt_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastMsgReceiptTime() {
         return (OffsetDateTime) get(6);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setLatestEndLsn(@Nullable Object value) {
         set(7, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getLatestEndLsn() {
         return get(7);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_get_subscription.latest_end_time</code>.
-     */
     public void setLatestEndTime(@Nullable OffsetDateTime value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_get_subscription.latest_end_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLatestEndTime() {
         return (OffsetDateTime) get(8);
@@ -239,14 +156,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         return PgStatGetSubscription.PG_STAT_GET_SUBSCRIPTION.LEADER_PID;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -266,14 +175,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         return PgStatGetSubscription.PG_STAT_GET_SUBSCRIPTION.LAST_MSG_RECEIPT_TIME;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -311,14 +212,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         return getLeaderPid();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -338,14 +231,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         return getLastMsgReceiptTime();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -383,14 +268,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         return getLeaderPid();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -410,14 +287,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         return getLastMsgReceiptTime();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -459,14 +328,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -489,14 +350,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -531,16 +384,10 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatGetSubscriptionRecord
-     */
     public PgStatGetSubscriptionRecord() {
         super(PgStatGetSubscription.PG_STAT_GET_SUBSCRIPTION);
     }
 
-    /**
-     * Create a detached, initialised PgStatGetSubscriptionRecord
-     */
     @ConstructorProperties({ "subid", "relid", "pid", "leaderPid", "receivedLsn", "lastMsgSendTime", "lastMsgReceiptTime", "latestEndLsn", "latestEndTime" })
     public PgStatGetSubscriptionRecord(@Nullable Long subid, @Nullable Long relid, @Nullable Integer pid, @Nullable Integer leaderPid, @Nullable Object receivedLsn, @Nullable OffsetDateTime lastMsgSendTime, @Nullable OffsetDateTime lastMsgReceiptTime, @Nullable Object latestEndLsn, @Nullable OffsetDateTime latestEndTime) {
         super(PgStatGetSubscription.PG_STAT_GET_SUBSCRIPTION);
@@ -557,9 +404,6 @@ public class PgStatGetSubscriptionRecord extends TableRecordImpl<PgStatGetSubscr
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatGetSubscriptionRecord
-     */
     public PgStatGetSubscriptionRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatGetSubscription value) {
         super(PgStatGetSubscription.PG_STAT_GET_SUBSCRIPTION);
 

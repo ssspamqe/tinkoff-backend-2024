@@ -19,9 +19,6 @@ import org.jooq.impl.TableRecordImpl;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The table <code>pg_catalog.pg_timezone_abbrevs</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,46 +31,28 @@ public class PgTimezoneAbbrevsRecord extends TableRecordImpl<PgTimezoneAbbrevsRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_abbrevs.abbrev</code>.
-     */
     public void setAbbrev(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_abbrevs.abbrev</code>.
-     */
     @Nullable
     public String getAbbrev() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_abbrevs.utc_offset</code>.
-     */
     public void setUtcOffset(@Nullable YearToSecond value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_abbrevs.utc_offset</code>.
-     */
     @Nullable
     public YearToSecond getUtcOffset() {
         return (YearToSecond) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_abbrevs.is_dst</code>.
-     */
     public void setIsDst(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_abbrevs.is_dst</code>.
-     */
     @Nullable
     public Boolean getIsDst() {
         return (Boolean) get(2);
@@ -183,16 +162,10 @@ public class PgTimezoneAbbrevsRecord extends TableRecordImpl<PgTimezoneAbbrevsRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTimezoneAbbrevsRecord
-     */
     public PgTimezoneAbbrevsRecord() {
         super(PgTimezoneAbbrevs.PG_TIMEZONE_ABBREVS);
     }
 
-    /**
-     * Create a detached, initialised PgTimezoneAbbrevsRecord
-     */
     @ConstructorProperties({ "abbrev", "utcOffset", "isDst" })
     public PgTimezoneAbbrevsRecord(@Nullable String abbrev, @Nullable YearToSecond utcOffset, @Nullable Boolean isDst) {
         super(PgTimezoneAbbrevs.PG_TIMEZONE_ABBREVS);
@@ -203,9 +176,6 @@ public class PgTimezoneAbbrevsRecord extends TableRecordImpl<PgTimezoneAbbrevsRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTimezoneAbbrevsRecord
-     */
     public PgTimezoneAbbrevsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTimezoneAbbrevs value) {
         super(PgTimezoneAbbrevs.PG_TIMEZONE_ABBREVS);
 

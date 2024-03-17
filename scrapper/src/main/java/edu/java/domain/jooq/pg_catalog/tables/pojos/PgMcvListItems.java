@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_mcv_list_items</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -59,77 +56,47 @@ public class PgMcvListItems implements Serializable {
         this.baseFrequency = baseFrequency;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.index</code>.
-     */
     @Nullable
     public Integer getIndex() {
         return this.index;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.index</code>.
-     */
     public void setIndex(@Nullable Integer index) {
         this.index = index;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.values</code>.
-     */
     @Nullable
     public String[] getValues() {
         return this.values;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.values</code>.
-     */
     public void setValues(@Nullable String[] values) {
         this.values = values;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.nulls</code>.
-     */
     @Nullable
     public Boolean[] getNulls() {
         return this.nulls;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.nulls</code>.
-     */
     public void setNulls(@Nullable Boolean[] nulls) {
         this.nulls = nulls;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.frequency</code>.
-     */
     @Nullable
     public Double getFrequency() {
         return this.frequency;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.frequency</code>.
-     */
     public void setFrequency(@Nullable Double frequency) {
         this.frequency = frequency;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_mcv_list_items.base_frequency</code>.
-     */
     @Nullable
     public Double getBaseFrequency() {
         return this.baseFrequency;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_mcv_list_items.base_frequency</code>.
-     */
     public void setBaseFrequency(@Nullable Double baseFrequency) {
         this.baseFrequency = baseFrequency;
     }

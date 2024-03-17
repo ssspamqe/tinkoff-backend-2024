@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_user_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,106 +30,64 @@ public class PgStatioUserIndexesRecord extends TableRecordImpl<PgStatioUserIndex
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.indexrelid</code>.
-     */
     public void setIndexrelid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.indexrelid</code>.
-     */
     @Nullable
     public Long getIndexrelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.relname</code>.
-     */
     public void setRelname(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.indexrelname</code>.
-     */
     public void setIndexrelname(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.indexrelname</code>.
-     */
     @Nullable
     public String getIndexrelname() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.idx_blks_read</code>.
-     */
     public void setIdxBlksRead(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.idx_blks_read</code>.
-     */
     @Nullable
     public Long getIdxBlksRead() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.idx_blks_hit</code>.
-     */
     public void setIdxBlksHit(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.idx_blks_hit</code>.
-     */
     @Nullable
     public Long getIdxBlksHit() {
         return (Long) get(6);
@@ -346,16 +301,10 @@ public class PgStatioUserIndexesRecord extends TableRecordImpl<PgStatioUserIndex
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatioUserIndexesRecord
-     */
     public PgStatioUserIndexesRecord() {
         super(PgStatioUserIndexes.PG_STATIO_USER_INDEXES);
     }
 
-    /**
-     * Create a detached, initialised PgStatioUserIndexesRecord
-     */
     @ConstructorProperties({ "relid", "indexrelid", "schemaname", "relname", "indexrelname", "idxBlksRead", "idxBlksHit" })
     public PgStatioUserIndexesRecord(@Nullable Long relid, @Nullable Long indexrelid, @Nullable String schemaname, @Nullable String relname, @Nullable String indexrelname, @Nullable Long idxBlksRead, @Nullable Long idxBlksHit) {
         super(PgStatioUserIndexes.PG_STATIO_USER_INDEXES);
@@ -370,9 +319,6 @@ public class PgStatioUserIndexesRecord extends TableRecordImpl<PgStatioUserIndex
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatioUserIndexesRecord
-     */
     public PgStatioUserIndexesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatioUserIndexes value) {
         super(PgStatioUserIndexes.PG_STATIO_USER_INDEXES);
 

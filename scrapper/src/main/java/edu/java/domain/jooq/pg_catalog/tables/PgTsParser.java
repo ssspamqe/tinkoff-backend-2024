@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgTsParserRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_parser</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,58 +45,28 @@ public class PgTsParser extends TableImpl<PgTsParserRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ts_parser</code>
-     */
     public static final PgTsParser PG_TS_PARSER = new PgTsParser();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTsParserRecord> getRecordType() {
         return PgTsParserRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ts_parser.oid</code>.
-     */
     public final TableField<PgTsParserRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_parser.prsname</code>.
-     */
     public final TableField<PgTsParserRecord, String> PRSNAME = createField(DSL.name("prsname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_parser.prsnamespace</code>.
-     */
     public final TableField<PgTsParserRecord, Long> PRSNAMESPACE = createField(DSL.name("prsnamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_parser.prsstart</code>.
-     */
     public final TableField<PgTsParserRecord, String> PRSSTART = createField(DSL.name("prsstart"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_parser.prstoken</code>.
-     */
     public final TableField<PgTsParserRecord, String> PRSTOKEN = createField(DSL.name("prstoken"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_parser.prsend</code>.
-     */
     public final TableField<PgTsParserRecord, String> PRSEND = createField(DSL.name("prsend"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_parser.prsheadline</code>.
-     */
     public final TableField<PgTsParserRecord, String> PRSHEADLINE = createField(DSL.name("prsheadline"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_parser.prslextype</code>.
-     */
     public final TableField<PgTsParserRecord, String> PRSLEXTYPE = createField(DSL.name("prslextype"), SQLDataType.VARCHAR.nullable(false), this, "");
 
     private PgTsParser(Name alias, Table<PgTsParserRecord> aliased) {
@@ -111,23 +77,14 @@ public class PgTsParser extends TableImpl<PgTsParserRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ts_parser</code> table reference
-     */
     public PgTsParser(String alias) {
         this(DSL.name(alias), PG_TS_PARSER);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ts_parser</code> table reference
-     */
     public PgTsParser(Name alias) {
         this(alias, PG_TS_PARSER);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ts_parser</code> table reference
-     */
     public PgTsParser() {
         this(DSL.name("pg_ts_parser"), null);
     }
@@ -172,27 +129,18 @@ public class PgTsParser extends TableImpl<PgTsParserRecord> {
         return new PgTsParser(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsParser rename(String name) {
         return new PgTsParser(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsParser rename(Name name) {
         return new PgTsParser(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsParser rename(Table<?> name) {
@@ -209,17 +157,10 @@ public class PgTsParser extends TableImpl<PgTsParserRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Long, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Long, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

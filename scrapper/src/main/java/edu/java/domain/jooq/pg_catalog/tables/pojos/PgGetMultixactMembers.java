@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_get_multixact_members</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,32 +43,20 @@ public class PgGetMultixactMembers implements Serializable {
         this.mode = mode;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_multixact_members.xid</code>.
-     */
     @Nullable
     public Long getXid() {
         return this.xid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_multixact_members.xid</code>.
-     */
     public void setXid(@Nullable Long xid) {
         this.xid = xid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_multixact_members.mode</code>.
-     */
     @Nullable
     public String getMode() {
         return this.mode;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_multixact_members.mode</code>.
-     */
     public void setMode(@Nullable String mode) {
         this.mode = mode;
     }

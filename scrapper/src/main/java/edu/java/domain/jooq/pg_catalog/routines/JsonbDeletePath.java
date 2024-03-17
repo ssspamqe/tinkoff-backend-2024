@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.jsonb_delete_path</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,24 +28,12 @@ public class JsonbDeletePath extends AbstractRoutine<JSONB> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.jsonb_delete_path.RETURN_VALUE</code>.
-     */
     public static final Parameter<JSONB> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.JSONB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.jsonb_delete_path._1</code>.
-     */
     public static final Parameter<JSONB> _1 = Internal.createParameter("_1", SQLDataType.JSONB, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.jsonb_delete_path._2</code>.
-     */
     public static final Parameter<String[]> _2 = Internal.createParameter("_2", SQLDataType.CLOB.array(), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public JsonbDeletePath() {
         super("jsonb_delete_path", PgCatalog.PG_CATALOG, SQLDataType.JSONB);
 
@@ -57,32 +42,18 @@ public class JsonbDeletePath extends AbstractRoutine<JSONB> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(JSONB value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<JSONB> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(String[] value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<String[]> field) {
         setField(_2, field);
     }

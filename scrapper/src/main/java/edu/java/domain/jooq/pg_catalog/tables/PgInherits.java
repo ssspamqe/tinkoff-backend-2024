@@ -11,7 +11,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgInheritsRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -36,9 +35,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_inherits</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -51,38 +47,20 @@ public class PgInherits extends TableImpl<PgInheritsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_inherits</code>
-     */
     public static final PgInherits PG_INHERITS = new PgInherits();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgInheritsRecord> getRecordType() {
         return PgInheritsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_inherits.inhrelid</code>.
-     */
     public final TableField<PgInheritsRecord, Long> INHRELID = createField(DSL.name("inhrelid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_inherits.inhparent</code>.
-     */
     public final TableField<PgInheritsRecord, Long> INHPARENT = createField(DSL.name("inhparent"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_inherits.inhseqno</code>.
-     */
     public final TableField<PgInheritsRecord, Integer> INHSEQNO = createField(DSL.name("inhseqno"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_inherits.inhdetachpending</code>.
-     */
     public final TableField<PgInheritsRecord, Boolean> INHDETACHPENDING = createField(DSL.name("inhdetachpending"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
     private PgInherits(Name alias, Table<PgInheritsRecord> aliased) {
@@ -93,23 +71,14 @@ public class PgInherits extends TableImpl<PgInheritsRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_inherits</code> table reference
-     */
     public PgInherits(String alias) {
         this(DSL.name(alias), PG_INHERITS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_inherits</code> table reference
-     */
     public PgInherits(Name alias) {
         this(alias, PG_INHERITS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_inherits</code> table reference
-     */
     public PgInherits() {
         this(DSL.name("pg_inherits"), null);
     }
@@ -154,27 +123,18 @@ public class PgInherits extends TableImpl<PgInheritsRecord> {
         return new PgInherits(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgInherits rename(String name) {
         return new PgInherits(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgInherits rename(Name name) {
         return new PgInherits(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgInherits rename(Table<?> name) {
@@ -191,17 +151,10 @@ public class PgInherits extends TableImpl<PgInheritsRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super Integer, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super Integer, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

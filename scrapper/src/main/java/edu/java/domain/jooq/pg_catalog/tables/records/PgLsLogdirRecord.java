@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_logdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,46 +31,28 @@ public class PgLsLogdirRecord extends TableRecordImpl<PgLsLogdirRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logdir.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logdir.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logdir.size</code>.
-     */
     public void setSize(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logdir.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logdir.modification</code>.
-     */
     public void setModification(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logdir.modification</code>.
-     */
     @Nullable
     public OffsetDateTime getModification() {
         return (OffsetDateTime) get(2);
@@ -183,16 +162,10 @@ public class PgLsLogdirRecord extends TableRecordImpl<PgLsLogdirRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLsLogdirRecord
-     */
     public PgLsLogdirRecord() {
         super(PgLsLogdir.PG_LS_LOGDIR);
     }
 
-    /**
-     * Create a detached, initialised PgLsLogdirRecord
-     */
     @ConstructorProperties({ "name", "size", "modification" })
     public PgLsLogdirRecord(@Nullable String name, @Nullable Long size, @Nullable OffsetDateTime modification) {
         super(PgLsLogdir.PG_LS_LOGDIR);
@@ -203,9 +176,6 @@ public class PgLsLogdirRecord extends TableRecordImpl<PgLsLogdirRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLsLogdirRecord
-     */
     public PgLsLogdirRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLsLogdir value) {
         super(PgLsLogdir.PG_LS_LOGDIR);
 

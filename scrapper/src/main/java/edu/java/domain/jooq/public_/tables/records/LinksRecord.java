@@ -20,9 +20,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>public.links</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,63 +32,39 @@ public class LinksRecord extends UpdatableRecordImpl<LinksRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>public.links.id</code>.
-     */
     public void setId(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>public.links.id</code>.
-     */
     @Nullable
     public Long getId() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>public.links.url</code>.
-     */
     public void setUrl(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>public.links.url</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getUrl() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>public.links.created_at</code>.
-     */
     public void setCreatedAt(@NotNull LocalDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>public.links.created_at</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public LocalDateTime getCreatedAt() {
         return (LocalDateTime) get(2);
     }
 
-    /**
-     * Setter for <code>public.links.last_checked_at</code>.
-     */
     public void setLastCheckedAt(@Nullable LocalDateTime value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>public.links.last_checked_at</code>.
-     */
     @Nullable
     public LocalDateTime getLastCheckedAt() {
         return (LocalDateTime) get(3);
@@ -237,16 +210,10 @@ public class LinksRecord extends UpdatableRecordImpl<LinksRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached LinksRecord
-     */
     public LinksRecord() {
         super(Links.LINKS);
     }
 
-    /**
-     * Create a detached, initialised LinksRecord
-     */
     @ConstructorProperties({ "id", "url", "createdAt", "lastCheckedAt" })
     public LinksRecord(@Nullable Long id, @NotNull String url, @NotNull LocalDateTime createdAt, @Nullable LocalDateTime lastCheckedAt) {
         super(Links.LINKS);
@@ -258,9 +225,6 @@ public class LinksRecord extends UpdatableRecordImpl<LinksRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised LinksRecord
-     */
     public LinksRecord(edu.java.domain.jooq.public_.tables.pojos.Links value) {
         super(Links.LINKS);
 

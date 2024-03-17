@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_user_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,107 +63,65 @@ public class PgStatioUserIndexes implements Serializable {
         this.idxBlksHit = idxBlksHit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.indexrelid</code>.
-     */
     @Nullable
     public Long getIndexrelid() {
         return this.indexrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.indexrelid</code>.
-     */
     public void setIndexrelid(@Nullable Long indexrelid) {
         this.indexrelid = indexrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return this.relname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.relname</code>.
-     */
     public void setRelname(@Nullable String relname) {
         this.relname = relname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.indexrelname</code>.
-     */
     @Nullable
     public String getIndexrelname() {
         return this.indexrelname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.indexrelname</code>.
-     */
     public void setIndexrelname(@Nullable String indexrelname) {
         this.indexrelname = indexrelname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.idx_blks_read</code>.
-     */
     @Nullable
     public Long getIdxBlksRead() {
         return this.idxBlksRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.idx_blks_read</code>.
-     */
     public void setIdxBlksRead(@Nullable Long idxBlksRead) {
         this.idxBlksRead = idxBlksRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_indexes.idx_blks_hit</code>.
-     */
     @Nullable
     public Long getIdxBlksHit() {
         return this.idxBlksHit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_indexes.idx_blks_hit</code>.
-     */
     public void setIdxBlksHit(@Nullable Long idxBlksHit) {
         this.idxBlksHit = idxBlksHit;
     }

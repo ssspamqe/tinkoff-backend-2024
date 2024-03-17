@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.GenerateSubscriptsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.generate_subscripts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,24 +38,14 @@ public class GenerateSubscripts extends TableImpl<GenerateSubscriptsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.generate_subscripts</code>
-     */
     public static final GenerateSubscripts GENERATE_SUBSCRIPTS = new GenerateSubscripts();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<GenerateSubscriptsRecord> getRecordType() {
         return GenerateSubscriptsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>pg_catalog.generate_subscripts.generate_subscripts</code>.
-     */
     public final TableField<GenerateSubscriptsRecord, Integer> GENERATE_SUBSCRIPTS_ = createField(DSL.name("generate_subscripts"), SQLDataType.INTEGER, this, "");
 
     private GenerateSubscripts(Name alias, Table<GenerateSubscriptsRecord> aliased) {
@@ -75,25 +60,14 @@ public class GenerateSubscripts extends TableImpl<GenerateSubscriptsRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.generate_subscripts</code> table
-     * reference
-     */
     public GenerateSubscripts(String alias) {
         this(DSL.name(alias), GENERATE_SUBSCRIPTS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.generate_subscripts</code> table
-     * reference
-     */
     public GenerateSubscripts(Name alias) {
         this(alias, GENERATE_SUBSCRIPTS);
     }
 
-    /**
-     * Create a <code>pg_catalog.generate_subscripts</code> table reference
-     */
     public GenerateSubscripts() {
         this(DSL.name("generate_subscripts"), null);
     }
@@ -122,27 +96,18 @@ public class GenerateSubscripts extends TableImpl<GenerateSubscriptsRecord> {
         return new GenerateSubscripts(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GenerateSubscripts rename(String name) {
         return new GenerateSubscripts(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GenerateSubscripts rename(Name name) {
         return new GenerateSubscripts(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GenerateSubscripts rename(Table<?> name) {
@@ -159,9 +124,6 @@ public class GenerateSubscripts extends TableImpl<GenerateSubscriptsRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public GenerateSubscripts call(
           Object[] __1
         , Integer __2
@@ -176,9 +138,6 @@ public class GenerateSubscripts extends TableImpl<GenerateSubscriptsRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public GenerateSubscripts call(
           Field<Object[]> __1
         , Field<Integer> __2
@@ -193,17 +152,10 @@ public class GenerateSubscripts extends TableImpl<GenerateSubscriptsRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super Integer, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Integer, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

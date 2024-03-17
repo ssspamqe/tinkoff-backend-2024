@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatBgwriterRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_bgwriter</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,75 +42,34 @@ public class PgStatBgwriter extends TableImpl<PgStatBgwriterRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_bgwriter</code>
-     */
     public static final PgStatBgwriter PG_STAT_BGWRITER = new PgStatBgwriter();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatBgwriterRecord> getRecordType() {
         return PgStatBgwriterRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.checkpoints_timed</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Long> CHECKPOINTS_TIMED = createField(DSL.name("checkpoints_timed"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.checkpoints_req</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Long> CHECKPOINTS_REQ = createField(DSL.name("checkpoints_req"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_bgwriter.checkpoint_write_time</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Double> CHECKPOINT_WRITE_TIME = createField(DSL.name("checkpoint_write_time"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.checkpoint_sync_time</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Double> CHECKPOINT_SYNC_TIME = createField(DSL.name("checkpoint_sync_time"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.buffers_checkpoint</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Long> BUFFERS_CHECKPOINT = createField(DSL.name("buffers_checkpoint"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.buffers_clean</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Long> BUFFERS_CLEAN = createField(DSL.name("buffers_clean"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.maxwritten_clean</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Long> MAXWRITTEN_CLEAN = createField(DSL.name("maxwritten_clean"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.buffers_backend</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Long> BUFFERS_BACKEND = createField(DSL.name("buffers_backend"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_bgwriter.buffers_backend_fsync</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Long> BUFFERS_BACKEND_FSYNC = createField(DSL.name("buffers_backend_fsync"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.buffers_alloc</code>.
-     */
     public final TableField<PgStatBgwriterRecord, Long> BUFFERS_ALLOC = createField(DSL.name("buffers_alloc"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_bgwriter.stats_reset</code>.
-     */
     public final TableField<PgStatBgwriterRecord, OffsetDateTime> STATS_RESET = createField(DSL.name("stats_reset"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgStatBgwriter(Name alias, Table<PgStatBgwriterRecord> aliased) {
@@ -137,25 +92,14 @@ public class PgStatBgwriter extends TableImpl<PgStatBgwriterRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_bgwriter</code> table
-     * reference
-     */
     public PgStatBgwriter(String alias) {
         this(DSL.name(alias), PG_STAT_BGWRITER);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_bgwriter</code> table
-     * reference
-     */
     public PgStatBgwriter(Name alias) {
         this(alias, PG_STAT_BGWRITER);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_bgwriter</code> table reference
-     */
     public PgStatBgwriter() {
         this(DSL.name("pg_stat_bgwriter"), null);
     }
@@ -188,27 +132,18 @@ public class PgStatBgwriter extends TableImpl<PgStatBgwriterRecord> {
         return new PgStatBgwriter(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatBgwriter rename(String name) {
         return new PgStatBgwriter(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatBgwriter rename(Name name) {
         return new PgStatBgwriter(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatBgwriter rename(Table<?> name) {
@@ -225,17 +160,10 @@ public class PgStatBgwriter extends TableImpl<PgStatBgwriterRecord> {
         return (Row11) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function11<? super Long, ? super Long, ? super Double, ? super Double, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function11<? super Long, ? super Long, ? super Double, ? super Double, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

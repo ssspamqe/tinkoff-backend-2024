@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.foreign_data_wrapper_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,69 +30,37 @@ public class ForeignDataWrapperOptionsRecord extends TableRecordImpl<ForeignData
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrapper_options.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrapper_options.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrapper_options.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrapper_options.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrapper_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrapper_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrapper_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrapper_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return (String) get(3);
@@ -231,16 +196,10 @@ public class ForeignDataWrapperOptionsRecord extends TableRecordImpl<ForeignData
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ForeignDataWrapperOptionsRecord
-     */
     public ForeignDataWrapperOptionsRecord() {
         super(ForeignDataWrapperOptions.FOREIGN_DATA_WRAPPER_OPTIONS);
     }
 
-    /**
-     * Create a detached, initialised ForeignDataWrapperOptionsRecord
-     */
     @ConstructorProperties({ "foreignDataWrapperCatalog", "foreignDataWrapperName", "optionName", "optionValue" })
     public ForeignDataWrapperOptionsRecord(@Nullable String foreignDataWrapperCatalog, @Nullable String foreignDataWrapperName, @Nullable String optionName, @Nullable String optionValue) {
         super(ForeignDataWrapperOptions.FOREIGN_DATA_WRAPPER_OPTIONS);
@@ -252,9 +211,6 @@ public class ForeignDataWrapperOptionsRecord extends TableRecordImpl<ForeignData
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ForeignDataWrapperOptionsRecord
-     */
     public ForeignDataWrapperOptionsRecord(edu.java.domain.jooq.information_schema.tables.pojos.ForeignDataWrapperOptions value) {
         super(ForeignDataWrapperOptions.FOREIGN_DATA_WRAPPER_OPTIONS);
 

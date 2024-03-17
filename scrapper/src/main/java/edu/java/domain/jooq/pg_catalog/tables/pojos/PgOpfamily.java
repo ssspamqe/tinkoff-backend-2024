@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_opfamily</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,82 +55,52 @@ public class PgOpfamily implements Serializable {
         this.opfowner = opfowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.opfmethod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpfmethod() {
         return this.opfmethod;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.opfmethod</code>.
-     */
     public void setOpfmethod(@NotNull Long opfmethod) {
         this.opfmethod = opfmethod;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.opfname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOpfname() {
         return this.opfname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.opfname</code>.
-     */
     public void setOpfname(@NotNull String opfname) {
         this.opfname = opfname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.opfnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpfnamespace() {
         return this.opfnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.opfnamespace</code>.
-     */
     public void setOpfnamespace(@NotNull Long opfnamespace) {
         this.opfnamespace = opfnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opfamily.opfowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpfowner() {
         return this.opfowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opfamily.opfowner</code>.
-     */
     public void setOpfowner(@NotNull Long opfowner) {
         this.opfowner = opfowner;
     }

@@ -24,9 +24,6 @@ import org.jooq.Table;
 import org.jooq.impl.SchemaImpl;
 
 
-/**
- * The schema <code>public</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -39,49 +36,22 @@ public class Public extends SchemaImpl {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>public</code>
-     */
     public static final Public PUBLIC = new Public();
 
-    /**
-     * The table <code>public.chat_links</code>.
-     */
     public final ChatLinks CHAT_LINKS = ChatLinks.CHAT_LINKS;
 
-    /**
-     * The table <code>public.chats</code>.
-     */
     public final Chats CHATS = Chats.CHATS;
 
-    /**
-     * The table <code>public.databasechangelog</code>.
-     */
     public final Databasechangelog DATABASECHANGELOG = Databasechangelog.DATABASECHANGELOG;
 
-    /**
-     * The table <code>public.databasechangeloglock</code>.
-     */
     public final Databasechangeloglock DATABASECHANGELOGLOCK = Databasechangeloglock.DATABASECHANGELOGLOCK;
 
-    /**
-     * The table <code>public.git_hub_repositories</code>.
-     */
     public final GitHubRepositories GIT_HUB_REPOSITORIES = GitHubRepositories.GIT_HUB_REPOSITORIES;
 
-    /**
-     * The table <code>public.links</code>.
-     */
     public final Links LINKS = Links.LINKS;
 
-    /**
-     * The table <code>public.stack_overflow_questions</code>.
-     */
     public final StackOverflowQuestions STACK_OVERFLOW_QUESTIONS = StackOverflowQuestions.STACK_OVERFLOW_QUESTIONS;
 
-    /**
-     * No further instances allowed
-     */
     private Public() {
         super("public", null);
     }

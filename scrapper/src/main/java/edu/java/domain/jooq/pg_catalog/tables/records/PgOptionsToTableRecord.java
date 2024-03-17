@@ -18,9 +18,6 @@ import org.jooq.Row2;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_options_to_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,31 +30,19 @@ public class PgOptionsToTableRecord extends TableRecordImpl<PgOptionsToTableReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_options_to_table.option_name</code>.
-     */
     public void setOptionName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_options_to_table.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_options_to_table.option_value</code>.
-     */
     public void setOptionValue(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_options_to_table.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return (String) get(1);
@@ -141,16 +126,10 @@ public class PgOptionsToTableRecord extends TableRecordImpl<PgOptionsToTableReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgOptionsToTableRecord
-     */
     public PgOptionsToTableRecord() {
         super(PgOptionsToTable.PG_OPTIONS_TO_TABLE);
     }
 
-    /**
-     * Create a detached, initialised PgOptionsToTableRecord
-     */
     @ConstructorProperties({ "optionName", "optionValue" })
     public PgOptionsToTableRecord(@Nullable String optionName, @Nullable String optionValue) {
         super(PgOptionsToTable.PG_OPTIONS_TO_TABLE);
@@ -160,9 +139,6 @@ public class PgOptionsToTableRecord extends TableRecordImpl<PgOptionsToTableReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgOptionsToTableRecord
-     */
     public PgOptionsToTableRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgOptionsToTable value) {
         super(PgOptionsToTable.PG_OPTIONS_TO_TABLE);
 

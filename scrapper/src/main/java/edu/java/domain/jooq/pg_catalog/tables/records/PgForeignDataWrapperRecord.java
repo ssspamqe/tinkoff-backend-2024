@@ -19,9 +19,6 @@ import org.jooq.Row7;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_foreign_data_wrapper</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,111 +31,69 @@ public class PgForeignDataWrapperRecord extends UpdatableRecordImpl<PgForeignDat
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwname</code>.
-     */
     public void setFdwname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getFdwname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwowner</code>.
-     */
     public void setFdwowner(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getFdwowner() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwhandler</code>.
-     */
     public void setFdwhandler(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwhandler</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getFdwhandler() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwvalidator</code>.
-     */
     public void setFdwvalidator(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwvalidator</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getFdwvalidator() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwacl</code>.
-     */
     public void setFdwacl(@Nullable String[] value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwacl</code>.
-     */
     @Nullable
     public String[] getFdwacl() {
         return (String[]) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwoptions</code>.
-     */
     public void setFdwoptions(@Nullable String[] value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwoptions</code>.
-     */
     @Nullable
     public String[] getFdwoptions() {
         return (String[]) get(6);
@@ -362,16 +317,10 @@ public class PgForeignDataWrapperRecord extends UpdatableRecordImpl<PgForeignDat
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgForeignDataWrapperRecord
-     */
     public PgForeignDataWrapperRecord() {
         super(PgForeignDataWrapper.PG_FOREIGN_DATA_WRAPPER);
     }
 
-    /**
-     * Create a detached, initialised PgForeignDataWrapperRecord
-     */
     @ConstructorProperties({ "oid", "fdwname", "fdwowner", "fdwhandler", "fdwvalidator", "fdwacl", "fdwoptions" })
     public PgForeignDataWrapperRecord(@NotNull Long oid, @NotNull String fdwname, @NotNull Long fdwowner, @NotNull Long fdwhandler, @NotNull Long fdwvalidator, @Nullable String[] fdwacl, @Nullable String[] fdwoptions) {
         super(PgForeignDataWrapper.PG_FOREIGN_DATA_WRAPPER);
@@ -386,9 +335,6 @@ public class PgForeignDataWrapperRecord extends UpdatableRecordImpl<PgForeignDat
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgForeignDataWrapperRecord
-     */
     public PgForeignDataWrapperRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgForeignDataWrapper value) {
         super(PgForeignDataWrapper.PG_FOREIGN_DATA_WRAPPER);
 

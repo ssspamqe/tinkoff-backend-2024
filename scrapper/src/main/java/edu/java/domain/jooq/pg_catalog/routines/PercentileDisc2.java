@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.percentile_disc</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,30 +27,13 @@ public class PercentileDisc2 extends AbstractRoutine<Object[]> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.percentile_disc.RETURN_VALUE</code>.
-     */
     public static final Parameter<Object[]> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.OTHER.array(), false, false);
 
-    /**
-     * The parameter <code>pg_catalog.percentile_disc._1</code>.
-     */
     public static final Parameter<Double[]> _1 = Internal.createParameter("_1", SQLDataType.FLOAT.array(), false, true);
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public static final Parameter<Object> _2 = Internal.createParameter("_2", org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"anyelement\""), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PercentileDisc2() {
         super("percentile_disc", PgCatalog.PG_CATALOG, SQLDataType.OTHER.array());
 
@@ -63,32 +43,18 @@ public class PercentileDisc2 extends AbstractRoutine<Object[]> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Double[] value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Double[]> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(Object value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<Object> field) {
         setField(_2, field);
     }

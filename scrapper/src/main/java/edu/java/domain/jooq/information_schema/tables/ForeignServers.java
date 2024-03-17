@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ForeignServersRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.foreign_servers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,60 +39,26 @@ public class ForeignServers extends TableImpl<ForeignServersRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.foreign_servers</code>
-     */
     public static final ForeignServers FOREIGN_SERVERS = new ForeignServers();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ForeignServersRecord> getRecordType() {
         return ForeignServersRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.foreign_servers.foreign_server_catalog</code>.
-     */
     public final TableField<ForeignServersRecord, String> FOREIGN_SERVER_CATALOG = createField(DSL.name("foreign_server_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_servers.foreign_server_name</code>.
-     */
     public final TableField<ForeignServersRecord, String> FOREIGN_SERVER_NAME = createField(DSL.name("foreign_server_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_catalog</code>.
-     */
     public final TableField<ForeignServersRecord, String> FOREIGN_DATA_WRAPPER_CATALOG = createField(DSL.name("foreign_data_wrapper_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_name</code>.
-     */
     public final TableField<ForeignServersRecord, String> FOREIGN_DATA_WRAPPER_NAME = createField(DSL.name("foreign_data_wrapper_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_servers.foreign_server_type</code>.
-     */
     public final TableField<ForeignServersRecord, String> FOREIGN_SERVER_TYPE = createField(DSL.name("foreign_server_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_servers.foreign_server_version</code>.
-     */
     public final TableField<ForeignServersRecord, String> FOREIGN_SERVER_VERSION = createField(DSL.name("foreign_server_version"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_servers.authorization_identifier</code>.
-     */
     public final TableField<ForeignServersRecord, String> AUTHORIZATION_IDENTIFIER = createField(DSL.name("authorization_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private ForeignServers(Name alias, Table<ForeignServersRecord> aliased) {
@@ -117,25 +78,14 @@ public class ForeignServers extends TableImpl<ForeignServersRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.foreign_servers</code> table
-     * reference
-     */
     public ForeignServers(String alias) {
         this(DSL.name(alias), FOREIGN_SERVERS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.foreign_servers</code> table
-     * reference
-     */
     public ForeignServers(Name alias) {
         this(alias, FOREIGN_SERVERS);
     }
 
-    /**
-     * Create a <code>information_schema.foreign_servers</code> table reference
-     */
     public ForeignServers() {
         this(DSL.name("foreign_servers"), null);
     }
@@ -168,27 +118,18 @@ public class ForeignServers extends TableImpl<ForeignServersRecord> {
         return new ForeignServers(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignServers rename(String name) {
         return new ForeignServers(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignServers rename(Name name) {
         return new ForeignServers(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignServers rename(Table<?> name) {
@@ -205,17 +146,10 @@ public class ForeignServers extends TableImpl<ForeignServersRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

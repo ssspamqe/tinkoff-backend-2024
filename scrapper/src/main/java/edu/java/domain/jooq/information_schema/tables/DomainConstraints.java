@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.DomainConstraintsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.domain_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,67 +39,28 @@ public class DomainConstraints extends TableImpl<DomainConstraintsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.domain_constraints</code>
-     */
     public static final DomainConstraints DOMAIN_CONSTRAINTS = new DomainConstraints();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<DomainConstraintsRecord> getRecordType() {
         return DomainConstraintsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.domain_constraints.constraint_catalog</code>.
-     */
     public final TableField<DomainConstraintsRecord, String> CONSTRAINT_CATALOG = createField(DSL.name("constraint_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_constraints.constraint_schema</code>.
-     */
     public final TableField<DomainConstraintsRecord, String> CONSTRAINT_SCHEMA = createField(DSL.name("constraint_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_constraints.constraint_name</code>.
-     */
     public final TableField<DomainConstraintsRecord, String> CONSTRAINT_NAME = createField(DSL.name("constraint_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_constraints.domain_catalog</code>.
-     */
     public final TableField<DomainConstraintsRecord, String> DOMAIN_CATALOG = createField(DSL.name("domain_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_constraints.domain_schema</code>.
-     */
     public final TableField<DomainConstraintsRecord, String> DOMAIN_SCHEMA = createField(DSL.name("domain_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_constraints.domain_name</code>.
-     */
     public final TableField<DomainConstraintsRecord, String> DOMAIN_NAME = createField(DSL.name("domain_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_constraints.is_deferrable</code>.
-     */
     public final TableField<DomainConstraintsRecord, String> IS_DEFERRABLE = createField(DSL.name("is_deferrable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.domain_constraints.initially_deferred</code>.
-     */
     public final TableField<DomainConstraintsRecord, String> INITIALLY_DEFERRED = createField(DSL.name("initially_deferred"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
     private DomainConstraints(Name alias, Table<DomainConstraintsRecord> aliased) {
@@ -137,26 +93,14 @@ public class DomainConstraints extends TableImpl<DomainConstraintsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.domain_constraints</code>
-     * table reference
-     */
     public DomainConstraints(String alias) {
         this(DSL.name(alias), DOMAIN_CONSTRAINTS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.domain_constraints</code>
-     * table reference
-     */
     public DomainConstraints(Name alias) {
         this(alias, DOMAIN_CONSTRAINTS);
     }
 
-    /**
-     * Create a <code>information_schema.domain_constraints</code> table
-     * reference
-     */
     public DomainConstraints() {
         this(DSL.name("domain_constraints"), null);
     }
@@ -189,27 +133,18 @@ public class DomainConstraints extends TableImpl<DomainConstraintsRecord> {
         return new DomainConstraints(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DomainConstraints rename(String name) {
         return new DomainConstraints(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DomainConstraints rename(Name name) {
         return new DomainConstraints(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DomainConstraints rename(Table<?> name) {
@@ -226,17 +161,10 @@ public class DomainConstraints extends TableImpl<DomainConstraintsRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

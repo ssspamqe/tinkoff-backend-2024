@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgAmRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_am</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,38 +45,20 @@ public class PgAm extends TableImpl<PgAmRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_am</code>
-     */
     public static final PgAm PG_AM = new PgAm();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgAmRecord> getRecordType() {
         return PgAmRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_am.oid</code>.
-     */
     public final TableField<PgAmRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_am.amname</code>.
-     */
     public final TableField<PgAmRecord, String> AMNAME = createField(DSL.name("amname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_am.amhandler</code>.
-     */
     public final TableField<PgAmRecord, String> AMHANDLER = createField(DSL.name("amhandler"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_am.amtype</code>.
-     */
     public final TableField<PgAmRecord, String> AMTYPE = createField(DSL.name("amtype"), SQLDataType.CHAR.nullable(false), this, "");
 
     private PgAm(Name alias, Table<PgAmRecord> aliased) {
@@ -91,23 +69,14 @@ public class PgAm extends TableImpl<PgAmRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_am</code> table reference
-     */
     public PgAm(String alias) {
         this(DSL.name(alias), PG_AM);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_am</code> table reference
-     */
     public PgAm(Name alias) {
         this(alias, PG_AM);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_am</code> table reference
-     */
     public PgAm() {
         this(DSL.name("pg_am"), null);
     }
@@ -152,27 +121,18 @@ public class PgAm extends TableImpl<PgAmRecord> {
         return new PgAm(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAm rename(String name) {
         return new PgAm(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAm rename(Name name) {
         return new PgAm(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAm rename(Table<?> name) {
@@ -189,17 +149,10 @@ public class PgAm extends TableImpl<PgAmRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

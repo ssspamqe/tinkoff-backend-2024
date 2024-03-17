@@ -17,9 +17,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.timestamp_smaller</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -32,24 +29,12 @@ public class TimestampSmaller extends AbstractRoutine<LocalDateTime> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.timestamp_smaller.RETURN_VALUE</code>.
-     */
     public static final Parameter<LocalDateTime> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.LOCALDATETIME(6), false, false);
 
-    /**
-     * The parameter <code>pg_catalog.timestamp_smaller._1</code>.
-     */
     public static final Parameter<LocalDateTime> _1 = Internal.createParameter("_1", SQLDataType.LOCALDATETIME(6), false, true);
 
-    /**
-     * The parameter <code>pg_catalog.timestamp_smaller._2</code>.
-     */
     public static final Parameter<LocalDateTime> _2 = Internal.createParameter("_2", SQLDataType.LOCALDATETIME(6), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public TimestampSmaller() {
         super("timestamp_smaller", PgCatalog.PG_CATALOG, SQLDataType.LOCALDATETIME(6));
 
@@ -58,32 +43,18 @@ public class TimestampSmaller extends AbstractRoutine<LocalDateTime> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(LocalDateTime value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<LocalDateTime> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(LocalDateTime value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<LocalDateTime> field) {
         setField(_2, field);
     }

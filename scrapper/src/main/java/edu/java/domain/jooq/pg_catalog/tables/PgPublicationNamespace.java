@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgPublicationNamespaceReco
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_namespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,34 +45,18 @@ public class PgPublicationNamespace extends TableImpl<PgPublicationNamespaceReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_publication_namespace</code>
-     */
     public static final PgPublicationNamespace PG_PUBLICATION_NAMESPACE = new PgPublicationNamespace();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgPublicationNamespaceRecord> getRecordType() {
         return PgPublicationNamespaceRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_publication_namespace.oid</code>.
-     */
     public final TableField<PgPublicationNamespaceRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_namespace.pnpubid</code>.
-     */
     public final TableField<PgPublicationNamespaceRecord, Long> PNPUBID = createField(DSL.name("pnpubid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_publication_namespace.pnnspid</code>.
-     */
     public final TableField<PgPublicationNamespaceRecord, Long> PNNSPID = createField(DSL.name("pnnspid"), SQLDataType.BIGINT.nullable(false), this, "");
 
     private PgPublicationNamespace(Name alias, Table<PgPublicationNamespaceRecord> aliased) {
@@ -87,25 +67,14 @@ public class PgPublicationNamespace extends TableImpl<PgPublicationNamespaceReco
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_publication_namespace</code> table
-     * reference
-     */
     public PgPublicationNamespace(String alias) {
         this(DSL.name(alias), PG_PUBLICATION_NAMESPACE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_publication_namespace</code> table
-     * reference
-     */
     public PgPublicationNamespace(Name alias) {
         this(alias, PG_PUBLICATION_NAMESPACE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_publication_namespace</code> table reference
-     */
     public PgPublicationNamespace() {
         this(DSL.name("pg_publication_namespace"), null);
     }
@@ -150,27 +119,18 @@ public class PgPublicationNamespace extends TableImpl<PgPublicationNamespaceReco
         return new PgPublicationNamespace(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationNamespace rename(String name) {
         return new PgPublicationNamespace(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationNamespace rename(Name name) {
         return new PgPublicationNamespace(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPublicationNamespace rename(Table<?> name) {
@@ -187,17 +147,10 @@ public class PgPublicationNamespace extends TableImpl<PgPublicationNamespaceReco
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

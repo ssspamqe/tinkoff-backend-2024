@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_bgwriter</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -83,171 +80,101 @@ public class PgStatBgwriter implements Serializable {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.checkpoints_timed</code>.
-     */
     @Nullable
     public Long getCheckpointsTimed() {
         return this.checkpointsTimed;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.checkpoints_timed</code>.
-     */
     public void setCheckpointsTimed(@Nullable Long checkpointsTimed) {
         this.checkpointsTimed = checkpointsTimed;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.checkpoints_req</code>.
-     */
     @Nullable
     public Long getCheckpointsReq() {
         return this.checkpointsReq;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.checkpoints_req</code>.
-     */
     public void setCheckpointsReq(@Nullable Long checkpointsReq) {
         this.checkpointsReq = checkpointsReq;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_bgwriter.checkpoint_write_time</code>.
-     */
     @Nullable
     public Double getCheckpointWriteTime() {
         return this.checkpointWriteTime;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_bgwriter.checkpoint_write_time</code>.
-     */
     public void setCheckpointWriteTime(@Nullable Double checkpointWriteTime) {
         this.checkpointWriteTime = checkpointWriteTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.checkpoint_sync_time</code>.
-     */
     @Nullable
     public Double getCheckpointSyncTime() {
         return this.checkpointSyncTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.checkpoint_sync_time</code>.
-     */
     public void setCheckpointSyncTime(@Nullable Double checkpointSyncTime) {
         this.checkpointSyncTime = checkpointSyncTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.buffers_checkpoint</code>.
-     */
     @Nullable
     public Long getBuffersCheckpoint() {
         return this.buffersCheckpoint;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.buffers_checkpoint</code>.
-     */
     public void setBuffersCheckpoint(@Nullable Long buffersCheckpoint) {
         this.buffersCheckpoint = buffersCheckpoint;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.buffers_clean</code>.
-     */
     @Nullable
     public Long getBuffersClean() {
         return this.buffersClean;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.buffers_clean</code>.
-     */
     public void setBuffersClean(@Nullable Long buffersClean) {
         this.buffersClean = buffersClean;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.maxwritten_clean</code>.
-     */
     @Nullable
     public Long getMaxwrittenClean() {
         return this.maxwrittenClean;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.maxwritten_clean</code>.
-     */
     public void setMaxwrittenClean(@Nullable Long maxwrittenClean) {
         this.maxwrittenClean = maxwrittenClean;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.buffers_backend</code>.
-     */
     @Nullable
     public Long getBuffersBackend() {
         return this.buffersBackend;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.buffers_backend</code>.
-     */
     public void setBuffersBackend(@Nullable Long buffersBackend) {
         this.buffersBackend = buffersBackend;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_bgwriter.buffers_backend_fsync</code>.
-     */
     @Nullable
     public Long getBuffersBackendFsync() {
         return this.buffersBackendFsync;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_bgwriter.buffers_backend_fsync</code>.
-     */
     public void setBuffersBackendFsync(@Nullable Long buffersBackendFsync) {
         this.buffersBackendFsync = buffersBackendFsync;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.buffers_alloc</code>.
-     */
     @Nullable
     public Long getBuffersAlloc() {
         return this.buffersAlloc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.buffers_alloc</code>.
-     */
     public void setBuffersAlloc(@Nullable Long buffersAlloc) {
         this.buffersAlloc = buffersAlloc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_bgwriter.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_bgwriter.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }

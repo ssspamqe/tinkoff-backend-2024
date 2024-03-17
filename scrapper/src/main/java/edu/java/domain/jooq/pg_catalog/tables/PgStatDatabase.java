@@ -26,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_database</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -41,160 +38,68 @@ public class PgStatDatabase extends TableImpl<PgStatDatabaseRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_database</code>
-     */
     public static final PgStatDatabase PG_STAT_DATABASE = new PgStatDatabase();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatDatabaseRecord> getRecordType() {
         return PgStatDatabaseRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.datid</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.datname</code>.
-     */
     public final TableField<PgStatDatabaseRecord, String> DATNAME = createField(DSL.name("datname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.numbackends</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Integer> NUMBACKENDS = createField(DSL.name("numbackends"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.xact_commit</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> XACT_COMMIT = createField(DSL.name("xact_commit"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.xact_rollback</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> XACT_ROLLBACK = createField(DSL.name("xact_rollback"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.blks_read</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> BLKS_READ = createField(DSL.name("blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.blks_hit</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> BLKS_HIT = createField(DSL.name("blks_hit"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.tup_returned</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> TUP_RETURNED = createField(DSL.name("tup_returned"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.tup_fetched</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> TUP_FETCHED = createField(DSL.name("tup_fetched"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.tup_inserted</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> TUP_INSERTED = createField(DSL.name("tup_inserted"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.tup_updated</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> TUP_UPDATED = createField(DSL.name("tup_updated"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.tup_deleted</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> TUP_DELETED = createField(DSL.name("tup_deleted"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.conflicts</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> CONFLICTS = createField(DSL.name("conflicts"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.temp_files</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> TEMP_FILES = createField(DSL.name("temp_files"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.temp_bytes</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> TEMP_BYTES = createField(DSL.name("temp_bytes"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.deadlocks</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> DEADLOCKS = createField(DSL.name("deadlocks"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.checksum_failures</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> CHECKSUM_FAILURES = createField(DSL.name("checksum_failures"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_database.checksum_last_failure</code>.
-     */
     public final TableField<PgStatDatabaseRecord, OffsetDateTime> CHECKSUM_LAST_FAILURE = createField(DSL.name("checksum_last_failure"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.blk_read_time</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Double> BLK_READ_TIME = createField(DSL.name("blk_read_time"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.blk_write_time</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Double> BLK_WRITE_TIME = createField(DSL.name("blk_write_time"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.session_time</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Double> SESSION_TIME = createField(DSL.name("session_time"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.active_time</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Double> ACTIVE_TIME = createField(DSL.name("active_time"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_database.idle_in_transaction_time</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Double> IDLE_IN_TRANSACTION_TIME = createField(DSL.name("idle_in_transaction_time"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.sessions</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> SESSIONS = createField(DSL.name("sessions"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.sessions_abandoned</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> SESSIONS_ABANDONED = createField(DSL.name("sessions_abandoned"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.sessions_fatal</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> SESSIONS_FATAL = createField(DSL.name("sessions_fatal"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.sessions_killed</code>.
-     */
     public final TableField<PgStatDatabaseRecord, Long> SESSIONS_KILLED = createField(DSL.name("sessions_killed"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database.stats_reset</code>.
-     */
     public final TableField<PgStatDatabaseRecord, OffsetDateTime> STATS_RESET = createField(DSL.name("stats_reset"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgStatDatabase(Name alias, Table<PgStatDatabaseRecord> aliased) {
@@ -243,25 +148,14 @@ public class PgStatDatabase extends TableImpl<PgStatDatabaseRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_database</code> table
-     * reference
-     */
     public PgStatDatabase(String alias) {
         this(DSL.name(alias), PG_STAT_DATABASE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_database</code> table
-     * reference
-     */
     public PgStatDatabase(Name alias) {
         this(alias, PG_STAT_DATABASE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_database</code> table reference
-     */
     public PgStatDatabase() {
         this(DSL.name("pg_stat_database"), null);
     }
@@ -294,27 +188,18 @@ public class PgStatDatabase extends TableImpl<PgStatDatabaseRecord> {
         return new PgStatDatabase(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatDatabase rename(String name) {
         return new PgStatDatabase(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatDatabase rename(Name name) {
         return new PgStatDatabase(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatDatabase rename(Table<?> name) {

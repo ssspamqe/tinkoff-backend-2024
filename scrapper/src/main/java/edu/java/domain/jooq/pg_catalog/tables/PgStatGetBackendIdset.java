@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatGetBackendIdsetRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_backend_idset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,25 +38,14 @@ public class PgStatGetBackendIdset extends TableImpl<PgStatGetBackendIdsetRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_get_backend_idset</code>
-     */
     public static final PgStatGetBackendIdset PG_STAT_GET_BACKEND_IDSET = new PgStatGetBackendIdset();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatGetBackendIdsetRecord> getRecordType() {
         return PgStatGetBackendIdsetRecord.class;
     }
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_get_backend_idset.pg_stat_get_backend_idset</code>.
-     */
     public final TableField<PgStatGetBackendIdsetRecord, Integer> PG_STAT_GET_BACKEND_IDSET_ = createField(DSL.name("pg_stat_get_backend_idset"), SQLDataType.INTEGER, this, "");
 
     private PgStatGetBackendIdset(Name alias, Table<PgStatGetBackendIdsetRecord> aliased) {
@@ -73,26 +57,14 @@ public class PgStatGetBackendIdset extends TableImpl<PgStatGetBackendIdsetRecord
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_get_backend_idset</code> table
-     * reference
-     */
     public PgStatGetBackendIdset(String alias) {
         this(DSL.name(alias), PG_STAT_GET_BACKEND_IDSET);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_get_backend_idset</code> table
-     * reference
-     */
     public PgStatGetBackendIdset(Name alias) {
         this(alias, PG_STAT_GET_BACKEND_IDSET);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_get_backend_idset</code> table
-     * reference
-     */
     public PgStatGetBackendIdset() {
         this(DSL.name("pg_stat_get_backend_idset"), null);
     }
@@ -121,27 +93,18 @@ public class PgStatGetBackendIdset extends TableImpl<PgStatGetBackendIdsetRecord
         return new PgStatGetBackendIdset(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGetBackendIdset rename(String name) {
         return new PgStatGetBackendIdset(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGetBackendIdset rename(Name name) {
         return new PgStatGetBackendIdset(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGetBackendIdset rename(Table<?> name) {
@@ -158,26 +121,16 @@ public class PgStatGetBackendIdset extends TableImpl<PgStatGetBackendIdsetRecord
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgStatGetBackendIdset call() {
         PgStatGetBackendIdset result = new PgStatGetBackendIdset(DSL.name("pg_stat_get_backend_idset"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super Integer, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Integer, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

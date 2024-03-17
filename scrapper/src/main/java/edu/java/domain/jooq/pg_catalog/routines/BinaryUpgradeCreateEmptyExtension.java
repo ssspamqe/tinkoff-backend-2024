@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.binary_upgrade_create_empty_extension</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,51 +26,20 @@ public class BinaryUpgradeCreateEmptyExtension extends AbstractRoutine<java.lang
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_create_empty_extension._1</code>.
-     */
     public static final Parameter<String> _1 = Internal.createParameter("_1", SQLDataType.CLOB, false, true);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_create_empty_extension._2</code>.
-     */
     public static final Parameter<String> _2 = Internal.createParameter("_2", SQLDataType.CLOB, false, true);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_create_empty_extension._3</code>.
-     */
     public static final Parameter<Boolean> _3 = Internal.createParameter("_3", SQLDataType.BOOLEAN, false, true);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_create_empty_extension._4</code>.
-     */
     public static final Parameter<String> _4 = Internal.createParameter("_4", SQLDataType.CLOB, false, true);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_create_empty_extension._5</code>.
-     */
     public static final Parameter<Long[]> _5 = Internal.createParameter("_5", SQLDataType.BIGINT.array(), false, true);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_create_empty_extension._6</code>.
-     */
     public static final Parameter<String[]> _6 = Internal.createParameter("_6", SQLDataType.CLOB.array(), false, true);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_create_empty_extension._7</code>.
-     */
     public static final Parameter<String[]> _7 = Internal.createParameter("_7", SQLDataType.CLOB.array(), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public BinaryUpgradeCreateEmptyExtension() {
         super("binary_upgrade_create_empty_extension", PgCatalog.PG_CATALOG);
 
@@ -86,51 +52,30 @@ public class BinaryUpgradeCreateEmptyExtension extends AbstractRoutine<java.lang
         addInParameter(_7);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(String value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(String value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_3</code> parameter IN value to the routine
-     */
     public void set__3(Boolean value) {
         setValue(_3, value);
     }
 
-    /**
-     * Set the <code>_4</code> parameter IN value to the routine
-     */
     public void set__4(String value) {
         setValue(_4, value);
     }
 
-    /**
-     * Set the <code>_5</code> parameter IN value to the routine
-     */
     public void set__5(Long[] value) {
         setValue(_5, value);
     }
 
-    /**
-     * Set the <code>_6</code> parameter IN value to the routine
-     */
     public void set__6(String[] value) {
         setValue(_6, value);
     }
 
-    /**
-     * Set the <code>_7</code> parameter IN value to the routine
-     */
     public void set__7(String[] value) {
         setValue(_7, value);
     }

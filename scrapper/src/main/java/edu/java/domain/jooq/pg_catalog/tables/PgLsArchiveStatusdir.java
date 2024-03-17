@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLsArchiveStatusdirRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -29,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_archive_statusdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,33 +40,18 @@ public class PgLsArchiveStatusdir extends TableImpl<PgLsArchiveStatusdirRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ls_archive_statusdir</code>
-     */
     public static final PgLsArchiveStatusdir PG_LS_ARCHIVE_STATUSDIR = new PgLsArchiveStatusdir();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLsArchiveStatusdirRecord> getRecordType() {
         return PgLsArchiveStatusdirRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ls_archive_statusdir.name</code>.
-     */
     public final TableField<PgLsArchiveStatusdirRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ls_archive_statusdir.size</code>.
-     */
     public final TableField<PgLsArchiveStatusdirRecord, Long> SIZE = createField(DSL.name("size"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ls_archive_statusdir.modification</code>.
-     */
     public final TableField<PgLsArchiveStatusdirRecord, OffsetDateTime> MODIFICATION = createField(DSL.name("modification"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgLsArchiveStatusdir(Name alias, Table<PgLsArchiveStatusdirRecord> aliased) {
@@ -82,25 +63,14 @@ public class PgLsArchiveStatusdir extends TableImpl<PgLsArchiveStatusdirRecord> 
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_archive_statusdir</code> table
-     * reference
-     */
     public PgLsArchiveStatusdir(String alias) {
         this(DSL.name(alias), PG_LS_ARCHIVE_STATUSDIR);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_archive_statusdir</code> table
-     * reference
-     */
     public PgLsArchiveStatusdir(Name alias) {
         this(alias, PG_LS_ARCHIVE_STATUSDIR);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ls_archive_statusdir</code> table reference
-     */
     public PgLsArchiveStatusdir() {
         this(DSL.name("pg_ls_archive_statusdir"), null);
     }
@@ -129,27 +99,18 @@ public class PgLsArchiveStatusdir extends TableImpl<PgLsArchiveStatusdirRecord> 
         return new PgLsArchiveStatusdir(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsArchiveStatusdir rename(String name) {
         return new PgLsArchiveStatusdir(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsArchiveStatusdir rename(Name name) {
         return new PgLsArchiveStatusdir(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsArchiveStatusdir rename(Table<?> name) {
@@ -166,26 +127,16 @@ public class PgLsArchiveStatusdir extends TableImpl<PgLsArchiveStatusdirRecord> 
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLsArchiveStatusdir call() {
         PgLsArchiveStatusdir result = new PgLsArchiveStatusdir(DSL.name("pg_ls_archive_statusdir"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

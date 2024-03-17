@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.jsonb_extract_path</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,24 +28,12 @@ public class JsonbExtractPath extends AbstractRoutine<JSONB> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.jsonb_extract_path.RETURN_VALUE</code>.
-     */
     public static final Parameter<JSONB> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.JSONB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.jsonb_extract_path.from_json</code>.
-     */
     public static final Parameter<JSONB> FROM_JSON = Internal.createParameter("from_json", SQLDataType.JSONB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.jsonb_extract_path.path_elems</code>.
-     */
     public static final Parameter<String[]> PATH_ELEMS = Internal.createParameter("path_elems", SQLDataType.CLOB.array(), false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public JsonbExtractPath() {
         super("jsonb_extract_path", PgCatalog.PG_CATALOG, SQLDataType.JSONB);
 
@@ -57,32 +42,18 @@ public class JsonbExtractPath extends AbstractRoutine<JSONB> {
         addInParameter(PATH_ELEMS);
     }
 
-    /**
-     * Set the <code>from_json</code> parameter IN value to the routine
-     */
     public void setFromJson(JSONB value) {
         setValue(FROM_JSON, value);
     }
 
-    /**
-     * Set the <code>from_json</code> parameter to the function to be used with
-     * a {@link org.jooq.Select} statement
-     */
     public void setFromJson(Field<JSONB> field) {
         setField(FROM_JSON, field);
     }
 
-    /**
-     * Set the <code>path_elems</code> parameter IN value to the routine
-     */
     public void setPathElems(String[] value) {
         setValue(PATH_ELEMS, value);
     }
 
-    /**
-     * Set the <code>path_elems</code> parameter to the function to be used with
-     * a {@link org.jooq.Select} statement
-     */
     public void setPathElems(Field<String[]> field) {
         setField(PATH_ELEMS, field);
     }

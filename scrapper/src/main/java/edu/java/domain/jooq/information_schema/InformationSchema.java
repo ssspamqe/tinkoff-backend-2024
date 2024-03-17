@@ -92,9 +92,6 @@ import org.jooq.Table;
 import org.jooq.impl.SchemaImpl;
 
 
-/**
- * The schema <code>information_schema</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -107,19 +104,10 @@ public class InformationSchema extends SchemaImpl {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema</code>
-     */
     public static final InformationSchema INFORMATION_SCHEMA = new InformationSchema();
 
-    /**
-     * The table <code>information_schema._pg_expandarray</code>.
-     */
     public final _PgExpandarray _PG_EXPANDARRAY = _PgExpandarray._PG_EXPANDARRAY;
 
-    /**
-     * Call <code>information_schema._pg_expandarray</code>.
-     */
     public static Result<_PgExpandarrayRecord> _PG_EXPANDARRAY(
           Configuration configuration
         , Object[] __1
@@ -129,9 +117,6 @@ public class InformationSchema extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>information_schema._pg_expandarray</code> as a table.
-     */
     public static _PgExpandarray _PG_EXPANDARRAY(
           Object[] __1
     ) {
@@ -140,9 +125,6 @@ public class InformationSchema extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>information_schema._pg_expandarray</code> as a table.
-     */
     public static _PgExpandarray _PG_EXPANDARRAY(
           Field<Object[]> __1
     ) {
@@ -151,357 +133,144 @@ public class InformationSchema extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>information_schema._pg_foreign_data_wrappers</code>.
-     */
     public final _PgForeignDataWrappers _PG_FOREIGN_DATA_WRAPPERS = _PgForeignDataWrappers._PG_FOREIGN_DATA_WRAPPERS;
 
-    /**
-     * The table <code>information_schema._pg_foreign_servers</code>.
-     */
     public final _PgForeignServers _PG_FOREIGN_SERVERS = _PgForeignServers._PG_FOREIGN_SERVERS;
 
-    /**
-     * The table <code>information_schema._pg_foreign_table_columns</code>.
-     */
     public final _PgForeignTableColumns _PG_FOREIGN_TABLE_COLUMNS = _PgForeignTableColumns._PG_FOREIGN_TABLE_COLUMNS;
 
-    /**
-     * The table <code>information_schema._pg_foreign_tables</code>.
-     */
     public final _PgForeignTables _PG_FOREIGN_TABLES = _PgForeignTables._PG_FOREIGN_TABLES;
 
-    /**
-     * The table <code>information_schema._pg_user_mappings</code>.
-     */
     public final _PgUserMappings _PG_USER_MAPPINGS = _PgUserMappings._PG_USER_MAPPINGS;
 
-    /**
-     * The table
-     * <code>information_schema.administrable_role_authorizations</code>.
-     */
     public final AdministrableRoleAuthorizations ADMINISTRABLE_ROLE_AUTHORIZATIONS = AdministrableRoleAuthorizations.ADMINISTRABLE_ROLE_AUTHORIZATIONS;
 
-    /**
-     * The table <code>information_schema.applicable_roles</code>.
-     */
     public final ApplicableRoles APPLICABLE_ROLES = ApplicableRoles.APPLICABLE_ROLES;
 
-    /**
-     * The table <code>information_schema.attributes</code>.
-     */
     public final Attributes ATTRIBUTES = Attributes.ATTRIBUTES;
 
-    /**
-     * The table <code>information_schema.character_sets</code>.
-     */
     public final CharacterSets CHARACTER_SETS = CharacterSets.CHARACTER_SETS;
 
-    /**
-     * The table <code>information_schema.check_constraint_routine_usage</code>.
-     */
     public final CheckConstraintRoutineUsage CHECK_CONSTRAINT_ROUTINE_USAGE = CheckConstraintRoutineUsage.CHECK_CONSTRAINT_ROUTINE_USAGE;
 
-    /**
-     * The table <code>information_schema.check_constraints</code>.
-     */
     public final CheckConstraints CHECK_CONSTRAINTS = CheckConstraints.CHECK_CONSTRAINTS;
 
-    /**
-     * The table
-     * <code>information_schema.collation_character_set_applicability</code>.
-     */
     public final CollationCharacterSetApplicability COLLATION_CHARACTER_SET_APPLICABILITY = CollationCharacterSetApplicability.COLLATION_CHARACTER_SET_APPLICABILITY;
 
-    /**
-     * The table <code>information_schema.collations</code>.
-     */
     public final Collations COLLATIONS = Collations.COLLATIONS;
 
-    /**
-     * The table <code>information_schema.column_column_usage</code>.
-     */
     public final ColumnColumnUsage COLUMN_COLUMN_USAGE = ColumnColumnUsage.COLUMN_COLUMN_USAGE;
 
-    /**
-     * The table <code>information_schema.column_domain_usage</code>.
-     */
     public final ColumnDomainUsage COLUMN_DOMAIN_USAGE = ColumnDomainUsage.COLUMN_DOMAIN_USAGE;
 
-    /**
-     * The table <code>information_schema.column_options</code>.
-     */
     public final ColumnOptions COLUMN_OPTIONS = ColumnOptions.COLUMN_OPTIONS;
 
-    /**
-     * The table <code>information_schema.column_privileges</code>.
-     */
     public final ColumnPrivileges COLUMN_PRIVILEGES = ColumnPrivileges.COLUMN_PRIVILEGES;
 
-    /**
-     * The table <code>information_schema.column_udt_usage</code>.
-     */
     public final ColumnUdtUsage COLUMN_UDT_USAGE = ColumnUdtUsage.COLUMN_UDT_USAGE;
 
-    /**
-     * The table <code>information_schema.columns</code>.
-     */
     public final Columns COLUMNS = Columns.COLUMNS;
 
-    /**
-     * The table <code>information_schema.constraint_column_usage</code>.
-     */
     public final ConstraintColumnUsage CONSTRAINT_COLUMN_USAGE = ConstraintColumnUsage.CONSTRAINT_COLUMN_USAGE;
 
-    /**
-     * The table <code>information_schema.constraint_table_usage</code>.
-     */
     public final ConstraintTableUsage CONSTRAINT_TABLE_USAGE = ConstraintTableUsage.CONSTRAINT_TABLE_USAGE;
 
-    /**
-     * The table <code>information_schema.data_type_privileges</code>.
-     */
     public final DataTypePrivileges DATA_TYPE_PRIVILEGES = DataTypePrivileges.DATA_TYPE_PRIVILEGES;
 
-    /**
-     * The table <code>information_schema.domain_constraints</code>.
-     */
     public final DomainConstraints DOMAIN_CONSTRAINTS = DomainConstraints.DOMAIN_CONSTRAINTS;
 
-    /**
-     * The table <code>information_schema.domain_udt_usage</code>.
-     */
     public final DomainUdtUsage DOMAIN_UDT_USAGE = DomainUdtUsage.DOMAIN_UDT_USAGE;
 
-    /**
-     * The table <code>information_schema.domains</code>.
-     */
     public final Domains DOMAINS = Domains.DOMAINS;
 
-    /**
-     * The table <code>information_schema.element_types</code>.
-     */
     public final ElementTypes ELEMENT_TYPES = ElementTypes.ELEMENT_TYPES;
 
-    /**
-     * The table <code>information_schema.enabled_roles</code>.
-     */
     public final EnabledRoles ENABLED_ROLES = EnabledRoles.ENABLED_ROLES;
 
-    /**
-     * The table <code>information_schema.foreign_data_wrapper_options</code>.
-     */
     public final ForeignDataWrapperOptions FOREIGN_DATA_WRAPPER_OPTIONS = ForeignDataWrapperOptions.FOREIGN_DATA_WRAPPER_OPTIONS;
 
-    /**
-     * The table <code>information_schema.foreign_data_wrappers</code>.
-     */
     public final ForeignDataWrappers FOREIGN_DATA_WRAPPERS = ForeignDataWrappers.FOREIGN_DATA_WRAPPERS;
 
-    /**
-     * The table <code>information_schema.foreign_server_options</code>.
-     */
     public final ForeignServerOptions FOREIGN_SERVER_OPTIONS = ForeignServerOptions.FOREIGN_SERVER_OPTIONS;
 
-    /**
-     * The table <code>information_schema.foreign_servers</code>.
-     */
     public final ForeignServers FOREIGN_SERVERS = ForeignServers.FOREIGN_SERVERS;
 
-    /**
-     * The table <code>information_schema.foreign_table_options</code>.
-     */
     public final ForeignTableOptions FOREIGN_TABLE_OPTIONS = ForeignTableOptions.FOREIGN_TABLE_OPTIONS;
 
-    /**
-     * The table <code>information_schema.foreign_tables</code>.
-     */
     public final ForeignTables FOREIGN_TABLES = ForeignTables.FOREIGN_TABLES;
 
-    /**
-     * The table
-     * <code>information_schema.information_schema_catalog_name</code>.
-     */
     public final InformationSchemaCatalogName INFORMATION_SCHEMA_CATALOG_NAME = InformationSchemaCatalogName.INFORMATION_SCHEMA_CATALOG_NAME;
 
-    /**
-     * The table <code>information_schema.key_column_usage</code>.
-     */
     public final KeyColumnUsage KEY_COLUMN_USAGE = KeyColumnUsage.KEY_COLUMN_USAGE;
 
-    /**
-     * The table <code>information_schema.parameters</code>.
-     */
     public final Parameters PARAMETERS = Parameters.PARAMETERS;
 
-    /**
-     * The table <code>information_schema.referential_constraints</code>.
-     */
     public final ReferentialConstraints REFERENTIAL_CONSTRAINTS = ReferentialConstraints.REFERENTIAL_CONSTRAINTS;
 
-    /**
-     * The table <code>information_schema.role_column_grants</code>.
-     */
     public final RoleColumnGrants ROLE_COLUMN_GRANTS = RoleColumnGrants.ROLE_COLUMN_GRANTS;
 
-    /**
-     * The table <code>information_schema.role_routine_grants</code>.
-     */
     public final RoleRoutineGrants ROLE_ROUTINE_GRANTS = RoleRoutineGrants.ROLE_ROUTINE_GRANTS;
 
-    /**
-     * The table <code>information_schema.role_table_grants</code>.
-     */
     public final RoleTableGrants ROLE_TABLE_GRANTS = RoleTableGrants.ROLE_TABLE_GRANTS;
 
-    /**
-     * The table <code>information_schema.role_udt_grants</code>.
-     */
     public final RoleUdtGrants ROLE_UDT_GRANTS = RoleUdtGrants.ROLE_UDT_GRANTS;
 
-    /**
-     * The table <code>information_schema.role_usage_grants</code>.
-     */
     public final RoleUsageGrants ROLE_USAGE_GRANTS = RoleUsageGrants.ROLE_USAGE_GRANTS;
 
-    /**
-     * The table <code>information_schema.routine_column_usage</code>.
-     */
     public final RoutineColumnUsage ROUTINE_COLUMN_USAGE = RoutineColumnUsage.ROUTINE_COLUMN_USAGE;
 
-    /**
-     * The table <code>information_schema.routine_privileges</code>.
-     */
     public final RoutinePrivileges ROUTINE_PRIVILEGES = RoutinePrivileges.ROUTINE_PRIVILEGES;
 
-    /**
-     * The table <code>information_schema.routine_routine_usage</code>.
-     */
     public final RoutineRoutineUsage ROUTINE_ROUTINE_USAGE = RoutineRoutineUsage.ROUTINE_ROUTINE_USAGE;
 
-    /**
-     * The table <code>information_schema.routine_sequence_usage</code>.
-     */
     public final RoutineSequenceUsage ROUTINE_SEQUENCE_USAGE = RoutineSequenceUsage.ROUTINE_SEQUENCE_USAGE;
 
-    /**
-     * The table <code>information_schema.routine_table_usage</code>.
-     */
     public final RoutineTableUsage ROUTINE_TABLE_USAGE = RoutineTableUsage.ROUTINE_TABLE_USAGE;
 
-    /**
-     * The table <code>information_schema.routines</code>.
-     */
     public final Routines ROUTINES = Routines.ROUTINES;
 
-    /**
-     * The table <code>information_schema.schemata</code>.
-     */
     public final Schemata SCHEMATA = Schemata.SCHEMATA;
 
-    /**
-     * The table <code>information_schema.sequences</code>.
-     */
     public final Sequences SEQUENCES = Sequences.SEQUENCES;
 
-    /**
-     * The table <code>information_schema.sql_features</code>.
-     */
     public final SqlFeatures SQL_FEATURES = SqlFeatures.SQL_FEATURES;
 
-    /**
-     * The table <code>information_schema.sql_implementation_info</code>.
-     */
     public final SqlImplementationInfo SQL_IMPLEMENTATION_INFO = SqlImplementationInfo.SQL_IMPLEMENTATION_INFO;
 
-    /**
-     * The table <code>information_schema.sql_parts</code>.
-     */
     public final SqlParts SQL_PARTS = SqlParts.SQL_PARTS;
 
-    /**
-     * The table <code>information_schema.sql_sizing</code>.
-     */
     public final SqlSizing SQL_SIZING = SqlSizing.SQL_SIZING;
 
-    /**
-     * The table <code>information_schema.table_constraints</code>.
-     */
     public final TableConstraints TABLE_CONSTRAINTS = TableConstraints.TABLE_CONSTRAINTS;
 
-    /**
-     * The table <code>information_schema.table_privileges</code>.
-     */
     public final TablePrivileges TABLE_PRIVILEGES = TablePrivileges.TABLE_PRIVILEGES;
 
-    /**
-     * The table <code>information_schema.tables</code>.
-     */
     public final Tables TABLES = Tables.TABLES;
 
-    /**
-     * The table <code>information_schema.transforms</code>.
-     */
     public final Transforms TRANSFORMS = Transforms.TRANSFORMS;
 
-    /**
-     * The table <code>information_schema.triggered_update_columns</code>.
-     */
     public final TriggeredUpdateColumns TRIGGERED_UPDATE_COLUMNS = TriggeredUpdateColumns.TRIGGERED_UPDATE_COLUMNS;
 
-    /**
-     * The table <code>information_schema.triggers</code>.
-     */
     public final Triggers TRIGGERS = Triggers.TRIGGERS;
 
-    /**
-     * The table <code>information_schema.udt_privileges</code>.
-     */
     public final UdtPrivileges UDT_PRIVILEGES = UdtPrivileges.UDT_PRIVILEGES;
 
-    /**
-     * The table <code>information_schema.usage_privileges</code>.
-     */
     public final UsagePrivileges USAGE_PRIVILEGES = UsagePrivileges.USAGE_PRIVILEGES;
 
-    /**
-     * The table <code>information_schema.user_defined_types</code>.
-     */
     public final UserDefinedTypes USER_DEFINED_TYPES = UserDefinedTypes.USER_DEFINED_TYPES;
 
-    /**
-     * The table <code>information_schema.user_mapping_options</code>.
-     */
     public final UserMappingOptions USER_MAPPING_OPTIONS = UserMappingOptions.USER_MAPPING_OPTIONS;
 
-    /**
-     * The table <code>information_schema.user_mappings</code>.
-     */
     public final UserMappings USER_MAPPINGS = UserMappings.USER_MAPPINGS;
 
-    /**
-     * The table <code>information_schema.view_column_usage</code>.
-     */
     public final ViewColumnUsage VIEW_COLUMN_USAGE = ViewColumnUsage.VIEW_COLUMN_USAGE;
 
-    /**
-     * The table <code>information_schema.view_routine_usage</code>.
-     */
     public final ViewRoutineUsage VIEW_ROUTINE_USAGE = ViewRoutineUsage.VIEW_ROUTINE_USAGE;
 
-    /**
-     * The table <code>information_schema.view_table_usage</code>.
-     */
     public final ViewTableUsage VIEW_TABLE_USAGE = ViewTableUsage.VIEW_TABLE_USAGE;
 
-    /**
-     * The table <code>information_schema.views</code>.
-     */
     public final Views VIEWS = Views.VIEWS;
 
-    /**
-     * No further instances allowed
-     */
     private InformationSchema() {
         super("information_schema", null);
     }

@@ -20,9 +20,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.udt_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,106 +32,64 @@ public class UdtPrivilegesRecord extends TableRecordImpl<UdtPrivilegesRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.grantor</code>.
-     */
     public void setGrantor(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.grantee</code>.
-     */
     public void setGrantee(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.udt_name</code>.
-     */
     public void setUdtName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.udt_privileges.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.udt_privileges.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
@@ -349,16 +304,10 @@ public class UdtPrivilegesRecord extends TableRecordImpl<UdtPrivilegesRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached UdtPrivilegesRecord
-     */
     public UdtPrivilegesRecord() {
         super(UdtPrivileges.UDT_PRIVILEGES);
     }
 
-    /**
-     * Create a detached, initialised UdtPrivilegesRecord
-     */
     @ConstructorProperties({ "grantor", "grantee", "udtCatalog", "udtSchema", "udtName", "privilegeType", "isGrantable" })
     public UdtPrivilegesRecord(@Nullable String grantor, @Nullable String grantee, @Nullable String udtCatalog, @Nullable String udtSchema, @Nullable String udtName, @Nullable String privilegeType, @Nullable String isGrantable) {
         super(UdtPrivileges.UDT_PRIVILEGES);
@@ -373,9 +322,6 @@ public class UdtPrivilegesRecord extends TableRecordImpl<UdtPrivilegesRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised UdtPrivilegesRecord
-     */
     public UdtPrivilegesRecord(edu.java.domain.jooq.information_schema.tables.pojos.UdtPrivileges value) {
         super(UdtPrivileges.UDT_PRIVILEGES);
 

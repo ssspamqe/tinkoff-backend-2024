@@ -19,9 +19,6 @@ import org.jooq.Row10;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_recovery_prefetch</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,155 +31,91 @@ public class PgStatRecoveryPrefetchRecord extends TableRecordImpl<PgStatRecovery
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return (OffsetDateTime) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.prefetch</code>.
-     */
     public void setPrefetch(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.prefetch</code>.
-     */
     @Nullable
     public Long getPrefetch() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.hit</code>.
-     */
     public void setHit(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.hit</code>.
-     */
     @Nullable
     public Long getHit() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_init</code>.
-     */
     public void setSkipInit(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_init</code>.
-     */
     @Nullable
     public Long getSkipInit() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_new</code>.
-     */
     public void setSkipNew(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_new</code>.
-     */
     @Nullable
     public Long getSkipNew() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_fpw</code>.
-     */
     public void setSkipFpw(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_fpw</code>.
-     */
     @Nullable
     public Long getSkipFpw() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_rep</code>.
-     */
     public void setSkipRep(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.skip_rep</code>.
-     */
     @Nullable
     public Long getSkipRep() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_recovery_prefetch.wal_distance</code>.
-     */
     public void setWalDistance(@Nullable Integer value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_recovery_prefetch.wal_distance</code>.
-     */
     @Nullable
     public Integer getWalDistance() {
         return (Integer) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_recovery_prefetch.block_distance</code>.
-     */
     public void setBlockDistance(@Nullable Integer value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_recovery_prefetch.block_distance</code>.
-     */
     @Nullable
     public Integer getBlockDistance() {
         return (Integer) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_recovery_prefetch.io_depth</code>.
-     */
     public void setIoDepth(@Nullable Integer value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_recovery_prefetch.io_depth</code>.
-     */
     @Nullable
     public Integer getIoDepth() {
         return (Integer) get(9);
@@ -474,16 +407,10 @@ public class PgStatRecoveryPrefetchRecord extends TableRecordImpl<PgStatRecovery
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatRecoveryPrefetchRecord
-     */
     public PgStatRecoveryPrefetchRecord() {
         super(PgStatRecoveryPrefetch.PG_STAT_RECOVERY_PREFETCH);
     }
 
-    /**
-     * Create a detached, initialised PgStatRecoveryPrefetchRecord
-     */
     @ConstructorProperties({ "statsReset", "prefetch", "hit", "skipInit", "skipNew", "skipFpw", "skipRep", "walDistance", "blockDistance", "ioDepth" })
     public PgStatRecoveryPrefetchRecord(@Nullable OffsetDateTime statsReset, @Nullable Long prefetch, @Nullable Long hit, @Nullable Long skipInit, @Nullable Long skipNew, @Nullable Long skipFpw, @Nullable Long skipRep, @Nullable Integer walDistance, @Nullable Integer blockDistance, @Nullable Integer ioDepth) {
         super(PgStatRecoveryPrefetch.PG_STAT_RECOVERY_PREFETCH);
@@ -501,9 +428,6 @@ public class PgStatRecoveryPrefetchRecord extends TableRecordImpl<PgStatRecovery
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatRecoveryPrefetchRecord
-     */
     public PgStatRecoveryPrefetchRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatRecoveryPrefetch value) {
         super(PgStatRecoveryPrefetch.PG_STAT_RECOVERY_PREFETCH);
 

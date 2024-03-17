@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_basebackup</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,99 +30,55 @@ public class PgStatProgressBasebackupRecord extends TableRecordImpl<PgStatProgre
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_basebackup.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_basebackup.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_basebackup.phase</code>.
-     */
     public void setPhase(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_basebackup.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_total</code>.
-     */
     public void setBackupTotal(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_total</code>.
-     */
     @Nullable
     public Long getBackupTotal() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_streamed</code>.
-     */
     public void setBackupStreamed(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_streamed</code>.
-     */
     @Nullable
     public Long getBackupStreamed() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_total</code>.
-     */
     public void setTablespacesTotal(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_total</code>.
-     */
     @Nullable
     public Long getTablespacesTotal() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_streamed</code>.
-     */
     public void setTablespacesStreamed(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_streamed</code>.
-     */
     @Nullable
     public Long getTablespacesStreamed() {
         return (Long) get(5);
@@ -313,16 +266,10 @@ public class PgStatProgressBasebackupRecord extends TableRecordImpl<PgStatProgre
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatProgressBasebackupRecord
-     */
     public PgStatProgressBasebackupRecord() {
         super(PgStatProgressBasebackup.PG_STAT_PROGRESS_BASEBACKUP);
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressBasebackupRecord
-     */
     @ConstructorProperties({ "pid", "phase", "backupTotal", "backupStreamed", "tablespacesTotal", "tablespacesStreamed" })
     public PgStatProgressBasebackupRecord(@Nullable Integer pid, @Nullable String phase, @Nullable Long backupTotal, @Nullable Long backupStreamed, @Nullable Long tablespacesTotal, @Nullable Long tablespacesStreamed) {
         super(PgStatProgressBasebackup.PG_STAT_PROGRESS_BASEBACKUP);
@@ -336,9 +283,6 @@ public class PgStatProgressBasebackupRecord extends TableRecordImpl<PgStatProgre
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressBasebackupRecord
-     */
     public PgStatProgressBasebackupRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatProgressBasebackup value) {
         super(PgStatProgressBasebackup.PG_STAT_PROGRESS_BASEBACKUP);
 

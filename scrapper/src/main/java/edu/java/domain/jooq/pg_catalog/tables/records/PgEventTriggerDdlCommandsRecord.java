@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_event_trigger_ddl_commands</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,159 +30,83 @@ public class PgEventTriggerDdlCommandsRecord extends TableRecordImpl<PgEventTrig
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger_ddl_commands.classid</code>.
-     */
     public void setClassid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger_ddl_commands.classid</code>.
-     */
     @Nullable
     public Long getClassid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger_ddl_commands.objid</code>.
-     */
     public void setObjid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger_ddl_commands.objid</code>.
-     */
     @Nullable
     public Long getObjid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.objsubid</code>.
-     */
     public void setObjsubid(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.objsubid</code>.
-     */
     @Nullable
     public Integer getObjsubid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.command_tag</code>.
-     */
     public void setCommandTag(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.command_tag</code>.
-     */
     @Nullable
     public String getCommandTag() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.object_type</code>.
-     */
     public void setObjectType(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.schema_name</code>.
-     */
     public void setSchemaName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.schema_name</code>.
-     */
     @Nullable
     public String getSchemaName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.object_identity</code>.
-     */
     public void setObjectIdentity(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.object_identity</code>.
-     */
     @Nullable
     public String getObjectIdentity() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.in_extension</code>.
-     */
     public void setInExtension(@Nullable Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.in_extension</code>.
-     */
     @Nullable
     public Boolean getInExtension() {
         return (Boolean) get(7);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setCommand(@Nullable Object value) {
         set(8, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getCommand() {
@@ -256,14 +177,6 @@ public class PgEventTriggerDdlCommandsRecord extends TableRecordImpl<PgEventTrig
         return PgEventTriggerDdlCommands.PG_EVENT_TRIGGER_DDL_COMMANDS.IN_EXTENSION;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -319,14 +232,6 @@ public class PgEventTriggerDdlCommandsRecord extends TableRecordImpl<PgEventTrig
         return getInExtension();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -382,14 +287,6 @@ public class PgEventTriggerDdlCommandsRecord extends TableRecordImpl<PgEventTrig
         return getInExtension();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -453,14 +350,6 @@ public class PgEventTriggerDdlCommandsRecord extends TableRecordImpl<PgEventTrig
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -488,16 +377,10 @@ public class PgEventTriggerDdlCommandsRecord extends TableRecordImpl<PgEventTrig
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgEventTriggerDdlCommandsRecord
-     */
     public PgEventTriggerDdlCommandsRecord() {
         super(PgEventTriggerDdlCommands.PG_EVENT_TRIGGER_DDL_COMMANDS);
     }
 
-    /**
-     * Create a detached, initialised PgEventTriggerDdlCommandsRecord
-     */
     @ConstructorProperties({ "classid", "objid", "objsubid", "commandTag", "objectType", "schemaName", "objectIdentity", "inExtension", "command" })
     public PgEventTriggerDdlCommandsRecord(@Nullable Long classid, @Nullable Long objid, @Nullable Integer objsubid, @Nullable String commandTag, @Nullable String objectType, @Nullable String schemaName, @Nullable String objectIdentity, @Nullable Boolean inExtension, @Nullable Object command) {
         super(PgEventTriggerDdlCommands.PG_EVENT_TRIGGER_DDL_COMMANDS);
@@ -514,9 +397,6 @@ public class PgEventTriggerDdlCommandsRecord extends TableRecordImpl<PgEventTrig
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgEventTriggerDdlCommandsRecord
-     */
     public PgEventTriggerDdlCommandsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgEventTriggerDdlCommands value) {
         super(PgEventTriggerDdlCommands.PG_EVENT_TRIGGER_DDL_COMMANDS);
 

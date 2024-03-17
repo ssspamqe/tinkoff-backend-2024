@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_copy_logical_replication_slot</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,44 +26,17 @@ public class PgCopyLogicalReplicationSlot2 extends AbstractRoutine<java.lang.Voi
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_copy_logical_replication_slot.src_slot_name</code>.
-     */
     public static final Parameter<String> SRC_SLOT_NAME = Internal.createParameter("src_slot_name", SQLDataType.VARCHAR, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_copy_logical_replication_slot.dst_slot_name</code>.
-     */
     public static final Parameter<String> DST_SLOT_NAME = Internal.createParameter("dst_slot_name", SQLDataType.VARCHAR, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_copy_logical_replication_slot.temporary</code>.
-     */
     public static final Parameter<Boolean> TEMPORARY = Internal.createParameter("temporary", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_copy_logical_replication_slot.slot_name</code>.
-     */
     public static final Parameter<String> SLOT_NAME = Internal.createParameter("slot_name", SQLDataType.VARCHAR, false, false);
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public static final Parameter<Object> LSN = Internal.createParameter("lsn", org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgCopyLogicalReplicationSlot2() {
         super("pg_copy_logical_replication_slot", PgCatalog.PG_CATALOG);
 
@@ -78,42 +48,22 @@ public class PgCopyLogicalReplicationSlot2 extends AbstractRoutine<java.lang.Voi
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>src_slot_name</code> parameter IN value to the routine
-     */
     public void setSrcSlotName(String value) {
         setValue(SRC_SLOT_NAME, value);
     }
 
-    /**
-     * Set the <code>dst_slot_name</code> parameter IN value to the routine
-     */
     public void setDstSlotName(String value) {
         setValue(DST_SLOT_NAME, value);
     }
 
-    /**
-     * Set the <code>temporary</code> parameter IN value to the routine
-     */
     public void setTemporary(Boolean value) {
         setValue(TEMPORARY, value);
     }
 
-    /**
-     * Get the <code>slot_name</code> parameter OUT value from the routine
-     */
     public String getSlotName() {
         return get(SLOT_NAME);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public Object getLsn() {
         return get(LSN);

@@ -18,9 +18,6 @@ import org.jooq.Row11;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_all_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,166 +30,100 @@ public class PgStatioAllTablesRecord extends TableRecordImpl<PgStatioAllTablesRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.relname</code>.
-     */
     public void setRelname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.heap_blks_read</code>.
-     */
     public void setHeapBlksRead(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.heap_blks_read</code>.
-     */
     @Nullable
     public Long getHeapBlksRead() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.heap_blks_hit</code>.
-     */
     public void setHeapBlksHit(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.heap_blks_hit</code>.
-     */
     @Nullable
     public Long getHeapBlksHit() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.idx_blks_read</code>.
-     */
     public void setIdxBlksRead(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.idx_blks_read</code>.
-     */
     @Nullable
     public Long getIdxBlksRead() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.idx_blks_hit</code>.
-     */
     public void setIdxBlksHit(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.idx_blks_hit</code>.
-     */
     @Nullable
     public Long getIdxBlksHit() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.toast_blks_read</code>.
-     */
     public void setToastBlksRead(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.toast_blks_read</code>.
-     */
     @Nullable
     public Long getToastBlksRead() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.toast_blks_hit</code>.
-     */
     public void setToastBlksHit(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.toast_blks_hit</code>.
-     */
     @Nullable
     public Long getToastBlksHit() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.tidx_blks_read</code>.
-     */
     public void setTidxBlksRead(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.tidx_blks_read</code>.
-     */
     @Nullable
     public Long getTidxBlksRead() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_all_tables.tidx_blks_hit</code>.
-     */
     public void setTidxBlksHit(@Nullable Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_all_tables.tidx_blks_hit</code>.
-     */
     @Nullable
     public Long getTidxBlksHit() {
         return (Long) get(10);
@@ -510,16 +441,10 @@ public class PgStatioAllTablesRecord extends TableRecordImpl<PgStatioAllTablesRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatioAllTablesRecord
-     */
     public PgStatioAllTablesRecord() {
         super(PgStatioAllTables.PG_STATIO_ALL_TABLES);
     }
 
-    /**
-     * Create a detached, initialised PgStatioAllTablesRecord
-     */
     @ConstructorProperties({ "relid", "schemaname", "relname", "heapBlksRead", "heapBlksHit", "idxBlksRead", "idxBlksHit", "toastBlksRead", "toastBlksHit", "tidxBlksRead", "tidxBlksHit" })
     public PgStatioAllTablesRecord(@Nullable Long relid, @Nullable String schemaname, @Nullable String relname, @Nullable Long heapBlksRead, @Nullable Long heapBlksHit, @Nullable Long idxBlksRead, @Nullable Long idxBlksHit, @Nullable Long toastBlksRead, @Nullable Long toastBlksHit, @Nullable Long tidxBlksRead, @Nullable Long tidxBlksHit) {
         super(PgStatioAllTables.PG_STATIO_ALL_TABLES);
@@ -538,9 +463,6 @@ public class PgStatioAllTablesRecord extends TableRecordImpl<PgStatioAllTablesRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatioAllTablesRecord
-     */
     public PgStatioAllTablesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatioAllTables value) {
         super(PgStatioAllTables.PG_STATIO_ALL_TABLES);
 

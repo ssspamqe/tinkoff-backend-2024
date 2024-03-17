@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.parameters</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -168,496 +165,292 @@ public class Parameters implements Serializable {
         this.parameterDefault = parameterDefault;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return this.specificCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String specificCatalog) {
         this.specificCatalog = specificCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return this.specificSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String specificSchema) {
         this.specificSchema = specificSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return this.specificName;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String specificName) {
         this.specificName = specificName;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.ordinal_position</code>.
-     */
     @Nullable
     public Integer getOrdinalPosition() {
         return this.ordinalPosition;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.ordinal_position</code>.
-     */
     public void setOrdinalPosition(@Nullable Integer ordinalPosition) {
         this.ordinalPosition = ordinalPosition;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.parameter_mode</code>.
-     */
     @Nullable
     public String getParameterMode() {
         return this.parameterMode;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.parameter_mode</code>.
-     */
     public void setParameterMode(@Nullable String parameterMode) {
         this.parameterMode = parameterMode;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.is_result</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsResult() {
         return this.isResult;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.is_result</code>.
-     */
     public void setIsResult(@Nullable String isResult) {
         this.isResult = isResult;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.as_locator</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getAsLocator() {
         return this.asLocator;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.as_locator</code>.
-     */
     public void setAsLocator(@Nullable String asLocator) {
         this.asLocator = asLocator;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.parameter_name</code>.
-     */
     @Nullable
     public String getParameterName() {
         return this.parameterName;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.parameter_name</code>.
-     */
     public void setParameterName(@Nullable String parameterName) {
         this.parameterName = parameterName;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.data_type</code>.
-     */
     @Nullable
     public String getDataType() {
         return this.dataType;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.data_type</code>.
-     */
     public void setDataType(@Nullable String dataType) {
         this.dataType = dataType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.parameters.character_maximum_length</code>.
-     */
     @Nullable
     public Integer getCharacterMaximumLength() {
         return this.characterMaximumLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.parameters.character_maximum_length</code>.
-     */
     public void setCharacterMaximumLength(@Nullable Integer characterMaximumLength) {
         this.characterMaximumLength = characterMaximumLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.parameters.character_octet_length</code>.
-     */
     @Nullable
     public Integer getCharacterOctetLength() {
         return this.characterOctetLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.parameters.character_octet_length</code>.
-     */
     public void setCharacterOctetLength(@Nullable Integer characterOctetLength) {
         this.characterOctetLength = characterOctetLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.parameters.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return this.characterSetCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.parameters.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String characterSetCatalog) {
         this.characterSetCatalog = characterSetCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.parameters.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return this.characterSetSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.parameters.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String characterSetSchema) {
         this.characterSetSchema = characterSetSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return this.characterSetName;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String characterSetName) {
         this.characterSetName = characterSetName;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return this.collationCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String collationCatalog) {
         this.collationCatalog = collationCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return this.collationSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String collationSchema) {
         this.collationSchema = collationSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return this.collationName;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.collation_name</code>.
-     */
     public void setCollationName(@Nullable String collationName) {
         this.collationName = collationName;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.numeric_precision</code>.
-     */
     @Nullable
     public Integer getNumericPrecision() {
         return this.numericPrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.numeric_precision</code>.
-     */
     public void setNumericPrecision(@Nullable Integer numericPrecision) {
         this.numericPrecision = numericPrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.parameters.numeric_precision_radix</code>.
-     */
     @Nullable
     public Integer getNumericPrecisionRadix() {
         return this.numericPrecisionRadix;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.parameters.numeric_precision_radix</code>.
-     */
     public void setNumericPrecisionRadix(@Nullable Integer numericPrecisionRadix) {
         this.numericPrecisionRadix = numericPrecisionRadix;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.numeric_scale</code>.
-     */
     @Nullable
     public Integer getNumericScale() {
         return this.numericScale;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.numeric_scale</code>.
-     */
     public void setNumericScale(@Nullable Integer numericScale) {
         this.numericScale = numericScale;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.datetime_precision</code>.
-     */
     @Nullable
     public Integer getDatetimePrecision() {
         return this.datetimePrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.datetime_precision</code>.
-     */
     public void setDatetimePrecision(@Nullable Integer datetimePrecision) {
         this.datetimePrecision = datetimePrecision;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.interval_type</code>.
-     */
     @Nullable
     public String getIntervalType() {
         return this.intervalType;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.interval_type</code>.
-     */
     public void setIntervalType(@Nullable String intervalType) {
         this.intervalType = intervalType;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.interval_precision</code>.
-     */
     @Nullable
     public Integer getIntervalPrecision() {
         return this.intervalPrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.interval_precision</code>.
-     */
     public void setIntervalPrecision(@Nullable Integer intervalPrecision) {
         this.intervalPrecision = intervalPrecision;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return this.udtCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String udtCatalog) {
         this.udtCatalog = udtCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return this.udtSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String udtSchema) {
         this.udtSchema = udtSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return this.udtName;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.udt_name</code>.
-     */
     public void setUdtName(@Nullable String udtName) {
         this.udtName = udtName;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.scope_catalog</code>.
-     */
     @Nullable
     public String getScopeCatalog() {
         return this.scopeCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.scope_catalog</code>.
-     */
     public void setScopeCatalog(@Nullable String scopeCatalog) {
         this.scopeCatalog = scopeCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.scope_schema</code>.
-     */
     @Nullable
     public String getScopeSchema() {
         return this.scopeSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.scope_schema</code>.
-     */
     public void setScopeSchema(@Nullable String scopeSchema) {
         this.scopeSchema = scopeSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.scope_name</code>.
-     */
     @Nullable
     public String getScopeName() {
         return this.scopeName;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.scope_name</code>.
-     */
     public void setScopeName(@Nullable String scopeName) {
         this.scopeName = scopeName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.parameters.maximum_cardinality</code>.
-     */
     @Nullable
     public Integer getMaximumCardinality() {
         return this.maximumCardinality;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.parameters.maximum_cardinality</code>.
-     */
     public void setMaximumCardinality(@Nullable Integer maximumCardinality) {
         this.maximumCardinality = maximumCardinality;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.dtd_identifier</code>.
-     */
     @Nullable
     public String getDtdIdentifier() {
         return this.dtdIdentifier;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.dtd_identifier</code>.
-     */
     public void setDtdIdentifier(@Nullable String dtdIdentifier) {
         this.dtdIdentifier = dtdIdentifier;
     }
 
-    /**
-     * Getter for <code>information_schema.parameters.parameter_default</code>.
-     */
     @Nullable
     public String getParameterDefault() {
         return this.parameterDefault;
     }
 
-    /**
-     * Setter for <code>information_schema.parameters.parameter_default</code>.
-     */
     public void setParameterDefault(@Nullable String parameterDefault) {
         this.parameterDefault = parameterDefault;
     }

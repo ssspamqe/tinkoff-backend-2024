@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgTransformRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_transform</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,43 +45,22 @@ public class PgTransform extends TableImpl<PgTransformRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_transform</code>
-     */
     public static final PgTransform PG_TRANSFORM = new PgTransform();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTransformRecord> getRecordType() {
         return PgTransformRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_transform.oid</code>.
-     */
     public final TableField<PgTransformRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_transform.trftype</code>.
-     */
     public final TableField<PgTransformRecord, Long> TRFTYPE = createField(DSL.name("trftype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_transform.trflang</code>.
-     */
     public final TableField<PgTransformRecord, Long> TRFLANG = createField(DSL.name("trflang"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_transform.trffromsql</code>.
-     */
     public final TableField<PgTransformRecord, String> TRFFROMSQL = createField(DSL.name("trffromsql"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_transform.trftosql</code>.
-     */
     public final TableField<PgTransformRecord, String> TRFTOSQL = createField(DSL.name("trftosql"), SQLDataType.VARCHAR.nullable(false), this, "");
 
     private PgTransform(Name alias, Table<PgTransformRecord> aliased) {
@@ -96,23 +71,14 @@ public class PgTransform extends TableImpl<PgTransformRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_transform</code> table reference
-     */
     public PgTransform(String alias) {
         this(DSL.name(alias), PG_TRANSFORM);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_transform</code> table reference
-     */
     public PgTransform(Name alias) {
         this(alias, PG_TRANSFORM);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_transform</code> table reference
-     */
     public PgTransform() {
         this(DSL.name("pg_transform"), null);
     }
@@ -157,27 +123,18 @@ public class PgTransform extends TableImpl<PgTransformRecord> {
         return new PgTransform(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTransform rename(String name) {
         return new PgTransform(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTransform rename(Name name) {
         return new PgTransform(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTransform rename(Table<?> name) {
@@ -194,17 +151,10 @@ public class PgTransform extends TableImpl<PgTransformRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super Long, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

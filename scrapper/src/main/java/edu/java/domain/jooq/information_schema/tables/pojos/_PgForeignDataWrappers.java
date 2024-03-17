@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema._pg_foreign_data_wrappers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -67,119 +64,65 @@ public class _PgForeignDataWrappers implements Serializable {
         this.foreignDataWrapperLanguage = foreignDataWrapperLanguage;
     }
 
-    /**
-     * Getter for <code>information_schema._pg_foreign_data_wrappers.oid</code>.
-     */
     @Nullable
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>information_schema._pg_foreign_data_wrappers.oid</code>.
-     */
     public void setOid(@Nullable Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.fdwowner</code>.
-     */
     @Nullable
     public Long getFdwowner() {
         return this.fdwowner;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.fdwowner</code>.
-     */
     public void setFdwowner(@Nullable Long fdwowner) {
         this.fdwowner = fdwowner;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.fdwoptions</code>.
-     */
     @Nullable
     public String[] getFdwoptions() {
         return this.fdwoptions;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.fdwoptions</code>.
-     */
     public void setFdwoptions(@Nullable String[] fdwoptions) {
         this.fdwoptions = fdwoptions;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return this.foreignDataWrapperCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String foreignDataWrapperCatalog) {
         this.foreignDataWrapperCatalog = foreignDataWrapperCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return this.foreignDataWrapperName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String foreignDataWrapperName) {
         this.foreignDataWrapperName = foreignDataWrapperName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return this.authorizationIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String authorizationIdentifier) {
         this.authorizationIdentifier = authorizationIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     @Nullable
     public String getForeignDataWrapperLanguage() {
         return this.foreignDataWrapperLanguage;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     public void setForeignDataWrapperLanguage(@Nullable String foreignDataWrapperLanguage) {
         this.foreignDataWrapperLanguage = foreignDataWrapperLanguage;
     }

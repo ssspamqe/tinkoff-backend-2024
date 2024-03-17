@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.StringToTableRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.string_to_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,23 +38,14 @@ public class StringToTable extends TableImpl<StringToTableRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.string_to_table</code>
-     */
     public static final StringToTable STRING_TO_TABLE = new StringToTable();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<StringToTableRecord> getRecordType() {
         return StringToTableRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.string_to_table.string_to_table</code>.
-     */
     public final TableField<StringToTableRecord, String> STRING_TO_TABLE_ = createField(DSL.name("string_to_table"), SQLDataType.CLOB, this, "");
 
     private StringToTable(Name alias, Table<StringToTableRecord> aliased) {
@@ -73,23 +59,14 @@ public class StringToTable extends TableImpl<StringToTableRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.string_to_table</code> table reference
-     */
     public StringToTable(String alias) {
         this(DSL.name(alias), STRING_TO_TABLE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.string_to_table</code> table reference
-     */
     public StringToTable(Name alias) {
         this(alias, STRING_TO_TABLE);
     }
 
-    /**
-     * Create a <code>pg_catalog.string_to_table</code> table reference
-     */
     public StringToTable() {
         this(DSL.name("string_to_table"), null);
     }
@@ -118,27 +95,18 @@ public class StringToTable extends TableImpl<StringToTableRecord> {
         return new StringToTable(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public StringToTable rename(String name) {
         return new StringToTable(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public StringToTable rename(Name name) {
         return new StringToTable(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public StringToTable rename(Table<?> name) {
@@ -155,9 +123,6 @@ public class StringToTable extends TableImpl<StringToTableRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public StringToTable call(
           String __1
         , String __2
@@ -170,9 +135,6 @@ public class StringToTable extends TableImpl<StringToTableRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public StringToTable call(
           Field<String> __1
         , Field<String> __2
@@ -185,17 +147,10 @@ public class StringToTable extends TableImpl<StringToTableRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

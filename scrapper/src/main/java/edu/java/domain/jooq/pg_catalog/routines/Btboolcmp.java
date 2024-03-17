@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.btboolcmp</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,24 +27,12 @@ public class Btboolcmp extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.btboolcmp.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.btboolcmp._1</code>.
-     */
     public static final Parameter<Boolean> _1 = Internal.createParameter("_1", SQLDataType.BOOLEAN, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.btboolcmp._2</code>.
-     */
     public static final Parameter<Boolean> _2 = Internal.createParameter("_2", SQLDataType.BOOLEAN, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Btboolcmp() {
         super("btboolcmp", PgCatalog.PG_CATALOG, SQLDataType.INTEGER);
 
@@ -56,32 +41,18 @@ public class Btboolcmp extends AbstractRoutine<Integer> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Boolean value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Boolean> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(Boolean value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<Boolean> field) {
         setField(_2, field);
     }

@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_matviews</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,106 +30,64 @@ public class PgMatviewsRecord extends TableRecordImpl<PgMatviewsRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.matviewname</code>.
-     */
     public void setMatviewname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.matviewname</code>.
-     */
     @Nullable
     public String getMatviewname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.matviewowner</code>.
-     */
     public void setMatviewowner(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.matviewowner</code>.
-     */
     @Nullable
     public String getMatviewowner() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.tablespace</code>.
-     */
     public void setTablespace(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.tablespace</code>.
-     */
     @Nullable
     public String getTablespace() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.hasindexes</code>.
-     */
     public void setHasindexes(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.hasindexes</code>.
-     */
     @Nullable
     public Boolean getHasindexes() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.ispopulated</code>.
-     */
     public void setIspopulated(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.ispopulated</code>.
-     */
     @Nullable
     public Boolean getIspopulated() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_matviews.definition</code>.
-     */
     public void setDefinition(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_matviews.definition</code>.
-     */
     @Nullable
     public String getDefinition() {
         return (String) get(6);
@@ -346,16 +301,10 @@ public class PgMatviewsRecord extends TableRecordImpl<PgMatviewsRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgMatviewsRecord
-     */
     public PgMatviewsRecord() {
         super(PgMatviews.PG_MATVIEWS);
     }
 
-    /**
-     * Create a detached, initialised PgMatviewsRecord
-     */
     @ConstructorProperties({ "schemaname", "matviewname", "matviewowner", "tablespace", "hasindexes", "ispopulated", "definition" })
     public PgMatviewsRecord(@Nullable String schemaname, @Nullable String matviewname, @Nullable String matviewowner, @Nullable String tablespace, @Nullable Boolean hasindexes, @Nullable Boolean ispopulated, @Nullable String definition) {
         super(PgMatviews.PG_MATVIEWS);
@@ -370,9 +319,6 @@ public class PgMatviewsRecord extends TableRecordImpl<PgMatviewsRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgMatviewsRecord
-     */
     public PgMatviewsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgMatviews value) {
         super(PgMatviews.PG_MATVIEWS);
 

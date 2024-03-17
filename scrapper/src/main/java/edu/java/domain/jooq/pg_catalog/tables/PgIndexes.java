@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgIndexesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,43 +40,22 @@ public class PgIndexes extends TableImpl<PgIndexesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_indexes</code>
-     */
     public static final PgIndexes PG_INDEXES = new PgIndexes();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgIndexesRecord> getRecordType() {
         return PgIndexesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_indexes.schemaname</code>.
-     */
     public final TableField<PgIndexesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_indexes.tablename</code>.
-     */
     public final TableField<PgIndexesRecord, String> TABLENAME = createField(DSL.name("tablename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_indexes.indexname</code>.
-     */
     public final TableField<PgIndexesRecord, String> INDEXNAME = createField(DSL.name("indexname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_indexes.tablespace</code>.
-     */
     public final TableField<PgIndexesRecord, String> TABLESPACE = createField(DSL.name("tablespace"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_indexes.indexdef</code>.
-     */
     public final TableField<PgIndexesRecord, String> INDEXDEF = createField(DSL.name("indexdef"), SQLDataType.CLOB, this, "");
 
     private PgIndexes(Name alias, Table<PgIndexesRecord> aliased) {
@@ -104,23 +78,14 @@ public class PgIndexes extends TableImpl<PgIndexesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_indexes</code> table reference
-     */
     public PgIndexes(String alias) {
         this(DSL.name(alias), PG_INDEXES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_indexes</code> table reference
-     */
     public PgIndexes(Name alias) {
         this(alias, PG_INDEXES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_indexes</code> table reference
-     */
     public PgIndexes() {
         this(DSL.name("pg_indexes"), null);
     }
@@ -153,27 +118,18 @@ public class PgIndexes extends TableImpl<PgIndexesRecord> {
         return new PgIndexes(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgIndexes rename(String name) {
         return new PgIndexes(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgIndexes rename(Name name) {
         return new PgIndexes(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgIndexes rename(Table<?> name) {
@@ -190,17 +146,10 @@ public class PgIndexes extends TableImpl<PgIndexesRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

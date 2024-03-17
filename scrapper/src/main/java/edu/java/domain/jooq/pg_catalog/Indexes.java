@@ -23,9 +23,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.Internal;
 
 
-/**
- * A class modelling indexes of tables in pg_catalog.
- */
 @Generated(
     value = {
         "https://www.jooq.org",

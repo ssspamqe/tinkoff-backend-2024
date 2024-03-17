@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_publication</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,144 +30,90 @@ public class PgPublicationRecord extends UpdatableRecordImpl<PgPublicationRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubname</code>.
-     */
     public void setPubname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPubname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubowner</code>.
-     */
     public void setPubowner(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPubowner() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.puballtables</code>.
-     */
     public void setPuballtables(@NotNull Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.puballtables</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPuballtables() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubinsert</code>.
-     */
     public void setPubinsert(@NotNull Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubinsert</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubinsert() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubupdate</code>.
-     */
     public void setPubupdate(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubupdate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubupdate() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubdelete</code>.
-     */
     public void setPubdelete(@NotNull Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubdelete</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubdelete() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubtruncate</code>.
-     */
     public void setPubtruncate(@NotNull Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubtruncate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubtruncate() {
         return (Boolean) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication.pubviaroot</code>.
-     */
     public void setPubviaroot(@NotNull Boolean value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication.pubviaroot</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getPubviaroot() {
@@ -447,16 +390,10 @@ public class PgPublicationRecord extends UpdatableRecordImpl<PgPublicationRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPublicationRecord
-     */
     public PgPublicationRecord() {
         super(PgPublication.PG_PUBLICATION);
     }
 
-    /**
-     * Create a detached, initialised PgPublicationRecord
-     */
     @ConstructorProperties({ "oid", "pubname", "pubowner", "puballtables", "pubinsert", "pubupdate", "pubdelete", "pubtruncate", "pubviaroot" })
     public PgPublicationRecord(@NotNull Long oid, @NotNull String pubname, @NotNull Long pubowner, @NotNull Boolean puballtables, @NotNull Boolean pubinsert, @NotNull Boolean pubupdate, @NotNull Boolean pubdelete, @NotNull Boolean pubtruncate, @NotNull Boolean pubviaroot) {
         super(PgPublication.PG_PUBLICATION);
@@ -473,9 +410,6 @@ public class PgPublicationRecord extends UpdatableRecordImpl<PgPublicationRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPublicationRecord
-     */
     public PgPublicationRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPublication value) {
         super(PgPublication.PG_PUBLICATION);
 

@@ -15,9 +15,6 @@ import edu.java.domain.jooq.public_.tables.StackOverflowQuestions;
 import javax.annotation.processing.Generated;
 
 
-/**
- * Convenience access to all tables in public.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -28,38 +25,17 @@ import javax.annotation.processing.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes", "this-escape" })
 public class Tables {
 
-    /**
-     * The table <code>public.chat_links</code>.
-     */
     public static final ChatLinks CHAT_LINKS = ChatLinks.CHAT_LINKS;
 
-    /**
-     * The table <code>public.chats</code>.
-     */
     public static final Chats CHATS = Chats.CHATS;
 
-    /**
-     * The table <code>public.databasechangelog</code>.
-     */
     public static final Databasechangelog DATABASECHANGELOG = Databasechangelog.DATABASECHANGELOG;
 
-    /**
-     * The table <code>public.databasechangeloglock</code>.
-     */
     public static final Databasechangeloglock DATABASECHANGELOGLOCK = Databasechangeloglock.DATABASECHANGELOGLOCK;
 
-    /**
-     * The table <code>public.git_hub_repositories</code>.
-     */
     public static final GitHubRepositories GIT_HUB_REPOSITORIES = GitHubRepositories.GIT_HUB_REPOSITORIES;
 
-    /**
-     * The table <code>public.links</code>.
-     */
     public static final Links LINKS = Links.LINKS;
 
-    /**
-     * The table <code>public.stack_overflow_questions</code>.
-     */
     public static final StackOverflowQuestions STACK_OVERFLOW_QUESTIONS = StackOverflowQuestions.STACK_OVERFLOW_QUESTIONS;
 }

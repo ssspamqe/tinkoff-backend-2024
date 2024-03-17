@@ -17,9 +17,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_depend</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -32,112 +29,70 @@ public class PgDependRecord extends TableRecordImpl<PgDependRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.classid</code>.
-     */
     public void setClassid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.classid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.objid</code>.
-     */
     public void setObjid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.objid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.objsubid</code>.
-     */
     public void setObjsubid(@NotNull Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.objsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getObjsubid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.refclassid</code>.
-     */
     public void setRefclassid(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.refclassid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRefclassid() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.refobjid</code>.
-     */
     public void setRefobjid(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.refobjid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRefobjid() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.refobjsubid</code>.
-     */
     public void setRefobjsubid(@NotNull Integer value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.refobjsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getRefobjsubid() {
         return (Integer) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.deptype</code>.
-     */
     public void setDeptype(@NotNull String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.deptype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDeptype() {
@@ -352,16 +307,10 @@ public class PgDependRecord extends TableRecordImpl<PgDependRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgDependRecord
-     */
     public PgDependRecord() {
         super(PgDepend.PG_DEPEND);
     }
 
-    /**
-     * Create a detached, initialised PgDependRecord
-     */
     @ConstructorProperties({ "classid", "objid", "objsubid", "refclassid", "refobjid", "refobjsubid", "deptype" })
     public PgDependRecord(@NotNull Long classid, @NotNull Long objid, @NotNull Integer objsubid, @NotNull Long refclassid, @NotNull Long refobjid, @NotNull Integer refobjsubid, @NotNull String deptype) {
         super(PgDepend.PG_DEPEND);
@@ -376,9 +325,6 @@ public class PgDependRecord extends TableRecordImpl<PgDependRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgDependRecord
-     */
     public PgDependRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgDepend value) {
         super(PgDepend.PG_DEPEND);
 

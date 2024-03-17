@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.sql_sizing</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,61 +30,37 @@ public class SqlSizingRecord extends TableRecordImpl<SqlSizingRecord> implements
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.sql_sizing.sizing_id</code>.
-     */
     public void setSizingId(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_sizing.sizing_id</code>.
-     */
     @Nullable
     public Integer getSizingId() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_sizing.sizing_name</code>.
-     */
     public void setSizingName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_sizing.sizing_name</code>.
-     */
     @Nullable
     public String getSizingName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_sizing.supported_value</code>.
-     */
     public void setSupportedValue(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_sizing.supported_value</code>.
-     */
     @Nullable
     public Integer getSupportedValue() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_sizing.comments</code>.
-     */
     public void setComments(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_sizing.comments</code>.
-     */
     @Nullable
     public String getComments() {
         return (String) get(3);
@@ -223,16 +196,10 @@ public class SqlSizingRecord extends TableRecordImpl<SqlSizingRecord> implements
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached SqlSizingRecord
-     */
     public SqlSizingRecord() {
         super(SqlSizing.SQL_SIZING);
     }
 
-    /**
-     * Create a detached, initialised SqlSizingRecord
-     */
     @ConstructorProperties({ "sizingId", "sizingName", "supportedValue", "comments" })
     public SqlSizingRecord(@Nullable Integer sizingId, @Nullable String sizingName, @Nullable Integer supportedValue, @Nullable String comments) {
         super(SqlSizing.SQL_SIZING);
@@ -244,9 +211,6 @@ public class SqlSizingRecord extends TableRecordImpl<SqlSizingRecord> implements
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised SqlSizingRecord
-     */
     public SqlSizingRecord(edu.java.domain.jooq.information_schema.tables.pojos.SqlSizing value) {
         super(SqlSizing.SQL_SIZING);
 

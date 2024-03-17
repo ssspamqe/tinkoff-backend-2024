@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_foreign_data_wrapper</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -68,112 +65,70 @@ public class PgForeignDataWrapper implements Serializable {
         this.fdwoptions = fdwoptions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getFdwname() {
         return this.fdwname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwname</code>.
-     */
     public void setFdwname(@NotNull String fdwname) {
         this.fdwname = fdwname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getFdwowner() {
         return this.fdwowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwowner</code>.
-     */
     public void setFdwowner(@NotNull Long fdwowner) {
         this.fdwowner = fdwowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwhandler</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getFdwhandler() {
         return this.fdwhandler;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwhandler</code>.
-     */
     public void setFdwhandler(@NotNull Long fdwhandler) {
         this.fdwhandler = fdwhandler;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwvalidator</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getFdwvalidator() {
         return this.fdwvalidator;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwvalidator</code>.
-     */
     public void setFdwvalidator(@NotNull Long fdwvalidator) {
         this.fdwvalidator = fdwvalidator;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwacl</code>.
-     */
     @Nullable
     public String[] getFdwacl() {
         return this.fdwacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwacl</code>.
-     */
     public void setFdwacl(@Nullable String[] fdwacl) {
         this.fdwacl = fdwacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_foreign_data_wrapper.fdwoptions</code>.
-     */
     @Nullable
     public String[] getFdwoptions() {
         return this.fdwoptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_foreign_data_wrapper.fdwoptions</code>.
-     */
     public void setFdwoptions(@Nullable String[] fdwoptions) {
         this.fdwoptions = fdwoptions;
     }

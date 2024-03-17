@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ForeignDataWrappersRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.foreign_data_wrappers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,49 +39,22 @@ public class ForeignDataWrappers extends TableImpl<ForeignDataWrappersRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.foreign_data_wrappers</code>
-     */
     public static final ForeignDataWrappers FOREIGN_DATA_WRAPPERS = new ForeignDataWrappers();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ForeignDataWrappersRecord> getRecordType() {
         return ForeignDataWrappersRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     public final TableField<ForeignDataWrappersRecord, String> FOREIGN_DATA_WRAPPER_CATALOG = createField(DSL.name("foreign_data_wrapper_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     public final TableField<ForeignDataWrappersRecord, String> FOREIGN_DATA_WRAPPER_NAME = createField(DSL.name("foreign_data_wrapper_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_data_wrappers.authorization_identifier</code>.
-     */
     public final TableField<ForeignDataWrappersRecord, String> AUTHORIZATION_IDENTIFIER = createField(DSL.name("authorization_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_data_wrappers.library_name</code>.
-     */
     public final TableField<ForeignDataWrappersRecord, String> LIBRARY_NAME = createField(DSL.name("library_name"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     public final TableField<ForeignDataWrappersRecord, String> FOREIGN_DATA_WRAPPER_LANGUAGE = createField(DSL.name("foreign_data_wrapper_language"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private ForeignDataWrappers(Name alias, Table<ForeignDataWrappersRecord> aliased) {
@@ -104,26 +72,14 @@ public class ForeignDataWrappers extends TableImpl<ForeignDataWrappersRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.foreign_data_wrappers</code>
-     * table reference
-     */
     public ForeignDataWrappers(String alias) {
         this(DSL.name(alias), FOREIGN_DATA_WRAPPERS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.foreign_data_wrappers</code>
-     * table reference
-     */
     public ForeignDataWrappers(Name alias) {
         this(alias, FOREIGN_DATA_WRAPPERS);
     }
 
-    /**
-     * Create a <code>information_schema.foreign_data_wrappers</code> table
-     * reference
-     */
     public ForeignDataWrappers() {
         this(DSL.name("foreign_data_wrappers"), null);
     }
@@ -156,27 +112,18 @@ public class ForeignDataWrappers extends TableImpl<ForeignDataWrappersRecord> {
         return new ForeignDataWrappers(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignDataWrappers rename(String name) {
         return new ForeignDataWrappers(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignDataWrappers rename(Name name) {
         return new ForeignDataWrappers(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ForeignDataWrappers rename(Table<?> name) {
@@ -193,17 +140,10 @@ public class ForeignDataWrappers extends TableImpl<ForeignDataWrappersRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

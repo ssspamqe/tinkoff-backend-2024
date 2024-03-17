@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.check_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,69 +30,37 @@ public class CheckConstraintsRecord extends TableRecordImpl<CheckConstraintsReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraints.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraints.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraints.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraints.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraints.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraints.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraints.check_clause</code>.
-     */
     public void setCheckClause(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraints.check_clause</code>.
-     */
     @Nullable
     public String getCheckClause() {
         return (String) get(3);
@@ -231,16 +196,10 @@ public class CheckConstraintsRecord extends TableRecordImpl<CheckConstraintsReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached CheckConstraintsRecord
-     */
     public CheckConstraintsRecord() {
         super(CheckConstraints.CHECK_CONSTRAINTS);
     }
 
-    /**
-     * Create a detached, initialised CheckConstraintsRecord
-     */
     @ConstructorProperties({ "constraintCatalog", "constraintSchema", "constraintName", "checkClause" })
     public CheckConstraintsRecord(@Nullable String constraintCatalog, @Nullable String constraintSchema, @Nullable String constraintName, @Nullable String checkClause) {
         super(CheckConstraints.CHECK_CONSTRAINTS);
@@ -252,9 +211,6 @@ public class CheckConstraintsRecord extends TableRecordImpl<CheckConstraintsReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised CheckConstraintsRecord
-     */
     public CheckConstraintsRecord(edu.java.domain.jooq.information_schema.tables.pojos.CheckConstraints value) {
         super(CheckConstraints.CHECK_CONSTRAINTS);
 

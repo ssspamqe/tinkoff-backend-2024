@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.column_domain_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,121 +63,65 @@ public class ColumnDomainUsage implements Serializable {
         this.columnName = columnName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_domain_usage.domain_catalog</code>.
-     */
     @Nullable
     public String getDomainCatalog() {
         return this.domainCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_domain_usage.domain_catalog</code>.
-     */
     public void setDomainCatalog(@Nullable String domainCatalog) {
         this.domainCatalog = domainCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_domain_usage.domain_schema</code>.
-     */
     @Nullable
     public String getDomainSchema() {
         return this.domainSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_domain_usage.domain_schema</code>.
-     */
     public void setDomainSchema(@Nullable String domainSchema) {
         this.domainSchema = domainSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_domain_usage.domain_name</code>.
-     */
     @Nullable
     public String getDomainName() {
         return this.domainName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_domain_usage.domain_name</code>.
-     */
     public void setDomainName(@Nullable String domainName) {
         this.domainName = domainName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_domain_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_domain_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_domain_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_domain_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_domain_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_domain_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.column_domain_usage.column_name</code>.
-     */
     @Nullable
     public String getColumnName() {
         return this.columnName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.column_domain_usage.column_name</code>.
-     */
     public void setColumnName(@Nullable String columnName) {
         this.columnName = columnName;
     }

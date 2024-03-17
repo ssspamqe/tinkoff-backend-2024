@@ -18,9 +18,6 @@ import org.jooq.Row11;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_hba_file_rules</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,166 +30,100 @@ public class PgHbaFileRulesRecord extends TableRecordImpl<PgHbaFileRulesRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.rule_number</code>.
-     */
     public void setRuleNumber(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.rule_number</code>.
-     */
     @Nullable
     public Integer getRuleNumber() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.file_name</code>.
-     */
     public void setFileName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.file_name</code>.
-     */
     @Nullable
     public String getFileName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.line_number</code>.
-     */
     public void setLineNumber(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.line_number</code>.
-     */
     @Nullable
     public Integer getLineNumber() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.type</code>.
-     */
     public void setType(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.type</code>.
-     */
     @Nullable
     public String getType() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.database</code>.
-     */
     public void setDatabase(@Nullable String[] value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.database</code>.
-     */
     @Nullable
     public String[] getDatabase() {
         return (String[]) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.user_name</code>.
-     */
     public void setUserName(@Nullable String[] value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.user_name</code>.
-     */
     @Nullable
     public String[] getUserName() {
         return (String[]) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.address</code>.
-     */
     public void setAddress(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.address</code>.
-     */
     @Nullable
     public String getAddress() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.netmask</code>.
-     */
     public void setNetmask(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.netmask</code>.
-     */
     @Nullable
     public String getNetmask() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.auth_method</code>.
-     */
     public void setAuthMethod(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.auth_method</code>.
-     */
     @Nullable
     public String getAuthMethod() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.options</code>.
-     */
     public void setOptions(@Nullable String[] value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.options</code>.
-     */
     @Nullable
     public String[] getOptions() {
         return (String[]) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.error</code>.
-     */
     public void setError(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.error</code>.
-     */
     @Nullable
     public String getError() {
         return (String) get(10);
@@ -510,16 +441,10 @@ public class PgHbaFileRulesRecord extends TableRecordImpl<PgHbaFileRulesRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgHbaFileRulesRecord
-     */
     public PgHbaFileRulesRecord() {
         super(PgHbaFileRules.PG_HBA_FILE_RULES);
     }
 
-    /**
-     * Create a detached, initialised PgHbaFileRulesRecord
-     */
     @ConstructorProperties({ "ruleNumber", "fileName", "lineNumber", "type", "database", "userName", "address", "netmask", "authMethod", "options", "error" })
     public PgHbaFileRulesRecord(@Nullable Integer ruleNumber, @Nullable String fileName, @Nullable Integer lineNumber, @Nullable String type, @Nullable String[] database, @Nullable String[] userName, @Nullable String address, @Nullable String netmask, @Nullable String authMethod, @Nullable String[] options, @Nullable String error) {
         super(PgHbaFileRules.PG_HBA_FILE_RULES);
@@ -538,9 +463,6 @@ public class PgHbaFileRulesRecord extends TableRecordImpl<PgHbaFileRulesRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgHbaFileRulesRecord
-     */
     public PgHbaFileRulesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgHbaFileRules value) {
         super(PgHbaFileRules.PG_HBA_FILE_RULES);
 

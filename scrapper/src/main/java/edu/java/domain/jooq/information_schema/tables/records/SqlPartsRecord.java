@@ -20,9 +20,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.sql_parts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,77 +32,47 @@ public class SqlPartsRecord extends TableRecordImpl<SqlPartsRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.sql_parts.feature_id</code>.
-     */
     public void setFeatureId(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.feature_id</code>.
-     */
     @Nullable
     public String getFeatureId() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.feature_name</code>.
-     */
     public void setFeatureName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.feature_name</code>.
-     */
     @Nullable
     public String getFeatureName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.is_supported</code>.
-     */
     public void setIsSupported(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.is_supported</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsSupported() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.is_verified_by</code>.
-     */
     public void setIsVerifiedBy(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.is_verified_by</code>.
-     */
     @Nullable
     public String getIsVerifiedBy() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.comments</code>.
-     */
     public void setComments(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.comments</code>.
-     */
     @Nullable
     public String getComments() {
         return (String) get(4);
@@ -267,16 +234,10 @@ public class SqlPartsRecord extends TableRecordImpl<SqlPartsRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached SqlPartsRecord
-     */
     public SqlPartsRecord() {
         super(SqlParts.SQL_PARTS);
     }
 
-    /**
-     * Create a detached, initialised SqlPartsRecord
-     */
     @ConstructorProperties({ "featureId", "featureName", "isSupported", "isVerifiedBy", "comments" })
     public SqlPartsRecord(@Nullable String featureId, @Nullable String featureName, @Nullable String isSupported, @Nullable String isVerifiedBy, @Nullable String comments) {
         super(SqlParts.SQL_PARTS);
@@ -289,9 +250,6 @@ public class SqlPartsRecord extends TableRecordImpl<SqlPartsRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised SqlPartsRecord
-     */
     public SqlPartsRecord(edu.java.domain.jooq.information_schema.tables.pojos.SqlParts value) {
         super(SqlParts.SQL_PARTS);
 

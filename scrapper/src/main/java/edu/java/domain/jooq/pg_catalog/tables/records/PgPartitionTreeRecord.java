@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_partition_tree</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,85 +30,41 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setRelid(@Nullable Object value) {
         set(0, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getRelid() {
         return get(0);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setParentrelid(@Nullable Object value) {
         set(1, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getParentrelid() {
         return get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partition_tree.isleaf</code>.
-     */
     public void setIsleaf(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partition_tree.isleaf</code>.
-     */
     @Nullable
     public Boolean getIsleaf() {
         return (Boolean) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_partition_tree.level</code>.
-     */
     public void setLevel(@Nullable Integer value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_partition_tree.level</code>.
-     */
     @Nullable
     public Integer getLevel() {
         return (Integer) get(3);
@@ -133,14 +86,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         return (Row4) super.valuesRow();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -148,14 +93,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         return PgPartitionTree.PG_PARTITION_TREE.RELID;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -175,14 +112,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         return PgPartitionTree.PG_PARTITION_TREE.LEVEL;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -190,14 +119,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         return getRelid();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -217,14 +138,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         return getLevel();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -232,14 +145,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         return getRelid();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -259,14 +164,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         return getLevel();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -275,14 +172,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -319,16 +208,10 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPartitionTreeRecord
-     */
     public PgPartitionTreeRecord() {
         super(PgPartitionTree.PG_PARTITION_TREE);
     }
 
-    /**
-     * Create a detached, initialised PgPartitionTreeRecord
-     */
     @ConstructorProperties({ "relid", "parentrelid", "isleaf", "level" })
     public PgPartitionTreeRecord(@Nullable Object relid, @Nullable Object parentrelid, @Nullable Boolean isleaf, @Nullable Integer level) {
         super(PgPartitionTree.PG_PARTITION_TREE);
@@ -340,9 +223,6 @@ public class PgPartitionTreeRecord extends TableRecordImpl<PgPartitionTreeRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPartitionTreeRecord
-     */
     public PgPartitionTreeRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPartitionTree value) {
         super(PgPartitionTree.PG_PARTITION_TREE);
 

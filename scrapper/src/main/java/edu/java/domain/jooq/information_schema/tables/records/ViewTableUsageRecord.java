@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.view_table_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,93 +30,55 @@ public class ViewTableUsageRecord extends TableRecordImpl<ViewTableUsageRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.view_catalog</code>.
-     */
     public void setViewCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.view_catalog</code>.
-     */
     @Nullable
     public String getViewCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.view_schema</code>.
-     */
     public void setViewSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.view_schema</code>.
-     */
     @Nullable
     public String getViewSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.view_name</code>.
-     */
     public void setViewName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.view_name</code>.
-     */
     @Nullable
     public String getViewName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.view_table_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.view_table_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.view_table_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.view_table_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(5);
@@ -307,16 +266,10 @@ public class ViewTableUsageRecord extends TableRecordImpl<ViewTableUsageRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ViewTableUsageRecord
-     */
     public ViewTableUsageRecord() {
         super(ViewTableUsage.VIEW_TABLE_USAGE);
     }
 
-    /**
-     * Create a detached, initialised ViewTableUsageRecord
-     */
     @ConstructorProperties({ "viewCatalog", "viewSchema", "viewName", "tableCatalog", "tableSchema", "tableName" })
     public ViewTableUsageRecord(@Nullable String viewCatalog, @Nullable String viewSchema, @Nullable String viewName, @Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName) {
         super(ViewTableUsage.VIEW_TABLE_USAGE);
@@ -330,9 +283,6 @@ public class ViewTableUsageRecord extends TableRecordImpl<ViewTableUsageRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ViewTableUsageRecord
-     */
     public ViewTableUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.ViewTableUsage value) {
         super(ViewTableUsage.VIEW_TABLE_USAGE);
 

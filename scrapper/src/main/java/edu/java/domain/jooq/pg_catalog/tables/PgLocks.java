@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLocksRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_locks</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,98 +42,44 @@ public class PgLocks extends TableImpl<PgLocksRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_locks</code>
-     */
     public static final PgLocks PG_LOCKS = new PgLocks();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLocksRecord> getRecordType() {
         return PgLocksRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_locks.locktype</code>.
-     */
     public final TableField<PgLocksRecord, String> LOCKTYPE = createField(DSL.name("locktype"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.database</code>.
-     */
     public final TableField<PgLocksRecord, Long> DATABASE = createField(DSL.name("database"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.relation</code>.
-     */
     public final TableField<PgLocksRecord, Long> RELATION = createField(DSL.name("relation"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.page</code>.
-     */
     public final TableField<PgLocksRecord, Integer> PAGE = createField(DSL.name("page"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.tuple</code>.
-     */
     public final TableField<PgLocksRecord, Short> TUPLE = createField(DSL.name("tuple"), SQLDataType.SMALLINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.virtualxid</code>.
-     */
     public final TableField<PgLocksRecord, String> VIRTUALXID = createField(DSL.name("virtualxid"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.transactionid</code>.
-     */
     public final TableField<PgLocksRecord, Long> TRANSACTIONID = createField(DSL.name("transactionid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.classid</code>.
-     */
     public final TableField<PgLocksRecord, Long> CLASSID = createField(DSL.name("classid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.objid</code>.
-     */
     public final TableField<PgLocksRecord, Long> OBJID = createField(DSL.name("objid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.objsubid</code>.
-     */
     public final TableField<PgLocksRecord, Short> OBJSUBID = createField(DSL.name("objsubid"), SQLDataType.SMALLINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.virtualtransaction</code>.
-     */
     public final TableField<PgLocksRecord, String> VIRTUALTRANSACTION = createField(DSL.name("virtualtransaction"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.pid</code>.
-     */
     public final TableField<PgLocksRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.mode</code>.
-     */
     public final TableField<PgLocksRecord, String> MODE = createField(DSL.name("mode"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.granted</code>.
-     */
     public final TableField<PgLocksRecord, Boolean> GRANTED = createField(DSL.name("granted"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.fastpath</code>.
-     */
     public final TableField<PgLocksRecord, Boolean> FASTPATH = createField(DSL.name("fastpath"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_locks.waitstart</code>.
-     */
     public final TableField<PgLocksRecord, OffsetDateTime> WAITSTART = createField(DSL.name("waitstart"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgLocks(Name alias, Table<PgLocksRecord> aliased) {
@@ -166,23 +108,14 @@ public class PgLocks extends TableImpl<PgLocksRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_locks</code> table reference
-     */
     public PgLocks(String alias) {
         this(DSL.name(alias), PG_LOCKS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_locks</code> table reference
-     */
     public PgLocks(Name alias) {
         this(alias, PG_LOCKS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_locks</code> table reference
-     */
     public PgLocks() {
         this(DSL.name("pg_locks"), null);
     }
@@ -215,27 +148,18 @@ public class PgLocks extends TableImpl<PgLocksRecord> {
         return new PgLocks(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLocks rename(String name) {
         return new PgLocks(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLocks rename(Name name) {
         return new PgLocks(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLocks rename(Table<?> name) {
@@ -252,17 +176,10 @@ public class PgLocks extends TableImpl<PgLocksRecord> {
         return (Row16) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function16<? super String, ? super Long, ? super Long, ? super Integer, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Integer, ? super String, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function16<? super String, ? super Long, ? super Long, ? super Integer, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Integer, ? super String, ? super Boolean, ? super Boolean, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

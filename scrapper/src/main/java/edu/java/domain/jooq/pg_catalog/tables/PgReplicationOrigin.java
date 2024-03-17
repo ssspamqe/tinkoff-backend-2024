@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgReplicationOriginRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_replication_origin</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,28 +45,16 @@ public class PgReplicationOrigin extends TableImpl<PgReplicationOriginRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_replication_origin</code>
-     */
     public static final PgReplicationOrigin PG_REPLICATION_ORIGIN = new PgReplicationOrigin();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgReplicationOriginRecord> getRecordType() {
         return PgReplicationOriginRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_replication_origin.roident</code>.
-     */
     public final TableField<PgReplicationOriginRecord, Long> ROIDENT = createField(DSL.name("roident"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_replication_origin.roname</code>.
-     */
     public final TableField<PgReplicationOriginRecord, String> RONAME = createField(DSL.name("roname"), SQLDataType.CLOB.nullable(false), this, "");
 
     private PgReplicationOrigin(Name alias, Table<PgReplicationOriginRecord> aliased) {
@@ -81,25 +65,14 @@ public class PgReplicationOrigin extends TableImpl<PgReplicationOriginRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_replication_origin</code> table
-     * reference
-     */
     public PgReplicationOrigin(String alias) {
         this(DSL.name(alias), PG_REPLICATION_ORIGIN);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_replication_origin</code> table
-     * reference
-     */
     public PgReplicationOrigin(Name alias) {
         this(alias, PG_REPLICATION_ORIGIN);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_replication_origin</code> table reference
-     */
     public PgReplicationOrigin() {
         this(DSL.name("pg_replication_origin"), null);
     }
@@ -144,27 +117,18 @@ public class PgReplicationOrigin extends TableImpl<PgReplicationOriginRecord> {
         return new PgReplicationOrigin(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgReplicationOrigin rename(String name) {
         return new PgReplicationOrigin(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgReplicationOrigin rename(Name name) {
         return new PgReplicationOrigin(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgReplicationOrigin rename(Table<?> name) {
@@ -181,17 +145,10 @@ public class PgReplicationOrigin extends TableImpl<PgReplicationOriginRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super Long, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super Long, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

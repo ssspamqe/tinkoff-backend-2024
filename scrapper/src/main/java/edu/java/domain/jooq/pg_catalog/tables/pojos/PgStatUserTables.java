@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_user_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -143,396 +140,236 @@ public class PgStatUserTables implements Serializable {
         this.autoanalyzeCount = autoanalyzeCount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return this.relname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.relname</code>.
-     */
     public void setRelname(@Nullable String relname) {
         this.relname = relname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.seq_scan</code>.
-     */
     @Nullable
     public Long getSeqScan() {
         return this.seqScan;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.seq_scan</code>.
-     */
     public void setSeqScan(@Nullable Long seqScan) {
         this.seqScan = seqScan;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.last_seq_scan</code>.
-     */
     @Nullable
     public OffsetDateTime getLastSeqScan() {
         return this.lastSeqScan;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.last_seq_scan</code>.
-     */
     public void setLastSeqScan(@Nullable OffsetDateTime lastSeqScan) {
         this.lastSeqScan = lastSeqScan;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.seq_tup_read</code>.
-     */
     @Nullable
     public Long getSeqTupRead() {
         return this.seqTupRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.seq_tup_read</code>.
-     */
     public void setSeqTupRead(@Nullable Long seqTupRead) {
         this.seqTupRead = seqTupRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.idx_scan</code>.
-     */
     @Nullable
     public Long getIdxScan() {
         return this.idxScan;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.idx_scan</code>.
-     */
     public void setIdxScan(@Nullable Long idxScan) {
         this.idxScan = idxScan;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.last_idx_scan</code>.
-     */
     @Nullable
     public OffsetDateTime getLastIdxScan() {
         return this.lastIdxScan;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.last_idx_scan</code>.
-     */
     public void setLastIdxScan(@Nullable OffsetDateTime lastIdxScan) {
         this.lastIdxScan = lastIdxScan;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.idx_tup_fetch</code>.
-     */
     @Nullable
     public Long getIdxTupFetch() {
         return this.idxTupFetch;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.idx_tup_fetch</code>.
-     */
     public void setIdxTupFetch(@Nullable Long idxTupFetch) {
         this.idxTupFetch = idxTupFetch;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.n_tup_ins</code>.
-     */
     @Nullable
     public Long getNTupIns() {
         return this.nTupIns;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.n_tup_ins</code>.
-     */
     public void setNTupIns(@Nullable Long nTupIns) {
         this.nTupIns = nTupIns;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.n_tup_upd</code>.
-     */
     @Nullable
     public Long getNTupUpd() {
         return this.nTupUpd;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.n_tup_upd</code>.
-     */
     public void setNTupUpd(@Nullable Long nTupUpd) {
         this.nTupUpd = nTupUpd;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.n_tup_del</code>.
-     */
     @Nullable
     public Long getNTupDel() {
         return this.nTupDel;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.n_tup_del</code>.
-     */
     public void setNTupDel(@Nullable Long nTupDel) {
         this.nTupDel = nTupDel;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.n_tup_hot_upd</code>.
-     */
     @Nullable
     public Long getNTupHotUpd() {
         return this.nTupHotUpd;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.n_tup_hot_upd</code>.
-     */
     public void setNTupHotUpd(@Nullable Long nTupHotUpd) {
         this.nTupHotUpd = nTupHotUpd;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.n_tup_newpage_upd</code>.
-     */
     @Nullable
     public Long getNTupNewpageUpd() {
         return this.nTupNewpageUpd;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.n_tup_newpage_upd</code>.
-     */
     public void setNTupNewpageUpd(@Nullable Long nTupNewpageUpd) {
         this.nTupNewpageUpd = nTupNewpageUpd;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.n_live_tup</code>.
-     */
     @Nullable
     public Long getNLiveTup() {
         return this.nLiveTup;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.n_live_tup</code>.
-     */
     public void setNLiveTup(@Nullable Long nLiveTup) {
         this.nLiveTup = nLiveTup;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.n_dead_tup</code>.
-     */
     @Nullable
     public Long getNDeadTup() {
         return this.nDeadTup;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.n_dead_tup</code>.
-     */
     public void setNDeadTup(@Nullable Long nDeadTup) {
         this.nDeadTup = nDeadTup;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_user_tables.n_mod_since_analyze</code>.
-     */
     @Nullable
     public Long getNModSinceAnalyze() {
         return this.nModSinceAnalyze;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_user_tables.n_mod_since_analyze</code>.
-     */
     public void setNModSinceAnalyze(@Nullable Long nModSinceAnalyze) {
         this.nModSinceAnalyze = nModSinceAnalyze;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_user_tables.n_ins_since_vacuum</code>.
-     */
     @Nullable
     public Long getNInsSinceVacuum() {
         return this.nInsSinceVacuum;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_user_tables.n_ins_since_vacuum</code>.
-     */
     public void setNInsSinceVacuum(@Nullable Long nInsSinceVacuum) {
         this.nInsSinceVacuum = nInsSinceVacuum;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.last_vacuum</code>.
-     */
     @Nullable
     public OffsetDateTime getLastVacuum() {
         return this.lastVacuum;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.last_vacuum</code>.
-     */
     public void setLastVacuum(@Nullable OffsetDateTime lastVacuum) {
         this.lastVacuum = lastVacuum;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.last_autovacuum</code>.
-     */
     @Nullable
     public OffsetDateTime getLastAutovacuum() {
         return this.lastAutovacuum;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.last_autovacuum</code>.
-     */
     public void setLastAutovacuum(@Nullable OffsetDateTime lastAutovacuum) {
         this.lastAutovacuum = lastAutovacuum;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.last_analyze</code>.
-     */
     @Nullable
     public OffsetDateTime getLastAnalyze() {
         return this.lastAnalyze;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.last_analyze</code>.
-     */
     public void setLastAnalyze(@Nullable OffsetDateTime lastAnalyze) {
         this.lastAnalyze = lastAnalyze;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.last_autoanalyze</code>.
-     */
     @Nullable
     public OffsetDateTime getLastAutoanalyze() {
         return this.lastAutoanalyze;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.last_autoanalyze</code>.
-     */
     public void setLastAutoanalyze(@Nullable OffsetDateTime lastAutoanalyze) {
         this.lastAutoanalyze = lastAutoanalyze;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.vacuum_count</code>.
-     */
     @Nullable
     public Long getVacuumCount() {
         return this.vacuumCount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.vacuum_count</code>.
-     */
     public void setVacuumCount(@Nullable Long vacuumCount) {
         this.vacuumCount = vacuumCount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.autovacuum_count</code>.
-     */
     @Nullable
     public Long getAutovacuumCount() {
         return this.autovacuumCount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.autovacuum_count</code>.
-     */
     public void setAutovacuumCount(@Nullable Long autovacuumCount) {
         this.autovacuumCount = autovacuumCount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.analyze_count</code>.
-     */
     @Nullable
     public Long getAnalyzeCount() {
         return this.analyzeCount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.analyze_count</code>.
-     */
     public void setAnalyzeCount(@Nullable Long analyzeCount) {
         this.analyzeCount = analyzeCount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_tables.autoanalyze_count</code>.
-     */
     @Nullable
     public Long getAutoanalyzeCount() {
         return this.autoanalyzeCount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_tables.autoanalyze_count</code>.
-     */
     public void setAutoanalyzeCount(@Nullable Long autoanalyzeCount) {
         this.autoanalyzeCount = autoanalyzeCount;
     }

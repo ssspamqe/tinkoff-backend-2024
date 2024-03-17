@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.gen_random_uuid</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,14 +28,8 @@ public class GenRandomUuid extends AbstractRoutine<UUID> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.gen_random_uuid.RETURN_VALUE</code>.
-     */
     public static final Parameter<UUID> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.UUID, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public GenRandomUuid() {
         super("gen_random_uuid", PgCatalog.PG_CATALOG, SQLDataType.UUID);
 

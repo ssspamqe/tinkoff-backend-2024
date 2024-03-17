@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_seclabels</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,122 +67,74 @@ public class PgSeclabels implements Serializable {
         this.label = label;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objoid</code>.
-     */
     @Nullable
     public Long getObjoid() {
         return this.objoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objoid</code>.
-     */
     public void setObjoid(@Nullable Long objoid) {
         this.objoid = objoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.classoid</code>.
-     */
     @Nullable
     public Long getClassoid() {
         return this.classoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.classoid</code>.
-     */
     public void setClassoid(@Nullable Long classoid) {
         this.classoid = classoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objsubid</code>.
-     */
     @Nullable
     public Integer getObjsubid() {
         return this.objsubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objsubid</code>.
-     */
     public void setObjsubid(@Nullable Integer objsubid) {
         this.objsubid = objsubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objtype</code>.
-     */
     @Nullable
     public String getObjtype() {
         return this.objtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objtype</code>.
-     */
     public void setObjtype(@Nullable String objtype) {
         this.objtype = objtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objnamespace</code>.
-     */
     @Nullable
     public Long getObjnamespace() {
         return this.objnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objnamespace</code>.
-     */
     public void setObjnamespace(@Nullable Long objnamespace) {
         this.objnamespace = objnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objname</code>.
-     */
     @Nullable
     public String getObjname() {
         return this.objname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objname</code>.
-     */
     public void setObjname(@Nullable String objname) {
         this.objname = objname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.provider</code>.
-     */
     @Nullable
     public String getProvider() {
         return this.provider;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.provider</code>.
-     */
     public void setProvider(@Nullable String provider) {
         this.provider = provider;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.label</code>.
-     */
     @Nullable
     public String getLabel() {
         return this.label;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.label</code>.
-     */
     public void setLabel(@Nullable String label) {
         this.label = label;
     }

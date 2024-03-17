@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_event_trigger_ddl_commands</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -74,160 +71,84 @@ public class PgEventTriggerDdlCommands implements Serializable {
         this.command = command;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger_ddl_commands.classid</code>.
-     */
     @Nullable
     public Long getClassid() {
         return this.classid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger_ddl_commands.classid</code>.
-     */
     public void setClassid(@Nullable Long classid) {
         this.classid = classid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger_ddl_commands.objid</code>.
-     */
     @Nullable
     public Long getObjid() {
         return this.objid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger_ddl_commands.objid</code>.
-     */
     public void setObjid(@Nullable Long objid) {
         this.objid = objid;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.objsubid</code>.
-     */
     @Nullable
     public Integer getObjsubid() {
         return this.objsubid;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.objsubid</code>.
-     */
     public void setObjsubid(@Nullable Integer objsubid) {
         this.objsubid = objsubid;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.command_tag</code>.
-     */
     @Nullable
     public String getCommandTag() {
         return this.commandTag;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.command_tag</code>.
-     */
     public void setCommandTag(@Nullable String commandTag) {
         this.commandTag = commandTag;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return this.objectType;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.object_type</code>.
-     */
     public void setObjectType(@Nullable String objectType) {
         this.objectType = objectType;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.schema_name</code>.
-     */
     @Nullable
     public String getSchemaName() {
         return this.schemaName;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.schema_name</code>.
-     */
     public void setSchemaName(@Nullable String schemaName) {
         this.schemaName = schemaName;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.object_identity</code>.
-     */
     @Nullable
     public String getObjectIdentity() {
         return this.objectIdentity;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.object_identity</code>.
-     */
     public void setObjectIdentity(@Nullable String objectIdentity) {
         this.objectIdentity = objectIdentity;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.in_extension</code>.
-     */
     @Nullable
     public Boolean getInExtension() {
         return this.inExtension;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_event_trigger_ddl_commands.in_extension</code>.
-     */
     public void setInExtension(@Nullable Boolean inExtension) {
         this.inExtension = inExtension;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getCommand() {
         return this.command;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setCommand(@Nullable Object command) {
         this.command = command;

@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_constraint</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -144,421 +141,255 @@ public class PgConstraint implements Serializable {
         this.conbin = conbin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getConname() {
         return this.conname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conname</code>.
-     */
     public void setConname(@NotNull String conname) {
         this.conname = conname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.connamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConnamespace() {
         return this.connamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.connamespace</code>.
-     */
     public void setConnamespace(@NotNull Long connamespace) {
         this.connamespace = connamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.contype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getContype() {
         return this.contype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.contype</code>.
-     */
     public void setContype(@NotNull String contype) {
         this.contype = contype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.condeferrable</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getCondeferrable() {
         return this.condeferrable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.condeferrable</code>.
-     */
     public void setCondeferrable(@NotNull Boolean condeferrable) {
         this.condeferrable = condeferrable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.condeferred</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getCondeferred() {
         return this.condeferred;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.condeferred</code>.
-     */
     public void setCondeferred(@NotNull Boolean condeferred) {
         this.condeferred = condeferred;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.convalidated</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getConvalidated() {
         return this.convalidated;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.convalidated</code>.
-     */
     public void setConvalidated(@NotNull Boolean convalidated) {
         this.convalidated = convalidated;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConrelid() {
         return this.conrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conrelid</code>.
-     */
     public void setConrelid(@NotNull Long conrelid) {
         this.conrelid = conrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.contypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getContypid() {
         return this.contypid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.contypid</code>.
-     */
     public void setContypid(@NotNull Long contypid) {
         this.contypid = contypid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conindid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConindid() {
         return this.conindid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conindid</code>.
-     */
     public void setConindid(@NotNull Long conindid) {
         this.conindid = conindid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conparentid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConparentid() {
         return this.conparentid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conparentid</code>.
-     */
     public void setConparentid(@NotNull Long conparentid) {
         this.conparentid = conparentid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.confrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getConfrelid() {
         return this.confrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.confrelid</code>.
-     */
     public void setConfrelid(@NotNull Long confrelid) {
         this.confrelid = confrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.confupdtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getConfupdtype() {
         return this.confupdtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.confupdtype</code>.
-     */
     public void setConfupdtype(@NotNull String confupdtype) {
         this.confupdtype = confupdtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.confdeltype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getConfdeltype() {
         return this.confdeltype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.confdeltype</code>.
-     */
     public void setConfdeltype(@NotNull String confdeltype) {
         this.confdeltype = confdeltype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.confmatchtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getConfmatchtype() {
         return this.confmatchtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.confmatchtype</code>.
-     */
     public void setConfmatchtype(@NotNull String confmatchtype) {
         this.confmatchtype = confmatchtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conislocal</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getConislocal() {
         return this.conislocal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conislocal</code>.
-     */
     public void setConislocal(@NotNull Boolean conislocal) {
         this.conislocal = conislocal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.coninhcount</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getConinhcount() {
         return this.coninhcount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.coninhcount</code>.
-     */
     public void setConinhcount(@NotNull Short coninhcount) {
         this.coninhcount = coninhcount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.connoinherit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getConnoinherit() {
         return this.connoinherit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.connoinherit</code>.
-     */
     public void setConnoinherit(@NotNull Boolean connoinherit) {
         this.connoinherit = connoinherit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conkey</code>.
-     */
     @Nullable
     public Short[] getConkey() {
         return this.conkey;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conkey</code>.
-     */
     public void setConkey(@Nullable Short[] conkey) {
         this.conkey = conkey;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.confkey</code>.
-     */
     @Nullable
     public Short[] getConfkey() {
         return this.confkey;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.confkey</code>.
-     */
     public void setConfkey(@Nullable Short[] confkey) {
         this.confkey = confkey;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conpfeqop</code>.
-     */
     @Nullable
     public Long[] getConpfeqop() {
         return this.conpfeqop;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conpfeqop</code>.
-     */
     public void setConpfeqop(@Nullable Long[] conpfeqop) {
         this.conpfeqop = conpfeqop;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conppeqop</code>.
-     */
     @Nullable
     public Long[] getConppeqop() {
         return this.conppeqop;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conppeqop</code>.
-     */
     public void setConppeqop(@Nullable Long[] conppeqop) {
         this.conppeqop = conppeqop;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conffeqop</code>.
-     */
     @Nullable
     public Long[] getConffeqop() {
         return this.conffeqop;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conffeqop</code>.
-     */
     public void setConffeqop(@Nullable Long[] conffeqop) {
         this.conffeqop = conffeqop;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.confdelsetcols</code>.
-     */
     @Nullable
     public Short[] getConfdelsetcols() {
         return this.confdelsetcols;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.confdelsetcols</code>.
-     */
     public void setConfdelsetcols(@Nullable Short[] confdelsetcols) {
         this.confdelsetcols = confdelsetcols;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_constraint.conexclop</code>.
-     */
     @Nullable
     public Long[] getConexclop() {
         return this.conexclop;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_constraint.conexclop</code>.
-     */
     public void setConexclop(@Nullable Long[] conexclop) {
         this.conexclop = conexclop;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getConbin() {
         return this.conbin;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setConbin(@Nullable Object conbin) {
         this.conbin = conbin;

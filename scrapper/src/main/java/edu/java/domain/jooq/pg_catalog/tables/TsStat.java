@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.TsStatRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.ts_stat</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,33 +38,18 @@ public class TsStat extends TableImpl<TsStatRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.ts_stat</code>
-     */
     public static final TsStat TS_STAT = new TsStat();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TsStatRecord> getRecordType() {
         return TsStatRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.ts_stat.word</code>.
-     */
     public final TableField<TsStatRecord, String> WORD = createField(DSL.name("word"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_stat.ndoc</code>.
-     */
     public final TableField<TsStatRecord, Integer> NDOC = createField(DSL.name("ndoc"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_stat.nentry</code>.
-     */
     public final TableField<TsStatRecord, Integer> NENTRY = createField(DSL.name("nentry"), SQLDataType.INTEGER, this, "");
 
     private TsStat(Name alias, Table<TsStatRecord> aliased) {
@@ -83,23 +63,14 @@ public class TsStat extends TableImpl<TsStatRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.ts_stat</code> table reference
-     */
     public TsStat(String alias) {
         this(DSL.name(alias), TS_STAT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.ts_stat</code> table reference
-     */
     public TsStat(Name alias) {
         this(alias, TS_STAT);
     }
 
-    /**
-     * Create a <code>pg_catalog.ts_stat</code> table reference
-     */
     public TsStat() {
         this(DSL.name("ts_stat"), null);
     }
@@ -128,27 +99,18 @@ public class TsStat extends TableImpl<TsStatRecord> {
         return new TsStat(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsStat rename(String name) {
         return new TsStat(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsStat rename(Name name) {
         return new TsStat(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsStat rename(Table<?> name) {
@@ -165,9 +127,6 @@ public class TsStat extends TableImpl<TsStatRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TsStat call(
           String query
         , String weights
@@ -180,9 +139,6 @@ public class TsStat extends TableImpl<TsStatRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TsStat call(
           Field<String> query
         , Field<String> weights
@@ -195,17 +151,10 @@ public class TsStat extends TableImpl<TsStatRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

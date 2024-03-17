@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_proc</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -160,497 +157,297 @@ public class PgProc implements Serializable {
         this.proacl = proacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProname() {
         return this.proname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proname</code>.
-     */
     public void setProname(@NotNull String proname) {
         this.proname = proname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.pronamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getPronamespace() {
         return this.pronamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.pronamespace</code>.
-     */
     public void setPronamespace(@NotNull Long pronamespace) {
         this.pronamespace = pronamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getProowner() {
         return this.proowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proowner</code>.
-     */
     public void setProowner(@NotNull Long proowner) {
         this.proowner = proowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.prolang</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getProlang() {
         return this.prolang;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.prolang</code>.
-     */
     public void setProlang(@NotNull Long prolang) {
         this.prolang = prolang;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.procost</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Float getProcost() {
         return this.procost;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.procost</code>.
-     */
     public void setProcost(@NotNull Float procost) {
         this.procost = procost;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.prorows</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Float getProrows() {
         return this.prorows;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.prorows</code>.
-     */
     public void setProrows(@NotNull Float prorows) {
         this.prorows = prorows;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.provariadic</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getProvariadic() {
         return this.provariadic;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.provariadic</code>.
-     */
     public void setProvariadic(@NotNull Long provariadic) {
         this.provariadic = provariadic;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.prosupport</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProsupport() {
         return this.prosupport;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.prosupport</code>.
-     */
     public void setProsupport(@NotNull String prosupport) {
         this.prosupport = prosupport;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.prokind</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProkind() {
         return this.prokind;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.prokind</code>.
-     */
     public void setProkind(@NotNull String prokind) {
         this.prokind = prokind;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.prosecdef</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getProsecdef() {
         return this.prosecdef;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.prosecdef</code>.
-     */
     public void setProsecdef(@NotNull Boolean prosecdef) {
         this.prosecdef = prosecdef;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proleakproof</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getProleakproof() {
         return this.proleakproof;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proleakproof</code>.
-     */
     public void setProleakproof(@NotNull Boolean proleakproof) {
         this.proleakproof = proleakproof;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proisstrict</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getProisstrict() {
         return this.proisstrict;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proisstrict</code>.
-     */
     public void setProisstrict(@NotNull Boolean proisstrict) {
         this.proisstrict = proisstrict;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proretset</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getProretset() {
         return this.proretset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proretset</code>.
-     */
     public void setProretset(@NotNull Boolean proretset) {
         this.proretset = proretset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.provolatile</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProvolatile() {
         return this.provolatile;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.provolatile</code>.
-     */
     public void setProvolatile(@NotNull String provolatile) {
         this.provolatile = provolatile;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proparallel</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProparallel() {
         return this.proparallel;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proparallel</code>.
-     */
     public void setProparallel(@NotNull String proparallel) {
         this.proparallel = proparallel;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.pronargs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getPronargs() {
         return this.pronargs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.pronargs</code>.
-     */
     public void setPronargs(@NotNull Short pronargs) {
         this.pronargs = pronargs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.pronargdefaults</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getPronargdefaults() {
         return this.pronargdefaults;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.pronargdefaults</code>.
-     */
     public void setPronargdefaults(@NotNull Short pronargdefaults) {
         this.pronargdefaults = pronargdefaults;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.prorettype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getProrettype() {
         return this.prorettype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.prorettype</code>.
-     */
     public void setProrettype(@NotNull Long prorettype) {
         this.prorettype = prorettype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proargtypes</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getProargtypes() {
         return this.proargtypes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proargtypes</code>.
-     */
     public void setProargtypes(@NotNull Object[] proargtypes) {
         this.proargtypes = proargtypes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proallargtypes</code>.
-     */
     @Nullable
     public Long[] getProallargtypes() {
         return this.proallargtypes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proallargtypes</code>.
-     */
     public void setProallargtypes(@Nullable Long[] proallargtypes) {
         this.proallargtypes = proallargtypes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proargmodes</code>.
-     */
     @Nullable
     public String[] getProargmodes() {
         return this.proargmodes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proargmodes</code>.
-     */
     public void setProargmodes(@Nullable String[] proargmodes) {
         this.proargmodes = proargmodes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proargnames</code>.
-     */
     @Nullable
     public String[] getProargnames() {
         return this.proargnames;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proargnames</code>.
-     */
     public void setProargnames(@Nullable String[] proargnames) {
         this.proargnames = proargnames;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getProargdefaults() {
         return this.proargdefaults;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setProargdefaults(@Nullable Object proargdefaults) {
         this.proargdefaults = proargdefaults;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.protrftypes</code>.
-     */
     @Nullable
     public Long[] getProtrftypes() {
         return this.protrftypes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.protrftypes</code>.
-     */
     public void setProtrftypes(@Nullable Long[] protrftypes) {
         this.protrftypes = protrftypes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.prosrc</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProsrc() {
         return this.prosrc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.prosrc</code>.
-     */
     public void setProsrc(@NotNull String prosrc) {
         this.prosrc = prosrc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.probin</code>.
-     */
     @Nullable
     public String getProbin() {
         return this.probin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.probin</code>.
-     */
     public void setProbin(@Nullable String probin) {
         this.probin = probin;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getProsqlbody() {
         return this.prosqlbody;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setProsqlbody(@Nullable Object prosqlbody) {
         this.prosqlbody = prosqlbody;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proconfig</code>.
-     */
     @Nullable
     public String[] getProconfig() {
         return this.proconfig;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proconfig</code>.
-     */
     public void setProconfig(@Nullable String[] proconfig) {
         this.proconfig = proconfig;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_proc.proacl</code>.
-     */
     @Nullable
     public String[] getProacl() {
         return this.proacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_proc.proacl</code>.
-     */
     public void setProacl(@Nullable String[] proacl) {
         this.proacl = proacl;
     }

@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>public.chats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,34 +44,22 @@ public class Chats implements Serializable {
         this.createdAt = createdAt;
     }
 
-    /**
-     * Getter for <code>public.chats.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getId() {
         return this.id;
     }
 
-    /**
-     * Setter for <code>public.chats.id</code>.
-     */
     public void setId(@NotNull Long id) {
         this.id = id;
     }
 
-    /**
-     * Getter for <code>public.chats.created_at</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public OffsetDateTime getCreatedAt() {
         return this.createdAt;
     }
 
-    /**
-     * Setter for <code>public.chats.created_at</code>.
-     */
     public void setCreatedAt(@NotNull OffsetDateTime createdAt) {
         this.createdAt = createdAt;
     }

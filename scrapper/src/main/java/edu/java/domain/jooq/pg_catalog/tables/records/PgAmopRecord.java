@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_amop</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,144 +30,90 @@ public class PgAmopRecord extends UpdatableRecordImpl<PgAmopRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopfamily</code>.
-     */
     public void setAmopfamily(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopfamily</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmopfamily() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amoplefttype</code>.
-     */
     public void setAmoplefttype(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amoplefttype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmoplefttype() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amoprighttype</code>.
-     */
     public void setAmoprighttype(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amoprighttype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmoprighttype() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopstrategy</code>.
-     */
     public void setAmopstrategy(@NotNull Short value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopstrategy</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAmopstrategy() {
         return (Short) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amoppurpose</code>.
-     */
     public void setAmoppurpose(@NotNull String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amoppurpose</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmoppurpose() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopopr</code>.
-     */
     public void setAmopopr(@NotNull Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopopr</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmopopr() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopmethod</code>.
-     */
     public void setAmopmethod(@NotNull Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopmethod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmopmethod() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_amop.amopsortfamily</code>.
-     */
     public void setAmopsortfamily(@NotNull Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_amop.amopsortfamily</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAmopsortfamily() {
@@ -447,16 +390,10 @@ public class PgAmopRecord extends UpdatableRecordImpl<PgAmopRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAmopRecord
-     */
     public PgAmopRecord() {
         super(PgAmop.PG_AMOP);
     }
 
-    /**
-     * Create a detached, initialised PgAmopRecord
-     */
     @ConstructorProperties({ "oid", "amopfamily", "amoplefttype", "amoprighttype", "amopstrategy", "amoppurpose", "amopopr", "amopmethod", "amopsortfamily" })
     public PgAmopRecord(@NotNull Long oid, @NotNull Long amopfamily, @NotNull Long amoplefttype, @NotNull Long amoprighttype, @NotNull Short amopstrategy, @NotNull String amoppurpose, @NotNull Long amopopr, @NotNull Long amopmethod, @NotNull Long amopsortfamily) {
         super(PgAmop.PG_AMOP);
@@ -473,9 +410,6 @@ public class PgAmopRecord extends UpdatableRecordImpl<PgAmopRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAmopRecord
-     */
     public PgAmopRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAmop value) {
         super(PgAmop.PG_AMOP);
 

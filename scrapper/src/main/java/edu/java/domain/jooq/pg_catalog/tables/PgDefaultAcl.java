@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgDefaultAclRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_default_acl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,43 +45,22 @@ public class PgDefaultAcl extends TableImpl<PgDefaultAclRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_default_acl</code>
-     */
     public static final PgDefaultAcl PG_DEFAULT_ACL = new PgDefaultAcl();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgDefaultAclRecord> getRecordType() {
         return PgDefaultAclRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_default_acl.oid</code>.
-     */
     public final TableField<PgDefaultAclRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_default_acl.defaclrole</code>.
-     */
     public final TableField<PgDefaultAclRecord, Long> DEFACLROLE = createField(DSL.name("defaclrole"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_default_acl.defaclnamespace</code>.
-     */
     public final TableField<PgDefaultAclRecord, Long> DEFACLNAMESPACE = createField(DSL.name("defaclnamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_default_acl.defaclobjtype</code>.
-     */
     public final TableField<PgDefaultAclRecord, String> DEFACLOBJTYPE = createField(DSL.name("defaclobjtype"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_default_acl.defaclacl</code>.
-     */
     public final TableField<PgDefaultAclRecord, String[]> DEFACLACL = createField(DSL.name("defaclacl"), SQLDataType.VARCHAR.nullable(false).array(), this, "");
 
     private PgDefaultAcl(Name alias, Table<PgDefaultAclRecord> aliased) {
@@ -96,23 +71,14 @@ public class PgDefaultAcl extends TableImpl<PgDefaultAclRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_default_acl</code> table reference
-     */
     public PgDefaultAcl(String alias) {
         this(DSL.name(alias), PG_DEFAULT_ACL);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_default_acl</code> table reference
-     */
     public PgDefaultAcl(Name alias) {
         this(alias, PG_DEFAULT_ACL);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_default_acl</code> table reference
-     */
     public PgDefaultAcl() {
         this(DSL.name("pg_default_acl"), null);
     }
@@ -157,27 +123,18 @@ public class PgDefaultAcl extends TableImpl<PgDefaultAclRecord> {
         return new PgDefaultAcl(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDefaultAcl rename(String name) {
         return new PgDefaultAcl(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDefaultAcl rename(Name name) {
         return new PgDefaultAcl(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgDefaultAcl rename(Table<?> name) {
@@ -194,17 +151,10 @@ public class PgDefaultAcl extends TableImpl<PgDefaultAclRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super Long, ? super Long, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super Long, ? super Long, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

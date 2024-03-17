@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.bitshiftleft</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,24 +27,12 @@ public class Bitshiftleft extends AbstractRoutine<String> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.bitshiftleft.RETURN_VALUE</code>.
-     */
     public static final Parameter<String> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.CHAR, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.bitshiftleft._1</code>.
-     */
     public static final Parameter<String> _1 = Internal.createParameter("_1", SQLDataType.CHAR, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.bitshiftleft._2</code>.
-     */
     public static final Parameter<Integer> _2 = Internal.createParameter("_2", SQLDataType.INTEGER, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Bitshiftleft() {
         super("bitshiftleft", PgCatalog.PG_CATALOG, SQLDataType.CHAR);
 
@@ -56,32 +41,18 @@ public class Bitshiftleft extends AbstractRoutine<String> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(String value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<String> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(Integer value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<Integer> field) {
         setField(_2, field);
     }

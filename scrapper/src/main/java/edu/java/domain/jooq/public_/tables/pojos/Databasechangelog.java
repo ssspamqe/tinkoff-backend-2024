@@ -16,9 +16,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>public.databasechangelog</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -98,9 +95,6 @@ public class Databasechangelog implements Serializable {
         this.deploymentId = deploymentId;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @Size(max = 255)
     @NotNull
@@ -108,16 +102,10 @@ public class Databasechangelog implements Serializable {
         return this.id;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.id</code>.
-     */
     public void setId(@NotNull String id) {
         this.id = id;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.author</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @Size(max = 255)
     @NotNull
@@ -125,16 +113,10 @@ public class Databasechangelog implements Serializable {
         return this.author;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.author</code>.
-     */
     public void setAuthor(@NotNull String author) {
         this.author = author;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.filename</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @Size(max = 255)
     @NotNull
@@ -142,48 +124,30 @@ public class Databasechangelog implements Serializable {
         return this.filename;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.filename</code>.
-     */
     public void setFilename(@NotNull String filename) {
         this.filename = filename;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.dateexecuted</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public LocalDateTime getDateexecuted() {
         return this.dateexecuted;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.dateexecuted</code>.
-     */
     public void setDateexecuted(@NotNull LocalDateTime dateexecuted) {
         this.dateexecuted = dateexecuted;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.orderexecuted</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getOrderexecuted() {
         return this.orderexecuted;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.orderexecuted</code>.
-     */
     public void setOrderexecuted(@NotNull Integer orderexecuted) {
         this.orderexecuted = orderexecuted;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.exectype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @Size(max = 10)
     @NotNull
@@ -191,137 +155,86 @@ public class Databasechangelog implements Serializable {
         return this.exectype;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.exectype</code>.
-     */
     public void setExectype(@NotNull String exectype) {
         this.exectype = exectype;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.md5sum</code>.
-     */
     @Size(max = 35)
     @Nullable
     public String getMd5sum() {
         return this.md5sum;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.md5sum</code>.
-     */
     public void setMd5sum(@Nullable String md5sum) {
         this.md5sum = md5sum;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.description</code>.
-     */
     @Size(max = 255)
     @Nullable
     public String getDescription() {
         return this.description;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.description</code>.
-     */
     public void setDescription(@Nullable String description) {
         this.description = description;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.comments</code>.
-     */
     @Size(max = 255)
     @Nullable
     public String getComments() {
         return this.comments;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.comments</code>.
-     */
     public void setComments(@Nullable String comments) {
         this.comments = comments;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.tag</code>.
-     */
     @Size(max = 255)
     @Nullable
     public String getTag() {
         return this.tag;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.tag</code>.
-     */
     public void setTag(@Nullable String tag) {
         this.tag = tag;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.liquibase</code>.
-     */
     @Size(max = 20)
     @Nullable
     public String getLiquibase() {
         return this.liquibase;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.liquibase</code>.
-     */
     public void setLiquibase(@Nullable String liquibase) {
         this.liquibase = liquibase;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.contexts</code>.
-     */
     @Size(max = 255)
     @Nullable
     public String getContexts() {
         return this.contexts;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.contexts</code>.
-     */
     public void setContexts(@Nullable String contexts) {
         this.contexts = contexts;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.labels</code>.
-     */
     @Size(max = 255)
     @Nullable
     public String getLabels() {
         return this.labels;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.labels</code>.
-     */
     public void setLabels(@Nullable String labels) {
         this.labels = labels;
     }
 
-    /**
-     * Getter for <code>public.databasechangelog.deployment_id</code>.
-     */
     @Size(max = 10)
     @Nullable
     public String getDeploymentId() {
         return this.deploymentId;
     }
 
-    /**
-     * Setter for <code>public.databasechangelog.deployment_id</code>.
-     */
     public void setDeploymentId(@Nullable String deploymentId) {
         this.deploymentId = deploymentId;
     }

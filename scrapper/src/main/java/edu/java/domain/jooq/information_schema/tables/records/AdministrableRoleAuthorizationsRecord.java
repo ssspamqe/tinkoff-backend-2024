@@ -20,9 +20,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.administrable_role_authorizations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,52 +32,28 @@ public class AdministrableRoleAuthorizationsRecord extends TableRecordImpl<Admin
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.administrable_role_authorizations.grantee</code>.
-     */
     public void setGrantee(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.administrable_role_authorizations.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.administrable_role_authorizations.role_name</code>.
-     */
     public void setRoleName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.administrable_role_authorizations.role_name</code>.
-     */
     @Nullable
     public String getRoleName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.administrable_role_authorizations.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.administrable_role_authorizations.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
@@ -191,16 +164,10 @@ public class AdministrableRoleAuthorizationsRecord extends TableRecordImpl<Admin
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached AdministrableRoleAuthorizationsRecord
-     */
     public AdministrableRoleAuthorizationsRecord() {
         super(AdministrableRoleAuthorizations.ADMINISTRABLE_ROLE_AUTHORIZATIONS);
     }
 
-    /**
-     * Create a detached, initialised AdministrableRoleAuthorizationsRecord
-     */
     @ConstructorProperties({ "grantee", "roleName", "isGrantable" })
     public AdministrableRoleAuthorizationsRecord(@Nullable String grantee, @Nullable String roleName, @Nullable String isGrantable) {
         super(AdministrableRoleAuthorizations.ADMINISTRABLE_ROLE_AUTHORIZATIONS);
@@ -211,9 +178,6 @@ public class AdministrableRoleAuthorizationsRecord extends TableRecordImpl<Admin
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised AdministrableRoleAuthorizationsRecord
-     */
     public AdministrableRoleAuthorizationsRecord(edu.java.domain.jooq.information_schema.tables.pojos.AdministrableRoleAuthorizations value) {
         super(AdministrableRoleAuthorizations.ADMINISTRABLE_ROLE_AUTHORIZATIONS);
 

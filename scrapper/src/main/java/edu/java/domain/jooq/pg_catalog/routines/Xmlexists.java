@@ -10,15 +10,11 @@ import javax.annotation.processing.Generated;
 
 import org.jooq.Field;
 import org.jooq.Parameter;
-import org.jooq.XML;
 import org.jooq.impl.AbstractRoutine;
 import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.xmlexists</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,24 +27,13 @@ public class Xmlexists extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.xmlexists.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.xmlexists._1</code>.
-     */
     public static final Parameter<String> _1 = Internal.createParameter("_1", SQLDataType.CLOB, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.xmlexists._2</code>.
-     */
-    public static final Parameter<XML> _2 = Internal.createParameter("_2", SQLDataType.XML, false, true);
+    @Deprecated
+    public static final Parameter<Object> _2 = Internal.createParameter("_2", SQLDataType.OTHER, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Xmlexists() {
         super("xmlexists", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -57,33 +42,19 @@ public class Xmlexists extends AbstractRoutine<Boolean> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(String value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<String> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
-    public void set__2(XML value) {
+    public void set__2(Object value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
-    public void set__2(Field<XML> field) {
+    public void set__2(Field<Object> field) {
         setField(_2, field);
     }
 }

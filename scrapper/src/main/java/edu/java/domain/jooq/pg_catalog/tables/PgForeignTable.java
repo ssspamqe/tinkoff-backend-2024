@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgForeignTableRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_foreign_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,33 +42,18 @@ public class PgForeignTable extends TableImpl<PgForeignTableRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_foreign_table</code>
-     */
     public static final PgForeignTable PG_FOREIGN_TABLE = new PgForeignTable();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgForeignTableRecord> getRecordType() {
         return PgForeignTableRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_table.ftrelid</code>.
-     */
     public final TableField<PgForeignTableRecord, Long> FTRELID = createField(DSL.name("ftrelid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_table.ftserver</code>.
-     */
     public final TableField<PgForeignTableRecord, Long> FTSERVER = createField(DSL.name("ftserver"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_table.ftoptions</code>.
-     */
     public final TableField<PgForeignTableRecord, String[]> FTOPTIONS = createField(DSL.name("ftoptions"), SQLDataType.CLOB.array(), this, "");
 
     private PgForeignTable(Name alias, Table<PgForeignTableRecord> aliased) {
@@ -84,25 +64,14 @@ public class PgForeignTable extends TableImpl<PgForeignTableRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_foreign_table</code> table
-     * reference
-     */
     public PgForeignTable(String alias) {
         this(DSL.name(alias), PG_FOREIGN_TABLE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_foreign_table</code> table
-     * reference
-     */
     public PgForeignTable(Name alias) {
         this(alias, PG_FOREIGN_TABLE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_foreign_table</code> table reference
-     */
     public PgForeignTable() {
         this(DSL.name("pg_foreign_table"), null);
     }
@@ -141,27 +110,18 @@ public class PgForeignTable extends TableImpl<PgForeignTableRecord> {
         return new PgForeignTable(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgForeignTable rename(String name) {
         return new PgForeignTable(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgForeignTable rename(Name name) {
         return new PgForeignTable(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgForeignTable rename(Table<?> name) {
@@ -178,17 +138,10 @@ public class PgForeignTable extends TableImpl<PgForeignTableRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Long, ? super Long, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

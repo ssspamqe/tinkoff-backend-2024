@@ -19,9 +19,6 @@ import org.jooq.Row2;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_each</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,31 +31,19 @@ public class JsonbEachRecord extends TableRecordImpl<JsonbEachRecord> implements
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_each.key</code>.
-     */
     public void setKey(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_each.key</code>.
-     */
     @Nullable
     public String getKey() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_each.value</code>.
-     */
     public void setValue(@Nullable JSONB value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_each.value</code>.
-     */
     @Nullable
     public JSONB getValue() {
         return (JSONB) get(1);
@@ -142,16 +127,10 @@ public class JsonbEachRecord extends TableRecordImpl<JsonbEachRecord> implements
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonbEachRecord
-     */
     public JsonbEachRecord() {
         super(JsonbEach.JSONB_EACH);
     }
 
-    /**
-     * Create a detached, initialised JsonbEachRecord
-     */
     @ConstructorProperties({ "key", "value" })
     public JsonbEachRecord(@Nullable String key, @Nullable JSONB value) {
         super(JsonbEach.JSONB_EACH);
@@ -161,9 +140,6 @@ public class JsonbEachRecord extends TableRecordImpl<JsonbEachRecord> implements
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonbEachRecord
-     */
     public JsonbEachRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonbEach value) {
         super(JsonbEach.JSONB_EACH);
 

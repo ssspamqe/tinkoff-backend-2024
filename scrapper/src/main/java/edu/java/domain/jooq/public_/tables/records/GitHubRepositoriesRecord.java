@@ -20,9 +20,6 @@ import org.jooq.Row6;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>public.git_hub_repositories</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,48 +32,30 @@ public class GitHubRepositoriesRecord extends UpdatableRecordImpl<GitHubReposito
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>public.git_hub_repositories.id</code>.
-     */
     public void setId(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getId() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.link_id</code>.
-     */
     public void setLinkId(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.link_id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLinkId() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.name</code>.
-     */
     public void setName(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.name</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @Size(max = 128)
     @NotNull
@@ -84,16 +63,10 @@ public class GitHubRepositoriesRecord extends UpdatableRecordImpl<GitHubReposito
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.owner</code>.
-     */
     public void setOwner(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.owner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @Size(max = 128)
     @NotNull
@@ -101,32 +74,20 @@ public class GitHubRepositoriesRecord extends UpdatableRecordImpl<GitHubReposito
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.description_md5_hash</code>.
-     */
     public void setDescriptionMd5Hash(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.description_md5_hash</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDescriptionMd5Hash() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>public.git_hub_repositories.activities_ids</code>.
-     */
     public void setActivitiesIds(@NotNull Long[] value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>public.git_hub_repositories.activities_ids</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long[] getActivitiesIds() {
@@ -325,16 +286,10 @@ public class GitHubRepositoriesRecord extends UpdatableRecordImpl<GitHubReposito
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached GitHubRepositoriesRecord
-     */
     public GitHubRepositoriesRecord() {
         super(GitHubRepositories.GIT_HUB_REPOSITORIES);
     }
 
-    /**
-     * Create a detached, initialised GitHubRepositoriesRecord
-     */
     @ConstructorProperties({ "id", "linkId", "name", "owner", "descriptionMd5Hash", "activitiesIds" })
     public GitHubRepositoriesRecord(@NotNull Long id, @NotNull Long linkId, @NotNull String name, @NotNull String owner, @NotNull String descriptionMd5Hash, @NotNull Long[] activitiesIds) {
         super(GitHubRepositories.GIT_HUB_REPOSITORIES);
@@ -348,9 +303,6 @@ public class GitHubRepositoriesRecord extends UpdatableRecordImpl<GitHubReposito
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised GitHubRepositoriesRecord
-     */
     public GitHubRepositoriesRecord(edu.java.domain.jooq.public_.tables.pojos.GitHubRepositories value) {
         super(GitHubRepositories.GIT_HUB_REPOSITORIES);
 

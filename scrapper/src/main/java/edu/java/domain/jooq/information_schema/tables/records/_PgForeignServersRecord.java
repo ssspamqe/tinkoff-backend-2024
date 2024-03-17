@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema._pg_foreign_servers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,152 +30,82 @@ public class _PgForeignServersRecord extends TableRecordImpl<_PgForeignServersRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema._pg_foreign_servers.oid</code>.
-     */
     public void setOid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema._pg_foreign_servers.oid</code>.
-     */
     @Nullable
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_servers.srvoptions</code>.
-     */
     public void setSrvoptions(@Nullable String[] value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_servers.srvoptions</code>.
-     */
     @Nullable
     public String[] getSrvoptions() {
         return (String[]) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_servers.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_servers.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_servers.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_servers.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_servers.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_servers.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_servers.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_servers.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_servers.foreign_server_type</code>.
-     */
     public void setForeignServerType(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_servers.foreign_server_type</code>.
-     */
     @Nullable
     public String getForeignServerType() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_servers.foreign_server_version</code>.
-     */
     public void setForeignServerVersion(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_servers.foreign_server_version</code>.
-     */
     @Nullable
     public String getForeignServerVersion() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_servers.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_servers.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return (String) get(8);
@@ -444,16 +371,10 @@ public class _PgForeignServersRecord extends TableRecordImpl<_PgForeignServersRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached _PgForeignServersRecord
-     */
     public _PgForeignServersRecord() {
         super(_PgForeignServers._PG_FOREIGN_SERVERS);
     }
 
-    /**
-     * Create a detached, initialised _PgForeignServersRecord
-     */
     @ConstructorProperties({ "oid", "srvoptions", "foreignServerCatalog", "foreignServerName", "foreignDataWrapperCatalog", "foreignDataWrapperName", "foreignServerType", "foreignServerVersion", "authorizationIdentifier" })
     public _PgForeignServersRecord(@Nullable Long oid, @Nullable String[] srvoptions, @Nullable String foreignServerCatalog, @Nullable String foreignServerName, @Nullable String foreignDataWrapperCatalog, @Nullable String foreignDataWrapperName, @Nullable String foreignServerType, @Nullable String foreignServerVersion, @Nullable String authorizationIdentifier) {
         super(_PgForeignServers._PG_FOREIGN_SERVERS);
@@ -470,9 +391,6 @@ public class _PgForeignServersRecord extends TableRecordImpl<_PgForeignServersRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised _PgForeignServersRecord
-     */
     public _PgForeignServersRecord(edu.java.domain.jooq.information_schema.tables.pojos._PgForeignServers value) {
         super(_PgForeignServers._PG_FOREIGN_SERVERS);
 

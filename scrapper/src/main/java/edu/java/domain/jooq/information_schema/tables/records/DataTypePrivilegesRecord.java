@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.data_type_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,86 +30,46 @@ public class DataTypePrivilegesRecord extends TableRecordImpl<DataTypePrivileges
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.object_catalog</code>.
-     */
     public void setObjectCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.object_catalog</code>.
-     */
     @Nullable
     public String getObjectCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.object_schema</code>.
-     */
     public void setObjectSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.object_schema</code>.
-     */
     @Nullable
     public String getObjectSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.object_name</code>.
-     */
     public void setObjectName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.object_name</code>.
-     */
     @Nullable
     public String getObjectName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.object_type</code>.
-     */
     public void setObjectType(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.data_type_privileges.dtd_identifier</code>.
-     */
     public void setDtdIdentifier(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.data_type_privileges.dtd_identifier</code>.
-     */
     @Nullable
     public String getDtdIdentifier() {
         return (String) get(4);
@@ -274,16 +231,10 @@ public class DataTypePrivilegesRecord extends TableRecordImpl<DataTypePrivileges
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached DataTypePrivilegesRecord
-     */
     public DataTypePrivilegesRecord() {
         super(DataTypePrivileges.DATA_TYPE_PRIVILEGES);
     }
 
-    /**
-     * Create a detached, initialised DataTypePrivilegesRecord
-     */
     @ConstructorProperties({ "objectCatalog", "objectSchema", "objectName", "objectType", "dtdIdentifier" })
     public DataTypePrivilegesRecord(@Nullable String objectCatalog, @Nullable String objectSchema, @Nullable String objectName, @Nullable String objectType, @Nullable String dtdIdentifier) {
         super(DataTypePrivileges.DATA_TYPE_PRIVILEGES);
@@ -296,9 +247,6 @@ public class DataTypePrivilegesRecord extends TableRecordImpl<DataTypePrivileges
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised DataTypePrivilegesRecord
-     */
     public DataTypePrivilegesRecord(edu.java.domain.jooq.information_schema.tables.pojos.DataTypePrivileges value) {
         super(DataTypePrivileges.DATA_TYPE_PRIVILEGES);
 

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.TxidSnapshotXipRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.txid_snapshot_xip</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,23 +38,14 @@ public class TxidSnapshotXip extends TableImpl<TxidSnapshotXipRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.txid_snapshot_xip</code>
-     */
     public static final TxidSnapshotXip TXID_SNAPSHOT_XIP = new TxidSnapshotXip();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TxidSnapshotXipRecord> getRecordType() {
         return TxidSnapshotXipRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.txid_snapshot_xip.txid_snapshot_xip</code>.
-     */
     public final TableField<TxidSnapshotXipRecord, Long> TXID_SNAPSHOT_XIP_ = createField(DSL.name("txid_snapshot_xip"), SQLDataType.BIGINT, this, "");
 
     private TxidSnapshotXip(Name alias, Table<TxidSnapshotXipRecord> aliased) {
@@ -72,25 +58,14 @@ public class TxidSnapshotXip extends TableImpl<TxidSnapshotXipRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.txid_snapshot_xip</code> table
-     * reference
-     */
     public TxidSnapshotXip(String alias) {
         this(DSL.name(alias), TXID_SNAPSHOT_XIP);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.txid_snapshot_xip</code> table
-     * reference
-     */
     public TxidSnapshotXip(Name alias) {
         this(alias, TXID_SNAPSHOT_XIP);
     }
 
-    /**
-     * Create a <code>pg_catalog.txid_snapshot_xip</code> table reference
-     */
     public TxidSnapshotXip() {
         this(DSL.name("txid_snapshot_xip"), null);
     }
@@ -119,27 +94,18 @@ public class TxidSnapshotXip extends TableImpl<TxidSnapshotXipRecord> {
         return new TxidSnapshotXip(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TxidSnapshotXip rename(String name) {
         return new TxidSnapshotXip(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TxidSnapshotXip rename(Name name) {
         return new TxidSnapshotXip(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TxidSnapshotXip rename(Table<?> name) {
@@ -156,9 +122,6 @@ public class TxidSnapshotXip extends TableImpl<TxidSnapshotXipRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TxidSnapshotXip call(
           Object __1
     ) {
@@ -169,9 +132,6 @@ public class TxidSnapshotXip extends TableImpl<TxidSnapshotXipRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TxidSnapshotXip call(
           Field<Object> __1
     ) {
@@ -182,17 +142,10 @@ public class TxidSnapshotXip extends TableImpl<TxidSnapshotXipRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

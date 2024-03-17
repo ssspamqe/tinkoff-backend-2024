@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_init_privs</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,80 +30,50 @@ public class PgInitPrivsRecord extends UpdatableRecordImpl<PgInitPrivsRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.objoid</code>.
-     */
     public void setObjoid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.classoid</code>.
-     */
     public void setClassoid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.objsubid</code>.
-     */
     public void setObjsubid(@NotNull Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.objsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getObjsubid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.privtype</code>.
-     */
     public void setPrivtype(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.privtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrivtype() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.initprivs</code>.
-     */
     public void setInitprivs(@NotNull String[] value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.initprivs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String[] getInitprivs() {
@@ -279,16 +246,10 @@ public class PgInitPrivsRecord extends UpdatableRecordImpl<PgInitPrivsRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgInitPrivsRecord
-     */
     public PgInitPrivsRecord() {
         super(PgInitPrivs.PG_INIT_PRIVS);
     }
 
-    /**
-     * Create a detached, initialised PgInitPrivsRecord
-     */
     @ConstructorProperties({ "objoid", "classoid", "objsubid", "privtype", "initprivs" })
     public PgInitPrivsRecord(@NotNull Long objoid, @NotNull Long classoid, @NotNull Integer objsubid, @NotNull String privtype, @NotNull String[] initprivs) {
         super(PgInitPrivs.PG_INIT_PRIVS);
@@ -301,9 +262,6 @@ public class PgInitPrivsRecord extends UpdatableRecordImpl<PgInitPrivsRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgInitPrivsRecord
-     */
     public PgInitPrivsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgInitPrivs value) {
         super(PgInitPrivs.PG_INIT_PRIVS);
 

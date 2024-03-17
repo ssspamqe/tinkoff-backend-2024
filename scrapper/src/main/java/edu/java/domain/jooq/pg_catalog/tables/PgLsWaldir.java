@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLsWaldirRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -29,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_waldir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,33 +40,18 @@ public class PgLsWaldir extends TableImpl<PgLsWaldirRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ls_waldir</code>
-     */
     public static final PgLsWaldir PG_LS_WALDIR = new PgLsWaldir();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLsWaldirRecord> getRecordType() {
         return PgLsWaldirRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ls_waldir.name</code>.
-     */
     public final TableField<PgLsWaldirRecord, String> NAME = createField(DSL.name("name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ls_waldir.size</code>.
-     */
     public final TableField<PgLsWaldirRecord, Long> SIZE = createField(DSL.name("size"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ls_waldir.modification</code>.
-     */
     public final TableField<PgLsWaldirRecord, OffsetDateTime> MODIFICATION = createField(DSL.name("modification"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgLsWaldir(Name alias, Table<PgLsWaldirRecord> aliased) {
@@ -82,23 +63,14 @@ public class PgLsWaldir extends TableImpl<PgLsWaldirRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_waldir</code> table reference
-     */
     public PgLsWaldir(String alias) {
         this(DSL.name(alias), PG_LS_WALDIR);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ls_waldir</code> table reference
-     */
     public PgLsWaldir(Name alias) {
         this(alias, PG_LS_WALDIR);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ls_waldir</code> table reference
-     */
     public PgLsWaldir() {
         this(DSL.name("pg_ls_waldir"), null);
     }
@@ -127,27 +99,18 @@ public class PgLsWaldir extends TableImpl<PgLsWaldirRecord> {
         return new PgLsWaldir(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsWaldir rename(String name) {
         return new PgLsWaldir(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsWaldir rename(Name name) {
         return new PgLsWaldir(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLsWaldir rename(Table<?> name) {
@@ -164,26 +127,16 @@ public class PgLsWaldir extends TableImpl<PgLsWaldirRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLsWaldir call() {
         PgLsWaldir result = new PgLsWaldir(DSL.name("pg_ls_waldir"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super String, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

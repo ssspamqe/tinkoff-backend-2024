@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.RoutinePrivilegesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.routine_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,77 +39,32 @@ public class RoutinePrivileges extends TableImpl<RoutinePrivilegesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.routine_privileges</code>
-     */
     public static final RoutinePrivileges ROUTINE_PRIVILEGES = new RoutinePrivileges();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<RoutinePrivilegesRecord> getRecordType() {
         return RoutinePrivilegesRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.routine_privileges.grantor</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> GRANTOR = createField(DSL.name("grantor"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.routine_privileges.grantee</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> GRANTEE = createField(DSL.name("grantee"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_privileges.specific_catalog</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> SPECIFIC_CATALOG = createField(DSL.name("specific_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_privileges.specific_schema</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> SPECIFIC_SCHEMA = createField(DSL.name("specific_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_privileges.specific_name</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> SPECIFIC_NAME = createField(DSL.name("specific_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_privileges.routine_catalog</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> ROUTINE_CATALOG = createField(DSL.name("routine_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_privileges.routine_schema</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> ROUTINE_SCHEMA = createField(DSL.name("routine_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_privileges.routine_name</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> ROUTINE_NAME = createField(DSL.name("routine_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_privileges.privilege_type</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> PRIVILEGE_TYPE = createField(DSL.name("privilege_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_privileges.is_grantable</code>.
-     */
     public final TableField<RoutinePrivilegesRecord, String> IS_GRANTABLE = createField(DSL.name("is_grantable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
     private RoutinePrivileges(Name alias, Table<RoutinePrivilegesRecord> aliased) {
@@ -158,26 +108,14 @@ public class RoutinePrivileges extends TableImpl<RoutinePrivilegesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.routine_privileges</code>
-     * table reference
-     */
     public RoutinePrivileges(String alias) {
         this(DSL.name(alias), ROUTINE_PRIVILEGES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.routine_privileges</code>
-     * table reference
-     */
     public RoutinePrivileges(Name alias) {
         this(alias, ROUTINE_PRIVILEGES);
     }
 
-    /**
-     * Create a <code>information_schema.routine_privileges</code> table
-     * reference
-     */
     public RoutinePrivileges() {
         this(DSL.name("routine_privileges"), null);
     }
@@ -210,27 +148,18 @@ public class RoutinePrivileges extends TableImpl<RoutinePrivilegesRecord> {
         return new RoutinePrivileges(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoutinePrivileges rename(String name) {
         return new RoutinePrivileges(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoutinePrivileges rename(Name name) {
         return new RoutinePrivileges(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoutinePrivileges rename(Table<?> name) {
@@ -247,17 +176,10 @@ public class RoutinePrivileges extends TableImpl<RoutinePrivilegesRecord> {
         return (Row10) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function10<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function10<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

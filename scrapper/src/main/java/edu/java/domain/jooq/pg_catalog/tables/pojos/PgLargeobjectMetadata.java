@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_largeobject_metadata</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -52,49 +49,31 @@ public class PgLargeobjectMetadata implements Serializable {
         this.lomacl = lomacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject_metadata.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject_metadata.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject_metadata.lomowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLomowner() {
         return this.lomowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject_metadata.lomowner</code>.
-     */
     public void setLomowner(@NotNull Long lomowner) {
         this.lomowner = lomowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_largeobject_metadata.lomacl</code>.
-     */
     @Nullable
     public String[] getLomacl() {
         return this.lomacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_largeobject_metadata.lomacl</code>.
-     */
     public void setLomacl(@Nullable String[] lomacl) {
         this.lomacl = lomacl;
     }

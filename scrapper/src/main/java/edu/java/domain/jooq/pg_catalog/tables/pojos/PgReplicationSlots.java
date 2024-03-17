@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_replication_slots</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -102,266 +99,150 @@ public class PgReplicationSlots implements Serializable {
         this.conflicting = conflicting;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.slot_name</code>.
-     */
     @Nullable
     public String getSlotName() {
         return this.slotName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.slot_name</code>.
-     */
     public void setSlotName(@Nullable String slotName) {
         this.slotName = slotName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.plugin</code>.
-     */
     @Nullable
     public String getPlugin() {
         return this.plugin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.plugin</code>.
-     */
     public void setPlugin(@Nullable String plugin) {
         this.plugin = plugin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.slot_type</code>.
-     */
     @Nullable
     public String getSlotType() {
         return this.slotType;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.slot_type</code>.
-     */
     public void setSlotType(@Nullable String slotType) {
         this.slotType = slotType;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.datoid</code>.
-     */
     @Nullable
     public Long getDatoid() {
         return this.datoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.datoid</code>.
-     */
     public void setDatoid(@Nullable Long datoid) {
         this.datoid = datoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.database</code>.
-     */
     @Nullable
     public String getDatabase() {
         return this.database;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.database</code>.
-     */
     public void setDatabase(@Nullable String database) {
         this.database = database;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.temporary</code>.
-     */
     @Nullable
     public Boolean getTemporary() {
         return this.temporary;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.temporary</code>.
-     */
     public void setTemporary(@Nullable Boolean temporary) {
         this.temporary = temporary;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.active</code>.
-     */
     @Nullable
     public Boolean getActive() {
         return this.active;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.active</code>.
-     */
     public void setActive(@Nullable Boolean active) {
         this.active = active;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.active_pid</code>.
-     */
     @Nullable
     public Integer getActivePid() {
         return this.activePid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.active_pid</code>.
-     */
     public void setActivePid(@Nullable Integer activePid) {
         this.activePid = activePid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.xmin</code>.
-     */
     @Nullable
     public Long getXmin() {
         return this.xmin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.xmin</code>.
-     */
     public void setXmin(@Nullable Long xmin) {
         this.xmin = xmin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.catalog_xmin</code>.
-     */
     @Nullable
     public Long getCatalogXmin() {
         return this.catalogXmin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.catalog_xmin</code>.
-     */
     public void setCatalogXmin(@Nullable Long catalogXmin) {
         this.catalogXmin = catalogXmin;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getRestartLsn() {
         return this.restartLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setRestartLsn(@Nullable Object restartLsn) {
         this.restartLsn = restartLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getConfirmedFlushLsn() {
         return this.confirmedFlushLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setConfirmedFlushLsn(@Nullable Object confirmedFlushLsn) {
         this.confirmedFlushLsn = confirmedFlushLsn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.wal_status</code>.
-     */
     @Nullable
     public String getWalStatus() {
         return this.walStatus;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.wal_status</code>.
-     */
     public void setWalStatus(@Nullable String walStatus) {
         this.walStatus = walStatus;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.safe_wal_size</code>.
-     */
     @Nullable
     public Long getSafeWalSize() {
         return this.safeWalSize;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.safe_wal_size</code>.
-     */
     public void setSafeWalSize(@Nullable Long safeWalSize) {
         this.safeWalSize = safeWalSize;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.two_phase</code>.
-     */
     @Nullable
     public Boolean getTwoPhase() {
         return this.twoPhase;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.two_phase</code>.
-     */
     public void setTwoPhase(@Nullable Boolean twoPhase) {
         this.twoPhase = twoPhase;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_slots.conflicting</code>.
-     */
     @Nullable
     public Boolean getConflicting() {
         return this.conflicting;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_slots.conflicting</code>.
-     */
     public void setConflicting(@Nullable Boolean conflicting) {
         this.conflicting = conflicting;
     }

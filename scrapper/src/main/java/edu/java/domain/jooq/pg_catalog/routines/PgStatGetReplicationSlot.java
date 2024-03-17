@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_stat_get_replication_slot</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,75 +28,28 @@ public class PgStatGetReplicationSlot extends AbstractRoutine<java.lang.Void> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.slot_name</code>.
-     */
     public static final Parameter<String> SLOT_NAME1 = Internal.createParameter("slot_name", SQLDataType.CLOB, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.slot_name</code>.
-     */
     public static final Parameter<String> SLOT_NAME2 = Internal.createParameter("slot_name", SQLDataType.CLOB, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.spill_txns</code>.
-     */
     public static final Parameter<Long> SPILL_TXNS = Internal.createParameter("spill_txns", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.spill_count</code>.
-     */
     public static final Parameter<Long> SPILL_COUNT = Internal.createParameter("spill_count", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.spill_bytes</code>.
-     */
     public static final Parameter<Long> SPILL_BYTES = Internal.createParameter("spill_bytes", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.stream_txns</code>.
-     */
     public static final Parameter<Long> STREAM_TXNS = Internal.createParameter("stream_txns", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.stream_count</code>.
-     */
     public static final Parameter<Long> STREAM_COUNT = Internal.createParameter("stream_count", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.stream_bytes</code>.
-     */
     public static final Parameter<Long> STREAM_BYTES = Internal.createParameter("stream_bytes", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.total_txns</code>.
-     */
     public static final Parameter<Long> TOTAL_TXNS = Internal.createParameter("total_txns", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.total_bytes</code>.
-     */
     public static final Parameter<Long> TOTAL_BYTES = Internal.createParameter("total_bytes", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_replication_slot.stats_reset</code>.
-     */
     public static final Parameter<OffsetDateTime> STATS_RESET = Internal.createParameter("stats_reset", SQLDataType.TIMESTAMPWITHTIMEZONE(6), false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgStatGetReplicationSlot() {
         super("pg_stat_get_replication_slot", PgCatalog.PG_CATALOG);
 
@@ -116,86 +66,50 @@ public class PgStatGetReplicationSlot extends AbstractRoutine<java.lang.Void> {
         addOutParameter(STATS_RESET);
     }
 
-    /**
-     * Set the <code>slot_name</code> parameter IN value to the routine
-     */
     public void setSlotName1(String value) {
         setValue(SLOT_NAME1, value);
     }
 
-    /**
-     * Get the <code>slot_name</code> parameter OUT value from the routine
-     */
     public String getSlotName1() {
         return get(SLOT_NAME1);
     }
 
-    /**
-     * Get the <code>slot_name</code> parameter OUT value from the routine
-     */
     public String getSlotName2() {
         return get(SLOT_NAME2);
     }
 
-    /**
-     * Get the <code>spill_txns</code> parameter OUT value from the routine
-     */
     public Long getSpillTxns() {
         return get(SPILL_TXNS);
     }
 
-    /**
-     * Get the <code>spill_count</code> parameter OUT value from the routine
-     */
     public Long getSpillCount() {
         return get(SPILL_COUNT);
     }
 
-    /**
-     * Get the <code>spill_bytes</code> parameter OUT value from the routine
-     */
     public Long getSpillBytes() {
         return get(SPILL_BYTES);
     }
 
-    /**
-     * Get the <code>stream_txns</code> parameter OUT value from the routine
-     */
     public Long getStreamTxns() {
         return get(STREAM_TXNS);
     }
 
-    /**
-     * Get the <code>stream_count</code> parameter OUT value from the routine
-     */
     public Long getStreamCount() {
         return get(STREAM_COUNT);
     }
 
-    /**
-     * Get the <code>stream_bytes</code> parameter OUT value from the routine
-     */
     public Long getStreamBytes() {
         return get(STREAM_BYTES);
     }
 
-    /**
-     * Get the <code>total_txns</code> parameter OUT value from the routine
-     */
     public Long getTotalTxns() {
         return get(TOTAL_TXNS);
     }
 
-    /**
-     * Get the <code>total_bytes</code> parameter OUT value from the routine
-     */
     public Long getTotalBytes() {
         return get(TOTAL_BYTES);
     }
 
-    /**
-     * Get the <code>stats_reset</code> parameter OUT value from the routine
-     */
     public OffsetDateTime getStatsReset() {
         return get(STATS_RESET);
     }

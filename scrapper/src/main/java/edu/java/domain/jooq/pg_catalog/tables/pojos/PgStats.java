@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -95,212 +92,128 @@ public class PgStats implements Serializable {
         this.elemCountHistogram = elemCountHistogram;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return this.tablename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.tablename</code>.
-     */
     public void setTablename(@Nullable String tablename) {
         this.tablename = tablename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.attname</code>.
-     */
     @Nullable
     public String getAttname() {
         return this.attname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.attname</code>.
-     */
     public void setAttname(@Nullable String attname) {
         this.attname = attname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.inherited</code>.
-     */
     @Nullable
     public Boolean getInherited() {
         return this.inherited;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.inherited</code>.
-     */
     public void setInherited(@Nullable Boolean inherited) {
         this.inherited = inherited;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.null_frac</code>.
-     */
     @Nullable
     public Float getNullFrac() {
         return this.nullFrac;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.null_frac</code>.
-     */
     public void setNullFrac(@Nullable Float nullFrac) {
         this.nullFrac = nullFrac;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.avg_width</code>.
-     */
     @Nullable
     public Integer getAvgWidth() {
         return this.avgWidth;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.avg_width</code>.
-     */
     public void setAvgWidth(@Nullable Integer avgWidth) {
         this.avgWidth = avgWidth;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.n_distinct</code>.
-     */
     @Nullable
     public Float getNDistinct() {
         return this.nDistinct;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.n_distinct</code>.
-     */
     public void setNDistinct(@Nullable Float nDistinct) {
         this.nDistinct = nDistinct;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.most_common_vals</code>.
-     */
     @Nullable
     public Object[] getMostCommonVals() {
         return this.mostCommonVals;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.most_common_vals</code>.
-     */
     public void setMostCommonVals(@Nullable Object[] mostCommonVals) {
         this.mostCommonVals = mostCommonVals;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.most_common_freqs</code>.
-     */
     @Nullable
     public Float[] getMostCommonFreqs() {
         return this.mostCommonFreqs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.most_common_freqs</code>.
-     */
     public void setMostCommonFreqs(@Nullable Float[] mostCommonFreqs) {
         this.mostCommonFreqs = mostCommonFreqs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.histogram_bounds</code>.
-     */
     @Nullable
     public Object[] getHistogramBounds() {
         return this.histogramBounds;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.histogram_bounds</code>.
-     */
     public void setHistogramBounds(@Nullable Object[] histogramBounds) {
         this.histogramBounds = histogramBounds;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.correlation</code>.
-     */
     @Nullable
     public Float getCorrelation() {
         return this.correlation;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.correlation</code>.
-     */
     public void setCorrelation(@Nullable Float correlation) {
         this.correlation = correlation;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.most_common_elems</code>.
-     */
     @Nullable
     public Object[] getMostCommonElems() {
         return this.mostCommonElems;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.most_common_elems</code>.
-     */
     public void setMostCommonElems(@Nullable Object[] mostCommonElems) {
         this.mostCommonElems = mostCommonElems;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.most_common_elem_freqs</code>.
-     */
     @Nullable
     public Float[] getMostCommonElemFreqs() {
         return this.mostCommonElemFreqs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.most_common_elem_freqs</code>.
-     */
     public void setMostCommonElemFreqs(@Nullable Float[] mostCommonElemFreqs) {
         this.mostCommonElemFreqs = mostCommonElemFreqs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats.elem_count_histogram</code>.
-     */
     @Nullable
     public Float[] getElemCountHistogram() {
         return this.elemCountHistogram;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats.elem_count_histogram</code>.
-     */
     public void setElemCountHistogram(@Nullable Float[] elemCountHistogram) {
         this.elemCountHistogram = elemCountHistogram;
     }

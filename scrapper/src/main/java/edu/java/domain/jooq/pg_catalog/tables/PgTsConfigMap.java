@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTsConfigMapRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_config_map</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,38 +42,20 @@ public class PgTsConfigMap extends TableImpl<PgTsConfigMapRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ts_config_map</code>
-     */
     public static final PgTsConfigMap PG_TS_CONFIG_MAP = new PgTsConfigMap();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTsConfigMapRecord> getRecordType() {
         return PgTsConfigMapRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ts_config_map.mapcfg</code>.
-     */
     public final TableField<PgTsConfigMapRecord, Long> MAPCFG = createField(DSL.name("mapcfg"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_config_map.maptokentype</code>.
-     */
     public final TableField<PgTsConfigMapRecord, Integer> MAPTOKENTYPE = createField(DSL.name("maptokentype"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_config_map.mapseqno</code>.
-     */
     public final TableField<PgTsConfigMapRecord, Integer> MAPSEQNO = createField(DSL.name("mapseqno"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_config_map.mapdict</code>.
-     */
     public final TableField<PgTsConfigMapRecord, Long> MAPDICT = createField(DSL.name("mapdict"), SQLDataType.BIGINT.nullable(false), this, "");
 
     private PgTsConfigMap(Name alias, Table<PgTsConfigMapRecord> aliased) {
@@ -89,25 +66,14 @@ public class PgTsConfigMap extends TableImpl<PgTsConfigMapRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ts_config_map</code> table
-     * reference
-     */
     public PgTsConfigMap(String alias) {
         this(DSL.name(alias), PG_TS_CONFIG_MAP);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ts_config_map</code> table
-     * reference
-     */
     public PgTsConfigMap(Name alias) {
         this(alias, PG_TS_CONFIG_MAP);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ts_config_map</code> table reference
-     */
     public PgTsConfigMap() {
         this(DSL.name("pg_ts_config_map"), null);
     }
@@ -146,27 +112,18 @@ public class PgTsConfigMap extends TableImpl<PgTsConfigMapRecord> {
         return new PgTsConfigMap(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsConfigMap rename(String name) {
         return new PgTsConfigMap(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsConfigMap rename(Name name) {
         return new PgTsConfigMap(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsConfigMap rename(Table<?> name) {
@@ -183,17 +140,10 @@ public class PgTsConfigMap extends TableImpl<PgTsConfigMapRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Integer, ? super Integer, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Integer, ? super Integer, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

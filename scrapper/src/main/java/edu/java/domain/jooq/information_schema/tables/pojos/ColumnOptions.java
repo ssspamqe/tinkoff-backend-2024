@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.column_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,92 +59,56 @@ public class ColumnOptions implements Serializable {
         this.optionValue = optionValue;
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.column_name</code>.
-     */
     @Nullable
     public String getColumnName() {
         return this.columnName;
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.column_name</code>.
-     */
     public void setColumnName(@Nullable String columnName) {
         this.columnName = columnName;
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return this.optionName;
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String optionName) {
         this.optionName = optionName;
     }
 
-    /**
-     * Getter for <code>information_schema.column_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return this.optionValue;
     }
 
-    /**
-     * Setter for <code>information_schema.column_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String optionValue) {
         this.optionValue = optionValue;
     }

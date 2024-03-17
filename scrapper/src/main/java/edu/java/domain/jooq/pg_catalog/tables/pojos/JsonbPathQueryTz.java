@@ -13,9 +13,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.JSONB;
 
 
-/**
- * The table <code>pg_catalog.jsonb_path_query_tz</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,19 +40,11 @@ public class JsonbPathQueryTz implements Serializable {
         this.jsonbPathQueryTz = jsonbPathQueryTz;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.jsonb_path_query_tz.jsonb_path_query_tz</code>.
-     */
     @Nullable
     public JSONB getJsonbPathQueryTz() {
         return this.jsonbPathQueryTz;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.jsonb_path_query_tz.jsonb_path_query_tz</code>.
-     */
     public void setJsonbPathQueryTz(@Nullable JSONB jsonbPathQueryTz) {
         this.jsonbPathQueryTz = jsonbPathQueryTz;
     }

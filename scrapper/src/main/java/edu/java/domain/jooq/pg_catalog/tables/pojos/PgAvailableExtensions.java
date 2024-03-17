@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_available_extensions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,49 +47,29 @@ public class PgAvailableExtensions implements Serializable {
         this.comment = comment;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_available_extensions.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_available_extensions.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extensions.default_version</code>.
-     */
     @Nullable
     public String getDefaultVersion() {
         return this.defaultVersion;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extensions.default_version</code>.
-     */
     public void setDefaultVersion(@Nullable String defaultVersion) {
         this.defaultVersion = defaultVersion;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_available_extensions.comment</code>.
-     */
     @Nullable
     public String getComment() {
         return this.comment;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_available_extensions.comment</code>.
-     */
     public void setComment(@Nullable String comment) {
         this.comment = comment;
     }

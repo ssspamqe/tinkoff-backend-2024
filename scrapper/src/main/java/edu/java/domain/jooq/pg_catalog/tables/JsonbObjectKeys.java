@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonbObjectKeysRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_object_keys</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,23 +39,14 @@ public class JsonbObjectKeys extends TableImpl<JsonbObjectKeysRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.jsonb_object_keys</code>
-     */
     public static final JsonbObjectKeys JSONB_OBJECT_KEYS = new JsonbObjectKeys();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonbObjectKeysRecord> getRecordType() {
         return JsonbObjectKeysRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.jsonb_object_keys.jsonb_object_keys</code>.
-     */
     public final TableField<JsonbObjectKeysRecord, String> JSONB_OBJECT_KEYS_ = createField(DSL.name("jsonb_object_keys"), SQLDataType.CLOB, this, "");
 
     private JsonbObjectKeys(Name alias, Table<JsonbObjectKeysRecord> aliased) {
@@ -73,25 +59,14 @@ public class JsonbObjectKeys extends TableImpl<JsonbObjectKeysRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_object_keys</code> table
-     * reference
-     */
     public JsonbObjectKeys(String alias) {
         this(DSL.name(alias), JSONB_OBJECT_KEYS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_object_keys</code> table
-     * reference
-     */
     public JsonbObjectKeys(Name alias) {
         this(alias, JSONB_OBJECT_KEYS);
     }
 
-    /**
-     * Create a <code>pg_catalog.jsonb_object_keys</code> table reference
-     */
     public JsonbObjectKeys() {
         this(DSL.name("jsonb_object_keys"), null);
     }
@@ -120,27 +95,18 @@ public class JsonbObjectKeys extends TableImpl<JsonbObjectKeysRecord> {
         return new JsonbObjectKeys(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbObjectKeys rename(String name) {
         return new JsonbObjectKeys(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbObjectKeys rename(Name name) {
         return new JsonbObjectKeys(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbObjectKeys rename(Table<?> name) {
@@ -157,9 +123,6 @@ public class JsonbObjectKeys extends TableImpl<JsonbObjectKeysRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbObjectKeys call(
           JSONB __1
     ) {
@@ -170,9 +133,6 @@ public class JsonbObjectKeys extends TableImpl<JsonbObjectKeysRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbObjectKeys call(
           Field<JSONB> __1
     ) {
@@ -183,17 +143,10 @@ public class JsonbObjectKeys extends TableImpl<JsonbObjectKeysRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

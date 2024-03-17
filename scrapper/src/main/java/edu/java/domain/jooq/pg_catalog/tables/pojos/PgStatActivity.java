@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_activity</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -127,344 +124,202 @@ public class PgStatActivity implements Serializable {
         this.backendType = backendType;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return this.datid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.datid</code>.
-     */
     public void setDatid(@Nullable Long datid) {
         this.datid = datid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return this.datname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.datname</code>.
-     */
     public void setDatname(@Nullable String datname) {
         this.datname = datname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.leader_pid</code>.
-     */
     @Nullable
     public Integer getLeaderPid() {
         return this.leaderPid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.leader_pid</code>.
-     */
     public void setLeaderPid(@Nullable Integer leaderPid) {
         this.leaderPid = leaderPid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.usesysid</code>.
-     */
     @Nullable
     public Long getUsesysid() {
         return this.usesysid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.usesysid</code>.
-     */
     public void setUsesysid(@Nullable Long usesysid) {
         this.usesysid = usesysid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.usename</code>.
-     */
     @Nullable
     public String getUsename() {
         return this.usename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.usename</code>.
-     */
     public void setUsename(@Nullable String usename) {
         this.usename = usename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.application_name</code>.
-     */
     @Nullable
     public String getApplicationName() {
         return this.applicationName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.application_name</code>.
-     */
     public void setApplicationName(@Nullable String applicationName) {
         this.applicationName = applicationName;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getClientAddr() {
         return this.clientAddr;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setClientAddr(@Nullable Object clientAddr) {
         this.clientAddr = clientAddr;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.client_hostname</code>.
-     */
     @Nullable
     public String getClientHostname() {
         return this.clientHostname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.client_hostname</code>.
-     */
     public void setClientHostname(@Nullable String clientHostname) {
         this.clientHostname = clientHostname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.client_port</code>.
-     */
     @Nullable
     public Integer getClientPort() {
         return this.clientPort;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.client_port</code>.
-     */
     public void setClientPort(@Nullable Integer clientPort) {
         this.clientPort = clientPort;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.backend_start</code>.
-     */
     @Nullable
     public OffsetDateTime getBackendStart() {
         return this.backendStart;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.backend_start</code>.
-     */
     public void setBackendStart(@Nullable OffsetDateTime backendStart) {
         this.backendStart = backendStart;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.xact_start</code>.
-     */
     @Nullable
     public OffsetDateTime getXactStart() {
         return this.xactStart;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.xact_start</code>.
-     */
     public void setXactStart(@Nullable OffsetDateTime xactStart) {
         this.xactStart = xactStart;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.query_start</code>.
-     */
     @Nullable
     public OffsetDateTime getQueryStart() {
         return this.queryStart;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.query_start</code>.
-     */
     public void setQueryStart(@Nullable OffsetDateTime queryStart) {
         this.queryStart = queryStart;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.state_change</code>.
-     */
     @Nullable
     public OffsetDateTime getStateChange() {
         return this.stateChange;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.state_change</code>.
-     */
     public void setStateChange(@Nullable OffsetDateTime stateChange) {
         this.stateChange = stateChange;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.wait_event_type</code>.
-     */
     @Nullable
     public String getWaitEventType() {
         return this.waitEventType;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.wait_event_type</code>.
-     */
     public void setWaitEventType(@Nullable String waitEventType) {
         this.waitEventType = waitEventType;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.wait_event</code>.
-     */
     @Nullable
     public String getWaitEvent() {
         return this.waitEvent;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.wait_event</code>.
-     */
     public void setWaitEvent(@Nullable String waitEvent) {
         this.waitEvent = waitEvent;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.state</code>.
-     */
     @Nullable
     public String getState() {
         return this.state;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.state</code>.
-     */
     public void setState(@Nullable String state) {
         this.state = state;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.backend_xid</code>.
-     */
     @Nullable
     public Long getBackendXid() {
         return this.backendXid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.backend_xid</code>.
-     */
     public void setBackendXid(@Nullable Long backendXid) {
         this.backendXid = backendXid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.backend_xmin</code>.
-     */
     @Nullable
     public Long getBackendXmin() {
         return this.backendXmin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.backend_xmin</code>.
-     */
     public void setBackendXmin(@Nullable Long backendXmin) {
         this.backendXmin = backendXmin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.query_id</code>.
-     */
     @Nullable
     public Long getQueryId() {
         return this.queryId;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.query_id</code>.
-     */
     public void setQueryId(@Nullable Long queryId) {
         this.queryId = queryId;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.query</code>.
-     */
     @Nullable
     public String getQuery() {
         return this.query;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.query</code>.
-     */
     public void setQuery(@Nullable String query) {
         this.query = query;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_activity.backend_type</code>.
-     */
     @Nullable
     public String getBackendType() {
         return this.backendType;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_activity.backend_type</code>.
-     */
     public void setBackendType(@Nullable String backendType) {
         this.backendType = backendType;
     }

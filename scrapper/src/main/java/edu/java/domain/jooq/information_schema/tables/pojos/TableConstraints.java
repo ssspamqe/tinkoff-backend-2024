@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.table_constraints</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -84,189 +81,105 @@ public class TableConstraints implements Serializable {
         this.nullsDistinct = nullsDistinct;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return this.constraintCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String constraintCatalog) {
         this.constraintCatalog = constraintCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return this.constraintSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String constraintSchema) {
         this.constraintSchema = constraintSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return this.constraintName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String constraintName) {
         this.constraintName = constraintName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return this.tableCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String tableCatalog) {
         this.tableCatalog = tableCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return this.tableSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String tableSchema) {
         this.tableSchema = tableSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.table_constraints.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return this.tableName;
     }
 
-    /**
-     * Setter for <code>information_schema.table_constraints.table_name</code>.
-     */
     public void setTableName(@Nullable String tableName) {
         this.tableName = tableName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.constraint_type</code>.
-     */
     @Nullable
     public String getConstraintType() {
         return this.constraintType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.constraint_type</code>.
-     */
     public void setConstraintType(@Nullable String constraintType) {
         this.constraintType = constraintType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.is_deferrable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsDeferrable() {
         return this.isDeferrable;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.is_deferrable</code>.
-     */
     public void setIsDeferrable(@Nullable String isDeferrable) {
         this.isDeferrable = isDeferrable;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.initially_deferred</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getInitiallyDeferred() {
         return this.initiallyDeferred;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.initially_deferred</code>.
-     */
     public void setInitiallyDeferred(@Nullable String initiallyDeferred) {
         this.initiallyDeferred = initiallyDeferred;
     }
 
-    /**
-     * Getter for <code>information_schema.table_constraints.enforced</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getEnforced() {
         return this.enforced;
     }
 
-    /**
-     * Setter for <code>information_schema.table_constraints.enforced</code>.
-     */
     public void setEnforced(@Nullable String enforced) {
         this.enforced = enforced;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.table_constraints.nulls_distinct</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getNullsDistinct() {
         return this.nullsDistinct;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.table_constraints.nulls_distinct</code>.
-     */
     public void setNullsDistinct(@Nullable String nullsDistinct) {
         this.nullsDistinct = nullsDistinct;
     }

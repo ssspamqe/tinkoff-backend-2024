@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_backend_idset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,19 +39,11 @@ public class PgStatGetBackendIdset implements Serializable {
         this.pgStatGetBackendIdset = pgStatGetBackendIdset;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_get_backend_idset.pg_stat_get_backend_idset</code>.
-     */
     @Nullable
     public Integer getPgStatGetBackendIdset() {
         return this.pgStatGetBackendIdset;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_get_backend_idset.pg_stat_get_backend_idset</code>.
-     */
     public void setPgStatGetBackendIdset(@Nullable Integer pgStatGetBackendIdset) {
         this.pgStatGetBackendIdset = pgStatGetBackendIdset;
     }

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ColumnPrivilegesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.column_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,63 +39,28 @@ public class ColumnPrivileges extends TableImpl<ColumnPrivilegesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.column_privileges</code>
-     */
     public static final ColumnPrivileges COLUMN_PRIVILEGES = new ColumnPrivileges();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ColumnPrivilegesRecord> getRecordType() {
         return ColumnPrivilegesRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.column_privileges.grantor</code>.
-     */
     public final TableField<ColumnPrivilegesRecord, String> GRANTOR = createField(DSL.name("grantor"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.column_privileges.grantee</code>.
-     */
     public final TableField<ColumnPrivilegesRecord, String> GRANTEE = createField(DSL.name("grantee"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_privileges.table_catalog</code>.
-     */
     public final TableField<ColumnPrivilegesRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_privileges.table_schema</code>.
-     */
     public final TableField<ColumnPrivilegesRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.column_privileges.table_name</code>.
-     */
     public final TableField<ColumnPrivilegesRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.column_privileges.column_name</code>.
-     */
     public final TableField<ColumnPrivilegesRecord, String> COLUMN_NAME = createField(DSL.name("column_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_privileges.privilege_type</code>.
-     */
     public final TableField<ColumnPrivilegesRecord, String> PRIVILEGE_TYPE = createField(DSL.name("privilege_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.column_privileges.is_grantable</code>.
-     */
     public final TableField<ColumnPrivilegesRecord, String> IS_GRANTABLE = createField(DSL.name("is_grantable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
     private ColumnPrivileges(Name alias, Table<ColumnPrivilegesRecord> aliased) {
@@ -173,26 +133,14 @@ public class ColumnPrivileges extends TableImpl<ColumnPrivilegesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.column_privileges</code> table
-     * reference
-     */
     public ColumnPrivileges(String alias) {
         this(DSL.name(alias), COLUMN_PRIVILEGES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.column_privileges</code> table
-     * reference
-     */
     public ColumnPrivileges(Name alias) {
         this(alias, COLUMN_PRIVILEGES);
     }
 
-    /**
-     * Create a <code>information_schema.column_privileges</code> table
-     * reference
-     */
     public ColumnPrivileges() {
         this(DSL.name("column_privileges"), null);
     }
@@ -225,27 +173,18 @@ public class ColumnPrivileges extends TableImpl<ColumnPrivilegesRecord> {
         return new ColumnPrivileges(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnPrivileges rename(String name) {
         return new ColumnPrivileges(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnPrivileges rename(Name name) {
         return new ColumnPrivileges(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ColumnPrivileges rename(Table<?> name) {
@@ -262,17 +201,10 @@ public class ColumnPrivileges extends TableImpl<ColumnPrivilegesRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatProgressCreateIndexRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_create_index</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,109 +40,44 @@ public class PgStatProgressCreateIndex extends TableImpl<PgStatProgressCreateInd
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_progress_create_index</code>
-     */
     public static final PgStatProgressCreateIndex PG_STAT_PROGRESS_CREATE_INDEX = new PgStatProgressCreateIndex();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatProgressCreateIndexRecord> getRecordType() {
         return PgStatProgressCreateIndexRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_create_index.pid</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_create_index.datid</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_create_index.datname</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, String> DATNAME = createField(DSL.name("datname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_create_index.relid</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.index_relid</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> INDEX_RELID = createField(DSL.name("index_relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_create_index.command</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, String> COMMAND = createField(DSL.name("command"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_create_index.phase</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, String> PHASE = createField(DSL.name("phase"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.lockers_total</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> LOCKERS_TOTAL = createField(DSL.name("lockers_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.lockers_done</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> LOCKERS_DONE = createField(DSL.name("lockers_done"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.current_locker_pid</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> CURRENT_LOCKER_PID = createField(DSL.name("current_locker_pid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.blocks_total</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> BLOCKS_TOTAL = createField(DSL.name("blocks_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.blocks_done</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> BLOCKS_DONE = createField(DSL.name("blocks_done"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.tuples_total</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> TUPLES_TOTAL = createField(DSL.name("tuples_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.tuples_done</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> TUPLES_DONE = createField(DSL.name("tuples_done"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.partitions_total</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> PARTITIONS_TOTAL = createField(DSL.name("partitions_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_create_index.partitions_done</code>.
-     */
     public final TableField<PgStatProgressCreateIndexRecord, Long> PARTITIONS_DONE = createField(DSL.name("partitions_done"), SQLDataType.BIGINT, this, "");
 
     private PgStatProgressCreateIndex(Name alias, Table<PgStatProgressCreateIndexRecord> aliased) {
@@ -195,26 +125,14 @@ public class PgStatProgressCreateIndex extends TableImpl<PgStatProgressCreateInd
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_create_index</code>
-     * table reference
-     */
     public PgStatProgressCreateIndex(String alias) {
         this(DSL.name(alias), PG_STAT_PROGRESS_CREATE_INDEX);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_create_index</code>
-     * table reference
-     */
     public PgStatProgressCreateIndex(Name alias) {
         this(alias, PG_STAT_PROGRESS_CREATE_INDEX);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_progress_create_index</code> table
-     * reference
-     */
     public PgStatProgressCreateIndex() {
         this(DSL.name("pg_stat_progress_create_index"), null);
     }
@@ -247,27 +165,18 @@ public class PgStatProgressCreateIndex extends TableImpl<PgStatProgressCreateInd
         return new PgStatProgressCreateIndex(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCreateIndex rename(String name) {
         return new PgStatProgressCreateIndex(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCreateIndex rename(Name name) {
         return new PgStatProgressCreateIndex(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressCreateIndex rename(Table<?> name) {
@@ -284,17 +193,10 @@ public class PgStatProgressCreateIndex extends TableImpl<PgStatProgressCreateInd
         return (Row16) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function16<? super Integer, ? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function16<? super Integer, ? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

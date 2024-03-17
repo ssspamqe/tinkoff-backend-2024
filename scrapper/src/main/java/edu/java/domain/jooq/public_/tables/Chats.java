@@ -9,7 +9,6 @@ import edu.java.domain.jooq.public_.Public;
 import edu.java.domain.jooq.public_.tables.records.ChatsRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -33,9 +32,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>public.chats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -48,28 +44,16 @@ public class Chats extends TableImpl<ChatsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>public.chats</code>
-     */
     public static final Chats CHATS = new Chats();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ChatsRecord> getRecordType() {
         return ChatsRecord.class;
     }
 
-    /**
-     * The column <code>public.chats.id</code>.
-     */
     public final TableField<ChatsRecord, Long> ID = createField(DSL.name("id"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>public.chats.created_at</code>.
-     */
     public final TableField<ChatsRecord, OffsetDateTime> CREATED_AT = createField(DSL.name("created_at"), SQLDataType.TIMESTAMPWITHTIMEZONE(6).nullable(false), this, "");
 
     private Chats(Name alias, Table<ChatsRecord> aliased) {
@@ -80,23 +64,14 @@ public class Chats extends TableImpl<ChatsRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>public.chats</code> table reference
-     */
     public Chats(String alias) {
         this(DSL.name(alias), CHATS);
     }
 
-    /**
-     * Create an aliased <code>public.chats</code> table reference
-     */
     public Chats(Name alias) {
         this(alias, CHATS);
     }
 
-    /**
-     * Create a <code>public.chats</code> table reference
-     */
     public Chats() {
         this(DSL.name("chats"), null);
     }
@@ -135,27 +110,18 @@ public class Chats extends TableImpl<ChatsRecord> {
         return new Chats(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Chats rename(String name) {
         return new Chats(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Chats rename(Name name) {
         return new Chats(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Chats rename(Table<?> name) {
@@ -172,17 +138,10 @@ public class Chats extends TableImpl<ChatsRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

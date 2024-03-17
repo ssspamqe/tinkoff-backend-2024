@@ -19,9 +19,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_tablespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,79 +31,49 @@ public class PgTablespaceRecord extends UpdatableRecordImpl<PgTablespaceRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.spcname</code>.
-     */
     public void setSpcname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.spcname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSpcname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.spcowner</code>.
-     */
     public void setSpcowner(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.spcowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSpcowner() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.spcacl</code>.
-     */
     public void setSpcacl(@Nullable String[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.spcacl</code>.
-     */
     @Nullable
     public String[] getSpcacl() {
         return (String[]) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_tablespace.spcoptions</code>.
-     */
     public void setSpcoptions(@Nullable String[] value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_tablespace.spcoptions</code>.
-     */
     @Nullable
     public String[] getSpcoptions() {
         return (String[]) get(4);
@@ -278,16 +245,10 @@ public class PgTablespaceRecord extends UpdatableRecordImpl<PgTablespaceRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTablespaceRecord
-     */
     public PgTablespaceRecord() {
         super(PgTablespace.PG_TABLESPACE);
     }
 
-    /**
-     * Create a detached, initialised PgTablespaceRecord
-     */
     @ConstructorProperties({ "oid", "spcname", "spcowner", "spcacl", "spcoptions" })
     public PgTablespaceRecord(@NotNull Long oid, @NotNull String spcname, @NotNull Long spcowner, @Nullable String[] spcacl, @Nullable String[] spcoptions) {
         super(PgTablespace.PG_TABLESPACE);
@@ -300,9 +261,6 @@ public class PgTablespaceRecord extends UpdatableRecordImpl<PgTablespaceRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTablespaceRecord
-     */
     public PgTablespaceRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTablespace value) {
         super(PgTablespace.PG_TABLESPACE);
 

@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgAggregateRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_aggregate</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,128 +42,56 @@ public class PgAggregate extends TableImpl<PgAggregateRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_aggregate</code>
-     */
     public static final PgAggregate PG_AGGREGATE = new PgAggregate();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgAggregateRecord> getRecordType() {
         return PgAggregateRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggfnoid</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGFNOID = createField(DSL.name("aggfnoid"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggkind</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGKIND = createField(DSL.name("aggkind"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggnumdirectargs</code>.
-     */
     public final TableField<PgAggregateRecord, Short> AGGNUMDIRECTARGS = createField(DSL.name("aggnumdirectargs"), SQLDataType.SMALLINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggtransfn</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGTRANSFN = createField(DSL.name("aggtransfn"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggfinalfn</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGFINALFN = createField(DSL.name("aggfinalfn"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggcombinefn</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGCOMBINEFN = createField(DSL.name("aggcombinefn"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggserialfn</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGSERIALFN = createField(DSL.name("aggserialfn"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggdeserialfn</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGDESERIALFN = createField(DSL.name("aggdeserialfn"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggmtransfn</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGMTRANSFN = createField(DSL.name("aggmtransfn"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggminvtransfn</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGMINVTRANSFN = createField(DSL.name("aggminvtransfn"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggmfinalfn</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGMFINALFN = createField(DSL.name("aggmfinalfn"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggfinalextra</code>.
-     */
     public final TableField<PgAggregateRecord, Boolean> AGGFINALEXTRA = createField(DSL.name("aggfinalextra"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggmfinalextra</code>.
-     */
     public final TableField<PgAggregateRecord, Boolean> AGGMFINALEXTRA = createField(DSL.name("aggmfinalextra"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggfinalmodify</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGFINALMODIFY = createField(DSL.name("aggfinalmodify"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggmfinalmodify</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGMFINALMODIFY = createField(DSL.name("aggmfinalmodify"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggsortop</code>.
-     */
     public final TableField<PgAggregateRecord, Long> AGGSORTOP = createField(DSL.name("aggsortop"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggtranstype</code>.
-     */
     public final TableField<PgAggregateRecord, Long> AGGTRANSTYPE = createField(DSL.name("aggtranstype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggtransspace</code>.
-     */
     public final TableField<PgAggregateRecord, Integer> AGGTRANSSPACE = createField(DSL.name("aggtransspace"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggmtranstype</code>.
-     */
     public final TableField<PgAggregateRecord, Long> AGGMTRANSTYPE = createField(DSL.name("aggmtranstype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggmtransspace</code>.
-     */
     public final TableField<PgAggregateRecord, Integer> AGGMTRANSSPACE = createField(DSL.name("aggmtransspace"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.agginitval</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGINITVAL = createField(DSL.name("agginitval"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_aggregate.aggminitval</code>.
-     */
     public final TableField<PgAggregateRecord, String> AGGMINITVAL = createField(DSL.name("aggminitval"), SQLDataType.CLOB, this, "");
 
     private PgAggregate(Name alias, Table<PgAggregateRecord> aliased) {
@@ -179,23 +102,14 @@ public class PgAggregate extends TableImpl<PgAggregateRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_aggregate</code> table reference
-     */
     public PgAggregate(String alias) {
         this(DSL.name(alias), PG_AGGREGATE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_aggregate</code> table reference
-     */
     public PgAggregate(Name alias) {
         this(alias, PG_AGGREGATE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_aggregate</code> table reference
-     */
     public PgAggregate() {
         this(DSL.name("pg_aggregate"), null);
     }
@@ -234,27 +148,18 @@ public class PgAggregate extends TableImpl<PgAggregateRecord> {
         return new PgAggregate(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAggregate rename(String name) {
         return new PgAggregate(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAggregate rename(Name name) {
         return new PgAggregate(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAggregate rename(Table<?> name) {
@@ -271,17 +176,10 @@ public class PgAggregate extends TableImpl<PgAggregateRecord> {
         return (Row22) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function22<? super String, ? super String, ? super Short, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super Long, ? super Long, ? super Integer, ? super Long, ? super Integer, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function22<? super String, ? super String, ? super Short, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super String, ? super String, ? super Long, ? super Long, ? super Integer, ? super Long, ? super Integer, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

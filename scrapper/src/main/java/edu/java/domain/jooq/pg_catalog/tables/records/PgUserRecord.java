@@ -19,9 +19,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_user</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,136 +31,82 @@ public class PgUserRecord extends TableRecordImpl<PgUserRecord> implements Recor
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.usename</code>.
-     */
     public void setUsename(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.usename</code>.
-     */
     @Nullable
     public String getUsename() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.usesysid</code>.
-     */
     public void setUsesysid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.usesysid</code>.
-     */
     @Nullable
     public Long getUsesysid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.usecreatedb</code>.
-     */
     public void setUsecreatedb(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.usecreatedb</code>.
-     */
     @Nullable
     public Boolean getUsecreatedb() {
         return (Boolean) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.usesuper</code>.
-     */
     public void setUsesuper(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.usesuper</code>.
-     */
     @Nullable
     public Boolean getUsesuper() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.userepl</code>.
-     */
     public void setUserepl(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.userepl</code>.
-     */
     @Nullable
     public Boolean getUserepl() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.usebypassrls</code>.
-     */
     public void setUsebypassrls(@Nullable Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.usebypassrls</code>.
-     */
     @Nullable
     public Boolean getUsebypassrls() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.passwd</code>.
-     */
     public void setPasswd(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.passwd</code>.
-     */
     @Nullable
     public String getPasswd() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.valuntil</code>.
-     */
     public void setValuntil(@Nullable OffsetDateTime value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.valuntil</code>.
-     */
     @Nullable
     public OffsetDateTime getValuntil() {
         return (OffsetDateTime) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user.useconfig</code>.
-     */
     public void setUseconfig(@Nullable String[] value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user.useconfig</code>.
-     */
     @Nullable
     public String[] getUseconfig() {
         return (String[]) get(8);
@@ -429,16 +372,10 @@ public class PgUserRecord extends TableRecordImpl<PgUserRecord> implements Recor
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgUserRecord
-     */
     public PgUserRecord() {
         super(PgUser.PG_USER);
     }
 
-    /**
-     * Create a detached, initialised PgUserRecord
-     */
     @ConstructorProperties({ "usename", "usesysid", "usecreatedb", "usesuper", "userepl", "usebypassrls", "passwd", "valuntil", "useconfig" })
     public PgUserRecord(@Nullable String usename, @Nullable Long usesysid, @Nullable Boolean usecreatedb, @Nullable Boolean usesuper, @Nullable Boolean userepl, @Nullable Boolean usebypassrls, @Nullable String passwd, @Nullable OffsetDateTime valuntil, @Nullable String[] useconfig) {
         super(PgUser.PG_USER);
@@ -455,9 +392,6 @@ public class PgUserRecord extends TableRecordImpl<PgUserRecord> implements Recor
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgUserRecord
-     */
     public PgUserRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgUser value) {
         super(PgUser.PG_USER);
 

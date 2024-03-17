@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema._pg_foreign_data_wrappers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,118 +30,64 @@ public class _PgForeignDataWrappersRecord extends TableRecordImpl<_PgForeignData
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema._pg_foreign_data_wrappers.oid</code>.
-     */
     public void setOid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema._pg_foreign_data_wrappers.oid</code>.
-     */
     @Nullable
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.fdwowner</code>.
-     */
     public void setFdwowner(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.fdwowner</code>.
-     */
     @Nullable
     public Long getFdwowner() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.fdwoptions</code>.
-     */
     public void setFdwoptions(@Nullable String[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.fdwoptions</code>.
-     */
     @Nullable
     public String[] getFdwoptions() {
         return (String[]) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     public void setForeignDataWrapperLanguage(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     @Nullable
     public String getForeignDataWrapperLanguage() {
         return (String) get(6);
@@ -358,16 +301,10 @@ public class _PgForeignDataWrappersRecord extends TableRecordImpl<_PgForeignData
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached _PgForeignDataWrappersRecord
-     */
     public _PgForeignDataWrappersRecord() {
         super(_PgForeignDataWrappers._PG_FOREIGN_DATA_WRAPPERS);
     }
 
-    /**
-     * Create a detached, initialised _PgForeignDataWrappersRecord
-     */
     @ConstructorProperties({ "oid", "fdwowner", "fdwoptions", "foreignDataWrapperCatalog", "foreignDataWrapperName", "authorizationIdentifier", "foreignDataWrapperLanguage" })
     public _PgForeignDataWrappersRecord(@Nullable Long oid, @Nullable Long fdwowner, @Nullable String[] fdwoptions, @Nullable String foreignDataWrapperCatalog, @Nullable String foreignDataWrapperName, @Nullable String authorizationIdentifier, @Nullable String foreignDataWrapperLanguage) {
         super(_PgForeignDataWrappers._PG_FOREIGN_DATA_WRAPPERS);
@@ -382,9 +319,6 @@ public class _PgForeignDataWrappersRecord extends TableRecordImpl<_PgForeignData
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised _PgForeignDataWrappersRecord
-     */
     public _PgForeignDataWrappersRecord(edu.java.domain.jooq.information_schema.tables.pojos._PgForeignDataWrappers value) {
         super(_PgForeignDataWrappers._PG_FOREIGN_DATA_WRAPPERS);
 

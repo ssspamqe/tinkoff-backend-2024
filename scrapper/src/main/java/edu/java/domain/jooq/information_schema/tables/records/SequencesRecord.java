@@ -20,9 +20,6 @@ import org.jooq.Row12;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,183 +32,109 @@ public class SequencesRecord extends TableRecordImpl<SequencesRecord> implements
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.sequences.sequence_catalog</code>.
-     */
     public void setSequenceCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.sequence_catalog</code>.
-     */
     @Nullable
     public String getSequenceCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.sequence_schema</code>.
-     */
     public void setSequenceSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.sequence_schema</code>.
-     */
     @Nullable
     public String getSequenceSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.sequence_name</code>.
-     */
     public void setSequenceName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.sequence_name</code>.
-     */
     @Nullable
     public String getSequenceName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.data_type</code>.
-     */
     public void setDataType(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.data_type</code>.
-     */
     @Nullable
     public String getDataType() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.numeric_precision</code>.
-     */
     public void setNumericPrecision(@Nullable Integer value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.numeric_precision</code>.
-     */
     @Nullable
     public Integer getNumericPrecision() {
         return (Integer) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.sequences.numeric_precision_radix</code>.
-     */
     public void setNumericPrecisionRadix(@Nullable Integer value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.sequences.numeric_precision_radix</code>.
-     */
     @Nullable
     public Integer getNumericPrecisionRadix() {
         return (Integer) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.numeric_scale</code>.
-     */
     public void setNumericScale(@Nullable Integer value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.numeric_scale</code>.
-     */
     @Nullable
     public Integer getNumericScale() {
         return (Integer) get(6);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.start_value</code>.
-     */
     public void setStartValue(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.start_value</code>.
-     */
     @Nullable
     public String getStartValue() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.minimum_value</code>.
-     */
     public void setMinimumValue(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.minimum_value</code>.
-     */
     @Nullable
     public String getMinimumValue() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.maximum_value</code>.
-     */
     public void setMaximumValue(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.maximum_value</code>.
-     */
     @Nullable
     public String getMaximumValue() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.increment</code>.
-     */
     public void setIncrement(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.increment</code>.
-     */
     @Nullable
     public String getIncrement() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>information_schema.sequences.cycle_option</code>.
-     */
     public void setCycleOption(@Nullable String value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>information_schema.sequences.cycle_option</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getCycleOption() {
@@ -556,16 +479,10 @@ public class SequencesRecord extends TableRecordImpl<SequencesRecord> implements
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached SequencesRecord
-     */
     public SequencesRecord() {
         super(Sequences.SEQUENCES);
     }
 
-    /**
-     * Create a detached, initialised SequencesRecord
-     */
     @ConstructorProperties({ "sequenceCatalog", "sequenceSchema", "sequenceName", "dataType", "numericPrecision", "numericPrecisionRadix", "numericScale", "startValue", "minimumValue", "maximumValue", "increment", "cycleOption" })
     public SequencesRecord(@Nullable String sequenceCatalog, @Nullable String sequenceSchema, @Nullable String sequenceName, @Nullable String dataType, @Nullable Integer numericPrecision, @Nullable Integer numericPrecisionRadix, @Nullable Integer numericScale, @Nullable String startValue, @Nullable String minimumValue, @Nullable String maximumValue, @Nullable String increment, @Nullable String cycleOption) {
         super(Sequences.SEQUENCES);
@@ -585,9 +502,6 @@ public class SequencesRecord extends TableRecordImpl<SequencesRecord> implements
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised SequencesRecord
-     */
     public SequencesRecord(edu.java.domain.jooq.information_schema.tables.pojos.Sequences value) {
         super(Sequences.SEQUENCES);
 

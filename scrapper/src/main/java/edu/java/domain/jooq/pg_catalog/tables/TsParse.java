@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.TsParseRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.ts_parse</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,28 +38,16 @@ public class TsParse extends TableImpl<TsParseRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.ts_parse</code>
-     */
     public static final TsParse TS_PARSE = new TsParse();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TsParseRecord> getRecordType() {
         return TsParseRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.ts_parse.tokid</code>.
-     */
     public final TableField<TsParseRecord, Integer> TOKID = createField(DSL.name("tokid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.ts_parse.token</code>.
-     */
     public final TableField<TsParseRecord, String> TOKEN = createField(DSL.name("token"), SQLDataType.CLOB, this, "");
 
     private TsParse(Name alias, Table<TsParseRecord> aliased) {
@@ -78,23 +61,14 @@ public class TsParse extends TableImpl<TsParseRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.ts_parse</code> table reference
-     */
     public TsParse(String alias) {
         this(DSL.name(alias), TS_PARSE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.ts_parse</code> table reference
-     */
     public TsParse(Name alias) {
         this(alias, TS_PARSE);
     }
 
-    /**
-     * Create a <code>pg_catalog.ts_parse</code> table reference
-     */
     public TsParse() {
         this(DSL.name("ts_parse"), null);
     }
@@ -123,27 +97,18 @@ public class TsParse extends TableImpl<TsParseRecord> {
         return new TsParse(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsParse rename(String name) {
         return new TsParse(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsParse rename(Name name) {
         return new TsParse(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TsParse rename(Table<?> name) {
@@ -160,9 +125,6 @@ public class TsParse extends TableImpl<TsParseRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TsParse call(
           Long parserOid
         , String txt
@@ -175,9 +137,6 @@ public class TsParse extends TableImpl<TsParseRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public TsParse call(
           Field<Long> parserOid
         , Field<String> txt
@@ -190,17 +149,10 @@ public class TsParse extends TableImpl<TsParseRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super Integer, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super Integer, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

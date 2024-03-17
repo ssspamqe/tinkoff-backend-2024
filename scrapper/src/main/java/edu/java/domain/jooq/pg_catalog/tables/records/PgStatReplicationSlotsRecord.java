@@ -19,9 +19,6 @@ import org.jooq.Row10;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_replication_slots</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,155 +31,91 @@ public class PgStatReplicationSlotsRecord extends TableRecordImpl<PgStatReplicat
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.slot_name</code>.
-     */
     public void setSlotName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.slot_name</code>.
-     */
     @Nullable
     public String getSlotName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.spill_txns</code>.
-     */
     public void setSpillTxns(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.spill_txns</code>.
-     */
     @Nullable
     public Long getSpillTxns() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.spill_count</code>.
-     */
     public void setSpillCount(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.spill_count</code>.
-     */
     @Nullable
     public Long getSpillCount() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.spill_bytes</code>.
-     */
     public void setSpillBytes(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.spill_bytes</code>.
-     */
     @Nullable
     public Long getSpillBytes() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.stream_txns</code>.
-     */
     public void setStreamTxns(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.stream_txns</code>.
-     */
     @Nullable
     public Long getStreamTxns() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_replication_slots.stream_count</code>.
-     */
     public void setStreamCount(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_replication_slots.stream_count</code>.
-     */
     @Nullable
     public Long getStreamCount() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_replication_slots.stream_bytes</code>.
-     */
     public void setStreamBytes(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_replication_slots.stream_bytes</code>.
-     */
     @Nullable
     public Long getStreamBytes() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.total_txns</code>.
-     */
     public void setTotalTxns(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.total_txns</code>.
-     */
     @Nullable
     public Long getTotalTxns() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.total_bytes</code>.
-     */
     public void setTotalBytes(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.total_bytes</code>.
-     */
     @Nullable
     public Long getTotalBytes() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return (OffsetDateTime) get(9);
@@ -474,16 +407,10 @@ public class PgStatReplicationSlotsRecord extends TableRecordImpl<PgStatReplicat
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatReplicationSlotsRecord
-     */
     public PgStatReplicationSlotsRecord() {
         super(PgStatReplicationSlots.PG_STAT_REPLICATION_SLOTS);
     }
 
-    /**
-     * Create a detached, initialised PgStatReplicationSlotsRecord
-     */
     @ConstructorProperties({ "slotName", "spillTxns", "spillCount", "spillBytes", "streamTxns", "streamCount", "streamBytes", "totalTxns", "totalBytes", "statsReset" })
     public PgStatReplicationSlotsRecord(@Nullable String slotName, @Nullable Long spillTxns, @Nullable Long spillCount, @Nullable Long spillBytes, @Nullable Long streamTxns, @Nullable Long streamCount, @Nullable Long streamBytes, @Nullable Long totalTxns, @Nullable Long totalBytes, @Nullable OffsetDateTime statsReset) {
         super(PgStatReplicationSlots.PG_STAT_REPLICATION_SLOTS);
@@ -501,9 +428,6 @@ public class PgStatReplicationSlotsRecord extends TableRecordImpl<PgStatReplicat
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatReplicationSlotsRecord
-     */
     public PgStatReplicationSlotsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatReplicationSlots value) {
         super(PgStatReplicationSlots.PG_STAT_REPLICATION_SLOTS);
 

@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_keywords</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,76 +30,46 @@ public class PgGetKeywordsRecord extends TableRecordImpl<PgGetKeywordsRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.word</code>.
-     */
     public void setWord(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.word</code>.
-     */
     @Nullable
     public String getWord() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.catcode</code>.
-     */
     public void setCatcode(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.catcode</code>.
-     */
     @Nullable
     public String getCatcode() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.barelabel</code>.
-     */
     public void setBarelabel(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.barelabel</code>.
-     */
     @Nullable
     public Boolean getBarelabel() {
         return (Boolean) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.catdesc</code>.
-     */
     public void setCatdesc(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.catdesc</code>.
-     */
     @Nullable
     public String getCatdesc() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_keywords.baredesc</code>.
-     */
     public void setBaredesc(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_keywords.baredesc</code>.
-     */
     @Nullable
     public String getBaredesc() {
         return (String) get(4);
@@ -264,16 +231,10 @@ public class PgGetKeywordsRecord extends TableRecordImpl<PgGetKeywordsRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgGetKeywordsRecord
-     */
     public PgGetKeywordsRecord() {
         super(PgGetKeywords.PG_GET_KEYWORDS);
     }
 
-    /**
-     * Create a detached, initialised PgGetKeywordsRecord
-     */
     @ConstructorProperties({ "word", "catcode", "barelabel", "catdesc", "baredesc" })
     public PgGetKeywordsRecord(@Nullable String word, @Nullable String catcode, @Nullable Boolean barelabel, @Nullable String catdesc, @Nullable String baredesc) {
         super(PgGetKeywords.PG_GET_KEYWORDS);
@@ -286,9 +247,6 @@ public class PgGetKeywordsRecord extends TableRecordImpl<PgGetKeywordsRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgGetKeywordsRecord
-     */
     public PgGetKeywordsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgGetKeywords value) {
         super(PgGetKeywords.PG_GET_KEYWORDS);
 

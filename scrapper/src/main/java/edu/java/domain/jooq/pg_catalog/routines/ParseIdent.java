@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.parse_ident</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,24 +28,12 @@ public class ParseIdent extends AbstractRoutine<String[]> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.parse_ident.RETURN_VALUE</code>.
-     */
     public static final Parameter<String[]> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.CLOB.array(), false, false);
 
-    /**
-     * The parameter <code>pg_catalog.parse_ident.str</code>.
-     */
     public static final Parameter<String> STR = Internal.createParameter("str", SQLDataType.CLOB, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.parse_ident.strict</code>.
-     */
     public static final Parameter<Boolean> STRICT = Internal.createParameter("strict", SQLDataType.BOOLEAN.defaultValue(DSL.field(DSL.raw("true"), SQLDataType.BOOLEAN)), true, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public ParseIdent() {
         super("parse_ident", PgCatalog.PG_CATALOG, SQLDataType.CLOB.array());
 
@@ -57,32 +42,18 @@ public class ParseIdent extends AbstractRoutine<String[]> {
         addInParameter(STRICT);
     }
 
-    /**
-     * Set the <code>str</code> parameter IN value to the routine
-     */
     public void setStr(String value) {
         setValue(STR, value);
     }
 
-    /**
-     * Set the <code>str</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setStr(Field<String> field) {
         setField(STR, field);
     }
 
-    /**
-     * Set the <code>strict</code> parameter IN value to the routine
-     */
     public void setStrict(Boolean value) {
         setValue(STRICT, value);
     }
 
-    /**
-     * Set the <code>strict</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setStrict(Field<Boolean> field) {
         setField(STRICT, field);
     }

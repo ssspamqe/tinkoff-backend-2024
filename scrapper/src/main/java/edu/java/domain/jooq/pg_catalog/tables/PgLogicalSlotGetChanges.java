@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLogicalSlotGetChangesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_logical_slot_get_changes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,40 +38,19 @@ public class PgLogicalSlotGetChanges extends TableImpl<PgLogicalSlotGetChangesRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_logical_slot_get_changes</code>
-     */
     public static final PgLogicalSlotGetChanges PG_LOGICAL_SLOT_GET_CHANGES = new PgLogicalSlotGetChanges();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLogicalSlotGetChangesRecord> getRecordType() {
         return PgLogicalSlotGetChangesRecord.class;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgLogicalSlotGetChangesRecord, Object> LSN = createField(DSL.name("lsn"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_lsn\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_logical_slot_get_changes.xid</code>.
-     */
     public final TableField<PgLogicalSlotGetChangesRecord, Long> XID = createField(DSL.name("xid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_logical_slot_get_changes.data</code>.
-     */
     public final TableField<PgLogicalSlotGetChangesRecord, String> DATA = createField(DSL.name("data"), SQLDataType.CLOB, this, "");
 
     private PgLogicalSlotGetChanges(Name alias, Table<PgLogicalSlotGetChangesRecord> aliased) {
@@ -92,26 +66,14 @@ public class PgLogicalSlotGetChanges extends TableImpl<PgLogicalSlotGetChangesRe
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_logical_slot_get_changes</code>
-     * table reference
-     */
     public PgLogicalSlotGetChanges(String alias) {
         this(DSL.name(alias), PG_LOGICAL_SLOT_GET_CHANGES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_logical_slot_get_changes</code>
-     * table reference
-     */
     public PgLogicalSlotGetChanges(Name alias) {
         this(alias, PG_LOGICAL_SLOT_GET_CHANGES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_logical_slot_get_changes</code> table
-     * reference
-     */
     public PgLogicalSlotGetChanges() {
         this(DSL.name("pg_logical_slot_get_changes"), null);
     }
@@ -140,27 +102,18 @@ public class PgLogicalSlotGetChanges extends TableImpl<PgLogicalSlotGetChangesRe
         return new PgLogicalSlotGetChanges(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLogicalSlotGetChanges rename(String name) {
         return new PgLogicalSlotGetChanges(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLogicalSlotGetChanges rename(Name name) {
         return new PgLogicalSlotGetChanges(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLogicalSlotGetChanges rename(Table<?> name) {
@@ -177,9 +130,6 @@ public class PgLogicalSlotGetChanges extends TableImpl<PgLogicalSlotGetChangesRe
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLogicalSlotGetChanges call(
           String slotName
         , Object uptoLsn
@@ -196,9 +146,6 @@ public class PgLogicalSlotGetChanges extends TableImpl<PgLogicalSlotGetChangesRe
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgLogicalSlotGetChanges call(
           Field<String> slotName
         , Field<Object> uptoLsn
@@ -215,17 +162,10 @@ public class PgLogicalSlotGetChanges extends TableImpl<PgLogicalSlotGetChangesRe
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Object, ? super Long, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Object, ? super Long, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

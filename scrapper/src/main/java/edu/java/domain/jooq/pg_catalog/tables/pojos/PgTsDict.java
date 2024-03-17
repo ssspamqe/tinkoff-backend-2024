@@ -13,9 +13,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_dict</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -63,97 +60,61 @@ public class PgTsDict implements Serializable {
         this.dictinitoption = dictinitoption;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dictname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDictname() {
         return this.dictname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dictname</code>.
-     */
     public void setDictname(@NotNull String dictname) {
         this.dictname = dictname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dictnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDictnamespace() {
         return this.dictnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dictnamespace</code>.
-     */
     public void setDictnamespace(@NotNull Long dictnamespace) {
         this.dictnamespace = dictnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dictowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDictowner() {
         return this.dictowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dictowner</code>.
-     */
     public void setDictowner(@NotNull Long dictowner) {
         this.dictowner = dictowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dicttemplate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDicttemplate() {
         return this.dicttemplate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dicttemplate</code>.
-     */
     public void setDicttemplate(@NotNull Long dicttemplate) {
         this.dicttemplate = dicttemplate;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_dict.dictinitoption</code>.
-     */
     @Nullable
     public String getDictinitoption() {
         return this.dictinitoption;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_dict.dictinitoption</code>.
-     */
     public void setDictinitoption(@Nullable String dictinitoption) {
         this.dictinitoption = dictinitoption;
     }

@@ -19,9 +19,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.json_to_recordset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,16 +31,10 @@ public class JsonToRecordsetRecord extends TableRecordImpl<JsonToRecordsetRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.json_to_recordset.json_to_recordset</code>.
-     */
     public void setJsonToRecordset(@Nullable Record value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.json_to_recordset.json_to_recordset</code>.
-     */
     @Nullable
     public Record getJsonToRecordset() {
         return (Record) get(0);
@@ -101,16 +92,10 @@ public class JsonToRecordsetRecord extends TableRecordImpl<JsonToRecordsetRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonToRecordsetRecord
-     */
     public JsonToRecordsetRecord() {
         super(JsonToRecordset.JSON_TO_RECORDSET);
     }
 
-    /**
-     * Create a detached, initialised JsonToRecordsetRecord
-     */
     @ConstructorProperties({ "jsonToRecordset" })
     public JsonToRecordsetRecord(@Nullable Record jsonToRecordset) {
         super(JsonToRecordset.JSON_TO_RECORDSET);
@@ -119,9 +104,6 @@ public class JsonToRecordsetRecord extends TableRecordImpl<JsonToRecordsetRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonToRecordsetRecord
-     */
     public JsonToRecordsetRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonToRecordset value) {
         super(JsonToRecordset.JSON_TO_RECORDSET);
 

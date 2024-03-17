@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_sequence</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,130 +67,82 @@ public class PgSequence implements Serializable {
         this.seqcycle = seqcycle;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqrelid() {
         return this.seqrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqrelid</code>.
-     */
     public void setSeqrelid(@NotNull Long seqrelid) {
         this.seqrelid = seqrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqtypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqtypid() {
         return this.seqtypid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqtypid</code>.
-     */
     public void setSeqtypid(@NotNull Long seqtypid) {
         this.seqtypid = seqtypid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqstart</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqstart() {
         return this.seqstart;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqstart</code>.
-     */
     public void setSeqstart(@NotNull Long seqstart) {
         this.seqstart = seqstart;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqincrement</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqincrement() {
         return this.seqincrement;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqincrement</code>.
-     */
     public void setSeqincrement(@NotNull Long seqincrement) {
         this.seqincrement = seqincrement;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqmax</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqmax() {
         return this.seqmax;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqmax</code>.
-     */
     public void setSeqmax(@NotNull Long seqmax) {
         this.seqmax = seqmax;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqmin</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqmin() {
         return this.seqmin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqmin</code>.
-     */
     public void setSeqmin(@NotNull Long seqmin) {
         this.seqmin = seqmin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqcache</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqcache() {
         return this.seqcache;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqcache</code>.
-     */
     public void setSeqcache(@NotNull Long seqcache) {
         this.seqcache = seqcache;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqcycle</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSeqcycle() {
         return this.seqcycle;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqcycle</code>.
-     */
     public void setSeqcycle(@NotNull Boolean seqcycle) {
         this.seqcycle = seqcycle;
     }

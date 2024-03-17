@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records._PgForeignDataWrappersRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema._pg_foreign_data_wrappers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,60 +40,26 @@ public class _PgForeignDataWrappers extends TableImpl<_PgForeignDataWrappersReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema._pg_foreign_data_wrappers</code>
-     */
     public static final _PgForeignDataWrappers _PG_FOREIGN_DATA_WRAPPERS = new _PgForeignDataWrappers();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<_PgForeignDataWrappersRecord> getRecordType() {
         return _PgForeignDataWrappersRecord.class;
     }
 
-    /**
-     * The column <code>information_schema._pg_foreign_data_wrappers.oid</code>.
-     */
     public final TableField<_PgForeignDataWrappersRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_data_wrappers.fdwowner</code>.
-     */
     public final TableField<_PgForeignDataWrappersRecord, Long> FDWOWNER = createField(DSL.name("fdwowner"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_data_wrappers.fdwoptions</code>.
-     */
     public final TableField<_PgForeignDataWrappersRecord, String[]> FDWOPTIONS = createField(DSL.name("fdwoptions"), SQLDataType.CLOB.array(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     public final TableField<_PgForeignDataWrappersRecord, String> FOREIGN_DATA_WRAPPER_CATALOG = createField(DSL.name("foreign_data_wrapper_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     public final TableField<_PgForeignDataWrappersRecord, String> FOREIGN_DATA_WRAPPER_NAME = createField(DSL.name("foreign_data_wrapper_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_data_wrappers.authorization_identifier</code>.
-     */
     public final TableField<_PgForeignDataWrappersRecord, String> AUTHORIZATION_IDENTIFIER = createField(DSL.name("authorization_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     public final TableField<_PgForeignDataWrappersRecord, String> FOREIGN_DATA_WRAPPER_LANGUAGE = createField(DSL.name("foreign_data_wrapper_language"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private _PgForeignDataWrappers(Name alias, Table<_PgForeignDataWrappersRecord> aliased) {
@@ -120,26 +81,14 @@ public class _PgForeignDataWrappers extends TableImpl<_PgForeignDataWrappersReco
         """));
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema._pg_foreign_data_wrappers</code> table reference
-     */
     public _PgForeignDataWrappers(String alias) {
         this(DSL.name(alias), _PG_FOREIGN_DATA_WRAPPERS);
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema._pg_foreign_data_wrappers</code> table reference
-     */
     public _PgForeignDataWrappers(Name alias) {
         this(alias, _PG_FOREIGN_DATA_WRAPPERS);
     }
 
-    /**
-     * Create a <code>information_schema._pg_foreign_data_wrappers</code> table
-     * reference
-     */
     public _PgForeignDataWrappers() {
         this(DSL.name("_pg_foreign_data_wrappers"), null);
     }
@@ -172,27 +121,18 @@ public class _PgForeignDataWrappers extends TableImpl<_PgForeignDataWrappersReco
         return new _PgForeignDataWrappers(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignDataWrappers rename(String name) {
         return new _PgForeignDataWrappers(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignDataWrappers rename(Name name) {
         return new _PgForeignDataWrappers(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignDataWrappers rename(Table<?> name) {
@@ -209,17 +149,10 @@ public class _PgForeignDataWrappers extends TableImpl<_PgForeignDataWrappersReco
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super Long, ? super String[], ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super Long, ? super String[], ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

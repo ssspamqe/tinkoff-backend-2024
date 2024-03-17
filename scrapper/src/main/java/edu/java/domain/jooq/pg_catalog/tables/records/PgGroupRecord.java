@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_group</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,46 +30,28 @@ public class PgGroupRecord extends TableRecordImpl<PgGroupRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_group.groname</code>.
-     */
     public void setGroname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_group.groname</code>.
-     */
     @Nullable
     public String getGroname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_group.grosysid</code>.
-     */
     public void setGrosysid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_group.grosysid</code>.
-     */
     @Nullable
     public Long getGrosysid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_group.grolist</code>.
-     */
     public void setGrolist(@Nullable Long[] value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_group.grolist</code>.
-     */
     @Nullable
     public Long[] getGrolist() {
         return (Long[]) get(2);
@@ -182,16 +161,10 @@ public class PgGroupRecord extends TableRecordImpl<PgGroupRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgGroupRecord
-     */
     public PgGroupRecord() {
         super(PgGroup.PG_GROUP);
     }
 
-    /**
-     * Create a detached, initialised PgGroupRecord
-     */
     @ConstructorProperties({ "groname", "grosysid", "grolist" })
     public PgGroupRecord(@Nullable String groname, @Nullable Long grosysid, @Nullable Long[] grolist) {
         super(PgGroup.PG_GROUP);
@@ -202,9 +175,6 @@ public class PgGroupRecord extends TableRecordImpl<PgGroupRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgGroupRecord
-     */
     public PgGroupRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgGroup value) {
         super(PgGroup.PG_GROUP);
 

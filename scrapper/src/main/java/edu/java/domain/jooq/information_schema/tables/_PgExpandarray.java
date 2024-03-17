@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records._PgExpandarrayRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema._pg_expandarray</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,34 +38,17 @@ public class _PgExpandarray extends TableImpl<_PgExpandarrayRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema._pg_expandarray</code>
-     */
     public static final _PgExpandarray _PG_EXPANDARRAY = new _PgExpandarray();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<_PgExpandarrayRecord> getRecordType() {
         return _PgExpandarrayRecord.class;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<_PgExpandarrayRecord, Object> X = createField(DSL.name("x"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"anyelement\""), this, "");
 
-    /**
-     * The column <code>information_schema._pg_expandarray.n</code>.
-     */
     public final TableField<_PgExpandarrayRecord, Integer> N = createField(DSL.name("n"), SQLDataType.INTEGER, this, "");
 
     private _PgExpandarray(Name alias, Table<_PgExpandarrayRecord> aliased) {
@@ -83,25 +61,14 @@ public class _PgExpandarray extends TableImpl<_PgExpandarrayRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>information_schema._pg_expandarray</code> table
-     * reference
-     */
     public _PgExpandarray(String alias) {
         this(DSL.name(alias), _PG_EXPANDARRAY);
     }
 
-    /**
-     * Create an aliased <code>information_schema._pg_expandarray</code> table
-     * reference
-     */
     public _PgExpandarray(Name alias) {
         this(alias, _PG_EXPANDARRAY);
     }
 
-    /**
-     * Create a <code>information_schema._pg_expandarray</code> table reference
-     */
     public _PgExpandarray() {
         this(DSL.name("_pg_expandarray"), null);
     }
@@ -130,27 +97,18 @@ public class _PgExpandarray extends TableImpl<_PgExpandarrayRecord> {
         return new _PgExpandarray(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgExpandarray rename(String name) {
         return new _PgExpandarray(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgExpandarray rename(Name name) {
         return new _PgExpandarray(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgExpandarray rename(Table<?> name) {
@@ -167,9 +125,6 @@ public class _PgExpandarray extends TableImpl<_PgExpandarrayRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public _PgExpandarray call(
           Object[] __1
     ) {
@@ -180,9 +135,6 @@ public class _PgExpandarray extends TableImpl<_PgExpandarrayRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public _PgExpandarray call(
           Field<Object[]> __1
     ) {
@@ -193,17 +145,10 @@ public class _PgExpandarray extends TableImpl<_PgExpandarrayRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super Object, ? super Integer, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super Object, ? super Integer, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

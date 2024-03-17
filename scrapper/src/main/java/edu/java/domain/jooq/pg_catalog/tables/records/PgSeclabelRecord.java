@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_seclabel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,80 +30,50 @@ public class PgSeclabelRecord extends UpdatableRecordImpl<PgSeclabelRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.objoid</code>.
-     */
     public void setObjoid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.classoid</code>.
-     */
     public void setClassoid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.objsubid</code>.
-     */
     public void setObjsubid(@NotNull Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.objsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getObjsubid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.provider</code>.
-     */
     public void setProvider(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.provider</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProvider() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.label</code>.
-     */
     public void setLabel(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.label</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getLabel() {
@@ -279,16 +246,10 @@ public class PgSeclabelRecord extends UpdatableRecordImpl<PgSeclabelRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgSeclabelRecord
-     */
     public PgSeclabelRecord() {
         super(PgSeclabel.PG_SECLABEL);
     }
 
-    /**
-     * Create a detached, initialised PgSeclabelRecord
-     */
     @ConstructorProperties({ "objoid", "classoid", "objsubid", "provider", "label" })
     public PgSeclabelRecord(@NotNull Long objoid, @NotNull Long classoid, @NotNull Integer objsubid, @NotNull String provider, @NotNull String label) {
         super(PgSeclabel.PG_SECLABEL);
@@ -301,9 +262,6 @@ public class PgSeclabelRecord extends UpdatableRecordImpl<PgSeclabelRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgSeclabelRecord
-     */
     public PgSeclabelRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgSeclabel value) {
         super(PgSeclabel.PG_SECLABEL);
 

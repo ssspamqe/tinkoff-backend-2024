@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_seclabels</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,121 +30,73 @@ public class PgSeclabelsRecord extends TableRecordImpl<PgSeclabelsRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objoid</code>.
-     */
     public void setObjoid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objoid</code>.
-     */
     @Nullable
     public Long getObjoid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.classoid</code>.
-     */
     public void setClassoid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.classoid</code>.
-     */
     @Nullable
     public Long getClassoid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objsubid</code>.
-     */
     public void setObjsubid(@Nullable Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objsubid</code>.
-     */
     @Nullable
     public Integer getObjsubid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objtype</code>.
-     */
     public void setObjtype(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objtype</code>.
-     */
     @Nullable
     public String getObjtype() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objnamespace</code>.
-     */
     public void setObjnamespace(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objnamespace</code>.
-     */
     @Nullable
     public Long getObjnamespace() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.objname</code>.
-     */
     public void setObjname(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.objname</code>.
-     */
     @Nullable
     public String getObjname() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.provider</code>.
-     */
     public void setProvider(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.provider</code>.
-     */
     @Nullable
     public String getProvider() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabels.label</code>.
-     */
     public void setLabel(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabels.label</code>.
-     */
     @Nullable
     public String getLabel() {
         return (String) get(7);
@@ -387,16 +336,10 @@ public class PgSeclabelsRecord extends TableRecordImpl<PgSeclabelsRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgSeclabelsRecord
-     */
     public PgSeclabelsRecord() {
         super(PgSeclabels.PG_SECLABELS);
     }
 
-    /**
-     * Create a detached, initialised PgSeclabelsRecord
-     */
     @ConstructorProperties({ "objoid", "classoid", "objsubid", "objtype", "objnamespace", "objname", "provider", "label" })
     public PgSeclabelsRecord(@Nullable Long objoid, @Nullable Long classoid, @Nullable Integer objsubid, @Nullable String objtype, @Nullable Long objnamespace, @Nullable String objname, @Nullable String provider, @Nullable String label) {
         super(PgSeclabels.PG_SECLABELS);
@@ -412,9 +355,6 @@ public class PgSeclabelsRecord extends TableRecordImpl<PgSeclabelsRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgSeclabelsRecord
-     */
     public PgSeclabelsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgSeclabels value) {
         super(PgSeclabels.PG_SECLABELS);
 

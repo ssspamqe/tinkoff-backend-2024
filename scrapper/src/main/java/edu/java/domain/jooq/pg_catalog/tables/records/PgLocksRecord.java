@@ -19,9 +19,6 @@ import org.jooq.Row16;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_locks</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,241 +31,145 @@ public class PgLocksRecord extends TableRecordImpl<PgLocksRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.locktype</code>.
-     */
     public void setLocktype(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.locktype</code>.
-     */
     @Nullable
     public String getLocktype() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.database</code>.
-     */
     public void setDatabase(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.database</code>.
-     */
     @Nullable
     public Long getDatabase() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.relation</code>.
-     */
     public void setRelation(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.relation</code>.
-     */
     @Nullable
     public Long getRelation() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.page</code>.
-     */
     public void setPage(@Nullable Integer value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.page</code>.
-     */
     @Nullable
     public Integer getPage() {
         return (Integer) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.tuple</code>.
-     */
     public void setTuple(@Nullable Short value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.tuple</code>.
-     */
     @Nullable
     public Short getTuple() {
         return (Short) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.virtualxid</code>.
-     */
     public void setVirtualxid(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.virtualxid</code>.
-     */
     @Nullable
     public String getVirtualxid() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.transactionid</code>.
-     */
     public void setTransactionid(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.transactionid</code>.
-     */
     @Nullable
     public Long getTransactionid() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.classid</code>.
-     */
     public void setClassid(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.classid</code>.
-     */
     @Nullable
     public Long getClassid() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.objid</code>.
-     */
     public void setObjid(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.objid</code>.
-     */
     @Nullable
     public Long getObjid() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.objsubid</code>.
-     */
     public void setObjsubid(@Nullable Short value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.objsubid</code>.
-     */
     @Nullable
     public Short getObjsubid() {
         return (Short) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.virtualtransaction</code>.
-     */
     public void setVirtualtransaction(@Nullable String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.virtualtransaction</code>.
-     */
     @Nullable
     public String getVirtualtransaction() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.mode</code>.
-     */
     public void setMode(@Nullable String value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.mode</code>.
-     */
     @Nullable
     public String getMode() {
         return (String) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.granted</code>.
-     */
     public void setGranted(@Nullable Boolean value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.granted</code>.
-     */
     @Nullable
     public Boolean getGranted() {
         return (Boolean) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.fastpath</code>.
-     */
     public void setFastpath(@Nullable Boolean value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.fastpath</code>.
-     */
     @Nullable
     public Boolean getFastpath() {
         return (Boolean) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_locks.waitstart</code>.
-     */
     public void setWaitstart(@Nullable OffsetDateTime value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_locks.waitstart</code>.
-     */
     @Nullable
     public OffsetDateTime getWaitstart() {
         return (OffsetDateTime) get(15);
@@ -716,16 +617,10 @@ public class PgLocksRecord extends TableRecordImpl<PgLocksRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLocksRecord
-     */
     public PgLocksRecord() {
         super(PgLocks.PG_LOCKS);
     }
 
-    /**
-     * Create a detached, initialised PgLocksRecord
-     */
     @ConstructorProperties({ "locktype", "database", "relation", "page", "tuple", "virtualxid", "transactionid", "classid", "objid", "objsubid", "virtualtransaction", "pid", "mode", "granted", "fastpath", "waitstart" })
     public PgLocksRecord(@Nullable String locktype, @Nullable Long database, @Nullable Long relation, @Nullable Integer page, @Nullable Short tuple, @Nullable String virtualxid, @Nullable Long transactionid, @Nullable Long classid, @Nullable Long objid, @Nullable Short objsubid, @Nullable String virtualtransaction, @Nullable Integer pid, @Nullable String mode, @Nullable Boolean granted, @Nullable Boolean fastpath, @Nullable OffsetDateTime waitstart) {
         super(PgLocks.PG_LOCKS);
@@ -749,9 +644,6 @@ public class PgLocksRecord extends TableRecordImpl<PgLocksRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLocksRecord
-     */
     public PgLocksRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLocks value) {
         super(PgLocks.PG_LOCKS);
 

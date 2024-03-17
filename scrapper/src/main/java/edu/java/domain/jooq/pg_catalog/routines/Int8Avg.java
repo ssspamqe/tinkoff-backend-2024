@@ -17,9 +17,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.int8_avg</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -32,19 +29,10 @@ public class Int8Avg extends AbstractRoutine<BigDecimal> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.int8_avg.RETURN_VALUE</code>.
-     */
     public static final Parameter<BigDecimal> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.NUMERIC, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.int8_avg._1</code>.
-     */
     public static final Parameter<Long[]> _1 = Internal.createParameter("_1", SQLDataType.BIGINT.array(), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Int8Avg() {
         super("int8_avg", PgCatalog.PG_CATALOG, SQLDataType.NUMERIC);
 
@@ -52,17 +40,10 @@ public class Int8Avg extends AbstractRoutine<BigDecimal> {
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Long[] value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Long[]> field) {
         setField(_1, field);
     }

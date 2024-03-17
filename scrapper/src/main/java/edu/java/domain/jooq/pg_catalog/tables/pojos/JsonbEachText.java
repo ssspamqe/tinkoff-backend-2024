@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.jsonb_each_text</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,32 +43,20 @@ public class JsonbEachText implements Serializable {
         this.value = value;
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_each_text.key</code>.
-     */
     @Nullable
     public String getKey() {
         return this.key;
     }
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_each_text.key</code>.
-     */
     public void setKey(@Nullable String key) {
         this.key = key;
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_each_text.value</code>.
-     */
     @Nullable
     public String getValue() {
         return this.value;
     }
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_each_text.value</code>.
-     */
     public void setValue(@Nullable String value) {
         this.value = value;
     }

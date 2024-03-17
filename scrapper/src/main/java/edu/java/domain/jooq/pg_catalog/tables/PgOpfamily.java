@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgOpfamilyRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_opfamily</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,43 +45,22 @@ public class PgOpfamily extends TableImpl<PgOpfamilyRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_opfamily</code>
-     */
     public static final PgOpfamily PG_OPFAMILY = new PgOpfamily();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgOpfamilyRecord> getRecordType() {
         return PgOpfamilyRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_opfamily.oid</code>.
-     */
     public final TableField<PgOpfamilyRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opfamily.opfmethod</code>.
-     */
     public final TableField<PgOpfamilyRecord, Long> OPFMETHOD = createField(DSL.name("opfmethod"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opfamily.opfname</code>.
-     */
     public final TableField<PgOpfamilyRecord, String> OPFNAME = createField(DSL.name("opfname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opfamily.opfnamespace</code>.
-     */
     public final TableField<PgOpfamilyRecord, Long> OPFNAMESPACE = createField(DSL.name("opfnamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opfamily.opfowner</code>.
-     */
     public final TableField<PgOpfamilyRecord, Long> OPFOWNER = createField(DSL.name("opfowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
     private PgOpfamily(Name alias, Table<PgOpfamilyRecord> aliased) {
@@ -96,23 +71,14 @@ public class PgOpfamily extends TableImpl<PgOpfamilyRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_opfamily</code> table reference
-     */
     public PgOpfamily(String alias) {
         this(DSL.name(alias), PG_OPFAMILY);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_opfamily</code> table reference
-     */
     public PgOpfamily(Name alias) {
         this(alias, PG_OPFAMILY);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_opfamily</code> table reference
-     */
     public PgOpfamily() {
         this(DSL.name("pg_opfamily"), null);
     }
@@ -157,27 +123,18 @@ public class PgOpfamily extends TableImpl<PgOpfamilyRecord> {
         return new PgOpfamily(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOpfamily rename(String name) {
         return new PgOpfamily(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOpfamily rename(Name name) {
         return new PgOpfamily(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOpfamily rename(Table<?> name) {
@@ -194,17 +151,10 @@ public class PgOpfamily extends TableImpl<PgOpfamilyRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super Long, ? super String, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super Long, ? super String, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

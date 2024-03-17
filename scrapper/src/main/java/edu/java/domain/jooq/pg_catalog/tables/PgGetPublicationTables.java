@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgGetPublicationTablesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_publication_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,44 +38,20 @@ public class PgGetPublicationTables extends TableImpl<PgGetPublicationTablesReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_get_publication_tables</code>
-     */
     public static final PgGetPublicationTables PG_GET_PUBLICATION_TABLES = new PgGetPublicationTables();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgGetPublicationTablesRecord> getRecordType() {
         return PgGetPublicationTablesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_get_publication_tables.pubid</code>.
-     */
     public final TableField<PgGetPublicationTablesRecord, Long> PUBID = createField(DSL.name("pubid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_publication_tables.relid</code>.
-     */
     public final TableField<PgGetPublicationTablesRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_get_publication_tables.attrs</code>.
-     */
     public final TableField<PgGetPublicationTablesRecord, Object[]> ATTRS = createField(DSL.name("attrs"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"nt2vector\"").array(), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgGetPublicationTablesRecord, Object> QUAL = createField(DSL.name("qual"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_node_tree\""), this, "");
 
@@ -94,26 +65,14 @@ public class PgGetPublicationTables extends TableImpl<PgGetPublicationTablesReco
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_publication_tables</code> table
-     * reference
-     */
     public PgGetPublicationTables(String alias) {
         this(DSL.name(alias), PG_GET_PUBLICATION_TABLES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_get_publication_tables</code> table
-     * reference
-     */
     public PgGetPublicationTables(Name alias) {
         this(alias, PG_GET_PUBLICATION_TABLES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_get_publication_tables</code> table
-     * reference
-     */
     public PgGetPublicationTables() {
         this(DSL.name("pg_get_publication_tables"), null);
     }
@@ -142,27 +101,18 @@ public class PgGetPublicationTables extends TableImpl<PgGetPublicationTablesReco
         return new PgGetPublicationTables(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetPublicationTables rename(String name) {
         return new PgGetPublicationTables(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetPublicationTables rename(Name name) {
         return new PgGetPublicationTables(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgGetPublicationTables rename(Table<?> name) {
@@ -179,9 +129,6 @@ public class PgGetPublicationTables extends TableImpl<PgGetPublicationTablesReco
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgGetPublicationTables call(
           String[] pubname
     ) {
@@ -192,9 +139,6 @@ public class PgGetPublicationTables extends TableImpl<PgGetPublicationTablesReco
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgGetPublicationTables call(
           Field<String[]> pubname
     ) {
@@ -205,17 +149,10 @@ public class PgGetPublicationTables extends TableImpl<PgGetPublicationTablesReco
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super Object[], ? super Object, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super Object[], ? super Object, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

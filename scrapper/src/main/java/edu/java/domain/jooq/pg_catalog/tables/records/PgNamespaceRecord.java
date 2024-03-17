@@ -19,9 +19,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_namespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,64 +31,40 @@ public class PgNamespaceRecord extends UpdatableRecordImpl<PgNamespaceRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_namespace.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_namespace.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_namespace.nspname</code>.
-     */
     public void setNspname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_namespace.nspname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getNspname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_namespace.nspowner</code>.
-     */
     public void setNspowner(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_namespace.nspowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getNspowner() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_namespace.nspacl</code>.
-     */
     public void setNspacl(@Nullable String[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_namespace.nspacl</code>.
-     */
     @Nullable
     public String[] getNspacl() {
         return (String[]) get(3);
@@ -237,16 +210,10 @@ public class PgNamespaceRecord extends UpdatableRecordImpl<PgNamespaceRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgNamespaceRecord
-     */
     public PgNamespaceRecord() {
         super(PgNamespace.PG_NAMESPACE);
     }
 
-    /**
-     * Create a detached, initialised PgNamespaceRecord
-     */
     @ConstructorProperties({ "oid", "nspname", "nspowner", "nspacl" })
     public PgNamespaceRecord(@NotNull Long oid, @NotNull String nspname, @NotNull Long nspowner, @Nullable String[] nspacl) {
         super(PgNamespace.PG_NAMESPACE);
@@ -258,9 +225,6 @@ public class PgNamespaceRecord extends UpdatableRecordImpl<PgNamespaceRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgNamespaceRecord
-     */
     public PgNamespaceRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgNamespace value) {
         super(PgNamespace.PG_NAMESPACE);
 

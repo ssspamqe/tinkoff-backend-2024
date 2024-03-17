@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.binary_upgrade_set_missing_value</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,27 +26,12 @@ public class BinaryUpgradeSetMissingValue extends AbstractRoutine<java.lang.Void
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_set_missing_value._1</code>.
-     */
     public static final Parameter<Long> _1 = Internal.createParameter("_1", SQLDataType.BIGINT, false, true);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_set_missing_value._2</code>.
-     */
     public static final Parameter<String> _2 = Internal.createParameter("_2", SQLDataType.CLOB, false, true);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_set_missing_value._3</code>.
-     */
     public static final Parameter<String> _3 = Internal.createParameter("_3", SQLDataType.CLOB, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public BinaryUpgradeSetMissingValue() {
         super("binary_upgrade_set_missing_value", PgCatalog.PG_CATALOG);
 
@@ -58,23 +40,14 @@ public class BinaryUpgradeSetMissingValue extends AbstractRoutine<java.lang.Void
         addInParameter(_3);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Long value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(String value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_3</code> parameter IN value to the routine
-     */
     public void set__3(String value) {
         setValue(_3, value);
     }

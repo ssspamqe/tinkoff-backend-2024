@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_statistic_ext_data</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -64,130 +61,64 @@ public class PgStatisticExtData implements Serializable {
         this.stxdexpr = stxdexpr;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext_data.stxoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getStxoid() {
         return this.stxoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext_data.stxoid</code>.
-     */
     public void setStxoid(@NotNull Long stxoid) {
         this.stxoid = stxoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext_data.stxdinherit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getStxdinherit() {
         return this.stxdinherit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext_data.stxdinherit</code>.
-     */
     public void setStxdinherit(@NotNull Boolean stxdinherit) {
         this.stxdinherit = stxdinherit;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getStxdndistinct() {
         return this.stxdndistinct;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setStxdndistinct(@Nullable Object stxdndistinct) {
         this.stxdndistinct = stxdndistinct;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getStxddependencies() {
         return this.stxddependencies;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setStxddependencies(@Nullable Object stxddependencies) {
         this.stxddependencies = stxddependencies;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getStxdmcv() {
         return this.stxdmcv;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setStxdmcv(@Nullable Object stxdmcv) {
         this.stxdmcv = stxdmcv;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statistic_ext_data.stxdexpr</code>.
-     */
     @Nullable
     public PgStatistic[] getStxdexpr() {
         return this.stxdexpr;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statistic_ext_data.stxdexpr</code>.
-     */
     public void setStxdexpr(@Nullable PgStatistic[] stxdexpr) {
         this.stxdexpr = stxdexpr;
     }

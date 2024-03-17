@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_rules</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,61 +30,37 @@ public class PgRulesRecord extends TableRecordImpl<PgRulesRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_rules.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rules.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rules.tablename</code>.
-     */
     public void setTablename(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rules.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rules.rulename</code>.
-     */
     public void setRulename(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rules.rulename</code>.
-     */
     @Nullable
     public String getRulename() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rules.definition</code>.
-     */
     public void setDefinition(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rules.definition</code>.
-     */
     @Nullable
     public String getDefinition() {
         return (String) get(3);
@@ -223,16 +196,10 @@ public class PgRulesRecord extends TableRecordImpl<PgRulesRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgRulesRecord
-     */
     public PgRulesRecord() {
         super(PgRules.PG_RULES);
     }
 
-    /**
-     * Create a detached, initialised PgRulesRecord
-     */
     @ConstructorProperties({ "schemaname", "tablename", "rulename", "definition" })
     public PgRulesRecord(@Nullable String schemaname, @Nullable String tablename, @Nullable String rulename, @Nullable String definition) {
         super(PgRules.PG_RULES);
@@ -244,9 +211,6 @@ public class PgRulesRecord extends TableRecordImpl<PgRulesRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgRulesRecord
-     */
     public PgRulesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgRules value) {
         super(PgRules.PG_RULES);
 

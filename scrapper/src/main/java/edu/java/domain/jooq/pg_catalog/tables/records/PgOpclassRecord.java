@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_opclass</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,144 +30,90 @@ public class PgOpclassRecord extends UpdatableRecordImpl<PgOpclassRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcmethod</code>.
-     */
     public void setOpcmethod(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcmethod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcmethod() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcname</code>.
-     */
     public void setOpcname(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOpcname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcnamespace</code>.
-     */
     public void setOpcnamespace(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcnamespace() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcowner</code>.
-     */
     public void setOpcowner(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcowner() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcfamily</code>.
-     */
     public void setOpcfamily(@NotNull Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcfamily</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcfamily() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcintype</code>.
-     */
     public void setOpcintype(@NotNull Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcintype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpcintype() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opcdefault</code>.
-     */
     public void setOpcdefault(@NotNull Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opcdefault</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getOpcdefault() {
         return (Boolean) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_opclass.opckeytype</code>.
-     */
     public void setOpckeytype(@NotNull Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_opclass.opckeytype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOpckeytype() {
@@ -447,16 +390,10 @@ public class PgOpclassRecord extends UpdatableRecordImpl<PgOpclassRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgOpclassRecord
-     */
     public PgOpclassRecord() {
         super(PgOpclass.PG_OPCLASS);
     }
 
-    /**
-     * Create a detached, initialised PgOpclassRecord
-     */
     @ConstructorProperties({ "oid", "opcmethod", "opcname", "opcnamespace", "opcowner", "opcfamily", "opcintype", "opcdefault", "opckeytype" })
     public PgOpclassRecord(@NotNull Long oid, @NotNull Long opcmethod, @NotNull String opcname, @NotNull Long opcnamespace, @NotNull Long opcowner, @NotNull Long opcfamily, @NotNull Long opcintype, @NotNull Boolean opcdefault, @NotNull Long opckeytype) {
         super(PgOpclass.PG_OPCLASS);
@@ -473,9 +410,6 @@ public class PgOpclassRecord extends UpdatableRecordImpl<PgOpclassRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgOpclassRecord
-     */
     public PgOpclassRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgOpclass value) {
         super(PgOpclass.PG_OPCLASS);
 

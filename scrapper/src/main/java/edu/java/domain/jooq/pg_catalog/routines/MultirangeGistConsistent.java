@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.multirange_gist_consistent</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,58 +27,21 @@ public class MultirangeGistConsistent extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.multirange_gist_consistent.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public static final Parameter<Object> _1 = Internal.createParameter("_1", org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"internal\""), false, true);
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public static final Parameter<Object> _2 = Internal.createParameter("_2", org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"anymultirange\""), false, true);
 
-    /**
-     * The parameter <code>pg_catalog.multirange_gist_consistent._3</code>.
-     */
     public static final Parameter<Short> _3 = Internal.createParameter("_3", SQLDataType.SMALLINT, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.multirange_gist_consistent._4</code>.
-     */
     public static final Parameter<Long> _4 = Internal.createParameter("_4", SQLDataType.BIGINT, false, true);
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public static final Parameter<Object> _5 = Internal.createParameter("_5", org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"internal\""), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public MultirangeGistConsistent() {
         super("multirange_gist_consistent", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -93,77 +53,42 @@ public class MultirangeGistConsistent extends AbstractRoutine<Boolean> {
         addInParameter(_5);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Object value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Object> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(Object value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<Object> field) {
         setField(_2, field);
     }
 
-    /**
-     * Set the <code>_3</code> parameter IN value to the routine
-     */
     public void set__3(Short value) {
         setValue(_3, value);
     }
 
-    /**
-     * Set the <code>_3</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__3(Field<Short> field) {
         setField(_3, field);
     }
 
-    /**
-     * Set the <code>_4</code> parameter IN value to the routine
-     */
     public void set__4(Long value) {
         setValue(_4, value);
     }
 
-    /**
-     * Set the <code>_4</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__4(Field<Long> field) {
         setField(_4, field);
     }
 
-    /**
-     * Set the <code>_5</code> parameter IN value to the routine
-     */
     public void set__5(Object value) {
         setValue(_5, value);
     }
 
-    /**
-     * Set the <code>_5</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__5(Field<Object> field) {
         setField(_5, field);
     }

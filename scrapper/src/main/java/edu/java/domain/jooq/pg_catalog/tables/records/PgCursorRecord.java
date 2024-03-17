@@ -19,9 +19,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_cursor</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,91 +31,55 @@ public class PgCursorRecord extends TableRecordImpl<PgCursorRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.statement</code>.
-     */
     public void setStatement(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.statement</code>.
-     */
     @Nullable
     public String getStatement() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.is_holdable</code>.
-     */
     public void setIsHoldable(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.is_holdable</code>.
-     */
     @Nullable
     public Boolean getIsHoldable() {
         return (Boolean) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.is_binary</code>.
-     */
     public void setIsBinary(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.is_binary</code>.
-     */
     @Nullable
     public Boolean getIsBinary() {
         return (Boolean) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.is_scrollable</code>.
-     */
     public void setIsScrollable(@Nullable Boolean value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.is_scrollable</code>.
-     */
     @Nullable
     public Boolean getIsScrollable() {
         return (Boolean) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_cursor.creation_time</code>.
-     */
     public void setCreationTime(@Nullable OffsetDateTime value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_cursor.creation_time</code>.
-     */
     @Nullable
     public OffsetDateTime getCreationTime() {
         return (OffsetDateTime) get(5);
@@ -306,16 +267,10 @@ public class PgCursorRecord extends TableRecordImpl<PgCursorRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgCursorRecord
-     */
     public PgCursorRecord() {
         super(PgCursor.PG_CURSOR);
     }
 
-    /**
-     * Create a detached, initialised PgCursorRecord
-     */
     @ConstructorProperties({ "name", "statement", "isHoldable", "isBinary", "isScrollable", "creationTime" })
     public PgCursorRecord(@Nullable String name, @Nullable String statement, @Nullable Boolean isHoldable, @Nullable Boolean isBinary, @Nullable Boolean isScrollable, @Nullable OffsetDateTime creationTime) {
         super(PgCursor.PG_CURSOR);
@@ -329,9 +284,6 @@ public class PgCursorRecord extends TableRecordImpl<PgCursorRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgCursorRecord
-     */
     public PgCursorRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgCursor value) {
         super(PgCursor.PG_CURSOR);
 

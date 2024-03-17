@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.regexp_matches</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,16 +30,10 @@ public class RegexpMatchesRecord extends TableRecordImpl<RegexpMatchesRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.regexp_matches.regexp_matches</code>.
-     */
     public void setRegexpMatches(@Nullable String[] value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.regexp_matches.regexp_matches</code>.
-     */
     @Nullable
     public String[] getRegexpMatches() {
         return (String[]) get(0);
@@ -100,16 +91,10 @@ public class RegexpMatchesRecord extends TableRecordImpl<RegexpMatchesRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached RegexpMatchesRecord
-     */
     public RegexpMatchesRecord() {
         super(RegexpMatches.REGEXP_MATCHES);
     }
 
-    /**
-     * Create a detached, initialised RegexpMatchesRecord
-     */
     @ConstructorProperties({ "regexpMatches" })
     public RegexpMatchesRecord(@Nullable String[] regexpMatches) {
         super(RegexpMatches.REGEXP_MATCHES);
@@ -118,9 +103,6 @@ public class RegexpMatchesRecord extends TableRecordImpl<RegexpMatchesRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised RegexpMatchesRecord
-     */
     public RegexpMatchesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.RegexpMatches value) {
         super(RegexpMatches.REGEXP_MATCHES);
 

@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.float8_stddev_samp</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,19 +27,10 @@ public class Float8StddevSamp extends AbstractRoutine<Double> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.float8_stddev_samp.RETURN_VALUE</code>.
-     */
     public static final Parameter<Double> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.DOUBLE, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.float8_stddev_samp._1</code>.
-     */
     public static final Parameter<Double[]> _1 = Internal.createParameter("_1", SQLDataType.FLOAT.array(), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Float8StddevSamp() {
         super("float8_stddev_samp", PgCatalog.PG_CATALOG, SQLDataType.DOUBLE);
 
@@ -50,17 +38,10 @@ public class Float8StddevSamp extends AbstractRoutine<Double> {
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Double[] value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Double[]> field) {
         setField(_1, field);
     }

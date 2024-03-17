@@ -16,9 +16,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The routine <code>pg_catalog.justify_interval</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,19 +28,10 @@ public class JustifyInterval extends AbstractRoutine<YearToSecond> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.justify_interval.RETURN_VALUE</code>.
-     */
     public static final Parameter<YearToSecond> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTERVAL, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.justify_interval._1</code>.
-     */
     public static final Parameter<YearToSecond> _1 = Internal.createParameter("_1", SQLDataType.INTERVAL, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public JustifyInterval() {
         super("justify_interval", PgCatalog.PG_CATALOG, SQLDataType.INTERVAL);
 
@@ -51,17 +39,10 @@ public class JustifyInterval extends AbstractRoutine<YearToSecond> {
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(YearToSecond value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<YearToSecond> field) {
         setField(_1, field);
     }

@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_get_catalog_foreign_keys</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -63,116 +60,60 @@ public class PgGetCatalogForeignKeys implements Serializable {
         this.isOpt = isOpt;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getFktable() {
         return this.fktable;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setFktable(@Nullable Object fktable) {
         this.fktable = fktable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_catalog_foreign_keys.fkcols</code>.
-     */
     @Nullable
     public String[] getFkcols() {
         return this.fkcols;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_catalog_foreign_keys.fkcols</code>.
-     */
     public void setFkcols(@Nullable String[] fkcols) {
         this.fkcols = fkcols;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getPktable() {
         return this.pktable;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setPktable(@Nullable Object pktable) {
         this.pktable = pktable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_catalog_foreign_keys.pkcols</code>.
-     */
     @Nullable
     public String[] getPkcols() {
         return this.pkcols;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_catalog_foreign_keys.pkcols</code>.
-     */
     public void setPkcols(@Nullable String[] pkcols) {
         this.pkcols = pkcols;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_catalog_foreign_keys.is_array</code>.
-     */
     @Nullable
     public Boolean getIsArray() {
         return this.isArray;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_catalog_foreign_keys.is_array</code>.
-     */
     public void setIsArray(@Nullable Boolean isArray) {
         this.isArray = isArray;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_catalog_foreign_keys.is_opt</code>.
-     */
     @Nullable
     public Boolean getIsOpt() {
         return this.isOpt;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_catalog_foreign_keys.is_opt</code>.
-     */
     public void setIsOpt(@Nullable Boolean isOpt) {
         this.isOpt = isOpt;
     }

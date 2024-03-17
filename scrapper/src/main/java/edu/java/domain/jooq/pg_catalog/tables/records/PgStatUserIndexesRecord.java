@@ -19,9 +19,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_user_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,136 +31,82 @@ public class PgStatUserIndexesRecord extends TableRecordImpl<PgStatUserIndexesRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.indexrelid</code>.
-     */
     public void setIndexrelid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.indexrelid</code>.
-     */
     @Nullable
     public Long getIndexrelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.relname</code>.
-     */
     public void setRelname(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.indexrelname</code>.
-     */
     public void setIndexrelname(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.indexrelname</code>.
-     */
     @Nullable
     public String getIndexrelname() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.idx_scan</code>.
-     */
     public void setIdxScan(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.idx_scan</code>.
-     */
     @Nullable
     public Long getIdxScan() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.last_idx_scan</code>.
-     */
     public void setLastIdxScan(@Nullable OffsetDateTime value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.last_idx_scan</code>.
-     */
     @Nullable
     public OffsetDateTime getLastIdxScan() {
         return (OffsetDateTime) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.idx_tup_read</code>.
-     */
     public void setIdxTupRead(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.idx_tup_read</code>.
-     */
     @Nullable
     public Long getIdxTupRead() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.idx_tup_fetch</code>.
-     */
     public void setIdxTupFetch(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.idx_tup_fetch</code>.
-     */
     @Nullable
     public Long getIdxTupFetch() {
         return (Long) get(8);
@@ -429,16 +372,10 @@ public class PgStatUserIndexesRecord extends TableRecordImpl<PgStatUserIndexesRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatUserIndexesRecord
-     */
     public PgStatUserIndexesRecord() {
         super(PgStatUserIndexes.PG_STAT_USER_INDEXES);
     }
 
-    /**
-     * Create a detached, initialised PgStatUserIndexesRecord
-     */
     @ConstructorProperties({ "relid", "indexrelid", "schemaname", "relname", "indexrelname", "idxScan", "lastIdxScan", "idxTupRead", "idxTupFetch" })
     public PgStatUserIndexesRecord(@Nullable Long relid, @Nullable Long indexrelid, @Nullable String schemaname, @Nullable String relname, @Nullable String indexrelname, @Nullable Long idxScan, @Nullable OffsetDateTime lastIdxScan, @Nullable Long idxTupRead, @Nullable Long idxTupFetch) {
         super(PgStatUserIndexes.PG_STAT_USER_INDEXES);
@@ -455,9 +392,6 @@ public class PgStatUserIndexesRecord extends TableRecordImpl<PgStatUserIndexesRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatUserIndexesRecord
-     */
     public PgStatUserIndexesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatUserIndexes value) {
         super(PgStatUserIndexes.PG_STAT_USER_INDEXES);
 

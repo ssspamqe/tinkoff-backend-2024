@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatioAllSequencesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_all_sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,43 +40,22 @@ public class PgStatioAllSequences extends TableImpl<PgStatioAllSequencesRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_statio_all_sequences</code>
-     */
     public static final PgStatioAllSequences PG_STATIO_ALL_SEQUENCES = new PgStatioAllSequences();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatioAllSequencesRecord> getRecordType() {
         return PgStatioAllSequencesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_sequences.relid</code>.
-     */
     public final TableField<PgStatioAllSequencesRecord, Long> RELID = createField(DSL.name("relid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_sequences.schemaname</code>.
-     */
     public final TableField<PgStatioAllSequencesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_sequences.relname</code>.
-     */
     public final TableField<PgStatioAllSequencesRecord, String> RELNAME = createField(DSL.name("relname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_sequences.blks_read</code>.
-     */
     public final TableField<PgStatioAllSequencesRecord, Long> BLKS_READ = createField(DSL.name("blks_read"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_statio_all_sequences.blks_hit</code>.
-     */
     public final TableField<PgStatioAllSequencesRecord, Long> BLKS_HIT = createField(DSL.name("blks_hit"), SQLDataType.BIGINT, this, "");
 
     private PgStatioAllSequences(Name alias, Table<PgStatioAllSequencesRecord> aliased) {
@@ -101,25 +75,14 @@ public class PgStatioAllSequences extends TableImpl<PgStatioAllSequencesRecord> 
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_statio_all_sequences</code> table
-     * reference
-     */
     public PgStatioAllSequences(String alias) {
         this(DSL.name(alias), PG_STATIO_ALL_SEQUENCES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_statio_all_sequences</code> table
-     * reference
-     */
     public PgStatioAllSequences(Name alias) {
         this(alias, PG_STATIO_ALL_SEQUENCES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_statio_all_sequences</code> table reference
-     */
     public PgStatioAllSequences() {
         this(DSL.name("pg_statio_all_sequences"), null);
     }
@@ -152,27 +115,18 @@ public class PgStatioAllSequences extends TableImpl<PgStatioAllSequencesRecord> 
         return new PgStatioAllSequences(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioAllSequences rename(String name) {
         return new PgStatioAllSequences(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioAllSequences rename(Name name) {
         return new PgStatioAllSequences(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatioAllSequences rename(Table<?> name) {
@@ -189,17 +143,10 @@ public class PgStatioAllSequences extends TableImpl<PgStatioAllSequencesRecord> 
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

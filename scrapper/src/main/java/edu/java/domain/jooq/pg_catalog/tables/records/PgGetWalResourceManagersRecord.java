@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_get_wal_resource_managers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,48 +30,28 @@ public class PgGetWalResourceManagersRecord extends TableRecordImpl<PgGetWalReso
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_wal_resource_managers.rm_id</code>.
-     */
     public void setRmId(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_wal_resource_managers.rm_id</code>.
-     */
     @Nullable
     public Integer getRmId() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_wal_resource_managers.rm_name</code>.
-     */
     public void setRmName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_wal_resource_managers.rm_name</code>.
-     */
     @Nullable
     public String getRmName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_get_wal_resource_managers.rm_builtin</code>.
-     */
     public void setRmBuiltin(@Nullable Boolean value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_get_wal_resource_managers.rm_builtin</code>.
-     */
     @Nullable
     public Boolean getRmBuiltin() {
         return (Boolean) get(2);
@@ -184,16 +161,10 @@ public class PgGetWalResourceManagersRecord extends TableRecordImpl<PgGetWalReso
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgGetWalResourceManagersRecord
-     */
     public PgGetWalResourceManagersRecord() {
         super(PgGetWalResourceManagers.PG_GET_WAL_RESOURCE_MANAGERS);
     }
 
-    /**
-     * Create a detached, initialised PgGetWalResourceManagersRecord
-     */
     @ConstructorProperties({ "rmId", "rmName", "rmBuiltin" })
     public PgGetWalResourceManagersRecord(@Nullable Integer rmId, @Nullable String rmName, @Nullable Boolean rmBuiltin) {
         super(PgGetWalResourceManagers.PG_GET_WAL_RESOURCE_MANAGERS);
@@ -204,9 +175,6 @@ public class PgGetWalResourceManagersRecord extends TableRecordImpl<PgGetWalReso
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgGetWalResourceManagersRecord
-     */
     public PgGetWalResourceManagersRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgGetWalResourceManagers value) {
         super(PgGetWalResourceManagers.PG_GET_WAL_RESOURCE_MANAGERS);
 

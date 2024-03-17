@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgLargeobjectRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_largeobject</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,33 +42,18 @@ public class PgLargeobject extends TableImpl<PgLargeobjectRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_largeobject</code>
-     */
     public static final PgLargeobject PG_LARGEOBJECT = new PgLargeobject();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgLargeobjectRecord> getRecordType() {
         return PgLargeobjectRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_largeobject.loid</code>.
-     */
     public final TableField<PgLargeobjectRecord, Long> LOID = createField(DSL.name("loid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_largeobject.pageno</code>.
-     */
     public final TableField<PgLargeobjectRecord, Integer> PAGENO = createField(DSL.name("pageno"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_largeobject.data</code>.
-     */
     public final TableField<PgLargeobjectRecord, byte[]> DATA = createField(DSL.name("data"), SQLDataType.BLOB.nullable(false), this, "");
 
     private PgLargeobject(Name alias, Table<PgLargeobjectRecord> aliased) {
@@ -84,23 +64,14 @@ public class PgLargeobject extends TableImpl<PgLargeobjectRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_largeobject</code> table reference
-     */
     public PgLargeobject(String alias) {
         this(DSL.name(alias), PG_LARGEOBJECT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_largeobject</code> table reference
-     */
     public PgLargeobject(Name alias) {
         this(alias, PG_LARGEOBJECT);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_largeobject</code> table reference
-     */
     public PgLargeobject() {
         this(DSL.name("pg_largeobject"), null);
     }
@@ -139,27 +110,18 @@ public class PgLargeobject extends TableImpl<PgLargeobjectRecord> {
         return new PgLargeobject(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLargeobject rename(String name) {
         return new PgLargeobject(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLargeobject rename(Name name) {
         return new PgLargeobject(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgLargeobject rename(Table<?> name) {
@@ -176,17 +138,10 @@ public class PgLargeobject extends TableImpl<PgLargeobjectRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Long, ? super Integer, ? super byte[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Long, ? super Integer, ? super byte[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

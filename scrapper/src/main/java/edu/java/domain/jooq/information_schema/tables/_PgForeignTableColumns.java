@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records._PgForeignTableColumnsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema._pg_foreign_table_columns</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,43 +40,20 @@ public class _PgForeignTableColumns extends TableImpl<_PgForeignTableColumnsReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema._pg_foreign_table_columns</code>
-     */
     public static final _PgForeignTableColumns _PG_FOREIGN_TABLE_COLUMNS = new _PgForeignTableColumns();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<_PgForeignTableColumnsRecord> getRecordType() {
         return _PgForeignTableColumnsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_table_columns.nspname</code>.
-     */
     public final TableField<_PgForeignTableColumnsRecord, String> NSPNAME = createField(DSL.name("nspname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_table_columns.relname</code>.
-     */
     public final TableField<_PgForeignTableColumnsRecord, String> RELNAME = createField(DSL.name("relname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_table_columns.attname</code>.
-     */
     public final TableField<_PgForeignTableColumnsRecord, String> ATTNAME = createField(DSL.name("attname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column
-     * <code>information_schema._pg_foreign_table_columns.attfdwoptions</code>.
-     */
     public final TableField<_PgForeignTableColumnsRecord, String[]> ATTFDWOPTIONS = createField(DSL.name("attfdwoptions"), SQLDataType.CLOB.array(), this, "");
 
     private _PgForeignTableColumns(Name alias, Table<_PgForeignTableColumnsRecord> aliased) {
@@ -103,26 +75,14 @@ public class _PgForeignTableColumns extends TableImpl<_PgForeignTableColumnsReco
         """));
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema._pg_foreign_table_columns</code> table reference
-     */
     public _PgForeignTableColumns(String alias) {
         this(DSL.name(alias), _PG_FOREIGN_TABLE_COLUMNS);
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema._pg_foreign_table_columns</code> table reference
-     */
     public _PgForeignTableColumns(Name alias) {
         this(alias, _PG_FOREIGN_TABLE_COLUMNS);
     }
 
-    /**
-     * Create a <code>information_schema._pg_foreign_table_columns</code> table
-     * reference
-     */
     public _PgForeignTableColumns() {
         this(DSL.name("_pg_foreign_table_columns"), null);
     }
@@ -155,27 +115,18 @@ public class _PgForeignTableColumns extends TableImpl<_PgForeignTableColumnsReco
         return new _PgForeignTableColumns(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignTableColumns rename(String name) {
         return new _PgForeignTableColumns(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignTableColumns rename(Name name) {
         return new _PgForeignTableColumns(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public _PgForeignTableColumns rename(Table<?> name) {
@@ -192,17 +143,10 @@ public class _PgForeignTableColumns extends TableImpl<_PgForeignTableColumnsReco
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

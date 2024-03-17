@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgOpclassRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_opclass</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,63 +45,30 @@ public class PgOpclass extends TableImpl<PgOpclassRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_opclass</code>
-     */
     public static final PgOpclass PG_OPCLASS = new PgOpclass();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgOpclassRecord> getRecordType() {
         return PgOpclassRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.oid</code>.
-     */
     public final TableField<PgOpclassRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.opcmethod</code>.
-     */
     public final TableField<PgOpclassRecord, Long> OPCMETHOD = createField(DSL.name("opcmethod"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.opcname</code>.
-     */
     public final TableField<PgOpclassRecord, String> OPCNAME = createField(DSL.name("opcname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.opcnamespace</code>.
-     */
     public final TableField<PgOpclassRecord, Long> OPCNAMESPACE = createField(DSL.name("opcnamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.opcowner</code>.
-     */
     public final TableField<PgOpclassRecord, Long> OPCOWNER = createField(DSL.name("opcowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.opcfamily</code>.
-     */
     public final TableField<PgOpclassRecord, Long> OPCFAMILY = createField(DSL.name("opcfamily"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.opcintype</code>.
-     */
     public final TableField<PgOpclassRecord, Long> OPCINTYPE = createField(DSL.name("opcintype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.opcdefault</code>.
-     */
     public final TableField<PgOpclassRecord, Boolean> OPCDEFAULT = createField(DSL.name("opcdefault"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_opclass.opckeytype</code>.
-     */
     public final TableField<PgOpclassRecord, Long> OPCKEYTYPE = createField(DSL.name("opckeytype"), SQLDataType.BIGINT.nullable(false), this, "");
 
     private PgOpclass(Name alias, Table<PgOpclassRecord> aliased) {
@@ -116,23 +79,14 @@ public class PgOpclass extends TableImpl<PgOpclassRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_opclass</code> table reference
-     */
     public PgOpclass(String alias) {
         this(DSL.name(alias), PG_OPCLASS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_opclass</code> table reference
-     */
     public PgOpclass(Name alias) {
         this(alias, PG_OPCLASS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_opclass</code> table reference
-     */
     public PgOpclass() {
         this(DSL.name("pg_opclass"), null);
     }
@@ -177,27 +131,18 @@ public class PgOpclass extends TableImpl<PgOpclassRecord> {
         return new PgOpclass(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOpclass rename(String name) {
         return new PgOpclass(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOpclass rename(Name name) {
         return new PgOpclass(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOpclass rename(Table<?> name) {
@@ -214,17 +159,10 @@ public class PgOpclass extends TableImpl<PgOpclassRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super Long, ? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Boolean, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

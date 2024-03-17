@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_description</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,64 +30,40 @@ public class PgDescriptionRecord extends UpdatableRecordImpl<PgDescriptionRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_description.objoid</code>.
-     */
     public void setObjoid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_description.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_description.classoid</code>.
-     */
     public void setClassoid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_description.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_description.objsubid</code>.
-     */
     public void setObjsubid(@NotNull Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_description.objsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getObjsubid() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_description.description</code>.
-     */
     public void setDescription(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_description.description</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDescription() {
@@ -237,16 +210,10 @@ public class PgDescriptionRecord extends UpdatableRecordImpl<PgDescriptionRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgDescriptionRecord
-     */
     public PgDescriptionRecord() {
         super(PgDescription.PG_DESCRIPTION);
     }
 
-    /**
-     * Create a detached, initialised PgDescriptionRecord
-     */
     @ConstructorProperties({ "objoid", "classoid", "objsubid", "description" })
     public PgDescriptionRecord(@NotNull Long objoid, @NotNull Long classoid, @NotNull Integer objsubid, @NotNull String description) {
         super(PgDescription.PG_DESCRIPTION);
@@ -258,9 +225,6 @@ public class PgDescriptionRecord extends UpdatableRecordImpl<PgDescriptionRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgDescriptionRecord
-     */
     public PgDescriptionRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgDescription value) {
         super(PgDescription.PG_DESCRIPTION);
 

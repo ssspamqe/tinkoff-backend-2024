@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.RoutineSequenceUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.routine_sequence_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,73 +39,30 @@ public class RoutineSequenceUsage extends TableImpl<RoutineSequenceUsageRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.routine_sequence_usage</code>
-     */
     public static final RoutineSequenceUsage ROUTINE_SEQUENCE_USAGE = new RoutineSequenceUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<RoutineSequenceUsageRecord> getRecordType() {
         return RoutineSequenceUsageRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.specific_catalog</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> SPECIFIC_CATALOG = createField(DSL.name("specific_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.specific_schema</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> SPECIFIC_SCHEMA = createField(DSL.name("specific_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.specific_name</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> SPECIFIC_NAME = createField(DSL.name("specific_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.routine_catalog</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> ROUTINE_CATALOG = createField(DSL.name("routine_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.routine_schema</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> ROUTINE_SCHEMA = createField(DSL.name("routine_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.routine_name</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> ROUTINE_NAME = createField(DSL.name("routine_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.sequence_catalog</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> SEQUENCE_CATALOG = createField(DSL.name("sequence_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.sequence_schema</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> SEQUENCE_SCHEMA = createField(DSL.name("sequence_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.routine_sequence_usage.sequence_name</code>.
-     */
     public final TableField<RoutineSequenceUsageRecord, String> SEQUENCE_NAME = createField(DSL.name("sequence_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private RoutineSequenceUsage(Name alias, Table<RoutineSequenceUsageRecord> aliased) {
@@ -137,26 +89,14 @@ public class RoutineSequenceUsage extends TableImpl<RoutineSequenceUsageRecord> 
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.routine_sequence_usage</code>
-     * table reference
-     */
     public RoutineSequenceUsage(String alias) {
         this(DSL.name(alias), ROUTINE_SEQUENCE_USAGE);
     }
 
-    /**
-     * Create an aliased <code>information_schema.routine_sequence_usage</code>
-     * table reference
-     */
     public RoutineSequenceUsage(Name alias) {
         this(alias, ROUTINE_SEQUENCE_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.routine_sequence_usage</code> table
-     * reference
-     */
     public RoutineSequenceUsage() {
         this(DSL.name("routine_sequence_usage"), null);
     }
@@ -189,27 +129,18 @@ public class RoutineSequenceUsage extends TableImpl<RoutineSequenceUsageRecord> 
         return new RoutineSequenceUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoutineSequenceUsage rename(String name) {
         return new RoutineSequenceUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoutineSequenceUsage rename(Name name) {
         return new RoutineSequenceUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RoutineSequenceUsage rename(Table<?> name) {
@@ -226,17 +157,10 @@ public class RoutineSequenceUsage extends TableImpl<RoutineSequenceUsageRecord> 
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

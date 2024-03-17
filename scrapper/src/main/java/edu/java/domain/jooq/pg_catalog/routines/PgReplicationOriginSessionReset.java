@@ -11,9 +11,6 @@ import javax.annotation.processing.Generated;
 import org.jooq.impl.AbstractRoutine;
 
 
-/**
- * The routine <code>pg_catalog.pg_replication_origin_session_reset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -26,9 +23,6 @@ public class PgReplicationOriginSessionReset extends AbstractRoutine<java.lang.V
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Create a new routine call instance
-     */
     public PgReplicationOriginSessionReset() {
         super("pg_replication_origin_session_reset", PgCatalog.PG_CATALOG);
     }

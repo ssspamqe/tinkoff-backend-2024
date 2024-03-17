@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_terminate_backend</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,24 +28,12 @@ public class PgTerminateBackend extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.pg_terminate_backend.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_terminate_backend.pid</code>.
-     */
     public static final Parameter<Integer> PID = Internal.createParameter("pid", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_terminate_backend.timeout</code>.
-     */
     public static final Parameter<Long> TIMEOUT = Internal.createParameter("timeout", SQLDataType.BIGINT.defaultValue(DSL.field(DSL.raw("0"), SQLDataType.BIGINT)), true, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgTerminateBackend() {
         super("pg_terminate_backend", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -57,32 +42,18 @@ public class PgTerminateBackend extends AbstractRoutine<Boolean> {
         addInParameter(TIMEOUT);
     }
 
-    /**
-     * Set the <code>pid</code> parameter IN value to the routine
-     */
     public void setPid(Integer value) {
         setValue(PID, value);
     }
 
-    /**
-     * Set the <code>pid</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setPid(Field<Integer> field) {
         setField(PID, field);
     }
 
-    /**
-     * Set the <code>timeout</code> parameter IN value to the routine
-     */
     public void setTimeout(Long value) {
         setValue(TIMEOUT, value);
     }
 
-    /**
-     * Set the <code>timeout</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setTimeout(Field<Long> field) {
         setField(TIMEOUT, field);
     }

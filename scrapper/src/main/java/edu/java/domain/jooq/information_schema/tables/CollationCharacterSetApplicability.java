@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.CollationCharacterSetApplicabilityRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,10 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table
- * <code>information_schema.collation_character_set_applicability</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,55 +39,24 @@ public class CollationCharacterSetApplicability extends TableImpl<CollationChara
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.collation_character_set_applicability</code>
-     */
     public static final CollationCharacterSetApplicability COLLATION_CHARACTER_SET_APPLICABILITY = new CollationCharacterSetApplicability();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<CollationCharacterSetApplicabilityRecord> getRecordType() {
         return CollationCharacterSetApplicabilityRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.collation_character_set_applicability.collation_catalog</code>.
-     */
     public final TableField<CollationCharacterSetApplicabilityRecord, String> COLLATION_CATALOG = createField(DSL.name("collation_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.collation_character_set_applicability.collation_schema</code>.
-     */
     public final TableField<CollationCharacterSetApplicabilityRecord, String> COLLATION_SCHEMA = createField(DSL.name("collation_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.collation_character_set_applicability.collation_name</code>.
-     */
     public final TableField<CollationCharacterSetApplicabilityRecord, String> COLLATION_NAME = createField(DSL.name("collation_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.collation_character_set_applicability.character_set_catalog</code>.
-     */
     public final TableField<CollationCharacterSetApplicabilityRecord, String> CHARACTER_SET_CATALOG = createField(DSL.name("character_set_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.collation_character_set_applicability.character_set_schema</code>.
-     */
     public final TableField<CollationCharacterSetApplicabilityRecord, String> CHARACTER_SET_SCHEMA = createField(DSL.name("character_set_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.collation_character_set_applicability.character_set_name</code>.
-     */
     public final TableField<CollationCharacterSetApplicabilityRecord, String> CHARACTER_SET_NAME = createField(DSL.name("character_set_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private CollationCharacterSetApplicability(Name alias, Table<CollationCharacterSetApplicabilityRecord> aliased) {
@@ -116,29 +79,14 @@ public class CollationCharacterSetApplicability extends TableImpl<CollationChara
         """));
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.collation_character_set_applicability</code>
-     * table reference
-     */
     public CollationCharacterSetApplicability(String alias) {
         this(DSL.name(alias), COLLATION_CHARACTER_SET_APPLICABILITY);
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.collation_character_set_applicability</code>
-     * table reference
-     */
     public CollationCharacterSetApplicability(Name alias) {
         this(alias, COLLATION_CHARACTER_SET_APPLICABILITY);
     }
 
-    /**
-     * Create a
-     * <code>information_schema.collation_character_set_applicability</code>
-     * table reference
-     */
     public CollationCharacterSetApplicability() {
         this(DSL.name("collation_character_set_applicability"), null);
     }
@@ -171,27 +119,18 @@ public class CollationCharacterSetApplicability extends TableImpl<CollationChara
         return new CollationCharacterSetApplicability(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CollationCharacterSetApplicability rename(String name) {
         return new CollationCharacterSetApplicability(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CollationCharacterSetApplicability rename(Name name) {
         return new CollationCharacterSetApplicability(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CollationCharacterSetApplicability rename(Table<?> name) {
@@ -208,17 +147,10 @@ public class CollationCharacterSetApplicability extends TableImpl<CollationChara
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

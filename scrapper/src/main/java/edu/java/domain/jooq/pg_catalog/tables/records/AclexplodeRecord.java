@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.aclexplode</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,61 +30,37 @@ public class AclexplodeRecord extends TableRecordImpl<AclexplodeRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.aclexplode.grantor</code>.
-     */
     public void setGrantor(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.aclexplode.grantor</code>.
-     */
     @Nullable
     public Long getGrantor() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.aclexplode.grantee</code>.
-     */
     public void setGrantee(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.aclexplode.grantee</code>.
-     */
     @Nullable
     public Long getGrantee() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.aclexplode.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.aclexplode.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.aclexplode.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.aclexplode.is_grantable</code>.
-     */
     @Nullable
     public Boolean getIsGrantable() {
         return (Boolean) get(3);
@@ -223,16 +196,10 @@ public class AclexplodeRecord extends TableRecordImpl<AclexplodeRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached AclexplodeRecord
-     */
     public AclexplodeRecord() {
         super(Aclexplode.ACLEXPLODE);
     }
 
-    /**
-     * Create a detached, initialised AclexplodeRecord
-     */
     @ConstructorProperties({ "grantor", "grantee", "privilegeType", "isGrantable" })
     public AclexplodeRecord(@Nullable Long grantor, @Nullable Long grantee, @Nullable String privilegeType, @Nullable Boolean isGrantable) {
         super(Aclexplode.ACLEXPLODE);
@@ -244,9 +211,6 @@ public class AclexplodeRecord extends TableRecordImpl<AclexplodeRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised AclexplodeRecord
-     */
     public AclexplodeRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.Aclexplode value) {
         super(Aclexplode.ACLEXPLODE);
 

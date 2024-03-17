@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.check_constraint_routine_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,103 +30,55 @@ public class CheckConstraintRoutineUsageRecord extends TableRecordImpl<CheckCons
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.check_constraint_routine_usage.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.check_constraint_routine_usage.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return (String) get(5);
@@ -317,16 +266,10 @@ public class CheckConstraintRoutineUsageRecord extends TableRecordImpl<CheckCons
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached CheckConstraintRoutineUsageRecord
-     */
     public CheckConstraintRoutineUsageRecord() {
         super(CheckConstraintRoutineUsage.CHECK_CONSTRAINT_ROUTINE_USAGE);
     }
 
-    /**
-     * Create a detached, initialised CheckConstraintRoutineUsageRecord
-     */
     @ConstructorProperties({ "constraintCatalog", "constraintSchema", "constraintName", "specificCatalog", "specificSchema", "specificName" })
     public CheckConstraintRoutineUsageRecord(@Nullable String constraintCatalog, @Nullable String constraintSchema, @Nullable String constraintName, @Nullable String specificCatalog, @Nullable String specificSchema, @Nullable String specificName) {
         super(CheckConstraintRoutineUsage.CHECK_CONSTRAINT_ROUTINE_USAGE);
@@ -340,9 +283,6 @@ public class CheckConstraintRoutineUsageRecord extends TableRecordImpl<CheckCons
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised CheckConstraintRoutineUsageRecord
-     */
     public CheckConstraintRoutineUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.CheckConstraintRoutineUsage value) {
         super(CheckConstraintRoutineUsage.CHECK_CONSTRAINT_ROUTINE_USAGE);
 

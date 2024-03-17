@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.foreign_data_wrappers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,87 +55,47 @@ public class ForeignDataWrappers implements Serializable {
         this.foreignDataWrapperLanguage = foreignDataWrapperLanguage;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return this.foreignDataWrapperCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String foreignDataWrapperCatalog) {
         this.foreignDataWrapperCatalog = foreignDataWrapperCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return this.foreignDataWrapperName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String foreignDataWrapperName) {
         this.foreignDataWrapperName = foreignDataWrapperName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return this.authorizationIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String authorizationIdentifier) {
         this.authorizationIdentifier = authorizationIdentifier;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.library_name</code>.
-     */
     @Nullable
     public String getLibraryName() {
         return this.libraryName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.library_name</code>.
-     */
     public void setLibraryName(@Nullable String libraryName) {
         this.libraryName = libraryName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     @Nullable
     public String getForeignDataWrapperLanguage() {
         return this.foreignDataWrapperLanguage;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     public void setForeignDataWrapperLanguage(@Nullable String foreignDataWrapperLanguage) {
         this.foreignDataWrapperLanguage = foreignDataWrapperLanguage;
     }

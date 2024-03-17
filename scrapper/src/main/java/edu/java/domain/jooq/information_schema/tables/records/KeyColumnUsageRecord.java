@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.key_column_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,148 +30,82 @@ public class KeyColumnUsageRecord extends TableRecordImpl<KeyColumnUsageRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.key_column_usage.constraint_catalog</code>.
-     */
     public void setConstraintCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.key_column_usage.constraint_catalog</code>.
-     */
     @Nullable
     public String getConstraintCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.key_column_usage.constraint_schema</code>.
-     */
     public void setConstraintSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.key_column_usage.constraint_schema</code>.
-     */
     @Nullable
     public String getConstraintSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.key_column_usage.constraint_name</code>.
-     */
     public void setConstraintName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.key_column_usage.constraint_name</code>.
-     */
     @Nullable
     public String getConstraintName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.key_column_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.key_column_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.key_column_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.key_column_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.key_column_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.key_column_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.key_column_usage.column_name</code>.
-     */
     public void setColumnName(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.key_column_usage.column_name</code>.
-     */
     @Nullable
     public String getColumnName() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.key_column_usage.ordinal_position</code>.
-     */
     public void setOrdinalPosition(@Nullable Integer value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.key_column_usage.ordinal_position</code>.
-     */
     @Nullable
     public Integer getOrdinalPosition() {
         return (Integer) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.key_column_usage.position_in_unique_constraint</code>.
-     */
     public void setPositionInUniqueConstraint(@Nullable Integer value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.key_column_usage.position_in_unique_constraint</code>.
-     */
     @Nullable
     public Integer getPositionInUniqueConstraint() {
         return (Integer) get(8);
@@ -440,16 +371,10 @@ public class KeyColumnUsageRecord extends TableRecordImpl<KeyColumnUsageRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached KeyColumnUsageRecord
-     */
     public KeyColumnUsageRecord() {
         super(KeyColumnUsage.KEY_COLUMN_USAGE);
     }
 
-    /**
-     * Create a detached, initialised KeyColumnUsageRecord
-     */
     @ConstructorProperties({ "constraintCatalog", "constraintSchema", "constraintName", "tableCatalog", "tableSchema", "tableName", "columnName", "ordinalPosition", "positionInUniqueConstraint" })
     public KeyColumnUsageRecord(@Nullable String constraintCatalog, @Nullable String constraintSchema, @Nullable String constraintName, @Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String columnName, @Nullable Integer ordinalPosition, @Nullable Integer positionInUniqueConstraint) {
         super(KeyColumnUsage.KEY_COLUMN_USAGE);
@@ -466,9 +391,6 @@ public class KeyColumnUsageRecord extends TableRecordImpl<KeyColumnUsageRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised KeyColumnUsageRecord
-     */
     public KeyColumnUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.KeyColumnUsage value) {
         super(KeyColumnUsage.KEY_COLUMN_USAGE);
 

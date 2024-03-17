@@ -16,9 +16,6 @@ import org.jooq.impl.LazySchema;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * Convenience access to all Domains in information_schema.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 @SuppressWarnings({ "all", "unchecked", "rawtypes", "this-escape" })
 public class Domains {
 
-    /**
-     * The domain <code>information_schema.cardinal_number</code>.
-     */
     public static final Domain<Integer> CARDINAL_NUMBER = Internal.createDomain(
           schema()
         , DSL.name("cardinal_number")
@@ -39,36 +33,24 @@ public class Domains {
         , Internal.createCheck(null, null, "CHECK ((VALUE >= 0))")
     );
 
-    /**
-     * The domain <code>information_schema.character_data</code>.
-     */
     public static final Domain<String> CHARACTER_DATA = Internal.createDomain(
           schema()
         , DSL.name("character_data")
         , SQLDataType.VARCHAR
     );
 
-    /**
-     * The domain <code>information_schema.sql_identifier</code>.
-     */
     public static final Domain<String> SQL_IDENTIFIER = Internal.createDomain(
           schema()
         , DSL.name("sql_identifier")
         , SQLDataType.VARCHAR
     );
 
-    /**
-     * The domain <code>information_schema.time_stamp</code>.
-     */
     public static final Domain<OffsetDateTime> TIME_STAMP = Internal.createDomain(
           schema()
         , DSL.name("time_stamp")
         , SQLDataType.TIMESTAMPWITHTIMEZONE(2).defaultValue(DSL.field(DSL.raw("CURRENT_TIMESTAMP(2)"), SQLDataType.TIMESTAMPWITHTIMEZONE))
     );
 
-    /**
-     * The domain <code>information_schema.yes_or_no</code>.
-     */
     public static final Domain<String> YES_OR_NO = Internal.createDomain(
           schema()
         , DSL.name("yes_or_no")

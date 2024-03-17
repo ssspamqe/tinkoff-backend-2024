@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.foreign_server_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,69 +30,37 @@ public class ForeignServerOptionsRecord extends TableRecordImpl<ForeignServerOpt
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_server_options.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_server_options.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_server_options.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_server_options.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_server_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_server_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_server_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_server_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return (String) get(3);
@@ -231,16 +196,10 @@ public class ForeignServerOptionsRecord extends TableRecordImpl<ForeignServerOpt
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ForeignServerOptionsRecord
-     */
     public ForeignServerOptionsRecord() {
         super(ForeignServerOptions.FOREIGN_SERVER_OPTIONS);
     }
 
-    /**
-     * Create a detached, initialised ForeignServerOptionsRecord
-     */
     @ConstructorProperties({ "foreignServerCatalog", "foreignServerName", "optionName", "optionValue" })
     public ForeignServerOptionsRecord(@Nullable String foreignServerCatalog, @Nullable String foreignServerName, @Nullable String optionName, @Nullable String optionValue) {
         super(ForeignServerOptions.FOREIGN_SERVER_OPTIONS);
@@ -252,9 +211,6 @@ public class ForeignServerOptionsRecord extends TableRecordImpl<ForeignServerOpt
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ForeignServerOptionsRecord
-     */
     public ForeignServerOptionsRecord(edu.java.domain.jooq.information_schema.tables.pojos.ForeignServerOptions value) {
         super(ForeignServerOptions.FOREIGN_SERVER_OPTIONS);
 

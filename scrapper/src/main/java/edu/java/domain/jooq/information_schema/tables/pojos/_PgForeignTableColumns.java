@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema._pg_foreign_table_columns</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -55,70 +52,38 @@ public class _PgForeignTableColumns implements Serializable {
         this.attfdwoptions = attfdwoptions;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_table_columns.nspname</code>.
-     */
     @Nullable
     public String getNspname() {
         return this.nspname;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_table_columns.nspname</code>.
-     */
     public void setNspname(@Nullable String nspname) {
         this.nspname = nspname;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_table_columns.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return this.relname;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_table_columns.relname</code>.
-     */
     public void setRelname(@Nullable String relname) {
         this.relname = relname;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_table_columns.attname</code>.
-     */
     @Nullable
     public String getAttname() {
         return this.attname;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_table_columns.attname</code>.
-     */
     public void setAttname(@Nullable String attname) {
         this.attname = attname;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_table_columns.attfdwoptions</code>.
-     */
     @Nullable
     public String[] getAttfdwoptions() {
         return this.attfdwoptions;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_table_columns.attfdwoptions</code>.
-     */
     public void setAttfdwoptions(@Nullable String[] attfdwoptions) {
         this.attfdwoptions = attfdwoptions;
     }

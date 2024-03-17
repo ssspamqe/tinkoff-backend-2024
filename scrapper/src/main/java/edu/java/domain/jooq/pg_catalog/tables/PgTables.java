@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTablesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,58 +40,28 @@ public class PgTables extends TableImpl<PgTablesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_tables</code>
-     */
     public static final PgTables PG_TABLES = new PgTables();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTablesRecord> getRecordType() {
         return PgTablesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_tables.schemaname</code>.
-     */
     public final TableField<PgTablesRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tables.tablename</code>.
-     */
     public final TableField<PgTablesRecord, String> TABLENAME = createField(DSL.name("tablename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tables.tableowner</code>.
-     */
     public final TableField<PgTablesRecord, String> TABLEOWNER = createField(DSL.name("tableowner"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tables.tablespace</code>.
-     */
     public final TableField<PgTablesRecord, String> TABLESPACE = createField(DSL.name("tablespace"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tables.hasindexes</code>.
-     */
     public final TableField<PgTablesRecord, Boolean> HASINDEXES = createField(DSL.name("hasindexes"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tables.hasrules</code>.
-     */
     public final TableField<PgTablesRecord, Boolean> HASRULES = createField(DSL.name("hasrules"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tables.hastriggers</code>.
-     */
     public final TableField<PgTablesRecord, Boolean> HASTRIGGERS = createField(DSL.name("hastriggers"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_tables.rowsecurity</code>.
-     */
     public final TableField<PgTablesRecord, Boolean> ROWSECURITY = createField(DSL.name("rowsecurity"), SQLDataType.BOOLEAN, this, "");
 
     private PgTables(Name alias, Table<PgTablesRecord> aliased) {
@@ -120,23 +85,14 @@ public class PgTables extends TableImpl<PgTablesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_tables</code> table reference
-     */
     public PgTables(String alias) {
         this(DSL.name(alias), PG_TABLES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_tables</code> table reference
-     */
     public PgTables(Name alias) {
         this(alias, PG_TABLES);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_tables</code> table reference
-     */
     public PgTables() {
         this(DSL.name("pg_tables"), null);
     }
@@ -169,27 +125,18 @@ public class PgTables extends TableImpl<PgTablesRecord> {
         return new PgTables(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTables rename(String name) {
         return new PgTables(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTables rename(Name name) {
         return new PgTables(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTables rename(Table<?> name) {
@@ -206,17 +153,10 @@ public class PgTables extends TableImpl<PgTablesRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super Boolean, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

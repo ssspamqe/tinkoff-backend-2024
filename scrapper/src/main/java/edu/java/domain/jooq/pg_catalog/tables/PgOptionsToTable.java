@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgOptionsToTableRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_options_to_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,28 +38,16 @@ public class PgOptionsToTable extends TableImpl<PgOptionsToTableRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_options_to_table</code>
-     */
     public static final PgOptionsToTable PG_OPTIONS_TO_TABLE = new PgOptionsToTable();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgOptionsToTableRecord> getRecordType() {
         return PgOptionsToTableRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_options_to_table.option_name</code>.
-     */
     public final TableField<PgOptionsToTableRecord, String> OPTION_NAME = createField(DSL.name("option_name"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_options_to_table.option_value</code>.
-     */
     public final TableField<PgOptionsToTableRecord, String> OPTION_VALUE = createField(DSL.name("option_value"), SQLDataType.CLOB, this, "");
 
     private PgOptionsToTable(Name alias, Table<PgOptionsToTableRecord> aliased) {
@@ -77,25 +60,14 @@ public class PgOptionsToTable extends TableImpl<PgOptionsToTableRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_options_to_table</code> table
-     * reference
-     */
     public PgOptionsToTable(String alias) {
         this(DSL.name(alias), PG_OPTIONS_TO_TABLE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_options_to_table</code> table
-     * reference
-     */
     public PgOptionsToTable(Name alias) {
         this(alias, PG_OPTIONS_TO_TABLE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_options_to_table</code> table reference
-     */
     public PgOptionsToTable() {
         this(DSL.name("pg_options_to_table"), null);
     }
@@ -124,27 +96,18 @@ public class PgOptionsToTable extends TableImpl<PgOptionsToTableRecord> {
         return new PgOptionsToTable(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOptionsToTable rename(String name) {
         return new PgOptionsToTable(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOptionsToTable rename(Name name) {
         return new PgOptionsToTable(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgOptionsToTable rename(Table<?> name) {
@@ -161,9 +124,6 @@ public class PgOptionsToTable extends TableImpl<PgOptionsToTableRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgOptionsToTable call(
           String[] optionsArray
     ) {
@@ -174,9 +134,6 @@ public class PgOptionsToTable extends TableImpl<PgOptionsToTableRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgOptionsToTable call(
           Field<String[]> optionsArray
     ) {
@@ -187,17 +144,10 @@ public class PgOptionsToTable extends TableImpl<PgOptionsToTableRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

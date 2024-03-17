@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatSubscriptionStatsRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_subscription_stats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,47 +42,22 @@ public class PgStatSubscriptionStats extends TableImpl<PgStatSubscriptionStatsRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_subscription_stats</code>
-     */
     public static final PgStatSubscriptionStats PG_STAT_SUBSCRIPTION_STATS = new PgStatSubscriptionStats();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatSubscriptionStatsRecord> getRecordType() {
         return PgStatSubscriptionStatsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_subscription_stats.subid</code>.
-     */
     public final TableField<PgStatSubscriptionStatsRecord, Long> SUBID = createField(DSL.name("subid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_subscription_stats.subname</code>.
-     */
     public final TableField<PgStatSubscriptionStatsRecord, String> SUBNAME = createField(DSL.name("subname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_subscription_stats.apply_error_count</code>.
-     */
     public final TableField<PgStatSubscriptionStatsRecord, Long> APPLY_ERROR_COUNT = createField(DSL.name("apply_error_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_subscription_stats.sync_error_count</code>.
-     */
     public final TableField<PgStatSubscriptionStatsRecord, Long> SYNC_ERROR_COUNT = createField(DSL.name("sync_error_count"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_subscription_stats.stats_reset</code>.
-     */
     public final TableField<PgStatSubscriptionStatsRecord, OffsetDateTime> STATS_RESET = createField(DSL.name("stats_reset"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
     private PgStatSubscriptionStats(Name alias, Table<PgStatSubscriptionStatsRecord> aliased) {
@@ -105,26 +76,14 @@ public class PgStatSubscriptionStats extends TableImpl<PgStatSubscriptionStatsRe
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_subscription_stats</code>
-     * table reference
-     */
     public PgStatSubscriptionStats(String alias) {
         this(DSL.name(alias), PG_STAT_SUBSCRIPTION_STATS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_subscription_stats</code>
-     * table reference
-     */
     public PgStatSubscriptionStats(Name alias) {
         this(alias, PG_STAT_SUBSCRIPTION_STATS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_subscription_stats</code> table
-     * reference
-     */
     public PgStatSubscriptionStats() {
         this(DSL.name("pg_stat_subscription_stats"), null);
     }
@@ -157,27 +116,18 @@ public class PgStatSubscriptionStats extends TableImpl<PgStatSubscriptionStatsRe
         return new PgStatSubscriptionStats(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSubscriptionStats rename(String name) {
         return new PgStatSubscriptionStats(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSubscriptionStats rename(Name name) {
         return new PgStatSubscriptionStats(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatSubscriptionStats rename(Table<?> name) {
@@ -194,17 +144,10 @@ public class PgStatSubscriptionStats extends TableImpl<PgStatSubscriptionStatsRe
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super Long, ? super Long, ? super OffsetDateTime, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

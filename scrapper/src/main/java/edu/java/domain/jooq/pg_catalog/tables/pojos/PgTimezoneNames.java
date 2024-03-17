@@ -13,9 +13,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The table <code>pg_catalog.pg_timezone_names</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -55,62 +52,38 @@ public class PgTimezoneNames implements Serializable {
         this.isDst = isDst;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_names.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_names.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_names.abbrev</code>.
-     */
     @Nullable
     public String getAbbrev() {
         return this.abbrev;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_names.abbrev</code>.
-     */
     public void setAbbrev(@Nullable String abbrev) {
         this.abbrev = abbrev;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_names.utc_offset</code>.
-     */
     @Nullable
     public YearToSecond getUtcOffset() {
         return this.utcOffset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_names.utc_offset</code>.
-     */
     public void setUtcOffset(@Nullable YearToSecond utcOffset) {
         this.utcOffset = utcOffset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_timezone_names.is_dst</code>.
-     */
     @Nullable
     public Boolean getIsDst() {
         return this.isDst;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_timezone_names.is_dst</code>.
-     */
     public void setIsDst(@Nullable Boolean isDst) {
         this.isDst = isDst;
     }

@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_sequence</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,128 +30,80 @@ public class PgSequenceRecord extends UpdatableRecordImpl<PgSequenceRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqrelid</code>.
-     */
     public void setSeqrelid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqrelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqtypid</code>.
-     */
     public void setSeqtypid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqtypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqtypid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqstart</code>.
-     */
     public void setSeqstart(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqstart</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqstart() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqincrement</code>.
-     */
     public void setSeqincrement(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqincrement</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqincrement() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqmax</code>.
-     */
     public void setSeqmax(@NotNull Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqmax</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqmax() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqmin</code>.
-     */
     public void setSeqmin(@NotNull Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqmin</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqmin() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqcache</code>.
-     */
     public void setSeqcache(@NotNull Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqcache</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSeqcache() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_sequence.seqcycle</code>.
-     */
     public void setSeqcycle(@NotNull Boolean value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_sequence.seqcycle</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSeqcycle() {
@@ -405,16 +354,10 @@ public class PgSequenceRecord extends UpdatableRecordImpl<PgSequenceRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgSequenceRecord
-     */
     public PgSequenceRecord() {
         super(PgSequence.PG_SEQUENCE);
     }
 
-    /**
-     * Create a detached, initialised PgSequenceRecord
-     */
     @ConstructorProperties({ "seqrelid", "seqtypid", "seqstart", "seqincrement", "seqmax", "seqmin", "seqcache", "seqcycle" })
     public PgSequenceRecord(@NotNull Long seqrelid, @NotNull Long seqtypid, @NotNull Long seqstart, @NotNull Long seqincrement, @NotNull Long seqmax, @NotNull Long seqmin, @NotNull Long seqcache, @NotNull Boolean seqcycle) {
         super(PgSequence.PG_SEQUENCE);
@@ -430,9 +373,6 @@ public class PgSequenceRecord extends UpdatableRecordImpl<PgSequenceRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgSequenceRecord
-     */
     public PgSequenceRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgSequence value) {
         super(PgSequence.PG_SEQUENCE);
 

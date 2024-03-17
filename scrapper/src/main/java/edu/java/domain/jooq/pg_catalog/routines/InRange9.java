@@ -18,9 +18,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The routine <code>pg_catalog.in_range</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,39 +30,18 @@ public class InRange9 extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.in_range.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.in_range._1</code>.
-     */
     public static final Parameter<LocalDateTime> _1 = Internal.createParameter("_1", SQLDataType.LOCALDATETIME(6), false, true);
 
-    /**
-     * The parameter <code>pg_catalog.in_range._2</code>.
-     */
     public static final Parameter<LocalDateTime> _2 = Internal.createParameter("_2", SQLDataType.LOCALDATETIME(6), false, true);
 
-    /**
-     * The parameter <code>pg_catalog.in_range._3</code>.
-     */
     public static final Parameter<YearToSecond> _3 = Internal.createParameter("_3", SQLDataType.INTERVAL, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.in_range._4</code>.
-     */
     public static final Parameter<Boolean> _4 = Internal.createParameter("_4", SQLDataType.BOOLEAN, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.in_range._5</code>.
-     */
     public static final Parameter<Boolean> _5 = Internal.createParameter("_5", SQLDataType.BOOLEAN, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public InRange9() {
         super("in_range", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -78,77 +54,42 @@ public class InRange9 extends AbstractRoutine<Boolean> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(LocalDateTime value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<LocalDateTime> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(LocalDateTime value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<LocalDateTime> field) {
         setField(_2, field);
     }
 
-    /**
-     * Set the <code>_3</code> parameter IN value to the routine
-     */
     public void set__3(YearToSecond value) {
         setValue(_3, value);
     }
 
-    /**
-     * Set the <code>_3</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__3(Field<YearToSecond> field) {
         setField(_3, field);
     }
 
-    /**
-     * Set the <code>_4</code> parameter IN value to the routine
-     */
     public void set__4(Boolean value) {
         setValue(_4, value);
     }
 
-    /**
-     * Set the <code>_4</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__4(Field<Boolean> field) {
         setField(_4, field);
     }
 
-    /**
-     * Set the <code>_5</code> parameter IN value to the routine
-     */
     public void set__5(Boolean value) {
         setValue(_5, value);
     }
 
-    /**
-     * Set the <code>_5</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__5(Field<Boolean> field) {
         setField(_5, field);
     }

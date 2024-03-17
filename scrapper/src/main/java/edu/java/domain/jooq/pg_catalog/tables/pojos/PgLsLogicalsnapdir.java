@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_logicalsnapdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -51,47 +48,29 @@ public class PgLsLogicalsnapdir implements Serializable {
         this.modification = modification;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalsnapdir.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalsnapdir.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalsnapdir.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return this.size;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalsnapdir.size</code>.
-     */
     public void setSize(@Nullable Long size) {
         this.size = size;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalsnapdir.modification</code>.
-     */
     @Nullable
     public OffsetDateTime getModification() {
         return this.modification;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalsnapdir.modification</code>.
-     */
     public void setModification(@Nullable OffsetDateTime modification) {
         this.modification = modification;
     }

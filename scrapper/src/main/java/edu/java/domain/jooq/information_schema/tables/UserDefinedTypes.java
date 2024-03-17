@@ -23,9 +23,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.user_defined_types</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -38,191 +35,70 @@ public class UserDefinedTypes extends TableImpl<UserDefinedTypesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.user_defined_types</code>
-     */
     public static final UserDefinedTypes USER_DEFINED_TYPES = new UserDefinedTypes();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<UserDefinedTypesRecord> getRecordType() {
         return UserDefinedTypesRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.user_defined_type_catalog</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> USER_DEFINED_TYPE_CATALOG = createField(DSL.name("user_defined_type_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.user_defined_type_schema</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> USER_DEFINED_TYPE_SCHEMA = createField(DSL.name("user_defined_type_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.user_defined_type_name</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> USER_DEFINED_TYPE_NAME = createField(DSL.name("user_defined_type_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.user_defined_type_category</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> USER_DEFINED_TYPE_CATEGORY = createField(DSL.name("user_defined_type_category"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.is_instantiable</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> IS_INSTANTIABLE = createField(DSL.name("is_instantiable"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.user_defined_types.is_final</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> IS_FINAL = createField(DSL.name("is_final"), edu.java.domain.jooq.information_schema.Domains.YES_OR_NO.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.ordering_form</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> ORDERING_FORM = createField(DSL.name("ordering_form"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.ordering_category</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> ORDERING_CATEGORY = createField(DSL.name("ordering_category"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.ordering_routine_catalog</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> ORDERING_ROUTINE_CATALOG = createField(DSL.name("ordering_routine_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.ordering_routine_schema</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> ORDERING_ROUTINE_SCHEMA = createField(DSL.name("ordering_routine_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.ordering_routine_name</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> ORDERING_ROUTINE_NAME = createField(DSL.name("ordering_routine_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.reference_type</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> REFERENCE_TYPE = createField(DSL.name("reference_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.user_defined_types.data_type</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> DATA_TYPE = createField(DSL.name("data_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.character_maximum_length</code>.
-     */
     public final TableField<UserDefinedTypesRecord, Integer> CHARACTER_MAXIMUM_LENGTH = createField(DSL.name("character_maximum_length"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.character_octet_length</code>.
-     */
     public final TableField<UserDefinedTypesRecord, Integer> CHARACTER_OCTET_LENGTH = createField(DSL.name("character_octet_length"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.character_set_catalog</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> CHARACTER_SET_CATALOG = createField(DSL.name("character_set_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.character_set_schema</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> CHARACTER_SET_SCHEMA = createField(DSL.name("character_set_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.character_set_name</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> CHARACTER_SET_NAME = createField(DSL.name("character_set_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.collation_catalog</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> COLLATION_CATALOG = createField(DSL.name("collation_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.collation_schema</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> COLLATION_SCHEMA = createField(DSL.name("collation_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.collation_name</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> COLLATION_NAME = createField(DSL.name("collation_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.numeric_precision</code>.
-     */
     public final TableField<UserDefinedTypesRecord, Integer> NUMERIC_PRECISION = createField(DSL.name("numeric_precision"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.numeric_precision_radix</code>.
-     */
     public final TableField<UserDefinedTypesRecord, Integer> NUMERIC_PRECISION_RADIX = createField(DSL.name("numeric_precision_radix"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.numeric_scale</code>.
-     */
     public final TableField<UserDefinedTypesRecord, Integer> NUMERIC_SCALE = createField(DSL.name("numeric_scale"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.datetime_precision</code>.
-     */
     public final TableField<UserDefinedTypesRecord, Integer> DATETIME_PRECISION = createField(DSL.name("datetime_precision"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.interval_type</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> INTERVAL_TYPE = createField(DSL.name("interval_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.interval_precision</code>.
-     */
     public final TableField<UserDefinedTypesRecord, Integer> INTERVAL_PRECISION = createField(DSL.name("interval_precision"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.source_dtd_identifier</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> SOURCE_DTD_IDENTIFIER = createField(DSL.name("source_dtd_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.user_defined_types.ref_dtd_identifier</code>.
-     */
     public final TableField<UserDefinedTypesRecord, String> REF_DTD_IDENTIFIER = createField(DSL.name("ref_dtd_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private UserDefinedTypes(Name alias, Table<UserDefinedTypesRecord> aliased) {
@@ -267,26 +143,14 @@ public class UserDefinedTypes extends TableImpl<UserDefinedTypesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.user_defined_types</code>
-     * table reference
-     */
     public UserDefinedTypes(String alias) {
         this(DSL.name(alias), USER_DEFINED_TYPES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.user_defined_types</code>
-     * table reference
-     */
     public UserDefinedTypes(Name alias) {
         this(alias, USER_DEFINED_TYPES);
     }
 
-    /**
-     * Create a <code>information_schema.user_defined_types</code> table
-     * reference
-     */
     public UserDefinedTypes() {
         this(DSL.name("user_defined_types"), null);
     }
@@ -319,27 +183,18 @@ public class UserDefinedTypes extends TableImpl<UserDefinedTypesRecord> {
         return new UserDefinedTypes(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserDefinedTypes rename(String name) {
         return new UserDefinedTypes(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserDefinedTypes rename(Name name) {
         return new UserDefinedTypes(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public UserDefinedTypes rename(Table<?> name) {

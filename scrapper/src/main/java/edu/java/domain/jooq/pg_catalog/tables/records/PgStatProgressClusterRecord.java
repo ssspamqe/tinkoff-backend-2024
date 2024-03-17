@@ -18,9 +18,6 @@ import org.jooq.Row12;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_cluster</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,193 +30,109 @@ public class PgStatProgressClusterRecord extends TableRecordImpl<PgStatProgressC
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.pid</code>.
-     */
     public void setPid(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return (Integer) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.datid</code>.
-     */
     public void setDatid(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.datname</code>.
-     */
     public void setDatname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.relid</code>.
-     */
     public void setRelid(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.command</code>.
-     */
     public void setCommand(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.command</code>.
-     */
     @Nullable
     public String getCommand() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_cluster.phase</code>.
-     */
     public void setPhase(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_cluster.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.cluster_index_relid</code>.
-     */
     public void setClusterIndexRelid(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.cluster_index_relid</code>.
-     */
     @Nullable
     public Long getClusterIndexRelid() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_scanned</code>.
-     */
     public void setHeapTuplesScanned(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_scanned</code>.
-     */
     @Nullable
     public Long getHeapTuplesScanned() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_written</code>.
-     */
     public void setHeapTuplesWritten(@Nullable Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_tuples_written</code>.
-     */
     @Nullable
     public Long getHeapTuplesWritten() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_total</code>.
-     */
     public void setHeapBlksTotal(@Nullable Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_total</code>.
-     */
     @Nullable
     public Long getHeapBlksTotal() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_scanned</code>.
-     */
     public void setHeapBlksScanned(@Nullable Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.heap_blks_scanned</code>.
-     */
     @Nullable
     public Long getHeapBlksScanned() {
         return (Long) get(10);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_cluster.index_rebuild_count</code>.
-     */
     public void setIndexRebuildCount(@Nullable Long value) {
         set(11, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_cluster.index_rebuild_count</code>.
-     */
     @Nullable
     public Long getIndexRebuildCount() {
         return (Long) get(11);
@@ -563,16 +476,10 @@ public class PgStatProgressClusterRecord extends TableRecordImpl<PgStatProgressC
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatProgressClusterRecord
-     */
     public PgStatProgressClusterRecord() {
         super(PgStatProgressCluster.PG_STAT_PROGRESS_CLUSTER);
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressClusterRecord
-     */
     @ConstructorProperties({ "pid", "datid", "datname", "relid", "command", "phase", "clusterIndexRelid", "heapTuplesScanned", "heapTuplesWritten", "heapBlksTotal", "heapBlksScanned", "indexRebuildCount" })
     public PgStatProgressClusterRecord(@Nullable Integer pid, @Nullable Long datid, @Nullable String datname, @Nullable Long relid, @Nullable String command, @Nullable String phase, @Nullable Long clusterIndexRelid, @Nullable Long heapTuplesScanned, @Nullable Long heapTuplesWritten, @Nullable Long heapBlksTotal, @Nullable Long heapBlksScanned, @Nullable Long indexRebuildCount) {
         super(PgStatProgressCluster.PG_STAT_PROGRESS_CLUSTER);
@@ -592,9 +499,6 @@ public class PgStatProgressClusterRecord extends TableRecordImpl<PgStatProgressC
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatProgressClusterRecord
-     */
     public PgStatProgressClusterRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatProgressCluster value) {
         super(PgStatProgressCluster.PG_STAT_PROGRESS_CLUSTER);
 

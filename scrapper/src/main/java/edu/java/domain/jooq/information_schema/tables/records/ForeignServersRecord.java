@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.foreign_servers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,120 +30,64 @@ public class ForeignServersRecord extends TableRecordImpl<ForeignServersRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_server_type</code>.
-     */
     public void setForeignServerType(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_server_type</code>.
-     */
     @Nullable
     public String getForeignServerType() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.foreign_server_version</code>.
-     */
     public void setForeignServerVersion(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.foreign_server_version</code>.
-     */
     @Nullable
     public String getForeignServerVersion() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_servers.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_servers.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return (String) get(6);
@@ -360,16 +301,10 @@ public class ForeignServersRecord extends TableRecordImpl<ForeignServersRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ForeignServersRecord
-     */
     public ForeignServersRecord() {
         super(ForeignServers.FOREIGN_SERVERS);
     }
 
-    /**
-     * Create a detached, initialised ForeignServersRecord
-     */
     @ConstructorProperties({ "foreignServerCatalog", "foreignServerName", "foreignDataWrapperCatalog", "foreignDataWrapperName", "foreignServerType", "foreignServerVersion", "authorizationIdentifier" })
     public ForeignServersRecord(@Nullable String foreignServerCatalog, @Nullable String foreignServerName, @Nullable String foreignDataWrapperCatalog, @Nullable String foreignDataWrapperName, @Nullable String foreignServerType, @Nullable String foreignServerVersion, @Nullable String authorizationIdentifier) {
         super(ForeignServers.FOREIGN_SERVERS);
@@ -384,9 +319,6 @@ public class ForeignServersRecord extends TableRecordImpl<ForeignServersRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ForeignServersRecord
-     */
     public ForeignServersRecord(edu.java.domain.jooq.information_schema.tables.pojos.ForeignServers value) {
         super(ForeignServers.FOREIGN_SERVERS);
 

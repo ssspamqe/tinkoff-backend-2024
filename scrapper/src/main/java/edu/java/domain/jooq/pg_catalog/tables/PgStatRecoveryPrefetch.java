@@ -8,7 +8,6 @@ import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatRecoveryPrefetchRecord;
 
 import java.time.OffsetDateTime;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -31,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_recovery_prefetch</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,71 +42,32 @@ public class PgStatRecoveryPrefetch extends TableImpl<PgStatRecoveryPrefetchReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_recovery_prefetch</code>
-     */
     public static final PgStatRecoveryPrefetch PG_STAT_RECOVERY_PREFETCH = new PgStatRecoveryPrefetch();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatRecoveryPrefetchRecord> getRecordType() {
         return PgStatRecoveryPrefetchRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_recovery_prefetch.stats_reset</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, OffsetDateTime> STATS_RESET = createField(DSL.name("stats_reset"), SQLDataType.TIMESTAMPWITHTIMEZONE(6), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_recovery_prefetch.prefetch</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Long> PREFETCH = createField(DSL.name("prefetch"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_recovery_prefetch.hit</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Long> HIT = createField(DSL.name("hit"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_recovery_prefetch.skip_init</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Long> SKIP_INIT = createField(DSL.name("skip_init"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_recovery_prefetch.skip_new</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Long> SKIP_NEW = createField(DSL.name("skip_new"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_recovery_prefetch.skip_fpw</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Long> SKIP_FPW = createField(DSL.name("skip_fpw"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_recovery_prefetch.skip_rep</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Long> SKIP_REP = createField(DSL.name("skip_rep"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_recovery_prefetch.wal_distance</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Integer> WAL_DISTANCE = createField(DSL.name("wal_distance"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_recovery_prefetch.block_distance</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Integer> BLOCK_DISTANCE = createField(DSL.name("block_distance"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_recovery_prefetch.io_depth</code>.
-     */
     public final TableField<PgStatRecoveryPrefetchRecord, Integer> IO_DEPTH = createField(DSL.name("io_depth"), SQLDataType.INTEGER, this, "");
 
     private PgStatRecoveryPrefetch(Name alias, Table<PgStatRecoveryPrefetchRecord> aliased) {
@@ -133,26 +90,14 @@ public class PgStatRecoveryPrefetch extends TableImpl<PgStatRecoveryPrefetchReco
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_recovery_prefetch</code> table
-     * reference
-     */
     public PgStatRecoveryPrefetch(String alias) {
         this(DSL.name(alias), PG_STAT_RECOVERY_PREFETCH);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_recovery_prefetch</code> table
-     * reference
-     */
     public PgStatRecoveryPrefetch(Name alias) {
         this(alias, PG_STAT_RECOVERY_PREFETCH);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_recovery_prefetch</code> table
-     * reference
-     */
     public PgStatRecoveryPrefetch() {
         this(DSL.name("pg_stat_recovery_prefetch"), null);
     }
@@ -185,27 +130,18 @@ public class PgStatRecoveryPrefetch extends TableImpl<PgStatRecoveryPrefetchReco
         return new PgStatRecoveryPrefetch(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatRecoveryPrefetch rename(String name) {
         return new PgStatRecoveryPrefetch(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatRecoveryPrefetch rename(Name name) {
         return new PgStatRecoveryPrefetch(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatRecoveryPrefetch rename(Table<?> name) {
@@ -222,17 +158,10 @@ public class PgStatRecoveryPrefetch extends TableImpl<PgStatRecoveryPrefetchReco
         return (Row10) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function10<? super OffsetDateTime, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function10<? super OffsetDateTime, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Integer, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

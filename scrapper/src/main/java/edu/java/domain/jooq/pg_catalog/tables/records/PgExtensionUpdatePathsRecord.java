@@ -18,9 +18,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_extension_update_paths</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,46 +30,28 @@ public class PgExtensionUpdatePathsRecord extends TableRecordImpl<PgExtensionUpd
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension_update_paths.source</code>.
-     */
     public void setSource(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension_update_paths.source</code>.
-     */
     @Nullable
     public String getSource() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension_update_paths.target</code>.
-     */
     public void setTarget(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension_update_paths.target</code>.
-     */
     @Nullable
     public String getTarget() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_extension_update_paths.path</code>.
-     */
     public void setPath(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_extension_update_paths.path</code>.
-     */
     @Nullable
     public String getPath() {
         return (String) get(2);
@@ -182,16 +161,10 @@ public class PgExtensionUpdatePathsRecord extends TableRecordImpl<PgExtensionUpd
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgExtensionUpdatePathsRecord
-     */
     public PgExtensionUpdatePathsRecord() {
         super(PgExtensionUpdatePaths.PG_EXTENSION_UPDATE_PATHS);
     }
 
-    /**
-     * Create a detached, initialised PgExtensionUpdatePathsRecord
-     */
     @ConstructorProperties({ "source", "target", "path" })
     public PgExtensionUpdatePathsRecord(@Nullable String source, @Nullable String target, @Nullable String path) {
         super(PgExtensionUpdatePaths.PG_EXTENSION_UPDATE_PATHS);
@@ -202,9 +175,6 @@ public class PgExtensionUpdatePathsRecord extends TableRecordImpl<PgExtensionUpd
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgExtensionUpdatePathsRecord
-     */
     public PgExtensionUpdatePathsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgExtensionUpdatePaths value) {
         super(PgExtensionUpdatePaths.PG_EXTENSION_UPDATE_PATHS);
 

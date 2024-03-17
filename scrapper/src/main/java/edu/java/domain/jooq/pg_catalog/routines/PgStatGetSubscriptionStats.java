@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_stat_get_subscription_stats</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,39 +28,16 @@ public class PgStatGetSubscriptionStats extends AbstractRoutine<java.lang.Void> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_subscription_stats.subid</code>.
-     */
     public static final Parameter<Long> SUBID1 = Internal.createParameter("subid", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_subscription_stats.subid</code>.
-     */
     public static final Parameter<Long> SUBID2 = Internal.createParameter("subid", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_subscription_stats.apply_error_count</code>.
-     */
     public static final Parameter<Long> APPLY_ERROR_COUNT = Internal.createParameter("apply_error_count", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_subscription_stats.sync_error_count</code>.
-     */
     public static final Parameter<Long> SYNC_ERROR_COUNT = Internal.createParameter("sync_error_count", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_stat_get_subscription_stats.stats_reset</code>.
-     */
     public static final Parameter<OffsetDateTime> STATS_RESET = Internal.createParameter("stats_reset", SQLDataType.TIMESTAMPWITHTIMEZONE(6), false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgStatGetSubscriptionStats() {
         super("pg_stat_get_subscription_stats", PgCatalog.PG_CATALOG);
 
@@ -74,46 +48,26 @@ public class PgStatGetSubscriptionStats extends AbstractRoutine<java.lang.Void> 
         addOutParameter(STATS_RESET);
     }
 
-    /**
-     * Set the <code>subid</code> parameter IN value to the routine
-     */
     public void setSubid1(Long value) {
         setValue(SUBID1, value);
     }
 
-    /**
-     * Get the <code>subid</code> parameter OUT value from the routine
-     */
     public Long getSubid1() {
         return get(SUBID1);
     }
 
-    /**
-     * Get the <code>subid</code> parameter OUT value from the routine
-     */
     public Long getSubid2() {
         return get(SUBID2);
     }
 
-    /**
-     * Get the <code>apply_error_count</code> parameter OUT value from the
-     * routine
-     */
     public Long getApplyErrorCount() {
         return get(APPLY_ERROR_COUNT);
     }
 
-    /**
-     * Get the <code>sync_error_count</code> parameter OUT value from the
-     * routine
-     */
     public Long getSyncErrorCount() {
         return get(SYNC_ERROR_COUNT);
     }
 
-    /**
-     * Get the <code>stats_reset</code> parameter OUT value from the routine
-     */
     public OffsetDateTime getStatsReset() {
         return get(STATS_RESET);
     }

@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_namespace</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -56,65 +53,41 @@ public class PgNamespace implements Serializable {
         this.nspacl = nspacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_namespace.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_namespace.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_namespace.nspname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getNspname() {
         return this.nspname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_namespace.nspname</code>.
-     */
     public void setNspname(@NotNull String nspname) {
         this.nspname = nspname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_namespace.nspowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getNspowner() {
         return this.nspowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_namespace.nspowner</code>.
-     */
     public void setNspowner(@NotNull Long nspowner) {
         this.nspowner = nspowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_namespace.nspacl</code>.
-     */
     @Nullable
     public String[] getNspacl() {
         return this.nspacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_namespace.nspacl</code>.
-     */
     public void setNspacl(@Nullable String[] nspacl) {
         this.nspacl = nspacl;
     }

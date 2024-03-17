@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_analyze</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -86,196 +83,110 @@ public class PgStatProgressAnalyze implements Serializable {
         this.currentChildTableRelid = currentChildTableRelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return this.datid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.datid</code>.
-     */
     public void setDatid(@Nullable Long datid) {
         this.datid = datid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return this.datname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.datname</code>.
-     */
     public void setDatname(@Nullable String datname) {
         this.datname = datname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_analyze.phase</code>.
-     */
     @Nullable
     public String getPhase() {
         return this.phase;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_analyze.phase</code>.
-     */
     public void setPhase(@Nullable String phase) {
         this.phase = phase;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_total</code>.
-     */
     @Nullable
     public Long getSampleBlksTotal() {
         return this.sampleBlksTotal;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_total</code>.
-     */
     public void setSampleBlksTotal(@Nullable Long sampleBlksTotal) {
         this.sampleBlksTotal = sampleBlksTotal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_scanned</code>.
-     */
     @Nullable
     public Long getSampleBlksScanned() {
         return this.sampleBlksScanned;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.sample_blks_scanned</code>.
-     */
     public void setSampleBlksScanned(@Nullable Long sampleBlksScanned) {
         this.sampleBlksScanned = sampleBlksScanned;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_total</code>.
-     */
     @Nullable
     public Long getExtStatsTotal() {
         return this.extStatsTotal;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_total</code>.
-     */
     public void setExtStatsTotal(@Nullable Long extStatsTotal) {
         this.extStatsTotal = extStatsTotal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_computed</code>.
-     */
     @Nullable
     public Long getExtStatsComputed() {
         return this.extStatsComputed;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.ext_stats_computed</code>.
-     */
     public void setExtStatsComputed(@Nullable Long extStatsComputed) {
         this.extStatsComputed = extStatsComputed;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_total</code>.
-     */
     @Nullable
     public Long getChildTablesTotal() {
         return this.childTablesTotal;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_total</code>.
-     */
     public void setChildTablesTotal(@Nullable Long childTablesTotal) {
         this.childTablesTotal = childTablesTotal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_done</code>.
-     */
     @Nullable
     public Long getChildTablesDone() {
         return this.childTablesDone;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.child_tables_done</code>.
-     */
     public void setChildTablesDone(@Nullable Long childTablesDone) {
         this.childTablesDone = childTablesDone;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_analyze.current_child_table_relid</code>.
-     */
     @Nullable
     public Long getCurrentChildTableRelid() {
         return this.currentChildTableRelid;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_analyze.current_child_table_relid</code>.
-     */
     public void setCurrentChildTableRelid(@Nullable Long currentChildTableRelid) {
         this.currentChildTableRelid = currentChildTableRelid;
     }

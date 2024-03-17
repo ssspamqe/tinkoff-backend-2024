@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgAmopRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_amop</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,63 +45,30 @@ public class PgAmop extends TableImpl<PgAmopRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_amop</code>
-     */
     public static final PgAmop PG_AMOP = new PgAmop();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgAmopRecord> getRecordType() {
         return PgAmopRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_amop.oid</code>.
-     */
     public final TableField<PgAmopRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amop.amopfamily</code>.
-     */
     public final TableField<PgAmopRecord, Long> AMOPFAMILY = createField(DSL.name("amopfamily"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amop.amoplefttype</code>.
-     */
     public final TableField<PgAmopRecord, Long> AMOPLEFTTYPE = createField(DSL.name("amoplefttype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amop.amoprighttype</code>.
-     */
     public final TableField<PgAmopRecord, Long> AMOPRIGHTTYPE = createField(DSL.name("amoprighttype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amop.amopstrategy</code>.
-     */
     public final TableField<PgAmopRecord, Short> AMOPSTRATEGY = createField(DSL.name("amopstrategy"), SQLDataType.SMALLINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amop.amoppurpose</code>.
-     */
     public final TableField<PgAmopRecord, String> AMOPPURPOSE = createField(DSL.name("amoppurpose"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amop.amopopr</code>.
-     */
     public final TableField<PgAmopRecord, Long> AMOPOPR = createField(DSL.name("amopopr"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amop.amopmethod</code>.
-     */
     public final TableField<PgAmopRecord, Long> AMOPMETHOD = createField(DSL.name("amopmethod"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amop.amopsortfamily</code>.
-     */
     public final TableField<PgAmopRecord, Long> AMOPSORTFAMILY = createField(DSL.name("amopsortfamily"), SQLDataType.BIGINT.nullable(false), this, "");
 
     private PgAmop(Name alias, Table<PgAmopRecord> aliased) {
@@ -116,23 +79,14 @@ public class PgAmop extends TableImpl<PgAmopRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_amop</code> table reference
-     */
     public PgAmop(String alias) {
         this(DSL.name(alias), PG_AMOP);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_amop</code> table reference
-     */
     public PgAmop(Name alias) {
         this(alias, PG_AMOP);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_amop</code> table reference
-     */
     public PgAmop() {
         this(DSL.name("pg_amop"), null);
     }
@@ -177,27 +131,18 @@ public class PgAmop extends TableImpl<PgAmopRecord> {
         return new PgAmop(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAmop rename(String name) {
         return new PgAmop(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAmop rename(Name name) {
         return new PgAmop(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAmop rename(Table<?> name) {
@@ -214,17 +159,10 @@ public class PgAmop extends TableImpl<PgAmopRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super Long, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super Long, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

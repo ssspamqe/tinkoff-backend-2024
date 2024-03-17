@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_user_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -63,92 +60,56 @@ public class PgUserMappings implements Serializable {
         this.umoptions = umoptions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mappings.umid</code>.
-     */
     @Nullable
     public Long getUmid() {
         return this.umid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mappings.umid</code>.
-     */
     public void setUmid(@Nullable Long umid) {
         this.umid = umid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mappings.srvid</code>.
-     */
     @Nullable
     public Long getSrvid() {
         return this.srvid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mappings.srvid</code>.
-     */
     public void setSrvid(@Nullable Long srvid) {
         this.srvid = srvid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mappings.srvname</code>.
-     */
     @Nullable
     public String getSrvname() {
         return this.srvname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mappings.srvname</code>.
-     */
     public void setSrvname(@Nullable String srvname) {
         this.srvname = srvname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mappings.umuser</code>.
-     */
     @Nullable
     public Long getUmuser() {
         return this.umuser;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mappings.umuser</code>.
-     */
     public void setUmuser(@Nullable Long umuser) {
         this.umuser = umuser;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mappings.usename</code>.
-     */
     @Nullable
     public String getUsename() {
         return this.usename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mappings.usename</code>.
-     */
     public void setUsename(@Nullable String usename) {
         this.usename = usename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mappings.umoptions</code>.
-     */
     @Nullable
     public String[] getUmoptions() {
         return this.umoptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mappings.umoptions</code>.
-     */
     public void setUmoptions(@Nullable String[] umoptions) {
         this.umoptions = umoptions;
     }

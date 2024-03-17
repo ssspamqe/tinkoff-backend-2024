@@ -18,9 +18,6 @@ import org.jooq.Row6;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.view_routine_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,101 +30,55 @@ public class ViewRoutineUsageRecord extends TableRecordImpl<ViewRoutineUsageReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.view_routine_usage.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.view_routine_usage.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.view_routine_usage.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.view_routine_usage.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.view_routine_usage.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.view_routine_usage.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.view_routine_usage.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.view_routine_usage.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.view_routine_usage.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.view_routine_usage.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.view_routine_usage.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.view_routine_usage.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return (String) get(5);
@@ -315,16 +266,10 @@ public class ViewRoutineUsageRecord extends TableRecordImpl<ViewRoutineUsageReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ViewRoutineUsageRecord
-     */
     public ViewRoutineUsageRecord() {
         super(ViewRoutineUsage.VIEW_ROUTINE_USAGE);
     }
 
-    /**
-     * Create a detached, initialised ViewRoutineUsageRecord
-     */
     @ConstructorProperties({ "tableCatalog", "tableSchema", "tableName", "specificCatalog", "specificSchema", "specificName" })
     public ViewRoutineUsageRecord(@Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String specificCatalog, @Nullable String specificSchema, @Nullable String specificName) {
         super(ViewRoutineUsage.VIEW_ROUTINE_USAGE);
@@ -338,9 +283,6 @@ public class ViewRoutineUsageRecord extends TableRecordImpl<ViewRoutineUsageReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ViewRoutineUsageRecord
-     */
     public ViewRoutineUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.ViewRoutineUsage value) {
         super(ViewRoutineUsage.VIEW_ROUTINE_USAGE);
 

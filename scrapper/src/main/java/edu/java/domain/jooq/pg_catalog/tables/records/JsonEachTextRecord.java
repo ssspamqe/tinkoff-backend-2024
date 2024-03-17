@@ -18,9 +18,6 @@ import org.jooq.Row2;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.json_each_text</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,31 +30,19 @@ public class JsonEachTextRecord extends TableRecordImpl<JsonEachTextRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.json_each_text.key</code>.
-     */
     public void setKey(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.json_each_text.key</code>.
-     */
     @Nullable
     public String getKey() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.json_each_text.value</code>.
-     */
     public void setValue(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.json_each_text.value</code>.
-     */
     @Nullable
     public String getValue() {
         return (String) get(1);
@@ -141,16 +126,10 @@ public class JsonEachTextRecord extends TableRecordImpl<JsonEachTextRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonEachTextRecord
-     */
     public JsonEachTextRecord() {
         super(JsonEachText.JSON_EACH_TEXT);
     }
 
-    /**
-     * Create a detached, initialised JsonEachTextRecord
-     */
     @ConstructorProperties({ "key", "value" })
     public JsonEachTextRecord(@Nullable String key, @Nullable String value) {
         super(JsonEachText.JSON_EACH_TEXT);
@@ -160,9 +139,6 @@ public class JsonEachTextRecord extends TableRecordImpl<JsonEachTextRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonEachTextRecord
-     */
     public JsonEachTextRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonEachText value) {
         super(JsonEachText.JSON_EACH_TEXT);
 

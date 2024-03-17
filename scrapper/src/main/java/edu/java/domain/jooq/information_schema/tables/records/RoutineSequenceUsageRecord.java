@@ -18,9 +18,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.routine_sequence_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,154 +30,82 @@ public class RoutineSequenceUsageRecord extends TableRecordImpl<RoutineSequenceU
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.routine_catalog</code>.
-     */
     public void setRoutineCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.routine_catalog</code>.
-     */
     @Nullable
     public String getRoutineCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.routine_schema</code>.
-     */
     public void setRoutineSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.routine_schema</code>.
-     */
     @Nullable
     public String getRoutineSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.routine_name</code>.
-     */
     public void setRoutineName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.routine_name</code>.
-     */
     @Nullable
     public String getRoutineName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.sequence_catalog</code>.
-     */
     public void setSequenceCatalog(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.sequence_catalog</code>.
-     */
     @Nullable
     public String getSequenceCatalog() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.sequence_schema</code>.
-     */
     public void setSequenceSchema(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.sequence_schema</code>.
-     */
     @Nullable
     public String getSequenceSchema() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_sequence_usage.sequence_name</code>.
-     */
     public void setSequenceName(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_sequence_usage.sequence_name</code>.
-     */
     @Nullable
     public String getSequenceName() {
         return (String) get(8);
@@ -446,16 +371,10 @@ public class RoutineSequenceUsageRecord extends TableRecordImpl<RoutineSequenceU
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached RoutineSequenceUsageRecord
-     */
     public RoutineSequenceUsageRecord() {
         super(RoutineSequenceUsage.ROUTINE_SEQUENCE_USAGE);
     }
 
-    /**
-     * Create a detached, initialised RoutineSequenceUsageRecord
-     */
     @ConstructorProperties({ "specificCatalog", "specificSchema", "specificName", "routineCatalog", "routineSchema", "routineName", "sequenceCatalog", "sequenceSchema", "sequenceName" })
     public RoutineSequenceUsageRecord(@Nullable String specificCatalog, @Nullable String specificSchema, @Nullable String specificName, @Nullable String routineCatalog, @Nullable String routineSchema, @Nullable String routineName, @Nullable String sequenceCatalog, @Nullable String sequenceSchema, @Nullable String sequenceName) {
         super(RoutineSequenceUsage.ROUTINE_SEQUENCE_USAGE);
@@ -472,9 +391,6 @@ public class RoutineSequenceUsageRecord extends TableRecordImpl<RoutineSequenceU
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised RoutineSequenceUsageRecord
-     */
     public RoutineSequenceUsageRecord(edu.java.domain.jooq.information_schema.tables.pojos.RoutineSequenceUsage value) {
         super(RoutineSequenceUsage.ROUTINE_SEQUENCE_USAGE);
 

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgViewsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_views</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,38 +40,20 @@ public class PgViews extends TableImpl<PgViewsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_views</code>
-     */
     public static final PgViews PG_VIEWS = new PgViews();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgViewsRecord> getRecordType() {
         return PgViewsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_views.schemaname</code>.
-     */
     public final TableField<PgViewsRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_views.viewname</code>.
-     */
     public final TableField<PgViewsRecord, String> VIEWNAME = createField(DSL.name("viewname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_views.viewowner</code>.
-     */
     public final TableField<PgViewsRecord, String> VIEWOWNER = createField(DSL.name("viewowner"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_views.definition</code>.
-     */
     public final TableField<PgViewsRecord, String> DEFINITION = createField(DSL.name("definition"), SQLDataType.CLOB, this, "");
 
     private PgViews(Name alias, Table<PgViewsRecord> aliased) {
@@ -95,23 +72,14 @@ public class PgViews extends TableImpl<PgViewsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_views</code> table reference
-     */
     public PgViews(String alias) {
         this(DSL.name(alias), PG_VIEWS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_views</code> table reference
-     */
     public PgViews(Name alias) {
         this(alias, PG_VIEWS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_views</code> table reference
-     */
     public PgViews() {
         this(DSL.name("pg_views"), null);
     }
@@ -144,27 +112,18 @@ public class PgViews extends TableImpl<PgViewsRecord> {
         return new PgViews(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgViews rename(String name) {
         return new PgViews(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgViews rename(Name name) {
         return new PgViews(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgViews rename(Table<?> name) {
@@ -181,17 +140,10 @@ public class PgViews extends TableImpl<PgViewsRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgAmprocRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_amproc</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,48 +45,24 @@ public class PgAmproc extends TableImpl<PgAmprocRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_amproc</code>
-     */
     public static final PgAmproc PG_AMPROC = new PgAmproc();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgAmprocRecord> getRecordType() {
         return PgAmprocRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_amproc.oid</code>.
-     */
     public final TableField<PgAmprocRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amproc.amprocfamily</code>.
-     */
     public final TableField<PgAmprocRecord, Long> AMPROCFAMILY = createField(DSL.name("amprocfamily"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amproc.amproclefttype</code>.
-     */
     public final TableField<PgAmprocRecord, Long> AMPROCLEFTTYPE = createField(DSL.name("amproclefttype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amproc.amprocrighttype</code>.
-     */
     public final TableField<PgAmprocRecord, Long> AMPROCRIGHTTYPE = createField(DSL.name("amprocrighttype"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amproc.amprocnum</code>.
-     */
     public final TableField<PgAmprocRecord, Short> AMPROCNUM = createField(DSL.name("amprocnum"), SQLDataType.SMALLINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_amproc.amproc</code>.
-     */
     public final TableField<PgAmprocRecord, String> AMPROC = createField(DSL.name("amproc"), SQLDataType.VARCHAR.nullable(false), this, "");
 
     private PgAmproc(Name alias, Table<PgAmprocRecord> aliased) {
@@ -101,23 +73,14 @@ public class PgAmproc extends TableImpl<PgAmprocRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_amproc</code> table reference
-     */
     public PgAmproc(String alias) {
         this(DSL.name(alias), PG_AMPROC);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_amproc</code> table reference
-     */
     public PgAmproc(Name alias) {
         this(alias, PG_AMPROC);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_amproc</code> table reference
-     */
     public PgAmproc() {
         this(DSL.name("pg_amproc"), null);
     }
@@ -162,27 +125,18 @@ public class PgAmproc extends TableImpl<PgAmprocRecord> {
         return new PgAmproc(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAmproc rename(String name) {
         return new PgAmproc(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAmproc rename(Name name) {
         return new PgAmproc(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgAmproc rename(Table<?> name) {
@@ -199,17 +153,10 @@ public class PgAmproc extends TableImpl<PgAmprocRecord> {
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super Long, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Long, ? super Long, ? super Long, ? super Long, ? super Short, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

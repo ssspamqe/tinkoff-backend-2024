@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonEachTextRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.json_each_text</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,28 +39,16 @@ public class JsonEachText extends TableImpl<JsonEachTextRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.json_each_text</code>
-     */
     public static final JsonEachText JSON_EACH_TEXT = new JsonEachText();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonEachTextRecord> getRecordType() {
         return JsonEachTextRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.json_each_text.key</code>.
-     */
     public final TableField<JsonEachTextRecord, String> KEY = createField(DSL.name("key"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.json_each_text.value</code>.
-     */
     public final TableField<JsonEachTextRecord, String> VALUE = createField(DSL.name("value"), SQLDataType.CLOB, this, "");
 
     private JsonEachText(Name alias, Table<JsonEachTextRecord> aliased) {
@@ -78,23 +61,14 @@ public class JsonEachText extends TableImpl<JsonEachTextRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_each_text</code> table reference
-     */
     public JsonEachText(String alias) {
         this(DSL.name(alias), JSON_EACH_TEXT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_each_text</code> table reference
-     */
     public JsonEachText(Name alias) {
         this(alias, JSON_EACH_TEXT);
     }
 
-    /**
-     * Create a <code>pg_catalog.json_each_text</code> table reference
-     */
     public JsonEachText() {
         this(DSL.name("json_each_text"), null);
     }
@@ -123,27 +97,18 @@ public class JsonEachText extends TableImpl<JsonEachTextRecord> {
         return new JsonEachText(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonEachText rename(String name) {
         return new JsonEachText(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonEachText rename(Name name) {
         return new JsonEachText(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonEachText rename(Table<?> name) {
@@ -160,9 +125,6 @@ public class JsonEachText extends TableImpl<JsonEachTextRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonEachText call(
           JSON fromJson
     ) {
@@ -173,9 +135,6 @@ public class JsonEachText extends TableImpl<JsonEachTextRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonEachText call(
           Field<JSON> fromJson
     ) {
@@ -186,17 +145,10 @@ public class JsonEachText extends TableImpl<JsonEachTextRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

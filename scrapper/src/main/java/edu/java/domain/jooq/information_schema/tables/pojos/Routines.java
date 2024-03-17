@@ -15,9 +15,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.routines</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -369,1305 +366,749 @@ public class Routines implements Serializable {
         this.resultCastDtdIdentifier = resultCastDtdIdentifier;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return this.specificCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String specificCatalog) {
         this.specificCatalog = specificCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return this.specificSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String specificSchema) {
         this.specificSchema = specificSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return this.specificName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String specificName) {
         this.specificName = specificName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.routine_catalog</code>.
-     */
     @Nullable
     public String getRoutineCatalog() {
         return this.routineCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.routine_catalog</code>.
-     */
     public void setRoutineCatalog(@Nullable String routineCatalog) {
         this.routineCatalog = routineCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.routine_schema</code>.
-     */
     @Nullable
     public String getRoutineSchema() {
         return this.routineSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.routine_schema</code>.
-     */
     public void setRoutineSchema(@Nullable String routineSchema) {
         this.routineSchema = routineSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.routine_name</code>.
-     */
     @Nullable
     public String getRoutineName() {
         return this.routineName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.routine_name</code>.
-     */
     public void setRoutineName(@Nullable String routineName) {
         this.routineName = routineName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.routine_type</code>.
-     */
     @Nullable
     public String getRoutineType() {
         return this.routineType;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.routine_type</code>.
-     */
     public void setRoutineType(@Nullable String routineType) {
         this.routineType = routineType;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.module_catalog</code>.
-     */
     @Nullable
     public String getModuleCatalog() {
         return this.moduleCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.module_catalog</code>.
-     */
     public void setModuleCatalog(@Nullable String moduleCatalog) {
         this.moduleCatalog = moduleCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.module_schema</code>.
-     */
     @Nullable
     public String getModuleSchema() {
         return this.moduleSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.module_schema</code>.
-     */
     public void setModuleSchema(@Nullable String moduleSchema) {
         this.moduleSchema = moduleSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.module_name</code>.
-     */
     @Nullable
     public String getModuleName() {
         return this.moduleName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.module_name</code>.
-     */
     public void setModuleName(@Nullable String moduleName) {
         this.moduleName = moduleName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return this.udtCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String udtCatalog) {
         this.udtCatalog = udtCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return this.udtSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String udtSchema) {
         this.udtSchema = udtSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return this.udtName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.udt_name</code>.
-     */
     public void setUdtName(@Nullable String udtName) {
         this.udtName = udtName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.data_type</code>.
-     */
     @Nullable
     public String getDataType() {
         return this.dataType;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.data_type</code>.
-     */
     public void setDataType(@Nullable String dataType) {
         this.dataType = dataType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.character_maximum_length</code>.
-     */
     @Nullable
     public Integer getCharacterMaximumLength() {
         return this.characterMaximumLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.character_maximum_length</code>.
-     */
     public void setCharacterMaximumLength(@Nullable Integer characterMaximumLength) {
         this.characterMaximumLength = characterMaximumLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.character_octet_length</code>.
-     */
     @Nullable
     public Integer getCharacterOctetLength() {
         return this.characterOctetLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.character_octet_length</code>.
-     */
     public void setCharacterOctetLength(@Nullable Integer characterOctetLength) {
         this.characterOctetLength = characterOctetLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.character_set_catalog</code>.
-     */
     @Nullable
     public String getCharacterSetCatalog() {
         return this.characterSetCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.character_set_catalog</code>.
-     */
     public void setCharacterSetCatalog(@Nullable String characterSetCatalog) {
         this.characterSetCatalog = characterSetCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.character_set_schema</code>.
-     */
     @Nullable
     public String getCharacterSetSchema() {
         return this.characterSetSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.character_set_schema</code>.
-     */
     public void setCharacterSetSchema(@Nullable String characterSetSchema) {
         this.characterSetSchema = characterSetSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.character_set_name</code>.
-     */
     @Nullable
     public String getCharacterSetName() {
         return this.characterSetName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.character_set_name</code>.
-     */
     public void setCharacterSetName(@Nullable String characterSetName) {
         this.characterSetName = characterSetName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return this.collationCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String collationCatalog) {
         this.collationCatalog = collationCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return this.collationSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String collationSchema) {
         this.collationSchema = collationSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return this.collationName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.collation_name</code>.
-     */
     public void setCollationName(@Nullable String collationName) {
         this.collationName = collationName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.numeric_precision</code>.
-     */
     @Nullable
     public Integer getNumericPrecision() {
         return this.numericPrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.numeric_precision</code>.
-     */
     public void setNumericPrecision(@Nullable Integer numericPrecision) {
         this.numericPrecision = numericPrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.numeric_precision_radix</code>.
-     */
     @Nullable
     public Integer getNumericPrecisionRadix() {
         return this.numericPrecisionRadix;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.numeric_precision_radix</code>.
-     */
     public void setNumericPrecisionRadix(@Nullable Integer numericPrecisionRadix) {
         this.numericPrecisionRadix = numericPrecisionRadix;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.numeric_scale</code>.
-     */
     @Nullable
     public Integer getNumericScale() {
         return this.numericScale;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.numeric_scale</code>.
-     */
     public void setNumericScale(@Nullable Integer numericScale) {
         this.numericScale = numericScale;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.datetime_precision</code>.
-     */
     @Nullable
     public Integer getDatetimePrecision() {
         return this.datetimePrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.datetime_precision</code>.
-     */
     public void setDatetimePrecision(@Nullable Integer datetimePrecision) {
         this.datetimePrecision = datetimePrecision;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.interval_type</code>.
-     */
     @Nullable
     public String getIntervalType() {
         return this.intervalType;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.interval_type</code>.
-     */
     public void setIntervalType(@Nullable String intervalType) {
         this.intervalType = intervalType;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.interval_precision</code>.
-     */
     @Nullable
     public Integer getIntervalPrecision() {
         return this.intervalPrecision;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.interval_precision</code>.
-     */
     public void setIntervalPrecision(@Nullable Integer intervalPrecision) {
         this.intervalPrecision = intervalPrecision;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.type_udt_catalog</code>.
-     */
     @Nullable
     public String getTypeUdtCatalog() {
         return this.typeUdtCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.type_udt_catalog</code>.
-     */
     public void setTypeUdtCatalog(@Nullable String typeUdtCatalog) {
         this.typeUdtCatalog = typeUdtCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.type_udt_schema</code>.
-     */
     @Nullable
     public String getTypeUdtSchema() {
         return this.typeUdtSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.type_udt_schema</code>.
-     */
     public void setTypeUdtSchema(@Nullable String typeUdtSchema) {
         this.typeUdtSchema = typeUdtSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.type_udt_name</code>.
-     */
     @Nullable
     public String getTypeUdtName() {
         return this.typeUdtName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.type_udt_name</code>.
-     */
     public void setTypeUdtName(@Nullable String typeUdtName) {
         this.typeUdtName = typeUdtName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.scope_catalog</code>.
-     */
     @Nullable
     public String getScopeCatalog() {
         return this.scopeCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.scope_catalog</code>.
-     */
     public void setScopeCatalog(@Nullable String scopeCatalog) {
         this.scopeCatalog = scopeCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.scope_schema</code>.
-     */
     @Nullable
     public String getScopeSchema() {
         return this.scopeSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.scope_schema</code>.
-     */
     public void setScopeSchema(@Nullable String scopeSchema) {
         this.scopeSchema = scopeSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.scope_name</code>.
-     */
     @Nullable
     public String getScopeName() {
         return this.scopeName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.scope_name</code>.
-     */
     public void setScopeName(@Nullable String scopeName) {
         this.scopeName = scopeName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.maximum_cardinality</code>.
-     */
     @Nullable
     public Integer getMaximumCardinality() {
         return this.maximumCardinality;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.maximum_cardinality</code>.
-     */
     public void setMaximumCardinality(@Nullable Integer maximumCardinality) {
         this.maximumCardinality = maximumCardinality;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.dtd_identifier</code>.
-     */
     @Nullable
     public String getDtdIdentifier() {
         return this.dtdIdentifier;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.dtd_identifier</code>.
-     */
     public void setDtdIdentifier(@Nullable String dtdIdentifier) {
         this.dtdIdentifier = dtdIdentifier;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.routine_body</code>.
-     */
     @Nullable
     public String getRoutineBody() {
         return this.routineBody;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.routine_body</code>.
-     */
     public void setRoutineBody(@Nullable String routineBody) {
         this.routineBody = routineBody;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.routine_definition</code>.
-     */
     @Nullable
     public String getRoutineDefinition() {
         return this.routineDefinition;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.routine_definition</code>.
-     */
     public void setRoutineDefinition(@Nullable String routineDefinition) {
         this.routineDefinition = routineDefinition;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.external_name</code>.
-     */
     @Nullable
     public String getExternalName() {
         return this.externalName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.external_name</code>.
-     */
     public void setExternalName(@Nullable String externalName) {
         this.externalName = externalName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.external_language</code>.
-     */
     @Nullable
     public String getExternalLanguage() {
         return this.externalLanguage;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.external_language</code>.
-     */
     public void setExternalLanguage(@Nullable String externalLanguage) {
         this.externalLanguage = externalLanguage;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.parameter_style</code>.
-     */
     @Nullable
     public String getParameterStyle() {
         return this.parameterStyle;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.parameter_style</code>.
-     */
     public void setParameterStyle(@Nullable String parameterStyle) {
         this.parameterStyle = parameterStyle;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.is_deterministic</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsDeterministic() {
         return this.isDeterministic;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.is_deterministic</code>.
-     */
     public void setIsDeterministic(@Nullable String isDeterministic) {
         this.isDeterministic = isDeterministic;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.sql_data_access</code>.
-     */
     @Nullable
     public String getSqlDataAccess() {
         return this.sqlDataAccess;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.sql_data_access</code>.
-     */
     public void setSqlDataAccess(@Nullable String sqlDataAccess) {
         this.sqlDataAccess = sqlDataAccess;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.is_null_call</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsNullCall() {
         return this.isNullCall;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.is_null_call</code>.
-     */
     public void setIsNullCall(@Nullable String isNullCall) {
         this.isNullCall = isNullCall;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.sql_path</code>.
-     */
     @Nullable
     public String getSqlPath() {
         return this.sqlPath;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.sql_path</code>.
-     */
     public void setSqlPath(@Nullable String sqlPath) {
         this.sqlPath = sqlPath;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.schema_level_routine</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getSchemaLevelRoutine() {
         return this.schemaLevelRoutine;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.schema_level_routine</code>.
-     */
     public void setSchemaLevelRoutine(@Nullable String schemaLevelRoutine) {
         this.schemaLevelRoutine = schemaLevelRoutine;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.max_dynamic_result_sets</code>.
-     */
     @Nullable
     public Integer getMaxDynamicResultSets() {
         return this.maxDynamicResultSets;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.max_dynamic_result_sets</code>.
-     */
     public void setMaxDynamicResultSets(@Nullable Integer maxDynamicResultSets) {
         this.maxDynamicResultSets = maxDynamicResultSets;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.is_user_defined_cast</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsUserDefinedCast() {
         return this.isUserDefinedCast;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.is_user_defined_cast</code>.
-     */
     public void setIsUserDefinedCast(@Nullable String isUserDefinedCast) {
         this.isUserDefinedCast = isUserDefinedCast;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.is_implicitly_invocable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsImplicitlyInvocable() {
         return this.isImplicitlyInvocable;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.is_implicitly_invocable</code>.
-     */
     public void setIsImplicitlyInvocable(@Nullable String isImplicitlyInvocable) {
         this.isImplicitlyInvocable = isImplicitlyInvocable;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.security_type</code>.
-     */
     @Nullable
     public String getSecurityType() {
         return this.securityType;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.security_type</code>.
-     */
     public void setSecurityType(@Nullable String securityType) {
         this.securityType = securityType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.to_sql_specific_catalog</code>.
-     */
     @Nullable
     public String getToSqlSpecificCatalog() {
         return this.toSqlSpecificCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.to_sql_specific_catalog</code>.
-     */
     public void setToSqlSpecificCatalog(@Nullable String toSqlSpecificCatalog) {
         this.toSqlSpecificCatalog = toSqlSpecificCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.to_sql_specific_schema</code>.
-     */
     @Nullable
     public String getToSqlSpecificSchema() {
         return this.toSqlSpecificSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.to_sql_specific_schema</code>.
-     */
     public void setToSqlSpecificSchema(@Nullable String toSqlSpecificSchema) {
         this.toSqlSpecificSchema = toSqlSpecificSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.to_sql_specific_name</code>.
-     */
     @Nullable
     public String getToSqlSpecificName() {
         return this.toSqlSpecificName;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.to_sql_specific_name</code>.
-     */
     public void setToSqlSpecificName(@Nullable String toSqlSpecificName) {
         this.toSqlSpecificName = toSqlSpecificName;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.as_locator</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getAsLocator() {
         return this.asLocator;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.as_locator</code>.
-     */
     public void setAsLocator(@Nullable String asLocator) {
         this.asLocator = asLocator;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.created</code>.
-     */
     @Nullable
     public OffsetDateTime getCreated() {
         return this.created;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.created</code>.
-     */
     public void setCreated(@Nullable OffsetDateTime created) {
         this.created = created;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.last_altered</code>.
-     */
     @Nullable
     public OffsetDateTime getLastAltered() {
         return this.lastAltered;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.last_altered</code>.
-     */
     public void setLastAltered(@Nullable OffsetDateTime lastAltered) {
         this.lastAltered = lastAltered;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.new_savepoint_level</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getNewSavepointLevel() {
         return this.newSavepointLevel;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.new_savepoint_level</code>.
-     */
     public void setNewSavepointLevel(@Nullable String newSavepointLevel) {
         this.newSavepointLevel = newSavepointLevel;
     }
 
-    /**
-     * Getter for <code>information_schema.routines.is_udt_dependent</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsUdtDependent() {
         return this.isUdtDependent;
     }
 
-    /**
-     * Setter for <code>information_schema.routines.is_udt_dependent</code>.
-     */
     public void setIsUdtDependent(@Nullable String isUdtDependent) {
         this.isUdtDependent = isUdtDependent;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_from_data_type</code>.
-     */
     @Nullable
     public String getResultCastFromDataType() {
         return this.resultCastFromDataType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_from_data_type</code>.
-     */
     public void setResultCastFromDataType(@Nullable String resultCastFromDataType) {
         this.resultCastFromDataType = resultCastFromDataType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_as_locator</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getResultCastAsLocator() {
         return this.resultCastAsLocator;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_as_locator</code>.
-     */
     public void setResultCastAsLocator(@Nullable String resultCastAsLocator) {
         this.resultCastAsLocator = resultCastAsLocator;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_char_max_length</code>.
-     */
     @Nullable
     public Integer getResultCastCharMaxLength() {
         return this.resultCastCharMaxLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_char_max_length</code>.
-     */
     public void setResultCastCharMaxLength(@Nullable Integer resultCastCharMaxLength) {
         this.resultCastCharMaxLength = resultCastCharMaxLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_char_octet_length</code>.
-     */
     @Nullable
     public Integer getResultCastCharOctetLength() {
         return this.resultCastCharOctetLength;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_char_octet_length</code>.
-     */
     public void setResultCastCharOctetLength(@Nullable Integer resultCastCharOctetLength) {
         this.resultCastCharOctetLength = resultCastCharOctetLength;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_char_set_catalog</code>.
-     */
     @Nullable
     public String getResultCastCharSetCatalog() {
         return this.resultCastCharSetCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_char_set_catalog</code>.
-     */
     public void setResultCastCharSetCatalog(@Nullable String resultCastCharSetCatalog) {
         this.resultCastCharSetCatalog = resultCastCharSetCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_char_set_schema</code>.
-     */
     @Nullable
     public String getResultCastCharSetSchema() {
         return this.resultCastCharSetSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_char_set_schema</code>.
-     */
     public void setResultCastCharSetSchema(@Nullable String resultCastCharSetSchema) {
         this.resultCastCharSetSchema = resultCastCharSetSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_char_set_name</code>.
-     */
     @Nullable
     public String getResultCastCharSetName() {
         return this.resultCastCharSetName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_char_set_name</code>.
-     */
     public void setResultCastCharSetName(@Nullable String resultCastCharSetName) {
         this.resultCastCharSetName = resultCastCharSetName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_collation_catalog</code>.
-     */
     @Nullable
     public String getResultCastCollationCatalog() {
         return this.resultCastCollationCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_collation_catalog</code>.
-     */
     public void setResultCastCollationCatalog(@Nullable String resultCastCollationCatalog) {
         this.resultCastCollationCatalog = resultCastCollationCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_collation_schema</code>.
-     */
     @Nullable
     public String getResultCastCollationSchema() {
         return this.resultCastCollationSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_collation_schema</code>.
-     */
     public void setResultCastCollationSchema(@Nullable String resultCastCollationSchema) {
         this.resultCastCollationSchema = resultCastCollationSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_collation_name</code>.
-     */
     @Nullable
     public String getResultCastCollationName() {
         return this.resultCastCollationName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_collation_name</code>.
-     */
     public void setResultCastCollationName(@Nullable String resultCastCollationName) {
         this.resultCastCollationName = resultCastCollationName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_numeric_precision</code>.
-     */
     @Nullable
     public Integer getResultCastNumericPrecision() {
         return this.resultCastNumericPrecision;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_numeric_precision</code>.
-     */
     public void setResultCastNumericPrecision(@Nullable Integer resultCastNumericPrecision) {
         this.resultCastNumericPrecision = resultCastNumericPrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_numeric_precision_radix</code>.
-     */
     @Nullable
     public Integer getResultCastNumericPrecisionRadix() {
         return this.resultCastNumericPrecisionRadix;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_numeric_precision_radix</code>.
-     */
     public void setResultCastNumericPrecisionRadix(@Nullable Integer resultCastNumericPrecisionRadix) {
         this.resultCastNumericPrecisionRadix = resultCastNumericPrecisionRadix;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_numeric_scale</code>.
-     */
     @Nullable
     public Integer getResultCastNumericScale() {
         return this.resultCastNumericScale;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_numeric_scale</code>.
-     */
     public void setResultCastNumericScale(@Nullable Integer resultCastNumericScale) {
         this.resultCastNumericScale = resultCastNumericScale;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_datetime_precision</code>.
-     */
     @Nullable
     public Integer getResultCastDatetimePrecision() {
         return this.resultCastDatetimePrecision;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_datetime_precision</code>.
-     */
     public void setResultCastDatetimePrecision(@Nullable Integer resultCastDatetimePrecision) {
         this.resultCastDatetimePrecision = resultCastDatetimePrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_interval_type</code>.
-     */
     @Nullable
     public String getResultCastIntervalType() {
         return this.resultCastIntervalType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_interval_type</code>.
-     */
     public void setResultCastIntervalType(@Nullable String resultCastIntervalType) {
         this.resultCastIntervalType = resultCastIntervalType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_interval_precision</code>.
-     */
     @Nullable
     public Integer getResultCastIntervalPrecision() {
         return this.resultCastIntervalPrecision;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_interval_precision</code>.
-     */
     public void setResultCastIntervalPrecision(@Nullable Integer resultCastIntervalPrecision) {
         this.resultCastIntervalPrecision = resultCastIntervalPrecision;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_type_udt_catalog</code>.
-     */
     @Nullable
     public String getResultCastTypeUdtCatalog() {
         return this.resultCastTypeUdtCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_type_udt_catalog</code>.
-     */
     public void setResultCastTypeUdtCatalog(@Nullable String resultCastTypeUdtCatalog) {
         this.resultCastTypeUdtCatalog = resultCastTypeUdtCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_type_udt_schema</code>.
-     */
     @Nullable
     public String getResultCastTypeUdtSchema() {
         return this.resultCastTypeUdtSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_type_udt_schema</code>.
-     */
     public void setResultCastTypeUdtSchema(@Nullable String resultCastTypeUdtSchema) {
         this.resultCastTypeUdtSchema = resultCastTypeUdtSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_type_udt_name</code>.
-     */
     @Nullable
     public String getResultCastTypeUdtName() {
         return this.resultCastTypeUdtName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_type_udt_name</code>.
-     */
     public void setResultCastTypeUdtName(@Nullable String resultCastTypeUdtName) {
         this.resultCastTypeUdtName = resultCastTypeUdtName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_scope_catalog</code>.
-     */
     @Nullable
     public String getResultCastScopeCatalog() {
         return this.resultCastScopeCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_scope_catalog</code>.
-     */
     public void setResultCastScopeCatalog(@Nullable String resultCastScopeCatalog) {
         this.resultCastScopeCatalog = resultCastScopeCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_scope_schema</code>.
-     */
     @Nullable
     public String getResultCastScopeSchema() {
         return this.resultCastScopeSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_scope_schema</code>.
-     */
     public void setResultCastScopeSchema(@Nullable String resultCastScopeSchema) {
         this.resultCastScopeSchema = resultCastScopeSchema;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_scope_name</code>.
-     */
     @Nullable
     public String getResultCastScopeName() {
         return this.resultCastScopeName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_scope_name</code>.
-     */
     public void setResultCastScopeName(@Nullable String resultCastScopeName) {
         this.resultCastScopeName = resultCastScopeName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_maximum_cardinality</code>.
-     */
     @Nullable
     public Integer getResultCastMaximumCardinality() {
         return this.resultCastMaximumCardinality;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_maximum_cardinality</code>.
-     */
     public void setResultCastMaximumCardinality(@Nullable Integer resultCastMaximumCardinality) {
         this.resultCastMaximumCardinality = resultCastMaximumCardinality;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routines.result_cast_dtd_identifier</code>.
-     */
     @Nullable
     public String getResultCastDtdIdentifier() {
         return this.resultCastDtdIdentifier;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routines.result_cast_dtd_identifier</code>.
-     */
     public void setResultCastDtdIdentifier(@Nullable String resultCastDtdIdentifier) {
         this.resultCastDtdIdentifier = resultCastDtdIdentifier;
     }

@@ -13,9 +13,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.JSON;
 
 
-/**
- * The table <code>pg_catalog.json_each</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,32 +44,20 @@ public class JsonEach implements Serializable {
         this.value = value;
     }
 
-    /**
-     * Getter for <code>pg_catalog.json_each.key</code>.
-     */
     @Nullable
     public String getKey() {
         return this.key;
     }
 
-    /**
-     * Setter for <code>pg_catalog.json_each.key</code>.
-     */
     public void setKey(@Nullable String key) {
         this.key = key;
     }
 
-    /**
-     * Getter for <code>pg_catalog.json_each.value</code>.
-     */
     @Nullable
     public JSON getValue() {
         return this.value;
     }
 
-    /**
-     * Setter for <code>pg_catalog.json_each.value</code>.
-     */
     public void setValue(@Nullable JSON value) {
         this.value = value;
     }

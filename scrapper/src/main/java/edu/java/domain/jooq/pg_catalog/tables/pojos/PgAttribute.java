@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_attribute</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -144,414 +141,258 @@ public class PgAttribute implements Serializable {
         this.attmissingval = attmissingval;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAttrelid() {
         return this.attrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attrelid</code>.
-     */
     public void setAttrelid(@NotNull Long attrelid) {
         this.attrelid = attrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAttname() {
         return this.attname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attname</code>.
-     */
     public void setAttname(@NotNull String attname) {
         this.attname = attname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.atttypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAtttypid() {
         return this.atttypid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.atttypid</code>.
-     */
     public void setAtttypid(@NotNull Long atttypid) {
         this.atttypid = atttypid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attlen</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAttlen() {
         return this.attlen;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attlen</code>.
-     */
     public void setAttlen(@NotNull Short attlen) {
         this.attlen = attlen;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attnum</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAttnum() {
         return this.attnum;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attnum</code>.
-     */
     public void setAttnum(@NotNull Short attnum) {
         this.attnum = attnum;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attcacheoff</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getAttcacheoff() {
         return this.attcacheoff;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attcacheoff</code>.
-     */
     public void setAttcacheoff(@NotNull Integer attcacheoff) {
         this.attcacheoff = attcacheoff;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.atttypmod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getAtttypmod() {
         return this.atttypmod;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.atttypmod</code>.
-     */
     public void setAtttypmod(@NotNull Integer atttypmod) {
         this.atttypmod = atttypmod;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attndims</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAttndims() {
         return this.attndims;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attndims</code>.
-     */
     public void setAttndims(@NotNull Short attndims) {
         this.attndims = attndims;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attbyval</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAttbyval() {
         return this.attbyval;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attbyval</code>.
-     */
     public void setAttbyval(@NotNull Boolean attbyval) {
         this.attbyval = attbyval;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attalign</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAttalign() {
         return this.attalign;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attalign</code>.
-     */
     public void setAttalign(@NotNull String attalign) {
         this.attalign = attalign;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attstorage</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAttstorage() {
         return this.attstorage;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attstorage</code>.
-     */
     public void setAttstorage(@NotNull String attstorage) {
         this.attstorage = attstorage;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attcompression</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAttcompression() {
         return this.attcompression;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attcompression</code>.
-     */
     public void setAttcompression(@NotNull String attcompression) {
         this.attcompression = attcompression;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attnotnull</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAttnotnull() {
         return this.attnotnull;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attnotnull</code>.
-     */
     public void setAttnotnull(@NotNull Boolean attnotnull) {
         this.attnotnull = attnotnull;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.atthasdef</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAtthasdef() {
         return this.atthasdef;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.atthasdef</code>.
-     */
     public void setAtthasdef(@NotNull Boolean atthasdef) {
         this.atthasdef = atthasdef;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.atthasmissing</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAtthasmissing() {
         return this.atthasmissing;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.atthasmissing</code>.
-     */
     public void setAtthasmissing(@NotNull Boolean atthasmissing) {
         this.atthasmissing = atthasmissing;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attidentity</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAttidentity() {
         return this.attidentity;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attidentity</code>.
-     */
     public void setAttidentity(@NotNull String attidentity) {
         this.attidentity = attidentity;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attgenerated</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAttgenerated() {
         return this.attgenerated;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attgenerated</code>.
-     */
     public void setAttgenerated(@NotNull String attgenerated) {
         this.attgenerated = attgenerated;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attisdropped</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAttisdropped() {
         return this.attisdropped;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attisdropped</code>.
-     */
     public void setAttisdropped(@NotNull Boolean attisdropped) {
         this.attisdropped = attisdropped;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attislocal</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAttislocal() {
         return this.attislocal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attislocal</code>.
-     */
     public void setAttislocal(@NotNull Boolean attislocal) {
         this.attislocal = attislocal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attinhcount</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAttinhcount() {
         return this.attinhcount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attinhcount</code>.
-     */
     public void setAttinhcount(@NotNull Short attinhcount) {
         this.attinhcount = attinhcount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attstattarget</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAttstattarget() {
         return this.attstattarget;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attstattarget</code>.
-     */
     public void setAttstattarget(@NotNull Short attstattarget) {
         this.attstattarget = attstattarget;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attcollation</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAttcollation() {
         return this.attcollation;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attcollation</code>.
-     */
     public void setAttcollation(@NotNull Long attcollation) {
         this.attcollation = attcollation;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attacl</code>.
-     */
     @Nullable
     public String[] getAttacl() {
         return this.attacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attacl</code>.
-     */
     public void setAttacl(@Nullable String[] attacl) {
         this.attacl = attacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attoptions</code>.
-     */
     @Nullable
     public String[] getAttoptions() {
         return this.attoptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attoptions</code>.
-     */
     public void setAttoptions(@Nullable String[] attoptions) {
         this.attoptions = attoptions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attfdwoptions</code>.
-     */
     @Nullable
     public String[] getAttfdwoptions() {
         return this.attfdwoptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attfdwoptions</code>.
-     */
     public void setAttfdwoptions(@Nullable String[] attfdwoptions) {
         this.attfdwoptions = attfdwoptions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_attribute.attmissingval</code>.
-     */
     @Nullable
     public Object[] getAttmissingval() {
         return this.attmissingval;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_attribute.attmissingval</code>.
-     */
     public void setAttmissingval(@Nullable Object[] attmissingval) {
         this.attmissingval = attmissingval;
     }

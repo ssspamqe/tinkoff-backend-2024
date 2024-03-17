@@ -19,9 +19,6 @@ import org.jooq.Row22;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_aggregate</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,351 +31,219 @@ public class PgAggregateRecord extends UpdatableRecordImpl<PgAggregateRecord> im
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggfnoid</code>.
-     */
     public void setAggfnoid(@NotNull String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggfnoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggfnoid() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggkind</code>.
-     */
     public void setAggkind(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggkind</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggkind() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggnumdirectargs</code>.
-     */
     public void setAggnumdirectargs(@NotNull Short value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggnumdirectargs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getAggnumdirectargs() {
         return (Short) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggtransfn</code>.
-     */
     public void setAggtransfn(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggtransfn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggtransfn() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggfinalfn</code>.
-     */
     public void setAggfinalfn(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggfinalfn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggfinalfn() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggcombinefn</code>.
-     */
     public void setAggcombinefn(@NotNull String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggcombinefn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggcombinefn() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggserialfn</code>.
-     */
     public void setAggserialfn(@NotNull String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggserialfn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggserialfn() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggdeserialfn</code>.
-     */
     public void setAggdeserialfn(@NotNull String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggdeserialfn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggdeserialfn() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggmtransfn</code>.
-     */
     public void setAggmtransfn(@NotNull String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggmtransfn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggmtransfn() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggminvtransfn</code>.
-     */
     public void setAggminvtransfn(@NotNull String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggminvtransfn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggminvtransfn() {
         return (String) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggmfinalfn</code>.
-     */
     public void setAggmfinalfn(@NotNull String value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggmfinalfn</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggmfinalfn() {
         return (String) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggfinalextra</code>.
-     */
     public void setAggfinalextra(@NotNull Boolean value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggfinalextra</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAggfinalextra() {
         return (Boolean) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggmfinalextra</code>.
-     */
     public void setAggmfinalextra(@NotNull Boolean value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggmfinalextra</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getAggmfinalextra() {
         return (Boolean) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggfinalmodify</code>.
-     */
     public void setAggfinalmodify(@NotNull String value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggfinalmodify</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggfinalmodify() {
         return (String) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggmfinalmodify</code>.
-     */
     public void setAggmfinalmodify(@NotNull String value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggmfinalmodify</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAggmfinalmodify() {
         return (String) get(14);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggsortop</code>.
-     */
     public void setAggsortop(@NotNull Long value) {
         set(15, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggsortop</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAggsortop() {
         return (Long) get(15);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggtranstype</code>.
-     */
     public void setAggtranstype(@NotNull Long value) {
         set(16, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggtranstype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAggtranstype() {
         return (Long) get(16);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggtransspace</code>.
-     */
     public void setAggtransspace(@NotNull Integer value) {
         set(17, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggtransspace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getAggtransspace() {
         return (Integer) get(17);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggmtranstype</code>.
-     */
     public void setAggmtranstype(@NotNull Long value) {
         set(18, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggmtranstype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getAggmtranstype() {
         return (Long) get(18);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggmtransspace</code>.
-     */
     public void setAggmtransspace(@NotNull Integer value) {
         set(19, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggmtransspace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getAggmtransspace() {
         return (Integer) get(19);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.agginitval</code>.
-     */
     public void setAgginitval(@Nullable String value) {
         set(20, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.agginitval</code>.
-     */
     @Nullable
     public String getAgginitval() {
         return (String) get(20);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_aggregate.aggminitval</code>.
-     */
     public void setAggminitval(@Nullable String value) {
         set(21, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_aggregate.aggminitval</code>.
-     */
     @Nullable
     public String getAggminitval() {
         return (String) get(21);
@@ -992,16 +857,10 @@ public class PgAggregateRecord extends UpdatableRecordImpl<PgAggregateRecord> im
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgAggregateRecord
-     */
     public PgAggregateRecord() {
         super(PgAggregate.PG_AGGREGATE);
     }
 
-    /**
-     * Create a detached, initialised PgAggregateRecord
-     */
     @ConstructorProperties({ "aggfnoid", "aggkind", "aggnumdirectargs", "aggtransfn", "aggfinalfn", "aggcombinefn", "aggserialfn", "aggdeserialfn", "aggmtransfn", "aggminvtransfn", "aggmfinalfn", "aggfinalextra", "aggmfinalextra", "aggfinalmodify", "aggmfinalmodify", "aggsortop", "aggtranstype", "aggtransspace", "aggmtranstype", "aggmtransspace", "agginitval", "aggminitval" })
     public PgAggregateRecord(@NotNull String aggfnoid, @NotNull String aggkind, @NotNull Short aggnumdirectargs, @NotNull String aggtransfn, @NotNull String aggfinalfn, @NotNull String aggcombinefn, @NotNull String aggserialfn, @NotNull String aggdeserialfn, @NotNull String aggmtransfn, @NotNull String aggminvtransfn, @NotNull String aggmfinalfn, @NotNull Boolean aggfinalextra, @NotNull Boolean aggmfinalextra, @NotNull String aggfinalmodify, @NotNull String aggmfinalmodify, @NotNull Long aggsortop, @NotNull Long aggtranstype, @NotNull Integer aggtransspace, @NotNull Long aggmtranstype, @NotNull Integer aggmtransspace, @Nullable String agginitval, @Nullable String aggminitval) {
         super(PgAggregate.PG_AGGREGATE);
@@ -1031,9 +890,6 @@ public class PgAggregateRecord extends UpdatableRecordImpl<PgAggregateRecord> im
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgAggregateRecord
-     */
     public PgAggregateRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgAggregate value) {
         super(PgAggregate.PG_AGGREGATE);
 

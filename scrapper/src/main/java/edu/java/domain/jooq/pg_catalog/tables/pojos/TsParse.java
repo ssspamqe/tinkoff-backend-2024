@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.ts_parse</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -46,32 +43,20 @@ public class TsParse implements Serializable {
         this.token = token;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_parse.tokid</code>.
-     */
     @Nullable
     public Integer getTokid() {
         return this.tokid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_parse.tokid</code>.
-     */
     public void setTokid(@Nullable Integer tokid) {
         this.tokid = tokid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_parse.token</code>.
-     */
     @Nullable
     public String getToken() {
         return this.token;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_parse.token</code>.
-     */
     public void setToken(@Nullable String token) {
         this.token = token;
     }

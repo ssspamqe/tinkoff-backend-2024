@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_template</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,82 +55,52 @@ public class PgTsTemplate implements Serializable {
         this.tmpllexize = tmpllexize;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.tmplname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTmplname() {
         return this.tmplname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.tmplname</code>.
-     */
     public void setTmplname(@NotNull String tmplname) {
         this.tmplname = tmplname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.tmplnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTmplnamespace() {
         return this.tmplnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.tmplnamespace</code>.
-     */
     public void setTmplnamespace(@NotNull Long tmplnamespace) {
         this.tmplnamespace = tmplnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.tmplinit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTmplinit() {
         return this.tmplinit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.tmplinit</code>.
-     */
     public void setTmplinit(@NotNull String tmplinit) {
         this.tmplinit = tmplinit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.tmpllexize</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTmpllexize() {
         return this.tmpllexize;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.tmpllexize</code>.
-     */
     public void setTmpllexize(@NotNull String tmpllexize) {
         this.tmpllexize = tmpllexize;
     }

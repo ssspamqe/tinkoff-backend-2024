@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.ts_stat</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -50,47 +47,29 @@ public class TsStat implements Serializable {
         this.nentry = nentry;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_stat.word</code>.
-     */
     @Nullable
     public String getWord() {
         return this.word;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_stat.word</code>.
-     */
     public void setWord(@Nullable String word) {
         this.word = word;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_stat.ndoc</code>.
-     */
     @Nullable
     public Integer getNdoc() {
         return this.ndoc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_stat.ndoc</code>.
-     */
     public void setNdoc(@Nullable Integer ndoc) {
         this.ndoc = ndoc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.ts_stat.nentry</code>.
-     */
     @Nullable
     public Integer getNentry() {
         return this.nentry;
     }
 
-    /**
-     * Setter for <code>pg_catalog.ts_stat.nentry</code>.
-     */
     public void setNentry(@Nullable Integer nentry) {
         this.nentry = nentry;
     }

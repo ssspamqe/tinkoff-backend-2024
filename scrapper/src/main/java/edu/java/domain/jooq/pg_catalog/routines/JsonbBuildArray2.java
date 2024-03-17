@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.jsonb_build_array</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,14 +27,8 @@ public class JsonbBuildArray2 extends AbstractRoutine<JSONB> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.jsonb_build_array.RETURN_VALUE</code>.
-     */
     public static final Parameter<JSONB> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.JSONB, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public JsonbBuildArray2() {
         super("jsonb_build_array", PgCatalog.PG_CATALOG, SQLDataType.JSONB);
 

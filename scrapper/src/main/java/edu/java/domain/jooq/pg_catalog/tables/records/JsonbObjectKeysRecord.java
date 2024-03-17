@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_object_keys</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,16 +30,10 @@ public class JsonbObjectKeysRecord extends TableRecordImpl<JsonbObjectKeysRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.jsonb_object_keys.jsonb_object_keys</code>.
-     */
     public void setJsonbObjectKeys(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.jsonb_object_keys.jsonb_object_keys</code>.
-     */
     @Nullable
     public String getJsonbObjectKeys() {
         return (String) get(0);
@@ -100,16 +91,10 @@ public class JsonbObjectKeysRecord extends TableRecordImpl<JsonbObjectKeysRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonbObjectKeysRecord
-     */
     public JsonbObjectKeysRecord() {
         super(JsonbObjectKeys.JSONB_OBJECT_KEYS);
     }
 
-    /**
-     * Create a detached, initialised JsonbObjectKeysRecord
-     */
     @ConstructorProperties({ "jsonbObjectKeys" })
     public JsonbObjectKeysRecord(@Nullable String jsonbObjectKeys) {
         super(JsonbObjectKeys.JSONB_OBJECT_KEYS);
@@ -118,9 +103,6 @@ public class JsonbObjectKeysRecord extends TableRecordImpl<JsonbObjectKeysRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonbObjectKeysRecord
-     */
     public JsonbObjectKeysRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonbObjectKeys value) {
         super(JsonbObjectKeys.JSONB_OBJECT_KEYS);
 

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.collations</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,62 +51,38 @@ public class Collations implements Serializable {
         this.padAttribute = padAttribute;
     }
 
-    /**
-     * Getter for <code>information_schema.collations.collation_catalog</code>.
-     */
     @Nullable
     public String getCollationCatalog() {
         return this.collationCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.collations.collation_catalog</code>.
-     */
     public void setCollationCatalog(@Nullable String collationCatalog) {
         this.collationCatalog = collationCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.collations.collation_schema</code>.
-     */
     @Nullable
     public String getCollationSchema() {
         return this.collationSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.collations.collation_schema</code>.
-     */
     public void setCollationSchema(@Nullable String collationSchema) {
         this.collationSchema = collationSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.collations.collation_name</code>.
-     */
     @Nullable
     public String getCollationName() {
         return this.collationName;
     }
 
-    /**
-     * Setter for <code>information_schema.collations.collation_name</code>.
-     */
     public void setCollationName(@Nullable String collationName) {
         this.collationName = collationName;
     }
 
-    /**
-     * Getter for <code>information_schema.collations.pad_attribute</code>.
-     */
     @Nullable
     public String getPadAttribute() {
         return this.padAttribute;
     }
 
-    /**
-     * Setter for <code>information_schema.collations.pad_attribute</code>.
-     */
     public void setPadAttribute(@Nullable String padAttribute) {
         this.padAttribute = padAttribute;
     }

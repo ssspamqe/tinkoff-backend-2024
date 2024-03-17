@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_tablespace_databases</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,18 +30,10 @@ public class PgTablespaceDatabasesRecord extends TableRecordImpl<PgTablespaceDat
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_tablespace_databases.pg_tablespace_databases</code>.
-     */
     public void setPgTablespaceDatabases(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_tablespace_databases.pg_tablespace_databases</code>.
-     */
     @Nullable
     public Long getPgTablespaceDatabases() {
         return (Long) get(0);
@@ -102,16 +91,10 @@ public class PgTablespaceDatabasesRecord extends TableRecordImpl<PgTablespaceDat
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTablespaceDatabasesRecord
-     */
     public PgTablespaceDatabasesRecord() {
         super(PgTablespaceDatabases.PG_TABLESPACE_DATABASES);
     }
 
-    /**
-     * Create a detached, initialised PgTablespaceDatabasesRecord
-     */
     @ConstructorProperties({ "pgTablespaceDatabases" })
     public PgTablespaceDatabasesRecord(@Nullable Long pgTablespaceDatabases) {
         super(PgTablespaceDatabases.PG_TABLESPACE_DATABASES);
@@ -120,9 +103,6 @@ public class PgTablespaceDatabasesRecord extends TableRecordImpl<PgTablespaceDat
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTablespaceDatabasesRecord
-     */
     public PgTablespaceDatabasesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTablespaceDatabases value) {
         super(PgTablespaceDatabases.PG_TABLESPACE_DATABASES);
 

@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_enum</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,64 +30,40 @@ public class PgEnumRecord extends UpdatableRecordImpl<PgEnumRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_enum.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_enum.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_enum.enumtypid</code>.
-     */
     public void setEnumtypid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_enum.enumtypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getEnumtypid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_enum.enumsortorder</code>.
-     */
     public void setEnumsortorder(@NotNull Float value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_enum.enumsortorder</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Float getEnumsortorder() {
         return (Float) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_enum.enumlabel</code>.
-     */
     public void setEnumlabel(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_enum.enumlabel</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEnumlabel() {
@@ -237,16 +210,10 @@ public class PgEnumRecord extends UpdatableRecordImpl<PgEnumRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgEnumRecord
-     */
     public PgEnumRecord() {
         super(PgEnum.PG_ENUM);
     }
 
-    /**
-     * Create a detached, initialised PgEnumRecord
-     */
     @ConstructorProperties({ "oid", "enumtypid", "enumsortorder", "enumlabel" })
     public PgEnumRecord(@NotNull Long oid, @NotNull Long enumtypid, @NotNull Float enumsortorder, @NotNull String enumlabel) {
         super(PgEnum.PG_ENUM);
@@ -258,9 +225,6 @@ public class PgEnumRecord extends UpdatableRecordImpl<PgEnumRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgEnumRecord
-     */
     public PgEnumRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgEnum value) {
         super(PgEnum.PG_ENUM);
 

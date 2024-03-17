@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgMatviewsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_matviews</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,53 +40,26 @@ public class PgMatviews extends TableImpl<PgMatviewsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_matviews</code>
-     */
     public static final PgMatviews PG_MATVIEWS = new PgMatviews();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgMatviewsRecord> getRecordType() {
         return PgMatviewsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_matviews.schemaname</code>.
-     */
     public final TableField<PgMatviewsRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_matviews.matviewname</code>.
-     */
     public final TableField<PgMatviewsRecord, String> MATVIEWNAME = createField(DSL.name("matviewname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_matviews.matviewowner</code>.
-     */
     public final TableField<PgMatviewsRecord, String> MATVIEWOWNER = createField(DSL.name("matviewowner"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_matviews.tablespace</code>.
-     */
     public final TableField<PgMatviewsRecord, String> TABLESPACE = createField(DSL.name("tablespace"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_matviews.hasindexes</code>.
-     */
     public final TableField<PgMatviewsRecord, Boolean> HASINDEXES = createField(DSL.name("hasindexes"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_matviews.ispopulated</code>.
-     */
     public final TableField<PgMatviewsRecord, Boolean> ISPOPULATED = createField(DSL.name("ispopulated"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_matviews.definition</code>.
-     */
     public final TableField<PgMatviewsRecord, String> DEFINITION = createField(DSL.name("definition"), SQLDataType.CLOB, this, "");
 
     private PgMatviews(Name alias, Table<PgMatviewsRecord> aliased) {
@@ -114,23 +82,14 @@ public class PgMatviews extends TableImpl<PgMatviewsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_matviews</code> table reference
-     */
     public PgMatviews(String alias) {
         this(DSL.name(alias), PG_MATVIEWS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_matviews</code> table reference
-     */
     public PgMatviews(Name alias) {
         this(alias, PG_MATVIEWS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_matviews</code> table reference
-     */
     public PgMatviews() {
         this(DSL.name("pg_matviews"), null);
     }
@@ -163,27 +122,18 @@ public class PgMatviews extends TableImpl<PgMatviewsRecord> {
         return new PgMatviews(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgMatviews rename(String name) {
         return new PgMatviews(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgMatviews rename(Name name) {
         return new PgMatviews(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgMatviews rename(Table<?> name) {
@@ -200,17 +150,10 @@ public class PgMatviews extends TableImpl<PgMatviewsRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super Boolean, ? super Boolean, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -8,8 +8,6 @@ import edu.java.domain.jooq.pg_catalog.Keys;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgPartitionedTableRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -32,9 +30,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_partitioned_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -47,63 +42,28 @@ public class PgPartitionedTable extends TableImpl<PgPartitionedTableRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_partitioned_table</code>
-     */
     public static final PgPartitionedTable PG_PARTITIONED_TABLE = new PgPartitionedTable();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgPartitionedTableRecord> getRecordType() {
         return PgPartitionedTableRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_partitioned_table.partrelid</code>.
-     */
     public final TableField<PgPartitionedTableRecord, Long> PARTRELID = createField(DSL.name("partrelid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_partitioned_table.partstrat</code>.
-     */
     public final TableField<PgPartitionedTableRecord, String> PARTSTRAT = createField(DSL.name("partstrat"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_partitioned_table.partnatts</code>.
-     */
     public final TableField<PgPartitionedTableRecord, Short> PARTNATTS = createField(DSL.name("partnatts"), SQLDataType.SMALLINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_partitioned_table.partdefid</code>.
-     */
     public final TableField<PgPartitionedTableRecord, Long> PARTDEFID = createField(DSL.name("partdefid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_partitioned_table.partattrs</code>.
-     */
     public final TableField<PgPartitionedTableRecord, Object[]> PARTATTRS = createField(DSL.name("partattrs"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"nt2vector\"").nullable(false).array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_partitioned_table.partclass</code>.
-     */
     public final TableField<PgPartitionedTableRecord, Object[]> PARTCLASS = createField(DSL.name("partclass"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"idvector\"").nullable(false).array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_partitioned_table.partcollation</code>.
-     */
     public final TableField<PgPartitionedTableRecord, Object[]> PARTCOLLATION = createField(DSL.name("partcollation"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"idvector\"").nullable(false).array(), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgPartitionedTableRecord, Object> PARTEXPRS = createField(DSL.name("partexprs"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_node_tree\""), this, "");
 
@@ -115,25 +75,14 @@ public class PgPartitionedTable extends TableImpl<PgPartitionedTableRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_partitioned_table</code> table
-     * reference
-     */
     public PgPartitionedTable(String alias) {
         this(DSL.name(alias), PG_PARTITIONED_TABLE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_partitioned_table</code> table
-     * reference
-     */
     public PgPartitionedTable(Name alias) {
         this(alias, PG_PARTITIONED_TABLE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_partitioned_table</code> table reference
-     */
     public PgPartitionedTable() {
         this(DSL.name("pg_partitioned_table"), null);
     }
@@ -172,27 +121,18 @@ public class PgPartitionedTable extends TableImpl<PgPartitionedTableRecord> {
         return new PgPartitionedTable(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPartitionedTable rename(String name) {
         return new PgPartitionedTable(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPartitionedTable rename(Name name) {
         return new PgPartitionedTable(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgPartitionedTable rename(Table<?> name) {
@@ -209,17 +149,10 @@ public class PgPartitionedTable extends TableImpl<PgPartitionedTableRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Short, ? super Long, ? super Object[], ? super Object[], ? super Object[], ? super Object, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Short, ? super Long, ? super Object[], ? super Object[], ? super Object[], ? super Object, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

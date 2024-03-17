@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_trigger</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -116,315 +113,191 @@ public class PgTrigger implements Serializable {
         this.tgnewtable = tgnewtable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgrelid() {
         return this.tgrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgrelid</code>.
-     */
     public void setTgrelid(@NotNull Long tgrelid) {
         this.tgrelid = tgrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgparentid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgparentid() {
         return this.tgparentid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgparentid</code>.
-     */
     public void setTgparentid(@NotNull Long tgparentid) {
         this.tgparentid = tgparentid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTgname() {
         return this.tgname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgname</code>.
-     */
     public void setTgname(@NotNull String tgname) {
         this.tgname = tgname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgfoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgfoid() {
         return this.tgfoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgfoid</code>.
-     */
     public void setTgfoid(@NotNull Long tgfoid) {
         this.tgfoid = tgfoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getTgtype() {
         return this.tgtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgtype</code>.
-     */
     public void setTgtype(@NotNull Short tgtype) {
         this.tgtype = tgtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgenabled</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTgenabled() {
         return this.tgenabled;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgenabled</code>.
-     */
     public void setTgenabled(@NotNull String tgenabled) {
         this.tgenabled = tgenabled;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgisinternal</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTgisinternal() {
         return this.tgisinternal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgisinternal</code>.
-     */
     public void setTgisinternal(@NotNull Boolean tgisinternal) {
         this.tgisinternal = tgisinternal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgconstrrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgconstrrelid() {
         return this.tgconstrrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgconstrrelid</code>.
-     */
     public void setTgconstrrelid(@NotNull Long tgconstrrelid) {
         this.tgconstrrelid = tgconstrrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgconstrindid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgconstrindid() {
         return this.tgconstrindid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgconstrindid</code>.
-     */
     public void setTgconstrindid(@NotNull Long tgconstrindid) {
         this.tgconstrindid = tgconstrindid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgconstraint</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTgconstraint() {
         return this.tgconstraint;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgconstraint</code>.
-     */
     public void setTgconstraint(@NotNull Long tgconstraint) {
         this.tgconstraint = tgconstraint;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgdeferrable</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTgdeferrable() {
         return this.tgdeferrable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgdeferrable</code>.
-     */
     public void setTgdeferrable(@NotNull Boolean tgdeferrable) {
         this.tgdeferrable = tgdeferrable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tginitdeferred</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTginitdeferred() {
         return this.tginitdeferred;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tginitdeferred</code>.
-     */
     public void setTginitdeferred(@NotNull Boolean tginitdeferred) {
         this.tginitdeferred = tginitdeferred;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgnargs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getTgnargs() {
         return this.tgnargs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgnargs</code>.
-     */
     public void setTgnargs(@NotNull Short tgnargs) {
         this.tgnargs = tgnargs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgattr</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Object[] getTgattr() {
         return this.tgattr;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgattr</code>.
-     */
     public void setTgattr(@NotNull Object[] tgattr) {
         this.tgattr = tgattr;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgargs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public byte[] getTgargs() {
         return this.tgargs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgargs</code>.
-     */
     public void setTgargs(@NotNull byte[] tgargs) {
         this.tgargs = tgargs;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getTgqual() {
         return this.tgqual;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setTgqual(@Nullable Object tgqual) {
         this.tgqual = tgqual;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgoldtable</code>.
-     */
     @Nullable
     public String getTgoldtable() {
         return this.tgoldtable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgoldtable</code>.
-     */
     public void setTgoldtable(@Nullable String tgoldtable) {
         this.tgoldtable = tgoldtable;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_trigger.tgnewtable</code>.
-     */
     @Nullable
     public String getTgnewtable() {
         return this.tgnewtable;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_trigger.tgnewtable</code>.
-     */
     public void setTgnewtable(@Nullable String tgnewtable) {
         this.tgnewtable = tgnewtable;
     }

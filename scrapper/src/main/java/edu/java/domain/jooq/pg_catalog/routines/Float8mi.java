@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.float8mi</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,24 +27,12 @@ public class Float8mi extends AbstractRoutine<Double> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.float8mi.RETURN_VALUE</code>.
-     */
     public static final Parameter<Double> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.DOUBLE, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.float8mi._1</code>.
-     */
     public static final Parameter<Double> _1 = Internal.createParameter("_1", SQLDataType.DOUBLE, false, true);
 
-    /**
-     * The parameter <code>pg_catalog.float8mi._2</code>.
-     */
     public static final Parameter<Double> _2 = Internal.createParameter("_2", SQLDataType.DOUBLE, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Float8mi() {
         super("float8mi", PgCatalog.PG_CATALOG, SQLDataType.DOUBLE);
 
@@ -56,32 +41,18 @@ public class Float8mi extends AbstractRoutine<Double> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Double value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Double> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(Double value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<Double> field) {
         setField(_2, field);
     }

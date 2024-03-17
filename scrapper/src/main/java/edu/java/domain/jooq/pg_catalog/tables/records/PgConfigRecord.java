@@ -18,9 +18,6 @@ import org.jooq.Row2;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_config</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,31 +30,19 @@ public class PgConfigRecord extends TableRecordImpl<PgConfigRecord> implements R
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_config.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_config.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_config.setting</code>.
-     */
     public void setSetting(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_config.setting</code>.
-     */
     @Nullable
     public String getSetting() {
         return (String) get(1);
@@ -141,16 +126,10 @@ public class PgConfigRecord extends TableRecordImpl<PgConfigRecord> implements R
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgConfigRecord
-     */
     public PgConfigRecord() {
         super(PgConfig.PG_CONFIG);
     }
 
-    /**
-     * Create a detached, initialised PgConfigRecord
-     */
     @ConstructorProperties({ "name", "setting" })
     public PgConfigRecord(@Nullable String name, @Nullable String setting) {
         super(PgConfig.PG_CONFIG);
@@ -160,9 +139,6 @@ public class PgConfigRecord extends TableRecordImpl<PgConfigRecord> implements R
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgConfigRecord
-     */
     public PgConfigRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgConfig value) {
         super(PgConfig.PG_CONFIG);
 

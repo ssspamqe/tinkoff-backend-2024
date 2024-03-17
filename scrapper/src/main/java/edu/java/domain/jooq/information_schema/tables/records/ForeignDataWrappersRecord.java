@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.foreign_data_wrappers</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,86 +30,46 @@ public class ForeignDataWrappersRecord extends TableRecordImpl<ForeignDataWrappe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.library_name</code>.
-     */
     public void setLibraryName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.library_name</code>.
-     */
     @Nullable
     public String getLibraryName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     public void setForeignDataWrapperLanguage(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrappers.foreign_data_wrapper_language</code>.
-     */
     @Nullable
     public String getForeignDataWrapperLanguage() {
         return (String) get(4);
@@ -274,16 +231,10 @@ public class ForeignDataWrappersRecord extends TableRecordImpl<ForeignDataWrappe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ForeignDataWrappersRecord
-     */
     public ForeignDataWrappersRecord() {
         super(ForeignDataWrappers.FOREIGN_DATA_WRAPPERS);
     }
 
-    /**
-     * Create a detached, initialised ForeignDataWrappersRecord
-     */
     @ConstructorProperties({ "foreignDataWrapperCatalog", "foreignDataWrapperName", "authorizationIdentifier", "libraryName", "foreignDataWrapperLanguage" })
     public ForeignDataWrappersRecord(@Nullable String foreignDataWrapperCatalog, @Nullable String foreignDataWrapperName, @Nullable String authorizationIdentifier, @Nullable String libraryName, @Nullable String foreignDataWrapperLanguage) {
         super(ForeignDataWrappers.FOREIGN_DATA_WRAPPERS);
@@ -296,9 +247,6 @@ public class ForeignDataWrappersRecord extends TableRecordImpl<ForeignDataWrappe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ForeignDataWrappersRecord
-     */
     public ForeignDataWrappersRecord(edu.java.domain.jooq.information_schema.tables.pojos.ForeignDataWrappers value) {
         super(ForeignDataWrappers.FOREIGN_DATA_WRAPPERS);
 

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.CheckConstraintRoutineUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.check_constraint_routine_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,55 +39,24 @@ public class CheckConstraintRoutineUsage extends TableImpl<CheckConstraintRoutin
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.check_constraint_routine_usage</code>
-     */
     public static final CheckConstraintRoutineUsage CHECK_CONSTRAINT_ROUTINE_USAGE = new CheckConstraintRoutineUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<CheckConstraintRoutineUsageRecord> getRecordType() {
         return CheckConstraintRoutineUsageRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.check_constraint_routine_usage.constraint_catalog</code>.
-     */
     public final TableField<CheckConstraintRoutineUsageRecord, String> CONSTRAINT_CATALOG = createField(DSL.name("constraint_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.check_constraint_routine_usage.constraint_schema</code>.
-     */
     public final TableField<CheckConstraintRoutineUsageRecord, String> CONSTRAINT_SCHEMA = createField(DSL.name("constraint_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.check_constraint_routine_usage.constraint_name</code>.
-     */
     public final TableField<CheckConstraintRoutineUsageRecord, String> CONSTRAINT_NAME = createField(DSL.name("constraint_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.check_constraint_routine_usage.specific_catalog</code>.
-     */
     public final TableField<CheckConstraintRoutineUsageRecord, String> SPECIFIC_CATALOG = createField(DSL.name("specific_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.check_constraint_routine_usage.specific_schema</code>.
-     */
     public final TableField<CheckConstraintRoutineUsageRecord, String> SPECIFIC_SCHEMA = createField(DSL.name("specific_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.check_constraint_routine_usage.specific_name</code>.
-     */
     public final TableField<CheckConstraintRoutineUsageRecord, String> SPECIFIC_NAME = createField(DSL.name("specific_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private CheckConstraintRoutineUsage(Name alias, Table<CheckConstraintRoutineUsageRecord> aliased) {
@@ -116,28 +80,14 @@ public class CheckConstraintRoutineUsage extends TableImpl<CheckConstraintRoutin
         """));
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.check_constraint_routine_usage</code> table
-     * reference
-     */
     public CheckConstraintRoutineUsage(String alias) {
         this(DSL.name(alias), CHECK_CONSTRAINT_ROUTINE_USAGE);
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.check_constraint_routine_usage</code> table
-     * reference
-     */
     public CheckConstraintRoutineUsage(Name alias) {
         this(alias, CHECK_CONSTRAINT_ROUTINE_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.check_constraint_routine_usage</code>
-     * table reference
-     */
     public CheckConstraintRoutineUsage() {
         this(DSL.name("check_constraint_routine_usage"), null);
     }
@@ -170,27 +120,18 @@ public class CheckConstraintRoutineUsage extends TableImpl<CheckConstraintRoutin
         return new CheckConstraintRoutineUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CheckConstraintRoutineUsage rename(String name) {
         return new CheckConstraintRoutineUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CheckConstraintRoutineUsage rename(Name name) {
         return new CheckConstraintRoutineUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public CheckConstraintRoutineUsage rename(Table<?> name) {
@@ -207,17 +148,10 @@ public class CheckConstraintRoutineUsage extends TableImpl<CheckConstraintRoutin
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_database</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -151,426 +148,254 @@ public class PgStatDatabase implements Serializable {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return this.datid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.datid</code>.
-     */
     public void setDatid(@Nullable Long datid) {
         this.datid = datid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return this.datname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.datname</code>.
-     */
     public void setDatname(@Nullable String datname) {
         this.datname = datname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.numbackends</code>.
-     */
     @Nullable
     public Integer getNumbackends() {
         return this.numbackends;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.numbackends</code>.
-     */
     public void setNumbackends(@Nullable Integer numbackends) {
         this.numbackends = numbackends;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.xact_commit</code>.
-     */
     @Nullable
     public Long getXactCommit() {
         return this.xactCommit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.xact_commit</code>.
-     */
     public void setXactCommit(@Nullable Long xactCommit) {
         this.xactCommit = xactCommit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.xact_rollback</code>.
-     */
     @Nullable
     public Long getXactRollback() {
         return this.xactRollback;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.xact_rollback</code>.
-     */
     public void setXactRollback(@Nullable Long xactRollback) {
         this.xactRollback = xactRollback;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.blks_read</code>.
-     */
     @Nullable
     public Long getBlksRead() {
         return this.blksRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.blks_read</code>.
-     */
     public void setBlksRead(@Nullable Long blksRead) {
         this.blksRead = blksRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.blks_hit</code>.
-     */
     @Nullable
     public Long getBlksHit() {
         return this.blksHit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.blks_hit</code>.
-     */
     public void setBlksHit(@Nullable Long blksHit) {
         this.blksHit = blksHit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.tup_returned</code>.
-     */
     @Nullable
     public Long getTupReturned() {
         return this.tupReturned;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.tup_returned</code>.
-     */
     public void setTupReturned(@Nullable Long tupReturned) {
         this.tupReturned = tupReturned;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.tup_fetched</code>.
-     */
     @Nullable
     public Long getTupFetched() {
         return this.tupFetched;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.tup_fetched</code>.
-     */
     public void setTupFetched(@Nullable Long tupFetched) {
         this.tupFetched = tupFetched;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.tup_inserted</code>.
-     */
     @Nullable
     public Long getTupInserted() {
         return this.tupInserted;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.tup_inserted</code>.
-     */
     public void setTupInserted(@Nullable Long tupInserted) {
         this.tupInserted = tupInserted;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.tup_updated</code>.
-     */
     @Nullable
     public Long getTupUpdated() {
         return this.tupUpdated;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.tup_updated</code>.
-     */
     public void setTupUpdated(@Nullable Long tupUpdated) {
         this.tupUpdated = tupUpdated;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.tup_deleted</code>.
-     */
     @Nullable
     public Long getTupDeleted() {
         return this.tupDeleted;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.tup_deleted</code>.
-     */
     public void setTupDeleted(@Nullable Long tupDeleted) {
         this.tupDeleted = tupDeleted;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.conflicts</code>.
-     */
     @Nullable
     public Long getConflicts() {
         return this.conflicts;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.conflicts</code>.
-     */
     public void setConflicts(@Nullable Long conflicts) {
         this.conflicts = conflicts;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.temp_files</code>.
-     */
     @Nullable
     public Long getTempFiles() {
         return this.tempFiles;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.temp_files</code>.
-     */
     public void setTempFiles(@Nullable Long tempFiles) {
         this.tempFiles = tempFiles;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.temp_bytes</code>.
-     */
     @Nullable
     public Long getTempBytes() {
         return this.tempBytes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.temp_bytes</code>.
-     */
     public void setTempBytes(@Nullable Long tempBytes) {
         this.tempBytes = tempBytes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.deadlocks</code>.
-     */
     @Nullable
     public Long getDeadlocks() {
         return this.deadlocks;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.deadlocks</code>.
-     */
     public void setDeadlocks(@Nullable Long deadlocks) {
         this.deadlocks = deadlocks;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.checksum_failures</code>.
-     */
     @Nullable
     public Long getChecksumFailures() {
         return this.checksumFailures;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.checksum_failures</code>.
-     */
     public void setChecksumFailures(@Nullable Long checksumFailures) {
         this.checksumFailures = checksumFailures;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database.checksum_last_failure</code>.
-     */
     @Nullable
     public OffsetDateTime getChecksumLastFailure() {
         return this.checksumLastFailure;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database.checksum_last_failure</code>.
-     */
     public void setChecksumLastFailure(@Nullable OffsetDateTime checksumLastFailure) {
         this.checksumLastFailure = checksumLastFailure;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.blk_read_time</code>.
-     */
     @Nullable
     public Double getBlkReadTime() {
         return this.blkReadTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.blk_read_time</code>.
-     */
     public void setBlkReadTime(@Nullable Double blkReadTime) {
         this.blkReadTime = blkReadTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.blk_write_time</code>.
-     */
     @Nullable
     public Double getBlkWriteTime() {
         return this.blkWriteTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.blk_write_time</code>.
-     */
     public void setBlkWriteTime(@Nullable Double blkWriteTime) {
         this.blkWriteTime = blkWriteTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.session_time</code>.
-     */
     @Nullable
     public Double getSessionTime() {
         return this.sessionTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.session_time</code>.
-     */
     public void setSessionTime(@Nullable Double sessionTime) {
         this.sessionTime = sessionTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.active_time</code>.
-     */
     @Nullable
     public Double getActiveTime() {
         return this.activeTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.active_time</code>.
-     */
     public void setActiveTime(@Nullable Double activeTime) {
         this.activeTime = activeTime;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database.idle_in_transaction_time</code>.
-     */
     @Nullable
     public Double getIdleInTransactionTime() {
         return this.idleInTransactionTime;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database.idle_in_transaction_time</code>.
-     */
     public void setIdleInTransactionTime(@Nullable Double idleInTransactionTime) {
         this.idleInTransactionTime = idleInTransactionTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.sessions</code>.
-     */
     @Nullable
     public Long getSessions() {
         return this.sessions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.sessions</code>.
-     */
     public void setSessions(@Nullable Long sessions) {
         this.sessions = sessions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.sessions_abandoned</code>.
-     */
     @Nullable
     public Long getSessionsAbandoned() {
         return this.sessionsAbandoned;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.sessions_abandoned</code>.
-     */
     public void setSessionsAbandoned(@Nullable Long sessionsAbandoned) {
         this.sessionsAbandoned = sessionsAbandoned;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.sessions_fatal</code>.
-     */
     @Nullable
     public Long getSessionsFatal() {
         return this.sessionsFatal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.sessions_fatal</code>.
-     */
     public void setSessionsFatal(@Nullable Long sessionsFatal) {
         this.sessionsFatal = sessionsFatal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.sessions_killed</code>.
-     */
     @Nullable
     public Long getSessionsKilled() {
         return this.sessionsKilled;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.sessions_killed</code>.
-     */
     public void setSessionsKilled(@Nullable Long sessionsKilled) {
         this.sessionsKilled = sessionsKilled;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }

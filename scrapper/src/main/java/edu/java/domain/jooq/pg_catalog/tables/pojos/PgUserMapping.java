@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_user_mapping</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -56,65 +53,41 @@ public class PgUserMapping implements Serializable {
         this.umoptions = umoptions;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mapping.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mapping.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mapping.umuser</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getUmuser() {
         return this.umuser;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mapping.umuser</code>.
-     */
     public void setUmuser(@NotNull Long umuser) {
         this.umuser = umuser;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mapping.umserver</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getUmserver() {
         return this.umserver;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mapping.umserver</code>.
-     */
     public void setUmserver(@NotNull Long umserver) {
         this.umserver = umserver;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_user_mapping.umoptions</code>.
-     */
     @Nullable
     public String[] getUmoptions() {
         return this.umoptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_user_mapping.umoptions</code>.
-     */
     public void setUmoptions(@Nullable String[] umoptions) {
         this.umoptions = umoptions;
     }

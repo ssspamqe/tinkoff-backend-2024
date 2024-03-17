@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.generate_subscripts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -42,19 +39,11 @@ public class GenerateSubscripts implements Serializable {
         this.generateSubscripts = generateSubscripts;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.generate_subscripts.generate_subscripts</code>.
-     */
     @Nullable
     public Integer getGenerateSubscripts() {
         return this.generateSubscripts;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.generate_subscripts.generate_subscripts</code>.
-     */
     public void setGenerateSubscripts(@Nullable Integer generateSubscripts) {
         this.generateSubscripts = generateSubscripts;
     }

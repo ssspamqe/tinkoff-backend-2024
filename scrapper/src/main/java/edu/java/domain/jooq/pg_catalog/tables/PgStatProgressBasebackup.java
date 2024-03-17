@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatProgressBasebackupRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_basebackup</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,53 +40,24 @@ public class PgStatProgressBasebackup extends TableImpl<PgStatProgressBasebackup
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_progress_basebackup</code>
-     */
     public static final PgStatProgressBasebackup PG_STAT_PROGRESS_BASEBACKUP = new PgStatProgressBasebackup();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatProgressBasebackupRecord> getRecordType() {
         return PgStatProgressBasebackupRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_basebackup.pid</code>.
-     */
     public final TableField<PgStatProgressBasebackupRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_progress_basebackup.phase</code>.
-     */
     public final TableField<PgStatProgressBasebackupRecord, String> PHASE = createField(DSL.name("phase"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_total</code>.
-     */
     public final TableField<PgStatProgressBasebackupRecord, Long> BACKUP_TOTAL = createField(DSL.name("backup_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_basebackup.backup_streamed</code>.
-     */
     public final TableField<PgStatProgressBasebackupRecord, Long> BACKUP_STREAMED = createField(DSL.name("backup_streamed"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_total</code>.
-     */
     public final TableField<PgStatProgressBasebackupRecord, Long> TABLESPACES_TOTAL = createField(DSL.name("tablespaces_total"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_progress_basebackup.tablespaces_streamed</code>.
-     */
     public final TableField<PgStatProgressBasebackupRecord, Long> TABLESPACES_STREAMED = createField(DSL.name("tablespaces_streamed"), SQLDataType.BIGINT, this, "");
 
     private PgStatProgressBasebackup(Name alias, Table<PgStatProgressBasebackupRecord> aliased) {
@@ -121,26 +87,14 @@ public class PgStatProgressBasebackup extends TableImpl<PgStatProgressBasebackup
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_basebackup</code>
-     * table reference
-     */
     public PgStatProgressBasebackup(String alias) {
         this(DSL.name(alias), PG_STAT_PROGRESS_BASEBACKUP);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_progress_basebackup</code>
-     * table reference
-     */
     public PgStatProgressBasebackup(Name alias) {
         this(alias, PG_STAT_PROGRESS_BASEBACKUP);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_progress_basebackup</code> table
-     * reference
-     */
     public PgStatProgressBasebackup() {
         this(DSL.name("pg_stat_progress_basebackup"), null);
     }
@@ -173,27 +127,18 @@ public class PgStatProgressBasebackup extends TableImpl<PgStatProgressBasebackup
         return new PgStatProgressBasebackup(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressBasebackup rename(String name) {
         return new PgStatProgressBasebackup(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressBasebackup rename(Name name) {
         return new PgStatProgressBasebackup(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatProgressBasebackup rename(Table<?> name) {
@@ -210,17 +155,10 @@ public class PgStatProgressBasebackup extends TableImpl<PgStatProgressBasebackup
         return (Row6) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function6<? super Integer, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function6<? super Integer, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

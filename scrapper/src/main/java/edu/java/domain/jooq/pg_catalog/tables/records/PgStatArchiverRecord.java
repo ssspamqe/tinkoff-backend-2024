@@ -19,9 +19,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_archiver</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,106 +31,64 @@ public class PgStatArchiverRecord extends TableRecordImpl<PgStatArchiverRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.archived_count</code>.
-     */
     public void setArchivedCount(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.archived_count</code>.
-     */
     @Nullable
     public Long getArchivedCount() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.last_archived_wal</code>.
-     */
     public void setLastArchivedWal(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.last_archived_wal</code>.
-     */
     @Nullable
     public String getLastArchivedWal() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.last_archived_time</code>.
-     */
     public void setLastArchivedTime(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.last_archived_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastArchivedTime() {
         return (OffsetDateTime) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.failed_count</code>.
-     */
     public void setFailedCount(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.failed_count</code>.
-     */
     @Nullable
     public Long getFailedCount() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.last_failed_wal</code>.
-     */
     public void setLastFailedWal(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.last_failed_wal</code>.
-     */
     @Nullable
     public String getLastFailedWal() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.last_failed_time</code>.
-     */
     public void setLastFailedTime(@Nullable OffsetDateTime value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.last_failed_time</code>.
-     */
     @Nullable
     public OffsetDateTime getLastFailedTime() {
         return (OffsetDateTime) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_archiver.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_archiver.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return (OffsetDateTime) get(6);
@@ -347,16 +302,10 @@ public class PgStatArchiverRecord extends TableRecordImpl<PgStatArchiverRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatArchiverRecord
-     */
     public PgStatArchiverRecord() {
         super(PgStatArchiver.PG_STAT_ARCHIVER);
     }
 
-    /**
-     * Create a detached, initialised PgStatArchiverRecord
-     */
     @ConstructorProperties({ "archivedCount", "lastArchivedWal", "lastArchivedTime", "failedCount", "lastFailedWal", "lastFailedTime", "statsReset" })
     public PgStatArchiverRecord(@Nullable Long archivedCount, @Nullable String lastArchivedWal, @Nullable OffsetDateTime lastArchivedTime, @Nullable Long failedCount, @Nullable String lastFailedWal, @Nullable OffsetDateTime lastFailedTime, @Nullable OffsetDateTime statsReset) {
         super(PgStatArchiver.PG_STAT_ARCHIVER);
@@ -371,9 +320,6 @@ public class PgStatArchiverRecord extends TableRecordImpl<PgStatArchiverRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatArchiverRecord
-     */
     public PgStatArchiverRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatArchiver value) {
         super(PgStatArchiver.PG_STAT_ARCHIVER);
 

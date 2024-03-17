@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_depend</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,114 +63,72 @@ public class PgDepend implements Serializable {
         this.deptype = deptype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.classid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassid() {
         return this.classid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.classid</code>.
-     */
     public void setClassid(@NotNull Long classid) {
         this.classid = classid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.objid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjid() {
         return this.objid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.objid</code>.
-     */
     public void setObjid(@NotNull Long objid) {
         this.objid = objid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.objsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getObjsubid() {
         return this.objsubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.objsubid</code>.
-     */
     public void setObjsubid(@NotNull Integer objsubid) {
         this.objsubid = objsubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.refclassid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRefclassid() {
         return this.refclassid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.refclassid</code>.
-     */
     public void setRefclassid(@NotNull Long refclassid) {
         this.refclassid = refclassid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.refobjid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRefobjid() {
         return this.refobjid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.refobjid</code>.
-     */
     public void setRefobjid(@NotNull Long refobjid) {
         this.refobjid = refobjid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.refobjsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getRefobjsubid() {
         return this.refobjsubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.refobjsubid</code>.
-     */
     public void setRefobjsubid(@NotNull Integer refobjsubid) {
         this.refobjsubid = refobjsubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_depend.deptype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDeptype() {
         return this.deptype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_depend.deptype</code>.
-     */
     public void setDeptype(@NotNull String deptype) {
         this.deptype = deptype;
     }

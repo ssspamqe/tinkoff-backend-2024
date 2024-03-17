@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_available_extension_versions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -71,136 +68,74 @@ public class PgAvailableExtensionVersions implements Serializable {
         this.comment = comment;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_available_extension_versions.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_available_extension_versions.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.version</code>.
-     */
     @Nullable
     public String getVersion() {
         return this.version;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.version</code>.
-     */
     public void setVersion(@Nullable String version) {
         this.version = version;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.superuser</code>.
-     */
     @Nullable
     public Boolean getSuperuser() {
         return this.superuser;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.superuser</code>.
-     */
     public void setSuperuser(@Nullable Boolean superuser) {
         this.superuser = superuser;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.trusted</code>.
-     */
     @Nullable
     public Boolean getTrusted() {
         return this.trusted;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.trusted</code>.
-     */
     public void setTrusted(@Nullable Boolean trusted) {
         this.trusted = trusted;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.relocatable</code>.
-     */
     @Nullable
     public Boolean getRelocatable() {
         return this.relocatable;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.relocatable</code>.
-     */
     public void setRelocatable(@Nullable Boolean relocatable) {
         this.relocatable = relocatable;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.schema</code>.
-     */
     @Nullable
     public String getSchema() {
         return this.schema;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.schema</code>.
-     */
     public void setSchema(@Nullable String schema) {
         this.schema = schema;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.requires</code>.
-     */
     @Nullable
     public String[] getRequires() {
         return this.requires;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.requires</code>.
-     */
     public void setRequires(@Nullable String[] requires) {
         this.requires = requires;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_available_extension_versions.comment</code>.
-     */
     @Nullable
     public String getComment() {
         return this.comment;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_available_extension_versions.comment</code>.
-     */
     public void setComment(@Nullable String comment) {
         this.comment = comment;
     }

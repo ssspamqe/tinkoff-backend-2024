@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_populate_recordset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,27 +30,11 @@ public class JsonbPopulateRecordsetRecord extends TableRecordImpl<JsonbPopulateR
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setJsonbPopulateRecordset(@Nullable Object value) {
         set(0, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getJsonbPopulateRecordset() {
@@ -76,14 +57,6 @@ public class JsonbPopulateRecordsetRecord extends TableRecordImpl<JsonbPopulateR
         return (Row1) super.valuesRow();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -91,14 +64,6 @@ public class JsonbPopulateRecordsetRecord extends TableRecordImpl<JsonbPopulateR
         return JsonbPopulateRecordset.JSONB_POPULATE_RECORDSET.JSONB_POPULATE_RECORDSET_;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -106,14 +71,6 @@ public class JsonbPopulateRecordsetRecord extends TableRecordImpl<JsonbPopulateR
         return getJsonbPopulateRecordset();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -121,14 +78,6 @@ public class JsonbPopulateRecordsetRecord extends TableRecordImpl<JsonbPopulateR
         return getJsonbPopulateRecordset();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -148,16 +97,10 @@ public class JsonbPopulateRecordsetRecord extends TableRecordImpl<JsonbPopulateR
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached JsonbPopulateRecordsetRecord
-     */
     public JsonbPopulateRecordsetRecord() {
         super(JsonbPopulateRecordset.JSONB_POPULATE_RECORDSET);
     }
 
-    /**
-     * Create a detached, initialised JsonbPopulateRecordsetRecord
-     */
     @ConstructorProperties({ "jsonbPopulateRecordset" })
     public JsonbPopulateRecordsetRecord(@Nullable Object jsonbPopulateRecordset) {
         super(JsonbPopulateRecordset.JSONB_POPULATE_RECORDSET);
@@ -166,9 +109,6 @@ public class JsonbPopulateRecordsetRecord extends TableRecordImpl<JsonbPopulateR
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised JsonbPopulateRecordsetRecord
-     */
     public JsonbPopulateRecordsetRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.JsonbPopulateRecordset value) {
         super(JsonbPopulateRecordset.JSONB_POPULATE_RECORDSET);
 

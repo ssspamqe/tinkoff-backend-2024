@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.domain_udt_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -62,96 +59,56 @@ public class DomainUdtUsage implements Serializable {
         this.domainName = domainName;
     }
 
-    /**
-     * Getter for <code>information_schema.domain_udt_usage.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return this.udtCatalog;
     }
 
-    /**
-     * Setter for <code>information_schema.domain_udt_usage.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String udtCatalog) {
         this.udtCatalog = udtCatalog;
     }
 
-    /**
-     * Getter for <code>information_schema.domain_udt_usage.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return this.udtSchema;
     }
 
-    /**
-     * Setter for <code>information_schema.domain_udt_usage.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String udtSchema) {
         this.udtSchema = udtSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.domain_udt_usage.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return this.udtName;
     }
 
-    /**
-     * Setter for <code>information_schema.domain_udt_usage.udt_name</code>.
-     */
     public void setUdtName(@Nullable String udtName) {
         this.udtName = udtName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_udt_usage.domain_catalog</code>.
-     */
     @Nullable
     public String getDomainCatalog() {
         return this.domainCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_udt_usage.domain_catalog</code>.
-     */
     public void setDomainCatalog(@Nullable String domainCatalog) {
         this.domainCatalog = domainCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.domain_udt_usage.domain_schema</code>.
-     */
     @Nullable
     public String getDomainSchema() {
         return this.domainSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.domain_udt_usage.domain_schema</code>.
-     */
     public void setDomainSchema(@Nullable String domainSchema) {
         this.domainSchema = domainSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.domain_udt_usage.domain_name</code>.
-     */
     @Nullable
     public String getDomainName() {
         return this.domainName;
     }
 
-    /**
-     * Setter for <code>information_schema.domain_udt_usage.domain_name</code>.
-     */
     public void setDomainName(@Nullable String domainName) {
         this.domainName = domainName;
     }

@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_policies</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,121 +30,73 @@ public class PgPoliciesRecord extends TableRecordImpl<PgPoliciesRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.tablename</code>.
-     */
     public void setTablename(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.policyname</code>.
-     */
     public void setPolicyname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.policyname</code>.
-     */
     @Nullable
     public String getPolicyname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.permissive</code>.
-     */
     public void setPermissive(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.permissive</code>.
-     */
     @Nullable
     public String getPermissive() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.roles</code>.
-     */
     public void setRoles(@Nullable String[] value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.roles</code>.
-     */
     @Nullable
     public String[] getRoles() {
         return (String[]) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.cmd</code>.
-     */
     public void setCmd(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.cmd</code>.
-     */
     @Nullable
     public String getCmd() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.qual</code>.
-     */
     public void setQual(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.qual</code>.
-     */
     @Nullable
     public String getQual() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_policies.with_check</code>.
-     */
     public void setWithCheck(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_policies.with_check</code>.
-     */
     @Nullable
     public String getWithCheck() {
         return (String) get(7);
@@ -387,16 +336,10 @@ public class PgPoliciesRecord extends TableRecordImpl<PgPoliciesRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPoliciesRecord
-     */
     public PgPoliciesRecord() {
         super(PgPolicies.PG_POLICIES);
     }
 
-    /**
-     * Create a detached, initialised PgPoliciesRecord
-     */
     @ConstructorProperties({ "schemaname", "tablename", "policyname", "permissive", "roles", "cmd", "qual", "withCheck" })
     public PgPoliciesRecord(@Nullable String schemaname, @Nullable String tablename, @Nullable String policyname, @Nullable String permissive, @Nullable String[] roles, @Nullable String cmd, @Nullable String qual, @Nullable String withCheck) {
         super(PgPolicies.PG_POLICIES);
@@ -412,9 +355,6 @@ public class PgPoliciesRecord extends TableRecordImpl<PgPoliciesRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPoliciesRecord
-     */
     public PgPoliciesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPolicies value) {
         super(PgPolicies.PG_POLICIES);
 

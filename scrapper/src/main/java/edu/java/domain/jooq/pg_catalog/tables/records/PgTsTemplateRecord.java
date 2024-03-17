@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_template</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,80 +30,50 @@ public class PgTsTemplateRecord extends UpdatableRecordImpl<PgTsTemplateRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.tmplname</code>.
-     */
     public void setTmplname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.tmplname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTmplname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.tmplnamespace</code>.
-     */
     public void setTmplnamespace(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.tmplnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTmplnamespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.tmplinit</code>.
-     */
     public void setTmplinit(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.tmplinit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTmplinit() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ts_template.tmpllexize</code>.
-     */
     public void setTmpllexize(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ts_template.tmpllexize</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTmpllexize() {
@@ -279,16 +246,10 @@ public class PgTsTemplateRecord extends UpdatableRecordImpl<PgTsTemplateRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgTsTemplateRecord
-     */
     public PgTsTemplateRecord() {
         super(PgTsTemplate.PG_TS_TEMPLATE);
     }
 
-    /**
-     * Create a detached, initialised PgTsTemplateRecord
-     */
     @ConstructorProperties({ "oid", "tmplname", "tmplnamespace", "tmplinit", "tmpllexize" })
     public PgTsTemplateRecord(@NotNull Long oid, @NotNull String tmplname, @NotNull Long tmplnamespace, @NotNull String tmplinit, @NotNull String tmpllexize) {
         super(PgTsTemplate.PG_TS_TEMPLATE);
@@ -301,9 +262,6 @@ public class PgTsTemplateRecord extends UpdatableRecordImpl<PgTsTemplateRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgTsTemplateRecord
-     */
     public PgTsTemplateRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgTsTemplate value) {
         super(PgTsTemplate.PG_TS_TEMPLATE);
 

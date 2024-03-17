@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>information_schema._pg_numeric_scale</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,25 +27,12 @@ public class _PgNumericScale extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>information_schema._pg_numeric_scale.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>information_schema._pg_numeric_scale.typid</code>.
-     */
     public static final Parameter<Long> TYPID = Internal.createParameter("typid", SQLDataType.BIGINT, false, false);
 
-    /**
-     * The parameter <code>information_schema._pg_numeric_scale.typmod</code>.
-     */
     public static final Parameter<Integer> TYPMOD = Internal.createParameter("typmod", SQLDataType.INTEGER, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public _PgNumericScale() {
         super("_pg_numeric_scale", InformationSchema.INFORMATION_SCHEMA, SQLDataType.INTEGER);
 
@@ -57,32 +41,18 @@ public class _PgNumericScale extends AbstractRoutine<Integer> {
         addInParameter(TYPMOD);
     }
 
-    /**
-     * Set the <code>typid</code> parameter IN value to the routine
-     */
     public void setTypid(Long value) {
         setValue(TYPID, value);
     }
 
-    /**
-     * Set the <code>typid</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setTypid(Field<Long> field) {
         setField(TYPID, field);
     }
 
-    /**
-     * Set the <code>typmod</code> parameter IN value to the routine
-     */
     public void setTypmod(Integer value) {
         setValue(TYPMOD, value);
     }
 
-    /**
-     * Set the <code>typmod</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void setTypmod(Field<Integer> field) {
         setField(TYPMOD, field);
     }

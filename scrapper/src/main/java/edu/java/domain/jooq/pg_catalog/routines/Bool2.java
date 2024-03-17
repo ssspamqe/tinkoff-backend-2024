@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.bool</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,19 +28,10 @@ public class Bool2 extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.bool.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.bool._1</code>.
-     */
     public static final Parameter<JSONB> _1 = Internal.createParameter("_1", SQLDataType.JSONB, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Bool2() {
         super("bool", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -52,17 +40,10 @@ public class Bool2 extends AbstractRoutine<Boolean> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(JSONB value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<JSONB> field) {
         setField(_1, field);
     }

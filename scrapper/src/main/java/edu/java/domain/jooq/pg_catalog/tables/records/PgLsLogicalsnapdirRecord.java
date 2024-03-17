@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_logicalsnapdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,46 +31,28 @@ public class PgLsLogicalsnapdirRecord extends TableRecordImpl<PgLsLogicalsnapdir
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalsnapdir.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalsnapdir.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalsnapdir.size</code>.
-     */
     public void setSize(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalsnapdir.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_logicalsnapdir.modification</code>.
-     */
     public void setModification(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_logicalsnapdir.modification</code>.
-     */
     @Nullable
     public OffsetDateTime getModification() {
         return (OffsetDateTime) get(2);
@@ -183,16 +162,10 @@ public class PgLsLogicalsnapdirRecord extends TableRecordImpl<PgLsLogicalsnapdir
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLsLogicalsnapdirRecord
-     */
     public PgLsLogicalsnapdirRecord() {
         super(PgLsLogicalsnapdir.PG_LS_LOGICALSNAPDIR);
     }
 
-    /**
-     * Create a detached, initialised PgLsLogicalsnapdirRecord
-     */
     @ConstructorProperties({ "name", "size", "modification" })
     public PgLsLogicalsnapdirRecord(@Nullable String name, @Nullable Long size, @Nullable OffsetDateTime modification) {
         super(PgLsLogicalsnapdir.PG_LS_LOGICALSNAPDIR);
@@ -203,9 +176,6 @@ public class PgLsLogicalsnapdirRecord extends TableRecordImpl<PgLsLogicalsnapdir
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLsLogicalsnapdirRecord
-     */
     public PgLsLogicalsnapdirRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLsLogicalsnapdir value) {
         super(PgLsLogicalsnapdir.PG_LS_LOGICALSNAPDIR);
 

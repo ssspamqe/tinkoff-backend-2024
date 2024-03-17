@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_hba_file_rules</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -83,167 +80,101 @@ public class PgHbaFileRules implements Serializable {
         this.error = error;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.rule_number</code>.
-     */
     @Nullable
     public Integer getRuleNumber() {
         return this.ruleNumber;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.rule_number</code>.
-     */
     public void setRuleNumber(@Nullable Integer ruleNumber) {
         this.ruleNumber = ruleNumber;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.file_name</code>.
-     */
     @Nullable
     public String getFileName() {
         return this.fileName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.file_name</code>.
-     */
     public void setFileName(@Nullable String fileName) {
         this.fileName = fileName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.line_number</code>.
-     */
     @Nullable
     public Integer getLineNumber() {
         return this.lineNumber;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.line_number</code>.
-     */
     public void setLineNumber(@Nullable Integer lineNumber) {
         this.lineNumber = lineNumber;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.type</code>.
-     */
     @Nullable
     public String getType() {
         return this.type;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.type</code>.
-     */
     public void setType(@Nullable String type) {
         this.type = type;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.database</code>.
-     */
     @Nullable
     public String[] getDatabase() {
         return this.database;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.database</code>.
-     */
     public void setDatabase(@Nullable String[] database) {
         this.database = database;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.user_name</code>.
-     */
     @Nullable
     public String[] getUserName() {
         return this.userName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.user_name</code>.
-     */
     public void setUserName(@Nullable String[] userName) {
         this.userName = userName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.address</code>.
-     */
     @Nullable
     public String getAddress() {
         return this.address;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.address</code>.
-     */
     public void setAddress(@Nullable String address) {
         this.address = address;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.netmask</code>.
-     */
     @Nullable
     public String getNetmask() {
         return this.netmask;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.netmask</code>.
-     */
     public void setNetmask(@Nullable String netmask) {
         this.netmask = netmask;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.auth_method</code>.
-     */
     @Nullable
     public String getAuthMethod() {
         return this.authMethod;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.auth_method</code>.
-     */
     public void setAuthMethod(@Nullable String authMethod) {
         this.authMethod = authMethod;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.options</code>.
-     */
     @Nullable
     public String[] getOptions() {
         return this.options;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.options</code>.
-     */
     public void setOptions(@Nullable String[] options) {
         this.options = options;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_hba_file_rules.error</code>.
-     */
     @Nullable
     public String getError() {
         return this.error;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_hba_file_rules.error</code>.
-     */
     public void setError(@Nullable String error) {
         this.error = error;
     }

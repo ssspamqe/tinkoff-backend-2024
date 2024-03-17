@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgCollationRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_collation</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,78 +45,36 @@ public class PgCollation extends TableImpl<PgCollationRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_collation</code>
-     */
     public static final PgCollation PG_COLLATION = new PgCollation();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgCollationRecord> getRecordType() {
         return PgCollationRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_collation.oid</code>.
-     */
     public final TableField<PgCollationRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collname</code>.
-     */
     public final TableField<PgCollationRecord, String> COLLNAME = createField(DSL.name("collname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collnamespace</code>.
-     */
     public final TableField<PgCollationRecord, Long> COLLNAMESPACE = createField(DSL.name("collnamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collowner</code>.
-     */
     public final TableField<PgCollationRecord, Long> COLLOWNER = createField(DSL.name("collowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collprovider</code>.
-     */
     public final TableField<PgCollationRecord, String> COLLPROVIDER = createField(DSL.name("collprovider"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collisdeterministic</code>.
-     */
     public final TableField<PgCollationRecord, Boolean> COLLISDETERMINISTIC = createField(DSL.name("collisdeterministic"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collencoding</code>.
-     */
     public final TableField<PgCollationRecord, Integer> COLLENCODING = createField(DSL.name("collencoding"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collcollate</code>.
-     */
     public final TableField<PgCollationRecord, String> COLLCOLLATE = createField(DSL.name("collcollate"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collctype</code>.
-     */
     public final TableField<PgCollationRecord, String> COLLCTYPE = createField(DSL.name("collctype"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.colliculocale</code>.
-     */
     public final TableField<PgCollationRecord, String> COLLICULOCALE = createField(DSL.name("colliculocale"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collicurules</code>.
-     */
     public final TableField<PgCollationRecord, String> COLLICURULES = createField(DSL.name("collicurules"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_collation.collversion</code>.
-     */
     public final TableField<PgCollationRecord, String> COLLVERSION = createField(DSL.name("collversion"), SQLDataType.CLOB, this, "");
 
     private PgCollation(Name alias, Table<PgCollationRecord> aliased) {
@@ -131,23 +85,14 @@ public class PgCollation extends TableImpl<PgCollationRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_collation</code> table reference
-     */
     public PgCollation(String alias) {
         this(DSL.name(alias), PG_COLLATION);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_collation</code> table reference
-     */
     public PgCollation(Name alias) {
         this(alias, PG_COLLATION);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_collation</code> table reference
-     */
     public PgCollation() {
         this(DSL.name("pg_collation"), null);
     }
@@ -192,27 +137,18 @@ public class PgCollation extends TableImpl<PgCollationRecord> {
         return new PgCollation(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCollation rename(String name) {
         return new PgCollation(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCollation rename(Name name) {
         return new PgCollation(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgCollation rename(Table<?> name) {
@@ -229,17 +165,10 @@ public class PgCollation extends TableImpl<PgCollationRecord> {
         return (Row12) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function12<? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super Boolean, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function12<? super Long, ? super String, ? super Long, ? super Long, ? super String, ? super Boolean, ? super Integer, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgListeningChannelsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_listening_channels</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,24 +38,14 @@ public class PgListeningChannels extends TableImpl<PgListeningChannelsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_listening_channels</code>
-     */
     public static final PgListeningChannels PG_LISTENING_CHANNELS = new PgListeningChannels();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgListeningChannelsRecord> getRecordType() {
         return PgListeningChannelsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_listening_channels.pg_listening_channels</code>.
-     */
     public final TableField<PgListeningChannelsRecord, String> PG_LISTENING_CHANNELS_ = createField(DSL.name("pg_listening_channels"), SQLDataType.CLOB, this, "");
 
     private PgListeningChannels(Name alias, Table<PgListeningChannelsRecord> aliased) {
@@ -72,25 +57,14 @@ public class PgListeningChannels extends TableImpl<PgListeningChannelsRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_listening_channels</code> table
-     * reference
-     */
     public PgListeningChannels(String alias) {
         this(DSL.name(alias), PG_LISTENING_CHANNELS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_listening_channels</code> table
-     * reference
-     */
     public PgListeningChannels(Name alias) {
         this(alias, PG_LISTENING_CHANNELS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_listening_channels</code> table reference
-     */
     public PgListeningChannels() {
         this(DSL.name("pg_listening_channels"), null);
     }
@@ -119,27 +93,18 @@ public class PgListeningChannels extends TableImpl<PgListeningChannelsRecord> {
         return new PgListeningChannels(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgListeningChannels rename(String name) {
         return new PgListeningChannels(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgListeningChannels rename(Name name) {
         return new PgListeningChannels(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgListeningChannels rename(Table<?> name) {
@@ -156,26 +121,16 @@ public class PgListeningChannels extends TableImpl<PgListeningChannelsRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgListeningChannels call() {
         PgListeningChannels result = new PgListeningChannels(DSL.name("pg_listening_channels"), null, new Field[] {});
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

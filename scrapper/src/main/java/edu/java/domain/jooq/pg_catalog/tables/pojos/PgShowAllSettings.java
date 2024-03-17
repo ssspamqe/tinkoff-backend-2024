@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_show_all_settings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -107,257 +104,155 @@ public class PgShowAllSettings implements Serializable {
         this.pendingRestart = pendingRestart;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.name</code>.
-     */
     @Nullable
     public String getName() {
         return this.name;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.name</code>.
-     */
     public void setName(@Nullable String name) {
         this.name = name;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.setting</code>.
-     */
     @Nullable
     public String getSetting() {
         return this.setting;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.setting</code>.
-     */
     public void setSetting(@Nullable String setting) {
         this.setting = setting;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.unit</code>.
-     */
     @Nullable
     public String getUnit() {
         return this.unit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.unit</code>.
-     */
     public void setUnit(@Nullable String unit) {
         this.unit = unit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.category</code>.
-     */
     @Nullable
     public String getCategory() {
         return this.category;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.category</code>.
-     */
     public void setCategory(@Nullable String category) {
         this.category = category;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.short_desc</code>.
-     */
     @Nullable
     public String getShortDesc() {
         return this.shortDesc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.short_desc</code>.
-     */
     public void setShortDesc(@Nullable String shortDesc) {
         this.shortDesc = shortDesc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.extra_desc</code>.
-     */
     @Nullable
     public String getExtraDesc() {
         return this.extraDesc;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.extra_desc</code>.
-     */
     public void setExtraDesc(@Nullable String extraDesc) {
         this.extraDesc = extraDesc;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.context</code>.
-     */
     @Nullable
     public String getContext() {
         return this.context;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.context</code>.
-     */
     public void setContext(@Nullable String context) {
         this.context = context;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.vartype</code>.
-     */
     @Nullable
     public String getVartype() {
         return this.vartype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.vartype</code>.
-     */
     public void setVartype(@Nullable String vartype) {
         this.vartype = vartype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.source</code>.
-     */
     @Nullable
     public String getSource() {
         return this.source;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.source</code>.
-     */
     public void setSource(@Nullable String source) {
         this.source = source;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.min_val</code>.
-     */
     @Nullable
     public String getMinVal() {
         return this.minVal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.min_val</code>.
-     */
     public void setMinVal(@Nullable String minVal) {
         this.minVal = minVal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.max_val</code>.
-     */
     @Nullable
     public String getMaxVal() {
         return this.maxVal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.max_val</code>.
-     */
     public void setMaxVal(@Nullable String maxVal) {
         this.maxVal = maxVal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.enumvals</code>.
-     */
     @Nullable
     public String[] getEnumvals() {
         return this.enumvals;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.enumvals</code>.
-     */
     public void setEnumvals(@Nullable String[] enumvals) {
         this.enumvals = enumvals;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.boot_val</code>.
-     */
     @Nullable
     public String getBootVal() {
         return this.bootVal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.boot_val</code>.
-     */
     public void setBootVal(@Nullable String bootVal) {
         this.bootVal = bootVal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.reset_val</code>.
-     */
     @Nullable
     public String getResetVal() {
         return this.resetVal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.reset_val</code>.
-     */
     public void setResetVal(@Nullable String resetVal) {
         this.resetVal = resetVal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.sourcefile</code>.
-     */
     @Nullable
     public String getSourcefile() {
         return this.sourcefile;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.sourcefile</code>.
-     */
     public void setSourcefile(@Nullable String sourcefile) {
         this.sourcefile = sourcefile;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.sourceline</code>.
-     */
     @Nullable
     public Integer getSourceline() {
         return this.sourceline;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.sourceline</code>.
-     */
     public void setSourceline(@Nullable Integer sourceline) {
         this.sourceline = sourceline;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_show_all_settings.pending_restart</code>.
-     */
     @Nullable
     public Boolean getPendingRestart() {
         return this.pendingRestart;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_show_all_settings.pending_restart</code>.
-     */
     public void setPendingRestart(@Nullable Boolean pendingRestart) {
         this.pendingRestart = pendingRestart;
     }

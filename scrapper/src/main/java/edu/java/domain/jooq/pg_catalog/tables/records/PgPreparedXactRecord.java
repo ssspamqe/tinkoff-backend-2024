@@ -19,9 +19,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_prepared_xact</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,76 +31,46 @@ public class PgPreparedXactRecord extends TableRecordImpl<PgPreparedXactRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.transaction</code>.
-     */
     public void setTransaction(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.transaction</code>.
-     */
     @Nullable
     public Long getTransaction() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.gid</code>.
-     */
     public void setGid(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.gid</code>.
-     */
     @Nullable
     public String getGid() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.prepared</code>.
-     */
     public void setPrepared(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.prepared</code>.
-     */
     @Nullable
     public OffsetDateTime getPrepared() {
         return (OffsetDateTime) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.ownerid</code>.
-     */
     public void setOwnerid(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.ownerid</code>.
-     */
     @Nullable
     public Long getOwnerid() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xact.dbid</code>.
-     */
     public void setDbid(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xact.dbid</code>.
-     */
     @Nullable
     public Long getDbid() {
         return (Long) get(4);
@@ -265,16 +232,10 @@ public class PgPreparedXactRecord extends TableRecordImpl<PgPreparedXactRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPreparedXactRecord
-     */
     public PgPreparedXactRecord() {
         super(PgPreparedXact.PG_PREPARED_XACT);
     }
 
-    /**
-     * Create a detached, initialised PgPreparedXactRecord
-     */
     @ConstructorProperties({ "transaction", "gid", "prepared", "ownerid", "dbid" })
     public PgPreparedXactRecord(@Nullable Long transaction, @Nullable String gid, @Nullable OffsetDateTime prepared, @Nullable Long ownerid, @Nullable Long dbid) {
         super(PgPreparedXact.PG_PREPARED_XACT);
@@ -287,9 +248,6 @@ public class PgPreparedXactRecord extends TableRecordImpl<PgPreparedXactRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPreparedXactRecord
-     */
     public PgPreparedXactRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPreparedXact value) {
         super(PgPreparedXact.PG_PREPARED_XACT);
 

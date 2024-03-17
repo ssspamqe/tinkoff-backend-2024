@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgTsTemplateRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ts_template</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,43 +45,22 @@ public class PgTsTemplate extends TableImpl<PgTsTemplateRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_ts_template</code>
-     */
     public static final PgTsTemplate PG_TS_TEMPLATE = new PgTsTemplate();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgTsTemplateRecord> getRecordType() {
         return PgTsTemplateRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_ts_template.oid</code>.
-     */
     public final TableField<PgTsTemplateRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_template.tmplname</code>.
-     */
     public final TableField<PgTsTemplateRecord, String> TMPLNAME = createField(DSL.name("tmplname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_template.tmplnamespace</code>.
-     */
     public final TableField<PgTsTemplateRecord, Long> TMPLNAMESPACE = createField(DSL.name("tmplnamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_template.tmplinit</code>.
-     */
     public final TableField<PgTsTemplateRecord, String> TMPLINIT = createField(DSL.name("tmplinit"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_ts_template.tmpllexize</code>.
-     */
     public final TableField<PgTsTemplateRecord, String> TMPLLEXIZE = createField(DSL.name("tmpllexize"), SQLDataType.VARCHAR.nullable(false), this, "");
 
     private PgTsTemplate(Name alias, Table<PgTsTemplateRecord> aliased) {
@@ -96,23 +71,14 @@ public class PgTsTemplate extends TableImpl<PgTsTemplateRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ts_template</code> table reference
-     */
     public PgTsTemplate(String alias) {
         this(DSL.name(alias), PG_TS_TEMPLATE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_ts_template</code> table reference
-     */
     public PgTsTemplate(Name alias) {
         this(alias, PG_TS_TEMPLATE);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_ts_template</code> table reference
-     */
     public PgTsTemplate() {
         this(DSL.name("pg_ts_template"), null);
     }
@@ -157,27 +123,18 @@ public class PgTsTemplate extends TableImpl<PgTsTemplateRecord> {
         return new PgTsTemplate(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsTemplate rename(String name) {
         return new PgTsTemplate(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsTemplate rename(Name name) {
         return new PgTsTemplate(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgTsTemplate rename(Table<?> name) {
@@ -194,17 +151,10 @@ public class PgTsTemplate extends TableImpl<PgTsTemplateRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Long, ? super String, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Long, ? super String, ? super Long, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

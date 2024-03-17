@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_inherits</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,64 +30,40 @@ public class PgInheritsRecord extends UpdatableRecordImpl<PgInheritsRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_inherits.inhrelid</code>.
-     */
     public void setInhrelid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_inherits.inhrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getInhrelid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_inherits.inhparent</code>.
-     */
     public void setInhparent(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_inherits.inhparent</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getInhparent() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_inherits.inhseqno</code>.
-     */
     public void setInhseqno(@NotNull Integer value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_inherits.inhseqno</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getInhseqno() {
         return (Integer) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_inherits.inhdetachpending</code>.
-     */
     public void setInhdetachpending(@NotNull Boolean value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_inherits.inhdetachpending</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getInhdetachpending() {
@@ -237,16 +210,10 @@ public class PgInheritsRecord extends UpdatableRecordImpl<PgInheritsRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgInheritsRecord
-     */
     public PgInheritsRecord() {
         super(PgInherits.PG_INHERITS);
     }
 
-    /**
-     * Create a detached, initialised PgInheritsRecord
-     */
     @ConstructorProperties({ "inhrelid", "inhparent", "inhseqno", "inhdetachpending" })
     public PgInheritsRecord(@NotNull Long inhrelid, @NotNull Long inhparent, @NotNull Integer inhseqno, @NotNull Boolean inhdetachpending) {
         super(PgInherits.PG_INHERITS);
@@ -258,9 +225,6 @@ public class PgInheritsRecord extends UpdatableRecordImpl<PgInheritsRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgInheritsRecord
-     */
     public PgInheritsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgInherits value) {
         super(PgInherits.PG_INHERITS);
 

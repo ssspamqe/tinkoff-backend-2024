@@ -18,9 +18,6 @@ import org.jooq.Row17;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stats_ext_exprs</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,262 +30,154 @@ public class PgStatsExtExprsRecord extends TableRecordImpl<PgStatsExtExprsRecord
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.tablename</code>.
-     */
     public void setTablename(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stats_ext_exprs.statistics_schemaname</code>.
-     */
     public void setStatisticsSchemaname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stats_ext_exprs.statistics_schemaname</code>.
-     */
     @Nullable
     public String getStatisticsSchemaname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.statistics_name</code>.
-     */
     public void setStatisticsName(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.statistics_name</code>.
-     */
     @Nullable
     public String getStatisticsName() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.statistics_owner</code>.
-     */
     public void setStatisticsOwner(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.statistics_owner</code>.
-     */
     @Nullable
     public String getStatisticsOwner() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.expr</code>.
-     */
     public void setExpr(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.expr</code>.
-     */
     @Nullable
     public String getExpr() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.inherited</code>.
-     */
     public void setInherited(@Nullable Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.inherited</code>.
-     */
     @Nullable
     public Boolean getInherited() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.null_frac</code>.
-     */
     public void setNullFrac(@Nullable Float value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.null_frac</code>.
-     */
     @Nullable
     public Float getNullFrac() {
         return (Float) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.avg_width</code>.
-     */
     public void setAvgWidth(@Nullable Integer value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.avg_width</code>.
-     */
     @Nullable
     public Integer getAvgWidth() {
         return (Integer) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.n_distinct</code>.
-     */
     public void setNDistinct(@Nullable Float value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.n_distinct</code>.
-     */
     @Nullable
     public Float getNDistinct() {
         return (Float) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.most_common_vals</code>.
-     */
     public void setMostCommonVals(@Nullable Object[] value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.most_common_vals</code>.
-     */
     @Nullable
     public Object[] getMostCommonVals() {
         return (Object[]) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.most_common_freqs</code>.
-     */
     public void setMostCommonFreqs(@Nullable Float[] value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.most_common_freqs</code>.
-     */
     @Nullable
     public Float[] getMostCommonFreqs() {
         return (Float[]) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.histogram_bounds</code>.
-     */
     public void setHistogramBounds(@Nullable Object[] value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.histogram_bounds</code>.
-     */
     @Nullable
     public Object[] getHistogramBounds() {
         return (Object[]) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.correlation</code>.
-     */
     public void setCorrelation(@Nullable Float value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.correlation</code>.
-     */
     @Nullable
     public Float getCorrelation() {
         return (Float) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stats_ext_exprs.most_common_elems</code>.
-     */
     public void setMostCommonElems(@Nullable Object[] value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stats_ext_exprs.most_common_elems</code>.
-     */
     @Nullable
     public Object[] getMostCommonElems() {
         return (Object[]) get(14);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stats_ext_exprs.most_common_elem_freqs</code>.
-     */
     public void setMostCommonElemFreqs(@Nullable Float[] value) {
         set(15, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stats_ext_exprs.most_common_elem_freqs</code>.
-     */
     @Nullable
     public Float[] getMostCommonElemFreqs() {
         return (Float[]) get(15);
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stats_ext_exprs.elem_count_histogram</code>.
-     */
     public void setElemCountHistogram(@Nullable Float[] value) {
         set(16, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stats_ext_exprs.elem_count_histogram</code>.
-     */
     @Nullable
     public Float[] getElemCountHistogram() {
         return (Float[]) get(16);
@@ -762,16 +651,10 @@ public class PgStatsExtExprsRecord extends TableRecordImpl<PgStatsExtExprsRecord
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatsExtExprsRecord
-     */
     public PgStatsExtExprsRecord() {
         super(PgStatsExtExprs.PG_STATS_EXT_EXPRS);
     }
 
-    /**
-     * Create a detached, initialised PgStatsExtExprsRecord
-     */
     @ConstructorProperties({ "schemaname", "tablename", "statisticsSchemaname", "statisticsName", "statisticsOwner", "expr", "inherited", "nullFrac", "avgWidth", "nDistinct", "mostCommonVals", "mostCommonFreqs", "histogramBounds", "correlation", "mostCommonElems", "mostCommonElemFreqs", "elemCountHistogram" })
     public PgStatsExtExprsRecord(@Nullable String schemaname, @Nullable String tablename, @Nullable String statisticsSchemaname, @Nullable String statisticsName, @Nullable String statisticsOwner, @Nullable String expr, @Nullable Boolean inherited, @Nullable Float nullFrac, @Nullable Integer avgWidth, @Nullable Float nDistinct, @Nullable Object[] mostCommonVals, @Nullable Float[] mostCommonFreqs, @Nullable Object[] histogramBounds, @Nullable Float correlation, @Nullable Object[] mostCommonElems, @Nullable Float[] mostCommonElemFreqs, @Nullable Float[] elemCountHistogram) {
         super(PgStatsExtExprs.PG_STATS_EXT_EXPRS);
@@ -796,9 +679,6 @@ public class PgStatsExtExprsRecord extends TableRecordImpl<PgStatsExtExprsRecord
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatsExtExprsRecord
-     */
     public PgStatsExtExprsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatsExtExprs value) {
         super(PgStatsExtExprs.PG_STATS_EXT_EXPRS);
 

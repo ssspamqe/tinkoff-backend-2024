@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_seclabel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,82 +55,52 @@ public class PgSeclabel implements Serializable {
         this.label = label;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return this.objoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.objoid</code>.
-     */
     public void setObjoid(@NotNull Long objoid) {
         this.objoid = objoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return this.classoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.classoid</code>.
-     */
     public void setClassoid(@NotNull Long classoid) {
         this.classoid = classoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.objsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getObjsubid() {
         return this.objsubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.objsubid</code>.
-     */
     public void setObjsubid(@NotNull Integer objsubid) {
         this.objsubid = objsubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.provider</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProvider() {
         return this.provider;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.provider</code>.
-     */
     public void setProvider(@NotNull String provider) {
         this.provider = provider;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_seclabel.label</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getLabel() {
         return this.label;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_seclabel.label</code>.
-     */
     public void setLabel(@NotNull String label) {
         this.label = label;
     }

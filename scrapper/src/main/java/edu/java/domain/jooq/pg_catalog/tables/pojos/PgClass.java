@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_class</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -172,538 +169,330 @@ public class PgClass implements Serializable {
         this.relpartbound = relpartbound;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRelname() {
         return this.relname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relname</code>.
-     */
     public void setRelname(@NotNull String relname) {
         this.relname = relname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRelnamespace() {
         return this.relnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relnamespace</code>.
-     */
     public void setRelnamespace(@NotNull Long relnamespace) {
         this.relnamespace = relnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.reltype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getReltype() {
         return this.reltype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.reltype</code>.
-     */
     public void setReltype(@NotNull Long reltype) {
         this.reltype = reltype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.reloftype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getReloftype() {
         return this.reloftype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.reloftype</code>.
-     */
     public void setReloftype(@NotNull Long reloftype) {
         this.reloftype = reloftype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRelowner() {
         return this.relowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relowner</code>.
-     */
     public void setRelowner(@NotNull Long relowner) {
         this.relowner = relowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relam</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRelam() {
         return this.relam;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relam</code>.
-     */
     public void setRelam(@NotNull Long relam) {
         this.relam = relam;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relfilenode</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRelfilenode() {
         return this.relfilenode;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relfilenode</code>.
-     */
     public void setRelfilenode(@NotNull Long relfilenode) {
         this.relfilenode = relfilenode;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.reltablespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getReltablespace() {
         return this.reltablespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.reltablespace</code>.
-     */
     public void setReltablespace(@NotNull Long reltablespace) {
         this.reltablespace = reltablespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relpages</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getRelpages() {
         return this.relpages;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relpages</code>.
-     */
     public void setRelpages(@NotNull Integer relpages) {
         this.relpages = relpages;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.reltuples</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Float getReltuples() {
         return this.reltuples;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.reltuples</code>.
-     */
     public void setReltuples(@NotNull Float reltuples) {
         this.reltuples = reltuples;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relallvisible</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getRelallvisible() {
         return this.relallvisible;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relallvisible</code>.
-     */
     public void setRelallvisible(@NotNull Integer relallvisible) {
         this.relallvisible = relallvisible;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.reltoastrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getReltoastrelid() {
         return this.reltoastrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.reltoastrelid</code>.
-     */
     public void setReltoastrelid(@NotNull Long reltoastrelid) {
         this.reltoastrelid = reltoastrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relhasindex</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelhasindex() {
         return this.relhasindex;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relhasindex</code>.
-     */
     public void setRelhasindex(@NotNull Boolean relhasindex) {
         this.relhasindex = relhasindex;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relisshared</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelisshared() {
         return this.relisshared;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relisshared</code>.
-     */
     public void setRelisshared(@NotNull Boolean relisshared) {
         this.relisshared = relisshared;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relpersistence</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRelpersistence() {
         return this.relpersistence;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relpersistence</code>.
-     */
     public void setRelpersistence(@NotNull String relpersistence) {
         this.relpersistence = relpersistence;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relkind</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRelkind() {
         return this.relkind;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relkind</code>.
-     */
     public void setRelkind(@NotNull String relkind) {
         this.relkind = relkind;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relnatts</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getRelnatts() {
         return this.relnatts;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relnatts</code>.
-     */
     public void setRelnatts(@NotNull Short relnatts) {
         this.relnatts = relnatts;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relchecks</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getRelchecks() {
         return this.relchecks;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relchecks</code>.
-     */
     public void setRelchecks(@NotNull Short relchecks) {
         this.relchecks = relchecks;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relhasrules</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelhasrules() {
         return this.relhasrules;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relhasrules</code>.
-     */
     public void setRelhasrules(@NotNull Boolean relhasrules) {
         this.relhasrules = relhasrules;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relhastriggers</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelhastriggers() {
         return this.relhastriggers;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relhastriggers</code>.
-     */
     public void setRelhastriggers(@NotNull Boolean relhastriggers) {
         this.relhastriggers = relhastriggers;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relhassubclass</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelhassubclass() {
         return this.relhassubclass;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relhassubclass</code>.
-     */
     public void setRelhassubclass(@NotNull Boolean relhassubclass) {
         this.relhassubclass = relhassubclass;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relrowsecurity</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelrowsecurity() {
         return this.relrowsecurity;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relrowsecurity</code>.
-     */
     public void setRelrowsecurity(@NotNull Boolean relrowsecurity) {
         this.relrowsecurity = relrowsecurity;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relforcerowsecurity</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelforcerowsecurity() {
         return this.relforcerowsecurity;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relforcerowsecurity</code>.
-     */
     public void setRelforcerowsecurity(@NotNull Boolean relforcerowsecurity) {
         this.relforcerowsecurity = relforcerowsecurity;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relispopulated</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelispopulated() {
         return this.relispopulated;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relispopulated</code>.
-     */
     public void setRelispopulated(@NotNull Boolean relispopulated) {
         this.relispopulated = relispopulated;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relreplident</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRelreplident() {
         return this.relreplident;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relreplident</code>.
-     */
     public void setRelreplident(@NotNull String relreplident) {
         this.relreplident = relreplident;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relispartition</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getRelispartition() {
         return this.relispartition;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relispartition</code>.
-     */
     public void setRelispartition(@NotNull Boolean relispartition) {
         this.relispartition = relispartition;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relrewrite</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRelrewrite() {
         return this.relrewrite;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relrewrite</code>.
-     */
     public void setRelrewrite(@NotNull Long relrewrite) {
         this.relrewrite = relrewrite;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relfrozenxid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRelfrozenxid() {
         return this.relfrozenxid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relfrozenxid</code>.
-     */
     public void setRelfrozenxid(@NotNull Long relfrozenxid) {
         this.relfrozenxid = relfrozenxid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relminmxid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRelminmxid() {
         return this.relminmxid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relminmxid</code>.
-     */
     public void setRelminmxid(@NotNull Long relminmxid) {
         this.relminmxid = relminmxid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.relacl</code>.
-     */
     @Nullable
     public String[] getRelacl() {
         return this.relacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.relacl</code>.
-     */
     public void setRelacl(@Nullable String[] relacl) {
         this.relacl = relacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_class.reloptions</code>.
-     */
     @Nullable
     public String[] getReloptions() {
         return this.reloptions;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_class.reloptions</code>.
-     */
     public void setReloptions(@Nullable String[] reloptions) {
         this.reloptions = reloptions;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getRelpartbound() {
         return this.relpartbound;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setRelpartbound(@Nullable Object relpartbound) {
         this.relpartbound = relpartbound;

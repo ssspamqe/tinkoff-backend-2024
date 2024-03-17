@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.transforms</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,121 +30,73 @@ public class TransformsRecord extends TableRecordImpl<TransformsRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.transforms.udt_catalog</code>.
-     */
     public void setUdtCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.udt_catalog</code>.
-     */
     @Nullable
     public String getUdtCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.udt_schema</code>.
-     */
     public void setUdtSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.udt_schema</code>.
-     */
     @Nullable
     public String getUdtSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.udt_name</code>.
-     */
     public void setUdtName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.udt_name</code>.
-     */
     @Nullable
     public String getUdtName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.group_name</code>.
-     */
     public void setGroupName(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.group_name</code>.
-     */
     @Nullable
     public String getGroupName() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>information_schema.transforms.transform_type</code>.
-     */
     public void setTransformType(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>information_schema.transforms.transform_type</code>.
-     */
     @Nullable
     public String getTransformType() {
         return (String) get(7);
@@ -387,16 +336,10 @@ public class TransformsRecord extends TableRecordImpl<TransformsRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached TransformsRecord
-     */
     public TransformsRecord() {
         super(Transforms.TRANSFORMS);
     }
 
-    /**
-     * Create a detached, initialised TransformsRecord
-     */
     @ConstructorProperties({ "udtCatalog", "udtSchema", "udtName", "specificCatalog", "specificSchema", "specificName", "groupName", "transformType" })
     public TransformsRecord(@Nullable String udtCatalog, @Nullable String udtSchema, @Nullable String udtName, @Nullable String specificCatalog, @Nullable String specificSchema, @Nullable String specificName, @Nullable String groupName, @Nullable String transformType) {
         super(Transforms.TRANSFORMS);
@@ -412,9 +355,6 @@ public class TransformsRecord extends TableRecordImpl<TransformsRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised TransformsRecord
-     */
     public TransformsRecord(edu.java.domain.jooq.information_schema.tables.pojos.Transforms value) {
         super(Transforms.TRANSFORMS);
 

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.TriggeredUpdateColumnsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.triggered_update_columns</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,61 +39,26 @@ public class TriggeredUpdateColumns extends TableImpl<TriggeredUpdateColumnsReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.triggered_update_columns</code>
-     */
     public static final TriggeredUpdateColumns TRIGGERED_UPDATE_COLUMNS = new TriggeredUpdateColumns();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TriggeredUpdateColumnsRecord> getRecordType() {
         return TriggeredUpdateColumnsRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.triggered_update_columns.trigger_catalog</code>.
-     */
     public final TableField<TriggeredUpdateColumnsRecord, String> TRIGGER_CATALOG = createField(DSL.name("trigger_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggered_update_columns.trigger_schema</code>.
-     */
     public final TableField<TriggeredUpdateColumnsRecord, String> TRIGGER_SCHEMA = createField(DSL.name("trigger_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggered_update_columns.trigger_name</code>.
-     */
     public final TableField<TriggeredUpdateColumnsRecord, String> TRIGGER_NAME = createField(DSL.name("trigger_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggered_update_columns.event_object_catalog</code>.
-     */
     public final TableField<TriggeredUpdateColumnsRecord, String> EVENT_OBJECT_CATALOG = createField(DSL.name("event_object_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggered_update_columns.event_object_schema</code>.
-     */
     public final TableField<TriggeredUpdateColumnsRecord, String> EVENT_OBJECT_SCHEMA = createField(DSL.name("event_object_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggered_update_columns.event_object_table</code>.
-     */
     public final TableField<TriggeredUpdateColumnsRecord, String> EVENT_OBJECT_TABLE = createField(DSL.name("event_object_table"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.triggered_update_columns.event_object_column</code>.
-     */
     public final TableField<TriggeredUpdateColumnsRecord, String> EVENT_OBJECT_COLUMN = createField(DSL.name("event_object_column"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private TriggeredUpdateColumns(Name alias, Table<TriggeredUpdateColumnsRecord> aliased) {
@@ -128,26 +88,14 @@ public class TriggeredUpdateColumns extends TableImpl<TriggeredUpdateColumnsReco
         """));
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.triggered_update_columns</code> table reference
-     */
     public TriggeredUpdateColumns(String alias) {
         this(DSL.name(alias), TRIGGERED_UPDATE_COLUMNS);
     }
 
-    /**
-     * Create an aliased
-     * <code>information_schema.triggered_update_columns</code> table reference
-     */
     public TriggeredUpdateColumns(Name alias) {
         this(alias, TRIGGERED_UPDATE_COLUMNS);
     }
 
-    /**
-     * Create a <code>information_schema.triggered_update_columns</code> table
-     * reference
-     */
     public TriggeredUpdateColumns() {
         this(DSL.name("triggered_update_columns"), null);
     }
@@ -180,27 +128,18 @@ public class TriggeredUpdateColumns extends TableImpl<TriggeredUpdateColumnsReco
         return new TriggeredUpdateColumns(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TriggeredUpdateColumns rename(String name) {
         return new TriggeredUpdateColumns(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TriggeredUpdateColumns rename(Name name) {
         return new TriggeredUpdateColumns(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public TriggeredUpdateColumns rename(Table<?> name) {
@@ -217,17 +156,10 @@ public class TriggeredUpdateColumns extends TableImpl<TriggeredUpdateColumnsReco
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

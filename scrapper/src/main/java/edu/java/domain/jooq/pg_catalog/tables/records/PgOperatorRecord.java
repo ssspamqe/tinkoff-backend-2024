@@ -18,9 +18,6 @@ import org.jooq.Row15;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_operator</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,240 +30,150 @@ public class PgOperatorRecord extends UpdatableRecordImpl<PgOperatorRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprname</code>.
-     */
     public void setOprname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOprname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprnamespace</code>.
-     */
     public void setOprnamespace(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOprnamespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprowner</code>.
-     */
     public void setOprowner(@NotNull Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOprowner() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprkind</code>.
-     */
     public void setOprkind(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprkind</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOprkind() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprcanmerge</code>.
-     */
     public void setOprcanmerge(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprcanmerge</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getOprcanmerge() {
         return (Boolean) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprcanhash</code>.
-     */
     public void setOprcanhash(@NotNull Boolean value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprcanhash</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getOprcanhash() {
         return (Boolean) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprleft</code>.
-     */
     public void setOprleft(@NotNull Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprleft</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOprleft() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprright</code>.
-     */
     public void setOprright(@NotNull Long value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprright</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOprright() {
         return (Long) get(8);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprresult</code>.
-     */
     public void setOprresult(@NotNull Long value) {
         set(9, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprresult</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOprresult() {
         return (Long) get(9);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprcom</code>.
-     */
     public void setOprcom(@NotNull Long value) {
         set(10, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprcom</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOprcom() {
         return (Long) get(10);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprnegate</code>.
-     */
     public void setOprnegate(@NotNull Long value) {
         set(11, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprnegate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOprnegate() {
         return (Long) get(11);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprcode</code>.
-     */
     public void setOprcode(@NotNull String value) {
         set(12, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprcode</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOprcode() {
         return (String) get(12);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprrest</code>.
-     */
     public void setOprrest(@NotNull String value) {
         set(13, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprrest</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOprrest() {
         return (String) get(13);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_operator.oprjoin</code>.
-     */
     public void setOprjoin(@NotNull String value) {
         set(14, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_operator.oprjoin</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getOprjoin() {
@@ -699,16 +606,10 @@ public class PgOperatorRecord extends UpdatableRecordImpl<PgOperatorRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgOperatorRecord
-     */
     public PgOperatorRecord() {
         super(PgOperator.PG_OPERATOR);
     }
 
-    /**
-     * Create a detached, initialised PgOperatorRecord
-     */
     @ConstructorProperties({ "oid", "oprname", "oprnamespace", "oprowner", "oprkind", "oprcanmerge", "oprcanhash", "oprleft", "oprright", "oprresult", "oprcom", "oprnegate", "oprcode", "oprrest", "oprjoin" })
     public PgOperatorRecord(@NotNull Long oid, @NotNull String oprname, @NotNull Long oprnamespace, @NotNull Long oprowner, @NotNull String oprkind, @NotNull Boolean oprcanmerge, @NotNull Boolean oprcanhash, @NotNull Long oprleft, @NotNull Long oprright, @NotNull Long oprresult, @NotNull Long oprcom, @NotNull Long oprnegate, @NotNull String oprcode, @NotNull String oprrest, @NotNull String oprjoin) {
         super(PgOperator.PG_OPERATOR);
@@ -731,9 +632,6 @@ public class PgOperatorRecord extends UpdatableRecordImpl<PgOperatorRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgOperatorRecord
-     */
     public PgOperatorRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgOperator value) {
         super(PgOperator.PG_OPERATOR);
 

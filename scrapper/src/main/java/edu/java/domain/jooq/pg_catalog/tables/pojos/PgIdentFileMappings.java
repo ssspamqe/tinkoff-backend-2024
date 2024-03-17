@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_ident_file_mappings</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -66,107 +63,65 @@ public class PgIdentFileMappings implements Serializable {
         this.error = error;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.map_number</code>.
-     */
     @Nullable
     public Integer getMapNumber() {
         return this.mapNumber;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.map_number</code>.
-     */
     public void setMapNumber(@Nullable Integer mapNumber) {
         this.mapNumber = mapNumber;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.file_name</code>.
-     */
     @Nullable
     public String getFileName() {
         return this.fileName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.file_name</code>.
-     */
     public void setFileName(@Nullable String fileName) {
         this.fileName = fileName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.line_number</code>.
-     */
     @Nullable
     public Integer getLineNumber() {
         return this.lineNumber;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.line_number</code>.
-     */
     public void setLineNumber(@Nullable Integer lineNumber) {
         this.lineNumber = lineNumber;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.map_name</code>.
-     */
     @Nullable
     public String getMapName() {
         return this.mapName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.map_name</code>.
-     */
     public void setMapName(@Nullable String mapName) {
         this.mapName = mapName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.sys_name</code>.
-     */
     @Nullable
     public String getSysName() {
         return this.sysName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.sys_name</code>.
-     */
     public void setSysName(@Nullable String sysName) {
         this.sysName = sysName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.pg_username</code>.
-     */
     @Nullable
     public String getPgUsername() {
         return this.pgUsername;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.pg_username</code>.
-     */
     public void setPgUsername(@Nullable String pgUsername) {
         this.pgUsername = pgUsername;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ident_file_mappings.error</code>.
-     */
     @Nullable
     public String getError() {
         return this.error;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ident_file_mappings.error</code>.
-     */
     public void setError(@Nullable String error) {
         this.error = error;
     }

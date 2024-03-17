@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_publication_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,76 +30,46 @@ public class PgPublicationTablesRecord extends TableRecordImpl<PgPublicationTabl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.pubname</code>.
-     */
     public void setPubname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.pubname</code>.
-     */
     @Nullable
     public String getPubname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.tablename</code>.
-     */
     public void setTablename(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.attnames</code>.
-     */
     public void setAttnames(@Nullable String[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.attnames</code>.
-     */
     @Nullable
     public String[] getAttnames() {
         return (String[]) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_publication_tables.rowfilter</code>.
-     */
     public void setRowfilter(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_publication_tables.rowfilter</code>.
-     */
     @Nullable
     public String getRowfilter() {
         return (String) get(4);
@@ -264,16 +231,10 @@ public class PgPublicationTablesRecord extends TableRecordImpl<PgPublicationTabl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgPublicationTablesRecord
-     */
     public PgPublicationTablesRecord() {
         super(PgPublicationTables.PG_PUBLICATION_TABLES);
     }
 
-    /**
-     * Create a detached, initialised PgPublicationTablesRecord
-     */
     @ConstructorProperties({ "pubname", "schemaname", "tablename", "attnames", "rowfilter" })
     public PgPublicationTablesRecord(@Nullable String pubname, @Nullable String schemaname, @Nullable String tablename, @Nullable String[] attnames, @Nullable String rowfilter) {
         super(PgPublicationTables.PG_PUBLICATION_TABLES);
@@ -286,9 +247,6 @@ public class PgPublicationTablesRecord extends TableRecordImpl<PgPublicationTabl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgPublicationTablesRecord
-     */
     public PgPublicationTablesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgPublicationTables value) {
         super(PgPublicationTables.PG_PUBLICATION_TABLES);
 

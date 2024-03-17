@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>public.stack_overflow_questions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -55,68 +52,42 @@ public class StackOverflowQuestions implements Serializable {
         this.answersIds = answersIds;
     }
 
-    /**
-     * Getter for <code>public.stack_overflow_questions.id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getId() {
         return this.id;
     }
 
-    /**
-     * Setter for <code>public.stack_overflow_questions.id</code>.
-     */
     public void setId(@NotNull Long id) {
         this.id = id;
     }
 
-    /**
-     * Getter for <code>public.stack_overflow_questions.link_id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLinkId() {
         return this.linkId;
     }
 
-    /**
-     * Setter for <code>public.stack_overflow_questions.link_id</code>.
-     */
     public void setLinkId(@NotNull Long linkId) {
         this.linkId = linkId;
     }
 
-    /**
-     * Getter for
-     * <code>public.stack_overflow_questions.description_md5_hash</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDescriptionMd5Hash() {
         return this.descriptionMd5Hash;
     }
 
-    /**
-     * Setter for
-     * <code>public.stack_overflow_questions.description_md5_hash</code>.
-     */
     public void setDescriptionMd5Hash(@NotNull String descriptionMd5Hash) {
         this.descriptionMd5Hash = descriptionMd5Hash;
     }
 
-    /**
-     * Getter for <code>public.stack_overflow_questions.answers_ids</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long[] getAnswersIds() {
         return this.answersIds;
     }
 
-    /**
-     * Setter for <code>public.stack_overflow_questions.answers_ids</code>.
-     */
     public void setAnswersIds(@NotNull Long[] answersIds) {
         this.answersIds = answersIds;
     }

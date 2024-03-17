@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.TransformsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.transforms</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,58 +39,28 @@ public class Transforms extends TableImpl<TransformsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.transforms</code>
-     */
     public static final Transforms TRANSFORMS = new Transforms();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<TransformsRecord> getRecordType() {
         return TransformsRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.transforms.udt_catalog</code>.
-     */
     public final TableField<TransformsRecord, String> UDT_CATALOG = createField(DSL.name("udt_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.transforms.udt_schema</code>.
-     */
     public final TableField<TransformsRecord, String> UDT_SCHEMA = createField(DSL.name("udt_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.transforms.udt_name</code>.
-     */
     public final TableField<TransformsRecord, String> UDT_NAME = createField(DSL.name("udt_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.transforms.specific_catalog</code>.
-     */
     public final TableField<TransformsRecord, String> SPECIFIC_CATALOG = createField(DSL.name("specific_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.transforms.specific_schema</code>.
-     */
     public final TableField<TransformsRecord, String> SPECIFIC_SCHEMA = createField(DSL.name("specific_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.transforms.specific_name</code>.
-     */
     public final TableField<TransformsRecord, String> SPECIFIC_NAME = createField(DSL.name("specific_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.transforms.group_name</code>.
-     */
     public final TableField<TransformsRecord, String> GROUP_NAME = createField(DSL.name("group_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.transforms.transform_type</code>.
-     */
     public final TableField<TransformsRecord, String> TRANSFORM_TYPE = createField(DSL.name("transform_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private Transforms(Name alias, Table<TransformsRecord> aliased) {
@@ -137,25 +102,14 @@ public class Transforms extends TableImpl<TransformsRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.transforms</code> table
-     * reference
-     */
     public Transforms(String alias) {
         this(DSL.name(alias), TRANSFORMS);
     }
 
-    /**
-     * Create an aliased <code>information_schema.transforms</code> table
-     * reference
-     */
     public Transforms(Name alias) {
         this(alias, TRANSFORMS);
     }
 
-    /**
-     * Create a <code>information_schema.transforms</code> table reference
-     */
     public Transforms() {
         this(DSL.name("transforms"), null);
     }
@@ -188,27 +142,18 @@ public class Transforms extends TableImpl<TransformsRecord> {
         return new Transforms(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Transforms rename(String name) {
         return new Transforms(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Transforms rename(Name name) {
         return new Transforms(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Transforms rename(Table<?> name) {
@@ -225,17 +170,10 @@ public class Transforms extends TableImpl<TransformsRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

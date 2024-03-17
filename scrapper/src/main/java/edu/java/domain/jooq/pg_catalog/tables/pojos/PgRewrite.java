@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_rewrite</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,110 +67,66 @@ public class PgRewrite implements Serializable {
         this.evAction = evAction;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.rulename</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRulename() {
         return this.rulename;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.rulename</code>.
-     */
     public void setRulename(@NotNull String rulename) {
         this.rulename = rulename;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.ev_class</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getEvClass() {
         return this.evClass;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.ev_class</code>.
-     */
     public void setEvClass(@NotNull Long evClass) {
         this.evClass = evClass;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.ev_type</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvType() {
         return this.evType;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.ev_type</code>.
-     */
     public void setEvType(@NotNull String evType) {
         this.evType = evType;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.ev_enabled</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvEnabled() {
         return this.evEnabled;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.ev_enabled</code>.
-     */
     public void setEvEnabled(@NotNull String evEnabled) {
         this.evEnabled = evEnabled;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.is_instead</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIsInstead() {
         return this.isInstead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.is_instead</code>.
-     */
     public void setIsInstead(@NotNull Boolean isInstead) {
         this.isInstead = isInstead;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @jakarta.validation.constraints.NotNull
     @NotNull
@@ -181,27 +134,11 @@ public class PgRewrite implements Serializable {
         return this.evQual;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setEvQual(@NotNull Object evQual) {
         this.evQual = evQual;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @jakarta.validation.constraints.NotNull
     @NotNull
@@ -209,14 +146,6 @@ public class PgRewrite implements Serializable {
         return this.evAction;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setEvAction(@NotNull Object evAction) {
         this.evAction = evAction;

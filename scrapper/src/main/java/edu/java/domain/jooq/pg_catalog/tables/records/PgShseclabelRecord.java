@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_shseclabel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,64 +30,40 @@ public class PgShseclabelRecord extends UpdatableRecordImpl<PgShseclabelRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_shseclabel.objoid</code>.
-     */
     public void setObjoid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shseclabel.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shseclabel.classoid</code>.
-     */
     public void setClassoid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shseclabel.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shseclabel.provider</code>.
-     */
     public void setProvider(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shseclabel.provider</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getProvider() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_shseclabel.label</code>.
-     */
     public void setLabel(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_shseclabel.label</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getLabel() {
@@ -237,16 +210,10 @@ public class PgShseclabelRecord extends UpdatableRecordImpl<PgShseclabelRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgShseclabelRecord
-     */
     public PgShseclabelRecord() {
         super(PgShseclabel.PG_SHSECLABEL);
     }
 
-    /**
-     * Create a detached, initialised PgShseclabelRecord
-     */
     @ConstructorProperties({ "objoid", "classoid", "provider", "label" })
     public PgShseclabelRecord(@NotNull Long objoid, @NotNull Long classoid, @NotNull String provider, @NotNull String label) {
         super(PgShseclabel.PG_SHSECLABEL);
@@ -258,9 +225,6 @@ public class PgShseclabelRecord extends UpdatableRecordImpl<PgShseclabelRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgShseclabelRecord
-     */
     public PgShseclabelRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgShseclabel value) {
         super(PgShseclabel.PG_SHSECLABEL);
 

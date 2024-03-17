@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_subscription</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -108,46 +105,26 @@ public class PgSubscription implements Serializable {
         this.suborigin = suborigin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subdbid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSubdbid() {
         return this.subdbid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subdbid</code>.
-     */
     public void setSubdbid(@NotNull Long subdbid) {
         this.subdbid = subdbid;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @jakarta.validation.constraints.NotNull
     @NotNull
@@ -155,237 +132,145 @@ public class PgSubscription implements Serializable {
         return this.subskiplsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setSubskiplsn(@NotNull Object subskiplsn) {
         this.subskiplsn = subskiplsn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubname() {
         return this.subname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subname</code>.
-     */
     public void setSubname(@NotNull String subname) {
         this.subname = subname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSubowner() {
         return this.subowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subowner</code>.
-     */
     public void setSubowner(@NotNull Long subowner) {
         this.subowner = subowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subenabled</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubenabled() {
         return this.subenabled;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subenabled</code>.
-     */
     public void setSubenabled(@NotNull Boolean subenabled) {
         this.subenabled = subenabled;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subbinary</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubbinary() {
         return this.subbinary;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subbinary</code>.
-     */
     public void setSubbinary(@NotNull Boolean subbinary) {
         this.subbinary = subbinary;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.substream</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubstream() {
         return this.substream;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.substream</code>.
-     */
     public void setSubstream(@NotNull String substream) {
         this.substream = substream;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subtwophasestate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubtwophasestate() {
         return this.subtwophasestate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subtwophasestate</code>.
-     */
     public void setSubtwophasestate(@NotNull String subtwophasestate) {
         this.subtwophasestate = subtwophasestate;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subdisableonerr</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubdisableonerr() {
         return this.subdisableonerr;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subdisableonerr</code>.
-     */
     public void setSubdisableonerr(@NotNull Boolean subdisableonerr) {
         this.subdisableonerr = subdisableonerr;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subpasswordrequired</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubpasswordrequired() {
         return this.subpasswordrequired;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subpasswordrequired</code>.
-     */
     public void setSubpasswordrequired(@NotNull Boolean subpasswordrequired) {
         this.subpasswordrequired = subpasswordrequired;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subrunasowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getSubrunasowner() {
         return this.subrunasowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subrunasowner</code>.
-     */
     public void setSubrunasowner(@NotNull Boolean subrunasowner) {
         this.subrunasowner = subrunasowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subconninfo</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubconninfo() {
         return this.subconninfo;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subconninfo</code>.
-     */
     public void setSubconninfo(@NotNull String subconninfo) {
         this.subconninfo = subconninfo;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subslotname</code>.
-     */
     @Nullable
     public String getSubslotname() {
         return this.subslotname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subslotname</code>.
-     */
     public void setSubslotname(@Nullable String subslotname) {
         this.subslotname = subslotname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subsynccommit</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSubsynccommit() {
         return this.subsynccommit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subsynccommit</code>.
-     */
     public void setSubsynccommit(@NotNull String subsynccommit) {
         this.subsynccommit = subsynccommit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.subpublications</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String[] getSubpublications() {
         return this.subpublications;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.subpublications</code>.
-     */
     public void setSubpublications(@NotNull String[] subpublications) {
         this.subpublications = subpublications;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription.suborigin</code>.
-     */
     @Nullable
     public String getSuborigin() {
         return this.suborigin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription.suborigin</code>.
-     */
     public void setSuborigin(@Nullable String suborigin) {
         this.suborigin = suborigin;
     }

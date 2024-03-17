@@ -18,9 +18,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The routine <code>pg_catalog.timestamptz_mi</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,24 +30,12 @@ public class TimestamptzMi extends AbstractRoutine<YearToSecond> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.timestamptz_mi.RETURN_VALUE</code>.
-     */
     public static final Parameter<YearToSecond> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTERVAL, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.timestamptz_mi._1</code>.
-     */
     public static final Parameter<OffsetDateTime> _1 = Internal.createParameter("_1", SQLDataType.TIMESTAMPWITHTIMEZONE(6), false, true);
 
-    /**
-     * The parameter <code>pg_catalog.timestamptz_mi._2</code>.
-     */
     public static final Parameter<OffsetDateTime> _2 = Internal.createParameter("_2", SQLDataType.TIMESTAMPWITHTIMEZONE(6), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public TimestamptzMi() {
         super("timestamptz_mi", PgCatalog.PG_CATALOG, SQLDataType.INTERVAL);
 
@@ -59,32 +44,18 @@ public class TimestamptzMi extends AbstractRoutine<YearToSecond> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(OffsetDateTime value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<OffsetDateTime> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(OffsetDateTime value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<OffsetDateTime> field) {
         setField(_2, field);
     }

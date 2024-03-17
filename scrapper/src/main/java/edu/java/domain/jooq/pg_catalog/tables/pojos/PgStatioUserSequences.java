@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_statio_user_sequences</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,77 +55,47 @@ public class PgStatioUserSequences implements Serializable {
         this.blksHit = blksHit;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_sequences.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_sequences.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_sequences.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_sequences.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_sequences.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return this.relname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_sequences.relname</code>.
-     */
     public void setRelname(@Nullable String relname) {
         this.relname = relname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_sequences.blks_read</code>.
-     */
     @Nullable
     public Long getBlksRead() {
         return this.blksRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_sequences.blks_read</code>.
-     */
     public void setBlksRead(@Nullable Long blksRead) {
         this.blksRead = blksRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_statio_user_sequences.blks_hit</code>.
-     */
     @Nullable
     public Long getBlksHit() {
         return this.blksHit;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_statio_user_sequences.blks_hit</code>.
-     */
     public void setBlksHit(@Nullable Long blksHit) {
         this.blksHit = blksHit;
     }

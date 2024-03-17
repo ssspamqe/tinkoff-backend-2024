@@ -18,9 +18,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.timestamp_ne_date</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,24 +30,12 @@ public class TimestampNeDate extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.timestamp_ne_date.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.timestamp_ne_date._1</code>.
-     */
     public static final Parameter<LocalDateTime> _1 = Internal.createParameter("_1", SQLDataType.LOCALDATETIME(6), false, true);
 
-    /**
-     * The parameter <code>pg_catalog.timestamp_ne_date._2</code>.
-     */
     public static final Parameter<LocalDate> _2 = Internal.createParameter("_2", SQLDataType.LOCALDATE, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public TimestampNeDate() {
         super("timestamp_ne_date", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -59,32 +44,18 @@ public class TimestampNeDate extends AbstractRoutine<Boolean> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(LocalDateTime value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<LocalDateTime> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(LocalDate value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<LocalDate> field) {
         setField(_2, field);
     }

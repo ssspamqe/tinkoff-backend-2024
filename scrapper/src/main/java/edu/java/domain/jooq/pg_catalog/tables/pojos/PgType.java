@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_type</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -168,523 +165,321 @@ public class PgType implements Serializable {
         this.typacl = typacl;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypname() {
         return this.typname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typname</code>.
-     */
     public void setTypname(@NotNull String typname) {
         this.typname = typname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTypnamespace() {
         return this.typnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typnamespace</code>.
-     */
     public void setTypnamespace(@NotNull Long typnamespace) {
         this.typnamespace = typnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTypowner() {
         return this.typowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typowner</code>.
-     */
     public void setTypowner(@NotNull Long typowner) {
         this.typowner = typowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typlen</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Short getTyplen() {
         return this.typlen;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typlen</code>.
-     */
     public void setTyplen(@NotNull Short typlen) {
         this.typlen = typlen;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typbyval</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTypbyval() {
         return this.typbyval;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typbyval</code>.
-     */
     public void setTypbyval(@NotNull Boolean typbyval) {
         this.typbyval = typbyval;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTyptype() {
         return this.typtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typtype</code>.
-     */
     public void setTyptype(@NotNull String typtype) {
         this.typtype = typtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typcategory</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypcategory() {
         return this.typcategory;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typcategory</code>.
-     */
     public void setTypcategory(@NotNull String typcategory) {
         this.typcategory = typcategory;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typispreferred</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTypispreferred() {
         return this.typispreferred;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typispreferred</code>.
-     */
     public void setTypispreferred(@NotNull Boolean typispreferred) {
         this.typispreferred = typispreferred;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typisdefined</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTypisdefined() {
         return this.typisdefined;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typisdefined</code>.
-     */
     public void setTypisdefined(@NotNull Boolean typisdefined) {
         this.typisdefined = typisdefined;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typdelim</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypdelim() {
         return this.typdelim;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typdelim</code>.
-     */
     public void setTypdelim(@NotNull String typdelim) {
         this.typdelim = typdelim;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTyprelid() {
         return this.typrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typrelid</code>.
-     */
     public void setTyprelid(@NotNull Long typrelid) {
         this.typrelid = typrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typsubscript</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypsubscript() {
         return this.typsubscript;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typsubscript</code>.
-     */
     public void setTypsubscript(@NotNull String typsubscript) {
         this.typsubscript = typsubscript;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typelem</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTypelem() {
         return this.typelem;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typelem</code>.
-     */
     public void setTypelem(@NotNull Long typelem) {
         this.typelem = typelem;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typarray</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTyparray() {
         return this.typarray;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typarray</code>.
-     */
     public void setTyparray(@NotNull Long typarray) {
         this.typarray = typarray;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typinput</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypinput() {
         return this.typinput;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typinput</code>.
-     */
     public void setTypinput(@NotNull String typinput) {
         this.typinput = typinput;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typoutput</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypoutput() {
         return this.typoutput;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typoutput</code>.
-     */
     public void setTypoutput(@NotNull String typoutput) {
         this.typoutput = typoutput;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typreceive</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypreceive() {
         return this.typreceive;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typreceive</code>.
-     */
     public void setTypreceive(@NotNull String typreceive) {
         this.typreceive = typreceive;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typsend</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypsend() {
         return this.typsend;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typsend</code>.
-     */
     public void setTypsend(@NotNull String typsend) {
         this.typsend = typsend;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typmodin</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypmodin() {
         return this.typmodin;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typmodin</code>.
-     */
     public void setTypmodin(@NotNull String typmodin) {
         this.typmodin = typmodin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typmodout</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypmodout() {
         return this.typmodout;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typmodout</code>.
-     */
     public void setTypmodout(@NotNull String typmodout) {
         this.typmodout = typmodout;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typanalyze</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypanalyze() {
         return this.typanalyze;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typanalyze</code>.
-     */
     public void setTypanalyze(@NotNull String typanalyze) {
         this.typanalyze = typanalyze;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typalign</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypalign() {
         return this.typalign;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typalign</code>.
-     */
     public void setTypalign(@NotNull String typalign) {
         this.typalign = typalign;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typstorage</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getTypstorage() {
         return this.typstorage;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typstorage</code>.
-     */
     public void setTypstorage(@NotNull String typstorage) {
         this.typstorage = typstorage;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typnotnull</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getTypnotnull() {
         return this.typnotnull;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typnotnull</code>.
-     */
     public void setTypnotnull(@NotNull Boolean typnotnull) {
         this.typnotnull = typnotnull;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typbasetype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTypbasetype() {
         return this.typbasetype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typbasetype</code>.
-     */
     public void setTypbasetype(@NotNull Long typbasetype) {
         this.typbasetype = typbasetype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typtypmod</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getTyptypmod() {
         return this.typtypmod;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typtypmod</code>.
-     */
     public void setTyptypmod(@NotNull Integer typtypmod) {
         this.typtypmod = typtypmod;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typndims</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getTypndims() {
         return this.typndims;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typndims</code>.
-     */
     public void setTypndims(@NotNull Integer typndims) {
         this.typndims = typndims;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typcollation</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getTypcollation() {
         return this.typcollation;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typcollation</code>.
-     */
     public void setTypcollation(@NotNull Long typcollation) {
         this.typcollation = typcollation;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getTypdefaultbin() {
         return this.typdefaultbin;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setTypdefaultbin(@Nullable Object typdefaultbin) {
         this.typdefaultbin = typdefaultbin;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typdefault</code>.
-     */
     @Nullable
     public String getTypdefault() {
         return this.typdefault;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typdefault</code>.
-     */
     public void setTypdefault(@Nullable String typdefault) {
         this.typdefault = typdefault;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_type.typacl</code>.
-     */
     @Nullable
     public String[] getTypacl() {
         return this.typacl;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_type.typacl</code>.
-     */
     public void setTypacl(@Nullable String[] typacl) {
         this.typacl = typacl;
     }

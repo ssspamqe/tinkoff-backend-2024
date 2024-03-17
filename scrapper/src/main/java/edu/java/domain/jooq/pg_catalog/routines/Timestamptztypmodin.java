@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.timestamptztypmodin</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,19 +27,10 @@ public class Timestamptztypmodin extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.timestamptztypmodin.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.timestamptztypmodin._1</code>.
-     */
     public static final Parameter<Object[]> _1 = Internal.createParameter("_1", org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"cstring\"").array(), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Timestamptztypmodin() {
         super("timestamptztypmodin", PgCatalog.PG_CATALOG, SQLDataType.INTEGER);
 
@@ -50,17 +38,10 @@ public class Timestamptztypmodin extends AbstractRoutine<Integer> {
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Object[] value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Object[]> field) {
         setField(_1, field);
     }

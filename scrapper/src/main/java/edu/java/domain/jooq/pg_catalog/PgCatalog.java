@@ -314,9 +314,6 @@ import org.jooq.Table;
 import org.jooq.impl.SchemaImpl;
 
 
-/**
- * The schema <code>pg_catalog</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -329,19 +326,10 @@ public class PgCatalog extends SchemaImpl {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog</code>
-     */
     public static final PgCatalog PG_CATALOG = new PgCatalog();
 
-    /**
-     * The table <code>pg_catalog.aclexplode</code>.
-     */
     public final Aclexplode ACLEXPLODE = Aclexplode.ACLEXPLODE;
 
-    /**
-     * Call <code>pg_catalog.aclexplode</code>.
-     */
     public static Result<AclexplodeRecord> ACLEXPLODE(
           Configuration configuration
         , String[] acl
@@ -351,9 +339,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.aclexplode</code> as a table.
-     */
     public static Aclexplode ACLEXPLODE(
           String[] acl
     ) {
@@ -362,9 +347,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.aclexplode</code> as a table.
-     */
     public static Aclexplode ACLEXPLODE(
           Field<String[]> acl
     ) {
@@ -373,14 +355,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.generate_series</code>.
-     */
     public final GenerateSeries GENERATE_SERIES = GenerateSeries.GENERATE_SERIES;
 
-    /**
-     * Call <code>pg_catalog.generate_series</code>.
-     */
     public static Result<GenerateSeriesRecord> GENERATE_SERIES(
           Configuration configuration
         , Long __1
@@ -394,9 +370,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.generate_series</code> as a table.
-     */
     public static GenerateSeries GENERATE_SERIES(
           Long __1
         , Long __2
@@ -409,9 +382,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.generate_series</code> as a table.
-     */
     public static GenerateSeries GENERATE_SERIES(
           Field<Long> __1
         , Field<Long> __2
@@ -424,14 +394,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.generate_subscripts</code>.
-     */
     public final GenerateSubscripts GENERATE_SUBSCRIPTS = GenerateSubscripts.GENERATE_SUBSCRIPTS;
 
-    /**
-     * Call <code>pg_catalog.generate_subscripts</code>.
-     */
     public static Result<GenerateSubscriptsRecord> GENERATE_SUBSCRIPTS(
           Configuration configuration
         , Object[] __1
@@ -445,9 +409,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.generate_subscripts</code> as a table.
-     */
     public static GenerateSubscripts GENERATE_SUBSCRIPTS(
           Object[] __1
         , Integer __2
@@ -460,9 +421,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.generate_subscripts</code> as a table.
-     */
     public static GenerateSubscripts GENERATE_SUBSCRIPTS(
           Field<Object[]> __1
         , Field<Integer> __2
@@ -475,14 +433,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.json_array_elements</code>.
-     */
     public final JsonArrayElements JSON_ARRAY_ELEMENTS = JsonArrayElements.JSON_ARRAY_ELEMENTS;
 
-    /**
-     * Call <code>pg_catalog.json_array_elements</code>.
-     */
     public static Result<JsonArrayElementsRecord> JSON_ARRAY_ELEMENTS(
           Configuration configuration
         , JSON fromJson
@@ -492,9 +444,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.json_array_elements</code> as a table.
-     */
     public static JsonArrayElements JSON_ARRAY_ELEMENTS(
           JSON fromJson
     ) {
@@ -503,9 +452,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.json_array_elements</code> as a table.
-     */
     public static JsonArrayElements JSON_ARRAY_ELEMENTS(
           Field<JSON> fromJson
     ) {
@@ -514,14 +460,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.json_array_elements_text</code>.
-     */
     public final JsonArrayElementsText JSON_ARRAY_ELEMENTS_TEXT = JsonArrayElementsText.JSON_ARRAY_ELEMENTS_TEXT;
 
-    /**
-     * Call <code>pg_catalog.json_array_elements_text</code>.
-     */
     public static Result<JsonArrayElementsTextRecord> JSON_ARRAY_ELEMENTS_TEXT(
           Configuration configuration
         , JSON fromJson
@@ -531,9 +471,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.json_array_elements_text</code> as a table.
-     */
     public static JsonArrayElementsText JSON_ARRAY_ELEMENTS_TEXT(
           JSON fromJson
     ) {
@@ -542,9 +479,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.json_array_elements_text</code> as a table.
-     */
     public static JsonArrayElementsText JSON_ARRAY_ELEMENTS_TEXT(
           Field<JSON> fromJson
     ) {
@@ -553,14 +487,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.json_each</code>.
-     */
     public final JsonEach JSON_EACH = JsonEach.JSON_EACH;
 
-    /**
-     * Call <code>pg_catalog.json_each</code>.
-     */
     public static Result<JsonEachRecord> JSON_EACH(
           Configuration configuration
         , JSON fromJson
@@ -570,9 +498,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.json_each</code> as a table.
-     */
     public static JsonEach JSON_EACH(
           JSON fromJson
     ) {
@@ -581,9 +506,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.json_each</code> as a table.
-     */
     public static JsonEach JSON_EACH(
           Field<JSON> fromJson
     ) {
@@ -592,14 +514,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.json_each_text</code>.
-     */
     public final JsonEachText JSON_EACH_TEXT = JsonEachText.JSON_EACH_TEXT;
 
-    /**
-     * Call <code>pg_catalog.json_each_text</code>.
-     */
     public static Result<JsonEachTextRecord> JSON_EACH_TEXT(
           Configuration configuration
         , JSON fromJson
@@ -609,9 +525,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.json_each_text</code> as a table.
-     */
     public static JsonEachText JSON_EACH_TEXT(
           JSON fromJson
     ) {
@@ -620,9 +533,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.json_each_text</code> as a table.
-     */
     public static JsonEachText JSON_EACH_TEXT(
           Field<JSON> fromJson
     ) {
@@ -631,14 +541,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.json_object_keys</code>.
-     */
     public final JsonObjectKeys JSON_OBJECT_KEYS = JsonObjectKeys.JSON_OBJECT_KEYS;
 
-    /**
-     * Call <code>pg_catalog.json_object_keys</code>.
-     */
     public static Result<JsonObjectKeysRecord> JSON_OBJECT_KEYS(
           Configuration configuration
         , JSON __1
@@ -648,9 +552,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.json_object_keys</code> as a table.
-     */
     public static JsonObjectKeys JSON_OBJECT_KEYS(
           JSON __1
     ) {
@@ -659,9 +560,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.json_object_keys</code> as a table.
-     */
     public static JsonObjectKeys JSON_OBJECT_KEYS(
           Field<JSON> __1
     ) {
@@ -670,19 +568,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.json_populate_recordset</code>.
-     */
     public final JsonPopulateRecordset JSON_POPULATE_RECORDSET = JsonPopulateRecordset.JSON_POPULATE_RECORDSET;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<JsonPopulateRecordsetRecord> JSON_POPULATE_RECORDSET(
           Configuration configuration
@@ -697,14 +584,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static JsonPopulateRecordset JSON_POPULATE_RECORDSET(
           Object base
@@ -718,14 +597,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static JsonPopulateRecordset JSON_POPULATE_RECORDSET(
           Field<Object> base
@@ -739,14 +610,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.json_to_recordset</code>.
-     */
     public final JsonToRecordset JSON_TO_RECORDSET = JsonToRecordset.JSON_TO_RECORDSET;
 
-    /**
-     * Call <code>pg_catalog.json_to_recordset</code>.
-     */
     public static Result<JsonToRecordsetRecord> JSON_TO_RECORDSET(
           Configuration configuration
         , JSON __1
@@ -756,9 +621,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.json_to_recordset</code> as a table.
-     */
     public static JsonToRecordset JSON_TO_RECORDSET(
           JSON __1
     ) {
@@ -767,9 +629,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.json_to_recordset</code> as a table.
-     */
     public static JsonToRecordset JSON_TO_RECORDSET(
           Field<JSON> __1
     ) {
@@ -778,14 +637,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_array_elements</code>.
-     */
     public final JsonbArrayElements JSONB_ARRAY_ELEMENTS = JsonbArrayElements.JSONB_ARRAY_ELEMENTS;
 
-    /**
-     * Call <code>pg_catalog.jsonb_array_elements</code>.
-     */
     public static Result<JsonbArrayElementsRecord> JSONB_ARRAY_ELEMENTS(
           Configuration configuration
         , JSONB fromJson
@@ -795,9 +648,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_array_elements</code> as a table.
-     */
     public static JsonbArrayElements JSONB_ARRAY_ELEMENTS(
           JSONB fromJson
     ) {
@@ -806,9 +656,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_array_elements</code> as a table.
-     */
     public static JsonbArrayElements JSONB_ARRAY_ELEMENTS(
           Field<JSONB> fromJson
     ) {
@@ -817,14 +664,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_array_elements_text</code>.
-     */
     public final JsonbArrayElementsText JSONB_ARRAY_ELEMENTS_TEXT = JsonbArrayElementsText.JSONB_ARRAY_ELEMENTS_TEXT;
 
-    /**
-     * Call <code>pg_catalog.jsonb_array_elements_text</code>.
-     */
     public static Result<JsonbArrayElementsTextRecord> JSONB_ARRAY_ELEMENTS_TEXT(
           Configuration configuration
         , JSONB fromJson
@@ -834,9 +675,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_array_elements_text</code> as a table.
-     */
     public static JsonbArrayElementsText JSONB_ARRAY_ELEMENTS_TEXT(
           JSONB fromJson
     ) {
@@ -845,9 +683,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_array_elements_text</code> as a table.
-     */
     public static JsonbArrayElementsText JSONB_ARRAY_ELEMENTS_TEXT(
           Field<JSONB> fromJson
     ) {
@@ -856,14 +691,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_each</code>.
-     */
     public final JsonbEach JSONB_EACH = JsonbEach.JSONB_EACH;
 
-    /**
-     * Call <code>pg_catalog.jsonb_each</code>.
-     */
     public static Result<JsonbEachRecord> JSONB_EACH(
           Configuration configuration
         , JSONB fromJson
@@ -873,9 +702,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_each</code> as a table.
-     */
     public static JsonbEach JSONB_EACH(
           JSONB fromJson
     ) {
@@ -884,9 +710,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_each</code> as a table.
-     */
     public static JsonbEach JSONB_EACH(
           Field<JSONB> fromJson
     ) {
@@ -895,14 +718,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_each_text</code>.
-     */
     public final JsonbEachText JSONB_EACH_TEXT = JsonbEachText.JSONB_EACH_TEXT;
 
-    /**
-     * Call <code>pg_catalog.jsonb_each_text</code>.
-     */
     public static Result<JsonbEachTextRecord> JSONB_EACH_TEXT(
           Configuration configuration
         , JSONB fromJson
@@ -912,9 +729,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_each_text</code> as a table.
-     */
     public static JsonbEachText JSONB_EACH_TEXT(
           JSONB fromJson
     ) {
@@ -923,9 +737,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_each_text</code> as a table.
-     */
     public static JsonbEachText JSONB_EACH_TEXT(
           Field<JSONB> fromJson
     ) {
@@ -934,14 +745,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_object_keys</code>.
-     */
     public final JsonbObjectKeys JSONB_OBJECT_KEYS = JsonbObjectKeys.JSONB_OBJECT_KEYS;
 
-    /**
-     * Call <code>pg_catalog.jsonb_object_keys</code>.
-     */
     public static Result<JsonbObjectKeysRecord> JSONB_OBJECT_KEYS(
           Configuration configuration
         , JSONB __1
@@ -951,9 +756,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_object_keys</code> as a table.
-     */
     public static JsonbObjectKeys JSONB_OBJECT_KEYS(
           JSONB __1
     ) {
@@ -962,9 +764,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_object_keys</code> as a table.
-     */
     public static JsonbObjectKeys JSONB_OBJECT_KEYS(
           Field<JSONB> __1
     ) {
@@ -973,19 +772,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_path_query</code>.
-     */
     public final JsonbPathQuery JSONB_PATH_QUERY = JsonbPathQuery.JSONB_PATH_QUERY;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<JsonbPathQueryRecord> JSONB_PATH_QUERY(
           Configuration configuration
@@ -1002,14 +790,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static JsonbPathQuery JSONB_PATH_QUERY(
           JSONB target
@@ -1025,14 +805,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static JsonbPathQuery JSONB_PATH_QUERY(
           Field<JSONB> target
@@ -1048,19 +820,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_path_query_tz</code>.
-     */
     public final JsonbPathQueryTz JSONB_PATH_QUERY_TZ = JsonbPathQueryTz.JSONB_PATH_QUERY_TZ;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<JsonbPathQueryTzRecord> JSONB_PATH_QUERY_TZ(
           Configuration configuration
@@ -1077,14 +838,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static JsonbPathQueryTz JSONB_PATH_QUERY_TZ(
           JSONB target
@@ -1100,14 +853,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static JsonbPathQueryTz JSONB_PATH_QUERY_TZ(
           Field<JSONB> target
@@ -1123,19 +868,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_populate_recordset</code>.
-     */
     public final JsonbPopulateRecordset JSONB_POPULATE_RECORDSET = JsonbPopulateRecordset.JSONB_POPULATE_RECORDSET;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<JsonbPopulateRecordsetRecord> JSONB_POPULATE_RECORDSET(
           Configuration configuration
@@ -1148,14 +882,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static JsonbPopulateRecordset JSONB_POPULATE_RECORDSET(
           Object __1
@@ -1167,14 +893,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static JsonbPopulateRecordset JSONB_POPULATE_RECORDSET(
           Field<Object> __1
@@ -1186,14 +904,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.jsonb_to_recordset</code>.
-     */
     public final JsonbToRecordset JSONB_TO_RECORDSET = JsonbToRecordset.JSONB_TO_RECORDSET;
 
-    /**
-     * Call <code>pg_catalog.jsonb_to_recordset</code>.
-     */
     public static Result<JsonbToRecordsetRecord> JSONB_TO_RECORDSET(
           Configuration configuration
         , JSONB __1
@@ -1203,9 +915,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_to_recordset</code> as a table.
-     */
     public static JsonbToRecordset JSONB_TO_RECORDSET(
           JSONB __1
     ) {
@@ -1214,9 +923,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.jsonb_to_recordset</code> as a table.
-     */
     public static JsonbToRecordset JSONB_TO_RECORDSET(
           Field<JSONB> __1
     ) {
@@ -1225,54 +931,24 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_aggregate</code>.
-     */
     public final PgAggregate PG_AGGREGATE = PgAggregate.PG_AGGREGATE;
 
-    /**
-     * The table <code>pg_catalog.pg_am</code>.
-     */
     public final PgAm PG_AM = PgAm.PG_AM;
 
-    /**
-     * The table <code>pg_catalog.pg_amop</code>.
-     */
     public final PgAmop PG_AMOP = PgAmop.PG_AMOP;
 
-    /**
-     * The table <code>pg_catalog.pg_amproc</code>.
-     */
     public final PgAmproc PG_AMPROC = PgAmproc.PG_AMPROC;
 
-    /**
-     * The table <code>pg_catalog.pg_attrdef</code>.
-     */
     public final PgAttrdef PG_ATTRDEF = PgAttrdef.PG_ATTRDEF;
 
-    /**
-     * The table <code>pg_catalog.pg_attribute</code>.
-     */
     public final PgAttribute PG_ATTRIBUTE = PgAttribute.PG_ATTRIBUTE;
 
-    /**
-     * The table <code>pg_catalog.pg_auth_members</code>.
-     */
     public final PgAuthMembers PG_AUTH_MEMBERS = PgAuthMembers.PG_AUTH_MEMBERS;
 
-    /**
-     * The table <code>pg_catalog.pg_authid</code>.
-     */
     public final PgAuthid PG_AUTHID = PgAuthid.PG_AUTHID;
 
-    /**
-     * The table <code>pg_catalog.pg_available_extension_versions</code>.
-     */
     public final PgAvailableExtensionVersions PG_AVAILABLE_EXTENSION_VERSIONS = PgAvailableExtensionVersions.PG_AVAILABLE_EXTENSION_VERSIONS;
 
-    /**
-     * Call <code>pg_catalog.pg_available_extension_versions</code>.
-     */
     public static Result<PgAvailableExtensionVersionsRecord> PG_AVAILABLE_EXTENSION_VERSIONS(
           Configuration configuration
     ) {
@@ -1280,22 +956,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_available_extension_versions</code> as a table.
-     */
     public static PgAvailableExtensionVersions PG_AVAILABLE_EXTENSION_VERSIONS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgAvailableExtensionVersions.PG_AVAILABLE_EXTENSION_VERSIONS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_available_extensions</code>.
-     */
     public final PgAvailableExtensions PG_AVAILABLE_EXTENSIONS = PgAvailableExtensions.PG_AVAILABLE_EXTENSIONS;
 
-    /**
-     * Call <code>pg_catalog.pg_available_extensions</code>.
-     */
     public static Result<PgAvailableExtensionsRecord> PG_AVAILABLE_EXTENSIONS(
           Configuration configuration
     ) {
@@ -1303,57 +970,27 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_available_extensions</code> as a table.
-     */
     public static PgAvailableExtensions PG_AVAILABLE_EXTENSIONS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgAvailableExtensions.PG_AVAILABLE_EXTENSIONS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_backend_memory_contexts</code>.
-     */
     public final PgBackendMemoryContexts PG_BACKEND_MEMORY_CONTEXTS = PgBackendMemoryContexts.PG_BACKEND_MEMORY_CONTEXTS;
 
-    /**
-     * The table <code>pg_catalog.pg_cast</code>.
-     */
     public final PgCast PG_CAST = PgCast.PG_CAST;
 
-    /**
-     * The table <code>pg_catalog.pg_class</code>.
-     */
     public final PgClass PG_CLASS = PgClass.PG_CLASS;
 
-    /**
-     * The table <code>pg_catalog.pg_collation</code>.
-     */
     public final PgCollation PG_COLLATION = PgCollation.PG_COLLATION;
 
-    /**
-     * The table <code>pg_catalog.pg_config</code>.
-     */
     public final PgConfig PG_CONFIG = PgConfig.PG_CONFIG;
 
-    /**
-     * The table <code>pg_catalog.pg_constraint</code>.
-     */
     public final PgConstraint PG_CONSTRAINT = PgConstraint.PG_CONSTRAINT;
 
-    /**
-     * The table <code>pg_catalog.pg_conversion</code>.
-     */
     public final PgConversion PG_CONVERSION = PgConversion.PG_CONVERSION;
 
-    /**
-     * The table <code>pg_catalog.pg_cursor</code>.
-     */
     public final PgCursor PG_CURSOR = PgCursor.PG_CURSOR;
 
-    /**
-     * Call <code>pg_catalog.pg_cursor</code>.
-     */
     public static Result<PgCursorRecord> PG_CURSOR(
           Configuration configuration
     ) {
@@ -1361,62 +998,29 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_cursor</code> as a table.
-     */
     public static PgCursor PG_CURSOR() {
         return edu.java.domain.jooq.pg_catalog.tables.PgCursor.PG_CURSOR.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_cursors</code>.
-     */
     public final PgCursors PG_CURSORS = PgCursors.PG_CURSORS;
 
-    /**
-     * The table <code>pg_catalog.pg_database</code>.
-     */
     public final PgDatabase PG_DATABASE = PgDatabase.PG_DATABASE;
 
-    /**
-     * The table <code>pg_catalog.pg_db_role_setting</code>.
-     */
     public final PgDbRoleSetting PG_DB_ROLE_SETTING = PgDbRoleSetting.PG_DB_ROLE_SETTING;
 
-    /**
-     * The table <code>pg_catalog.pg_default_acl</code>.
-     */
     public final PgDefaultAcl PG_DEFAULT_ACL = PgDefaultAcl.PG_DEFAULT_ACL;
 
-    /**
-     * The table <code>pg_catalog.pg_depend</code>.
-     */
     public final PgDepend PG_DEPEND = PgDepend.PG_DEPEND;
 
-    /**
-     * The table <code>pg_catalog.pg_description</code>.
-     */
     public final PgDescription PG_DESCRIPTION = PgDescription.PG_DESCRIPTION;
 
-    /**
-     * The table <code>pg_catalog.pg_enum</code>.
-     */
     public final PgEnum PG_ENUM = PgEnum.PG_ENUM;
 
-    /**
-     * The table <code>pg_catalog.pg_event_trigger</code>.
-     */
     public final PgEventTrigger PG_EVENT_TRIGGER = PgEventTrigger.PG_EVENT_TRIGGER;
 
-    /**
-     * The table <code>pg_catalog.pg_event_trigger_ddl_commands</code>.
-     */
     public final PgEventTriggerDdlCommands PG_EVENT_TRIGGER_DDL_COMMANDS = PgEventTriggerDdlCommands.PG_EVENT_TRIGGER_DDL_COMMANDS;
 
-    /**
-     * Call <code>pg_catalog.pg_event_trigger_ddl_commands</code>.
-     */
     public static Result<PgEventTriggerDdlCommandsRecord> PG_EVENT_TRIGGER_DDL_COMMANDS(
           Configuration configuration
     ) {
@@ -1424,22 +1028,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_event_trigger_ddl_commands</code> as a table.
-     */
     public static PgEventTriggerDdlCommands PG_EVENT_TRIGGER_DDL_COMMANDS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgEventTriggerDdlCommands.PG_EVENT_TRIGGER_DDL_COMMANDS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_event_trigger_dropped_objects</code>.
-     */
     public final PgEventTriggerDroppedObjects PG_EVENT_TRIGGER_DROPPED_OBJECTS = PgEventTriggerDroppedObjects.PG_EVENT_TRIGGER_DROPPED_OBJECTS;
 
-    /**
-     * Call <code>pg_catalog.pg_event_trigger_dropped_objects</code>.
-     */
     public static Result<PgEventTriggerDroppedObjectsRecord> PG_EVENT_TRIGGER_DROPPED_OBJECTS(
           Configuration configuration
     ) {
@@ -1447,27 +1042,15 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_event_trigger_dropped_objects</code> as a table.
-     */
     public static PgEventTriggerDroppedObjects PG_EVENT_TRIGGER_DROPPED_OBJECTS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgEventTriggerDroppedObjects.PG_EVENT_TRIGGER_DROPPED_OBJECTS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_extension</code>.
-     */
     public final PgExtension PG_EXTENSION = PgExtension.PG_EXTENSION;
 
-    /**
-     * The table <code>pg_catalog.pg_extension_update_paths</code>.
-     */
     public final PgExtensionUpdatePaths PG_EXTENSION_UPDATE_PATHS = PgExtensionUpdatePaths.PG_EXTENSION_UPDATE_PATHS;
 
-    /**
-     * Call <code>pg_catalog.pg_extension_update_paths</code>.
-     */
     public static Result<PgExtensionUpdatePathsRecord> PG_EXTENSION_UPDATE_PATHS(
           Configuration configuration
         , String name
@@ -1477,9 +1060,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_extension_update_paths</code> as a table.
-     */
     public static PgExtensionUpdatePaths PG_EXTENSION_UPDATE_PATHS(
           String name
     ) {
@@ -1488,9 +1068,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_extension_update_paths</code> as a table.
-     */
     public static PgExtensionUpdatePaths PG_EXTENSION_UPDATE_PATHS(
           Field<String> name
     ) {
@@ -1499,34 +1076,16 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_file_settings</code>.
-     */
     public final PgFileSettings PG_FILE_SETTINGS = PgFileSettings.PG_FILE_SETTINGS;
 
-    /**
-     * The table <code>pg_catalog.pg_foreign_data_wrapper</code>.
-     */
     public final PgForeignDataWrapper PG_FOREIGN_DATA_WRAPPER = PgForeignDataWrapper.PG_FOREIGN_DATA_WRAPPER;
 
-    /**
-     * The table <code>pg_catalog.pg_foreign_server</code>.
-     */
     public final PgForeignServer PG_FOREIGN_SERVER = PgForeignServer.PG_FOREIGN_SERVER;
 
-    /**
-     * The table <code>pg_catalog.pg_foreign_table</code>.
-     */
     public final PgForeignTable PG_FOREIGN_TABLE = PgForeignTable.PG_FOREIGN_TABLE;
 
-    /**
-     * The table <code>pg_catalog.pg_get_backend_memory_contexts</code>.
-     */
     public final PgGetBackendMemoryContexts PG_GET_BACKEND_MEMORY_CONTEXTS = PgGetBackendMemoryContexts.PG_GET_BACKEND_MEMORY_CONTEXTS;
 
-    /**
-     * Call <code>pg_catalog.pg_get_backend_memory_contexts</code>.
-     */
     public static Result<PgGetBackendMemoryContextsRecord> PG_GET_BACKEND_MEMORY_CONTEXTS(
           Configuration configuration
     ) {
@@ -1534,22 +1093,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_backend_memory_contexts</code> as a table.
-     */
     public static PgGetBackendMemoryContexts PG_GET_BACKEND_MEMORY_CONTEXTS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgGetBackendMemoryContexts.PG_GET_BACKEND_MEMORY_CONTEXTS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_get_catalog_foreign_keys</code>.
-     */
     public final PgGetCatalogForeignKeys PG_GET_CATALOG_FOREIGN_KEYS = PgGetCatalogForeignKeys.PG_GET_CATALOG_FOREIGN_KEYS;
 
-    /**
-     * Call <code>pg_catalog.pg_get_catalog_foreign_keys</code>.
-     */
     public static Result<PgGetCatalogForeignKeysRecord> PG_GET_CATALOG_FOREIGN_KEYS(
           Configuration configuration
     ) {
@@ -1557,22 +1107,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_catalog_foreign_keys</code> as a table.
-     */
     public static PgGetCatalogForeignKeys PG_GET_CATALOG_FOREIGN_KEYS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgGetCatalogForeignKeys.PG_GET_CATALOG_FOREIGN_KEYS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_get_keywords</code>.
-     */
     public final PgGetKeywords PG_GET_KEYWORDS = PgGetKeywords.PG_GET_KEYWORDS;
 
-    /**
-     * Call <code>pg_catalog.pg_get_keywords</code>.
-     */
     public static Result<PgGetKeywordsRecord> PG_GET_KEYWORDS(
           Configuration configuration
     ) {
@@ -1580,22 +1121,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_keywords</code> as a table.
-     */
     public static PgGetKeywords PG_GET_KEYWORDS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgGetKeywords.PG_GET_KEYWORDS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_get_multixact_members</code>.
-     */
     public final PgGetMultixactMembers PG_GET_MULTIXACT_MEMBERS = PgGetMultixactMembers.PG_GET_MULTIXACT_MEMBERS;
 
-    /**
-     * Call <code>pg_catalog.pg_get_multixact_members</code>.
-     */
     public static Result<PgGetMultixactMembersRecord> PG_GET_MULTIXACT_MEMBERS(
           Configuration configuration
         , Long multixid
@@ -1605,9 +1137,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_multixact_members</code> as a table.
-     */
     public static PgGetMultixactMembers PG_GET_MULTIXACT_MEMBERS(
           Long multixid
     ) {
@@ -1616,9 +1145,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_multixact_members</code> as a table.
-     */
     public static PgGetMultixactMembers PG_GET_MULTIXACT_MEMBERS(
           Field<Long> multixid
     ) {
@@ -1627,14 +1153,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_get_publication_tables</code>.
-     */
     public final PgGetPublicationTables PG_GET_PUBLICATION_TABLES = PgGetPublicationTables.PG_GET_PUBLICATION_TABLES;
 
-    /**
-     * Call <code>pg_catalog.pg_get_publication_tables</code>.
-     */
     public static Result<PgGetPublicationTablesRecord> PG_GET_PUBLICATION_TABLES(
           Configuration configuration
         , String[] pubname
@@ -1644,9 +1164,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_publication_tables</code> as a table.
-     */
     public static PgGetPublicationTables PG_GET_PUBLICATION_TABLES(
           String[] pubname
     ) {
@@ -1655,9 +1172,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_publication_tables</code> as a table.
-     */
     public static PgGetPublicationTables PG_GET_PUBLICATION_TABLES(
           Field<String[]> pubname
     ) {
@@ -1666,14 +1180,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_get_replication_slots</code>.
-     */
     public final PgGetReplicationSlots PG_GET_REPLICATION_SLOTS = PgGetReplicationSlots.PG_GET_REPLICATION_SLOTS;
 
-    /**
-     * Call <code>pg_catalog.pg_get_replication_slots</code>.
-     */
     public static Result<PgGetReplicationSlotsRecord> PG_GET_REPLICATION_SLOTS(
           Configuration configuration
     ) {
@@ -1681,22 +1189,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_replication_slots</code> as a table.
-     */
     public static PgGetReplicationSlots PG_GET_REPLICATION_SLOTS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgGetReplicationSlots.PG_GET_REPLICATION_SLOTS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_get_shmem_allocations</code>.
-     */
     public final PgGetShmemAllocations PG_GET_SHMEM_ALLOCATIONS = PgGetShmemAllocations.PG_GET_SHMEM_ALLOCATIONS;
 
-    /**
-     * Call <code>pg_catalog.pg_get_shmem_allocations</code>.
-     */
     public static Result<PgGetShmemAllocationsRecord> PG_GET_SHMEM_ALLOCATIONS(
           Configuration configuration
     ) {
@@ -1704,22 +1203,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_shmem_allocations</code> as a table.
-     */
     public static PgGetShmemAllocations PG_GET_SHMEM_ALLOCATIONS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgGetShmemAllocations.PG_GET_SHMEM_ALLOCATIONS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_get_wal_resource_managers</code>.
-     */
     public final PgGetWalResourceManagers PG_GET_WAL_RESOURCE_MANAGERS = PgGetWalResourceManagers.PG_GET_WAL_RESOURCE_MANAGERS;
 
-    /**
-     * Call <code>pg_catalog.pg_get_wal_resource_managers</code>.
-     */
     public static Result<PgGetWalResourceManagersRecord> PG_GET_WAL_RESOURCE_MANAGERS(
           Configuration configuration
     ) {
@@ -1727,27 +1217,15 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_get_wal_resource_managers</code> as a table.
-     */
     public static PgGetWalResourceManagers PG_GET_WAL_RESOURCE_MANAGERS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgGetWalResourceManagers.PG_GET_WAL_RESOURCE_MANAGERS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_group</code>.
-     */
     public final PgGroup PG_GROUP = PgGroup.PG_GROUP;
 
-    /**
-     * The table <code>pg_catalog.pg_hba_file_rules</code>.
-     */
     public final PgHbaFileRules PG_HBA_FILE_RULES = PgHbaFileRules.PG_HBA_FILE_RULES;
 
-    /**
-     * Call <code>pg_catalog.pg_hba_file_rules</code>.
-     */
     public static Result<PgHbaFileRulesRecord> PG_HBA_FILE_RULES(
           Configuration configuration
     ) {
@@ -1755,22 +1233,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_hba_file_rules</code> as a table.
-     */
     public static PgHbaFileRules PG_HBA_FILE_RULES() {
         return edu.java.domain.jooq.pg_catalog.tables.PgHbaFileRules.PG_HBA_FILE_RULES.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ident_file_mappings</code>.
-     */
     public final PgIdentFileMappings PG_IDENT_FILE_MAPPINGS = PgIdentFileMappings.PG_IDENT_FILE_MAPPINGS;
 
-    /**
-     * Call <code>pg_catalog.pg_ident_file_mappings</code>.
-     */
     public static Result<PgIdentFileMappingsRecord> PG_IDENT_FILE_MAPPINGS(
           Configuration configuration
     ) {
@@ -1778,57 +1247,27 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ident_file_mappings</code> as a table.
-     */
     public static PgIdentFileMappings PG_IDENT_FILE_MAPPINGS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgIdentFileMappings.PG_IDENT_FILE_MAPPINGS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_index</code>.
-     */
     public final PgIndex PG_INDEX = PgIndex.PG_INDEX;
 
-    /**
-     * The table <code>pg_catalog.pg_indexes</code>.
-     */
     public final PgIndexes PG_INDEXES = PgIndexes.PG_INDEXES;
 
-    /**
-     * The table <code>pg_catalog.pg_inherits</code>.
-     */
     public final PgInherits PG_INHERITS = PgInherits.PG_INHERITS;
 
-    /**
-     * The table <code>pg_catalog.pg_init_privs</code>.
-     */
     public final PgInitPrivs PG_INIT_PRIVS = PgInitPrivs.PG_INIT_PRIVS;
 
-    /**
-     * The table <code>pg_catalog.pg_language</code>.
-     */
     public final PgLanguage PG_LANGUAGE = PgLanguage.PG_LANGUAGE;
 
-    /**
-     * The table <code>pg_catalog.pg_largeobject</code>.
-     */
     public final PgLargeobject PG_LARGEOBJECT = PgLargeobject.PG_LARGEOBJECT;
 
-    /**
-     * The table <code>pg_catalog.pg_largeobject_metadata</code>.
-     */
     public final PgLargeobjectMetadata PG_LARGEOBJECT_METADATA = PgLargeobjectMetadata.PG_LARGEOBJECT_METADATA;
 
-    /**
-     * The table <code>pg_catalog.pg_listening_channels</code>.
-     */
     public final PgListeningChannels PG_LISTENING_CHANNELS = PgListeningChannels.PG_LISTENING_CHANNELS;
 
-    /**
-     * Call <code>pg_catalog.pg_listening_channels</code>.
-     */
     public static Result<PgListeningChannelsRecord> PG_LISTENING_CHANNELS(
           Configuration configuration
     ) {
@@ -1836,22 +1275,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_listening_channels</code> as a table.
-     */
     public static PgListeningChannels PG_LISTENING_CHANNELS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgListeningChannels.PG_LISTENING_CHANNELS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_lock_status</code>.
-     */
     public final PgLockStatus PG_LOCK_STATUS = PgLockStatus.PG_LOCK_STATUS;
 
-    /**
-     * Call <code>pg_catalog.pg_lock_status</code>.
-     */
     public static Result<PgLockStatusRecord> PG_LOCK_STATUS(
           Configuration configuration
     ) {
@@ -1859,32 +1289,15 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_lock_status</code> as a table.
-     */
     public static PgLockStatus PG_LOCK_STATUS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgLockStatus.PG_LOCK_STATUS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_locks</code>.
-     */
     public final PgLocks PG_LOCKS = PgLocks.PG_LOCKS;
 
-    /**
-     * The table <code>pg_catalog.pg_logical_slot_get_binary_changes</code>.
-     */
     public final PgLogicalSlotGetBinaryChanges PG_LOGICAL_SLOT_GET_BINARY_CHANGES = PgLogicalSlotGetBinaryChanges.PG_LOGICAL_SLOT_GET_BINARY_CHANGES;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<PgLogicalSlotGetBinaryChangesRecord> PG_LOGICAL_SLOT_GET_BINARY_CHANGES(
           Configuration configuration
@@ -1901,14 +1314,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgLogicalSlotGetBinaryChanges PG_LOGICAL_SLOT_GET_BINARY_CHANGES(
           String slotName
@@ -1924,14 +1329,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgLogicalSlotGetBinaryChanges PG_LOGICAL_SLOT_GET_BINARY_CHANGES(
           Field<String> slotName
@@ -1947,19 +1344,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_logical_slot_get_changes</code>.
-     */
     public final PgLogicalSlotGetChanges PG_LOGICAL_SLOT_GET_CHANGES = PgLogicalSlotGetChanges.PG_LOGICAL_SLOT_GET_CHANGES;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<PgLogicalSlotGetChangesRecord> PG_LOGICAL_SLOT_GET_CHANGES(
           Configuration configuration
@@ -1976,14 +1362,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgLogicalSlotGetChanges PG_LOGICAL_SLOT_GET_CHANGES(
           String slotName
@@ -1999,14 +1377,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgLogicalSlotGetChanges PG_LOGICAL_SLOT_GET_CHANGES(
           Field<String> slotName
@@ -2022,19 +1392,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_logical_slot_peek_binary_changes</code>.
-     */
     public final PgLogicalSlotPeekBinaryChanges PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES = PgLogicalSlotPeekBinaryChanges.PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<PgLogicalSlotPeekBinaryChangesRecord> PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES(
           Configuration configuration
@@ -2051,14 +1410,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgLogicalSlotPeekBinaryChanges PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES(
           String slotName
@@ -2074,14 +1425,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgLogicalSlotPeekBinaryChanges PG_LOGICAL_SLOT_PEEK_BINARY_CHANGES(
           Field<String> slotName
@@ -2097,19 +1440,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_logical_slot_peek_changes</code>.
-     */
     public final PgLogicalSlotPeekChanges PG_LOGICAL_SLOT_PEEK_CHANGES = PgLogicalSlotPeekChanges.PG_LOGICAL_SLOT_PEEK_CHANGES;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<PgLogicalSlotPeekChangesRecord> PG_LOGICAL_SLOT_PEEK_CHANGES(
           Configuration configuration
@@ -2126,14 +1458,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgLogicalSlotPeekChanges PG_LOGICAL_SLOT_PEEK_CHANGES(
           String slotName
@@ -2149,14 +1473,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgLogicalSlotPeekChanges PG_LOGICAL_SLOT_PEEK_CHANGES(
           Field<String> slotName
@@ -2172,14 +1488,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ls_archive_statusdir</code>.
-     */
     public final PgLsArchiveStatusdir PG_LS_ARCHIVE_STATUSDIR = PgLsArchiveStatusdir.PG_LS_ARCHIVE_STATUSDIR;
 
-    /**
-     * Call <code>pg_catalog.pg_ls_archive_statusdir</code>.
-     */
     public static Result<PgLsArchiveStatusdirRecord> PG_LS_ARCHIVE_STATUSDIR(
           Configuration configuration
     ) {
@@ -2187,22 +1497,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_archive_statusdir</code> as a table.
-     */
     public static PgLsArchiveStatusdir PG_LS_ARCHIVE_STATUSDIR() {
         return edu.java.domain.jooq.pg_catalog.tables.PgLsArchiveStatusdir.PG_LS_ARCHIVE_STATUSDIR.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ls_dir</code>.
-     */
     public final PgLsDir PG_LS_DIR = PgLsDir.PG_LS_DIR;
 
-    /**
-     * Call <code>pg_catalog.pg_ls_dir</code>.
-     */
     public static Result<PgLsDirRecord> PG_LS_DIR(
           Configuration configuration
         , String __1
@@ -2216,9 +1517,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_dir</code> as a table.
-     */
     public static PgLsDir PG_LS_DIR(
           String __1
         , Boolean __2
@@ -2231,9 +1529,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_dir</code> as a table.
-     */
     public static PgLsDir PG_LS_DIR(
           Field<String> __1
         , Field<Boolean> __2
@@ -2246,14 +1541,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ls_logdir</code>.
-     */
     public final PgLsLogdir PG_LS_LOGDIR = PgLsLogdir.PG_LS_LOGDIR;
 
-    /**
-     * Call <code>pg_catalog.pg_ls_logdir</code>.
-     */
     public static Result<PgLsLogdirRecord> PG_LS_LOGDIR(
           Configuration configuration
     ) {
@@ -2261,22 +1550,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_logdir</code> as a table.
-     */
     public static PgLsLogdir PG_LS_LOGDIR() {
         return edu.java.domain.jooq.pg_catalog.tables.PgLsLogdir.PG_LS_LOGDIR.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ls_logicalmapdir</code>.
-     */
     public final PgLsLogicalmapdir PG_LS_LOGICALMAPDIR = PgLsLogicalmapdir.PG_LS_LOGICALMAPDIR;
 
-    /**
-     * Call <code>pg_catalog.pg_ls_logicalmapdir</code>.
-     */
     public static Result<PgLsLogicalmapdirRecord> PG_LS_LOGICALMAPDIR(
           Configuration configuration
     ) {
@@ -2284,22 +1564,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_logicalmapdir</code> as a table.
-     */
     public static PgLsLogicalmapdir PG_LS_LOGICALMAPDIR() {
         return edu.java.domain.jooq.pg_catalog.tables.PgLsLogicalmapdir.PG_LS_LOGICALMAPDIR.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ls_logicalsnapdir</code>.
-     */
     public final PgLsLogicalsnapdir PG_LS_LOGICALSNAPDIR = PgLsLogicalsnapdir.PG_LS_LOGICALSNAPDIR;
 
-    /**
-     * Call <code>pg_catalog.pg_ls_logicalsnapdir</code>.
-     */
     public static Result<PgLsLogicalsnapdirRecord> PG_LS_LOGICALSNAPDIR(
           Configuration configuration
     ) {
@@ -2307,22 +1578,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_logicalsnapdir</code> as a table.
-     */
     public static PgLsLogicalsnapdir PG_LS_LOGICALSNAPDIR() {
         return edu.java.domain.jooq.pg_catalog.tables.PgLsLogicalsnapdir.PG_LS_LOGICALSNAPDIR.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ls_replslotdir</code>.
-     */
     public final PgLsReplslotdir PG_LS_REPLSLOTDIR = PgLsReplslotdir.PG_LS_REPLSLOTDIR;
 
-    /**
-     * Call <code>pg_catalog.pg_ls_replslotdir</code>.
-     */
     public static Result<PgLsReplslotdirRecord> PG_LS_REPLSLOTDIR(
           Configuration configuration
         , String slotName
@@ -2332,9 +1594,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_replslotdir</code> as a table.
-     */
     public static PgLsReplslotdir PG_LS_REPLSLOTDIR(
           String slotName
     ) {
@@ -2343,9 +1602,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_replslotdir</code> as a table.
-     */
     public static PgLsReplslotdir PG_LS_REPLSLOTDIR(
           Field<String> slotName
     ) {
@@ -2354,14 +1610,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ls_tmpdir</code>.
-     */
     public final PgLsTmpdir PG_LS_TMPDIR = PgLsTmpdir.PG_LS_TMPDIR;
 
-    /**
-     * Call <code>pg_catalog.pg_ls_tmpdir</code>.
-     */
     public static Result<PgLsTmpdirRecord> PG_LS_TMPDIR(
           Configuration configuration
     ) {
@@ -2369,22 +1619,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_tmpdir</code> as a table.
-     */
     public static PgLsTmpdir PG_LS_TMPDIR() {
         return edu.java.domain.jooq.pg_catalog.tables.PgLsTmpdir.PG_LS_TMPDIR.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_ls_waldir</code>.
-     */
     public final PgLsWaldir PG_LS_WALDIR = PgLsWaldir.PG_LS_WALDIR;
 
-    /**
-     * Call <code>pg_catalog.pg_ls_waldir</code>.
-     */
     public static Result<PgLsWaldirRecord> PG_LS_WALDIR(
           Configuration configuration
     ) {
@@ -2392,32 +1633,15 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_ls_waldir</code> as a table.
-     */
     public static PgLsWaldir PG_LS_WALDIR() {
         return edu.java.domain.jooq.pg_catalog.tables.PgLsWaldir.PG_LS_WALDIR.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_matviews</code>.
-     */
     public final PgMatviews PG_MATVIEWS = PgMatviews.PG_MATVIEWS;
 
-    /**
-     * The table <code>pg_catalog.pg_mcv_list_items</code>.
-     */
     public final PgMcvListItems PG_MCV_LIST_ITEMS = PgMcvListItems.PG_MCV_LIST_ITEMS;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<PgMcvListItemsRecord> PG_MCV_LIST_ITEMS(
           Configuration configuration
@@ -2428,14 +1652,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgMcvListItems PG_MCV_LIST_ITEMS(
           Object mcvList
@@ -2445,14 +1661,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgMcvListItems PG_MCV_LIST_ITEMS(
           Field<Object> mcvList
@@ -2462,34 +1670,16 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_namespace</code>.
-     */
     public final PgNamespace PG_NAMESPACE = PgNamespace.PG_NAMESPACE;
 
-    /**
-     * The table <code>pg_catalog.pg_opclass</code>.
-     */
     public final PgOpclass PG_OPCLASS = PgOpclass.PG_OPCLASS;
 
-    /**
-     * The table <code>pg_catalog.pg_operator</code>.
-     */
     public final PgOperator PG_OPERATOR = PgOperator.PG_OPERATOR;
 
-    /**
-     * The table <code>pg_catalog.pg_opfamily</code>.
-     */
     public final PgOpfamily PG_OPFAMILY = PgOpfamily.PG_OPFAMILY;
 
-    /**
-     * The table <code>pg_catalog.pg_options_to_table</code>.
-     */
     public final PgOptionsToTable PG_OPTIONS_TO_TABLE = PgOptionsToTable.PG_OPTIONS_TO_TABLE;
 
-    /**
-     * Call <code>pg_catalog.pg_options_to_table</code>.
-     */
     public static Result<PgOptionsToTableRecord> PG_OPTIONS_TO_TABLE(
           Configuration configuration
         , String[] optionsArray
@@ -2499,9 +1689,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_options_to_table</code> as a table.
-     */
     public static PgOptionsToTable PG_OPTIONS_TO_TABLE(
           String[] optionsArray
     ) {
@@ -2510,9 +1697,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_options_to_table</code> as a table.
-     */
     public static PgOptionsToTable PG_OPTIONS_TO_TABLE(
           Field<String[]> optionsArray
     ) {
@@ -2521,24 +1705,10 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_parameter_acl</code>.
-     */
     public final PgParameterAcl PG_PARAMETER_ACL = PgParameterAcl.PG_PARAMETER_ACL;
 
-    /**
-     * The table <code>pg_catalog.pg_partition_ancestors</code>.
-     */
     public final PgPartitionAncestors PG_PARTITION_ANCESTORS = PgPartitionAncestors.PG_PARTITION_ANCESTORS;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<PgPartitionAncestorsRecord> PG_PARTITION_ANCESTORS(
           Configuration configuration
@@ -2549,14 +1719,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgPartitionAncestors PG_PARTITION_ANCESTORS(
           Object partitionid
@@ -2566,14 +1728,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgPartitionAncestors PG_PARTITION_ANCESTORS(
           Field<Object> partitionid
@@ -2583,19 +1737,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_partition_tree</code>.
-     */
     public final PgPartitionTree PG_PARTITION_TREE = PgPartitionTree.PG_PARTITION_TREE;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<PgPartitionTreeRecord> PG_PARTITION_TREE(
           Configuration configuration
@@ -2606,14 +1749,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgPartitionTree PG_PARTITION_TREE(
           Object rootrelid
@@ -2623,14 +1758,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgPartitionTree PG_PARTITION_TREE(
           Field<Object> rootrelid
@@ -2640,29 +1767,14 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_partitioned_table</code>.
-     */
     public final PgPartitionedTable PG_PARTITIONED_TABLE = PgPartitionedTable.PG_PARTITIONED_TABLE;
 
-    /**
-     * The table <code>pg_catalog.pg_policies</code>.
-     */
     public final PgPolicies PG_POLICIES = PgPolicies.PG_POLICIES;
 
-    /**
-     * The table <code>pg_catalog.pg_policy</code>.
-     */
     public final PgPolicy PG_POLICY = PgPolicy.PG_POLICY;
 
-    /**
-     * The table <code>pg_catalog.pg_prepared_statement</code>.
-     */
     public final PgPreparedStatement PG_PREPARED_STATEMENT = PgPreparedStatement.PG_PREPARED_STATEMENT;
 
-    /**
-     * Call <code>pg_catalog.pg_prepared_statement</code>.
-     */
     public static Result<PgPreparedStatementRecord> PG_PREPARED_STATEMENT(
           Configuration configuration
     ) {
@@ -2670,27 +1782,15 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_prepared_statement</code> as a table.
-     */
     public static PgPreparedStatement PG_PREPARED_STATEMENT() {
         return edu.java.domain.jooq.pg_catalog.tables.PgPreparedStatement.PG_PREPARED_STATEMENT.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_prepared_statements</code>.
-     */
     public final PgPreparedStatements PG_PREPARED_STATEMENTS = PgPreparedStatements.PG_PREPARED_STATEMENTS;
 
-    /**
-     * The table <code>pg_catalog.pg_prepared_xact</code>.
-     */
     public final PgPreparedXact PG_PREPARED_XACT = PgPreparedXact.PG_PREPARED_XACT;
 
-    /**
-     * Call <code>pg_catalog.pg_prepared_xact</code>.
-     */
     public static Result<PgPreparedXactRecord> PG_PREPARED_XACT(
           Configuration configuration
     ) {
@@ -2698,132 +1798,57 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_prepared_xact</code> as a table.
-     */
     public static PgPreparedXact PG_PREPARED_XACT() {
         return edu.java.domain.jooq.pg_catalog.tables.PgPreparedXact.PG_PREPARED_XACT.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_prepared_xacts</code>.
-     */
     public final PgPreparedXacts PG_PREPARED_XACTS = PgPreparedXacts.PG_PREPARED_XACTS;
 
-    /**
-     * The table <code>pg_catalog.pg_proc</code>.
-     */
     public final PgProc PG_PROC = PgProc.PG_PROC;
 
-    /**
-     * The table <code>pg_catalog.pg_publication</code>.
-     */
     public final PgPublication PG_PUBLICATION = PgPublication.PG_PUBLICATION;
 
-    /**
-     * The table <code>pg_catalog.pg_publication_namespace</code>.
-     */
     public final PgPublicationNamespace PG_PUBLICATION_NAMESPACE = PgPublicationNamespace.PG_PUBLICATION_NAMESPACE;
 
-    /**
-     * The table <code>pg_catalog.pg_publication_rel</code>.
-     */
     public final PgPublicationRel PG_PUBLICATION_REL = PgPublicationRel.PG_PUBLICATION_REL;
 
-    /**
-     * The table <code>pg_catalog.pg_publication_tables</code>.
-     */
     public final PgPublicationTables PG_PUBLICATION_TABLES = PgPublicationTables.PG_PUBLICATION_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_range</code>.
-     */
     public final PgRange PG_RANGE = PgRange.PG_RANGE;
 
-    /**
-     * The table <code>pg_catalog.pg_replication_origin</code>.
-     */
     public final PgReplicationOrigin PG_REPLICATION_ORIGIN = PgReplicationOrigin.PG_REPLICATION_ORIGIN;
 
-    /**
-     * The table <code>pg_catalog.pg_replication_origin_status</code>.
-     */
     public final PgReplicationOriginStatus PG_REPLICATION_ORIGIN_STATUS = PgReplicationOriginStatus.PG_REPLICATION_ORIGIN_STATUS;
 
-    /**
-     * The table <code>pg_catalog.pg_replication_slots</code>.
-     */
     public final PgReplicationSlots PG_REPLICATION_SLOTS = PgReplicationSlots.PG_REPLICATION_SLOTS;
 
-    /**
-     * The table <code>pg_catalog.pg_rewrite</code>.
-     */
     public final PgRewrite PG_REWRITE = PgRewrite.PG_REWRITE;
 
-    /**
-     * The table <code>pg_catalog.pg_roles</code>.
-     */
     public final PgRoles PG_ROLES = PgRoles.PG_ROLES;
 
-    /**
-     * The table <code>pg_catalog.pg_rules</code>.
-     */
     public final PgRules PG_RULES = PgRules.PG_RULES;
 
-    /**
-     * The table <code>pg_catalog.pg_seclabel</code>.
-     */
     public final PgSeclabel PG_SECLABEL = PgSeclabel.PG_SECLABEL;
 
-    /**
-     * The table <code>pg_catalog.pg_seclabels</code>.
-     */
     public final PgSeclabels PG_SECLABELS = PgSeclabels.PG_SECLABELS;
 
-    /**
-     * The table <code>pg_catalog.pg_sequence</code>.
-     */
     public final PgSequence PG_SEQUENCE = PgSequence.PG_SEQUENCE;
 
-    /**
-     * The table <code>pg_catalog.pg_sequences</code>.
-     */
     public final PgSequences PG_SEQUENCES = PgSequences.PG_SEQUENCES;
 
-    /**
-     * The table <code>pg_catalog.pg_settings</code>.
-     */
     public final PgSettings PG_SETTINGS = PgSettings.PG_SETTINGS;
 
-    /**
-     * The table <code>pg_catalog.pg_shadow</code>.
-     */
     public final PgShadow PG_SHADOW = PgShadow.PG_SHADOW;
 
-    /**
-     * The table <code>pg_catalog.pg_shdepend</code>.
-     */
     public final PgShdepend PG_SHDEPEND = PgShdepend.PG_SHDEPEND;
 
-    /**
-     * The table <code>pg_catalog.pg_shdescription</code>.
-     */
     public final PgShdescription PG_SHDESCRIPTION = PgShdescription.PG_SHDESCRIPTION;
 
-    /**
-     * The table <code>pg_catalog.pg_shmem_allocations</code>.
-     */
     public final PgShmemAllocations PG_SHMEM_ALLOCATIONS = PgShmemAllocations.PG_SHMEM_ALLOCATIONS;
 
-    /**
-     * The table <code>pg_catalog.pg_show_all_file_settings</code>.
-     */
     public final PgShowAllFileSettings PG_SHOW_ALL_FILE_SETTINGS = PgShowAllFileSettings.PG_SHOW_ALL_FILE_SETTINGS;
 
-    /**
-     * Call <code>pg_catalog.pg_show_all_file_settings</code>.
-     */
     public static Result<PgShowAllFileSettingsRecord> PG_SHOW_ALL_FILE_SETTINGS(
           Configuration configuration
     ) {
@@ -2831,22 +1856,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_show_all_file_settings</code> as a table.
-     */
     public static PgShowAllFileSettings PG_SHOW_ALL_FILE_SETTINGS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgShowAllFileSettings.PG_SHOW_ALL_FILE_SETTINGS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_show_all_settings</code>.
-     */
     public final PgShowAllSettings PG_SHOW_ALL_SETTINGS = PgShowAllSettings.PG_SHOW_ALL_SETTINGS;
 
-    /**
-     * Call <code>pg_catalog.pg_show_all_settings</code>.
-     */
     public static Result<PgShowAllSettingsRecord> PG_SHOW_ALL_SETTINGS(
           Configuration configuration
     ) {
@@ -2854,22 +1870,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_show_all_settings</code> as a table.
-     */
     public static PgShowAllSettings PG_SHOW_ALL_SETTINGS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgShowAllSettings.PG_SHOW_ALL_SETTINGS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_show_replication_origin_status</code>.
-     */
     public final PgShowReplicationOriginStatus PG_SHOW_REPLICATION_ORIGIN_STATUS = PgShowReplicationOriginStatus.PG_SHOW_REPLICATION_ORIGIN_STATUS;
 
-    /**
-     * Call <code>pg_catalog.pg_show_replication_origin_status</code>.
-     */
     public static Result<PgShowReplicationOriginStatusRecord> PG_SHOW_REPLICATION_ORIGIN_STATUS(
           Configuration configuration
     ) {
@@ -2877,32 +1884,15 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_show_replication_origin_status</code> as a table.
-     */
     public static PgShowReplicationOriginStatus PG_SHOW_REPLICATION_ORIGIN_STATUS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgShowReplicationOriginStatus.PG_SHOW_REPLICATION_ORIGIN_STATUS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_shseclabel</code>.
-     */
     public final PgShseclabel PG_SHSECLABEL = PgShseclabel.PG_SHSECLABEL;
 
-    /**
-     * The table <code>pg_catalog.pg_snapshot_xip</code>.
-     */
     public final PgSnapshotXip PG_SNAPSHOT_XIP = PgSnapshotXip.PG_SNAPSHOT_XIP;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<PgSnapshotXipRecord> PG_SNAPSHOT_XIP(
           Configuration configuration
@@ -2913,14 +1903,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgSnapshotXip PG_SNAPSHOT_XIP(
           Object __1
@@ -2930,14 +1912,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static PgSnapshotXip PG_SNAPSHOT_XIP(
           Field<Object> __1
@@ -2947,49 +1921,22 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_activity</code>.
-     */
     public final PgStatActivity PG_STAT_ACTIVITY = PgStatActivity.PG_STAT_ACTIVITY;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_all_indexes</code>.
-     */
     public final PgStatAllIndexes PG_STAT_ALL_INDEXES = PgStatAllIndexes.PG_STAT_ALL_INDEXES;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_all_tables</code>.
-     */
     public final PgStatAllTables PG_STAT_ALL_TABLES = PgStatAllTables.PG_STAT_ALL_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_archiver</code>.
-     */
     public final PgStatArchiver PG_STAT_ARCHIVER = PgStatArchiver.PG_STAT_ARCHIVER;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_bgwriter</code>.
-     */
     public final PgStatBgwriter PG_STAT_BGWRITER = PgStatBgwriter.PG_STAT_BGWRITER;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_database</code>.
-     */
     public final PgStatDatabase PG_STAT_DATABASE = PgStatDatabase.PG_STAT_DATABASE;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_database_conflicts</code>.
-     */
     public final PgStatDatabaseConflicts PG_STAT_DATABASE_CONFLICTS = PgStatDatabaseConflicts.PG_STAT_DATABASE_CONFLICTS;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_get_activity</code>.
-     */
     public final PgStatGetActivity PG_STAT_GET_ACTIVITY = PgStatGetActivity.PG_STAT_GET_ACTIVITY;
 
-    /**
-     * Call <code>pg_catalog.pg_stat_get_activity</code>.
-     */
     public static Result<PgStatGetActivityRecord> PG_STAT_GET_ACTIVITY(
           Configuration configuration
         , Integer pid
@@ -2999,9 +1946,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_activity</code> as a table.
-     */
     public static PgStatGetActivity PG_STAT_GET_ACTIVITY(
           Integer pid
     ) {
@@ -3010,9 +1954,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_activity</code> as a table.
-     */
     public static PgStatGetActivity PG_STAT_GET_ACTIVITY(
           Field<Integer> pid
     ) {
@@ -3021,14 +1962,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_get_backend_idset</code>.
-     */
     public final PgStatGetBackendIdset PG_STAT_GET_BACKEND_IDSET = PgStatGetBackendIdset.PG_STAT_GET_BACKEND_IDSET;
 
-    /**
-     * Call <code>pg_catalog.pg_stat_get_backend_idset</code>.
-     */
     public static Result<PgStatGetBackendIdsetRecord> PG_STAT_GET_BACKEND_IDSET(
           Configuration configuration
     ) {
@@ -3036,22 +1971,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_backend_idset</code> as a table.
-     */
     public static PgStatGetBackendIdset PG_STAT_GET_BACKEND_IDSET() {
         return edu.java.domain.jooq.pg_catalog.tables.PgStatGetBackendIdset.PG_STAT_GET_BACKEND_IDSET.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_get_io</code>.
-     */
     public final PgStatGetIo PG_STAT_GET_IO = PgStatGetIo.PG_STAT_GET_IO;
 
-    /**
-     * Call <code>pg_catalog.pg_stat_get_io</code>.
-     */
     public static Result<PgStatGetIoRecord> PG_STAT_GET_IO(
           Configuration configuration
     ) {
@@ -3059,22 +1985,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_io</code> as a table.
-     */
     public static PgStatGetIo PG_STAT_GET_IO() {
         return edu.java.domain.jooq.pg_catalog.tables.PgStatGetIo.PG_STAT_GET_IO.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_get_progress_info</code>.
-     */
     public final PgStatGetProgressInfo PG_STAT_GET_PROGRESS_INFO = PgStatGetProgressInfo.PG_STAT_GET_PROGRESS_INFO;
 
-    /**
-     * Call <code>pg_catalog.pg_stat_get_progress_info</code>.
-     */
     public static Result<PgStatGetProgressInfoRecord> PG_STAT_GET_PROGRESS_INFO(
           Configuration configuration
         , String cmdtype
@@ -3084,9 +2001,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_progress_info</code> as a table.
-     */
     public static PgStatGetProgressInfo PG_STAT_GET_PROGRESS_INFO(
           String cmdtype
     ) {
@@ -3095,9 +2009,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_progress_info</code> as a table.
-     */
     public static PgStatGetProgressInfo PG_STAT_GET_PROGRESS_INFO(
           Field<String> cmdtype
     ) {
@@ -3106,14 +2017,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_get_recovery_prefetch</code>.
-     */
     public final PgStatGetRecoveryPrefetch PG_STAT_GET_RECOVERY_PREFETCH = PgStatGetRecoveryPrefetch.PG_STAT_GET_RECOVERY_PREFETCH;
 
-    /**
-     * Call <code>pg_catalog.pg_stat_get_recovery_prefetch</code>.
-     */
     public static Result<PgStatGetRecoveryPrefetchRecord> PG_STAT_GET_RECOVERY_PREFETCH(
           Configuration configuration
     ) {
@@ -3121,22 +2026,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_recovery_prefetch</code> as a table.
-     */
     public static PgStatGetRecoveryPrefetch PG_STAT_GET_RECOVERY_PREFETCH() {
         return edu.java.domain.jooq.pg_catalog.tables.PgStatGetRecoveryPrefetch.PG_STAT_GET_RECOVERY_PREFETCH.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_get_slru</code>.
-     */
     public final PgStatGetSlru PG_STAT_GET_SLRU = PgStatGetSlru.PG_STAT_GET_SLRU;
 
-    /**
-     * Call <code>pg_catalog.pg_stat_get_slru</code>.
-     */
     public static Result<PgStatGetSlruRecord> PG_STAT_GET_SLRU(
           Configuration configuration
     ) {
@@ -3144,22 +2040,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_slru</code> as a table.
-     */
     public static PgStatGetSlru PG_STAT_GET_SLRU() {
         return edu.java.domain.jooq.pg_catalog.tables.PgStatGetSlru.PG_STAT_GET_SLRU.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_get_subscription</code>.
-     */
     public final PgStatGetSubscription PG_STAT_GET_SUBSCRIPTION = PgStatGetSubscription.PG_STAT_GET_SUBSCRIPTION;
 
-    /**
-     * Call <code>pg_catalog.pg_stat_get_subscription</code>.
-     */
     public static Result<PgStatGetSubscriptionRecord> PG_STAT_GET_SUBSCRIPTION(
           Configuration configuration
         , Long subid
@@ -3169,9 +2056,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_subscription</code> as a table.
-     */
     public static PgStatGetSubscription PG_STAT_GET_SUBSCRIPTION(
           Long subid
     ) {
@@ -3180,9 +2064,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_subscription</code> as a table.
-     */
     public static PgStatGetSubscription PG_STAT_GET_SUBSCRIPTION(
           Field<Long> subid
     ) {
@@ -3191,14 +2072,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_get_wal_senders</code>.
-     */
     public final PgStatGetWalSenders PG_STAT_GET_WAL_SENDERS = PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS;
 
-    /**
-     * Call <code>pg_catalog.pg_stat_get_wal_senders</code>.
-     */
     public static Result<PgStatGetWalSendersRecord> PG_STAT_GET_WAL_SENDERS(
           Configuration configuration
     ) {
@@ -3206,247 +2081,103 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_stat_get_wal_senders</code> as a table.
-     */
     public static PgStatGetWalSenders PG_STAT_GET_WAL_SENDERS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgStatGetWalSenders.PG_STAT_GET_WAL_SENDERS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_stat_gssapi</code>.
-     */
     public final PgStatGssapi PG_STAT_GSSAPI = PgStatGssapi.PG_STAT_GSSAPI;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_io</code>.
-     */
     public final PgStatIo PG_STAT_IO = PgStatIo.PG_STAT_IO;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_progress_analyze</code>.
-     */
     public final PgStatProgressAnalyze PG_STAT_PROGRESS_ANALYZE = PgStatProgressAnalyze.PG_STAT_PROGRESS_ANALYZE;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_progress_basebackup</code>.
-     */
     public final PgStatProgressBasebackup PG_STAT_PROGRESS_BASEBACKUP = PgStatProgressBasebackup.PG_STAT_PROGRESS_BASEBACKUP;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_progress_cluster</code>.
-     */
     public final PgStatProgressCluster PG_STAT_PROGRESS_CLUSTER = PgStatProgressCluster.PG_STAT_PROGRESS_CLUSTER;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_progress_copy</code>.
-     */
     public final PgStatProgressCopy PG_STAT_PROGRESS_COPY = PgStatProgressCopy.PG_STAT_PROGRESS_COPY;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_progress_create_index</code>.
-     */
     public final PgStatProgressCreateIndex PG_STAT_PROGRESS_CREATE_INDEX = PgStatProgressCreateIndex.PG_STAT_PROGRESS_CREATE_INDEX;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_progress_vacuum</code>.
-     */
     public final PgStatProgressVacuum PG_STAT_PROGRESS_VACUUM = PgStatProgressVacuum.PG_STAT_PROGRESS_VACUUM;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_recovery_prefetch</code>.
-     */
     public final PgStatRecoveryPrefetch PG_STAT_RECOVERY_PREFETCH = PgStatRecoveryPrefetch.PG_STAT_RECOVERY_PREFETCH;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_replication</code>.
-     */
     public final PgStatReplication PG_STAT_REPLICATION = PgStatReplication.PG_STAT_REPLICATION;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_replication_slots</code>.
-     */
     public final PgStatReplicationSlots PG_STAT_REPLICATION_SLOTS = PgStatReplicationSlots.PG_STAT_REPLICATION_SLOTS;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_slru</code>.
-     */
     public final PgStatSlru PG_STAT_SLRU = PgStatSlru.PG_STAT_SLRU;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_ssl</code>.
-     */
     public final PgStatSsl PG_STAT_SSL = PgStatSsl.PG_STAT_SSL;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_subscription</code>.
-     */
     public final PgStatSubscription PG_STAT_SUBSCRIPTION = PgStatSubscription.PG_STAT_SUBSCRIPTION;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_subscription_stats</code>.
-     */
     public final PgStatSubscriptionStats PG_STAT_SUBSCRIPTION_STATS = PgStatSubscriptionStats.PG_STAT_SUBSCRIPTION_STATS;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_sys_indexes</code>.
-     */
     public final PgStatSysIndexes PG_STAT_SYS_INDEXES = PgStatSysIndexes.PG_STAT_SYS_INDEXES;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_sys_tables</code>.
-     */
     public final PgStatSysTables PG_STAT_SYS_TABLES = PgStatSysTables.PG_STAT_SYS_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_user_functions</code>.
-     */
     public final PgStatUserFunctions PG_STAT_USER_FUNCTIONS = PgStatUserFunctions.PG_STAT_USER_FUNCTIONS;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_user_indexes</code>.
-     */
     public final PgStatUserIndexes PG_STAT_USER_INDEXES = PgStatUserIndexes.PG_STAT_USER_INDEXES;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_user_tables</code>.
-     */
     public final PgStatUserTables PG_STAT_USER_TABLES = PgStatUserTables.PG_STAT_USER_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_wal</code>.
-     */
     public final PgStatWal PG_STAT_WAL = PgStatWal.PG_STAT_WAL;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_wal_receiver</code>.
-     */
     public final PgStatWalReceiver PG_STAT_WAL_RECEIVER = PgStatWalReceiver.PG_STAT_WAL_RECEIVER;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_xact_all_tables</code>.
-     */
     public final PgStatXactAllTables PG_STAT_XACT_ALL_TABLES = PgStatXactAllTables.PG_STAT_XACT_ALL_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_xact_sys_tables</code>.
-     */
     public final PgStatXactSysTables PG_STAT_XACT_SYS_TABLES = PgStatXactSysTables.PG_STAT_XACT_SYS_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_xact_user_functions</code>.
-     */
     public final PgStatXactUserFunctions PG_STAT_XACT_USER_FUNCTIONS = PgStatXactUserFunctions.PG_STAT_XACT_USER_FUNCTIONS;
 
-    /**
-     * The table <code>pg_catalog.pg_stat_xact_user_tables</code>.
-     */
     public final PgStatXactUserTables PG_STAT_XACT_USER_TABLES = PgStatXactUserTables.PG_STAT_XACT_USER_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_all_indexes</code>.
-     */
     public final PgStatioAllIndexes PG_STATIO_ALL_INDEXES = PgStatioAllIndexes.PG_STATIO_ALL_INDEXES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_all_sequences</code>.
-     */
     public final PgStatioAllSequences PG_STATIO_ALL_SEQUENCES = PgStatioAllSequences.PG_STATIO_ALL_SEQUENCES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_all_tables</code>.
-     */
     public final PgStatioAllTables PG_STATIO_ALL_TABLES = PgStatioAllTables.PG_STATIO_ALL_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_sys_indexes</code>.
-     */
     public final PgStatioSysIndexes PG_STATIO_SYS_INDEXES = PgStatioSysIndexes.PG_STATIO_SYS_INDEXES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_sys_sequences</code>.
-     */
     public final PgStatioSysSequences PG_STATIO_SYS_SEQUENCES = PgStatioSysSequences.PG_STATIO_SYS_SEQUENCES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_sys_tables</code>.
-     */
     public final PgStatioSysTables PG_STATIO_SYS_TABLES = PgStatioSysTables.PG_STATIO_SYS_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_user_indexes</code>.
-     */
     public final PgStatioUserIndexes PG_STATIO_USER_INDEXES = PgStatioUserIndexes.PG_STATIO_USER_INDEXES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_user_sequences</code>.
-     */
     public final PgStatioUserSequences PG_STATIO_USER_SEQUENCES = PgStatioUserSequences.PG_STATIO_USER_SEQUENCES;
 
-    /**
-     * The table <code>pg_catalog.pg_statio_user_tables</code>.
-     */
     public final PgStatioUserTables PG_STATIO_USER_TABLES = PgStatioUserTables.PG_STATIO_USER_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_statistic</code>.
-     */
     public final PgStatistic PG_STATISTIC = PgStatistic.PG_STATISTIC;
 
-    /**
-     * The table <code>pg_catalog.pg_statistic_ext</code>.
-     */
     public final PgStatisticExt PG_STATISTIC_EXT = PgStatisticExt.PG_STATISTIC_EXT;
 
-    /**
-     * The table <code>pg_catalog.pg_statistic_ext_data</code>.
-     */
     public final PgStatisticExtData PG_STATISTIC_EXT_DATA = PgStatisticExtData.PG_STATISTIC_EXT_DATA;
 
-    /**
-     * The table <code>pg_catalog.pg_stats</code>.
-     */
     public final PgStats PG_STATS = PgStats.PG_STATS;
 
-    /**
-     * The table <code>pg_catalog.pg_stats_ext</code>.
-     */
     public final PgStatsExt PG_STATS_EXT = PgStatsExt.PG_STATS_EXT;
 
-    /**
-     * The table <code>pg_catalog.pg_stats_ext_exprs</code>.
-     */
     public final PgStatsExtExprs PG_STATS_EXT_EXPRS = PgStatsExtExprs.PG_STATS_EXT_EXPRS;
 
-    /**
-     * The table <code>pg_catalog.pg_subscription</code>.
-     */
     public final PgSubscription PG_SUBSCRIPTION = PgSubscription.PG_SUBSCRIPTION;
 
-    /**
-     * The table <code>pg_catalog.pg_subscription_rel</code>.
-     */
     public final PgSubscriptionRel PG_SUBSCRIPTION_REL = PgSubscriptionRel.PG_SUBSCRIPTION_REL;
 
-    /**
-     * The table <code>pg_catalog.pg_tables</code>.
-     */
     public final PgTables PG_TABLES = PgTables.PG_TABLES;
 
-    /**
-     * The table <code>pg_catalog.pg_tablespace</code>.
-     */
     public final PgTablespace PG_TABLESPACE = PgTablespace.PG_TABLESPACE;
 
-    /**
-     * The table <code>pg_catalog.pg_tablespace_databases</code>.
-     */
     public final PgTablespaceDatabases PG_TABLESPACE_DATABASES = PgTablespaceDatabases.PG_TABLESPACE_DATABASES;
 
-    /**
-     * Call <code>pg_catalog.pg_tablespace_databases</code>.
-     */
     public static Result<PgTablespaceDatabasesRecord> PG_TABLESPACE_DATABASES(
           Configuration configuration
         , Long __1
@@ -3456,9 +2187,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_tablespace_databases</code> as a table.
-     */
     public static PgTablespaceDatabases PG_TABLESPACE_DATABASES(
           Long __1
     ) {
@@ -3467,9 +2195,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.pg_tablespace_databases</code> as a table.
-     */
     public static PgTablespaceDatabases PG_TABLESPACE_DATABASES(
           Field<Long> __1
     ) {
@@ -3478,14 +2203,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_timezone_abbrevs</code>.
-     */
     public final PgTimezoneAbbrevs PG_TIMEZONE_ABBREVS = PgTimezoneAbbrevs.PG_TIMEZONE_ABBREVS;
 
-    /**
-     * Call <code>pg_catalog.pg_timezone_abbrevs</code>.
-     */
     public static Result<PgTimezoneAbbrevsRecord> PG_TIMEZONE_ABBREVS(
           Configuration configuration
     ) {
@@ -3493,22 +2212,13 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_timezone_abbrevs</code> as a table.
-     */
     public static PgTimezoneAbbrevs PG_TIMEZONE_ABBREVS() {
         return edu.java.domain.jooq.pg_catalog.tables.PgTimezoneAbbrevs.PG_TIMEZONE_ABBREVS.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_timezone_names</code>.
-     */
     public final PgTimezoneNames PG_TIMEZONE_NAMES = PgTimezoneNames.PG_TIMEZONE_NAMES;
 
-    /**
-     * Call <code>pg_catalog.pg_timezone_names</code>.
-     */
     public static Result<PgTimezoneNamesRecord> PG_TIMEZONE_NAMES(
           Configuration configuration
     ) {
@@ -3516,82 +2226,37 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.pg_timezone_names</code> as a table.
-     */
     public static PgTimezoneNames PG_TIMEZONE_NAMES() {
         return edu.java.domain.jooq.pg_catalog.tables.PgTimezoneNames.PG_TIMEZONE_NAMES.call(
         );
     }
 
-    /**
-     * The table <code>pg_catalog.pg_transform</code>.
-     */
     public final PgTransform PG_TRANSFORM = PgTransform.PG_TRANSFORM;
 
-    /**
-     * The table <code>pg_catalog.pg_trigger</code>.
-     */
     public final PgTrigger PG_TRIGGER = PgTrigger.PG_TRIGGER;
 
-    /**
-     * The table <code>pg_catalog.pg_ts_config</code>.
-     */
     public final PgTsConfig PG_TS_CONFIG = PgTsConfig.PG_TS_CONFIG;
 
-    /**
-     * The table <code>pg_catalog.pg_ts_config_map</code>.
-     */
     public final PgTsConfigMap PG_TS_CONFIG_MAP = PgTsConfigMap.PG_TS_CONFIG_MAP;
 
-    /**
-     * The table <code>pg_catalog.pg_ts_dict</code>.
-     */
     public final PgTsDict PG_TS_DICT = PgTsDict.PG_TS_DICT;
 
-    /**
-     * The table <code>pg_catalog.pg_ts_parser</code>.
-     */
     public final PgTsParser PG_TS_PARSER = PgTsParser.PG_TS_PARSER;
 
-    /**
-     * The table <code>pg_catalog.pg_ts_template</code>.
-     */
     public final PgTsTemplate PG_TS_TEMPLATE = PgTsTemplate.PG_TS_TEMPLATE;
 
-    /**
-     * The table <code>pg_catalog.pg_type</code>.
-     */
     public final PgType PG_TYPE = PgType.PG_TYPE;
 
-    /**
-     * The table <code>pg_catalog.pg_user</code>.
-     */
     public final PgUser PG_USER = PgUser.PG_USER;
 
-    /**
-     * The table <code>pg_catalog.pg_user_mapping</code>.
-     */
     public final PgUserMapping PG_USER_MAPPING = PgUserMapping.PG_USER_MAPPING;
 
-    /**
-     * The table <code>pg_catalog.pg_user_mappings</code>.
-     */
     public final PgUserMappings PG_USER_MAPPINGS = PgUserMappings.PG_USER_MAPPINGS;
 
-    /**
-     * The table <code>pg_catalog.pg_views</code>.
-     */
     public final PgViews PG_VIEWS = PgViews.PG_VIEWS;
 
-    /**
-     * The table <code>pg_catalog.regexp_matches</code>.
-     */
     public final RegexpMatches REGEXP_MATCHES = RegexpMatches.REGEXP_MATCHES;
 
-    /**
-     * Call <code>pg_catalog.regexp_matches</code>.
-     */
     public static Result<RegexpMatchesRecord> REGEXP_MATCHES(
           Configuration configuration
         , String __1
@@ -3605,9 +2270,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.regexp_matches</code> as a table.
-     */
     public static RegexpMatches REGEXP_MATCHES(
           String __1
         , String __2
@@ -3620,9 +2282,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.regexp_matches</code> as a table.
-     */
     public static RegexpMatches REGEXP_MATCHES(
           Field<String> __1
         , Field<String> __2
@@ -3635,14 +2294,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.regexp_split_to_table</code>.
-     */
     public final RegexpSplitToTable REGEXP_SPLIT_TO_TABLE = RegexpSplitToTable.REGEXP_SPLIT_TO_TABLE;
 
-    /**
-     * Call <code>pg_catalog.regexp_split_to_table</code>.
-     */
     public static Result<RegexpSplitToTableRecord> REGEXP_SPLIT_TO_TABLE(
           Configuration configuration
         , String __1
@@ -3656,9 +2309,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.regexp_split_to_table</code> as a table.
-     */
     public static RegexpSplitToTable REGEXP_SPLIT_TO_TABLE(
           String __1
         , String __2
@@ -3671,9 +2321,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.regexp_split_to_table</code> as a table.
-     */
     public static RegexpSplitToTable REGEXP_SPLIT_TO_TABLE(
           Field<String> __1
         , Field<String> __2
@@ -3686,14 +2333,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.string_to_table</code>.
-     */
     public final StringToTable STRING_TO_TABLE = StringToTable.STRING_TO_TABLE;
 
-    /**
-     * Call <code>pg_catalog.string_to_table</code>.
-     */
     public static Result<StringToTableRecord> STRING_TO_TABLE(
           Configuration configuration
         , String __1
@@ -3705,9 +2346,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.string_to_table</code> as a table.
-     */
     public static StringToTable STRING_TO_TABLE(
           String __1
         , String __2
@@ -3718,9 +2356,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.string_to_table</code> as a table.
-     */
     public static StringToTable STRING_TO_TABLE(
           Field<String> __1
         , Field<String> __2
@@ -3731,19 +2366,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.ts_debug</code>.
-     */
     public final TsDebug TS_DEBUG = TsDebug.TS_DEBUG;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<TsDebugRecord> TS_DEBUG(
           Configuration configuration
@@ -3756,14 +2380,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static TsDebug TS_DEBUG(
           Object config
@@ -3775,14 +2391,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static TsDebug TS_DEBUG(
           Field<Object> config
@@ -3794,14 +2402,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.ts_parse</code>.
-     */
     public final TsParse TS_PARSE = TsParse.TS_PARSE;
 
-    /**
-     * Call <code>pg_catalog.ts_parse</code>.
-     */
     public static Result<TsParseRecord> TS_PARSE(
           Configuration configuration
         , Long parserOid
@@ -3813,9 +2415,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.ts_parse</code> as a table.
-     */
     public static TsParse TS_PARSE(
           Long parserOid
         , String txt
@@ -3826,9 +2425,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.ts_parse</code> as a table.
-     */
     public static TsParse TS_PARSE(
           Field<Long> parserOid
         , Field<String> txt
@@ -3839,14 +2435,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.ts_stat</code>.
-     */
     public final TsStat TS_STAT = TsStat.TS_STAT;
 
-    /**
-     * Call <code>pg_catalog.ts_stat</code>.
-     */
     public static Result<TsStatRecord> TS_STAT(
           Configuration configuration
         , String query
@@ -3858,9 +2448,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.ts_stat</code> as a table.
-     */
     public static TsStat TS_STAT(
           String query
         , String weights
@@ -3871,9 +2458,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.ts_stat</code> as a table.
-     */
     public static TsStat TS_STAT(
           Field<String> query
         , Field<String> weights
@@ -3884,14 +2468,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.ts_token_type</code>.
-     */
     public final TsTokenType TS_TOKEN_TYPE = TsTokenType.TS_TOKEN_TYPE;
 
-    /**
-     * Call <code>pg_catalog.ts_token_type</code>.
-     */
     public static Result<TsTokenTypeRecord> TS_TOKEN_TYPE(
           Configuration configuration
         , String parserName
@@ -3901,9 +2479,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.ts_token_type</code> as a table.
-     */
     public static TsTokenType TS_TOKEN_TYPE(
           String parserName
     ) {
@@ -3912,9 +2487,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.ts_token_type</code> as a table.
-     */
     public static TsTokenType TS_TOKEN_TYPE(
           Field<String> parserName
     ) {
@@ -3923,19 +2495,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.txid_snapshot_xip</code>.
-     */
     public final TxidSnapshotXip TXID_SNAPSHOT_XIP = TxidSnapshotXip.TXID_SNAPSHOT_XIP;
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static Result<TxidSnapshotXipRecord> TXID_SNAPSHOT_XIP(
           Configuration configuration
@@ -3946,14 +2507,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static TxidSnapshotXip TXID_SNAPSHOT_XIP(
           Object __1
@@ -3963,14 +2516,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * @deprecated Unknown data type. Parameter type or return type is unknown.
-     * If this is a qualified, user-defined type, it may have been excluded from
-     * code generation. If this is a built-in type, you can define an explicit
-     * {@link org.jooq.Binding} to specify how this type should be handled.
-     * Deprecation can be turned off using {@literal
-     * <deprecationOnUnknownTypes/>} in your code generator configuration.
-     */
     @Deprecated
     public static TxidSnapshotXip TXID_SNAPSHOT_XIP(
           Field<Object> __1
@@ -3980,14 +2525,8 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * The table <code>pg_catalog.unnest</code>.
-     */
     public final Unnest UNNEST = Unnest.UNNEST;
 
-    /**
-     * Call <code>pg_catalog.unnest</code>.
-     */
     public static Result<UnnestRecord> UNNEST(
           Configuration configuration
         , Object[] __1
@@ -3997,9 +2536,6 @@ public class PgCatalog extends SchemaImpl {
         )).fetch();
     }
 
-    /**
-     * Get <code>pg_catalog.unnest</code> as a table.
-     */
     public static Unnest UNNEST(
           Object[] __1
     ) {
@@ -4008,9 +2544,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * Get <code>pg_catalog.unnest</code> as a table.
-     */
     public static Unnest UNNEST(
           Field<Object[]> __1
     ) {
@@ -4019,9 +2552,6 @@ public class PgCatalog extends SchemaImpl {
         );
     }
 
-    /**
-     * No further instances allowed
-     */
     private PgCatalog() {
         super("pg_catalog", null);
     }

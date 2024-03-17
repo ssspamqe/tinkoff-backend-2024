@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.information_schema_catalog_name</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,18 +30,10 @@ public class InformationSchemaCatalogNameRecord extends TableRecordImpl<Informat
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema.information_schema_catalog_name.catalog_name</code>.
-     */
     public void setCatalogName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.information_schema_catalog_name.catalog_name</code>.
-     */
     @Nullable
     public String getCatalogName() {
         return (String) get(0);
@@ -102,16 +91,10 @@ public class InformationSchemaCatalogNameRecord extends TableRecordImpl<Informat
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached InformationSchemaCatalogNameRecord
-     */
     public InformationSchemaCatalogNameRecord() {
         super(InformationSchemaCatalogName.INFORMATION_SCHEMA_CATALOG_NAME);
     }
 
-    /**
-     * Create a detached, initialised InformationSchemaCatalogNameRecord
-     */
     @ConstructorProperties({ "catalogName" })
     public InformationSchemaCatalogNameRecord(@Nullable String catalogName) {
         super(InformationSchemaCatalogName.INFORMATION_SCHEMA_CATALOG_NAME);
@@ -120,9 +103,6 @@ public class InformationSchemaCatalogNameRecord extends TableRecordImpl<Informat
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised InformationSchemaCatalogNameRecord
-     */
     public InformationSchemaCatalogNameRecord(edu.java.domain.jooq.information_schema.tables.pojos.InformationSchemaCatalogName value) {
         super(InformationSchemaCatalogName.INFORMATION_SCHEMA_CATALOG_NAME);
 

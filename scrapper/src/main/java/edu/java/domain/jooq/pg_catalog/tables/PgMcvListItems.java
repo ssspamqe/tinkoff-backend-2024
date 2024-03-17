@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgMcvListItemsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_mcv_list_items</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,43 +38,22 @@ public class PgMcvListItems extends TableImpl<PgMcvListItemsRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_mcv_list_items</code>
-     */
     public static final PgMcvListItems PG_MCV_LIST_ITEMS = new PgMcvListItems();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgMcvListItemsRecord> getRecordType() {
         return PgMcvListItemsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_mcv_list_items.index</code>.
-     */
     public final TableField<PgMcvListItemsRecord, Integer> INDEX = createField(DSL.name("index"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_mcv_list_items.values</code>.
-     */
     public final TableField<PgMcvListItemsRecord, String[]> VALUES = createField(DSL.name("values"), SQLDataType.CLOB.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_mcv_list_items.nulls</code>.
-     */
     public final TableField<PgMcvListItemsRecord, Boolean[]> NULLS = createField(DSL.name("nulls"), SQLDataType.BOOLEAN.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_mcv_list_items.frequency</code>.
-     */
     public final TableField<PgMcvListItemsRecord, Double> FREQUENCY = createField(DSL.name("frequency"), SQLDataType.DOUBLE, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_mcv_list_items.base_frequency</code>.
-     */
     public final TableField<PgMcvListItemsRecord, Double> BASE_FREQUENCY = createField(DSL.name("base_frequency"), SQLDataType.DOUBLE, this, "");
 
     private PgMcvListItems(Name alias, Table<PgMcvListItemsRecord> aliased) {
@@ -92,25 +66,14 @@ public class PgMcvListItems extends TableImpl<PgMcvListItemsRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_mcv_list_items</code> table
-     * reference
-     */
     public PgMcvListItems(String alias) {
         this(DSL.name(alias), PG_MCV_LIST_ITEMS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_mcv_list_items</code> table
-     * reference
-     */
     public PgMcvListItems(Name alias) {
         this(alias, PG_MCV_LIST_ITEMS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_mcv_list_items</code> table reference
-     */
     public PgMcvListItems() {
         this(DSL.name("pg_mcv_list_items"), null);
     }
@@ -139,27 +102,18 @@ public class PgMcvListItems extends TableImpl<PgMcvListItemsRecord> {
         return new PgMcvListItems(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgMcvListItems rename(String name) {
         return new PgMcvListItems(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgMcvListItems rename(Name name) {
         return new PgMcvListItems(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgMcvListItems rename(Table<?> name) {
@@ -176,9 +130,6 @@ public class PgMcvListItems extends TableImpl<PgMcvListItemsRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgMcvListItems call(
           Object mcvList
     ) {
@@ -189,9 +140,6 @@ public class PgMcvListItems extends TableImpl<PgMcvListItemsRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public PgMcvListItems call(
           Field<Object> mcvList
     ) {
@@ -202,17 +150,10 @@ public class PgMcvListItems extends TableImpl<PgMcvListItemsRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Integer, ? super String[], ? super Boolean[], ? super Double, ? super Double, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Integer, ? super String[], ? super Boolean[], ? super Double, ? super Double, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

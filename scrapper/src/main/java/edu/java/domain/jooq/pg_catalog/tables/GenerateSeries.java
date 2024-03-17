@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.GenerateSeriesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.generate_series</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,23 +38,14 @@ public class GenerateSeries extends TableImpl<GenerateSeriesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.generate_series</code>
-     */
     public static final GenerateSeries GENERATE_SERIES = new GenerateSeries();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<GenerateSeriesRecord> getRecordType() {
         return GenerateSeriesRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.generate_series.generate_series</code>.
-     */
     public final TableField<GenerateSeriesRecord, Long> GENERATE_SERIES_ = createField(DSL.name("generate_series"), SQLDataType.BIGINT, this, "");
 
     private GenerateSeries(Name alias, Table<GenerateSeriesRecord> aliased) {
@@ -74,23 +60,14 @@ public class GenerateSeries extends TableImpl<GenerateSeriesRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.generate_series</code> table reference
-     */
     public GenerateSeries(String alias) {
         this(DSL.name(alias), GENERATE_SERIES);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.generate_series</code> table reference
-     */
     public GenerateSeries(Name alias) {
         this(alias, GENERATE_SERIES);
     }
 
-    /**
-     * Create a <code>pg_catalog.generate_series</code> table reference
-     */
     public GenerateSeries() {
         this(DSL.name("generate_series"), null);
     }
@@ -119,27 +96,18 @@ public class GenerateSeries extends TableImpl<GenerateSeriesRecord> {
         return new GenerateSeries(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GenerateSeries rename(String name) {
         return new GenerateSeries(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GenerateSeries rename(Name name) {
         return new GenerateSeries(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public GenerateSeries rename(Table<?> name) {
@@ -156,9 +124,6 @@ public class GenerateSeries extends TableImpl<GenerateSeriesRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public GenerateSeries call(
           Long __1
         , Long __2
@@ -173,9 +138,6 @@ public class GenerateSeries extends TableImpl<GenerateSeriesRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public GenerateSeries call(
           Field<Long> __1
         , Field<Long> __2
@@ -190,17 +152,10 @@ public class GenerateSeries extends TableImpl<GenerateSeriesRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

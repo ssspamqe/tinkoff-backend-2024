@@ -18,9 +18,6 @@ import org.jooq.Row8;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_rewrite</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,123 +30,71 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.rulename</code>.
-     */
     public void setRulename(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.rulename</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRulename() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.ev_class</code>.
-     */
     public void setEvClass(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.ev_class</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getEvClass() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.ev_type</code>.
-     */
     public void setEvType(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.ev_type</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvType() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.ev_enabled</code>.
-     */
     public void setEvEnabled(@NotNull String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.ev_enabled</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvEnabled() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_rewrite.is_instead</code>.
-     */
     public void setIsInstead(@NotNull Boolean value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_rewrite.is_instead</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getIsInstead() {
         return (Boolean) get(5);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setEvQual(@NotNull Object value) {
         set(6, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @jakarta.validation.constraints.NotNull
     @NotNull
@@ -157,27 +102,11 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return get(6);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setEvAction(@NotNull Object value) {
         set(7, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @jakarta.validation.constraints.NotNull
     @NotNull
@@ -247,14 +176,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return PgRewrite.PG_REWRITE.IS_INSTEAD;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -262,14 +183,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return PgRewrite.PG_REWRITE.EV_QUAL;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -313,14 +226,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return getIsInstead();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -328,14 +233,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return getEvQual();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -379,14 +276,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return getIsInstead();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -394,14 +283,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return getEvQual();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -451,14 +332,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -467,14 +340,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -501,16 +366,10 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgRewriteRecord
-     */
     public PgRewriteRecord() {
         super(PgRewrite.PG_REWRITE);
     }
 
-    /**
-     * Create a detached, initialised PgRewriteRecord
-     */
     @ConstructorProperties({ "oid", "rulename", "evClass", "evType", "evEnabled", "isInstead", "evQual", "evAction" })
     public PgRewriteRecord(@NotNull Long oid, @NotNull String rulename, @NotNull Long evClass, @NotNull String evType, @NotNull String evEnabled, @NotNull Boolean isInstead, @NotNull Object evQual, @NotNull Object evAction) {
         super(PgRewrite.PG_REWRITE);
@@ -526,9 +385,6 @@ public class PgRewriteRecord extends UpdatableRecordImpl<PgRewriteRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgRewriteRecord
-     */
     public PgRewriteRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgRewrite value) {
         super(PgRewrite.PG_REWRITE);
 

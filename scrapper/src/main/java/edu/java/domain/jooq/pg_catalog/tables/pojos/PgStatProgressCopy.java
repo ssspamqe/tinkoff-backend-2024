@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_progress_copy</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -78,154 +75,92 @@ public class PgStatProgressCopy implements Serializable {
         this.tuplesExcluded = tuplesExcluded;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return this.datid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.datid</code>.
-     */
     public void setDatid(@Nullable Long datid) {
         this.datid = datid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return this.datname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.datname</code>.
-     */
     public void setDatname(@Nullable String datname) {
         this.datname = datname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.command</code>.
-     */
     @Nullable
     public String getCommand() {
         return this.command;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.command</code>.
-     */
     public void setCommand(@Nullable String command) {
         this.command = command;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.type</code>.
-     */
     @Nullable
     public String getType() {
         return this.type;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.type</code>.
-     */
     public void setType(@Nullable String type) {
         this.type = type;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.bytes_processed</code>.
-     */
     @Nullable
     public Long getBytesProcessed() {
         return this.bytesProcessed;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.bytes_processed</code>.
-     */
     public void setBytesProcessed(@Nullable Long bytesProcessed) {
         this.bytesProcessed = bytesProcessed;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.bytes_total</code>.
-     */
     @Nullable
     public Long getBytesTotal() {
         return this.bytesTotal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.bytes_total</code>.
-     */
     public void setBytesTotal(@Nullable Long bytesTotal) {
         this.bytesTotal = bytesTotal;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_progress_copy.tuples_processed</code>.
-     */
     @Nullable
     public Long getTuplesProcessed() {
         return this.tuplesProcessed;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_progress_copy.tuples_processed</code>.
-     */
     public void setTuplesProcessed(@Nullable Long tuplesProcessed) {
         this.tuplesProcessed = tuplesProcessed;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_progress_copy.tuples_excluded</code>.
-     */
     @Nullable
     public Long getTuplesExcluded() {
         return this.tuplesExcluded;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_progress_copy.tuples_excluded</code>.
-     */
     public void setTuplesExcluded(@Nullable Long tuplesExcluded) {
         this.tuplesExcluded = tuplesExcluded;
     }

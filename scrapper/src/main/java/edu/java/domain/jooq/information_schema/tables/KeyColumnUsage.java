@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.KeyColumnUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.key_column_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,70 +39,30 @@ public class KeyColumnUsage extends TableImpl<KeyColumnUsageRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.key_column_usage</code>
-     */
     public static final KeyColumnUsage KEY_COLUMN_USAGE = new KeyColumnUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<KeyColumnUsageRecord> getRecordType() {
         return KeyColumnUsageRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.key_column_usage.constraint_catalog</code>.
-     */
     public final TableField<KeyColumnUsageRecord, String> CONSTRAINT_CATALOG = createField(DSL.name("constraint_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.key_column_usage.constraint_schema</code>.
-     */
     public final TableField<KeyColumnUsageRecord, String> CONSTRAINT_SCHEMA = createField(DSL.name("constraint_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.key_column_usage.constraint_name</code>.
-     */
     public final TableField<KeyColumnUsageRecord, String> CONSTRAINT_NAME = createField(DSL.name("constraint_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.key_column_usage.table_catalog</code>.
-     */
     public final TableField<KeyColumnUsageRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.key_column_usage.table_schema</code>.
-     */
     public final TableField<KeyColumnUsageRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.key_column_usage.table_name</code>.
-     */
     public final TableField<KeyColumnUsageRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.key_column_usage.column_name</code>.
-     */
     public final TableField<KeyColumnUsageRecord, String> COLUMN_NAME = createField(DSL.name("column_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.key_column_usage.ordinal_position</code>.
-     */
     public final TableField<KeyColumnUsageRecord, Integer> ORDINAL_POSITION = createField(DSL.name("ordinal_position"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.key_column_usage.position_in_unique_constraint</code>.
-     */
     public final TableField<KeyColumnUsageRecord, Integer> POSITION_IN_UNIQUE_CONSTRAINT = createField(DSL.name("position_in_unique_constraint"), edu.java.domain.jooq.information_schema.Domains.CARDINAL_NUMBER.getDataType(), this, "");
 
     private KeyColumnUsage(Name alias, Table<KeyColumnUsageRecord> aliased) {
@@ -151,25 +106,14 @@ public class KeyColumnUsage extends TableImpl<KeyColumnUsageRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.key_column_usage</code> table
-     * reference
-     */
     public KeyColumnUsage(String alias) {
         this(DSL.name(alias), KEY_COLUMN_USAGE);
     }
 
-    /**
-     * Create an aliased <code>information_schema.key_column_usage</code> table
-     * reference
-     */
     public KeyColumnUsage(Name alias) {
         this(alias, KEY_COLUMN_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.key_column_usage</code> table reference
-     */
     public KeyColumnUsage() {
         this(DSL.name("key_column_usage"), null);
     }
@@ -202,27 +146,18 @@ public class KeyColumnUsage extends TableImpl<KeyColumnUsageRecord> {
         return new KeyColumnUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public KeyColumnUsage rename(String name) {
         return new KeyColumnUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public KeyColumnUsage rename(Name name) {
         return new KeyColumnUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public KeyColumnUsage rename(Table<?> name) {
@@ -239,17 +174,10 @@ public class KeyColumnUsage extends TableImpl<KeyColumnUsageRecord> {
         return (Row9) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function9<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function9<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super Integer, ? super Integer, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

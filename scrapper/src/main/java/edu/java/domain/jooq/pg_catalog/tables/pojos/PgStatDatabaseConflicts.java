@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_database_conflicts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -70,132 +67,74 @@ public class PgStatDatabaseConflicts implements Serializable {
         this.conflActiveLogicalslot = conflActiveLogicalslot;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database_conflicts.datid</code>.
-     */
     @Nullable
     public Long getDatid() {
         return this.datid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database_conflicts.datid</code>.
-     */
     public void setDatid(@Nullable Long datid) {
         this.datid = datid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database_conflicts.datname</code>.
-     */
     @Nullable
     public String getDatname() {
         return this.datname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database_conflicts.datname</code>.
-     */
     public void setDatname(@Nullable String datname) {
         this.datname = datname;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_tablespace</code>.
-     */
     @Nullable
     public Long getConflTablespace() {
         return this.conflTablespace;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_tablespace</code>.
-     */
     public void setConflTablespace(@Nullable Long conflTablespace) {
         this.conflTablespace = conflTablespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_database_conflicts.confl_lock</code>.
-     */
     @Nullable
     public Long getConflLock() {
         return this.conflLock;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_database_conflicts.confl_lock</code>.
-     */
     public void setConflLock(@Nullable Long conflLock) {
         this.conflLock = conflLock;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_snapshot</code>.
-     */
     @Nullable
     public Long getConflSnapshot() {
         return this.conflSnapshot;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_snapshot</code>.
-     */
     public void setConflSnapshot(@Nullable Long conflSnapshot) {
         this.conflSnapshot = conflSnapshot;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_bufferpin</code>.
-     */
     @Nullable
     public Long getConflBufferpin() {
         return this.conflBufferpin;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_bufferpin</code>.
-     */
     public void setConflBufferpin(@Nullable Long conflBufferpin) {
         this.conflBufferpin = conflBufferpin;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_deadlock</code>.
-     */
     @Nullable
     public Long getConflDeadlock() {
         return this.conflDeadlock;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_deadlock</code>.
-     */
     public void setConflDeadlock(@Nullable Long conflDeadlock) {
         this.conflDeadlock = conflDeadlock;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_active_logicalslot</code>.
-     */
     @Nullable
     public Long getConflActiveLogicalslot() {
         return this.conflActiveLogicalslot;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_active_logicalslot</code>.
-     */
     public void setConflActiveLogicalslot(@Nullable Long conflActiveLogicalslot) {
         this.conflActiveLogicalslot = conflActiveLogicalslot;
     }

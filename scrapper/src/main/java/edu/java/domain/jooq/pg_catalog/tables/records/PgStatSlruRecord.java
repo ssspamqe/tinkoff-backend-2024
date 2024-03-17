@@ -19,9 +19,6 @@ import org.jooq.Row9;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_slru</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,136 +31,82 @@ public class PgStatSlruRecord extends TableRecordImpl<PgStatSlruRecord> implemen
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_zeroed</code>.
-     */
     public void setBlksZeroed(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_zeroed</code>.
-     */
     @Nullable
     public Long getBlksZeroed() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_hit</code>.
-     */
     public void setBlksHit(@Nullable Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_hit</code>.
-     */
     @Nullable
     public Long getBlksHit() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_read</code>.
-     */
     public void setBlksRead(@Nullable Long value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_read</code>.
-     */
     @Nullable
     public Long getBlksRead() {
         return (Long) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_written</code>.
-     */
     public void setBlksWritten(@Nullable Long value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_written</code>.
-     */
     @Nullable
     public Long getBlksWritten() {
         return (Long) get(4);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.blks_exists</code>.
-     */
     public void setBlksExists(@Nullable Long value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.blks_exists</code>.
-     */
     @Nullable
     public Long getBlksExists() {
         return (Long) get(5);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.flushes</code>.
-     */
     public void setFlushes(@Nullable Long value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.flushes</code>.
-     */
     @Nullable
     public Long getFlushes() {
         return (Long) get(6);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.truncates</code>.
-     */
     public void setTruncates(@Nullable Long value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.truncates</code>.
-     */
     @Nullable
     public Long getTruncates() {
         return (Long) get(7);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_slru.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_slru.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return (OffsetDateTime) get(8);
@@ -429,16 +372,10 @@ public class PgStatSlruRecord extends TableRecordImpl<PgStatSlruRecord> implemen
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgStatSlruRecord
-     */
     public PgStatSlruRecord() {
         super(PgStatSlru.PG_STAT_SLRU);
     }
 
-    /**
-     * Create a detached, initialised PgStatSlruRecord
-     */
     @ConstructorProperties({ "name", "blksZeroed", "blksHit", "blksRead", "blksWritten", "blksExists", "flushes", "truncates", "statsReset" })
     public PgStatSlruRecord(@Nullable String name, @Nullable Long blksZeroed, @Nullable Long blksHit, @Nullable Long blksRead, @Nullable Long blksWritten, @Nullable Long blksExists, @Nullable Long flushes, @Nullable Long truncates, @Nullable OffsetDateTime statsReset) {
         super(PgStatSlru.PG_STAT_SLRU);
@@ -455,9 +392,6 @@ public class PgStatSlruRecord extends TableRecordImpl<PgStatSlruRecord> implemen
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgStatSlruRecord
-     */
     public PgStatSlruRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgStatSlru value) {
         super(PgStatSlru.PG_STAT_SLRU);
 

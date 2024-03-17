@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_default_acl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,80 +30,50 @@ public class PgDefaultAclRecord extends UpdatableRecordImpl<PgDefaultAclRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.oid</code>.
-     */
     public void setOid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.defaclrole</code>.
-     */
     public void setDefaclrole(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.defaclrole</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDefaclrole() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.defaclnamespace</code>.
-     */
     public void setDefaclnamespace(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.defaclnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getDefaclnamespace() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.defaclobjtype</code>.
-     */
     public void setDefaclobjtype(@NotNull String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.defaclobjtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getDefaclobjtype() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_default_acl.defaclacl</code>.
-     */
     public void setDefaclacl(@NotNull String[] value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_default_acl.defaclacl</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String[] getDefaclacl() {
@@ -279,16 +246,10 @@ public class PgDefaultAclRecord extends UpdatableRecordImpl<PgDefaultAclRecord> 
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgDefaultAclRecord
-     */
     public PgDefaultAclRecord() {
         super(PgDefaultAcl.PG_DEFAULT_ACL);
     }
 
-    /**
-     * Create a detached, initialised PgDefaultAclRecord
-     */
     @ConstructorProperties({ "oid", "defaclrole", "defaclnamespace", "defaclobjtype", "defaclacl" })
     public PgDefaultAclRecord(@NotNull Long oid, @NotNull Long defaclrole, @NotNull Long defaclnamespace, @NotNull String defaclobjtype, @NotNull String[] defaclacl) {
         super(PgDefaultAcl.PG_DEFAULT_ACL);
@@ -301,9 +262,6 @@ public class PgDefaultAclRecord extends UpdatableRecordImpl<PgDefaultAclRecord> 
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgDefaultAclRecord
-     */
     public PgDefaultAclRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgDefaultAcl value) {
         super(PgDefaultAcl.PG_DEFAULT_ACL);
 

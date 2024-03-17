@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgParameterAclRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_parameter_acl</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,33 +45,18 @@ public class PgParameterAcl extends TableImpl<PgParameterAclRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_parameter_acl</code>
-     */
     public static final PgParameterAcl PG_PARAMETER_ACL = new PgParameterAcl();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgParameterAclRecord> getRecordType() {
         return PgParameterAclRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_parameter_acl.oid</code>.
-     */
     public final TableField<PgParameterAclRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_parameter_acl.parname</code>.
-     */
     public final TableField<PgParameterAclRecord, String> PARNAME = createField(DSL.name("parname"), SQLDataType.CLOB.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_parameter_acl.paracl</code>.
-     */
     public final TableField<PgParameterAclRecord, String[]> PARACL = createField(DSL.name("paracl"), SQLDataType.VARCHAR.array(), this, "");
 
     private PgParameterAcl(Name alias, Table<PgParameterAclRecord> aliased) {
@@ -86,25 +67,14 @@ public class PgParameterAcl extends TableImpl<PgParameterAclRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_parameter_acl</code> table
-     * reference
-     */
     public PgParameterAcl(String alias) {
         this(DSL.name(alias), PG_PARAMETER_ACL);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_parameter_acl</code> table
-     * reference
-     */
     public PgParameterAcl(Name alias) {
         this(alias, PG_PARAMETER_ACL);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_parameter_acl</code> table reference
-     */
     public PgParameterAcl() {
         this(DSL.name("pg_parameter_acl"), null);
     }
@@ -149,27 +119,18 @@ public class PgParameterAcl extends TableImpl<PgParameterAclRecord> {
         return new PgParameterAcl(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgParameterAcl rename(String name) {
         return new PgParameterAcl(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgParameterAcl rename(Name name) {
         return new PgParameterAcl(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgParameterAcl rename(Table<?> name) {
@@ -186,17 +147,10 @@ public class PgParameterAcl extends TableImpl<PgParameterAclRecord> {
         return (Row3) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function3<? super Long, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function3<? super Long, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

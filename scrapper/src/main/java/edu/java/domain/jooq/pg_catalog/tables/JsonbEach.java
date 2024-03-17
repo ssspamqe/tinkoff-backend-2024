@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonbEachRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_each</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,28 +39,16 @@ public class JsonbEach extends TableImpl<JsonbEachRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.jsonb_each</code>
-     */
     public static final JsonbEach JSONB_EACH = new JsonbEach();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonbEachRecord> getRecordType() {
         return JsonbEachRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.jsonb_each.key</code>.
-     */
     public final TableField<JsonbEachRecord, String> KEY = createField(DSL.name("key"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.jsonb_each.value</code>.
-     */
     public final TableField<JsonbEachRecord, JSONB> VALUE = createField(DSL.name("value"), SQLDataType.JSONB, this, "");
 
     private JsonbEach(Name alias, Table<JsonbEachRecord> aliased) {
@@ -78,23 +61,14 @@ public class JsonbEach extends TableImpl<JsonbEachRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_each</code> table reference
-     */
     public JsonbEach(String alias) {
         this(DSL.name(alias), JSONB_EACH);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_each</code> table reference
-     */
     public JsonbEach(Name alias) {
         this(alias, JSONB_EACH);
     }
 
-    /**
-     * Create a <code>pg_catalog.jsonb_each</code> table reference
-     */
     public JsonbEach() {
         this(DSL.name("jsonb_each"), null);
     }
@@ -123,27 +97,18 @@ public class JsonbEach extends TableImpl<JsonbEachRecord> {
         return new JsonbEach(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbEach rename(String name) {
         return new JsonbEach(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbEach rename(Name name) {
         return new JsonbEach(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbEach rename(Table<?> name) {
@@ -160,9 +125,6 @@ public class JsonbEach extends TableImpl<JsonbEachRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbEach call(
           JSONB fromJson
     ) {
@@ -173,9 +135,6 @@ public class JsonbEach extends TableImpl<JsonbEachRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbEach call(
           Field<JSONB> fromJson
     ) {
@@ -186,17 +145,10 @@ public class JsonbEach extends TableImpl<JsonbEachRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super String, ? super JSONB, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super String, ? super JSONB, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

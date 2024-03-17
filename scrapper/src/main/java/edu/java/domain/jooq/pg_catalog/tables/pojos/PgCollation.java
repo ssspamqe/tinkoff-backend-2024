@@ -13,9 +13,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_collation</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -87,189 +84,117 @@ public class PgCollation implements Serializable {
         this.collversion = collversion;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCollname() {
         return this.collname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collname</code>.
-     */
     public void setCollname(@NotNull String collname) {
         this.collname = collname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collnamespace</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCollnamespace() {
         return this.collnamespace;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collnamespace</code>.
-     */
     public void setCollnamespace(@NotNull Long collnamespace) {
         this.collnamespace = collnamespace;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getCollowner() {
         return this.collowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collowner</code>.
-     */
     public void setCollowner(@NotNull Long collowner) {
         this.collowner = collowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collprovider</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getCollprovider() {
         return this.collprovider;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collprovider</code>.
-     */
     public void setCollprovider(@NotNull String collprovider) {
         this.collprovider = collprovider;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collisdeterministic</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Boolean getCollisdeterministic() {
         return this.collisdeterministic;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collisdeterministic</code>.
-     */
     public void setCollisdeterministic(@NotNull Boolean collisdeterministic) {
         this.collisdeterministic = collisdeterministic;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collencoding</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getCollencoding() {
         return this.collencoding;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collencoding</code>.
-     */
     public void setCollencoding(@NotNull Integer collencoding) {
         this.collencoding = collencoding;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collcollate</code>.
-     */
     @Nullable
     public String getCollcollate() {
         return this.collcollate;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collcollate</code>.
-     */
     public void setCollcollate(@Nullable String collcollate) {
         this.collcollate = collcollate;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collctype</code>.
-     */
     @Nullable
     public String getCollctype() {
         return this.collctype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collctype</code>.
-     */
     public void setCollctype(@Nullable String collctype) {
         this.collctype = collctype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.colliculocale</code>.
-     */
     @Nullable
     public String getColliculocale() {
         return this.colliculocale;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.colliculocale</code>.
-     */
     public void setColliculocale(@Nullable String colliculocale) {
         this.colliculocale = colliculocale;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collicurules</code>.
-     */
     @Nullable
     public String getCollicurules() {
         return this.collicurules;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collicurules</code>.
-     */
     public void setCollicurules(@Nullable String collicurules) {
         this.collicurules = collicurules;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_collation.collversion</code>.
-     */
     @Nullable
     public String getCollversion() {
         return this.collversion;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_collation.collversion</code>.
-     */
     public void setCollversion(@Nullable String collversion) {
         this.collversion = collversion;
     }

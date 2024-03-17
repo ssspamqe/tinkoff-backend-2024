@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonbPathQueryTzRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.jsonb_path_query_tz</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,24 +39,14 @@ public class JsonbPathQueryTz extends TableImpl<JsonbPathQueryTzRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.jsonb_path_query_tz</code>
-     */
     public static final JsonbPathQueryTz JSONB_PATH_QUERY_TZ = new JsonbPathQueryTz();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonbPathQueryTzRecord> getRecordType() {
         return JsonbPathQueryTzRecord.class;
     }
 
-    /**
-     * The column
-     * <code>pg_catalog.jsonb_path_query_tz.jsonb_path_query_tz</code>.
-     */
     public final TableField<JsonbPathQueryTzRecord, JSONB> JSONB_PATH_QUERY_TZ_ = createField(DSL.name("jsonb_path_query_tz"), SQLDataType.JSONB, this, "");
 
     private JsonbPathQueryTz(Name alias, Table<JsonbPathQueryTzRecord> aliased) {
@@ -77,25 +62,14 @@ public class JsonbPathQueryTz extends TableImpl<JsonbPathQueryTzRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_path_query_tz</code> table
-     * reference
-     */
     public JsonbPathQueryTz(String alias) {
         this(DSL.name(alias), JSONB_PATH_QUERY_TZ);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.jsonb_path_query_tz</code> table
-     * reference
-     */
     public JsonbPathQueryTz(Name alias) {
         this(alias, JSONB_PATH_QUERY_TZ);
     }
 
-    /**
-     * Create a <code>pg_catalog.jsonb_path_query_tz</code> table reference
-     */
     public JsonbPathQueryTz() {
         this(DSL.name("jsonb_path_query_tz"), null);
     }
@@ -124,27 +98,18 @@ public class JsonbPathQueryTz extends TableImpl<JsonbPathQueryTzRecord> {
         return new JsonbPathQueryTz(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPathQueryTz rename(String name) {
         return new JsonbPathQueryTz(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPathQueryTz rename(Name name) {
         return new JsonbPathQueryTz(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonbPathQueryTz rename(Table<?> name) {
@@ -161,9 +126,6 @@ public class JsonbPathQueryTz extends TableImpl<JsonbPathQueryTzRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbPathQueryTz call(
           JSONB target
         , Object path
@@ -180,9 +142,6 @@ public class JsonbPathQueryTz extends TableImpl<JsonbPathQueryTzRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonbPathQueryTz call(
           Field<JSONB> target
         , Field<Object> path
@@ -199,17 +158,10 @@ public class JsonbPathQueryTz extends TableImpl<JsonbPathQueryTzRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super JSONB, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super JSONB, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

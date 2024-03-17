@@ -19,9 +19,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_subscription_rel</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,75 +31,41 @@ public class PgSubscriptionRelRecord extends UpdatableRecordImpl<PgSubscriptionR
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription_rel.srsubid</code>.
-     */
     public void setSrsubid(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription_rel.srsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSrsubid() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription_rel.srrelid</code>.
-     */
     public void setSrrelid(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription_rel.srrelid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getSrrelid() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_subscription_rel.srsubstate</code>.
-     */
     public void setSrsubstate(@NotNull String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_subscription_rel.srsubstate</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getSrsubstate() {
         return (String) get(2);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setSrsublsn(@Nullable Object value) {
         set(3, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getSrsublsn() {
@@ -153,14 +116,6 @@ public class PgSubscriptionRelRecord extends UpdatableRecordImpl<PgSubscriptionR
         return PgSubscriptionRel.PG_SUBSCRIPTION_REL.SRSUBSTATE;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -186,14 +141,6 @@ public class PgSubscriptionRelRecord extends UpdatableRecordImpl<PgSubscriptionR
         return getSrsubstate();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -219,14 +166,6 @@ public class PgSubscriptionRelRecord extends UpdatableRecordImpl<PgSubscriptionR
         return getSrsubstate();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -255,14 +194,6 @@ public class PgSubscriptionRelRecord extends UpdatableRecordImpl<PgSubscriptionR
         return this;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -285,16 +216,10 @@ public class PgSubscriptionRelRecord extends UpdatableRecordImpl<PgSubscriptionR
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgSubscriptionRelRecord
-     */
     public PgSubscriptionRelRecord() {
         super(PgSubscriptionRel.PG_SUBSCRIPTION_REL);
     }
 
-    /**
-     * Create a detached, initialised PgSubscriptionRelRecord
-     */
     @ConstructorProperties({ "srsubid", "srrelid", "srsubstate", "srsublsn" })
     public PgSubscriptionRelRecord(@NotNull Long srsubid, @NotNull Long srrelid, @NotNull String srsubstate, @Nullable Object srsublsn) {
         super(PgSubscriptionRel.PG_SUBSCRIPTION_REL);
@@ -306,9 +231,6 @@ public class PgSubscriptionRelRecord extends UpdatableRecordImpl<PgSubscriptionR
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgSubscriptionRelRecord
-     */
     public PgSubscriptionRelRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgSubscriptionRel value) {
         super(PgSubscriptionRel.PG_SUBSCRIPTION_REL);
 

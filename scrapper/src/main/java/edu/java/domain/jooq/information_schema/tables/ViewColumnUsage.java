@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.ViewColumnUsageRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.view_column_usage</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,57 +39,26 @@ public class ViewColumnUsage extends TableImpl<ViewColumnUsageRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.view_column_usage</code>
-     */
     public static final ViewColumnUsage VIEW_COLUMN_USAGE = new ViewColumnUsage();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<ViewColumnUsageRecord> getRecordType() {
         return ViewColumnUsageRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.view_column_usage.view_catalog</code>.
-     */
     public final TableField<ViewColumnUsageRecord, String> VIEW_CATALOG = createField(DSL.name("view_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.view_column_usage.view_schema</code>.
-     */
     public final TableField<ViewColumnUsageRecord, String> VIEW_SCHEMA = createField(DSL.name("view_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.view_column_usage.view_name</code>.
-     */
     public final TableField<ViewColumnUsageRecord, String> VIEW_NAME = createField(DSL.name("view_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.view_column_usage.table_catalog</code>.
-     */
     public final TableField<ViewColumnUsageRecord, String> TABLE_CATALOG = createField(DSL.name("table_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.view_column_usage.table_schema</code>.
-     */
     public final TableField<ViewColumnUsageRecord, String> TABLE_SCHEMA = createField(DSL.name("table_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.view_column_usage.table_name</code>.
-     */
     public final TableField<ViewColumnUsageRecord, String> TABLE_NAME = createField(DSL.name("table_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.view_column_usage.column_name</code>.
-     */
     public final TableField<ViewColumnUsageRecord, String> COLUMN_NAME = createField(DSL.name("column_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private ViewColumnUsage(Name alias, Table<ViewColumnUsageRecord> aliased) {
@@ -121,26 +85,14 @@ public class ViewColumnUsage extends TableImpl<ViewColumnUsageRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.view_column_usage</code> table
-     * reference
-     */
     public ViewColumnUsage(String alias) {
         this(DSL.name(alias), VIEW_COLUMN_USAGE);
     }
 
-    /**
-     * Create an aliased <code>information_schema.view_column_usage</code> table
-     * reference
-     */
     public ViewColumnUsage(Name alias) {
         this(alias, VIEW_COLUMN_USAGE);
     }
 
-    /**
-     * Create a <code>information_schema.view_column_usage</code> table
-     * reference
-     */
     public ViewColumnUsage() {
         this(DSL.name("view_column_usage"), null);
     }
@@ -173,27 +125,18 @@ public class ViewColumnUsage extends TableImpl<ViewColumnUsageRecord> {
         return new ViewColumnUsage(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ViewColumnUsage rename(String name) {
         return new ViewColumnUsage(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ViewColumnUsage rename(Name name) {
         return new ViewColumnUsage(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public ViewColumnUsage rename(Table<?> name) {
@@ -210,17 +153,10 @@ public class ViewColumnUsage extends TableImpl<ViewColumnUsageRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

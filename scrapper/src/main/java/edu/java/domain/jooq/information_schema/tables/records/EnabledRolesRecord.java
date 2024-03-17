@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.enabled_roles</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,16 +30,10 @@ public class EnabledRolesRecord extends TableRecordImpl<EnabledRolesRecord> impl
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.enabled_roles.role_name</code>.
-     */
     public void setRoleName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.enabled_roles.role_name</code>.
-     */
     @Nullable
     public String getRoleName() {
         return (String) get(0);
@@ -100,16 +91,10 @@ public class EnabledRolesRecord extends TableRecordImpl<EnabledRolesRecord> impl
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached EnabledRolesRecord
-     */
     public EnabledRolesRecord() {
         super(EnabledRoles.ENABLED_ROLES);
     }
 
-    /**
-     * Create a detached, initialised EnabledRolesRecord
-     */
     @ConstructorProperties({ "roleName" })
     public EnabledRolesRecord(@Nullable String roleName) {
         super(EnabledRoles.ENABLED_ROLES);
@@ -118,9 +103,6 @@ public class EnabledRolesRecord extends TableRecordImpl<EnabledRolesRecord> impl
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised EnabledRolesRecord
-     */
     public EnabledRolesRecord(edu.java.domain.jooq.information_schema.tables.pojos.EnabledRoles value) {
         super(EnabledRoles.ENABLED_ROLES);
 

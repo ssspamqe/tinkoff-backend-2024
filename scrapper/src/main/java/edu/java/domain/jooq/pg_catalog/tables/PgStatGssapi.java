@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatGssapiRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_gssapi</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,43 +40,22 @@ public class PgStatGssapi extends TableImpl<PgStatGssapiRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stat_gssapi</code>
-     */
     public static final PgStatGssapi PG_STAT_GSSAPI = new PgStatGssapi();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatGssapiRecord> getRecordType() {
         return PgStatGssapiRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_gssapi.pid</code>.
-     */
     public final TableField<PgStatGssapiRecord, Integer> PID = createField(DSL.name("pid"), SQLDataType.INTEGER, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_gssapi.gss_authenticated</code>.
-     */
     public final TableField<PgStatGssapiRecord, Boolean> GSS_AUTHENTICATED = createField(DSL.name("gss_authenticated"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_gssapi.principal</code>.
-     */
     public final TableField<PgStatGssapiRecord, String> PRINCIPAL = createField(DSL.name("principal"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_gssapi.encrypted</code>.
-     */
     public final TableField<PgStatGssapiRecord, Boolean> ENCRYPTED = createField(DSL.name("encrypted"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_gssapi.credentials_delegated</code>.
-     */
     public final TableField<PgStatGssapiRecord, Boolean> CREDENTIALS_DELEGATED = createField(DSL.name("credentials_delegated"), SQLDataType.BOOLEAN, this, "");
 
     private PgStatGssapi(Name alias, Table<PgStatGssapiRecord> aliased) {
@@ -100,23 +74,14 @@ public class PgStatGssapi extends TableImpl<PgStatGssapiRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_gssapi</code> table reference
-     */
     public PgStatGssapi(String alias) {
         this(DSL.name(alias), PG_STAT_GSSAPI);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_gssapi</code> table reference
-     */
     public PgStatGssapi(Name alias) {
         this(alias, PG_STAT_GSSAPI);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_gssapi</code> table reference
-     */
     public PgStatGssapi() {
         this(DSL.name("pg_stat_gssapi"), null);
     }
@@ -149,27 +114,18 @@ public class PgStatGssapi extends TableImpl<PgStatGssapiRecord> {
         return new PgStatGssapi(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGssapi rename(String name) {
         return new PgStatGssapi(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGssapi rename(Name name) {
         return new PgStatGssapi(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatGssapi rename(Table<?> name) {
@@ -186,17 +142,10 @@ public class PgStatGssapi extends TableImpl<PgStatGssapiRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super Integer, ? super Boolean, ? super String, ? super Boolean, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super Integer, ? super Boolean, ? super String, ? super Boolean, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

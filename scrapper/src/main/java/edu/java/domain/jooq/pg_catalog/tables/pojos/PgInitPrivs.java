@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_init_privs</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -59,82 +56,52 @@ public class PgInitPrivs implements Serializable {
         this.initprivs = initprivs;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.objoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getObjoid() {
         return this.objoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.objoid</code>.
-     */
     public void setObjoid(@NotNull Long objoid) {
         this.objoid = objoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.classoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getClassoid() {
         return this.classoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.classoid</code>.
-     */
     public void setClassoid(@NotNull Long classoid) {
         this.classoid = classoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.objsubid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Integer getObjsubid() {
         return this.objsubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.objsubid</code>.
-     */
     public void setObjsubid(@NotNull Integer objsubid) {
         this.objsubid = objsubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.privtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getPrivtype() {
         return this.privtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.privtype</code>.
-     */
     public void setPrivtype(@NotNull String privtype) {
         this.privtype = privtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_init_privs.initprivs</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String[] getInitprivs() {
         return this.initprivs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_init_privs.initprivs</code>.
-     */
     public void setInitprivs(@NotNull String[] initprivs) {
         this.initprivs = initprivs;
     }

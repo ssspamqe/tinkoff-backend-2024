@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_enum</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,66 +51,42 @@ public class PgEnum implements Serializable {
         this.enumlabel = enumlabel;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_enum.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_enum.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_enum.enumtypid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getEnumtypid() {
         return this.enumtypid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_enum.enumtypid</code>.
-     */
     public void setEnumtypid(@NotNull Long enumtypid) {
         this.enumtypid = enumtypid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_enum.enumsortorder</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Float getEnumsortorder() {
         return this.enumsortorder;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_enum.enumsortorder</code>.
-     */
     public void setEnumsortorder(@NotNull Float enumsortorder) {
         this.enumsortorder = enumsortorder;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_enum.enumlabel</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEnumlabel() {
         return this.enumlabel;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_enum.enumlabel</code>.
-     */
     public void setEnumlabel(@NotNull String enumlabel) {
         this.enumlabel = enumlabel;
     }

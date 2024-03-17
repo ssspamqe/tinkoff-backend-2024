@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.SchemataRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.schemata</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,56 +39,26 @@ public class Schemata extends TableImpl<SchemataRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>information_schema.schemata</code>
-     */
     public static final Schemata SCHEMATA = new Schemata();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<SchemataRecord> getRecordType() {
         return SchemataRecord.class;
     }
 
-    /**
-     * The column <code>information_schema.schemata.catalog_name</code>.
-     */
     public final TableField<SchemataRecord, String> CATALOG_NAME = createField(DSL.name("catalog_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.schemata.schema_name</code>.
-     */
     public final TableField<SchemataRecord, String> SCHEMA_NAME = createField(DSL.name("schema_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.schemata.schema_owner</code>.
-     */
     public final TableField<SchemataRecord, String> SCHEMA_OWNER = createField(DSL.name("schema_owner"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.schemata.default_character_set_catalog</code>.
-     */
     public final TableField<SchemataRecord, String> DEFAULT_CHARACTER_SET_CATALOG = createField(DSL.name("default_character_set_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.schemata.default_character_set_schema</code>.
-     */
     public final TableField<SchemataRecord, String> DEFAULT_CHARACTER_SET_SCHEMA = createField(DSL.name("default_character_set_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.schemata.default_character_set_name</code>.
-     */
     public final TableField<SchemataRecord, String> DEFAULT_CHARACTER_SET_NAME = createField(DSL.name("default_character_set_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column <code>information_schema.schemata.sql_path</code>.
-     */
     public final TableField<SchemataRecord, String> SQL_PATH = createField(DSL.name("sql_path"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
     private Schemata(Name alias, Table<SchemataRecord> aliased) {
@@ -115,25 +80,14 @@ public class Schemata extends TableImpl<SchemataRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.schemata</code> table
-     * reference
-     */
     public Schemata(String alias) {
         this(DSL.name(alias), SCHEMATA);
     }
 
-    /**
-     * Create an aliased <code>information_schema.schemata</code> table
-     * reference
-     */
     public Schemata(Name alias) {
         this(alias, SCHEMATA);
     }
 
-    /**
-     * Create a <code>information_schema.schemata</code> table reference
-     */
     public Schemata() {
         this(DSL.name("schemata"), null);
     }
@@ -166,27 +120,18 @@ public class Schemata extends TableImpl<SchemataRecord> {
         return new Schemata(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Schemata rename(String name) {
         return new Schemata(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Schemata rename(Name name) {
         return new Schemata(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public Schemata rename(Table<?> name) {
@@ -203,17 +148,10 @@ public class Schemata extends TableImpl<SchemataRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

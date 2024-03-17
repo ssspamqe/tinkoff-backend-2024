@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.unnest</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,27 +30,11 @@ public class UnnestRecord extends TableRecordImpl<UnnestRecord> implements Recor
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setUnnest(@Nullable Object value) {
         set(0, value);
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getUnnest() {
@@ -76,14 +57,6 @@ public class UnnestRecord extends TableRecordImpl<UnnestRecord> implements Recor
         return (Row1) super.valuesRow();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -91,14 +64,6 @@ public class UnnestRecord extends TableRecordImpl<UnnestRecord> implements Recor
         return Unnest.UNNEST.UNNEST_;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -106,14 +71,6 @@ public class UnnestRecord extends TableRecordImpl<UnnestRecord> implements Recor
         return getUnnest();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @Nullable
@@ -121,14 +78,6 @@ public class UnnestRecord extends TableRecordImpl<UnnestRecord> implements Recor
         return getUnnest();
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Override
     @NotNull
@@ -148,16 +97,10 @@ public class UnnestRecord extends TableRecordImpl<UnnestRecord> implements Recor
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached UnnestRecord
-     */
     public UnnestRecord() {
         super(Unnest.UNNEST);
     }
 
-    /**
-     * Create a detached, initialised UnnestRecord
-     */
     @ConstructorProperties({ "unnest" })
     public UnnestRecord(@Nullable Object unnest) {
         super(Unnest.UNNEST);
@@ -166,9 +109,6 @@ public class UnnestRecord extends TableRecordImpl<UnnestRecord> implements Recor
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised UnnestRecord
-     */
     public UnnestRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.Unnest value) {
         super(Unnest.UNNEST);
 

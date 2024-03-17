@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_log_backend_memory_contexts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,20 +27,10 @@ public class PgLogBackendMemoryContexts extends AbstractRoutine<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_log_backend_memory_contexts.RETURN_VALUE</code>.
-     */
     public static final Parameter<Boolean> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.BOOLEAN, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.pg_log_backend_memory_contexts._1</code>.
-     */
     public static final Parameter<Integer> _1 = Internal.createParameter("_1", SQLDataType.INTEGER, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgLogBackendMemoryContexts() {
         super("pg_log_backend_memory_contexts", PgCatalog.PG_CATALOG, SQLDataType.BOOLEAN);
 
@@ -51,17 +38,10 @@ public class PgLogBackendMemoryContexts extends AbstractRoutine<Boolean> {
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Integer value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Integer> field) {
         setField(_1, field);
     }

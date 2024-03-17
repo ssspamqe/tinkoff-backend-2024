@@ -14,9 +14,6 @@ import org.jetbrains.annotations.Nullable;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_get_wal_senders</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -88,230 +85,118 @@ public class PgStatGetWalSenders implements Serializable {
         this.replyTime = replyTime;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.state</code>.
-     */
     @Nullable
     public String getState() {
         return this.state;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.state</code>.
-     */
     public void setState(@Nullable String state) {
         this.state = state;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getSentLsn() {
         return this.sentLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setSentLsn(@Nullable Object sentLsn) {
         this.sentLsn = sentLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getWriteLsn() {
         return this.writeLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setWriteLsn(@Nullable Object writeLsn) {
         this.writeLsn = writeLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getFlushLsn() {
         return this.flushLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setFlushLsn(@Nullable Object flushLsn) {
         this.flushLsn = flushLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getReplayLsn() {
         return this.replayLsn;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setReplayLsn(@Nullable Object replayLsn) {
         this.replayLsn = replayLsn;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.write_lag</code>.
-     */
     @Nullable
     public YearToSecond getWriteLag() {
         return this.writeLag;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.write_lag</code>.
-     */
     public void setWriteLag(@Nullable YearToSecond writeLag) {
         this.writeLag = writeLag;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.flush_lag</code>.
-     */
     @Nullable
     public YearToSecond getFlushLag() {
         return this.flushLag;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.flush_lag</code>.
-     */
     public void setFlushLag(@Nullable YearToSecond flushLag) {
         this.flushLag = flushLag;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.replay_lag</code>.
-     */
     @Nullable
     public YearToSecond getReplayLag() {
         return this.replayLag;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.replay_lag</code>.
-     */
     public void setReplayLag(@Nullable YearToSecond replayLag) {
         this.replayLag = replayLag;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.sync_priority</code>.
-     */
     @Nullable
     public Integer getSyncPriority() {
         return this.syncPriority;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.sync_priority</code>.
-     */
     public void setSyncPriority(@Nullable Integer syncPriority) {
         this.syncPriority = syncPriority;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.sync_state</code>.
-     */
     @Nullable
     public String getSyncState() {
         return this.syncState;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.sync_state</code>.
-     */
     public void setSyncState(@Nullable String syncState) {
         this.syncState = syncState;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_get_wal_senders.reply_time</code>.
-     */
     @Nullable
     public OffsetDateTime getReplyTime() {
         return this.replyTime;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_get_wal_senders.reply_time</code>.
-     */
     public void setReplyTime(@Nullable OffsetDateTime replyTime) {
         this.replyTime = replyTime;
     }

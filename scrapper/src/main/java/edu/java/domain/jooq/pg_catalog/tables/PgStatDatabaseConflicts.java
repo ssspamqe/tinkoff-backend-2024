@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatDatabaseConflictsRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_database_conflicts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,64 +40,28 @@ public class PgStatDatabaseConflicts extends TableImpl<PgStatDatabaseConflictsRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>pg_catalog.pg_stat_database_conflicts</code>
-     */
     public static final PgStatDatabaseConflicts PG_STAT_DATABASE_CONFLICTS = new PgStatDatabaseConflicts();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatDatabaseConflictsRecord> getRecordType() {
         return PgStatDatabaseConflictsRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database_conflicts.datid</code>.
-     */
     public final TableField<PgStatDatabaseConflictsRecord, Long> DATID = createField(DSL.name("datid"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database_conflicts.datname</code>.
-     */
     public final TableField<PgStatDatabaseConflictsRecord, String> DATNAME = createField(DSL.name("datname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_tablespace</code>.
-     */
     public final TableField<PgStatDatabaseConflictsRecord, Long> CONFL_TABLESPACE = createField(DSL.name("confl_tablespace"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stat_database_conflicts.confl_lock</code>.
-     */
     public final TableField<PgStatDatabaseConflictsRecord, Long> CONFL_LOCK = createField(DSL.name("confl_lock"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_snapshot</code>.
-     */
     public final TableField<PgStatDatabaseConflictsRecord, Long> CONFL_SNAPSHOT = createField(DSL.name("confl_snapshot"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_bufferpin</code>.
-     */
     public final TableField<PgStatDatabaseConflictsRecord, Long> CONFL_BUFFERPIN = createField(DSL.name("confl_bufferpin"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_deadlock</code>.
-     */
     public final TableField<PgStatDatabaseConflictsRecord, Long> CONFL_DEADLOCK = createField(DSL.name("confl_deadlock"), SQLDataType.BIGINT, this, "");
 
-    /**
-     * The column
-     * <code>pg_catalog.pg_stat_database_conflicts.confl_active_logicalslot</code>.
-     */
     public final TableField<PgStatDatabaseConflictsRecord, Long> CONFL_ACTIVE_LOGICALSLOT = createField(DSL.name("confl_active_logicalslot"), SQLDataType.BIGINT, this, "");
 
     private PgStatDatabaseConflicts(Name alias, Table<PgStatDatabaseConflictsRecord> aliased) {
@@ -123,26 +82,14 @@ public class PgStatDatabaseConflicts extends TableImpl<PgStatDatabaseConflictsRe
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_database_conflicts</code>
-     * table reference
-     */
     public PgStatDatabaseConflicts(String alias) {
         this(DSL.name(alias), PG_STAT_DATABASE_CONFLICTS);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stat_database_conflicts</code>
-     * table reference
-     */
     public PgStatDatabaseConflicts(Name alias) {
         this(alias, PG_STAT_DATABASE_CONFLICTS);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stat_database_conflicts</code> table
-     * reference
-     */
     public PgStatDatabaseConflicts() {
         this(DSL.name("pg_stat_database_conflicts"), null);
     }
@@ -175,27 +122,18 @@ public class PgStatDatabaseConflicts extends TableImpl<PgStatDatabaseConflictsRe
         return new PgStatDatabaseConflicts(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatDatabaseConflicts rename(String name) {
         return new PgStatDatabaseConflicts(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatDatabaseConflicts rename(Name name) {
         return new PgStatDatabaseConflicts(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatDatabaseConflicts rename(Table<?> name) {
@@ -212,17 +150,10 @@ public class PgStatDatabaseConflicts extends TableImpl<PgStatDatabaseConflictsRe
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? super Long, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

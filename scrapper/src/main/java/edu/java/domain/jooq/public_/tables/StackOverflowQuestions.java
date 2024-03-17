@@ -10,7 +10,6 @@ import edu.java.domain.jooq.public_.tables.records.StackOverflowQuestionsRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>public.stack_overflow_questions</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,39 +45,20 @@ public class StackOverflowQuestions extends TableImpl<StackOverflowQuestionsReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>public.stack_overflow_questions</code>
-     */
     public static final StackOverflowQuestions STACK_OVERFLOW_QUESTIONS = new StackOverflowQuestions();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<StackOverflowQuestionsRecord> getRecordType() {
         return StackOverflowQuestionsRecord.class;
     }
 
-    /**
-     * The column <code>public.stack_overflow_questions.id</code>.
-     */
     public final TableField<StackOverflowQuestionsRecord, Long> ID = createField(DSL.name("id"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>public.stack_overflow_questions.link_id</code>.
-     */
     public final TableField<StackOverflowQuestionsRecord, Long> LINK_ID = createField(DSL.name("link_id"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column
-     * <code>public.stack_overflow_questions.description_md5_hash</code>.
-     */
     public final TableField<StackOverflowQuestionsRecord, String> DESCRIPTION_MD5_HASH = createField(DSL.name("description_md5_hash"), SQLDataType.CLOB.nullable(false), this, "");
 
-    /**
-     * The column <code>public.stack_overflow_questions.answers_ids</code>.
-     */
     public final TableField<StackOverflowQuestionsRecord, Long[]> ANSWERS_IDS = createField(DSL.name("answers_ids"), SQLDataType.BIGINT.nullable(false).array(), this, "");
 
     private StackOverflowQuestions(Name alias, Table<StackOverflowQuestionsRecord> aliased) {
@@ -92,25 +69,14 @@ public class StackOverflowQuestions extends TableImpl<StackOverflowQuestionsReco
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>public.stack_overflow_questions</code> table
-     * reference
-     */
     public StackOverflowQuestions(String alias) {
         this(DSL.name(alias), STACK_OVERFLOW_QUESTIONS);
     }
 
-    /**
-     * Create an aliased <code>public.stack_overflow_questions</code> table
-     * reference
-     */
     public StackOverflowQuestions(Name alias) {
         this(alias, STACK_OVERFLOW_QUESTIONS);
     }
 
-    /**
-     * Create a <code>public.stack_overflow_questions</code> table reference
-     */
     public StackOverflowQuestions() {
         this(DSL.name("stack_overflow_questions"), null);
     }
@@ -145,9 +111,6 @@ public class StackOverflowQuestions extends TableImpl<StackOverflowQuestionsReco
 
     private transient Links _links;
 
-    /**
-     * Get the implicit join path to the <code>public.links</code> table.
-     */
     public Links links() {
         if (_links == null)
             _links = new Links(this, Keys.STACK_OVERFLOW_QUESTIONS__STACK_OVERFLOW_QUESTIONS_LINK_ID_FKEY);
@@ -173,27 +136,18 @@ public class StackOverflowQuestions extends TableImpl<StackOverflowQuestionsReco
         return new StackOverflowQuestions(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public StackOverflowQuestions rename(String name) {
         return new StackOverflowQuestions(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public StackOverflowQuestions rename(Name name) {
         return new StackOverflowQuestions(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public StackOverflowQuestions rename(Table<?> name) {
@@ -210,17 +164,10 @@ public class StackOverflowQuestions extends TableImpl<StackOverflowQuestionsReco
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super String, ? super Long[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super String, ? super Long[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -11,9 +11,6 @@ import javax.annotation.processing.Generated;
 import org.jooq.impl.AbstractRoutine;
 
 
-/**
- * The routine <code>pg_catalog.pg_stat_clear_snapshot</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -26,9 +23,6 @@ public class PgStatClearSnapshot extends AbstractRoutine<java.lang.Void> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Create a new routine call instance
-     */
     public PgStatClearSnapshot() {
         super("pg_stat_clear_snapshot", PgCatalog.PG_CATALOG);
     }

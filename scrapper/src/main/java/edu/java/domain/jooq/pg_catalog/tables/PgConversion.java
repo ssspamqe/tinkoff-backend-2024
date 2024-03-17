@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgConversionRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_conversion</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,58 +45,28 @@ public class PgConversion extends TableImpl<PgConversionRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_conversion</code>
-     */
     public static final PgConversion PG_CONVERSION = new PgConversion();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgConversionRecord> getRecordType() {
         return PgConversionRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_conversion.oid</code>.
-     */
     public final TableField<PgConversionRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_conversion.conname</code>.
-     */
     public final TableField<PgConversionRecord, String> CONNAME = createField(DSL.name("conname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_conversion.connamespace</code>.
-     */
     public final TableField<PgConversionRecord, Long> CONNAMESPACE = createField(DSL.name("connamespace"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_conversion.conowner</code>.
-     */
     public final TableField<PgConversionRecord, Long> CONOWNER = createField(DSL.name("conowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_conversion.conforencoding</code>.
-     */
     public final TableField<PgConversionRecord, Integer> CONFORENCODING = createField(DSL.name("conforencoding"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_conversion.contoencoding</code>.
-     */
     public final TableField<PgConversionRecord, Integer> CONTOENCODING = createField(DSL.name("contoencoding"), SQLDataType.INTEGER.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_conversion.conproc</code>.
-     */
     public final TableField<PgConversionRecord, String> CONPROC = createField(DSL.name("conproc"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_conversion.condefault</code>.
-     */
     public final TableField<PgConversionRecord, Boolean> CONDEFAULT = createField(DSL.name("condefault"), SQLDataType.BOOLEAN.nullable(false), this, "");
 
     private PgConversion(Name alias, Table<PgConversionRecord> aliased) {
@@ -111,23 +77,14 @@ public class PgConversion extends TableImpl<PgConversionRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_conversion</code> table reference
-     */
     public PgConversion(String alias) {
         this(DSL.name(alias), PG_CONVERSION);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_conversion</code> table reference
-     */
     public PgConversion(Name alias) {
         this(alias, PG_CONVERSION);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_conversion</code> table reference
-     */
     public PgConversion() {
         this(DSL.name("pg_conversion"), null);
     }
@@ -172,27 +129,18 @@ public class PgConversion extends TableImpl<PgConversionRecord> {
         return new PgConversion(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgConversion rename(String name) {
         return new PgConversion(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgConversion rename(Name name) {
         return new PgConversion(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgConversion rename(Table<?> name) {
@@ -209,17 +157,10 @@ public class PgConversion extends TableImpl<PgConversionRecord> {
         return (Row8) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function8<? super Long, ? super String, ? super Long, ? super Long, ? super Integer, ? super Integer, ? super String, ? super Boolean, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function8<? super Long, ? super String, ? super Long, ? super Long, ? super Integer, ? super Integer, ? super String, ? super Boolean, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -19,9 +19,6 @@ import org.jooq.Row3;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_ls_archive_statusdir</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -34,46 +31,28 @@ public class PgLsArchiveStatusdirRecord extends TableRecordImpl<PgLsArchiveStatu
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_archive_statusdir.name</code>.
-     */
     public void setName(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_archive_statusdir.name</code>.
-     */
     @Nullable
     public String getName() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_archive_statusdir.size</code>.
-     */
     public void setSize(@Nullable Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_archive_statusdir.size</code>.
-     */
     @Nullable
     public Long getSize() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_ls_archive_statusdir.modification</code>.
-     */
     public void setModification(@Nullable OffsetDateTime value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_ls_archive_statusdir.modification</code>.
-     */
     @Nullable
     public OffsetDateTime getModification() {
         return (OffsetDateTime) get(2);
@@ -183,16 +162,10 @@ public class PgLsArchiveStatusdirRecord extends TableRecordImpl<PgLsArchiveStatu
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgLsArchiveStatusdirRecord
-     */
     public PgLsArchiveStatusdirRecord() {
         super(PgLsArchiveStatusdir.PG_LS_ARCHIVE_STATUSDIR);
     }
 
-    /**
-     * Create a detached, initialised PgLsArchiveStatusdirRecord
-     */
     @ConstructorProperties({ "name", "size", "modification" })
     public PgLsArchiveStatusdirRecord(@Nullable String name, @Nullable Long size, @Nullable OffsetDateTime modification) {
         super(PgLsArchiveStatusdir.PG_LS_ARCHIVE_STATUSDIR);
@@ -203,9 +176,6 @@ public class PgLsArchiveStatusdirRecord extends TableRecordImpl<PgLsArchiveStatu
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgLsArchiveStatusdirRecord
-     */
     public PgLsArchiveStatusdirRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgLsArchiveStatusdir value) {
         super(PgLsArchiveStatusdir.PG_LS_ARCHIVE_STATUSDIR);
 

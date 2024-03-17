@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.foreign_data_wrapper_options</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,70 +51,38 @@ public class ForeignDataWrapperOptions implements Serializable {
         this.optionValue = optionValue;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrapper_options.foreign_data_wrapper_catalog</code>.
-     */
     @Nullable
     public String getForeignDataWrapperCatalog() {
         return this.foreignDataWrapperCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrapper_options.foreign_data_wrapper_catalog</code>.
-     */
     public void setForeignDataWrapperCatalog(@Nullable String foreignDataWrapperCatalog) {
         this.foreignDataWrapperCatalog = foreignDataWrapperCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrapper_options.foreign_data_wrapper_name</code>.
-     */
     @Nullable
     public String getForeignDataWrapperName() {
         return this.foreignDataWrapperName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrapper_options.foreign_data_wrapper_name</code>.
-     */
     public void setForeignDataWrapperName(@Nullable String foreignDataWrapperName) {
         this.foreignDataWrapperName = foreignDataWrapperName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrapper_options.option_name</code>.
-     */
     @Nullable
     public String getOptionName() {
         return this.optionName;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrapper_options.option_name</code>.
-     */
     public void setOptionName(@Nullable String optionName) {
         this.optionName = optionName;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.foreign_data_wrapper_options.option_value</code>.
-     */
     @Nullable
     public String getOptionValue() {
         return this.optionValue;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.foreign_data_wrapper_options.option_value</code>.
-     */
     public void setOptionValue(@Nullable String optionValue) {
         this.optionValue = optionValue;
     }

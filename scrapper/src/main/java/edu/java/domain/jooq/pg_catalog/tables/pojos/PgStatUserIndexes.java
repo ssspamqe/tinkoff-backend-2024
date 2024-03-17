@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_user_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -75,137 +72,83 @@ public class PgStatUserIndexes implements Serializable {
         this.idxTupFetch = idxTupFetch;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.indexrelid</code>.
-     */
     @Nullable
     public Long getIndexrelid() {
         return this.indexrelid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.indexrelid</code>.
-     */
     public void setIndexrelid(@Nullable Long indexrelid) {
         this.indexrelid = indexrelid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return this.schemaname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String schemaname) {
         this.schemaname = schemaname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.relname</code>.
-     */
     @Nullable
     public String getRelname() {
         return this.relname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.relname</code>.
-     */
     public void setRelname(@Nullable String relname) {
         this.relname = relname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.indexrelname</code>.
-     */
     @Nullable
     public String getIndexrelname() {
         return this.indexrelname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.indexrelname</code>.
-     */
     public void setIndexrelname(@Nullable String indexrelname) {
         this.indexrelname = indexrelname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.idx_scan</code>.
-     */
     @Nullable
     public Long getIdxScan() {
         return this.idxScan;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.idx_scan</code>.
-     */
     public void setIdxScan(@Nullable Long idxScan) {
         this.idxScan = idxScan;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.last_idx_scan</code>.
-     */
     @Nullable
     public OffsetDateTime getLastIdxScan() {
         return this.lastIdxScan;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.last_idx_scan</code>.
-     */
     public void setLastIdxScan(@Nullable OffsetDateTime lastIdxScan) {
         this.lastIdxScan = lastIdxScan;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.idx_tup_read</code>.
-     */
     @Nullable
     public Long getIdxTupRead() {
         return this.idxTupRead;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.idx_tup_read</code>.
-     */
     public void setIdxTupRead(@Nullable Long idxTupRead) {
         this.idxTupRead = idxTupRead;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_user_indexes.idx_tup_fetch</code>.
-     */
     @Nullable
     public Long getIdxTupFetch() {
         return this.idxTupFetch;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_user_indexes.idx_tup_fetch</code>.
-     */
     public void setIdxTupFetch(@Nullable Long idxTupFetch) {
         this.idxTupFetch = idxTupFetch;
     }

@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_get_publication_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -55,73 +52,39 @@ public class PgGetPublicationTables implements Serializable {
         this.qual = qual;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_publication_tables.pubid</code>.
-     */
     @Nullable
     public Long getPubid() {
         return this.pubid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_publication_tables.pubid</code>.
-     */
     public void setPubid(@Nullable Long pubid) {
         this.pubid = pubid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_publication_tables.relid</code>.
-     */
     @Nullable
     public Long getRelid() {
         return this.relid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_publication_tables.relid</code>.
-     */
     public void setRelid(@Nullable Long relid) {
         this.relid = relid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_get_publication_tables.attrs</code>.
-     */
     @Nullable
     public Object[] getAttrs() {
         return this.attrs;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_get_publication_tables.attrs</code>.
-     */
     public void setAttrs(@Nullable Object[] attrs) {
         this.attrs = attrs;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     @Nullable
     public Object getQual() {
         return this.qual;
     }
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public void setQual(@Nullable Object qual) {
         this.qual = qual;

@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.sql_parts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -60,78 +57,48 @@ public class SqlParts implements Serializable {
         this.comments = comments;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.feature_id</code>.
-     */
     @Nullable
     public String getFeatureId() {
         return this.featureId;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.feature_id</code>.
-     */
     public void setFeatureId(@Nullable String featureId) {
         this.featureId = featureId;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.feature_name</code>.
-     */
     @Nullable
     public String getFeatureName() {
         return this.featureName;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.feature_name</code>.
-     */
     public void setFeatureName(@Nullable String featureName) {
         this.featureName = featureName;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.is_supported</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsSupported() {
         return this.isSupported;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.is_supported</code>.
-     */
     public void setIsSupported(@Nullable String isSupported) {
         this.isSupported = isSupported;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.is_verified_by</code>.
-     */
     @Nullable
     public String getIsVerifiedBy() {
         return this.isVerifiedBy;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.is_verified_by</code>.
-     */
     public void setIsVerifiedBy(@Nullable String isVerifiedBy) {
         this.isVerifiedBy = isVerifiedBy;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_parts.comments</code>.
-     */
     @Nullable
     public String getComments() {
         return this.comments;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_parts.comments</code>.
-     */
     public void setComments(@Nullable String comments) {
         this.comments = comments;
     }

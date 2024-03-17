@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatsExtRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_stats_ext</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,105 +40,44 @@ public class PgStatsExt extends TableImpl<PgStatsExtRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_stats_ext</code>
-     */
     public static final PgStatsExt PG_STATS_EXT = new PgStatsExt();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgStatsExtRecord> getRecordType() {
         return PgStatsExtRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.schemaname</code>.
-     */
     public final TableField<PgStatsExtRecord, String> SCHEMANAME = createField(DSL.name("schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.tablename</code>.
-     */
     public final TableField<PgStatsExtRecord, String> TABLENAME = createField(DSL.name("tablename"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.statistics_schemaname</code>.
-     */
     public final TableField<PgStatsExtRecord, String> STATISTICS_SCHEMANAME = createField(DSL.name("statistics_schemaname"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.statistics_name</code>.
-     */
     public final TableField<PgStatsExtRecord, String> STATISTICS_NAME = createField(DSL.name("statistics_name"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.statistics_owner</code>.
-     */
     public final TableField<PgStatsExtRecord, String> STATISTICS_OWNER = createField(DSL.name("statistics_owner"), SQLDataType.VARCHAR, this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.attnames</code>.
-     */
     public final TableField<PgStatsExtRecord, String[]> ATTNAMES = createField(DSL.name("attnames"), SQLDataType.VARCHAR.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.exprs</code>.
-     */
     public final TableField<PgStatsExtRecord, String[]> EXPRS = createField(DSL.name("exprs"), SQLDataType.CLOB.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.kinds</code>.
-     */
     public final TableField<PgStatsExtRecord, String[]> KINDS = createField(DSL.name("kinds"), SQLDataType.CHAR.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.inherited</code>.
-     */
     public final TableField<PgStatsExtRecord, Boolean> INHERITED = createField(DSL.name("inherited"), SQLDataType.BOOLEAN, this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgStatsExtRecord, Object> N_DISTINCT = createField(DSL.name("n_distinct"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_ndistinct\""), this, "");
 
-    /**
-     * @deprecated Unknown data type. If this is a qualified, user-defined type,
-     * it may have been excluded from code generation. If this is a built-in
-     * type, you can define an explicit {@link org.jooq.Binding} to specify how
-     * this type should be handled. Deprecation can be turned off using
-     * {@literal <deprecationOnUnknownTypes/>} in your code generator
-     * configuration.
-     */
     @Deprecated
     public final TableField<PgStatsExtRecord, Object> DEPENDENCIES = createField(DSL.name("dependencies"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"pg_dependencies\""), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.most_common_vals</code>.
-     */
     public final TableField<PgStatsExtRecord, String[]> MOST_COMMON_VALS = createField(DSL.name("most_common_vals"), SQLDataType.CLOB.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.most_common_val_nulls</code>.
-     */
     public final TableField<PgStatsExtRecord, Boolean[]> MOST_COMMON_VAL_NULLS = createField(DSL.name("most_common_val_nulls"), SQLDataType.BOOLEAN.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.most_common_freqs</code>.
-     */
     public final TableField<PgStatsExtRecord, Double[]> MOST_COMMON_FREQS = createField(DSL.name("most_common_freqs"), SQLDataType.FLOAT.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_stats_ext.most_common_base_freqs</code>.
-     */
     public final TableField<PgStatsExtRecord, Double[]> MOST_COMMON_BASE_FREQS = createField(DSL.name("most_common_base_freqs"), SQLDataType.FLOAT.array(), this, "");
 
     private PgStatsExt(Name alias, Table<PgStatsExtRecord> aliased) {
@@ -186,23 +120,14 @@ public class PgStatsExt extends TableImpl<PgStatsExtRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stats_ext</code> table reference
-     */
     public PgStatsExt(String alias) {
         this(DSL.name(alias), PG_STATS_EXT);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_stats_ext</code> table reference
-     */
     public PgStatsExt(Name alias) {
         this(alias, PG_STATS_EXT);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_stats_ext</code> table reference
-     */
     public PgStatsExt() {
         this(DSL.name("pg_stats_ext"), null);
     }
@@ -235,27 +160,18 @@ public class PgStatsExt extends TableImpl<PgStatsExtRecord> {
         return new PgStatsExt(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatsExt rename(String name) {
         return new PgStatsExt(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatsExt rename(Name name) {
         return new PgStatsExt(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgStatsExt rename(Table<?> name) {
@@ -272,17 +188,10 @@ public class PgStatsExt extends TableImpl<PgStatsExtRecord> {
         return (Row15) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function15<? super String, ? super String, ? super String, ? super String, ? super String, ? super String[], ? super String[], ? super String[], ? super Boolean, ? super Object, ? super Object, ? super String[], ? super Boolean[], ? super Double[], ? super Double[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function15<? super String, ? super String, ? super String, ? super String, ? super String, ? super String[], ? super String[], ? super String[], ? super Boolean, ? super Object, ? super Object, ? super String[], ? super Boolean[], ? super Double[], ? super Double[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

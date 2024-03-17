@@ -18,9 +18,6 @@ import org.jooq.Row1;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.generate_subscripts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,18 +30,10 @@ public class GenerateSubscriptsRecord extends TableRecordImpl<GenerateSubscripts
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>pg_catalog.generate_subscripts.generate_subscripts</code>.
-     */
     public void setGenerateSubscripts(@Nullable Integer value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.generate_subscripts.generate_subscripts</code>.
-     */
     @Nullable
     public Integer getGenerateSubscripts() {
         return (Integer) get(0);
@@ -102,16 +91,10 @@ public class GenerateSubscriptsRecord extends TableRecordImpl<GenerateSubscripts
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached GenerateSubscriptsRecord
-     */
     public GenerateSubscriptsRecord() {
         super(GenerateSubscripts.GENERATE_SUBSCRIPTS);
     }
 
-    /**
-     * Create a detached, initialised GenerateSubscriptsRecord
-     */
     @ConstructorProperties({ "generateSubscripts" })
     public GenerateSubscriptsRecord(@Nullable Integer generateSubscripts) {
         super(GenerateSubscripts.GENERATE_SUBSCRIPTS);
@@ -120,9 +103,6 @@ public class GenerateSubscriptsRecord extends TableRecordImpl<GenerateSubscripts
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised GenerateSubscriptsRecord
-     */
     public GenerateSubscriptsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.GenerateSubscripts value) {
         super(GenerateSubscripts.GENERATE_SUBSCRIPTS);
 

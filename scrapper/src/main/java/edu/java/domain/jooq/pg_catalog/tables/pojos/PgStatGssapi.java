@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_gssapi</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -58,77 +55,47 @@ public class PgStatGssapi implements Serializable {
         this.credentialsDelegated = credentialsDelegated;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.pid</code>.
-     */
     @Nullable
     public Integer getPid() {
         return this.pid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.pid</code>.
-     */
     public void setPid(@Nullable Integer pid) {
         this.pid = pid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.gss_authenticated</code>.
-     */
     @Nullable
     public Boolean getGssAuthenticated() {
         return this.gssAuthenticated;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.gss_authenticated</code>.
-     */
     public void setGssAuthenticated(@Nullable Boolean gssAuthenticated) {
         this.gssAuthenticated = gssAuthenticated;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.principal</code>.
-     */
     @Nullable
     public String getPrincipal() {
         return this.principal;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.principal</code>.
-     */
     public void setPrincipal(@Nullable String principal) {
         this.principal = principal;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.encrypted</code>.
-     */
     @Nullable
     public Boolean getEncrypted() {
         return this.encrypted;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.encrypted</code>.
-     */
     public void setEncrypted(@Nullable Boolean encrypted) {
         this.encrypted = encrypted;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_gssapi.credentials_delegated</code>.
-     */
     @Nullable
     public Boolean getCredentialsDelegated() {
         return this.credentialsDelegated;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_gssapi.credentials_delegated</code>.
-     */
     public void setCredentialsDelegated(@Nullable Boolean credentialsDelegated) {
         this.credentialsDelegated = credentialsDelegated;
     }

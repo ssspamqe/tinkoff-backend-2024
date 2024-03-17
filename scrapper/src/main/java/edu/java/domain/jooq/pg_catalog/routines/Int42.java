@@ -17,9 +17,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.int4</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -32,19 +29,10 @@ public class Int42 extends AbstractRoutine<Integer> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.int4.RETURN_VALUE</code>.
-     */
     public static final Parameter<Integer> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.INTEGER, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.int4._1</code>.
-     */
     public static final Parameter<BigDecimal> _1 = Internal.createParameter("_1", SQLDataType.NUMERIC, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Int42() {
         super("int4", PgCatalog.PG_CATALOG, SQLDataType.INTEGER);
 
@@ -53,17 +41,10 @@ public class Int42 extends AbstractRoutine<Integer> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(BigDecimal value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<BigDecimal> field) {
         setField(_1, field);
     }

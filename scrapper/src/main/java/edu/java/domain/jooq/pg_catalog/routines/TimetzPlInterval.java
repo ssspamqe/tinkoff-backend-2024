@@ -18,9 +18,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.types.YearToSecond;
 
 
-/**
- * The routine <code>pg_catalog.timetz_pl_interval</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,24 +30,12 @@ public class TimetzPlInterval extends AbstractRoutine<OffsetTime> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.timetz_pl_interval.RETURN_VALUE</code>.
-     */
     public static final Parameter<OffsetTime> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.TIMEWITHTIMEZONE(6), false, false);
 
-    /**
-     * The parameter <code>pg_catalog.timetz_pl_interval._1</code>.
-     */
     public static final Parameter<OffsetTime> _1 = Internal.createParameter("_1", SQLDataType.TIMEWITHTIMEZONE(6), false, true);
 
-    /**
-     * The parameter <code>pg_catalog.timetz_pl_interval._2</code>.
-     */
     public static final Parameter<YearToSecond> _2 = Internal.createParameter("_2", SQLDataType.INTERVAL, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public TimetzPlInterval() {
         super("timetz_pl_interval", PgCatalog.PG_CATALOG, SQLDataType.TIMEWITHTIMEZONE(6));
 
@@ -59,32 +44,18 @@ public class TimetzPlInterval extends AbstractRoutine<OffsetTime> {
         addInParameter(_2);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(OffsetTime value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<OffsetTime> field) {
         setField(_1, field);
     }
 
-    /**
-     * Set the <code>_2</code> parameter IN value to the routine
-     */
     public void set__2(YearToSecond value) {
         setValue(_2, value);
     }
 
-    /**
-     * Set the <code>_2</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__2(Field<YearToSecond> field) {
         setField(_2, field);
     }

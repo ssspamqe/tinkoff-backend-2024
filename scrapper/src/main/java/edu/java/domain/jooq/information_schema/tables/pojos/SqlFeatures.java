@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.sql_features</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -68,108 +65,66 @@ public class SqlFeatures implements Serializable {
         this.comments = comments;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.feature_id</code>.
-     */
     @Nullable
     public String getFeatureId() {
         return this.featureId;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.feature_id</code>.
-     */
     public void setFeatureId(@Nullable String featureId) {
         this.featureId = featureId;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.feature_name</code>.
-     */
     @Nullable
     public String getFeatureName() {
         return this.featureName;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.feature_name</code>.
-     */
     public void setFeatureName(@Nullable String featureName) {
         this.featureName = featureName;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.sub_feature_id</code>.
-     */
     @Nullable
     public String getSubFeatureId() {
         return this.subFeatureId;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.sub_feature_id</code>.
-     */
     public void setSubFeatureId(@Nullable String subFeatureId) {
         this.subFeatureId = subFeatureId;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.sub_feature_name</code>.
-     */
     @Nullable
     public String getSubFeatureName() {
         return this.subFeatureName;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.sub_feature_name</code>.
-     */
     public void setSubFeatureName(@Nullable String subFeatureName) {
         this.subFeatureName = subFeatureName;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.is_supported</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsSupported() {
         return this.isSupported;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.is_supported</code>.
-     */
     public void setIsSupported(@Nullable String isSupported) {
         this.isSupported = isSupported;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.is_verified_by</code>.
-     */
     @Nullable
     public String getIsVerifiedBy() {
         return this.isVerifiedBy;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.is_verified_by</code>.
-     */
     public void setIsVerifiedBy(@Nullable String isVerifiedBy) {
         this.isVerifiedBy = isVerifiedBy;
     }
 
-    /**
-     * Getter for <code>information_schema.sql_features.comments</code>.
-     */
     @Nullable
     public String getComments() {
         return this.comments;
     }
 
-    /**
-     * Setter for <code>information_schema.sql_features.comments</code>.
-     */
     public void setComments(@Nullable String comments) {
         this.comments = comments;
     }

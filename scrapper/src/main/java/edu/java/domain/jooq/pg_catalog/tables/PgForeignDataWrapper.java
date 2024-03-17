@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgForeignDataWrapperRecord
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_foreign_data_wrapper</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,53 +45,26 @@ public class PgForeignDataWrapper extends TableImpl<PgForeignDataWrapperRecord> 
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_foreign_data_wrapper</code>
-     */
     public static final PgForeignDataWrapper PG_FOREIGN_DATA_WRAPPER = new PgForeignDataWrapper();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgForeignDataWrapperRecord> getRecordType() {
         return PgForeignDataWrapperRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_data_wrapper.oid</code>.
-     */
     public final TableField<PgForeignDataWrapperRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_data_wrapper.fdwname</code>.
-     */
     public final TableField<PgForeignDataWrapperRecord, String> FDWNAME = createField(DSL.name("fdwname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_data_wrapper.fdwowner</code>.
-     */
     public final TableField<PgForeignDataWrapperRecord, Long> FDWOWNER = createField(DSL.name("fdwowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_data_wrapper.fdwhandler</code>.
-     */
     public final TableField<PgForeignDataWrapperRecord, Long> FDWHANDLER = createField(DSL.name("fdwhandler"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_data_wrapper.fdwvalidator</code>.
-     */
     public final TableField<PgForeignDataWrapperRecord, Long> FDWVALIDATOR = createField(DSL.name("fdwvalidator"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_data_wrapper.fdwacl</code>.
-     */
     public final TableField<PgForeignDataWrapperRecord, String[]> FDWACL = createField(DSL.name("fdwacl"), SQLDataType.VARCHAR.array(), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_foreign_data_wrapper.fdwoptions</code>.
-     */
     public final TableField<PgForeignDataWrapperRecord, String[]> FDWOPTIONS = createField(DSL.name("fdwoptions"), SQLDataType.CLOB.array(), this, "");
 
     private PgForeignDataWrapper(Name alias, Table<PgForeignDataWrapperRecord> aliased) {
@@ -106,25 +75,14 @@ public class PgForeignDataWrapper extends TableImpl<PgForeignDataWrapperRecord> 
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_foreign_data_wrapper</code> table
-     * reference
-     */
     public PgForeignDataWrapper(String alias) {
         this(DSL.name(alias), PG_FOREIGN_DATA_WRAPPER);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_foreign_data_wrapper</code> table
-     * reference
-     */
     public PgForeignDataWrapper(Name alias) {
         this(alias, PG_FOREIGN_DATA_WRAPPER);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_foreign_data_wrapper</code> table reference
-     */
     public PgForeignDataWrapper() {
         this(DSL.name("pg_foreign_data_wrapper"), null);
     }
@@ -169,27 +127,18 @@ public class PgForeignDataWrapper extends TableImpl<PgForeignDataWrapperRecord> 
         return new PgForeignDataWrapper(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgForeignDataWrapper rename(String name) {
         return new PgForeignDataWrapper(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgForeignDataWrapper rename(Name name) {
         return new PgForeignDataWrapper(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgForeignDataWrapper rename(Table<?> name) {
@@ -206,17 +155,10 @@ public class PgForeignDataWrapper extends TableImpl<PgForeignDataWrapperRecord> 
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super String[], ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super String, ? super Long, ? super Long, ? super Long, ? super String[], ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

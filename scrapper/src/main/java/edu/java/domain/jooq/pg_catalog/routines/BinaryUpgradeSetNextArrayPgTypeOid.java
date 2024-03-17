@@ -14,10 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine
- * <code>pg_catalog.binary_upgrade_set_next_array_pg_type_oid</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,24 +26,14 @@ public class BinaryUpgradeSetNextArrayPgTypeOid extends AbstractRoutine<java.lan
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.binary_upgrade_set_next_array_pg_type_oid._1</code>.
-     */
     public static final Parameter<Long> _1 = Internal.createParameter("_1", SQLDataType.BIGINT, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public BinaryUpgradeSetNextArrayPgTypeOid() {
         super("binary_upgrade_set_next_array_pg_type_oid", PgCatalog.PG_CATALOG);
 
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Long value) {
         setValue(_1, value);
     }

@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonEachRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.json_each</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,28 +39,16 @@ public class JsonEach extends TableImpl<JsonEachRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.json_each</code>
-     */
     public static final JsonEach JSON_EACH = new JsonEach();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonEachRecord> getRecordType() {
         return JsonEachRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.json_each.key</code>.
-     */
     public final TableField<JsonEachRecord, String> KEY = createField(DSL.name("key"), SQLDataType.CLOB, this, "");
 
-    /**
-     * The column <code>pg_catalog.json_each.value</code>.
-     */
     public final TableField<JsonEachRecord, JSON> VALUE = createField(DSL.name("value"), SQLDataType.JSON, this, "");
 
     private JsonEach(Name alias, Table<JsonEachRecord> aliased) {
@@ -78,23 +61,14 @@ public class JsonEach extends TableImpl<JsonEachRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_each</code> table reference
-     */
     public JsonEach(String alias) {
         this(DSL.name(alias), JSON_EACH);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_each</code> table reference
-     */
     public JsonEach(Name alias) {
         this(alias, JSON_EACH);
     }
 
-    /**
-     * Create a <code>pg_catalog.json_each</code> table reference
-     */
     public JsonEach() {
         this(DSL.name("json_each"), null);
     }
@@ -123,27 +97,18 @@ public class JsonEach extends TableImpl<JsonEachRecord> {
         return new JsonEach(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonEach rename(String name) {
         return new JsonEach(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonEach rename(Name name) {
         return new JsonEach(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonEach rename(Table<?> name) {
@@ -160,9 +125,6 @@ public class JsonEach extends TableImpl<JsonEachRecord> {
         return (Row2) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonEach call(
           JSON fromJson
     ) {
@@ -173,9 +135,6 @@ public class JsonEach extends TableImpl<JsonEachRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonEach call(
           Field<JSON> fromJson
     ) {
@@ -186,17 +145,10 @@ public class JsonEach extends TableImpl<JsonEachRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function2<? super String, ? super JSON, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function2<? super String, ? super JSON, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgEnumRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_enum</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,38 +45,20 @@ public class PgEnum extends TableImpl<PgEnumRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_enum</code>
-     */
     public static final PgEnum PG_ENUM = new PgEnum();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgEnumRecord> getRecordType() {
         return PgEnumRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_enum.oid</code>.
-     */
     public final TableField<PgEnumRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_enum.enumtypid</code>.
-     */
     public final TableField<PgEnumRecord, Long> ENUMTYPID = createField(DSL.name("enumtypid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_enum.enumsortorder</code>.
-     */
     public final TableField<PgEnumRecord, Float> ENUMSORTORDER = createField(DSL.name("enumsortorder"), SQLDataType.REAL.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_enum.enumlabel</code>.
-     */
     public final TableField<PgEnumRecord, String> ENUMLABEL = createField(DSL.name("enumlabel"), SQLDataType.VARCHAR.nullable(false), this, "");
 
     private PgEnum(Name alias, Table<PgEnumRecord> aliased) {
@@ -91,23 +69,14 @@ public class PgEnum extends TableImpl<PgEnumRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_enum</code> table reference
-     */
     public PgEnum(String alias) {
         this(DSL.name(alias), PG_ENUM);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_enum</code> table reference
-     */
     public PgEnum(Name alias) {
         this(alias, PG_ENUM);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_enum</code> table reference
-     */
     public PgEnum() {
         this(DSL.name("pg_enum"), null);
     }
@@ -152,27 +121,18 @@ public class PgEnum extends TableImpl<PgEnumRecord> {
         return new PgEnum(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgEnum rename(String name) {
         return new PgEnum(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgEnum rename(Name name) {
         return new PgEnum(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgEnum rename(Table<?> name) {
@@ -189,17 +149,10 @@ public class PgEnum extends TableImpl<PgEnumRecord> {
         return (Row4) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function4<? super Long, ? super Long, ? super Float, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function4<? super Long, ? super Long, ? super Float, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

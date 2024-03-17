@@ -14,9 +14,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>information_schema.usage_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -72,129 +69,75 @@ public class UsagePrivileges implements Serializable {
         this.isGrantable = isGrantable;
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return this.grantor;
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.grantor</code>.
-     */
     public void setGrantor(@Nullable String grantor) {
         this.grantor = grantor;
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return this.grantee;
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.grantee</code>.
-     */
     public void setGrantee(@Nullable String grantee) {
         this.grantee = grantee;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.usage_privileges.object_catalog</code>.
-     */
     @Nullable
     public String getObjectCatalog() {
         return this.objectCatalog;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.usage_privileges.object_catalog</code>.
-     */
     public void setObjectCatalog(@Nullable String objectCatalog) {
         this.objectCatalog = objectCatalog;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.usage_privileges.object_schema</code>.
-     */
     @Nullable
     public String getObjectSchema() {
         return this.objectSchema;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.usage_privileges.object_schema</code>.
-     */
     public void setObjectSchema(@Nullable String objectSchema) {
         this.objectSchema = objectSchema;
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.object_name</code>.
-     */
     @Nullable
     public String getObjectName() {
         return this.objectName;
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.object_name</code>.
-     */
     public void setObjectName(@Nullable String objectName) {
         this.objectName = objectName;
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.object_type</code>.
-     */
     @Nullable
     public String getObjectType() {
         return this.objectType;
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.object_type</code>.
-     */
     public void setObjectType(@Nullable String objectType) {
         this.objectType = objectType;
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.usage_privileges.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return this.privilegeType;
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.usage_privileges.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String privilegeType) {
         this.privilegeType = privilegeType;
     }
 
-    /**
-     * Getter for <code>information_schema.usage_privileges.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
         return this.isGrantable;
     }
 
-    /**
-     * Setter for <code>information_schema.usage_privileges.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String isGrantable) {
         this.isGrantable = isGrantable;
     }

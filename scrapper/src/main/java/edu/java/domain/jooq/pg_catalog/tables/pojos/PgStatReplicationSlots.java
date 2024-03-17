@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_stat_replication_slots</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -79,156 +76,92 @@ public class PgStatReplicationSlots implements Serializable {
         this.statsReset = statsReset;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.slot_name</code>.
-     */
     @Nullable
     public String getSlotName() {
         return this.slotName;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.slot_name</code>.
-     */
     public void setSlotName(@Nullable String slotName) {
         this.slotName = slotName;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.spill_txns</code>.
-     */
     @Nullable
     public Long getSpillTxns() {
         return this.spillTxns;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.spill_txns</code>.
-     */
     public void setSpillTxns(@Nullable Long spillTxns) {
         this.spillTxns = spillTxns;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.spill_count</code>.
-     */
     @Nullable
     public Long getSpillCount() {
         return this.spillCount;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.spill_count</code>.
-     */
     public void setSpillCount(@Nullable Long spillCount) {
         this.spillCount = spillCount;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.spill_bytes</code>.
-     */
     @Nullable
     public Long getSpillBytes() {
         return this.spillBytes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.spill_bytes</code>.
-     */
     public void setSpillBytes(@Nullable Long spillBytes) {
         this.spillBytes = spillBytes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.stream_txns</code>.
-     */
     @Nullable
     public Long getStreamTxns() {
         return this.streamTxns;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.stream_txns</code>.
-     */
     public void setStreamTxns(@Nullable Long streamTxns) {
         this.streamTxns = streamTxns;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_replication_slots.stream_count</code>.
-     */
     @Nullable
     public Long getStreamCount() {
         return this.streamCount;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_replication_slots.stream_count</code>.
-     */
     public void setStreamCount(@Nullable Long streamCount) {
         this.streamCount = streamCount;
     }
 
-    /**
-     * Getter for
-     * <code>pg_catalog.pg_stat_replication_slots.stream_bytes</code>.
-     */
     @Nullable
     public Long getStreamBytes() {
         return this.streamBytes;
     }
 
-    /**
-     * Setter for
-     * <code>pg_catalog.pg_stat_replication_slots.stream_bytes</code>.
-     */
     public void setStreamBytes(@Nullable Long streamBytes) {
         this.streamBytes = streamBytes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.total_txns</code>.
-     */
     @Nullable
     public Long getTotalTxns() {
         return this.totalTxns;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.total_txns</code>.
-     */
     public void setTotalTxns(@Nullable Long totalTxns) {
         this.totalTxns = totalTxns;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.total_bytes</code>.
-     */
     @Nullable
     public Long getTotalBytes() {
         return this.totalBytes;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.total_bytes</code>.
-     */
     public void setTotalBytes(@Nullable Long totalBytes) {
         this.totalBytes = totalBytes;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_stat_replication_slots.stats_reset</code>.
-     */
     @Nullable
     public OffsetDateTime getStatsReset() {
         return this.statsReset;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_stat_replication_slots.stats_reset</code>.
-     */
     public void setStatsReset(@Nullable OffsetDateTime statsReset) {
         this.statsReset = statsReset;
     }

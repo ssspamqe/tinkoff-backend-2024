@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.RegexpSplitToTableRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,9 +26,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.regexp_split_to_table</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -43,24 +38,14 @@ public class RegexpSplitToTable extends TableImpl<RegexpSplitToTableRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.regexp_split_to_table</code>
-     */
     public static final RegexpSplitToTable REGEXP_SPLIT_TO_TABLE = new RegexpSplitToTable();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<RegexpSplitToTableRecord> getRecordType() {
         return RegexpSplitToTableRecord.class;
     }
 
-    /**
-     * The column
-     * <code>pg_catalog.regexp_split_to_table.regexp_split_to_table</code>.
-     */
     public final TableField<RegexpSplitToTableRecord, String> REGEXP_SPLIT_TO_TABLE_ = createField(DSL.name("regexp_split_to_table"), SQLDataType.CLOB, this, "");
 
     private RegexpSplitToTable(Name alias, Table<RegexpSplitToTableRecord> aliased) {
@@ -75,25 +60,14 @@ public class RegexpSplitToTable extends TableImpl<RegexpSplitToTableRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.regexp_split_to_table</code> table
-     * reference
-     */
     public RegexpSplitToTable(String alias) {
         this(DSL.name(alias), REGEXP_SPLIT_TO_TABLE);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.regexp_split_to_table</code> table
-     * reference
-     */
     public RegexpSplitToTable(Name alias) {
         this(alias, REGEXP_SPLIT_TO_TABLE);
     }
 
-    /**
-     * Create a <code>pg_catalog.regexp_split_to_table</code> table reference
-     */
     public RegexpSplitToTable() {
         this(DSL.name("regexp_split_to_table"), null);
     }
@@ -122,27 +96,18 @@ public class RegexpSplitToTable extends TableImpl<RegexpSplitToTableRecord> {
         return new RegexpSplitToTable(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RegexpSplitToTable rename(String name) {
         return new RegexpSplitToTable(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RegexpSplitToTable rename(Name name) {
         return new RegexpSplitToTable(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public RegexpSplitToTable rename(Table<?> name) {
@@ -159,9 +124,6 @@ public class RegexpSplitToTable extends TableImpl<RegexpSplitToTableRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public RegexpSplitToTable call(
           String __1
         , String __2
@@ -176,9 +138,6 @@ public class RegexpSplitToTable extends TableImpl<RegexpSplitToTableRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public RegexpSplitToTable call(
           Field<String> __1
         , Field<String> __2
@@ -193,17 +152,10 @@ public class RegexpSplitToTable extends TableImpl<RegexpSplitToTableRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

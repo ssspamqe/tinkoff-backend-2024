@@ -14,9 +14,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.pg_replication_origin_session_setup</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -29,24 +26,14 @@ public class PgReplicationOriginSessionSetup extends AbstractRoutine<java.lang.V
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter
-     * <code>pg_catalog.pg_replication_origin_session_setup._1</code>.
-     */
     public static final Parameter<String> _1 = Internal.createParameter("_1", SQLDataType.CLOB, false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public PgReplicationOriginSessionSetup() {
         super("pg_replication_origin_session_setup", PgCatalog.PG_CATALOG);
 
         addInParameter(_1);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(String value) {
         setValue(_1, value);
     }

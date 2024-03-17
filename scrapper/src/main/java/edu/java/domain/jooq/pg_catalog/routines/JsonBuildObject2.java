@@ -15,9 +15,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.json_build_object</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -30,14 +27,8 @@ public class JsonBuildObject2 extends AbstractRoutine<JSON> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.json_build_object.RETURN_VALUE</code>.
-     */
     public static final Parameter<JSON> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.JSON, false, false);
 
-    /**
-     * Create a new routine call instance
-     */
     public JsonBuildObject2() {
         super("json_build_object", PgCatalog.PG_CATALOG, SQLDataType.JSON);
 

@@ -20,9 +20,6 @@ import org.jooq.Row10;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.views</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,157 +32,95 @@ public class ViewsRecord extends TableRecordImpl<ViewsRecord> implements Record1
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.views.table_catalog</code>.
-     */
     public void setTableCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.table_catalog</code>.
-     */
     @Nullable
     public String getTableCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.views.table_schema</code>.
-     */
     public void setTableSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.table_schema</code>.
-     */
     @Nullable
     public String getTableSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>information_schema.views.table_name</code>.
-     */
     public void setTableName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.table_name</code>.
-     */
     @Nullable
     public String getTableName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema.views.view_definition</code>.
-     */
     public void setViewDefinition(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.view_definition</code>.
-     */
     @Nullable
     public String getViewDefinition() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>information_schema.views.check_option</code>.
-     */
     public void setCheckOption(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.check_option</code>.
-     */
     @Nullable
     public String getCheckOption() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for <code>information_schema.views.is_updatable</code>.
-     */
     public void setIsUpdatable(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.is_updatable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsUpdatable() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for <code>information_schema.views.is_insertable_into</code>.
-     */
     public void setIsInsertableInto(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.is_insertable_into</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsInsertableInto() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for <code>information_schema.views.is_trigger_updatable</code>.
-     */
     public void setIsTriggerUpdatable(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.is_trigger_updatable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsTriggerUpdatable() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>information_schema.views.is_trigger_deletable</code>.
-     */
     public void setIsTriggerDeletable(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for <code>information_schema.views.is_trigger_deletable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsTriggerDeletable() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.views.is_trigger_insertable_into</code>.
-     */
     public void setIsTriggerInsertableInto(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.views.is_trigger_insertable_into</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsTriggerInsertableInto() {
@@ -478,16 +413,10 @@ public class ViewsRecord extends TableRecordImpl<ViewsRecord> implements Record1
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ViewsRecord
-     */
     public ViewsRecord() {
         super(Views.VIEWS);
     }
 
-    /**
-     * Create a detached, initialised ViewsRecord
-     */
     @ConstructorProperties({ "tableCatalog", "tableSchema", "tableName", "viewDefinition", "checkOption", "isUpdatable", "isInsertableInto", "isTriggerUpdatable", "isTriggerDeletable", "isTriggerInsertableInto" })
     public ViewsRecord(@Nullable String tableCatalog, @Nullable String tableSchema, @Nullable String tableName, @Nullable String viewDefinition, @Nullable String checkOption, @Nullable String isUpdatable, @Nullable String isInsertableInto, @Nullable String isTriggerUpdatable, @Nullable String isTriggerDeletable, @Nullable String isTriggerInsertableInto) {
         super(Views.VIEWS);
@@ -505,9 +434,6 @@ public class ViewsRecord extends TableRecordImpl<ViewsRecord> implements Record1
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ViewsRecord
-     */
     public ViewsRecord(edu.java.domain.jooq.information_schema.tables.pojos.Views value) {
         super(Views.VIEWS);
 

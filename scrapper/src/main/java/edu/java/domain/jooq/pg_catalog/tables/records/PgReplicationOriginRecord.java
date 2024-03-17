@@ -18,9 +18,6 @@ import org.jooq.Row2;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_replication_origin</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,32 +30,20 @@ public class PgReplicationOriginRecord extends UpdatableRecordImpl<PgReplication
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_origin.roident</code>.
-     */
     public void setRoident(@NotNull Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_origin.roident</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getRoident() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_replication_origin.roname</code>.
-     */
     public void setRoname(@NotNull String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_replication_origin.roname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getRoname() {
@@ -153,16 +138,10 @@ public class PgReplicationOriginRecord extends UpdatableRecordImpl<PgReplication
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgReplicationOriginRecord
-     */
     public PgReplicationOriginRecord() {
         super(PgReplicationOrigin.PG_REPLICATION_ORIGIN);
     }
 
-    /**
-     * Create a detached, initialised PgReplicationOriginRecord
-     */
     @ConstructorProperties({ "roident", "roname" })
     public PgReplicationOriginRecord(@NotNull Long roident, @NotNull String roname) {
         super(PgReplicationOrigin.PG_REPLICATION_ORIGIN);
@@ -172,9 +151,6 @@ public class PgReplicationOriginRecord extends UpdatableRecordImpl<PgReplication
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgReplicationOriginRecord
-     */
     public PgReplicationOriginRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgReplicationOrigin value) {
         super(PgReplicationOrigin.PG_REPLICATION_ORIGIN);
 

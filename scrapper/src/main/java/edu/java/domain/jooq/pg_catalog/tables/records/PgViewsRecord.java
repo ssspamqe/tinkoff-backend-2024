@@ -18,9 +18,6 @@ import org.jooq.Row4;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_views</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,61 +30,37 @@ public class PgViewsRecord extends TableRecordImpl<PgViewsRecord> implements Rec
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_views.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_views.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_views.viewname</code>.
-     */
     public void setViewname(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_views.viewname</code>.
-     */
     @Nullable
     public String getViewname() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_views.viewowner</code>.
-     */
     public void setViewowner(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_views.viewowner</code>.
-     */
     @Nullable
     public String getViewowner() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_views.definition</code>.
-     */
     public void setDefinition(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_views.definition</code>.
-     */
     @Nullable
     public String getDefinition() {
         return (String) get(3);
@@ -223,16 +196,10 @@ public class PgViewsRecord extends TableRecordImpl<PgViewsRecord> implements Rec
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgViewsRecord
-     */
     public PgViewsRecord() {
         super(PgViews.PG_VIEWS);
     }
 
-    /**
-     * Create a detached, initialised PgViewsRecord
-     */
     @ConstructorProperties({ "schemaname", "viewname", "viewowner", "definition" })
     public PgViewsRecord(@Nullable String schemaname, @Nullable String viewname, @Nullable String viewowner, @Nullable String definition) {
         super(PgViews.PG_VIEWS);
@@ -244,9 +211,6 @@ public class PgViewsRecord extends TableRecordImpl<PgViewsRecord> implements Rec
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgViewsRecord
-     */
     public PgViewsRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgViews value) {
         super(PgViews.PG_VIEWS);
 

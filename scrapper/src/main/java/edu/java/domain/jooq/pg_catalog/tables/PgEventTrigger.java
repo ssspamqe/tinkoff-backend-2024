@@ -10,7 +10,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgEventTriggerRecord;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 import javax.annotation.processing.Generated;
 
@@ -34,9 +33,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_event_trigger</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -49,53 +45,26 @@ public class PgEventTrigger extends TableImpl<PgEventTriggerRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.pg_event_trigger</code>
-     */
     public static final PgEventTrigger PG_EVENT_TRIGGER = new PgEventTrigger();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<PgEventTriggerRecord> getRecordType() {
         return PgEventTriggerRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.pg_event_trigger.oid</code>.
-     */
     public final TableField<PgEventTriggerRecord, Long> OID = createField(DSL.name("oid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_event_trigger.evtname</code>.
-     */
     public final TableField<PgEventTriggerRecord, String> EVTNAME = createField(DSL.name("evtname"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_event_trigger.evtevent</code>.
-     */
     public final TableField<PgEventTriggerRecord, String> EVTEVENT = createField(DSL.name("evtevent"), SQLDataType.VARCHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_event_trigger.evtowner</code>.
-     */
     public final TableField<PgEventTriggerRecord, Long> EVTOWNER = createField(DSL.name("evtowner"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_event_trigger.evtfoid</code>.
-     */
     public final TableField<PgEventTriggerRecord, Long> EVTFOID = createField(DSL.name("evtfoid"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_event_trigger.evtenabled</code>.
-     */
     public final TableField<PgEventTriggerRecord, String> EVTENABLED = createField(DSL.name("evtenabled"), SQLDataType.CHAR.nullable(false), this, "");
 
-    /**
-     * The column <code>pg_catalog.pg_event_trigger.evttags</code>.
-     */
     public final TableField<PgEventTriggerRecord, String[]> EVTTAGS = createField(DSL.name("evttags"), SQLDataType.CLOB.array(), this, "");
 
     private PgEventTrigger(Name alias, Table<PgEventTriggerRecord> aliased) {
@@ -106,25 +75,14 @@ public class PgEventTrigger extends TableImpl<PgEventTriggerRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.table());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_event_trigger</code> table
-     * reference
-     */
     public PgEventTrigger(String alias) {
         this(DSL.name(alias), PG_EVENT_TRIGGER);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.pg_event_trigger</code> table
-     * reference
-     */
     public PgEventTrigger(Name alias) {
         this(alias, PG_EVENT_TRIGGER);
     }
 
-    /**
-     * Create a <code>pg_catalog.pg_event_trigger</code> table reference
-     */
     public PgEventTrigger() {
         this(DSL.name("pg_event_trigger"), null);
     }
@@ -169,27 +127,18 @@ public class PgEventTrigger extends TableImpl<PgEventTriggerRecord> {
         return new PgEventTrigger(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgEventTrigger rename(String name) {
         return new PgEventTrigger(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgEventTrigger rename(Name name) {
         return new PgEventTrigger(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public PgEventTrigger rename(Table<?> name) {
@@ -206,17 +155,10 @@ public class PgEventTrigger extends TableImpl<PgEventTriggerRecord> {
         return (Row7) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function7<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function7<? super Long, ? super String, ? super String, ? super Long, ? super Long, ? super String, ? super String[], ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

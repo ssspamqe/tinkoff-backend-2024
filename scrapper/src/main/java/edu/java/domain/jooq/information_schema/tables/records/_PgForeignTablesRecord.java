@@ -18,9 +18,6 @@ import org.jooq.Row7;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema._pg_foreign_tables</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,118 +30,64 @@ public class _PgForeignTablesRecord extends TableRecordImpl<_PgForeignTablesReco
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_tables.foreign_table_catalog</code>.
-     */
     public void setForeignTableCatalog(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_tables.foreign_table_catalog</code>.
-     */
     @Nullable
     public String getForeignTableCatalog() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_tables.foreign_table_schema</code>.
-     */
     public void setForeignTableSchema(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_tables.foreign_table_schema</code>.
-     */
     @Nullable
     public String getForeignTableSchema() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_tables.foreign_table_name</code>.
-     */
     public void setForeignTableName(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_tables.foreign_table_name</code>.
-     */
     @Nullable
     public String getForeignTableName() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>information_schema._pg_foreign_tables.ftoptions</code>.
-     */
     public void setFtoptions(@Nullable String[] value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>information_schema._pg_foreign_tables.ftoptions</code>.
-     */
     @Nullable
     public String[] getFtoptions() {
         return (String[]) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_tables.foreign_server_catalog</code>.
-     */
     public void setForeignServerCatalog(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_tables.foreign_server_catalog</code>.
-     */
     @Nullable
     public String getForeignServerCatalog() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_tables.foreign_server_name</code>.
-     */
     public void setForeignServerName(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_tables.foreign_server_name</code>.
-     */
     @Nullable
     public String getForeignServerName() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema._pg_foreign_tables.authorization_identifier</code>.
-     */
     public void setAuthorizationIdentifier(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema._pg_foreign_tables.authorization_identifier</code>.
-     */
     @Nullable
     public String getAuthorizationIdentifier() {
         return (String) get(6);
@@ -358,16 +301,10 @@ public class _PgForeignTablesRecord extends TableRecordImpl<_PgForeignTablesReco
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached _PgForeignTablesRecord
-     */
     public _PgForeignTablesRecord() {
         super(_PgForeignTables._PG_FOREIGN_TABLES);
     }
 
-    /**
-     * Create a detached, initialised _PgForeignTablesRecord
-     */
     @ConstructorProperties({ "foreignTableCatalog", "foreignTableSchema", "foreignTableName", "ftoptions", "foreignServerCatalog", "foreignServerName", "authorizationIdentifier" })
     public _PgForeignTablesRecord(@Nullable String foreignTableCatalog, @Nullable String foreignTableSchema, @Nullable String foreignTableName, @Nullable String[] ftoptions, @Nullable String foreignServerCatalog, @Nullable String foreignServerName, @Nullable String authorizationIdentifier) {
         super(_PgForeignTables._PG_FOREIGN_TABLES);
@@ -382,9 +319,6 @@ public class _PgForeignTablesRecord extends TableRecordImpl<_PgForeignTablesReco
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised _PgForeignTablesRecord
-     */
     public _PgForeignTablesRecord(edu.java.domain.jooq.information_schema.tables.pojos._PgForeignTables value) {
         super(_PgForeignTables._PG_FOREIGN_TABLES);
 

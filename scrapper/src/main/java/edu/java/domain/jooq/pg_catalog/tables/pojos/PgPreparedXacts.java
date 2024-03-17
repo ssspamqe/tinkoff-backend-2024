@@ -13,9 +13,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_prepared_xacts</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -59,77 +56,47 @@ public class PgPreparedXacts implements Serializable {
         this.database = database;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xacts.transaction</code>.
-     */
     @Nullable
     public Long getTransaction() {
         return this.transaction;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xacts.transaction</code>.
-     */
     public void setTransaction(@Nullable Long transaction) {
         this.transaction = transaction;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xacts.gid</code>.
-     */
     @Nullable
     public String getGid() {
         return this.gid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xacts.gid</code>.
-     */
     public void setGid(@Nullable String gid) {
         this.gid = gid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xacts.prepared</code>.
-     */
     @Nullable
     public OffsetDateTime getPrepared() {
         return this.prepared;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xacts.prepared</code>.
-     */
     public void setPrepared(@Nullable OffsetDateTime prepared) {
         this.prepared = prepared;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xacts.owner</code>.
-     */
     @Nullable
     public String getOwner() {
         return this.owner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xacts.owner</code>.
-     */
     public void setOwner(@Nullable String owner) {
         this.owner = owner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_prepared_xacts.database</code>.
-     */
     @Nullable
     public String getDatabase() {
         return this.database;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_prepared_xacts.database</code>.
-     */
     public void setDatabase(@Nullable String database) {
         this.database = database;
     }

@@ -12,9 +12,6 @@ import javax.annotation.processing.Generated;
 import org.jetbrains.annotations.NotNull;
 
 
-/**
- * The table <code>pg_catalog.pg_am</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -54,66 +51,42 @@ public class PgAm implements Serializable {
         this.amtype = amtype;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_am.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_am.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_am.amname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmname() {
         return this.amname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_am.amname</code>.
-     */
     public void setAmname(@NotNull String amname) {
         this.amname = amname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_am.amhandler</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmhandler() {
         return this.amhandler;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_am.amhandler</code>.
-     */
     public void setAmhandler(@NotNull String amhandler) {
         this.amhandler = amhandler;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_am.amtype</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getAmtype() {
         return this.amtype;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_am.amtype</code>.
-     */
     public void setAmtype(@NotNull String amtype) {
         this.amtype = amtype;
     }

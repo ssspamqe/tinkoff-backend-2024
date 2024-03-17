@@ -20,9 +20,6 @@ import org.jooq.Row10;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>information_schema.routine_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,167 +32,91 @@ public class RoutinePrivilegesRecord extends TableRecordImpl<RoutinePrivilegesRe
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>information_schema.routine_privileges.grantor</code>.
-     */
     public void setGrantor(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>information_schema.routine_privileges.grantor</code>.
-     */
     @Nullable
     public String getGrantor() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>information_schema.routine_privileges.grantee</code>.
-     */
     public void setGrantee(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>information_schema.routine_privileges.grantee</code>.
-     */
     @Nullable
     public String getGrantee() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_privileges.specific_catalog</code>.
-     */
     public void setSpecificCatalog(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_privileges.specific_catalog</code>.
-     */
     @Nullable
     public String getSpecificCatalog() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_privileges.specific_schema</code>.
-     */
     public void setSpecificSchema(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_privileges.specific_schema</code>.
-     */
     @Nullable
     public String getSpecificSchema() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_privileges.specific_name</code>.
-     */
     public void setSpecificName(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_privileges.specific_name</code>.
-     */
     @Nullable
     public String getSpecificName() {
         return (String) get(4);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_privileges.routine_catalog</code>.
-     */
     public void setRoutineCatalog(@Nullable String value) {
         set(5, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_privileges.routine_catalog</code>.
-     */
     @Nullable
     public String getRoutineCatalog() {
         return (String) get(5);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_privileges.routine_schema</code>.
-     */
     public void setRoutineSchema(@Nullable String value) {
         set(6, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_privileges.routine_schema</code>.
-     */
     @Nullable
     public String getRoutineSchema() {
         return (String) get(6);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_privileges.routine_name</code>.
-     */
     public void setRoutineName(@Nullable String value) {
         set(7, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_privileges.routine_name</code>.
-     */
     @Nullable
     public String getRoutineName() {
         return (String) get(7);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_privileges.privilege_type</code>.
-     */
     public void setPrivilegeType(@Nullable String value) {
         set(8, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_privileges.privilege_type</code>.
-     */
     @Nullable
     public String getPrivilegeType() {
         return (String) get(8);
     }
 
-    /**
-     * Setter for
-     * <code>information_schema.routine_privileges.is_grantable</code>.
-     */
     public void setIsGrantable(@Nullable String value) {
         set(9, value);
     }
 
-    /**
-     * Getter for
-     * <code>information_schema.routine_privileges.is_grantable</code>.
-     */
     @Size(max = 3)
     @Nullable
     public String getIsGrantable() {
@@ -488,16 +409,10 @@ public class RoutinePrivilegesRecord extends TableRecordImpl<RoutinePrivilegesRe
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached RoutinePrivilegesRecord
-     */
     public RoutinePrivilegesRecord() {
         super(RoutinePrivileges.ROUTINE_PRIVILEGES);
     }
 
-    /**
-     * Create a detached, initialised RoutinePrivilegesRecord
-     */
     @ConstructorProperties({ "grantor", "grantee", "specificCatalog", "specificSchema", "specificName", "routineCatalog", "routineSchema", "routineName", "privilegeType", "isGrantable" })
     public RoutinePrivilegesRecord(@Nullable String grantor, @Nullable String grantee, @Nullable String specificCatalog, @Nullable String specificSchema, @Nullable String specificName, @Nullable String routineCatalog, @Nullable String routineSchema, @Nullable String routineName, @Nullable String privilegeType, @Nullable String isGrantable) {
         super(RoutinePrivileges.ROUTINE_PRIVILEGES);
@@ -515,9 +430,6 @@ public class RoutinePrivilegesRecord extends TableRecordImpl<RoutinePrivilegesRe
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised RoutinePrivilegesRecord
-     */
     public RoutinePrivilegesRecord(edu.java.domain.jooq.information_schema.tables.pojos.RoutinePrivileges value) {
         super(RoutinePrivileges.ROUTINE_PRIVILEGES);
 

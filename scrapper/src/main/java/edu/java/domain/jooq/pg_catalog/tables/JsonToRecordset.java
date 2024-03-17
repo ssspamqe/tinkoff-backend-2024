@@ -7,8 +7,6 @@ package edu.java.domain.jooq.pg_catalog.tables;
 import edu.java.domain.jooq.pg_catalog.PgCatalog;
 import edu.java.domain.jooq.pg_catalog.tables.records.JsonToRecordsetRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,9 +28,6 @@ import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>pg_catalog.json_to_recordset</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -45,23 +40,14 @@ public class JsonToRecordset extends TableImpl<JsonToRecordsetRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of <code>pg_catalog.json_to_recordset</code>
-     */
     public static final JsonToRecordset JSON_TO_RECORDSET = new JsonToRecordset();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<JsonToRecordsetRecord> getRecordType() {
         return JsonToRecordsetRecord.class;
     }
 
-    /**
-     * The column <code>pg_catalog.json_to_recordset.json_to_recordset</code>.
-     */
     public final TableField<JsonToRecordsetRecord, Record> JSON_TO_RECORDSET_ = createField(DSL.name("json_to_recordset"), SQLDataType.RECORD, this, "");
 
     private JsonToRecordset(Name alias, Table<JsonToRecordsetRecord> aliased) {
@@ -74,25 +60,14 @@ public class JsonToRecordset extends TableImpl<JsonToRecordsetRecord> {
         super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_to_recordset</code> table
-     * reference
-     */
     public JsonToRecordset(String alias) {
         this(DSL.name(alias), JSON_TO_RECORDSET);
     }
 
-    /**
-     * Create an aliased <code>pg_catalog.json_to_recordset</code> table
-     * reference
-     */
     public JsonToRecordset(Name alias) {
         this(alias, JSON_TO_RECORDSET);
     }
 
-    /**
-     * Create a <code>pg_catalog.json_to_recordset</code> table reference
-     */
     public JsonToRecordset() {
         this(DSL.name("json_to_recordset"), null);
     }
@@ -121,27 +96,18 @@ public class JsonToRecordset extends TableImpl<JsonToRecordsetRecord> {
         return new JsonToRecordset(alias.getQualifiedName(), this, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonToRecordset rename(String name) {
         return new JsonToRecordset(DSL.name(name), null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonToRecordset rename(Name name) {
         return new JsonToRecordset(name, null, parameters);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public JsonToRecordset rename(Table<?> name) {
@@ -158,9 +124,6 @@ public class JsonToRecordset extends TableImpl<JsonToRecordsetRecord> {
         return (Row1) super.fieldsRow();
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonToRecordset call(
           JSON __1
     ) {
@@ -171,9 +134,6 @@ public class JsonToRecordset extends TableImpl<JsonToRecordsetRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Call this table-valued function
-     */
     public JsonToRecordset call(
           Field<JSON> __1
     ) {
@@ -184,17 +144,10 @@ public class JsonToRecordset extends TableImpl<JsonToRecordsetRecord> {
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function1<? super Record, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function1<? super Record, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

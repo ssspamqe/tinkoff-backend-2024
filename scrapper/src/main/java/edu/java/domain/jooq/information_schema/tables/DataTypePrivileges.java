@@ -7,8 +7,6 @@ package edu.java.domain.jooq.information_schema.tables;
 import edu.java.domain.jooq.information_schema.InformationSchema;
 import edu.java.domain.jooq.information_schema.tables.records.DataTypePrivilegesRecord;
 
-import java.util.function.Function;
-
 import javax.annotation.processing.Generated;
 
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +27,6 @@ import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
 
-/**
- * The table <code>information_schema.data_type_privileges</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -44,49 +39,22 @@ public class DataTypePrivileges extends TableImpl<DataTypePrivilegesRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The reference instance of
-     * <code>information_schema.data_type_privileges</code>
-     */
     public static final DataTypePrivileges DATA_TYPE_PRIVILEGES = new DataTypePrivileges();
 
-    /**
-     * The class holding records for this type
-     */
     @Override
     @NotNull
     public Class<DataTypePrivilegesRecord> getRecordType() {
         return DataTypePrivilegesRecord.class;
     }
 
-    /**
-     * The column
-     * <code>information_schema.data_type_privileges.object_catalog</code>.
-     */
     public final TableField<DataTypePrivilegesRecord, String> OBJECT_CATALOG = createField(DSL.name("object_catalog"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.data_type_privileges.object_schema</code>.
-     */
     public final TableField<DataTypePrivilegesRecord, String> OBJECT_SCHEMA = createField(DSL.name("object_schema"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.data_type_privileges.object_name</code>.
-     */
     public final TableField<DataTypePrivilegesRecord, String> OBJECT_NAME = createField(DSL.name("object_name"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.data_type_privileges.object_type</code>.
-     */
     public final TableField<DataTypePrivilegesRecord, String> OBJECT_TYPE = createField(DSL.name("object_type"), edu.java.domain.jooq.information_schema.Domains.CHARACTER_DATA.getDataType(), this, "");
 
-    /**
-     * The column
-     * <code>information_schema.data_type_privileges.dtd_identifier</code>.
-     */
     public final TableField<DataTypePrivilegesRecord, String> DTD_IDENTIFIER = createField(DSL.name("dtd_identifier"), edu.java.domain.jooq.information_schema.Domains.SQL_IDENTIFIER.getDataType(), this, "");
 
     private DataTypePrivileges(Name alias, Table<DataTypePrivilegesRecord> aliased) {
@@ -132,26 +100,14 @@ public class DataTypePrivileges extends TableImpl<DataTypePrivilegesRecord> {
         """));
     }
 
-    /**
-     * Create an aliased <code>information_schema.data_type_privileges</code>
-     * table reference
-     */
     public DataTypePrivileges(String alias) {
         this(DSL.name(alias), DATA_TYPE_PRIVILEGES);
     }
 
-    /**
-     * Create an aliased <code>information_schema.data_type_privileges</code>
-     * table reference
-     */
     public DataTypePrivileges(Name alias) {
         this(alias, DATA_TYPE_PRIVILEGES);
     }
 
-    /**
-     * Create a <code>information_schema.data_type_privileges</code> table
-     * reference
-     */
     public DataTypePrivileges() {
         this(DSL.name("data_type_privileges"), null);
     }
@@ -184,27 +140,18 @@ public class DataTypePrivileges extends TableImpl<DataTypePrivilegesRecord> {
         return new DataTypePrivileges(alias.getQualifiedName(), this);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DataTypePrivileges rename(String name) {
         return new DataTypePrivileges(DSL.name(name), null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DataTypePrivileges rename(Name name) {
         return new DataTypePrivileges(name, null);
     }
 
-    /**
-     * Rename this table
-     */
     @Override
     @NotNull
     public DataTypePrivileges rename(Table<?> name) {
@@ -221,17 +168,10 @@ public class DataTypePrivileges extends TableImpl<DataTypePrivilegesRecord> {
         return (Row5) super.fieldsRow();
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Function)}.
-     */
     public <U> SelectField<U> mapping(Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(Records.mapping(from));
     }
 
-    /**
-     * Convenience mapping calling {@link SelectField#convertFrom(Class,
-     * Function)}.
-     */
     public <U> SelectField<U> mapping(Class<U> toType, Function5<? super String, ? super String, ? super String, ? super String, ? super String, ? extends U> from) {
         return convertFrom(toType, Records.mapping(from));
     }

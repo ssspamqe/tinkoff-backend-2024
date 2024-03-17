@@ -16,9 +16,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.array_to_json</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -31,19 +28,10 @@ public class ArrayToJson1 extends AbstractRoutine<JSON> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.array_to_json.RETURN_VALUE</code>.
-     */
     public static final Parameter<JSON> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.JSON, false, false);
 
-    /**
-     * The parameter <code>pg_catalog.array_to_json._1</code>.
-     */
     public static final Parameter<Object[]> _1 = Internal.createParameter("_1", SQLDataType.OTHER.array(), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public ArrayToJson1() {
         super("array_to_json", PgCatalog.PG_CATALOG, SQLDataType.JSON);
 
@@ -52,17 +40,10 @@ public class ArrayToJson1 extends AbstractRoutine<JSON> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(Object[] value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<Object[]> field) {
         setField(_1, field);
     }

@@ -20,9 +20,6 @@ import org.jooq.Row4;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
-/**
- * The table <code>public.chat_links</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -35,63 +32,39 @@ public class ChatLinksRecord extends UpdatableRecordImpl<ChatLinksRecord> implem
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>public.chat_links.id</code>.
-     */
     public void setId(@Nullable Long value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>public.chat_links.id</code>.
-     */
     @Nullable
     public Long getId() {
         return (Long) get(0);
     }
 
-    /**
-     * Setter for <code>public.chat_links.chat_id</code>.
-     */
     public void setChatId(@NotNull Long value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>public.chat_links.chat_id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getChatId() {
         return (Long) get(1);
     }
 
-    /**
-     * Setter for <code>public.chat_links.link_id</code>.
-     */
     public void setLinkId(@NotNull Long value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>public.chat_links.link_id</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLinkId() {
         return (Long) get(2);
     }
 
-    /**
-     * Setter for <code>public.chat_links.created_at</code>.
-     */
     public void setCreatedAt(@NotNull LocalDateTime value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>public.chat_links.created_at</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public LocalDateTime getCreatedAt() {
@@ -238,16 +211,10 @@ public class ChatLinksRecord extends UpdatableRecordImpl<ChatLinksRecord> implem
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached ChatLinksRecord
-     */
     public ChatLinksRecord() {
         super(ChatLinks.CHAT_LINKS);
     }
 
-    /**
-     * Create a detached, initialised ChatLinksRecord
-     */
     @ConstructorProperties({ "id", "chatId", "linkId", "createdAt" })
     public ChatLinksRecord(@Nullable Long id, @NotNull Long chatId, @NotNull Long linkId, @NotNull LocalDateTime createdAt) {
         super(ChatLinks.CHAT_LINKS);
@@ -259,9 +226,6 @@ public class ChatLinksRecord extends UpdatableRecordImpl<ChatLinksRecord> implem
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised ChatLinksRecord
-     */
     public ChatLinksRecord(edu.java.domain.jooq.public_.tables.pojos.ChatLinks value) {
         super(ChatLinks.CHAT_LINKS);
 

@@ -18,9 +18,6 @@ import org.jooq.Row5;
 import org.jooq.impl.TableRecordImpl;
 
 
-/**
- * The table <code>pg_catalog.pg_indexes</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -33,76 +30,46 @@ public class PgIndexesRecord extends TableRecordImpl<PgIndexesRecord> implements
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.schemaname</code>.
-     */
     public void setSchemaname(@Nullable String value) {
         set(0, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.schemaname</code>.
-     */
     @Nullable
     public String getSchemaname() {
         return (String) get(0);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.tablename</code>.
-     */
     public void setTablename(@Nullable String value) {
         set(1, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.tablename</code>.
-     */
     @Nullable
     public String getTablename() {
         return (String) get(1);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.indexname</code>.
-     */
     public void setIndexname(@Nullable String value) {
         set(2, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.indexname</code>.
-     */
     @Nullable
     public String getIndexname() {
         return (String) get(2);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.tablespace</code>.
-     */
     public void setTablespace(@Nullable String value) {
         set(3, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.tablespace</code>.
-     */
     @Nullable
     public String getTablespace() {
         return (String) get(3);
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_indexes.indexdef</code>.
-     */
     public void setIndexdef(@Nullable String value) {
         set(4, value);
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_indexes.indexdef</code>.
-     */
     @Nullable
     public String getIndexdef() {
         return (String) get(4);
@@ -264,16 +231,10 @@ public class PgIndexesRecord extends TableRecordImpl<PgIndexesRecord> implements
     // Constructors
     // -------------------------------------------------------------------------
 
-    /**
-     * Create a detached PgIndexesRecord
-     */
     public PgIndexesRecord() {
         super(PgIndexes.PG_INDEXES);
     }
 
-    /**
-     * Create a detached, initialised PgIndexesRecord
-     */
     @ConstructorProperties({ "schemaname", "tablename", "indexname", "tablespace", "indexdef" })
     public PgIndexesRecord(@Nullable String schemaname, @Nullable String tablename, @Nullable String indexname, @Nullable String tablespace, @Nullable String indexdef) {
         super(PgIndexes.PG_INDEXES);
@@ -286,9 +247,6 @@ public class PgIndexesRecord extends TableRecordImpl<PgIndexesRecord> implements
         resetChangedOnNotNull();
     }
 
-    /**
-     * Create a detached, initialised PgIndexesRecord
-     */
     public PgIndexesRecord(edu.java.domain.jooq.pg_catalog.tables.pojos.PgIndexes value) {
         super(PgIndexes.PG_INDEXES);
 

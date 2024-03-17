@@ -14,9 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-/**
- * The table <code>pg_catalog.pg_event_trigger</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -68,113 +65,71 @@ public class PgEventTrigger implements Serializable {
         this.evttags = evttags;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.oid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getOid() {
         return this.oid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.oid</code>.
-     */
     public void setOid(@NotNull Long oid) {
         this.oid = oid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtname</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvtname() {
         return this.evtname;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtname</code>.
-     */
     public void setEvtname(@NotNull String evtname) {
         this.evtname = evtname;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtevent</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvtevent() {
         return this.evtevent;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtevent</code>.
-     */
     public void setEvtevent(@NotNull String evtevent) {
         this.evtevent = evtevent;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtowner</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getEvtowner() {
         return this.evtowner;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtowner</code>.
-     */
     public void setEvtowner(@NotNull Long evtowner) {
         this.evtowner = evtowner;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtfoid</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getEvtfoid() {
         return this.evtfoid;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtfoid</code>.
-     */
     public void setEvtfoid(@NotNull Long evtfoid) {
         this.evtfoid = evtfoid;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evtenabled</code>.
-     */
     @jakarta.validation.constraints.NotNull
     @NotNull
     public String getEvtenabled() {
         return this.evtenabled;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evtenabled</code>.
-     */
     public void setEvtenabled(@NotNull String evtenabled) {
         this.evtenabled = evtenabled;
     }
 
-    /**
-     * Getter for <code>pg_catalog.pg_event_trigger.evttags</code>.
-     */
     @Nullable
     public String[] getEvttags() {
         return this.evttags;
     }
 
-    /**
-     * Setter for <code>pg_catalog.pg_event_trigger.evttags</code>.
-     */
     public void setEvttags(@Nullable String[] evttags) {
         this.evttags = evttags;
     }

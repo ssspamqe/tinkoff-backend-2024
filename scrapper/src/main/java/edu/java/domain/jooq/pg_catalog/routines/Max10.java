@@ -17,9 +17,6 @@ import org.jooq.impl.Internal;
 import org.jooq.impl.SQLDataType;
 
 
-/**
- * The routine <code>pg_catalog.max</code>.
- */
 @Generated(
     value = {
         "https://www.jooq.org",
@@ -32,19 +29,10 @@ public class Max10 extends AbstractRoutine<OffsetTime> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * The parameter <code>pg_catalog.max.RETURN_VALUE</code>.
-     */
     public static final Parameter<OffsetTime> RETURN_VALUE = Internal.createParameter("RETURN_VALUE", SQLDataType.TIMEWITHTIMEZONE(6), false, false);
 
-    /**
-     * The parameter <code>pg_catalog.max._1</code>.
-     */
     public static final Parameter<OffsetTime> _1 = Internal.createParameter("_1", SQLDataType.TIMEWITHTIMEZONE(6), false, true);
 
-    /**
-     * Create a new routine call instance
-     */
     public Max10() {
         super("max", PgCatalog.PG_CATALOG, SQLDataType.TIMEWITHTIMEZONE(6));
 
@@ -53,17 +41,10 @@ public class Max10 extends AbstractRoutine<OffsetTime> {
         setOverloaded(true);
     }
 
-    /**
-     * Set the <code>_1</code> parameter IN value to the routine
-     */
     public void set__1(OffsetTime value) {
         setValue(_1, value);
     }
 
-    /**
-     * Set the <code>_1</code> parameter to the function to be used with a
-     * {@link org.jooq.Select} statement
-     */
     public void set__1(Field<OffsetTime> field) {
         setField(_1, field);
     }
