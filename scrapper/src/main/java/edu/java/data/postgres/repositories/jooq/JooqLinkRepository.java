@@ -1,6 +1,5 @@
 package edu.java.data.postgres.repositories.jooq;
 
-import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import java.time.LocalDateTime;
@@ -19,15 +18,12 @@ public class JooqLinkRepository implements LinkRepository {
 
     @Override
     public Link save(Link link) {
-        long linkId = dsl.insertInto(LINKS)
+        return dsl.insertInto(LINKS)
             .set(LINKS.URL, link.getUrl().toString())
             .set(LINKS.CREATED_AT, link.getCreatedAt())
             .set(LINKS.LAST_CHECKED_AT, link.getLastCheckedAt())
-            .returning(LINKS.ID)
-            .execute();
-
-        return findById(linkId)
-            .orElseThrow(() -> new NoSuchLinkException(linkId));
+            .returning()
+            .fetchOneInto(Link.class);
     }
 
     @Override
