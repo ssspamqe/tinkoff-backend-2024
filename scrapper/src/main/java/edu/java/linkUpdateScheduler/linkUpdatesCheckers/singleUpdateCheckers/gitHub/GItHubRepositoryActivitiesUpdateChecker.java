@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class GItHubRepositoryActivitiesUpdateChecker implements GitHubRepositorySingleUpdateChecker {
+public class GitHubRepositoryActivitiesUpdateChecker implements GitHubRepositorySingleUpdateChecker {
 
     private final GitHubClient gitHubClient;
 
