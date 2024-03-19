@@ -1,5 +1,10 @@
 package edu.java.bot.restApi.dto.requests;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public enum LinkUpdateType {
     STACK_OVERFLOW_DESCRIPTION("Question body was updated!"),
     STACK_OVERFLOW_ANSWERS("Answers set was updated!"),
@@ -7,13 +12,4 @@ public enum LinkUpdateType {
     GIT_HUB_REPOSITORY_ACTIVITIES("New activity in repository!");
 
     private final String message;
-
-    LinkUpdateType(String message) {
-        this.message = message;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
 }
