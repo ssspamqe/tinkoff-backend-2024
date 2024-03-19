@@ -4,7 +4,6 @@ import com.pengrad.telegrambot.model.BotCommand;
 import com.pengrad.telegrambot.model.Message;
 import edu.java.bot.webClients.scrapper.ScrapperLinksClient;
 import edu.java.bot.webClients.scrapper.dto.requests.RemoveLinkRequest;
-import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

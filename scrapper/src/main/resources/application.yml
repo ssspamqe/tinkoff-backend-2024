@@ -15,7 +15,6 @@ app:
   stack-overflow-host-names:
     - stackoverflow.com
 
-
 spring:
   application:
     name: scrapper
