@@ -14,7 +14,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.context.event.ContextStoppedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -32,26 +31,17 @@ public class LinkUpdateScheduler {
 
     private boolean contextIsLoaded = false;
 
-    @EventListener
-    public void onContextRefreshed(ContextRefreshedEvent event) {
-        contextIsLoaded = true;
-    }
-
-    @EventListener
-    public void onContextStoppedEvent(ContextStoppedEvent event) {
-        contextIsLoaded = false;
-    }
-
     @Scheduled(fixedDelayString = "#{schedulerConfig.interval()}")
     @ConditionalOnProperty(value = "app.scheduler.enable", havingValue = "true")
     public void update() {
         if (!contextIsLoaded) {
-            LOGGER.warn("Context is not loaded, skipping link updated checking...");
+            LOGGER.warn("Context is not loaded, skipping link updates checking...");
             return;
         }
 
         LOGGER.debug("LinkUpdateScheduler is looking for updates...");
-        Collection<Link> linksToCheck = linkDao.findByLastCheckDelayFromNow(schedulerConfig.forceCheckDelay());
+        Collection<Link> linksToCheck =
+            linkDao.findByLastCheckDelayFromNow(schedulerConfig.forceCheckDelay());
 
         List<LinkUpdate> allLinkUpdates = new ArrayList<>();
         linksToCheck.forEach(link -> {
@@ -68,11 +58,14 @@ public class LinkUpdateScheduler {
             } catch (Exception ex) {
                 LOGGER.warn("Can't send updates to bot, because of {}", ex.getMessage());
             }
-
         } else {
-            LOGGER.debug("No updates...");
+            LOGGER.debug("No updates found...");
         }
+    }
 
+    @EventListener
+    public void onContextRefreshed(ContextRefreshedEvent event) {
+        contextIsLoaded = true;
     }
 
 }
