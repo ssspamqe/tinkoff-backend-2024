@@ -44,11 +44,12 @@ public class LinkController {
     }
 
     @PostMapping
-    public ResponseEntity<LinkResponse> addLinkToTrack(
+    public ResponseEntity<LinkResponse> trackLink(
         @RequestHeader("Tg-Chat-Id") @Min(1) int chatId,
         @Valid @RequestBody AddLinkRequest addLinkRequest
     ) {
-        String linkUrl = addLinkRequest.link();
+        String linkUrl = addLinkRequest.url();
+        LOGGER.warn(linkUrl);
         LinkResponse linkResponse = new LinkResponse(linkService.addLinkToTrack(chatId, linkUrl));
         return ResponseEntity.ok(linkResponse);
     }
@@ -58,7 +59,7 @@ public class LinkController {
         @RequestHeader("Tg-Chat-Id") @Min(1) int chatId,
         @Valid @RequestBody RemoveLinkRequest removeLinkRequest
     ) {
-        String linkUrl = removeLinkRequest.link();
+        String linkUrl = removeLinkRequest.url();
         LinkResponse linkResponse = new LinkResponse(linkService.untrackLink(chatId, linkUrl));
         return ResponseEntity.ok(linkResponse);
     }

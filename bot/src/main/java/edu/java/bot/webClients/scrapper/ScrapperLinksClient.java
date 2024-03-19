@@ -15,18 +15,18 @@ import org.springframework.web.service.annotation.PostExchange;
 public interface ScrapperLinksClient {
 
     @GetExchange
-    ListLinksResponse findTrackedLinks(@RequestHeader("Tg-Chat-Id") int chatId);
+    ListLinksResponse fetchTrackedLinksByChatId(@RequestHeader("Tg-Chat-Id") long chatId);
 
     @PostExchange
-    LinkResponse trackLink(
-        @RequestHeader("Tg-Chat-Id") int chatId,
-        @RequestBody AddLinkRequest addLinkRequest
+    LinkResponse trackLinkByChatId(
+        @RequestBody AddLinkRequest addLinkRequest,
+        @RequestHeader("Tg-Chat-Id") long chatId
     );
 
     @DeleteExchange
-    LinkResponse untrackLink(
-        @RequestHeader("Tg-Chat-Id") int chatId,
-        @RequestBody RemoveLinkRequest removeLinkRequest
+    LinkResponse untrackLinkByChatId(
+        @RequestBody RemoveLinkRequest removeLinkRequest,
+        @RequestHeader("Tg-Chat-Id") long chatId
     );
 }
 

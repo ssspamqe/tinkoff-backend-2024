@@ -10,14 +10,15 @@ import edu.java.bot.telegramBot.slashCommandServices.CommandService;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class TelegramBotInitializer {
     private final static Logger LOGGER = LogManager.getLogger();
     private final static int THREADS_AMOUNT = 5;
@@ -26,11 +27,6 @@ public class TelegramBotInitializer {
 
     private final TelegramBot bot;
     private final CommandService commandService;
-
-    @Autowired TelegramBotInitializer(TelegramBot bot, CommandService commandService) {
-        this.bot = bot;
-        this.commandService = commandService;
-    }
 
     @EventListener
     public void onSpringRefreshedEvent(ContextRefreshedEvent event) {

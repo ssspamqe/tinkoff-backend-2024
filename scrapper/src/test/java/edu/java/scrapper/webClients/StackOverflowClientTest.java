@@ -1,10 +1,10 @@
 package edu.java.scrapper.webClients;
 
 import edu.java.webClients.stackOverflow.StackOverflowClient;
-import edu.java.webClients.stackOverflow.dto.StackOverflowAnswer;
-import edu.java.webClients.stackOverflow.dto.StackOverflowOwner;
-import edu.java.webClients.stackOverflow.dto.StackOverflowQuestion;
-import edu.java.webClients.stackOverflow.dto.StackOverflowResponse;
+import edu.java.webClients.stackOverflow.dto.StackOverflowAnswerBody;
+import edu.java.webClients.stackOverflow.dto.StackOverflowOwnerBody;
+import edu.java.webClients.stackOverflow.dto.StackOverflowQuestionBody;
+import edu.java.webClients.stackOverflow.dto.StackOverflowResponseBody;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
@@ -28,7 +28,7 @@ public class StackOverflowClientTest extends WebClientTest {
                 {
                     "items":[
                                 {
-                                    "id": 123,
+                                    "question_id": 123,
                                     "tags" :[
                                         "Java","Spring"
                                     ],
@@ -52,16 +52,16 @@ public class StackOverflowClientTest extends WebClientTest {
         );
 
         //Act
-        StackOverflowResponse<StackOverflowQuestion> actualResponse =
-            stackOverflowClient.findQuestionById(123);
+        StackOverflowResponseBody<StackOverflowQuestionBody> actualResponse =
+            stackOverflowClient.fetchQuestionById(123);
 
         //Assert
         Instant creationDate = Instant.ofEpochSecond(567);
         Instant closedDate = Instant.ofEpochSecond(890);
-        StackOverflowQuestion expectedQuestion = new StackOverflowQuestion(
+        StackOverflowQuestionBody expectedQuestion = new StackOverflowQuestionBody(
             123,
             List.of("Java", "Spring"),
-            new StackOverflowOwner("customName"),
+            new StackOverflowOwnerBody("customName"),
             "super question!",
             true,
             321,
@@ -83,7 +83,7 @@ public class StackOverflowClientTest extends WebClientTest {
                 {
                     "items": [
                         {
-                           "id": 1,
+                           "answer_id": 1,
                            "owner": {
                                 "display_name": "customName1"
                            },
@@ -93,7 +93,7 @@ public class StackOverflowClientTest extends WebClientTest {
                            "creation_date": 567
                         },
                         {
-                           "id": 2,
+                           "answer_id": 2,
                            "owner": {
                                 "display_name": "customName2"
                            },
@@ -111,24 +111,24 @@ public class StackOverflowClientTest extends WebClientTest {
         );
 
         //Act
-        StackOverflowResponse<StackOverflowAnswer> actualResponse =
-            stackOverflowClient.findAnswersByQuestionId(123);
+        StackOverflowResponseBody<StackOverflowAnswerBody> actualResponse =
+            stackOverflowClient.fetchAnswersByQuestionId(123);
 
         //Assert
         Instant creationDate1 = Instant.ofEpochSecond(567);
         Instant creationDate2 = Instant.ofEpochSecond(890);
-        List<StackOverflowAnswer> expectedAnswerList = List.of(
-            new StackOverflowAnswer(
+        List<StackOverflowAnswerBody> expectedAnswerList = List.of(
+            new StackOverflowAnswerBody(
                 1,
-                new StackOverflowOwner("customName1"),
+                new StackOverflowOwnerBody("customName1"),
                 true,
                 123,
                 "This is first answer",
                 OffsetDateTime.ofInstant(creationDate1, ZoneOffset.UTC)
             ),
-            new StackOverflowAnswer(
+            new StackOverflowAnswerBody(
                 2,
-                new StackOverflowOwner("customName2"),
+                new StackOverflowOwnerBody("customName2"),
                 false,
                 456,
                 "This is second answer",

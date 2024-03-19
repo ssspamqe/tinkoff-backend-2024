@@ -11,3 +11,11 @@ databaseChangeLog:
       file: 03-chat_links.sql
       relativeToChangelogFile: true
 
+  - include:
+      file: services/stack_overflow_questions.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: services/git_hub_repositories.sql
+      relativeToChangelogFile: true
+

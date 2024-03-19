@@ -1,7 +1,7 @@
 package edu.java.restApi.exceptionHandlers;
 
+import edu.java.data.exceptions.DataServiceException;
 import edu.java.restApi.controllers.dto.responses.ApiErrorResponse;
-import edu.java.restApi.services.exceptions.ScrapperServiceException;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
@@ -43,15 +43,15 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(statusCode).body(errorResponse);
     }
 
-    @ExceptionHandler(ScrapperServiceException.class)
-    public ResponseEntity<ApiErrorResponse> handleScrapperServiceException(ScrapperServiceException exception) {
+    @ExceptionHandler(DataServiceException.class)
+    public ResponseEntity<ApiErrorResponse> handleScrapperServiceException(DataServiceException exception) {
         ApiErrorResponse errorResponse =
             buildDefaultErrorResponse(exception);
 
         return ResponseEntity.status(exception.getHttpStatusCode()).body(errorResponse);
     }
 
-    private ApiErrorResponse buildDefaultErrorResponse(ScrapperServiceException exception) {
+    private ApiErrorResponse buildDefaultErrorResponse(DataServiceException exception) {
         HttpStatusCode statusCode = exception.getHttpStatusCode();
         String description = exception.getDescription();
         return buildDefaultErrorResponse(statusCode, description, exception);

@@ -1,35 +1,21 @@
 package edu.java.restApi.services;
 
-import edu.java.data.redis.documents.TelegramChat;
-import edu.java.data.redis.repositories.TelegramChatRepository;
-import edu.java.restApi.services.exceptions.DoubleChatRegistrationException;
-import edu.java.restApi.services.exceptions.NoSuchChatException;
-import java.util.Optional;
-import org.springframework.beans.factory.annotation.Autowired;
+import edu.java.data.dao.ChatDataAccessObject;
+import edu.java.data.postgres.entities.Chat;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class TelegramChatService {
 
-    private final TelegramChatRepository telegramChatRepository;
+    private final ChatDataAccessObject chatDao;
 
-    @Autowired
-    public TelegramChatService(TelegramChatRepository telegramChatRepository) {
-        this.telegramChatRepository = telegramChatRepository;
-    }
-
-    public void registerChat(long apiId) {
-        Optional<TelegramChat> oldChat = telegramChatRepository.findByApiId(apiId);
-        if (oldChat.isPresent()) {
-            throw new DoubleChatRegistrationException(apiId);
-        }
-        TelegramChat newChat = new TelegramChat(apiId);
-        telegramChatRepository.save(newChat);
+    public Chat registerChat(long apiId) {
+        return chatDao.registerChatWithId(apiId);
     }
 
     public void deleteChat(long apiId) {
-        TelegramChat chat = telegramChatRepository.findByApiId(apiId)
-            .orElseThrow(() -> new NoSuchChatException(apiId));
-        telegramChatRepository.deleteById(chat.getId());
+        chatDao.deleteChatWithId(apiId);
     }
 }

@@ -1,10 +1,10 @@
 package edu.java.scrapper.webClients;
 
 import edu.java.webClients.gitHub.GitHubClient;
-import edu.java.webClients.gitHub.dto.GitHubOwner;
-import edu.java.webClients.gitHub.dto.GitHubRepository;
-import edu.java.webClients.gitHub.dto.GitHubRepositoryActivity;
+import edu.java.webClients.gitHub.dto.GitHubOwnerBody;
+import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityBody;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityType;
+import edu.java.webClients.gitHub.dto.GitHubRepositoryBody;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryVisibilityType;
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -22,34 +22,34 @@ public class GitHubClientTest extends WebClientTest {
     @Test
     public void should_returnRepository() {
         //Arrange
-        mockServer.stubFor(get("/repos/testUser/test-repo")
+        mockServer.stubFor(get("/repos/test-user/test-repo")
             .willReturn(okJson(
-                    getRepositoryWithOwnerAndNameResponseBody("testUser", "test-repo")
+                    getRepositoryWithNameAndOwnerResponseBody("test-repo", "test-user")
                 )
             )
         );
 
         //Act
-        GitHubRepository actualRepository =
-            gitHubClient.findRepository("testUser", "test-repo");
+        GitHubRepositoryBody actualRepository =
+            gitHubClient.fetchRepositoryByNameAndOwner("test-repo", "test-user");
 
         //Assert
-        GitHubRepository expectedRepository =
-            getExpectedGitHubRepositoryWithOwnerAndName("testUser", "test-repo");
+        GitHubRepositoryBody expectedRepository =
+            getExpectedGitHubRepositoryWithNameAndOwner("test-repo", "test-user");
         assertThat(actualRepository).isNotNull().isEqualTo(expectedRepository);
     }
 
     @Test
     public void should_returnRepositoryActivities() {
         //Arrange
-        mockServer.stubFor(get("/repos/testUser/test-repo/activity")
+        mockServer.stubFor(get("/repos/test-user/test-repo/activity")
             .willReturn(okJson("""
                 [
                     {
                         "id": 1,
                         "actor": {
                             "id": 11,
-                            "login": "testUser"
+                            "login": "firstTestUser"
                         },
                         "ref" : "new/branch",
                         "timestamp": "2023-09-13T21:17:36Z",
@@ -70,21 +70,21 @@ public class GitHubClientTest extends WebClientTest {
         );
 
         //Act
-        List<GitHubRepositoryActivity> actualRepositoryActivities =
-            gitHubClient.findRepositoryActivities("testUser", "test-repo");
+        List<GitHubRepositoryActivityBody> actualRepositoryActivities =
+            gitHubClient.fetchRepositoryActivitiesByRepositoryNameAndOwner("test-repo", "test-user");
 
         //Assert
-        List<GitHubRepositoryActivity> expectedActivities = List.of(
-            new GitHubRepositoryActivity(
+        List<GitHubRepositoryActivityBody> expectedActivities = List.of(
+            new GitHubRepositoryActivityBody(
                 1,
-                new GitHubOwner(11, "testUser"),
+                new GitHubOwnerBody(11, "firstTestUser"),
                 "new/branch",
                 OffsetDateTime.parse("2023-09-13T21:17:36Z"),
                 GitHubRepositoryActivityType.PUSH
             ),
-            new GitHubRepositoryActivity(
+            new GitHubRepositoryActivityBody(
                 2,
-                new GitHubOwner(123, "secondTestUser"),
+                new GitHubOwnerBody(123, "secondTestUser"),
                 "second/branch",
                 OffsetDateTime.parse("2023-09-13T21:17:36Z"),
                 GitHubRepositoryActivityType.PR_MERGE
@@ -94,7 +94,7 @@ public class GitHubClientTest extends WebClientTest {
         assertThat(actualRepositoryActivities).containsExactlyInAnyOrderElementsOf(expectedActivities);
     }
 
-    private String getRepositoryWithOwnerAndNameResponseBody(String ownerName, String repoName) {
+    private String getRepositoryWithNameAndOwnerResponseBody(String repoName, String ownerName) {
         return STR."""
             {
             "id":123,
@@ -115,12 +115,12 @@ public class GitHubClientTest extends WebClientTest {
             }""";
     }
 
-    private GitHubRepository getExpectedGitHubRepositoryWithOwnerAndName(String ownerName, String repoName) {
-        return new GitHubRepository(
+    private GitHubRepositoryBody getExpectedGitHubRepositoryWithNameAndOwner(String repoName, String ownerName) {
+        return new GitHubRepositoryBody(
             123,
             repoName,
             "test description",
-            new GitHubOwner(
+            new GitHubOwnerBody(
                 321,
                 ownerName
             ),

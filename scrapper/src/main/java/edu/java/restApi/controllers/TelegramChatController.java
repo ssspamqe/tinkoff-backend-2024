@@ -2,8 +2,6 @@ package edu.java.restApi.controllers;
 
 import edu.java.restApi.services.TelegramChatService;
 import jakarta.validation.constraints.Min;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/scrapper/api/v1/tg-chat")
 public class TelegramChatController {
-
-    private static final Logger LOGGER = LogManager.getLogger();
 
     private final TelegramChatService chatService;
 

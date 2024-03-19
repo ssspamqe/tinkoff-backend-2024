@@ -9,8 +9,8 @@ import org.springframework.web.service.annotation.PostExchange;
 public interface ScrapperTelegramChatClient {
 
     @PostExchange(url = "/{id}")
-    void registerNewChat(@PathVariable int id);
+    void registerNewChat(@PathVariable long id);
 
     @DeleteExchange(url = "/{id}")
-    void deleteChat(@PathVariable int id);
+    void deleteChat(@PathVariable long id);
 }

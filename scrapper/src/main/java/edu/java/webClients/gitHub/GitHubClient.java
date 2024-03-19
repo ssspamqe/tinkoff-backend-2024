@@ -1,7 +1,7 @@
 package edu.java.webClients.gitHub;
 
-import edu.java.webClients.gitHub.dto.GitHubRepository;
-import edu.java.webClients.gitHub.dto.GitHubRepositoryActivity;
+import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityBody;
+import edu.java.webClients.gitHub.dto.GitHubRepositoryBody;
 import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.service.annotation.GetExchange;
@@ -11,11 +11,11 @@ import org.springframework.web.service.annotation.HttpExchange;
 public interface GitHubClient {
 
     @GetExchange(url = "/repos/{owner}/{repoName}")
-    GitHubRepository findRepository(@PathVariable String owner, @PathVariable String repoName);
+    GitHubRepositoryBody fetchRepositoryByNameAndOwner(@PathVariable String repoName, @PathVariable String owner);
 
     @GetExchange(url = "/repos/{owner}/{repoName}/activity")
-    List<GitHubRepositoryActivity> findRepositoryActivities(
-        @PathVariable String owner,
-        @PathVariable String repoName
+    List<GitHubRepositoryActivityBody> fetchRepositoryActivitiesByRepositoryNameAndOwner(
+        @PathVariable String repoName,
+        @PathVariable String owner
     );
 }
