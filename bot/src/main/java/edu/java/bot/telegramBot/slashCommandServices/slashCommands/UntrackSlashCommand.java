@@ -18,7 +18,6 @@ public class UntrackSlashCommand implements ParameterizedSlashCommand {
     private static final String NO_SUCH_SUBSCRIPTION_MESSAGE = "You don't have such subscription";
     private static final String SUCCESSFULLY_UNTRACKED_MESSAGE = "/unrack command succeed!";
 
-    private final Validator validator;
     private final ScrapperLinksClient scrapperLinksClient;
 
     @Override
@@ -37,7 +36,7 @@ public class UntrackSlashCommand implements ParameterizedSlashCommand {
         return STR."\{username},\n\{PARAMETERS_REQUEST_MESSAGE}";
     }
 
-    @Override //TODO add exception handling
+    @Override
     public String executeWithUserParametersAndGetResponse(Message message) {
         long chatId = message.from().id();
         String url = message.text();

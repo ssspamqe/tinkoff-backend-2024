@@ -35,7 +35,7 @@ public class TrackSlashCommand implements ParameterizedSlashCommand {
         return STR."\{username},\n\{PARAMETERS_REQUEST_MESSAGE}";
     }
 
-    @Override //TODO add exception handling
+    @Override
     public String executeWithUserParametersAndGetResponse(Message message) {
         Long chatId = message.chat().id();
         String url = message.text();
