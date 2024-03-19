@@ -1,5 +1,6 @@
-package edu.java.data.dao;
+package edu.java.data.dao.implementations;
 
+import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.exceptions.DoubleChatRegistrationException;
 import edu.java.data.exceptions.NoSuchChatException;
 import edu.java.data.exceptions.NoSuchLinkException;

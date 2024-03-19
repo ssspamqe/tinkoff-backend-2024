@@ -1,5 +1,6 @@
-package edu.java.data.dao;
+package edu.java.data.dao.implementations;
 
+import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
 import edu.java.data.postgres.entities.GitHubRepositoryEntity;
 import edu.java.data.postgres.repositories.GitHubRepositoryEntityRepository;
 import java.util.Optional;

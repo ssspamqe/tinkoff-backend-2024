@@ -1,5 +1,6 @@
-package edu.java.data.dao;
+package edu.java.data.dao.implementations;
 
+import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.postgres.entities.StackOverflowQuestion;
 import edu.java.data.postgres.repositories.StackOverflowQuestionRepository;
 import java.util.Optional;

@@ -1,8 +1,8 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.allUpdatesCheckers;
 
 import edu.java.configuration.ApplicationConfig;
-import edu.java.data.dao.GitHubRepositoryDataAccessObject;
-import edu.java.data.dao.LinkDataAccessObject;
+import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
+import edu.java.data.dao.interfaces.LinkDataAccessObject;
 import edu.java.data.exceptions.NoSuchGitHubRepositoryException;
 import edu.java.data.postgres.entities.GitHubRepositoryEntity;
 import edu.java.data.postgres.entities.Link;

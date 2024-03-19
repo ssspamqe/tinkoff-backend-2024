@@ -1,6 +1,7 @@
-package edu.java.data.dao;
+package edu.java.data.dao.implementations;
 
 import edu.java.data.dao.initialStateScreeners.UniversalInitialStateScreener;
+import edu.java.data.dao.interfaces.LinkDataAccessObject;
 import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.postgres.entities.ChatLink;
 import edu.java.data.postgres.entities.Link;

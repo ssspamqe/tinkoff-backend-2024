@@ -1,8 +1,8 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.allUpdatesCheckers;
 
 import edu.java.configuration.ApplicationConfig;
-import edu.java.data.dao.LinkDataAccessObject;
-import edu.java.data.dao.StackOverflowQuestionDataAccessObject;
+import edu.java.data.dao.interfaces.LinkDataAccessObject;
+import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.exceptions.NoSuchStackOverflowQuestionException;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.entities.StackOverflowQuestion;

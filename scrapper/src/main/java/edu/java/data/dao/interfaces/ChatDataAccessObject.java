@@ -1,4 +1,4 @@
-package edu.java.data.dao;
+package edu.java.data.dao.interfaces;
 
 import edu.java.data.postgres.entities.Chat;
 import edu.java.data.postgres.entities.Link;

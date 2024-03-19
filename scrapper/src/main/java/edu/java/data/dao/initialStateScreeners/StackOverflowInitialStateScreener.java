@@ -1,7 +1,7 @@
 package edu.java.data.dao.initialStateScreeners;
 
 import edu.java.configuration.ApplicationConfig;
-import edu.java.data.dao.StackOverflowQuestionDataAccessObject;
+import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.entities.StackOverflowQuestion;
 import edu.java.linkUpdateScheduler.exceptions.IncorrectHostException;

@@ -1,6 +1,6 @@
 package edu.java.restApi.services;
 
-import edu.java.data.dao.ChatDataAccessObject;
+import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.dao.initialStateScreeners.UniversalInitialStateScreener;
 import edu.java.data.postgres.entities.Link;
 import java.util.Set;
