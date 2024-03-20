@@ -1,7 +1,7 @@
 package edu.java.data.dao.jdbc.dao;
 
 import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
-import edu.java.data.dao.jdbc.repositories.JdbcStackOverflowQuestionRepository;
+import edu.java.data.dao.jdbc.repositories.StackOverflowQuestionJdbcRepository;
 import edu.java.data.dto.StackOverflowQuestion;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
@@ -11,9 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class JdbcStackOverflowQuestionDAO implements StackOverflowQuestionDataAccessObject {
+public class StackOverflowQuestionJdbcDAO implements StackOverflowQuestionDataAccessObject {
 
-    private final JdbcStackOverflowQuestionRepository stackOverflowQuestionRepository;
+    private final StackOverflowQuestionJdbcRepository stackOverflowQuestionRepository;
 
     @Override
     public Optional<StackOverflowQuestion> findById(long id) {

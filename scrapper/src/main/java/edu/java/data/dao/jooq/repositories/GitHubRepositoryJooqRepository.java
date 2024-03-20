@@ -9,7 +9,7 @@ import static edu.java.domain.jooq.public_.Tables.GIT_HUB_REPOSITORIES;
 
 @Repository
 @RequiredArgsConstructor
-public class JooqGitHubRepositoryEntityRepository {
+public class GitHubRepositoryJooqRepository {
 
     private final DefaultDSLContext dsl;
 

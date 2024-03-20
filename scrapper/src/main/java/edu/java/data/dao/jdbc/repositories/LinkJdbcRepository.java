@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class JdbcLinkRepository {
+public class LinkJdbcRepository {
 
     private static final String TABLE_NAME = "links";
     private static final RowMapper<Link> ROW_MAPPER = new LinkRowMapper();

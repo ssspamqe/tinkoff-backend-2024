@@ -9,13 +9,13 @@ public interface ChatDataAccessObject {
 
     Optional<Chat> findById(long id);
 
-    Set<Link> getTrackedLinksByChatId(long chatApiId);
+    Set<Link> getTrackedLinksByChatId(long chatId);
 
-    Link associateUrlByChatId(String url, long chatApiId);
+    Link associateUrlByChatId(String url, long chatId);
 
-    Link dissociateUrlByChatId(String url, long chatApiId);
+    Link dissociateUrlByChatId(String url, long chatId);
 
-    Chat registerChatWithId(long apiId);
+    Chat registerChatWithId(long id);
 
-    void deleteChatWithId(long apiId);
+    void deleteChatWithId(long id);
 }

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class JdbcGitHubRepoRepository {
+public class GitHubRepositoryJdbcRepository {
 
     private static final String TABLE_NAME = "git_hub_repositories";
     private static final RowMapper<GitHubRepository> ROW_MAPPER = new GitHubRepoitoryRowMapper();

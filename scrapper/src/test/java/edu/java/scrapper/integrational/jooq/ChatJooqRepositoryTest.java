@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JooqChatRepositoryTest extends DatabaseIntegrationEnvironment {
+public class ChatJooqRepositoryTest extends DatabaseIntegrationEnvironment {
     static final RowMapper<Chat> ROW_MAPPER = new ChatRowMapper();
 
-    @Autowired @Qualifier("jooqChatRepository")
+    @Autowired @Qualifier("chatJooqRepository")
     ChatRepository chatRepository;
 
     @Test

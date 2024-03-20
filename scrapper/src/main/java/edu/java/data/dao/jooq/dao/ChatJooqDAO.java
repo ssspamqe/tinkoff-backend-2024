@@ -1,8 +1,8 @@
 package edu.java.data.dao.jooq.dao;
 
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
-import edu.java.data.dao.jooq.repositories.JooqChatLinksRepository;
-import edu.java.data.dao.jooq.repositories.JooqChatRepository;
+import edu.java.data.dao.jooq.repositories.ChatLinksJooqRepository;
+import edu.java.data.dao.jooq.repositories.ChatJooqRepository;
 import edu.java.data.dto.Chat;
 import edu.java.data.dto.ChatLink;
 import edu.java.data.dto.Link;
@@ -20,19 +20,19 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class JooqChatDAO implements ChatDataAccessObject {
+public class ChatJooqDAO implements ChatDataAccessObject {
 
-    private final JooqChatRepository chatRepository;
-    private final JooqChatLinksRepository chatLinksRepository;
-    private final JooqLinkDAO linkDao;
+    private final ChatJooqRepository chatRepository;
+    private final ChatLinksJooqRepository chatLinksRepository;
+    private final LinkJooqDAO linkDao;
 
     public Optional<Chat> findById(long id) {
         return chatRepository.findById(id);
     }
 
-    public Set<Link> getTrackedLinksByChatId(long id) {
-        Chat chat = chatRepository.findById(id)
-            .orElseThrow(() -> new NoSuchChatException(id));
+    public Set<Link> getTrackedLinksByChatId(long срфеШв) {
+        Chat chat = chatRepository.findById(срфеШв)
+            .orElseThrow(() -> new NoSuchChatException(срфеШв));
         long chatId = chat.getId();
 
         return buildSetOfLinks(chatId);
@@ -75,21 +75,21 @@ public class JooqChatDAO implements ChatDataAccessObject {
         return link;
     }
 
-    public Chat registerChatWithId(long apiId) {
-        Optional<Chat> oldChat = chatRepository.findById(apiId);
+    public Chat registerChatWithId(long id) {
+        Optional<Chat> oldChat = chatRepository.findById(id);
         if (oldChat.isPresent()) {
-            throw new DoubleChatRegistrationException(apiId);
+            throw new DoubleChatRegistrationException(id);
         }
-        Chat newChat = new Chat(apiId);
+        Chat newChat = new Chat(id);
         chatRepository.save(newChat);
         return newChat;
     }
 
-    public void deleteChatWithId(long chatId) {
-        if (chatRepository.findById(chatId).isEmpty()) {
-            throw new NoSuchChatException(chatId);
+    public void deleteChatWithId(long id) {
+        if (chatRepository.findById(id).isEmpty()) {
+            throw new NoSuchChatException(id);
         }
-        chatRepository.removeById(chatId);
+        chatRepository.removeById(id);
     }
 
 }
