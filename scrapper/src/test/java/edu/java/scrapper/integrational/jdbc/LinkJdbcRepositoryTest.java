@@ -13,11 +13,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class JdbcLinkRepositoryTest extends DatabaseIntegrationEnvironment {
+class LinkJdbcRepositoryTest extends DatabaseIntegrationEnvironment {
 
     static final RowMapper<Link> ROW_MAPPER = new LinkRowMapper();
 
-    @Autowired @Qualifier("jdbcLinkRepository")
+    @Autowired @Qualifier("linkJdbcRepository")
     LinkRepository linkRepository;
 
     @Test

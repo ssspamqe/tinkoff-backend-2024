@@ -1,37 +1,33 @@
-package edu.java.data.dao.jdbc.dao;
+package edu.java.data.dao.jpa.dao;
 
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
-import edu.java.data.dao.jdbc.repositories.JdbcGitHubRepoRepository;
 import edu.java.data.dto.GitHubRepository;
-import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class JdbcGitHubRepositoryDAO implements GitHubRepositoryDataAccessObject {
-
-    private final JdbcGitHubRepoRepository gitHubRepositoryEntityRepository;
-
+public class JpaGitHubRepositoryDAO implements GitHubRepositoryDataAccessObject {
     @Override
     public void save(GitHubRepository repository) {
-        gitHubRepositoryEntityRepository.save(repository);
+
     }
 
     @Override
     public void update(GitHubRepository repository) {
-        gitHubRepositoryEntityRepository.update(repository);
+
     }
 
     @Override
     public Optional<GitHubRepository> findById(long id) {
-        return gitHubRepositoryEntityRepository.findById(id);
+        return Optional.empty();
     }
 
     @Override
     public Optional<GitHubRepository> findByNameAndOwner(String name, String owner) {
-        return gitHubRepositoryEntityRepository.findByNameAndOwner(name, owner);
+        return Optional.empty();
     }
 }

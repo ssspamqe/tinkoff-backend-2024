@@ -9,7 +9,7 @@ import static edu.java.domain.jooq.public_.Tables.STACK_OVERFLOW_QUESTIONS;
 
 @Repository
 @RequiredArgsConstructor
-public class JooqStackOverflowQuestionRepository {
+public class StackOverflowQuestionJooqRepository {
 
     private final DefaultDSLContext dsl;
 

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class JdbcChatRepository {
+public class ChatJdbcRepository {
 
     private static final String TABLE_NAME = "chats";
     private static final RowMapper<Chat> ROW_MAPPER = new ChatRowMapper();

@@ -11,7 +11,7 @@ import static edu.java.domain.jooq.public_.Tables.LINKS;
 
 @Repository
 @RequiredArgsConstructor
-public class JooqLinkRepository {
+public class LinkJooqRepository {
 
     private final DefaultDSLContext dsl;
 

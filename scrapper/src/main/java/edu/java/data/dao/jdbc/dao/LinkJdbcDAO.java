@@ -1,8 +1,8 @@
 package edu.java.data.dao.jdbc.dao;
 
 import edu.java.data.dao.interfaces.LinkDataAccessObject;
-import edu.java.data.dao.jdbc.repositories.JdbcChatLinksRepository;
-import edu.java.data.dao.jdbc.repositories.JdbcLinkRepository;
+import edu.java.data.dao.jdbc.repositories.ChatLinksJdbcRepository;
+import edu.java.data.dao.jdbc.repositories.LinkJdbcRepository;
 import edu.java.data.dto.ChatLink;
 import edu.java.data.dto.Link;
 import edu.java.data.exceptions.NoSuchLinkException;
@@ -20,10 +20,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class JdbcLinkDAO implements LinkDataAccessObject {
+public class LinkJdbcDAO implements LinkDataAccessObject {
 
-    private final JdbcLinkRepository linkRepository;
-    private final JdbcChatLinksRepository chatLinksRepository;
+    private final LinkJdbcRepository linkRepository;
+    private final ChatLinksJdbcRepository chatLinksRepository;
     private final UniversalInitialStateScreener initialStateScreener;
 
     public Optional<Link> findByUrl(String url) {

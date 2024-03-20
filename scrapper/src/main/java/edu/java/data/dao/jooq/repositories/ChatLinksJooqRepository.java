@@ -9,7 +9,7 @@ import static edu.java.domain.jooq.public_.Tables.CHAT_LINKS;
 
 @Repository
 @RequiredArgsConstructor
-public class JooqChatLinksRepository {
+public class ChatLinksJooqRepository {
 
     private final DefaultDSLContext dsl;
 

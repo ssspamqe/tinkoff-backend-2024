@@ -1,8 +1,8 @@
 package edu.java.data.dao.jooq.dao;
 
 import edu.java.data.dao.interfaces.LinkDataAccessObject;
-import edu.java.data.dao.jooq.repositories.JooqChatLinksRepository;
-import edu.java.data.dao.jooq.repositories.JooqLinkRepository;
+import edu.java.data.dao.jooq.repositories.ChatLinksJooqRepository;
+import edu.java.data.dao.jooq.repositories.LinkJooqRepository;
 import edu.java.data.dto.ChatLink;
 import edu.java.data.dto.Link;
 import edu.java.data.exceptions.NoSuchLinkException;
@@ -20,10 +20,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class JooqLinkDAO implements LinkDataAccessObject {
+public class LinkJooqDAO implements LinkDataAccessObject {
 
-    private final JooqLinkRepository linkRepository;
-    private final JooqChatLinksRepository chatLinksRepository;
+    private final LinkJooqRepository linkRepository;
+    private final ChatLinksJooqRepository chatLinksRepository;
     private final UniversalInitialStateScreener initialStateScreener;
 
     public Optional<Link> findByUrl(String url) {

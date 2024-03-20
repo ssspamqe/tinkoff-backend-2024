@@ -11,7 +11,7 @@ import static edu.java.domain.jooq.public_.Tables.CHATS;
 
 @Repository
 @RequiredArgsConstructor
-public class JooqChatRepository {
+public class ChatJooqRepository {
 
     private final DefaultDSLContext dsl;
 
