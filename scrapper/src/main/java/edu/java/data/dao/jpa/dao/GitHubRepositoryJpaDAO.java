@@ -10,7 +10,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class JpaGitHubRepositoryDAO implements GitHubRepositoryDataAccessObject {
+public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject {
     @Override
     public void save(GitHubRepository repository) {
 

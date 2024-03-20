@@ -12,7 +12,7 @@ import java.util.Set;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class JpaChatDAO implements ChatDataAccessObject {
+public class ChatJpaDAO implements ChatDataAccessObject {
 
     private
 

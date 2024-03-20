@@ -14,7 +14,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class JpaLinkDAO implements LinkDataAccessObject {
+public class LinkJpaDAO implements LinkDataAccessObject {
     @Override
     public Optional<Link> findByUrl(String url) {
         return Optional.empty();
