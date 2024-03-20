@@ -15,14 +15,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class JooqChatLinksRepositoryTest extends DatabaseIntegrationEnvironment {
     static final RowMapper<ChatLink> ROW_MAPPER = new ChatLinkRowMapper();
 
-    @Qualifier("jooqChatLinksRepository") @Autowired
+    @Autowired @Qualifier("jooqChatLinksRepository")
     ChatLinksRepository chatLinksRepository;
 
     @Test
     public void should_save() {
         jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
-        ChatLink chatLink = new ChatLink(1, 1);
+        long linkId = jdbcTemplate.queryForObject(
+            "INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23') RETURNING id",
+            Long.class
+        );
+        ChatLink chatLink = new ChatLink(1, linkId);
 
         chatLinksRepository.save(chatLink);
 
@@ -35,21 +38,25 @@ public class JooqChatLinksRepositoryTest extends DatabaseIntegrationEnvironment 
     public void should_findByChatId() {
         //Arrange
         jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (2,'2022-06-16 16:37:23')");
 
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link2','2022-06-16 16:37:23')");
+        long firstLinkId = jdbcTemplate.queryForObject(
+            "INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23') RETURNING id",
+            Long.class
+        );
+        long secondLinkId = jdbcTemplate.queryForObject(
+            "INSERT INTO links (url, created_at) VALUES ('https://link2','2022-06-16 16:37:23') RETURNING id",
+            Long.class
+        );
 
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,1,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,2,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (2,1,'2022-06-16 16:37:23')");
+        jdbcTemplate.update(STR."INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,\{firstLinkId},'2022-06-16 16:37:23')");
+        jdbcTemplate.update(STR."INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,\{secondLinkId},'2022-06-16 16:37:23')");
 
         //Act
         List<Long> actualLinkIds = chatLinksRepository.findByChatId(1)
             .stream().map(ChatLink::getLinkId).toList();
 
         //Assert
-        assertThat(actualLinkIds).isNotNull().hasSize(2).containsExactlyInAnyOrder(1L, 2L);
+        assertThat(actualLinkIds).isNotNull().hasSize(2).containsExactlyInAnyOrder(firstLinkId, secondLinkId);
     }
 
     @Test
@@ -58,15 +65,17 @@ public class JooqChatLinksRepositoryTest extends DatabaseIntegrationEnvironment 
         jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
         jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (2,'2022-06-16 16:37:23')");
 
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link2','2022-06-16 16:37:23')");
+        long linkId =
+            jdbcTemplate.queryForObject(
+                "INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23') RETURNING id",
+                Long.class
+            );
 
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,1,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (2,1,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,2,'2022-06-16 16:37:23')");
+        jdbcTemplate.update(STR."INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,\{linkId},'2022-06-16 16:37:23')");
+        jdbcTemplate.update(STR."INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (2,\{linkId},'2022-06-16 16:37:23')");
 
         //Act
-        List<Long> actualChatIds = chatLinksRepository.findByLinkId(1)
+        List<Long> actualChatIds = chatLinksRepository.findByLinkId(linkId)
             .stream().map(ChatLink::getChatId).toList();
 
         //Assert
@@ -78,12 +87,16 @@ public class JooqChatLinksRepositoryTest extends DatabaseIntegrationEnvironment 
         //Arrange
         jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
 
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
+        long linkId =
+            jdbcTemplate.queryForObject(
+                "INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23') RETURNING id",
+                Long.class
+            );
 
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id,created_at) VALUES (1,1,'2022-06-16 16:37:23')");
+        jdbcTemplate.update(STR."INSERT INTO chat_links (chat_id, link_id,created_at) VALUES (1,\{linkId},'2022-06-16 16:37:23')");
 
         //Act
-        boolean actualResponse = chatLinksRepository.removeByChatIdAndLinkId(1, 1);
+        boolean actualResponse = chatLinksRepository.removeByChatIdAndLinkId(1, linkId);
 
         //Assert
         assertThat(actualResponse).isTrue();

@@ -43,7 +43,7 @@ public class JooqChatLinksRepository implements ChatLinksRepository {
     @Override
     public boolean removeByChatIdAndLinkId(long chatId, long linkId) {
         return dsl.delete(CHAT_LINKS)
-            .where(CHAT_LINKS.CHAT_ID.eq(linkId))
+            .where(CHAT_LINKS.CHAT_ID.eq(chatId))
             .and(CHAT_LINKS.LINK_ID.eq(linkId))
             .execute() != 0;
     }

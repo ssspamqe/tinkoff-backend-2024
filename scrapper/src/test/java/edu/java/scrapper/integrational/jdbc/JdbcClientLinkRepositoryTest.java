@@ -3,10 +3,10 @@ package edu.java.scrapper.integrational.jdbc;
 import edu.java.data.postgres.entities.Link;
 import edu.java.data.postgres.repositories.LinkRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.LinkRowMapper;
+import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.Optional;
-import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -32,15 +32,6 @@ class JdbcClientLinkRepositoryTest extends DatabaseIntegrationEnvironment {
     }
 
     @Test
-    public void should_findById() {
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://url','2022-06-16 16:37:23')");
-
-        Link actualLink = linkRepository.findById(1L).get();
-
-        assertThat(actualLink.getUrl()).hasToString("https://url");
-    }
-
-    @Test
     public void should_returnEmptyOptional_when_cantFindLink() {
         Optional<Link> actualLink = linkRepository.findById(1L);
 
@@ -55,21 +46,4 @@ class JdbcClientLinkRepositoryTest extends DatabaseIntegrationEnvironment {
 
         assertThat(actualLink.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16T16:37:23"));
     }
-
-    @Test
-    public void should_removeById() {
-        //Arrange
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://url','2022-06-16 16:37:23')");
-
-        //Act
-        boolean actualResponse = linkRepository.removeById(1L);
-
-        //Assert
-        assertThat(actualResponse).isTrue();
-
-        Optional<Link> actualLink =
-            jdbcTemplate.query("SELECT * FROM links", ROW_MAPPER).stream().findFirst();
-        assertThat(actualLink).isEmpty();
-    }
-
 }

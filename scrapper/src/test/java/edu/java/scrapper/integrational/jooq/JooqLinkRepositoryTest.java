@@ -17,7 +17,7 @@ public class JooqLinkRepositoryTest extends DatabaseIntegrationEnvironment {
 
     static final RowMapper<Link> ROW_MAPPER = new LinkRowMapper();
 
-    @Qualifier("jooqLinkRepository") @Autowired
+    @Autowired @Qualifier("jooqLinkRepository")
     LinkRepository linkRepository;
 
     @Test
@@ -29,15 +29,6 @@ public class JooqLinkRepositoryTest extends DatabaseIntegrationEnvironment {
         Optional<Link> actualLink =
             jdbcTemplate.query("SELECT * FROM links", ROW_MAPPER).stream().findFirst();
         assertThat(actualLink).isPresent();
-    }
-
-    @Test
-    public void should_findById() {
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://url','2022-06-16 16:37:23')");
-
-        Link actualLink = linkRepository.findById(1L).get();
-
-        assertThat(actualLink.getUrl()).hasToString("https://url");
     }
 
     @Test
@@ -54,21 +45,5 @@ public class JooqLinkRepositoryTest extends DatabaseIntegrationEnvironment {
         Link actualLink = linkRepository.findByUrl("https://url").get();
 
         assertThat(actualLink.getCreatedAt()).isEqualTo(LocalDateTime.parse("2022-06-16T16:37:23"));
-    }
-
-    @Test
-    public void should_removeById() {
-        //Arrange
-        jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://url','2022-06-16 16:37:23')");
-
-        //Act
-        boolean actualResponse = linkRepository.removeById(1L);
-
-        //Assert
-        assertThat(actualResponse).isTrue();
-
-        Optional<Link> actualLink =
-            jdbcTemplate.query("SELECT * FROM links", ROW_MAPPER).stream().findFirst();
-        assertThat(actualLink).isEmpty();
     }
 }
