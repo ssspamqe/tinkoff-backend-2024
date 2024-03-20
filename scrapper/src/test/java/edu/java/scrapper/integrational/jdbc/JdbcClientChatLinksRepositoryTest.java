@@ -3,9 +3,9 @@ package edu.java.scrapper.integrational.jdbc;
 import edu.java.data.postgres.entities.ChatLink;
 import edu.java.data.postgres.repositories.ChatLinksRepository;
 import edu.java.data.postgres.repositories.jdbcClient.rowMappers.ChatLinkRowMapper;
+import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.util.List;
 import java.util.Optional;
-import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -36,14 +36,12 @@ public class JdbcClientChatLinksRepositoryTest extends DatabaseIntegrationEnviro
     public void should_findByChatId() {
         //Arrange
         jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (1,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chats (id, created_at) VALUES (2,'2022-06-16 16:37:23')");
 
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link1','2022-06-16 16:37:23')");
         jdbcTemplate.update("INSERT INTO links (url, created_at) VALUES ('https://link2','2022-06-16 16:37:23')");
 
         jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,1,'2022-06-16 16:37:23')");
         jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (1,2,'2022-06-16 16:37:23')");
-        jdbcTemplate.update("INSERT INTO chat_links (chat_id, link_id, created_at) VALUES (2,1,'2022-06-16 16:37:23')");
 
         //Act
         List<Long> actualLinkIds = chatLinksRepository.findByChatId(1)
