@@ -15,7 +15,6 @@ app:
   stack-overflow-host-names:
     - stackoverflow.com
 
-
 spring:
   application:
     name: scrapper
@@ -34,6 +33,9 @@ spring:
       file: compose.yml
   jooq:
     sql-dialect: postgres
+
+hibernate:
+  show_sql: true
 
 server:
   port: 8080
