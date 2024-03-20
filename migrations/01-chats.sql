@@ -1,7 +1,7 @@
-create table chats
+CREATE TABLE chats
 (
-    id         bigint                   not null,
-    created_at timestamp with time zone not null,
+    id         BIGINT    NOT NULL,
+    created_at TIMESTAMP NOT NULL,
 
-    primary key (id)
+    PRIMARY KEY (id)
 )

@@ -1,10 +1,10 @@
-create table stack_overflow_questions
+CREATE TABLE stack_overflow_questions
 (
-    id                   bigint   not null,
-    link_id              bigint   not null references links (id) on delete cascade,
-    description_md5_hash text     not null,
-    answers_ids          bigint[] not null,
+    id                   BIGINT   NOT NULL,
+    link_id              BIGINT   NOT NULL REFERENCES links (id) ON DELETE CASCADE,
+    description_md5_hash TEXT     NOT NULL,
+    answers_ids          BIGINT[] NOT NULL,
 
-    unique (link_id),
-    primary key (id)
-)
+    UNIQUE (link_id),
+    PRIMARY KEY (id)
+);

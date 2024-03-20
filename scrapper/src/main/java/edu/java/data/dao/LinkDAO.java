@@ -12,18 +12,27 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@RequiredArgsConstructor
 @Transactional
 public class LinkDAO implements LinkDataAccessObject {
 
     private final LinkRepository linkRepository;
     private final ChatLinksRepository chatLinksRepository;
     private final UniversalInitialStateScreener initialStateScreener;
+
+    public LinkDAO(
+        @Qualifier("jdbcClientLinkRepository") LinkRepository linkRepository,
+        @Qualifier("jdbcClientChatLinksRepository") ChatLinksRepository chatLinksRepository,
+        UniversalInitialStateScreener initialStateScreener
+    ) {
+        this.linkRepository = linkRepository;
+        this.chatLinksRepository = chatLinksRepository;
+        this.initialStateScreener = initialStateScreener;
+    }
 
     public Optional<Link> findByUrl(String url) {
         return linkRepository.findByUrl(url);
