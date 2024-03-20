@@ -1,21 +1,22 @@
-package edu.java.scrapper.integrational.jooq;
+package edu.java.scrapper.integrational.jdbc;
 
 import edu.java.data.dto.ChatLink;
 import edu.java.data.postgres.repositories.ChatLinksRepository;
 import edu.java.data.dao.jdbc.repositories.rowMappers.ChatLinkRowMapper;
-import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.util.List;
 import java.util.Optional;
+import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JooqChatLinksRepositoryTest extends DatabaseIntegrationEnvironment {
+public class JdbcChatLinksRepositoryTest extends DatabaseIntegrationEnvironment {
+
     static final RowMapper<ChatLink> ROW_MAPPER = new ChatLinkRowMapper();
 
-    @Qualifier("jooqChatLinksRepository") @Autowired
+    @Autowired @Qualifier("jdbcChatLinksRepository")
     ChatLinksRepository chatLinksRepository;
 
     @Test

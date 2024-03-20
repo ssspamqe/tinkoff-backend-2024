@@ -4,8 +4,8 @@ import edu.java.configuration.ApplicationConfig;
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
 import edu.java.data.dao.interfaces.LinkDataAccessObject;
 import edu.java.data.exceptions.NoSuchGitHubRepositoryException;
-import edu.java.data.postgres.entities.GitHubRepositoryEntity;
-import edu.java.data.postgres.entities.Link;
+import edu.java.data.dto.GitHubRepository;
+import edu.java.data.dto.Link;
 import edu.java.linkUpdateScheduler.exceptions.IncorrectHostException;
 import edu.java.linkUpdateScheduler.exceptions.UnsuccessfulGitHubUrlParseException;
 import edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.gitHub.GitHubRepositorySingleUpdateChecker;
@@ -47,7 +47,7 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
         String repositoryName = nicknameAndRepository.name;
         String owner = nicknameAndRepository.owner;
 
-        GitHubRepositoryEntity oldRepositoryRecord = repositoryDao.findByNameAndOwner(repositoryName, owner)
+        GitHubRepository oldRepositoryRecord = repositoryDao.findByNameAndOwner(repositoryName, owner)
             .orElseThrow(() -> new NoSuchGitHubRepositoryException(repositoryName, owner));
         GitHubRepositoryBody currentRepositoryBody =
             gitHubClient.fetchRepositoryByNameAndOwner(repositoryName, owner);
@@ -91,7 +91,7 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
     }
 
     private List<LinkUpdateType> iterateAllSingleUpdateCheckers(
-        GitHubRepositoryEntity oldRepositoryRecord,
+        GitHubRepository oldRepositoryRecord,
         GitHubRepositoryBody currentRepositoryBody
     ) {
         List<LinkUpdateType> linkUpdateTypes = new ArrayList<>();
@@ -115,8 +115,8 @@ public class GitHubAllUpdatesChecker implements LinkAllUpdatesChecker {
             .map(GitHubRepositoryActivityBody::id)
             .collect(Collectors.toSet());
 
-        GitHubRepositoryEntity updatedRepository =
-            new GitHubRepositoryEntity(
+        GitHubRepository updatedRepository =
+            new GitHubRepository(
                 id,
                 linkId,
                 name,

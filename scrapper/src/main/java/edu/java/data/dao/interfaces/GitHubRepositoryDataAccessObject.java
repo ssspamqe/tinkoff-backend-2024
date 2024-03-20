@@ -1,15 +1,15 @@
 package edu.java.data.dao.interfaces;
 
-import edu.java.data.postgres.entities.GitHubRepositoryEntity;
+import edu.java.data.dto.GitHubRepository;
 import java.util.Optional;
 
 public interface GitHubRepositoryDataAccessObject {
 
-    void save(GitHubRepositoryEntity repository);
+    void save(GitHubRepository repository);
 
-    void update(GitHubRepositoryEntity repository);
+    void update(GitHubRepository repository);
 
-    Optional<GitHubRepositoryEntity> findById(long id);
+    Optional<GitHubRepository> findById(long id);
 
-    Optional<GitHubRepositoryEntity> findByNameAndOwner(String name, String owner);
+    Optional<GitHubRepository> findByNameAndOwner(String name, String owner);
 }

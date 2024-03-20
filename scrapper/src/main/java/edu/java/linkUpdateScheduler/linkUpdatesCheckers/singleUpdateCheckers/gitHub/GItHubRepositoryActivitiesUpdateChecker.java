@@ -1,6 +1,6 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.gitHub;
 
-import edu.java.data.postgres.entities.GitHubRepositoryEntity;
+import edu.java.data.dto.GitHubRepository;
 import edu.java.webClients.gitHub.GitHubClient;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryActivityBody;
 import edu.java.webClients.gitHub.dto.GitHubRepositoryBody;
@@ -22,7 +22,7 @@ public class GItHubRepositoryActivitiesUpdateChecker implements GitHubRepository
     }
 
     @Override
-    public boolean hasUpdate(GitHubRepositoryEntity oldState, GitHubRepositoryBody newState) {
+    public boolean hasUpdate(GitHubRepository oldState, GitHubRepositoryBody newState) {
         Set<Long> oldActivities = oldState.getActivitiesIds();
         Set<Long> newActivities = fetchActivitiesIds(newState.name(), newState.owner().login());
 
