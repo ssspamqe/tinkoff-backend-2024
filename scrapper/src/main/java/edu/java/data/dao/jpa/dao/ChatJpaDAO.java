@@ -10,7 +10,6 @@ import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dto.Chat;
 import edu.java.data.dto.Link;
 import edu.java.data.exceptions.NoSuchChatException;
-import edu.java.data.exceptions.NoSuchLinkException;
 import java.net.URI;
 import java.util.Optional;
 import java.util.Set;
@@ -38,8 +37,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
 
     @Override
     public Set<Link> getTrackedLinksByChatId(long chatId) {
-        var jpaChat = chatRepository.findById(chatId)
-            .orElseThrow(() -> new NoSuchChatException(chatId));
+        var jpaChat = findJpaByIdOrThrowException(chatId);
 
         return jpaChat
             .getLinks().stream()
@@ -66,8 +64,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
             throw new NoSuchChatException(chatId);
         }
 
-        var link = linkDao.findJpaByUrl(url)
-            .orElseThrow(() -> new NoSuchLinkException(url));
+        var link = linkDao.findJpaByUrlOrThrowException(url);
 
         chatRepository.dissociateLinkWithChatById(link.getId(), chatId);
 
@@ -87,5 +84,10 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         if (deletedChats == 0) {
             throw new NoSuchChatException(id);
         }
+    }
+
+    ChatJpaEntity findJpaByIdOrThrowException(long id) {
+        return chatRepository.findById(id)
+            .orElseThrow(() -> new NoSuchChatException(id));
     }
 }

@@ -79,8 +79,7 @@ public class LinkJpaDAO implements LinkDataAccessObject {
 
     @Override
     public List<Long> findAssociatedChatsIdsByLinkId(long id) {
-        var jpaLink = linkRepository.findById(id)
-            .orElseThrow(() -> new NoSuchLinkException(id));
+        var jpaLink = findJpaByIdOrThrowException(id);
 
         return jpaLink
             .getChats().stream()
@@ -101,5 +100,15 @@ public class LinkJpaDAO implements LinkDataAccessObject {
         }
 
         linkRepository.updateLastCheckedAtById(lastChecked, id);
+    }
+
+    LinkJpaEntity findJpaByIdOrThrowException(long id) {
+        return linkRepository.findById(id)
+            .orElseThrow(() -> new NoSuchLinkException(id));
+    }
+
+    LinkJpaEntity findJpaByUrlOrThrowException(URI url) {
+        return linkRepository.findByUrl(url)
+            .orElseThrow(() -> new NoSuchLinkException(url));
     }
 }
