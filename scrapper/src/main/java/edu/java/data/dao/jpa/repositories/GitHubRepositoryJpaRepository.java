@@ -21,15 +21,15 @@ public interface GitHubRepositoryJpaRepository extends JpaRepository<GitHubRepos
         g.link = :link,
         g.name = :name,
         g.owner = :owner,
-        g.descriptionMd5Hash = :description_md5_hash,
-        g.activitiesIds = :activities_ids
+        g.descriptionMd5Hash = :descriptionMd5Hash,
+        g.activitiesIds = :activitiesIds
         where g.id = :id""")
     void updateAllFieldsById(
         @Param("link") LinkJpaEntity link,
         @Param("name") String name,
         @Param("owner") String owner,
-        @Param("description_md5_hash") String descriptionMd5Hash,
-        @Param("activities_ids") Set<Long> activitiesIds,
+        @Param("descriptionMd5Hash") String descriptionMd5Hash,
+        @Param("activitiesIds") Set<Long> activitiesIds,
         @Param("id") long id
     );
 
