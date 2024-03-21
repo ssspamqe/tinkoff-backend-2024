@@ -10,11 +10,11 @@ import org.springframework.data.annotation.Id;
 public class GitHubRepository {
 
     @Id
-    long id;
-    long linkId;
-    String name;
-    String owner;
-    String descriptionMd5Hash;
-    Set<Long> activitiesIds;
+    private long id;
+    private long linkId;
+    private String name;
+    private String owner;
+    private String descriptionMd5Hash;
+    private Set<Long> activitiesIds;
 
 }

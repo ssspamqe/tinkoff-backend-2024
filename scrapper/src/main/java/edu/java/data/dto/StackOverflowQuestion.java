@@ -10,8 +10,8 @@ import org.springframework.data.annotation.Id;
 public class StackOverflowQuestion {
 
     @Id
-    long id;
-    long linkId;
-    String descriptionMd5Hash;
-    Set<Long> answerIds;
+    private long id;
+    private long linkId;
+    private String descriptionMd5Hash;
+    private Set<Long> answerIds;
 }
