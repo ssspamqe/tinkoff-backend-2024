@@ -8,6 +8,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,5 +33,11 @@ public class ChatJpaEntity {
     @ManyToMany(mappedBy = "chats", fetch = FetchType.EAGER)
     @JoinTable(name = "chat_links")
     private Set<LinkJpaEntity> links;
+
+    public ChatJpaEntity(long id) {
+        this.id = id;
+        this.createdAt = LocalDateTime.now();
+        this.links = new HashSet<>();
+    }
 
 }
