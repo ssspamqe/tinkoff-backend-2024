@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
@@ -29,6 +30,7 @@ public class ChatJpaEntity {
     private LocalDateTime createdAt;
 
     @ManyToMany(mappedBy = "chats", fetch = FetchType.EAGER)
+    @JoinTable(name = "chat_links")
     private Set<LinkJpaEntity> links;
 
 }

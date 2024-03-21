@@ -1,52 +1,105 @@
 package edu.java.data.dao.jpa.dao;
 
 import edu.java.data.dao.interfaces.LinkDataAccessObject;
+import edu.java.data.dao.jpa.entities.ChatJpaEntity;
+import edu.java.data.dao.jpa.entities.LinkJpaEntity;
+import edu.java.data.dao.jpa.entities.mappers.EntityMapper;
+import edu.java.data.dao.jpa.entities.mappers.LinkEntityMapper;
+import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dto.Link;
+import edu.java.data.exceptions.NoSuchLinkException;
+import java.net.URI;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 @Transactional
 public class LinkJpaDAO implements LinkDataAccessObject {
+
+    private static final EntityMapper<LinkJpaEntity, Link> LINK_MAPPER = new LinkEntityMapper();
+
+    private final LinkJpaRepository linkRepository;
+
     @Override
-    public Optional<Link> findByUrl(String url) {
-        return Optional.empty();
+    public Optional<Link> findByUrl(URI url) {
+        var jpaLink = findJpaByUrl(url);
+        return LINK_MAPPER.toOptionalDto(jpaLink);
+    }
+
+    Optional<LinkJpaEntity> findJpaByUrl(URI url) {
+        return linkRepository.findByUrl(url);
     }
 
     @Override
     public Optional<Link> findById(long id) {
-        return Optional.empty();
+        var jpaLink = findJpaById(id);
+        return LINK_MAPPER.toOptionalDto(jpaLink);
+    }
+
+    Optional<LinkJpaEntity> findJpaById(long id) {
+        return linkRepository.findById(id);
     }
 
     @Override
-    public Link saveOrFindByUrl(String url) {
-        return null;
+    public Link saveOrFindByUrl(URI url) {
+        var jpaLink = saveJpaOrFindByUrl(url);
+        return LINK_MAPPER.toDto(jpaLink);
+    }
+
+    LinkJpaEntity saveJpaOrFindByUrl(URI url) {
+        return linkRepository.findByUrl(url)
+            .orElseGet(() -> {
+                var newLink = new LinkJpaEntity(url);
+                return linkRepository.save(newLink);
+
+            });
     }
 
     @Override
-    public Collection<Link> findByLastCheckDelayFromNow(Duration duration) {
-        return null;
+    public Set<Link> findByLastCheckDelayFromNow(Duration duration) {
+        var jpaLinks = findJpaByLastCheckedDelayFromNow(duration);
+        return jpaLinks.stream()
+            .map(LINK_MAPPER::toDto)
+            .collect(Collectors.toSet());
+    }
+
+    public Set<LinkJpaEntity> findJpaByLastCheckedDelayFromNow(Duration duration) {
+        long seconds = duration.getSeconds();
+        LocalDateTime borderDateTime = LocalDateTime.now().minusSeconds(seconds);
+        return linkRepository.findByLastCheckedAtBefore(borderDateTime);
     }
 
     @Override
-    public List<Long> findAssociatedChatsIdsById(long id) {
-        return null;
+    public List<Long> findAssociatedChatsIdsByLinkId(long id) {
+        var jpaLink = linkRepository.findById(id)
+            .orElseThrow(() -> new NoSuchLinkException(id));
+
+        return jpaLink
+            .getChats().stream()
+            .map(ChatJpaEntity::getId)
+            .toList();
     }
 
     @Override
-    public void updateLastCheckedById(long id) {
-
+    public void updateLastCheckedAtById(long id) {
+        var dateTime = LocalDateTime.now();
+        updateLastCheckedAtById(dateTime, id);
     }
 
     @Override
-    public void updateLastCheckedById(long id, LocalDateTime lastChecked) {
+    public void updateLastCheckedAtById(LocalDateTime lastChecked, long id) {
+        if (!linkRepository.existsById(id)) {
+            throw new NoSuchLinkException(id);
+        }
 
+        linkRepository.updateLastCheckedAtById(lastChecked, id);
     }
 }
