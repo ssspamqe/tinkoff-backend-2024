@@ -1,25 +1,26 @@
 package edu.java.data.dao.interfaces;
 
 import edu.java.data.dto.Link;
+import java.net.URI;
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface LinkDataAccessObject {
 
-    Optional<Link> findByUrl(String url);
+    Optional<Link> findByUrl(URI url);
 
     Optional<Link> findById(long id);
 
-    Link saveOrFindByUrl(String url);
+    Link saveOrFindByUrl(URI url);
 
-    Collection<Link> findByLastCheckDelayFromNow(Duration duration);
+    Set<Link> findByLastCheckDelayFromNow(Duration duration);
 
-    List<Long> findAssociatedChatsIdsById(long id);
+    List<Long> findAssociatedChatsIdsByLinkId(long id);
 
-    void updateLastCheckedById(long id);
+    void updateLastCheckedAtById(long id);
 
-    void updateLastCheckedById(long id, LocalDateTime lastChecked);
+    void updateLastCheckedAtById(LocalDateTime lastChecked, long id);
 }

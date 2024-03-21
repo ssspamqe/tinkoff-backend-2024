@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 
 @Data
 @AllArgsConstructor
-public class Chat {
+public class  Chat {
 
     @Id
     private long id;

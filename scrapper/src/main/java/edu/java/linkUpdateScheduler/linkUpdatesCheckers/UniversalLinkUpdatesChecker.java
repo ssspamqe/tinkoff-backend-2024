@@ -28,7 +28,7 @@ public class UniversalLinkUpdatesChecker {
 
             }
         }
-        linkDao.updateLastCheckedById(link.getId());
+        linkDao.updateLastCheckedAtById(link.getId());
         return List.of();
     }
 }

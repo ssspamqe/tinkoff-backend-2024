@@ -51,7 +51,7 @@ public class LinkJooqDAO implements LinkDataAccessObject {
     }
 
     @Override
-    public List<Long> findAssociatedChatsIdsById(long id) {
+    public List<Long> findAssociatedChatsIdsByLinkId(long id) {
         return chatLinksRepository
             .findByLinkId(id)
             .stream()
@@ -59,13 +59,12 @@ public class LinkJooqDAO implements LinkDataAccessObject {
     }
 
     @Override
-    public void updateLastCheckedById(long id) {
+    public void updateLastCheckedAtById(long id) {
         LocalDateTime currentTime = LocalDateTime.now();
         updateLastCheckedByIdWithoutTransaction(id, currentTime);
     }
 
-    @Override
-    public void updateLastCheckedById(long id, LocalDateTime lastChecked) {
+    public void updateLastCheckedAtById(long id, LocalDateTime lastChecked) {
         updateLastCheckedByIdWithoutTransaction(id, lastChecked);
     }
 

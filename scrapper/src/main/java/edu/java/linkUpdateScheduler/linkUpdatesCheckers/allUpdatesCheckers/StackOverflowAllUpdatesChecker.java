@@ -62,7 +62,7 @@ public class StackOverflowAllUpdatesChecker implements LinkAllUpdatesChecker {
     }
 
     private List<LinkUpdate> buildLinkUpdateList(Link link, List<LinkUpdateType> updateTypes) {
-        List<Long> chatIds = linkDao.findAssociatedChatsIdsById(link.getId());
+        List<Long> chatIds = linkDao.findAssociatedChatsIdsByLinkId(link.getId());
         return updateTypes.stream()
             .map(type ->
                 new LinkUpdate(
