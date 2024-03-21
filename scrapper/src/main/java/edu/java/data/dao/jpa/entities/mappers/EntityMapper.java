@@ -2,8 +2,8 @@ package edu.java.data.dao.jpa.entities.mappers;
 
 import java.util.Optional;
 
-public interface EntityMapper<J, D> {
-    abstract D toDto(J jpaEntity);
+public interface EntityMapper<J, D>{
+    D toDto(J jpaEntity);
 
     default Optional<D> toOptionalDto(Optional<J> optionalJpaEntity) {
         if (optionalJpaEntity.isEmpty()) {

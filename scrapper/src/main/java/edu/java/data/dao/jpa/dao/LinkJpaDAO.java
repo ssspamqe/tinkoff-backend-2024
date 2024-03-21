@@ -4,7 +4,7 @@ import edu.java.data.dao.interfaces.LinkDataAccessObject;
 import edu.java.data.dao.jpa.entities.ChatJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dao.jpa.entities.mappers.EntityMapper;
-import edu.java.data.dao.jpa.entities.mappers.LinkEntityMapper;
+import edu.java.data.dao.jpa.entities.mappers.LinkMapper;
 import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dto.Link;
 import edu.java.data.exceptions.NoSuchLinkException;
@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class LinkJpaDAO implements LinkDataAccessObject {
 
-    private static final EntityMapper<LinkJpaEntity, Link> LINK_MAPPER = new LinkEntityMapper();
+    private static final EntityMapper<LinkJpaEntity, Link> LINK_MAPPER = new LinkMapper();
 
     private final LinkJpaRepository linkRepository;
 

@@ -2,10 +2,11 @@ package edu.java.data.dao.jpa.entities.mappers;
 
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dto.Link;
+import org.springframework.stereotype.Component;
 import java.net.URI;
-import java.util.Optional;
 
-public class LinkEntityMapper implements EntityMapper<LinkJpaEntity, Link> {
+@Component
+public class LinkMapper implements EntityMapper<LinkJpaEntity, Link> {
     @Override
     public Link toDto(LinkJpaEntity jpaEntity) {
         if (jpaEntity == null) {

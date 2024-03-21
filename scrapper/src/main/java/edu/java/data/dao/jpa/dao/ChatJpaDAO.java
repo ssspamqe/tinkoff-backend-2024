@@ -3,9 +3,9 @@ package edu.java.data.dao.jpa.dao;
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.dao.jpa.entities.ChatJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
-import edu.java.data.dao.jpa.entities.mappers.ChatEntityMapper;
+import edu.java.data.dao.jpa.entities.mappers.ChatMapper;
 import edu.java.data.dao.jpa.entities.mappers.EntityMapper;
-import edu.java.data.dao.jpa.entities.mappers.LinkEntityMapper;
+import edu.java.data.dao.jpa.entities.mappers.LinkMapper;
 import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dto.Chat;
 import edu.java.data.dto.Link;
@@ -24,8 +24,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ChatJpaDAO implements ChatDataAccessObject {
 
-    private static final EntityMapper<ChatJpaEntity, Chat> CHAT_MAPPER = new ChatEntityMapper();
-    private static final EntityMapper<LinkJpaEntity, Link> LINK_MAPPER = new LinkEntityMapper();
+    private static final EntityMapper<ChatJpaEntity, Chat> CHAT_MAPPER = new ChatMapper();
+    private static final EntityMapper<LinkJpaEntity, Link> LINK_MAPPER = new LinkMapper();
 
     private final ChatJpaRepository chatRepository;
     private final LinkJpaDAO linkDao;
