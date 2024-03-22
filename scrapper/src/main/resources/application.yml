@@ -14,7 +14,7 @@ app:
     - github.dev
   stack-overflow-host-names:
     - stackoverflow.com
-  database-access-type: jooq
+  database-access-type: jdbc
 
 spring:
   application:
