@@ -6,9 +6,13 @@ import java.time.Duration;
 import java.util.Set;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.validation.annotation.Validated;
 
+@ComponentScan(basePackages = "edu.java",
+               excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "edu.java.domain.jooq.*"))
 @Validated
 @ConfigurationProperties(prefix = "app", ignoreUnknownFields = false)
 @EnableScheduling
@@ -30,7 +34,10 @@ public record ApplicationConfig(
     Set<String> gitHubHostNames,
 
     @NotNull
-    Set<String> stackOverflowHostNames
+    Set<String> stackOverflowHostNames,
+
+    @NotNull
+    DatabaseAccessType databaseAccessType
 ) {
 
     public boolean isGitHubHostName(String hostName) {
@@ -51,6 +58,10 @@ public record ApplicationConfig(
             }
             return configUrl;
         }
+    }
+
+    public enum DatabaseAccessType {
+        JDBC, JPA, JOOQ
     }
 
 }

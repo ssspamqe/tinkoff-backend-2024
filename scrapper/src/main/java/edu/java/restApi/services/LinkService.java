@@ -1,8 +1,9 @@
 package edu.java.restApi.services;
 
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
-import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import edu.java.data.dto.Link;
+import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
+import java.net.URI;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,11 +19,11 @@ public class LinkService {
         return chatDao.getTrackedLinksByChatId(chatApiId);
     }
 
-    public Link addLinkToTrack(long chatApiId, String linkUrl) {
+    public Link addLinkToTrack(long chatApiId, URI linkUrl) {
         return chatDao.associateUrlByChatId(linkUrl, chatApiId);
     }
 
-    public Link untrackLink(long chatApiId, String linkUrl) {
+    public Link untrackLink(long chatApiId, URI linkUrl) {
         return chatDao.dissociateUrlByChatId(linkUrl, chatApiId);
     }
 }

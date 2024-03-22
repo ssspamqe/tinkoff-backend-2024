@@ -1,4 +1,4 @@
-package edu.java.configuration;
+package edu.java.configuration.databaseAccessConfigurations;
 
 import javax.sql.DataSource;
 import lombok.RequiredArgsConstructor;
@@ -7,20 +7,16 @@ import org.jooq.conf.RenderQuotedNames;
 import org.jooq.impl.DataSourceConnectionProvider;
 import org.jooq.impl.DefaultConfiguration;
 import org.jooq.impl.DefaultDSLContext;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.jooq.DefaultConfigurationCustomizer;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.FilterType;
 import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
 
 @Configuration
-@ComponentScan(basePackages = "edu.java",
-               excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "edu.java.domain.jooq.*"))
 @RequiredArgsConstructor
+@ConditionalOnProperty(prefix = "app", name = "database-access-type", havingValue = "jooq")
 public class JooqBeanConfiguration {
-
-    private final DataSource dataSource;
 
     @Bean
     public DefaultConfigurationCustomizer postgresJooqCustomizer() {
@@ -31,20 +27,20 @@ public class JooqBeanConfiguration {
     }
 
     @Bean
-    public DataSourceConnectionProvider connectionProvider() {
+    public DataSourceConnectionProvider connectionProvider(DataSource dataSource) {
         return new DataSourceConnectionProvider(
             new TransactionAwareDataSourceProxy(dataSource)
         );
     }
 
     @Bean
-    public DefaultDSLContext dsl() {
-        return new DefaultDSLContext(configuration());
+    public DefaultDSLContext dsl(DataSource dataSource) {
+        return new DefaultDSLContext(configuration(dataSource));
     }
 
-    public DefaultConfiguration configuration() {
+    public DefaultConfiguration configuration(DataSource dataSource) {
         DefaultConfiguration jooqConfiguration = new DefaultConfiguration();
-        jooqConfiguration.set(connectionProvider());
+        jooqConfiguration.set(connectionProvider(dataSource));
         jooqConfiguration.set(SQLDialect.POSTGRES);
 
         return jooqConfiguration;

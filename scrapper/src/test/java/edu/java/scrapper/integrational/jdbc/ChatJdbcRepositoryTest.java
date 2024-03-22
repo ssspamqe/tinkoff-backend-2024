@@ -1,7 +1,6 @@
 package edu.java.scrapper.integrational.jdbc;
 
 import edu.java.data.dto.Chat;
-import edu.java.data.postgres.repositories.ChatRepository;
 import edu.java.data.dao.jdbc.repositories.rowMappers.ChatRowMapper;
 import java.time.LocalDateTime;
 import java.util.Optional;
