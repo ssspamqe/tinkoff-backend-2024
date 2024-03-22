@@ -31,7 +31,6 @@ public class ChatJpaEntity {
     private LocalDateTime createdAt;
 
     @ManyToMany(mappedBy = "chats", fetch = FetchType.EAGER)
-    @JoinTable(name = "chat_links")
     private Set<LinkJpaEntity> links;
 
     public ChatJpaEntity(long id) {

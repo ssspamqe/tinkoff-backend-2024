@@ -9,7 +9,6 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 
-@Repository
 @RequiredArgsConstructor
 public class GitHubRepositoryJdbcRepository {
 

@@ -7,7 +7,6 @@ import org.jooq.impl.DefaultDSLContext;
 import org.springframework.stereotype.Repository;
 import static edu.java.domain.jooq.public_.Tables.GIT_HUB_REPOSITORIES;
 
-@Repository
 @RequiredArgsConstructor
 public class GitHubRepositoryJooqRepository {
 

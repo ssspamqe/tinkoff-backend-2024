@@ -10,14 +10,13 @@ import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import java.net.URI;
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
 @RequiredArgsConstructor
 @Transactional
 public class LinkJdbcDAO implements LinkDataAccessObject {
@@ -26,18 +25,21 @@ public class LinkJdbcDAO implements LinkDataAccessObject {
     private final ChatLinksJdbcRepository chatLinksRepository;
     private final UniversalInitialStateScreener initialStateScreener;
 
-    public Optional<Link> findByUrl(String url) {
+    @Override
+    public Optional<Link> findByUrl(URI url) {
         return linkRepository.findByUrl(url);
     }
 
+    @Override
     public Optional<Link> findById(long id) {
         return linkRepository.findById(id);
     }
 
-    public Link saveOrFindByUrl(String url) {
+    @Override
+    public Link saveOrFindByUrl(URI url) {
         return linkRepository.findByUrl(url)
             .orElseGet(() -> {
-                Link newLink = new Link(URI.create(url));
+                Link newLink = new Link(url);
                 newLink = linkRepository.save(newLink);
                 initialStateScreener.saveInitialState(newLink);
                 return newLink;
@@ -45,7 +47,7 @@ public class LinkJdbcDAO implements LinkDataAccessObject {
     }
 
     @Override
-    public Collection<Link> findByLastCheckDelayFromNow(Duration duration) {
+    public Set<Link> findByLastCheckDelayFromNow(Duration duration) {
         long seconds = duration.getSeconds();
         return linkRepository.findByLastCheckDelayFromNowInSeconds(seconds);
     }
@@ -64,7 +66,8 @@ public class LinkJdbcDAO implements LinkDataAccessObject {
         updateLastCheckedByIdWithoutTransaction(id, currentTime);
     }
 
-    public void updateLastCheckedAtById(long id, LocalDateTime lastChecked) {
+    @Override
+    public void updateLastCheckedAtById(LocalDateTime lastChecked, long id) {
         updateLastCheckedByIdWithoutTransaction(id, lastChecked);
     }
 

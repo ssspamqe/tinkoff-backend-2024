@@ -1,19 +1,18 @@
 package edu.java.data.dao.jooq.dao;
 
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
-import edu.java.data.dao.jdbc.repositories.GitHubRepositoryJdbcRepository;
+import edu.java.data.dao.jooq.repositories.GitHubRepositoryJooqRepository;
 import edu.java.data.dto.GitHubRepository;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
 @RequiredArgsConstructor
 @Transactional
 public class GitHubRepositoryJooqDAO implements GitHubRepositoryDataAccessObject {
 
-    private final GitHubRepositoryJdbcRepository gitHubRepositoryEntityRepository;
+    private final GitHubRepositoryJooqRepository gitHubRepositoryEntityRepository;
 
     @Override
     public void save(GitHubRepository repository) {

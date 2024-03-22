@@ -1,15 +1,16 @@
 package edu.java.data.dao.jooq.repositories;
 
 import edu.java.data.dto.Link;
+import java.net.URI;
 import java.time.LocalDateTime;
-import java.util.Collection;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.jooq.impl.DefaultDSLContext;
 import org.springframework.stereotype.Repository;
 import static edu.java.domain.jooq.public_.Tables.LINKS;
 
-@Repository
 @RequiredArgsConstructor
 public class LinkJooqRepository {
 
@@ -24,12 +25,13 @@ public class LinkJooqRepository {
             .fetchOneInto(Link.class);
     }
 
-    public Collection<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
+    public Set<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
         LocalDateTime borderTime = LocalDateTime.now().minusSeconds(seconds);
         return dsl.select()
             .from(LINKS)
             .where(LINKS.LAST_CHECKED_AT.lessThan(borderTime))
-            .fetchInto(Link.class);
+            .fetchStreamInto(Link.class)
+            .collect(Collectors.toSet());
     }
 
     public void update(Link link) {
@@ -49,16 +51,14 @@ public class LinkJooqRepository {
         return Optional.ofNullable(link);
     }
 
-    @Override
-    public Optional<Link> findByUrl(String url) {
+    public Optional<Link> findByUrl(URI url) {
         Link link = dsl.select()
             .from(LINKS)
-            .where(LINKS.URL.eq(url))
+            .where(LINKS.URL.eq(url.toString()))
             .fetchOneInto(Link.class);
         return Optional.ofNullable(link);
     }
 
-    @Override
     public boolean removeById(long id) {
         return dsl.delete(LINKS)
             .where(LINKS.ID.eq(id))

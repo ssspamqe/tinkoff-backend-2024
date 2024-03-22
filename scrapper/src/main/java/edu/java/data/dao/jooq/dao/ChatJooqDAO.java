@@ -1,8 +1,8 @@
 package edu.java.data.dao.jooq.dao;
 
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
-import edu.java.data.dao.jooq.repositories.ChatLinksJooqRepository;
 import edu.java.data.dao.jooq.repositories.ChatJooqRepository;
+import edu.java.data.dao.jooq.repositories.ChatLinksJooqRepository;
 import edu.java.data.dto.Chat;
 import edu.java.data.dto.ChatLink;
 import edu.java.data.dto.Link;
@@ -17,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
 @RequiredArgsConstructor
 @Transactional
 public class ChatJooqDAO implements ChatDataAccessObject {
@@ -26,14 +25,16 @@ public class ChatJooqDAO implements ChatDataAccessObject {
     private final ChatLinksJooqRepository chatLinksRepository;
     private final LinkJooqDAO linkDao;
 
+    @Override
     public Optional<Chat> findById(long id) {
         return chatRepository.findById(id);
     }
 
-    public Set<Link> getTrackedLinksByChatId(long срфеШв) {
-        Chat chat = chatRepository.findById(срфеШв)
-            .orElseThrow(() -> new NoSuchChatException(срфеШв));
-        long chatId = chat.getId();
+    @Override
+    public Set<Link> getTrackedLinksByChatId(long chatId) {
+        if (chatRepository.findById(chatId).isEmpty()) {
+            throw new NoSuchChatException(chatId);
+        }
 
         return buildSetOfLinks(chatId);
     }
@@ -47,7 +48,8 @@ public class ChatJooqDAO implements ChatDataAccessObject {
             }).collect(Collectors.toSet());
     }
 
-    public Link associateUrlByChatId(String url, long chatId) {
+    @Override
+    public Link associateUrlByChatId(URI url, long chatId) {
         if (chatRepository.findById(chatId).isEmpty()) {
             throw new NoSuchChatException(chatId);
         }
@@ -63,13 +65,13 @@ public class ChatJooqDAO implements ChatDataAccessObject {
         chatLinksRepository.save(chatLinkCouple);
     }
 
-    public Link dissociateUrlByChatId(String url, long chatId) {
+    public Link dissociateUrlByChatId(URI url, long chatId) {
         if (chatRepository.findById(chatId).isEmpty()) {
             throw new NoSuchChatException(chatId);
         }
 
         Link link = linkDao.findByUrl(url)
-            .orElseThrow(() -> new NoSuchLinkException(URI.create(url)));
+            .orElseThrow(() -> new NoSuchLinkException(url));
 
         chatLinksRepository.removeByChatIdAndLinkId(chatId, link.getId());
         return link;

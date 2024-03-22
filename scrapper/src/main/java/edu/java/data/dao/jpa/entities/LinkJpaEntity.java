@@ -40,7 +40,6 @@ public class LinkJpaEntity {
     private LocalDateTime lastCheckedAt;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "chat_links")
     private Set<ChatJpaEntity> chats;
 
     public LinkJpaEntity(URI url) {

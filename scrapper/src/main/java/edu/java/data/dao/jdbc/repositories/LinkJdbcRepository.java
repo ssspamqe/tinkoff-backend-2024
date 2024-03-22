@@ -2,16 +2,17 @@ package edu.java.data.dao.jdbc.repositories;
 
 import edu.java.data.dao.jdbc.repositories.rowMappers.LinkRowMapper;
 import edu.java.data.dto.Link;
+import java.net.URI;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.Collection;
 import java.util.Optional;
+import java.util.Set;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 
-@Repository
 @RequiredArgsConstructor
 public class LinkJdbcRepository {
 
@@ -61,7 +62,7 @@ public class LinkJdbcRepository {
     }
 
     @SuppressWarnings("MultipleStringLiterals")
-    public Collection<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
+    public Set<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
         Timestamp sqlTimestamp = Timestamp.from(Instant.now().minusSeconds(seconds));
         return jdbcClient.sql(FIND_BY_LAST_CHECK_DELAY_QUERY)
             .param("timestamp", sqlTimestamp)
@@ -78,9 +79,9 @@ public class LinkJdbcRepository {
     }
 
     @SuppressWarnings("MultipleStringLiterals")
-    public Optional<Link> findByUrl(String url) {
+    public Optional<Link> findByUrl(URI url) {
         return jdbcClient.sql(FIND_BY_URL_QUERY)
-            .param("url", url)
+            .param("url", url.toString())
             .query(ROW_MAPPER)
             .optional();
     }
