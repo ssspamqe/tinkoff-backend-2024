@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,23 +48,17 @@ public class LinkJooqDAO implements LinkDataAccessObject {
     }
 
     @Override
-    public Set<Link> findByLastCheckDelayFromNow(Duration duration) {
-        long seconds = duration.getSeconds();
-        return linkRepository.findByLastCheckDelayFromNowInSeconds(seconds);
+    public Set<Link> findByLastCheckedAtBefore(LocalDateTime borderDateTime) {
+        return linkRepository.findByLastCheckedAtBefore(borderDateTime);
     }
 
     @Override
-    public List<Long> findAssociatedChatsIdsByLinkId(long id) {
+    public Set<Long> findAssociatedChatsIdsByLinkId(long id) {
         return chatLinksRepository
             .findByLinkId(id)
             .stream()
-            .map(ChatLink::getChatId).toList();
-    }
-
-    @Override
-    public void updateLastCheckedAtById(long id) {
-        LocalDateTime currentTime = LocalDateTime.now();
-        updateLastCheckedByIdWithoutTransaction(currentTime, id);
+            .map(ChatLink::getChatId)
+            .collect(Collectors.toSet());
     }
 
     @Override

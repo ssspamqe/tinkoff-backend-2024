@@ -16,11 +16,9 @@ public interface LinkDataAccessObject {
 
     Link saveOrFindByUrl(URI url);
 
-    Set<Link> findByLastCheckDelayFromNow(Duration duration);
+    Set<Link> findByLastCheckedAtBefore(LocalDateTime borderDateTime);
 
-    List<Long> findAssociatedChatsIdsByLinkId(long id);
-
-    void updateLastCheckedAtById(long id);
+    Set<Long> findAssociatedChatsIdsByLinkId(long id);
 
     void updateLastCheckedAtById(LocalDateTime lastChecked, long id);
 }

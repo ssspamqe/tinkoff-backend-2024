@@ -8,7 +8,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.jooq.impl.DefaultDSLContext;
-import org.springframework.stereotype.Repository;
 import static edu.java.domain.jooq.public_.Tables.LINKS;
 
 @RequiredArgsConstructor
@@ -25,11 +24,10 @@ public class LinkJooqRepository {
             .fetchOneInto(Link.class);
     }
 
-    public Set<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
-        LocalDateTime borderTime = LocalDateTime.now().minusSeconds(seconds);
+    public Set<Link> findByLastCheckedAtBefore(LocalDateTime borderDateTime) {
         return dsl.select()
             .from(LINKS)
-            .where(LINKS.LAST_CHECKED_AT.lessThan(borderTime))
+            .where(LINKS.LAST_CHECKED_AT.lessThan(borderDateTime))
             .fetchStreamInto(Link.class)
             .collect(Collectors.toSet());
     }

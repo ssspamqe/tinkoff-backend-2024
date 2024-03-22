@@ -8,13 +8,11 @@ import edu.java.data.dto.Link;
 import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import java.net.URI;
-import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
@@ -47,31 +45,21 @@ public class LinkJdbcDAO implements LinkDataAccessObject {
     }
 
     @Override
-    public Set<Link> findByLastCheckDelayFromNow(Duration duration) {
-        long seconds = duration.getSeconds();
-        return linkRepository.findByLastCheckDelayFromNowInSeconds(seconds);
+    public Set<Link> findByLastCheckedAtBefore(LocalDateTime borderDateTime) {
+        return linkRepository.findByLastCheckedAtBefore(borderDateTime);
     }
 
     @Override
-    public List<Long> findAssociatedChatsIdsByLinkId(long id) {
+    public Set<Long> findAssociatedChatsIdsByLinkId(long id) {
         return chatLinksRepository
             .findByLinkId(id)
             .stream()
-            .map(ChatLink::getChatId).toList();
-    }
-
-    @Override
-    public void updateLastCheckedAtById(long id) {
-        LocalDateTime currentTime = LocalDateTime.now();
-        updateLastCheckedByIdWithoutTransaction(id, currentTime);
+            .map(ChatLink::getChatId)
+            .collect(Collectors.toSet());
     }
 
     @Override
     public void updateLastCheckedAtById(LocalDateTime lastChecked, long id) {
-        updateLastCheckedByIdWithoutTransaction(id, lastChecked);
-    }
-
-    private void updateLastCheckedByIdWithoutTransaction(long id, LocalDateTime lastChecked) {
         Link link = findLinkByIdOrThrowException(id);
         link.setLastCheckedAt(lastChecked);
         linkRepository.update(link);

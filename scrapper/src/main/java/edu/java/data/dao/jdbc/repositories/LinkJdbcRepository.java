@@ -5,6 +5,8 @@ import edu.java.data.dto.Link;
 import java.net.URI;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
@@ -62,8 +64,8 @@ public class LinkJdbcRepository {
     }
 
     @SuppressWarnings("MultipleStringLiterals")
-    public Set<Link> findByLastCheckDelayFromNowInSeconds(long seconds) {
-        Timestamp sqlTimestamp = Timestamp.from(Instant.now().minusSeconds(seconds));
+    public Set<Link> findByLastCheckedAtBefore(LocalDateTime borderTime) {
+        Timestamp sqlTimestamp = Timestamp.valueOf(borderTime);
         return jdbcClient.sql(FIND_BY_LAST_CHECK_DELAY_QUERY)
             .param("timestamp", sqlTimestamp)
             .query(ROW_MAPPER)
