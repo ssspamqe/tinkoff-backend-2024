@@ -3,7 +3,10 @@ package edu.java.data.dao.jpa.entities.utils.mappers;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dao.jpa.entities.StackOverflowQuestionJpaEntity;
 import edu.java.data.dto.StackOverflowQuestion;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +22,7 @@ public class StackOverflowQuestionMapper
         long id = jpaEntity.getId();
         long linkId = jpaEntity.getLink().getId();
         String descriptionMd5Hash = jpaEntity.getDescriptionMd5Hash();
-        Set<Long> answersIds = jpaEntity.getAnswersIds();
+        Set<Long> answersIds = new HashSet<>(jpaEntity.getAnswersIds());
 
         return new StackOverflowQuestion(
             id,
@@ -33,7 +36,7 @@ public class StackOverflowQuestionMapper
     public StackOverflowQuestionJpaEntity toJpaWithLink(StackOverflowQuestion dtoEntity, LinkJpaEntity link) {
         long id = dtoEntity.getId();
         String descriptionMd5Hash = dtoEntity.getDescriptionMd5Hash();
-        Set<Long> answersIds = new HashSet<>(dtoEntity.getAnswerIds());
+        List<Long> answersIds = new ArrayList<>(dtoEntity.getAnswerIds());
 
         return new StackOverflowQuestionJpaEntity(
             id,

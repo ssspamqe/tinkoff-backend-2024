@@ -3,7 +3,9 @@ package edu.java.data.dao.jpa.entities.utils.mappers;
 import edu.java.data.dao.jpa.entities.GitHubRepositoryJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dto.GitHubRepository;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import org.springframework.stereotype.Component;
 
@@ -21,6 +23,7 @@ public class GitHubRepositoryMapper implements ServiceEntityMapper<GitHubReposit
         String name = jpaEntity.getName();
         String owner = jpaEntity.getOwner();
         String descriptionMd5Hash = jpaEntity.getDescriptionMd5Hash();
+
         Set<Long> activitiesIds = new HashSet<>(jpaEntity.getActivitiesIds());
 
         return new GitHubRepository(
@@ -39,7 +42,7 @@ public class GitHubRepositoryMapper implements ServiceEntityMapper<GitHubReposit
         String name = dtoEntity.getName();
         String owner = dtoEntity.getOwner();
         String descriptionMd5Hash = dtoEntity.getDescriptionMd5Hash();
-        Set<Long> activitiesIds = new HashSet<>(dtoEntity.getActivitiesIds());
+        List<Long> activitiesIds = new ArrayList<>(dtoEntity.getActivitiesIds());
 
         return new GitHubRepositoryJpaEntity(
             id,
