@@ -55,8 +55,7 @@ public class LinkJooqDAO implements LinkDataAccessObject {
     @Override
     public Set<Long> findAssociatedChatsIdsByLinkId(long id) {
         return chatLinksRepository
-            .findByLinkId(id)
-            .stream()
+            .findByLinkId(id).stream()
             .map(ChatLink::getChatId)
             .collect(Collectors.toSet());
     }

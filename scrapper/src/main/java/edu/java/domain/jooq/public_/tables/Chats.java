@@ -7,7 +7,7 @@ package edu.java.domain.jooq.public_.tables;
 import edu.java.domain.jooq.public_.Public;
 import edu.java.domain.jooq.public_.tables.records.ChatsRecord;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 import javax.annotation.processing.Generated;
 
@@ -46,7 +46,7 @@ public class Chats extends TableImpl<ChatsRecord> {
 
     public final TableField<ChatsRecord, Long> ID = createField(DSL.name("id"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    public final TableField<ChatsRecord, OffsetDateTime> CREATED_AT = createField(DSL.name("created_at"), SQLDataType.TIMESTAMPWITHTIMEZONE(6).nullable(false), this, "");
+    public final TableField<ChatsRecord, LocalDateTime> CREATED_AT = createField(DSL.name("created_at"), SQLDataType.LOCALDATETIME(6).nullable(false), this, "");
 
     private Chats(Name alias, Table<ChatsRecord> aliased) {
         this(alias, aliased, null);

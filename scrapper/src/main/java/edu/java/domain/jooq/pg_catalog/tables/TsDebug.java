@@ -57,7 +57,6 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
 
     private TsDebug(Name alias, Table<TsDebugRecord> aliased) {
         this(alias, aliased, new Field[] {
-            DSL.val(null, org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"regconfig\"")),
             DSL.val(null, SQLDataType.CLOB)
         });
     }
@@ -121,11 +120,9 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
     }
 
     public TsDebug call(
-          Object config
-        , String document
+          String document
     ) {
         TsDebug result = new TsDebug(DSL.name("ts_debug"), null, new Field[] {
-            DSL.val(config, org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"regconfig\"")),
             DSL.val(document, SQLDataType.CLOB)
         });
 
@@ -133,11 +130,9 @@ public class TsDebug extends TableImpl<TsDebugRecord> {
     }
 
     public TsDebug call(
-          Field<Object> config
-        , Field<String> document
+          Field<String> document
     ) {
         TsDebug result = new TsDebug(DSL.name("ts_debug"), null, new Field[] {
-            config,
             document
         });
 

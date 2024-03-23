@@ -15,13 +15,9 @@ public class ChatJooqRepository {
     private final DefaultDSLContext dsl;
 
     public void save(Chat chat) {
-        OffsetDateTime offsetCreatedAt =
-            chat.getCreatedAt()
-                .atZone(ZoneId.systemDefault())
-                .toOffsetDateTime();
         dsl.insertInto(CHATS)
             .set(CHATS.ID, chat.getId())
-            .set(CHATS.CREATED_AT, offsetCreatedAt)
+            .set(CHATS.CREATED_AT, chat.getCreatedAt())
             .execute();
     }
 

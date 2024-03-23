@@ -6,7 +6,7 @@ package edu.java.domain.jooq.public_.tables.pojos;
 
 import java.beans.ConstructorProperties;
 import java.io.Serializable;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 import javax.annotation.processing.Generated;
 
@@ -26,7 +26,7 @@ public class Chats implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Long id;
-    private OffsetDateTime createdAt;
+    private LocalDateTime createdAt;
 
     public Chats() {}
 
@@ -38,7 +38,7 @@ public class Chats implements Serializable {
     @ConstructorProperties({ "id", "createdAt" })
     public Chats(
         @NotNull Long id,
-        @NotNull OffsetDateTime createdAt
+        @NotNull LocalDateTime createdAt
     ) {
         this.id = id;
         this.createdAt = createdAt;
@@ -56,11 +56,11 @@ public class Chats implements Serializable {
 
     @jakarta.validation.constraints.NotNull
     @NotNull
-    public OffsetDateTime getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return this.createdAt;
     }
 
-    public void setCreatedAt(@NotNull OffsetDateTime createdAt) {
+    public void setCreatedAt(@NotNull LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
