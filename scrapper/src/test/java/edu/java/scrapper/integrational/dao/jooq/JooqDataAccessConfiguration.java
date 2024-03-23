@@ -1,6 +1,5 @@
 package edu.java.scrapper.integrational.dao.jooq;
 
-import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.dao.jooq.dao.ChatJooqDAO;
 import edu.java.data.dao.jooq.dao.GitHubRepositoryJooqDAO;
 import edu.java.data.dao.jooq.dao.LinkJooqDAO;
@@ -70,7 +69,7 @@ public class JooqDataAccessConfiguration {
     }
 
     @Bean @Primary
-    public StackOverflowQuestionDataAccessObject stackOverflowQuestionJooqDAO(
+    public StackOverflowQuestionJooqDAO stackOverflowQuestionJooqDAO(
         StackOverflowQuestionJooqRepository questionRepository
     ) {
         return new StackOverflowQuestionJooqDAO(questionRepository);

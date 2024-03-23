@@ -1,11 +1,17 @@
 package edu.java.scrapper.integrational;
 
 import edu.java.data.dao.jdbc.dao.ChatJdbcDAO;
+import edu.java.data.dao.jdbc.dao.GitHubRepositoryJdbcDAO;
 import edu.java.data.dao.jdbc.dao.LinkJdbcDAO;
+import edu.java.data.dao.jdbc.dao.StackOverflowQuestionJdbcDAO;
 import edu.java.data.dao.jooq.dao.ChatJooqDAO;
+import edu.java.data.dao.jooq.dao.GitHubRepositoryJooqDAO;
 import edu.java.data.dao.jooq.dao.LinkJooqDAO;
+import edu.java.data.dao.jooq.dao.StackOverflowQuestionJooqDAO;
 import edu.java.data.dao.jpa.dao.ChatJpaDAO;
+import edu.java.data.dao.jpa.dao.GitHubRepositoryJpaDAO;
 import edu.java.data.dao.jpa.dao.LinkJpaDAO;
+import edu.java.data.dao.jpa.dao.StackOverflowQuestionJpaDAO;
 import edu.java.scrapper.integrational.dao.jdbc.JdbcDataAccessConfiguration;
 import edu.java.scrapper.integrational.dao.jooq.JooqDataAccessConfiguration;
 import edu.java.scrapper.integrational.dao.jpa.JpaDataAccessConfiguration;
@@ -54,12 +60,18 @@ public abstract class DatabaseIntegrationEnvironment {
 
     @Autowired protected ChatJdbcDAO chatJdbcDao;
     @Autowired protected LinkJdbcDAO linkJdbcDao;
+    @Autowired protected GitHubRepositoryJdbcDAO gitHubRepositoryJdbcDao;
+    @Autowired protected StackOverflowQuestionJdbcDAO stackOverflowQuestionJdbcDao;
 
     @Autowired protected ChatJooqDAO chatJooqDao;
     @Autowired protected LinkJooqDAO linkJooqDao;
+    @Autowired protected GitHubRepositoryJooqDAO gitHubRepositoryJooqDao;
+    @Autowired protected StackOverflowQuestionJooqDAO stackOverflowQuestionJooqDao;
 
     @Autowired protected ChatJpaDAO chatJpaDao;
     @Autowired protected LinkJpaDAO linkJpaDao;
+    @Autowired protected GitHubRepositoryJpaDAO gitHubRepositoryJpaDao;
+    @Autowired protected StackOverflowQuestionJpaDAO stackOverflowQuestionJpaDao;
 
     static {
         POSTGRES = new PostgreSQLContainer<>("postgres:16")

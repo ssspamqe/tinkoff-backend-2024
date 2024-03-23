@@ -2,18 +2,17 @@ package edu.java.data.dao.jdbc.repositories;
 
 import edu.java.data.dto.GitHubRepository;
 
-import edu.java.data.dao.jdbc.repositories.rowMappers.GitHubRepoitoryRowMapper;
+import edu.java.data.dao.jdbc.repositories.rowMappers.GitHubRepositoryRowMapper;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
-import org.springframework.stereotype.Repository;
 
 @RequiredArgsConstructor
 public class GitHubRepositoryJdbcRepository {
 
     private static final String TABLE_NAME = "git_hub_repositories";
-    private static final RowMapper<GitHubRepository> ROW_MAPPER = new GitHubRepoitoryRowMapper();
+    private static final RowMapper<GitHubRepository> ROW_MAPPER = new GitHubRepositoryRowMapper();
 
     private static final String SAVE_QUERY =
         STR."INSERT INTO \{TABLE_NAME} VALUES "

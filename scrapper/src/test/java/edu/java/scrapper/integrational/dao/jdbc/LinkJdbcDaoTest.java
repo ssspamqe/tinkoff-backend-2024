@@ -21,8 +21,18 @@ public class LinkJdbcDaoTest extends DatabaseIntegrationEnvironment {
     private LinkDataAccessObject linkDao;
 
     @BeforeEach
-    public void assignLinkDao() {
-        linkDao = linkJdbcDao;
+    void assignLinkDao() {
+        linkDao = linkJooqDao;
+    }
+
+    @Test
+    public void should_findById() {
+        long linkId = saveLinkWithUrl("https://example.org");
+
+        var link = linkDao.findById(linkId);
+
+        assertThat(link).isPresent();
+        assertThat(link.get().getUrl()).hasToString("https://example.org");
     }
 
     @Test

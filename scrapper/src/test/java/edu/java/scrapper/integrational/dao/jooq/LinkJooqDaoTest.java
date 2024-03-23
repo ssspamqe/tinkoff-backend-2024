@@ -26,6 +26,16 @@ public class LinkJooqDaoTest extends DatabaseIntegrationEnvironment {
     }
 
     @Test
+    public void should_findById() {
+        long linkId = saveLinkWithUrl("https://example.org");
+
+        var link = linkDao.findById(linkId);
+
+        assertThat(link).isPresent();
+        assertThat(link.get().getUrl()).hasToString("https://example.org");
+    }
+
+    @Test
     public void should_findByUrl() {
         saveLinkWithUrl("https://example.org");
 

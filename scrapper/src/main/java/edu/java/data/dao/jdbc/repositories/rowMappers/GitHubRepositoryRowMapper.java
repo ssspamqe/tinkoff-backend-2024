@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import org.springframework.jdbc.core.RowMapper;
 
-public class GitHubRepoitoryRowMapper implements RowMapper<GitHubRepository> {
+public class GitHubRepositoryRowMapper implements RowMapper<GitHubRepository> {
     @Override
     public GitHubRepository mapRow(ResultSet rs, int rowNum) throws SQLException {
         long id = rs.getLong("id");

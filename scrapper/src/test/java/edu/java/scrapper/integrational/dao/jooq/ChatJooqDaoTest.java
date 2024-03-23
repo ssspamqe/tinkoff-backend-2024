@@ -1,8 +1,11 @@
 package edu.java.scrapper.integrational.dao.jooq;
 
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
+import edu.java.data.dao.jdbc.repositories.rowMappers.ChatRowMapper;
 import edu.java.data.dao.jdbc.repositories.rowMappers.LinkRowMapper;
+import edu.java.data.dto.Chat;
 import edu.java.data.dto.Link;
+import edu.java.data.exceptions.DoubleChatRegistrationException;
 import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.net.URI;
@@ -17,12 +20,29 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
 
     private static final RowMapper<Link> LINK_JDBC_ROW_MAPPER = new LinkRowMapper();
+    private static final RowMapper<Chat> CHAT_JDBC_ROW_MAPPER = new ChatRowMapper();
 
     private ChatDataAccessObject chatDao;
 
     @BeforeEach
     void assignChatDao() {
         chatDao = chatJooqDao;
+    }
+
+    @Test
+    public void should_findChatById() {
+        saveChatWithId(1);
+
+        var chat = chatDao.findById(1);
+
+        assertThat(chat).isPresent();
+    }
+
+    @Test
+    public void should_returnEmptyOptional_when_noChatWithSuchId() {
+        var chat = chatDao.findById(1);
+
+        assertThat(chat).isEmpty();
     }
 
     @Test
@@ -108,6 +128,31 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
     @Test
     public void should_throwException_when_noSuchChat() {
         assertThatThrownBy(() -> chatDao.associateUrlByChatId(URI.create("https://example.com"), 1));
+    }
 
+    @Test
+    public void should_registerChatWithId() {
+        chatDao.registerChatWithId(1);
+
+        Chat chat = jdbcTemplate.queryForObject("SELECT * FROM chats WHERE id = 1", CHAT_JDBC_ROW_MAPPER);
+        assertThat(chat).isNotNull();
+    }
+
+    @Test
+    public void should_throwException_when_chatWithSuchIdWasAlreadyRegistered() {
+        saveChatWithId(1);
+
+        assertThatThrownBy(() -> chatDao.registerChatWithId(1))
+            .isInstanceOf(DoubleChatRegistrationException.class);
+    }
+
+    @Test
+    public void should_deleteChatById() {
+        saveChatWithId(1);
+
+        chatDao.deleteChatWithId(1);
+
+        Chat chat = jdbcTemplate.queryForObject("SELECT * FROM chats WHERE id = 1", CHAT_JDBC_ROW_MAPPER);
+        assertThat(chat).isNull();
     }
 }
