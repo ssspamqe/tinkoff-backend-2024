@@ -8,10 +8,10 @@ import edu.java.data.dao.jpa.dao.ChatJpaDAO;
 import edu.java.data.dao.jpa.dao.LinkJpaDAO;
 import edu.java.scrapper.integrational.dao.jdbc.JdbcDataAccessConfiguration;
 import edu.java.scrapper.integrational.dao.jooq.JooqDataAccessConfiguration;
+import edu.java.scrapper.integrational.dao.jpa.JpaDataAccessConfiguration;
 import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
-import edu.java.scrapper.integrational.dao.jpa.JpaDataAccessConfiguration;
 import liquibase.Contexts;
 import liquibase.LabelExpression;
 import liquibase.Liquibase;
@@ -45,7 +45,7 @@ public abstract class DatabaseIntegrationEnvironment {
     protected static final String INSERT_CHAT_STATEMENT =
         "INSERT INTO chats VALUES (?, '1970-01-01 00:00:00')";
     protected static final String INSERT_CHAT_LINKS_STATEMENT =
-        "INSERT INTO chat_links(chat_id, link_id) VALUES (?,?) RETURNING id";
+        "INSERT INTO chat_links(chat_id, link_id) VALUES (?,?)";
 
     @ServiceConnection
     protected static PostgreSQLContainer<?> POSTGRES;
@@ -94,7 +94,7 @@ public abstract class DatabaseIntegrationEnvironment {
         jdbcTemplate.update(INSERT_CHAT_STATEMENT, id);
     }
 
-    protected long saveChatIdLinkId(long chatId, long linkId) {
-        return jdbcTemplate.queryForObject(INSERT_CHAT_LINKS_STATEMENT, Long.class, chatId, linkId);
+    protected void saveChatIdLinkId(long chatId, long linkId) {
+        jdbcTemplate.update(INSERT_CHAT_LINKS_STATEMENT, chatId, linkId);
     }
 }

@@ -2,13 +2,12 @@ package edu.java.data.dao.jpa.dao;
 
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
 import edu.java.data.dao.jpa.entities.GitHubRepositoryJpaEntity;
-import edu.java.data.dao.jpa.entities.mappers.GitHubRepositoryMapper;
-import edu.java.data.dao.jpa.entities.mappers.ServiceEntityMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.GitHubRepositoryMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
 import edu.java.data.dto.GitHubRepository;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor

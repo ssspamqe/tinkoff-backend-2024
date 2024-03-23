@@ -1,4 +1,4 @@
-package edu.java.data.dao.jpa.entities.mappers;
+package edu.java.data.dao.jpa.entities.utils.mappers;
 
 import edu.java.data.dao.jpa.entities.GitHubRepositoryJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;

@@ -1,6 +1,7 @@
 package edu.java.data.dao.jpa.repositories;
 
 import edu.java.data.dao.jpa.entities.ChatJpaEntity;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -20,6 +21,8 @@ public interface ChatJpaRepository extends JpaRepository<ChatJpaEntity, Long> {
     @Modifying
     @Query(value = "DELETE FROM chat_links WHERE chat_id = :chat_id AND link_id = :link_id", nativeQuery = true)
     void dissociateLinkWithChatById(@Param("link_id") long linkId, @Param("chat_id") long chatId);
+
+    Optional<ChatJpaEntity> findById(long id);
 
     boolean existsById(long id);
 

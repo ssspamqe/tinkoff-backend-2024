@@ -3,9 +3,9 @@ package edu.java.data.dao.jpa.dao;
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.dao.jpa.entities.ChatJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
-import edu.java.data.dao.jpa.entities.mappers.ChatMapper;
-import edu.java.data.dao.jpa.entities.mappers.EntityMapper;
-import edu.java.data.dao.jpa.entities.mappers.LinkMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.ChatMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.EntityMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.LinkMapper;
 import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dto.Chat;
 import edu.java.data.dto.Link;
@@ -15,7 +15,6 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
@@ -39,8 +38,8 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         var jpaChat = findJpaByIdOrThrowException(chatId);
 
         return jpaChat
-            .getLinks().stream()
-            .map(LINK_MAPPER::toDto)
+            .getChatLinksPairs().stream()
+            .map(pair -> LINK_MAPPER.toDto(pair.getLink()))
             .collect(Collectors.toSet());
     }
 

@@ -6,8 +6,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.net.URI;
 import java.time.LocalDateTime;
@@ -33,14 +32,14 @@ public class LinkJpaEntity {
     @Column(name = "url")
     private URI url;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at", columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt;
 
-    @Column(name = "last_checked_at")
-    private LocalDateTime lastCheckedAt;
+    @Column(name = "last_checked_at", columnDefinition = "TIMESTAMP")
+    private LocalDateTime lastCheckedAt = LocalDateTime.of(1970, 1, 1, 0, 0);
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    private Set<ChatJpaEntity> chats;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "link")
+    private Set<ChatLinksJpa> chatLinksPairs;
 
     public LinkJpaEntity(URI url) {
         this.url = url;

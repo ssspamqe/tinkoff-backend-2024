@@ -2,13 +2,12 @@ package edu.java.data.dao.jpa.dao;
 
 import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.dao.jpa.entities.StackOverflowQuestionJpaEntity;
-import edu.java.data.dao.jpa.entities.mappers.ServiceEntityMapper;
-import edu.java.data.dao.jpa.entities.mappers.StackOverflowQuestionMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.StackOverflowQuestionMapper;
 import edu.java.data.dao.jpa.repositories.StackOverflowQuestionJpaRepository;
 import edu.java.data.dto.StackOverflowQuestion;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor

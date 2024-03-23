@@ -1,10 +1,9 @@
 package edu.java.data.dao.jpa.dao;
 
 import edu.java.data.dao.interfaces.LinkDataAccessObject;
-import edu.java.data.dao.jpa.entities.ChatJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
-import edu.java.data.dao.jpa.entities.mappers.EntityMapper;
-import edu.java.data.dao.jpa.entities.mappers.LinkMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.EntityMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.LinkMapper;
 import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dto.Link;
 import edu.java.data.exceptions.NoSuchLinkException;
@@ -71,8 +70,8 @@ public class LinkJpaDAO implements LinkDataAccessObject {
         var jpaLink = findJpaByIdOrThrowException(id);
 
         return jpaLink
-            .getChats().stream()
-            .map(ChatJpaEntity::getId)
+            .getChatLinksPairs().stream()
+            .map(pair -> pair.getChat().getId())
             .collect(Collectors.toSet());
     }
 
