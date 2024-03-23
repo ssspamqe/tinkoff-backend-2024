@@ -4,11 +4,14 @@ import edu.java.data.dao.jdbc.dao.ChatJdbcDAO;
 import edu.java.data.dao.jdbc.dao.LinkJdbcDAO;
 import edu.java.data.dao.jooq.dao.ChatJooqDAO;
 import edu.java.data.dao.jooq.dao.LinkJooqDAO;
+import edu.java.data.dao.jpa.dao.ChatJpaDAO;
+import edu.java.data.dao.jpa.dao.LinkJpaDAO;
 import edu.java.scrapper.integrational.dao.jdbc.JdbcDataAccessConfiguration;
 import edu.java.scrapper.integrational.dao.jooq.JooqDataAccessConfiguration;
 import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
+import edu.java.scrapper.integrational.dao.jpa.JpaDataAccessConfiguration;
 import liquibase.Contexts;
 import liquibase.LabelExpression;
 import liquibase.Liquibase;
@@ -34,7 +37,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @TestPropertySource(locations = "classpath:application-test.yml")
 @ActiveProfiles("test")
 @Transactional
-@Import({JdbcDataAccessConfiguration.class, JooqDataAccessConfiguration.class})
+@Import({JdbcDataAccessConfiguration.class, JooqDataAccessConfiguration.class, JpaDataAccessConfiguration.class})
 public abstract class DatabaseIntegrationEnvironment {
 
     protected static final String INSERT_LINK_STATEMENT =
@@ -54,6 +57,9 @@ public abstract class DatabaseIntegrationEnvironment {
 
     @Autowired protected ChatJooqDAO chatJooqDao;
     @Autowired protected LinkJooqDAO linkJooqDao;
+
+    @Autowired protected ChatJpaDAO chatJpaDao;
+    @Autowired protected LinkJpaDAO linkJpaDao;
 
     static {
         POSTGRES = new PostgreSQLContainer<>("postgres:16")

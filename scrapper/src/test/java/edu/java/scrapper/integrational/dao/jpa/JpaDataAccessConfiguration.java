@@ -1,4 +1,4 @@
-package edu.java.configuration.databaseAccessConfigurations;
+package edu.java.scrapper.integrational.dao.jpa;
 
 import edu.java.data.dao.jpa.dao.ChatJpaDAO;
 import edu.java.data.dao.jpa.dao.GitHubRepositoryJpaDAO;
@@ -8,16 +8,11 @@ import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
 import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dao.jpa.repositories.StackOverflowQuestionJpaRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@RequiredArgsConstructor
-@ConditionalOnProperty(prefix = "app", name = "database-access-type", havingValue = "jpa")
-public class JpaAccessConfiguration {
-
+@TestConfiguration
+public class JpaDataAccessConfiguration {
     @Bean
     public ChatJpaDAO chatJpaDAO(
         ChatJpaRepository chatRepository,
@@ -48,5 +43,4 @@ public class JpaAccessConfiguration {
     ) {
         return new StackOverflowQuestionJpaDAO(questionRepository, linkDao);
     }
-
 }
