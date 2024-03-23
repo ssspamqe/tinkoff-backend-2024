@@ -9,6 +9,7 @@ import edu.java.data.exceptions.DoubleChatRegistrationException;
 import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.net.URI;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.junit.jupiter.api.BeforeEach;
@@ -152,8 +153,8 @@ public class ChatJdbcDaoTest extends DatabaseIntegrationEnvironment {
 
         chatDao.deleteChatWithId(1);
 
-        Chat chat = jdbcTemplate.queryForObject("SELECT * FROM chats WHERE id = 1", CHAT_JDBC_ROW_MAPPER);
-        assertThat(chat).isNull();
+        List<Chat> actualSavedChats = jdbcTemplate.query("SELECT * FROM chats WHERE id = 1", CHAT_JDBC_ROW_MAPPER);
+        assertThat(actualSavedChats).isEmpty();
     }
 
 }

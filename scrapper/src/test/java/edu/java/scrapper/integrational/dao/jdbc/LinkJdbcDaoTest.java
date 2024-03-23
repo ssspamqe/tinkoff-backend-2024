@@ -22,7 +22,7 @@ public class LinkJdbcDaoTest extends DatabaseIntegrationEnvironment {
 
     @BeforeEach
     void assignLinkDao() {
-        linkDao = linkJooqDao;
+        linkDao = linkJdbcDao;
     }
 
     @Test

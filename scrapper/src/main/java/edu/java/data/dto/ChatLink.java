@@ -9,8 +9,6 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 public class ChatLink {
 
-    @Id
-    private long id;
     private long chatId;
     private long linkId;
     private LocalDateTime createdAt;
