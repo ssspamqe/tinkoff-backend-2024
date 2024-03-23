@@ -7,6 +7,7 @@ import edu.java.data.dao.jpa.entities.utils.mappers.StackOverflowQuestionMapper;
 import edu.java.data.dao.jpa.repositories.StackOverflowQuestionJpaRepository;
 import edu.java.data.dto.StackOverflowQuestion;
 import edu.java.data.exceptions.NoSuchStackOverflowQuestionException;
+import java.util.ArrayList;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,7 +36,6 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
 
     @Override
     public void update(StackOverflowQuestion question) {
-
         var oldQuestion = questionRepository
             .findById(question.getId())
             .orElseThrow(() -> new NoSuchStackOverflowQuestionException(question.getId()));
@@ -45,14 +45,17 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
             oldQuestion.setLink(newLink);
         }
 
+
         oldQuestion.setDescriptionMd5Hash(question.getDescriptionMd5Hash());
-        oldQuestion.setAnswersIds(question.getAnswerIds());
+        oldQuestion.setAnswersIds(new ArrayList<>(question.getAnswerIds()));
+
+        questionRepository.flush();//TODO investigate problems with transaction management
     }
 
     @Override
     public void save(StackOverflowQuestion question) {
         var jpaQuestion = buildJpaQuestion(question);
-        questionRepository.save(jpaQuestion);
+        questionRepository.saveAndFlush(jpaQuestion); //TODO investigate problems with transaction management
     }
 
     private StackOverflowQuestionJpaEntity buildJpaQuestion(StackOverflowQuestion question) {

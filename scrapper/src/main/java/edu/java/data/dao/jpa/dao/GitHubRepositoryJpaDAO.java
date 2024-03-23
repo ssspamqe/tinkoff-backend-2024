@@ -7,6 +7,7 @@ import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
 import edu.java.data.dto.GitHubRepository;
 import edu.java.data.exceptions.NoSuchGitHubRepositoryException;
+import java.util.ArrayList;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,7 +25,7 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
     @Override
     public void save(GitHubRepository repository) {
         var jpaRepository = buildJpaRepository(repository);
-        gitHubRepoRepository.save(jpaRepository);
+        gitHubRepoRepository.saveAndFlush(jpaRepository); //TODO investigate problems with transaction management
     }
 
     @Override
@@ -41,7 +42,9 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
         oldRepository.setName(repository.getName());
         oldRepository.setOwner(repository.getOwner());
         oldRepository.setDescriptionMd5Hash(repository.getDescriptionMd5Hash());
-        oldRepository.setActivitiesIds(repository.getActivitiesIds());
+        oldRepository.setActivitiesIds(new ArrayList<>(repository.getActivitiesIds()));
+
+        gitHubRepoRepository.flush(); //TODO investigate problems with transaction management
     }
 
     @Override
