@@ -1,9 +1,5 @@
 package edu.java.configuration.databaseAccessConfigurations;
 
-import edu.java.data.dao.interfaces.ChatDataAccessObject;
-import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
-import edu.java.data.dao.interfaces.LinkDataAccessObject;
-import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.dao.jdbc.dao.ChatJdbcDAO;
 import edu.java.data.dao.jdbc.dao.GitHubRepositoryJdbcDAO;
 import edu.java.data.dao.jdbc.dao.LinkJdbcDAO;
@@ -18,12 +14,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.simple.JdbcClient;
 
 @Configuration
 @RequiredArgsConstructor
 @ConditionalOnProperty(prefix = "app", name = "database-access-type", havingValue = "jdbc")
-public class JDBCAccessConfiguration {
+public class JdbcAccessConfiguration {
 
     @Bean
     public ChatJdbcRepository chatJdbcRepository(JdbcClient jdbcClient) {
@@ -51,7 +48,7 @@ public class JDBCAccessConfiguration {
     }
 
     @Bean
-    public ChatDataAccessObject chatJdbcDAO(
+    public ChatJdbcDAO chatJdbcDAO(
         ChatJdbcRepository chatRepository,
         ChatLinksJdbcRepository chatLinksRepository,
         LinkJdbcDAO linkDao
@@ -60,14 +57,14 @@ public class JDBCAccessConfiguration {
     }
 
     @Bean
-    public GitHubRepositoryDataAccessObject gitHubRepositoryJdbcDAO(
+    public GitHubRepositoryJdbcDAO gitHubRepositoryJdbcDAO(
         GitHubRepositoryJdbcRepository gitHubRepositoryJdbcRepository
     ) {
         return new GitHubRepositoryJdbcDAO(gitHubRepositoryJdbcRepository);
     }
 
     @Bean
-    public LinkDataAccessObject linkJdbcDAO(
+    public LinkJdbcDAO linkJdbcDAO(
         LinkJdbcRepository linkRepository,
         ChatLinksJdbcRepository chatLinksRepository,
         UniversalInitialStateScreener universalInitialStateScreener
@@ -76,7 +73,7 @@ public class JDBCAccessConfiguration {
     }
 
     @Bean
-    public StackOverflowQuestionDataAccessObject stackOverflowQuestionJdbcDAO(
+    public StackOverflowQuestionJdbcDAO stackOverflowQuestionJdbcDAO(
         StackOverflowQuestionJdbcRepository questionRepository
     ) {
         return new StackOverflowQuestionJdbcDAO(questionRepository);

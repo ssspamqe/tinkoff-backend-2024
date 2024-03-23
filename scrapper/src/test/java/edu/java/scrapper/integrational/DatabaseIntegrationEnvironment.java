@@ -2,7 +2,10 @@ package edu.java.scrapper.integrational;
 
 import edu.java.data.dao.jdbc.dao.ChatJdbcDAO;
 import edu.java.data.dao.jdbc.dao.LinkJdbcDAO;
+import edu.java.data.dao.jooq.dao.ChatJooqDAO;
+import edu.java.data.dao.jooq.dao.LinkJooqDAO;
 import edu.java.scrapper.integrational.dao.jdbc.JdbcDataAccessConfiguration;
+import edu.java.scrapper.integrational.dao.jooq.JooqDataAccessConfiguration;
 import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
@@ -31,7 +34,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @TestPropertySource(locations = "classpath:application-test.yml")
 @ActiveProfiles("test")
 @Transactional
-@Import(JdbcDataAccessConfiguration.class)
+@Import({JdbcDataAccessConfiguration.class, JooqDataAccessConfiguration.class})
 public abstract class DatabaseIntegrationEnvironment {
 
     protected static final String INSERT_LINK_STATEMENT =
@@ -48,6 +51,9 @@ public abstract class DatabaseIntegrationEnvironment {
 
     @Autowired protected ChatJdbcDAO chatJdbcDao;
     @Autowired protected LinkJdbcDAO linkJdbcDao;
+
+    @Autowired protected ChatJooqDAO chatJooqDao;
+    @Autowired protected LinkJooqDAO linkJooqDao;
 
     static {
         POSTGRES = new PostgreSQLContainer<>("postgres:16")

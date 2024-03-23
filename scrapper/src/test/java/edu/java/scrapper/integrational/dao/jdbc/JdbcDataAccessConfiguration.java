@@ -12,54 +12,54 @@ import edu.java.data.dao.jdbc.repositories.StackOverflowQuestionJdbcRepository;
 import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.simple.JdbcClient;
 
 @TestConfiguration
 public class JdbcDataAccessConfiguration {
 
-    @Bean @Primary
+    @Bean
     public ChatJdbcRepository chatJdbcRepository(JdbcClient jdbcClient) {
         return new ChatJdbcRepository(jdbcClient);
     }
 
-    @Bean @Primary
+    @Bean
     public ChatLinksJdbcRepository chatLinksJdbcRepository(JdbcClient jdbcClient) {
         return new ChatLinksJdbcRepository(jdbcClient);
     }
 
-    @Bean @Primary
+    @Bean
     public GitHubRepositoryJdbcRepository gitHubRepositoryJdbcRepository(JdbcClient jdbcClient) {
         return new GitHubRepositoryJdbcRepository(jdbcClient);
     }
 
-    @Bean @Primary
+    @Bean
     public LinkJdbcRepository linkJdbcRepository(JdbcClient jdbcClient) {
         return new LinkJdbcRepository(jdbcClient);
     }
 
-    @Bean @Primary
+    @Bean
     public StackOverflowQuestionJdbcRepository stackOverflowQuestionJdbcRepository(JdbcClient jdbcClient) {
         return new StackOverflowQuestionJdbcRepository(jdbcClient);
     }
 
-    @Bean @Primary
+    @Bean
     public ChatJdbcDAO chatJdbcDAO(
         ChatJdbcRepository chatRepository,
         ChatLinksJdbcRepository chatLinksRepository,
         LinkJdbcDAO linkDao
     ) {
+        System.out.println("ASDkjKALJSDKAJSDKJAS raised chat jdbc dao");
         return new ChatJdbcDAO(chatRepository, chatLinksRepository, linkDao);
     }
 
-    @Bean @Primary
+    @Bean
     public GitHubRepositoryJdbcDAO gitHubRepositoryJdbcDAO(
         GitHubRepositoryJdbcRepository gitHubRepositoryJdbcRepository
     ) {
         return new GitHubRepositoryJdbcDAO(gitHubRepositoryJdbcRepository);
     }
 
-    @Bean @Primary
+    @Bean
     public LinkJdbcDAO linkJdbcDAO(
         LinkJdbcRepository linkRepository,
         ChatLinksJdbcRepository chatLinksRepository,
@@ -68,7 +68,7 @@ public class JdbcDataAccessConfiguration {
         return new LinkJdbcDAO(linkRepository, chatLinksRepository, universalInitialStateScreener);
     }
 
-    @Bean @Primary
+    @Bean
     public StackOverflowQuestionJdbcDAO stackOverflowQuestionJdbcDAO(
         StackOverflowQuestionJdbcRepository questionRepository
     ) {

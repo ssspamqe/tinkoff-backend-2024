@@ -1,7 +1,5 @@
 package edu.java.scrapper.integrational.dao.jooq;
 
-import edu.java.data.dao.interfaces.ChatDataAccessObject;
-import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
 import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.dao.jooq.dao.ChatJooqDAO;
 import edu.java.data.dao.jooq.dao.GitHubRepositoryJooqDAO;
@@ -13,15 +11,12 @@ import edu.java.data.dao.jooq.repositories.GitHubRepositoryJooqRepository;
 import edu.java.data.dao.jooq.repositories.LinkJooqRepository;
 import edu.java.data.dao.jooq.repositories.StackOverflowQuestionJooqRepository;
 import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
-import lombok.RequiredArgsConstructor;
 import org.jooq.impl.DefaultDSLContext;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
-@Configuration
-@RequiredArgsConstructor
-@ConditionalOnProperty(prefix = "app", name = "database-access-type", havingValue = "jooq")
+@TestConfiguration
 public class JooqDataAccessConfiguration {
 
     @Bean
@@ -49,8 +44,8 @@ public class JooqDataAccessConfiguration {
         return new StackOverflowQuestionJooqRepository(dsl);
     }
 
-    @Bean
-    public ChatDataAccessObject chatJooqDAO(
+    @Bean @Primary
+    public ChatJooqDAO chatJooqDAO(
         ChatJooqRepository chatRepository,
         ChatLinksJooqRepository chatLinksRepository,
         LinkJooqDAO linkDao
@@ -58,14 +53,14 @@ public class JooqDataAccessConfiguration {
         return new ChatJooqDAO(chatRepository, chatLinksRepository, linkDao);
     }
 
-    @Bean
-    public GitHubRepositoryDataAccessObject gitHubRepositoryJooqDAO(
+    @Bean @Primary
+    public GitHubRepositoryJooqDAO gitHubRepositoryJooqDAO(
         GitHubRepositoryJooqRepository gitHubRepositoryJooqRepository
     ) {
         return new GitHubRepositoryJooqDAO(gitHubRepositoryJooqRepository);
     }
 
-    @Bean
+    @Bean @Primary
     public LinkJooqDAO linkJooqDAO(
         LinkJooqRepository linkRepository,
         ChatLinksJooqRepository chatLinksRepository,
@@ -74,7 +69,7 @@ public class JooqDataAccessConfiguration {
         return new LinkJooqDAO(linkRepository, chatLinksRepository, universalInitialStateScreener);
     }
 
-    @Bean
+    @Bean @Primary
     public StackOverflowQuestionDataAccessObject stackOverflowQuestionJooqDAO(
         StackOverflowQuestionJooqRepository questionRepository
     ) {

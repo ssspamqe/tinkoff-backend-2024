@@ -1,5 +1,6 @@
 package edu.java.scrapper.integrational.dao.jooq;
 
+import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.dao.jdbc.repositories.rowMappers.LinkRowMapper;
 import edu.java.data.dto.Link;
 import edu.java.data.exceptions.NoSuchLinkException;
@@ -7,16 +8,25 @@ import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.net.URI;
 import java.util.Set;
 import java.util.stream.Collectors;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
+
     private static final RowMapper<Link> LINK_JDBC_ROW_MAPPER = new LinkRowMapper();
 
+    private ChatDataAccessObject chatDao;
+
+    @BeforeEach
+    void assignChatDao() {
+        chatDao = chatJooqDao;
+    }
+
     @Test
-    void should_returnTrackedLinksByChatId() {
+    public void should_returnTrackedLinksByChatId() {
         //Arrange
         saveChatWithId(1);
 
@@ -27,7 +37,7 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
         saveChatIdLinkId(1, link2Id);
 
         //Act
-        Set<String> actualLinkUrls = chatJdbcDao
+        Set<String> actualLinkUrls = chatDao
             .getTrackedLinksByChatId(1).stream()
             .map(link -> link.getUrl().toString())
             .collect(Collectors.toSet());
@@ -37,11 +47,11 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
     }
 
     @Test
-    void should_associateUrlWithChat_when_noLinkWithSuchUrl() {
+    public void should_associateUrlWithChat_when_noLinkWithSuchUrl() {
         saveChatWithId(1);
         URI url = URI.create("https://example.org");
 
-        chatJdbcDao.associateUrlByChatId(url, 1);
+        chatDao.associateUrlByChatId(url, 1);
 
         Link savedLink = jdbcTemplate.queryForObject("SELECT * FROM links", LINK_JDBC_ROW_MAPPER);
         int chatLinksCouplesCount = jdbcTemplate.queryForObject(
@@ -55,11 +65,11 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
     }
 
     @Test
-    void should_associateUrlWithChat_when_linkWithSuchUrlExists() {
+    public void should_associateUrlWithChat_when_linkWithSuchUrlExists() {
         saveChatWithId(1);
         long linkId = saveLinkWithUrl("https://example.org");
 
-        chatJdbcDao.associateUrlByChatId(URI.create("https://example.org"), 1);
+        chatDao.associateUrlByChatId(URI.create("https://example.org"), 1);
 
         int chatLinksCouplesCount = jdbcTemplate.queryForObject(
             "SELECT COUNT(*) FROM chat_links WHERE chat_id = ? AND link_id = ?",
@@ -71,12 +81,12 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
     }
 
     @Test
-    void should_dissociateUrlWithChat_when_linkWithSuchUrlExists() {
+    public void should_dissociateUrlWithChat_when_linkWithSuchUrlExists() {
         saveChatWithId(1);
         long linkId = saveLinkWithUrl("https://example.org");
         saveChatIdLinkId(1, linkId);
 
-        chatJdbcDao.dissociateUrlByChatId(URI.create("https://example.org"), 1);
+        chatDao.dissociateUrlByChatId(URI.create("https://example.org"), 1);
 
         int chatLinksCouplesCount = jdbcTemplate.queryForObject(
             "SELECT COUNT(*) FROM chat_links WHERE chat_id = ? AND link_id = ?",
@@ -84,20 +94,20 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
             1,
             linkId
         );
-        assertThat(chatLinksCouplesCount).isEqualTo(0);
+        assertThat(chatLinksCouplesCount).isZero();
     }
 
     @Test
-    void should_throwException_when_dissociatingUnsavedUrlWithChat() {
+    public void should_throwException_when_dissociatingUnsavedUrlWithChat() {
         saveChatWithId(1);
 
-        assertThatThrownBy(() -> chatJdbcDao.dissociateUrlByChatId(URI.create("https://unknow/url"), 1))
+        assertThatThrownBy(() -> chatDao.dissociateUrlByChatId(URI.create("https://unknow/url"), 1))
             .isInstanceOf(NoSuchLinkException.class);
     }
 
     @Test
-    void should_throwException_when_noSuchChat() {
-        assertThatThrownBy(() -> chatJdbcDao.associateUrlByChatId(URI.create("https://example.com"), 1));
+    public void should_throwException_when_noSuchChat() {
+        assertThatThrownBy(() -> chatDao.associateUrlByChatId(URI.create("https://example.com"), 1));
 
     }
 }
