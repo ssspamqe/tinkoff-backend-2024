@@ -6,6 +6,7 @@ import edu.java.data.dao.jpa.entities.utils.mappers.GitHubRepositoryMapper;
 import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
 import edu.java.data.dto.GitHubRepository;
+import edu.java.data.exceptions.NoSuchGitHubRepositoryException;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,15 +29,19 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
 
     @Override
     public void update(GitHubRepository repository) {
-        var jpaRepository = buildJpaRepository(repository);
-        gitHubRepoRepository.updateAllFieldsById(
-            jpaRepository.getLink(),
-            jpaRepository.getName(),
-            jpaRepository.getOwner(),
-            jpaRepository.getDescriptionMd5Hash(),
-            jpaRepository.getActivitiesIds(),
-            jpaRepository.getId()
-        );
+        var oldRepository = gitHubRepoRepository
+            .findById(repository.getId())
+            .orElseThrow(() -> new NoSuchGitHubRepositoryException(repository.getName(), repository.getOwner()));
+
+        if (oldRepository.getLink().getId() != repository.getLinkId()) {
+            var newLink = linkDao.findJpaByIdOrThrowException(repository.getLinkId());
+            oldRepository.setLink(newLink);
+        }
+
+        oldRepository.setName(repository.getName());
+        oldRepository.setOwner(repository.getOwner());
+        oldRepository.setDescriptionMd5Hash(repository.getDescriptionMd5Hash());
+        oldRepository.setActivitiesIds(repository.getActivitiesIds());
     }
 
     @Override

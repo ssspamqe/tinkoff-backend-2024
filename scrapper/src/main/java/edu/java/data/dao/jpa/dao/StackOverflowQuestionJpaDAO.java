@@ -6,6 +6,7 @@ import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
 import edu.java.data.dao.jpa.entities.utils.mappers.StackOverflowQuestionMapper;
 import edu.java.data.dao.jpa.repositories.StackOverflowQuestionJpaRepository;
 import edu.java.data.dto.StackOverflowQuestion;
+import edu.java.data.exceptions.NoSuchStackOverflowQuestionException;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,13 +35,18 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
 
     @Override
     public void update(StackOverflowQuestion question) {
-        var jpaQuestion = buildJpaQuestion(question);
-        questionRepository.updateAllFieldsById(
-            jpaQuestion.getLink(),
-            jpaQuestion.getDescriptionMd5Hash(),
-            jpaQuestion.getAnswersIds(),
-            jpaQuestion.getId()
-        );
+
+        var oldQuestion = questionRepository
+            .findById(question.getId())
+            .orElseThrow(() -> new NoSuchStackOverflowQuestionException(question.getId()));
+
+        if (oldQuestion.getLink().getId() != question.getId()) {
+            var newLink = linkDao.findJpaByIdOrThrowException(question.getLinkId());
+            oldQuestion.setLink(newLink);
+        }
+
+        oldQuestion.setDescriptionMd5Hash(question.getDescriptionMd5Hash());
+        oldQuestion.setAnswersIds(question.getAnswerIds());
     }
 
     @Override
