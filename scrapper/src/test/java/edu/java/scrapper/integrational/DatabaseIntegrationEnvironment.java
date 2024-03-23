@@ -2,10 +2,10 @@ package edu.java.scrapper.integrational;
 
 import edu.java.data.dao.jdbc.dao.ChatJdbcDAO;
 import edu.java.data.dao.jdbc.dao.LinkJdbcDAO;
+import edu.java.scrapper.integrational.dao.jdbc.JdbcDataAccessConfiguration;
 import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
-import edu.java.scrapper.integrational.dao.jdbc.JdbcDataAccessConfiguration;
 import liquibase.Contexts;
 import liquibase.LabelExpression;
 import liquibase.Liquibase;
@@ -44,8 +44,7 @@ public abstract class DatabaseIntegrationEnvironment {
     @ServiceConnection
     protected static PostgreSQLContainer<?> POSTGRES;
 
-    @Autowired
-    protected JdbcTemplate jdbcTemplate;
+    @Autowired protected JdbcTemplate jdbcTemplate;
 
     @Autowired protected ChatJdbcDAO chatJdbcDao;
     @Autowired protected LinkJdbcDAO linkJdbcDao;
