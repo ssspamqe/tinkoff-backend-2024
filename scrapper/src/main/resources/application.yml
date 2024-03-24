@@ -14,7 +14,7 @@ app:
     - github.dev
   stack-overflow-host-names:
     - stackoverflow.com
-  database-access-type: jdbc
+  database-access-type: jpa
 
 spring:
   application:
@@ -34,9 +34,9 @@ spring:
       file: compose.yml
   jooq:
     sql-dialect: postgres
+  jpa:
+    show-sql: true
 
-hibernate:
-  show_sql: true
 
 server:
   port: 8080
