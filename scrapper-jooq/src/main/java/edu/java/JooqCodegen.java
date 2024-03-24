@@ -13,7 +13,7 @@ public class JooqCodegen {
 
     private JooqCodegen() {
     }
-    
+
     @SuppressWarnings("MultipleStringLiterals")
     public static void generate() throws Exception {
         Database database = new Database()

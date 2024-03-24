@@ -12,9 +12,6 @@ import edu.java.data.dao.jpa.dao.ChatJpaDAO;
 import edu.java.data.dao.jpa.dao.GitHubRepositoryJpaDAO;
 import edu.java.data.dao.jpa.dao.LinkJpaDAO;
 import edu.java.data.dao.jpa.dao.StackOverflowQuestionJpaDAO;
-import edu.java.scrapper.integrational.dao.jdbc.JdbcDataAccessConfiguration;
-import edu.java.scrapper.integrational.dao.jooq.JooqDataAccessConfiguration;
-import edu.java.scrapper.integrational.dao.jpa.JpaDataAccessConfiguration;
 import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
@@ -29,7 +26,6 @@ import liquibase.resource.ResourceAccessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
@@ -43,7 +39,6 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @TestPropertySource(locations = "classpath:application-test.yml")
 @ActiveProfiles("test")
 @Transactional
-@Import({JdbcDataAccessConfiguration.class, JooqDataAccessConfiguration.class, JpaDataAccessConfiguration.class})
 public abstract class DatabaseIntegrationEnvironment {
 
     protected static final String INSERT_LINK_STATEMENT =

@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.simple.JdbcClient;
 
 @TestConfiguration
-public class JdbcDataAccessConfiguration {
+public class JdbcTestAccessConfiguration {
 
     @Bean
     public ChatJdbcRepository chatJdbcRepository(JdbcClient jdbcClient) {

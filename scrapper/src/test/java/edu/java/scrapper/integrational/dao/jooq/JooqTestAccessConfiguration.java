@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 
 @TestConfiguration
-public class JooqDataAccessConfiguration {
+public class JooqTestAccessConfiguration {
 
     @Bean
     public ChatJooqRepository chatJooqRepository(DefaultDSLContext dsl) {
