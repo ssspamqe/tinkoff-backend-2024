@@ -2,11 +2,14 @@ package edu.java.data.dao.jpa.dao;
 
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
 import edu.java.data.dao.jpa.entities.GitHubRepositoryJpaEntity;
+import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dao.jpa.entities.utils.mappers.GitHubRepositoryMapper;
 import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
+import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dto.GitHubRepository;
 import edu.java.data.exceptions.NoSuchGitHubRepositoryException;
+import edu.java.data.exceptions.NoSuchLinkException;
 import java.util.ArrayList;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +23,7 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
         new GitHubRepositoryMapper();
 
     private final GitHubRepositoryJpaRepository gitHubRepoRepository;
-    private final LinkJpaDAO linkDao;
+    private final LinkJpaRepository linkRepository;
 
     @Override
     public void save(GitHubRepository repository) {
@@ -35,7 +38,7 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
             .orElseThrow(() -> new NoSuchGitHubRepositoryException(repository.getName(), repository.getOwner()));
 
         if (oldRepository.getLink().getId() != repository.getLinkId()) {
-            var newLink = linkDao.findJpaByIdOrThrowException(repository.getLinkId());
+            var newLink = findJpaLinkByIdOrThrowException(repository.getLinkId());
             oldRepository.setLink(newLink);
         }
 
@@ -60,7 +63,12 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
     }
 
     private GitHubRepositoryJpaEntity buildJpaRepository(GitHubRepository repository) {
-        var link = linkDao.findJpaByIdOrThrowException(repository.getLinkId());
+        var link = findJpaLinkByIdOrThrowException(repository.getLinkId());
         return ENTITY_MAPPER.toJpaWithLink(repository, link);
+    }
+
+    private LinkJpaEntity findJpaLinkByIdOrThrowException(long id) {
+        return linkRepository.findById(id)
+            .orElseThrow(() -> new NoSuchLinkException(id));
     }
 }
