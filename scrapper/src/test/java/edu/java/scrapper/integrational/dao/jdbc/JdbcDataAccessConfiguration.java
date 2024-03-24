@@ -48,7 +48,6 @@ public class JdbcDataAccessConfiguration {
         ChatLinksJdbcRepository chatLinksRepository,
         LinkJdbcDAO linkDao
     ) {
-        System.out.println("ASDkjKALJSDKAJSDKJAS raised chat jdbc dao");
         return new ChatJdbcDAO(chatRepository, chatLinksRepository, linkDao);
     }
 
