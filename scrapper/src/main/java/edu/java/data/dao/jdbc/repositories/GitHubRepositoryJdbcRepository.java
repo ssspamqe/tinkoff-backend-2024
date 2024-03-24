@@ -35,7 +35,6 @@ public class GitHubRepositoryJdbcRepository {
 
     private final JdbcClient jdbcClient;
 
-
     @SuppressWarnings("MultipleStringLiterals")
     public void save(GitHubRepository repository) {
         Long[] activities = repository.getActivitiesIds().toArray(new Long[0]);
