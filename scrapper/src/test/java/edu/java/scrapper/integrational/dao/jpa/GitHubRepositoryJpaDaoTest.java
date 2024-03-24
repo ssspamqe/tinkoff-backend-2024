@@ -2,7 +2,9 @@ package edu.java.scrapper.integrational.dao.jpa;
 
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
 import edu.java.data.dao.jdbc.repositories.rowMappers.GitHubRepositoryRowMapper;
+import edu.java.data.dao.jdbc.repositories.rowMappers.LinkRowMapper;
 import edu.java.data.dto.GitHubRepository;
+import edu.java.data.dto.Link;
 import edu.java.scrapper.integrational.DatabaseIntegrationEnvironment;
 import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class GitHubRepositoryJpaDaoTest extends DatabaseIntegrationEnvironment {
     private static final RowMapper<GitHubRepository> REPOSITORY_JDBC_ROW_MAPPER = new GitHubRepositoryRowMapper();
+    private static final RowMapper<Link> LINK_JDBC_ROW_MAPPER = new LinkRowMapper();
 
     private GitHubRepositoryDataAccessObject repositoryDao;
 

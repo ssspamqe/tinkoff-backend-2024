@@ -74,15 +74,21 @@ public class ChatJdbcDaoTest extends DatabaseIntegrationEnvironment {
 
         chatDao.associateUrlByChatId(url, 1);
 
-        Link savedLink = jdbcTemplate.queryForObject("SELECT * FROM links", LINK_JDBC_ROW_MAPPER);
         int chatLinksCouplesCount = jdbcTemplate.queryForObject(
-            "SELECT COUNT(*) FROM chat_links WHERE chat_id = ? AND link_id = ?",
-            Integer.class,
-            1,
-            savedLink.getId()
+            "SELECT COUNT(*) FROM chat_links WHERE chat_id = ?", Integer.class, 1
         );
-        assertThat(savedLink.getUrl()).hasToString("https://example.org");
         assertThat(chatLinksCouplesCount).isEqualTo(1);
+    }
+
+    @Test
+    public void should_saveNewLink_whenAssociatingWithChat() {
+        saveChatWithId(1);
+        URI url = URI.create("https://example.org");
+
+        chatDao.associateUrlByChatId(url, 1);
+
+        Link savedLink = jdbcTemplate.queryForObject("SELECT * FROM links", LINK_JDBC_ROW_MAPPER);
+        assertThat(savedLink.getUrl()).hasToString("https://example.org");
     }
 
     @Test
@@ -135,7 +141,7 @@ public class ChatJdbcDaoTest extends DatabaseIntegrationEnvironment {
     public void should_registerChatWithId() {
         chatDao.registerChatWithId(1);
 
-        Chat chat = jdbcTemplate.queryForObject("SELECT * FROM chats WHERE id = 1", CHAT_JDBC_ROW_MAPPER);
+        Chat chat = jdbcTemplate.queryForObject("SELECT * FROM chats", CHAT_JDBC_ROW_MAPPER);
         assertThat(chat).isNotNull();
     }
 
@@ -153,7 +159,7 @@ public class ChatJdbcDaoTest extends DatabaseIntegrationEnvironment {
 
         chatDao.deleteChatWithId(1);
 
-        List<Chat> actualSavedChats = jdbcTemplate.query("SELECT * FROM chats WHERE id = 1", CHAT_JDBC_ROW_MAPPER);
+        List<Chat> actualSavedChats = jdbcTemplate.query("SELECT * FROM chats", CHAT_JDBC_ROW_MAPPER);
         assertThat(actualSavedChats).isEmpty();
     }
 
