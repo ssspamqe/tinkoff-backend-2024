@@ -58,7 +58,7 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
     @Override
     public void save(StackOverflowQuestion question) {
         var jpaQuestion = buildJpaQuestion(question);
-        questionRepository.saveAndFlush(jpaQuestion); //TODO investigate problems with transaction management
+        questionRepository.saveAndFlush(jpaQuestion);
     }
 
     private StackOverflowQuestionJpaEntity buildJpaQuestion(StackOverflowQuestion question) {

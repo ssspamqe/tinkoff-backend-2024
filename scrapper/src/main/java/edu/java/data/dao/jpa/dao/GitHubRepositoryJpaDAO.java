@@ -28,7 +28,7 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
     @Override
     public void save(GitHubRepository repository) {
         var jpaRepository = buildJpaRepository(repository);
-        gitHubRepoRepository.saveAndFlush(jpaRepository); //TODO investigate problems with transaction management
+        gitHubRepoRepository.saveAndFlush(jpaRepository);
     }
 
     @Override

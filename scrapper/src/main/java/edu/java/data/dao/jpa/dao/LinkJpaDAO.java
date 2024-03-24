@@ -80,11 +80,9 @@ public class LinkJpaDAO implements LinkDataAccessObject {
 
     @Override
     public void updateLastCheckedAtById(LocalDateTime lastChecked, long id) {
-        if (!linkRepository.existsById(id)) {
-            throw new NoSuchLinkException(id);
-        }
+        var link = findJpaByIdOrThrowException(id);
 
-        linkRepository.updateLastCheckedAtById(lastChecked, id);
+        link.setLastCheckedAt(lastChecked);
     }
 
     LinkJpaEntity findJpaByIdOrThrowException(long id) {

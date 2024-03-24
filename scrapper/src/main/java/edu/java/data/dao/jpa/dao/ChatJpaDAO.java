@@ -53,7 +53,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         var link = linkDao.saveJpaOrFindByUrl(url);
 
         var newAssociation = new AssociationJpa(chat, link);
-        associationRepository.saveAndFlush(newAssociation);
+        associationRepository.save(newAssociation);
 
         return LINK_MAPPER.toDto(link);
     }
@@ -65,7 +65,6 @@ public class ChatJpaDAO implements ChatDataAccessObject {
 
         associationRepository.removeByChatAndLink(chat, link);
 
-        associationRepository.flush();
         return LINK_MAPPER.toDto(link);
     }
 
@@ -75,7 +74,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
             throw new DoubleChatRegistrationException(id);
         }
         var chat = new ChatJpaEntity(id);
-        chat = chatRepository.saveAndFlush(chat);
+        chat = chatRepository.save(chat);
         return CHAT_MAPPER.toDto(chat);
     }
 
@@ -85,7 +84,6 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         if (deletedChats == 0) {
             throw new NoSuchChatException(id);
         }
-        chatRepository.flush();
     }
 
     ChatJpaEntity findJpaByIdOrThrowException(long id) {
