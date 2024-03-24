@@ -9,5 +9,7 @@ app:
 spring:
   liquibase:
     enabled: false
+    change-log: classpath:../../../../migrations/master.yaml
+
   main:
     allow-bean-definition-overriding: true

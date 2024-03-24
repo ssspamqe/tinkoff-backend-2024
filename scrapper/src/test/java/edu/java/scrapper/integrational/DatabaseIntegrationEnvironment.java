@@ -74,6 +74,7 @@ public abstract class DatabaseIntegrationEnvironment {
             .withUsername("postgres")
             .withPassword("postgres");
         POSTGRES.start();
+
         try {
             runMigrations(POSTGRES);
         } catch (Exception ex) {
