@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
+import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +23,7 @@ public class LinkJpaDAO implements LinkDataAccessObject {
     private static final EntityMapper<LinkJpaEntity, Link> LINK_MAPPER = new LinkMapper();
 
     private final LinkJpaRepository linkRepository;
+    private final UniversalInitialStateScreener initialStateScreener;
 
     @Override
     public Optional<Link> findByUrl(URI url) {
@@ -53,8 +55,9 @@ public class LinkJpaDAO implements LinkDataAccessObject {
         return linkRepository.findByUrl(url)
             .orElseGet(() -> {
                 var newLink = new LinkJpaEntity(url);
-                return linkRepository.save(newLink);
-
+                newLink = linkRepository.save(newLink);
+                initialStateScreener.saveInitialState(LINK_MAPPER.toDto(newLink));
+                return newLink;
             });
     }
 
@@ -70,7 +73,7 @@ public class LinkJpaDAO implements LinkDataAccessObject {
         var jpaLink = findJpaByIdOrThrowException(id);
 
         return jpaLink
-            .getChatLinksPairs().stream()
+            .getAssociations().stream()
             .map(pair -> pair.getChat().getId())
             .collect(Collectors.toSet());
     }

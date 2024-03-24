@@ -4,10 +4,12 @@ import edu.java.data.dao.jpa.dao.ChatJpaDAO;
 import edu.java.data.dao.jpa.dao.GitHubRepositoryJpaDAO;
 import edu.java.data.dao.jpa.dao.LinkJpaDAO;
 import edu.java.data.dao.jpa.dao.StackOverflowQuestionJpaDAO;
+import edu.java.data.dao.jpa.repositories.AssociationJpaRepository;
 import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
 import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dao.jpa.repositories.StackOverflowQuestionJpaRepository;
+import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -21,32 +23,34 @@ public class JpaAccessConfiguration {
     @Bean
     public ChatJpaDAO chatJpaDAO(
         ChatJpaRepository chatRepository,
-        LinkJpaDAO linkDao
+        LinkJpaDAO linkDao,
+        AssociationJpaRepository associationRepository
     ) {
-        return new ChatJpaDAO(chatRepository, linkDao);
+        return new ChatJpaDAO(chatRepository, associationRepository, linkDao);
     }
 
     @Bean
     public GitHubRepositoryJpaDAO gitHubRepositoryJpaDAO(
         GitHubRepositoryJpaRepository gitHubRepoRepository,
-        LinkJpaDAO linkDAO
+        LinkJpaRepository linkRepository
     ) {
-        return new GitHubRepositoryJpaDAO(gitHubRepoRepository, linkDAO);
+        return new GitHubRepositoryJpaDAO(gitHubRepoRepository, linkRepository);
     }
 
     @Bean
     public LinkJpaDAO linkJpaDAO(
-        LinkJpaRepository linkRepository
+        LinkJpaRepository linkRepository,
+        UniversalInitialStateScreener initialStateScreener
     ) {
-        return new LinkJpaDAO(linkRepository);
+        return new LinkJpaDAO(linkRepository, initialStateScreener);
     }
 
     @Bean
     public StackOverflowQuestionJpaDAO stackOverflowQuestionJpaDAO(
         StackOverflowQuestionJpaRepository questionRepository,
-        LinkJpaDAO linkDao
+        LinkJpaRepository linkRepository
     ) {
-        return new StackOverflowQuestionJpaDAO(questionRepository, linkDao);
+        return new StackOverflowQuestionJpaDAO(questionRepository, linkRepository);
     }
 
 }

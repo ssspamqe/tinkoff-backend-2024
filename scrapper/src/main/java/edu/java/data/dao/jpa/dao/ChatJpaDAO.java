@@ -1,14 +1,17 @@
 package edu.java.data.dao.jpa.dao;
 
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
+import edu.java.data.dao.jpa.entities.AssociationJpa;
 import edu.java.data.dao.jpa.entities.ChatJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dao.jpa.entities.utils.mappers.ChatMapper;
 import edu.java.data.dao.jpa.entities.utils.mappers.EntityMapper;
 import edu.java.data.dao.jpa.entities.utils.mappers.LinkMapper;
+import edu.java.data.dao.jpa.repositories.AssociationJpaRepository;
 import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dto.Chat;
 import edu.java.data.dto.Link;
+import edu.java.data.exceptions.DoubleChatRegistrationException;
 import edu.java.data.exceptions.NoSuchChatException;
 import java.net.URI;
 import java.util.Optional;
@@ -25,6 +28,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
     private static final EntityMapper<LinkJpaEntity, Link> LINK_MAPPER = new LinkMapper();
 
     private final ChatJpaRepository chatRepository;
+    private final AssociationJpaRepository associationRepository;
     private final LinkJpaDAO linkDao;
 
     @Override
@@ -38,41 +42,40 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         var jpaChat = findJpaByIdOrThrowException(chatId);
 
         return jpaChat
-            .getChatLinksPairs().stream()
+            .getAssociations().stream()
             .map(pair -> LINK_MAPPER.toDto(pair.getLink()))
             .collect(Collectors.toSet());
     }
 
     @Override
     public Link associateUrlByChatId(URI url, long chatId) {
-        if (!chatRepository.existsById(chatId)) {
-            throw new NoSuchChatException(chatId);
-        }
-
+        var chat = findJpaByIdOrThrowException(chatId);
         var link = linkDao.saveJpaOrFindByUrl(url);
 
-        chatRepository.associateLinkWithChatById(link.getId(), chatId);
+        var newAssociation = new AssociationJpa(chat, link);
+        associationRepository.saveAndFlush(newAssociation);
 
         return LINK_MAPPER.toDto(link);
     }
 
     @Override
     public Link dissociateUrlByChatId(URI url, long chatId) {
-        if (!chatRepository.existsById(chatId)) {
-            throw new NoSuchChatException(chatId);
-        }
-
+        var chat = findJpaByIdOrThrowException(chatId);
         var link = linkDao.findJpaByUrlOrThrowException(url);
 
-        chatRepository.dissociateLinkWithChatById(link.getId(), chatId);
+        associationRepository.removeByChatAndLink(chat, link);
 
+        associationRepository.flush();
         return LINK_MAPPER.toDto(link);
     }
 
     @Override
     public Chat registerChatWithId(long id) {
+        if(chatRepository.existsById(id)){
+            throw new DoubleChatRegistrationException(id);
+        }
         var chat = new ChatJpaEntity(id);
-        chat = chatRepository.save(chat);
+        chat = chatRepository.saveAndFlush(chat);
         return CHAT_MAPPER.toDto(chat);
     }
 
@@ -82,6 +85,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         if (deletedChats == 0) {
             throw new NoSuchChatException(id);
         }
+        chatRepository.flush();
     }
 
     ChatJpaEntity findJpaByIdOrThrowException(long id) {

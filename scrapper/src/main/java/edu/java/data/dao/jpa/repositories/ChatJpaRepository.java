@@ -22,10 +22,9 @@ public interface ChatJpaRepository extends JpaRepository<ChatJpaEntity, Long> {
     @Query(value = "DELETE FROM chat_links WHERE chat_id = :chat_id AND link_id = :link_id", nativeQuery = true)
     void dissociateLinkWithChatById(@Param("link_id") long linkId, @Param("chat_id") long chatId);
 
-    Optional<ChatJpaEntity> findById(long id);
-
     boolean existsById(long id);
 
     long removeById(long id);
+
 }
 

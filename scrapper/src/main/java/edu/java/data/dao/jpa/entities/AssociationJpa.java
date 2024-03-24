@@ -9,20 +9,19 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "chat_links")
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
-@Getter
-@Setter
-public class ChatLinksJpa {
+public class AssociationJpa {
 
     @EmbeddedId
-    private ChatLinksJpaKey id;
+    private AssociationJpaKey id = new AssociationJpaKey();
 
     @ManyToOne
     @MapsId("chatId")
@@ -35,6 +34,16 @@ public class ChatLinksJpa {
     private LinkJpaEntity link;
 
     @Column(name = "created_at", columnDefinition = "TIMESTAMP")
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt = LocalDateTime.now();
 
+    public AssociationJpa(ChatJpaEntity chat, LinkJpaEntity link) {
+        this.chat = chat;
+        this.link = link;
+    }
+
+    public AssociationJpa(AssociationJpaKey id, ChatJpaEntity chat, LinkJpaEntity link) {
+        this.id = id;
+        this.chat = chat;
+        this.link = link;
+    }
 }
