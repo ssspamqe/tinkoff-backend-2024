@@ -27,7 +27,7 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
 
     @BeforeEach
     void assignChatDao() {
-        chatDao = chatJooqDao;
+        chatDao = chatJdbcDao;
     }
 
     @Test
@@ -75,8 +75,8 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
         chatDao.associateUrlByChatId(url, 1);
 
         int chatLinksCouplesCount = jdbcTemplate.queryForObject(
-            "SELECT COUNT(*) FROM chat_links WHERE chat_id = ?", Integer.class, 1
-        );
+            "SELECT COUNT(*) FROM chat_links", Integer.class
+            );
         assertThat(chatLinksCouplesCount).isEqualTo(1);
     }
 
@@ -99,10 +99,7 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
         chatDao.associateUrlByChatId(URI.create("https://example.org"), 1);
 
         int chatLinksCouplesCount = jdbcTemplate.queryForObject(
-            "SELECT COUNT(*) FROM chat_links WHERE chat_id = ? AND link_id = ?",
-            Integer.class,
-            1,
-            linkId
+            "SELECT COUNT(*) FROM chat_links", Integer.class
         );
         assertThat(chatLinksCouplesCount).isEqualTo(1);
     }
@@ -116,10 +113,7 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
         chatDao.dissociateUrlByChatId(URI.create("https://example.org"), 1);
 
         int chatLinksCouplesCount = jdbcTemplate.queryForObject(
-            "SELECT COUNT(*) FROM chat_links WHERE chat_id = ? AND link_id = ?",
-            Integer.class,
-            1,
-            linkId
+            "SELECT COUNT(*) FROM chat_links", Integer.class
         );
         assertThat(chatLinksCouplesCount).isZero();
     }

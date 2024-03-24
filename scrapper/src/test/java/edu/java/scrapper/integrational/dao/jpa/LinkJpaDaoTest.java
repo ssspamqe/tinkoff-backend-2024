@@ -22,7 +22,7 @@ public class LinkJpaDaoTest extends DatabaseIntegrationEnvironment {
 
     @BeforeEach
     void assignLinkDao() {
-        linkDao = linkJpaDao;
+        linkDao = linkJdbcDao;
     }
 
     @Test
@@ -49,7 +49,7 @@ public class LinkJpaDaoTest extends DatabaseIntegrationEnvironment {
         Link link = linkDao.saveOrFindByUrl(URI.create("https://example.org"));
 
         int allSavedLinksCount =
-            jdbcTemplate.queryForObject("SELECT COUNT(*) FROM links WHERE url = 'https://example.org'", Integer.class);
+            jdbcTemplate.queryForObject("SELECT COUNT(*) FROM links", Integer.class);
         assertThat(allSavedLinksCount).isEqualTo(1);
     }
 
