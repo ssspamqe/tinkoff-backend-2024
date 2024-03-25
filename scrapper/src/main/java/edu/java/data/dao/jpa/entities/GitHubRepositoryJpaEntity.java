@@ -43,5 +43,4 @@ public class GitHubRepositoryJpaEntity {
     @Column(name = "activities_ids", columnDefinition = "bigint[]")
     private List<Long> activitiesIds;
 
-
 }

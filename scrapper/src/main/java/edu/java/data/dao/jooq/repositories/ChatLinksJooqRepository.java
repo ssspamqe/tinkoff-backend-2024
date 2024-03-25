@@ -4,7 +4,6 @@ import edu.java.data.dto.ChatLink;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.jooq.impl.DefaultDSLContext;
-import org.springframework.stereotype.Repository;
 import static edu.java.domain.jooq.public_.Tables.CHAT_LINKS;
 
 @RequiredArgsConstructor

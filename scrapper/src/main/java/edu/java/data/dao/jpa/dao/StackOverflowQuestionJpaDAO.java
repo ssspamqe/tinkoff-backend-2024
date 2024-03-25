@@ -48,11 +48,10 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
             oldQuestion.setLink(newLink);
         }
 
-
         oldQuestion.setDescriptionMd5Hash(question.getDescriptionMd5Hash());
         oldQuestion.setAnswersIds(new ArrayList<>(question.getAnswerIds()));
 
-        questionRepository.flush();//TODO investigate problems with transaction management
+        questionRepository.flush(); //TODO investigate problems with transaction management
     }
 
     @Override
@@ -66,8 +65,8 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
         return ENTITY_MAPPER.toJpaWithLink(question, link);
     }
 
-    private LinkJpaEntity findJpaLinkByIdOrThrowException(long id){
+    private LinkJpaEntity findJpaLinkByIdOrThrowException(long id) {
         return linkRepository.findById(id)
-            .orElseThrow(()-> new NoSuchLinkException(id));
+            .orElseThrow(() -> new NoSuchLinkException(id));
     }
 }

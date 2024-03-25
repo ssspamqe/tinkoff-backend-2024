@@ -5,7 +5,6 @@ import edu.java.data.dao.jdbc.repositories.StackOverflowQuestionJdbcRepository;
 import edu.java.data.dto.StackOverflowQuestion;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor

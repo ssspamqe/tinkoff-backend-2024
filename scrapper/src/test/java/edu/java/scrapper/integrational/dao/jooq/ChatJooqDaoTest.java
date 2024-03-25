@@ -76,7 +76,7 @@ public class ChatJooqDaoTest extends DatabaseIntegrationEnvironment {
 
         int chatLinksCouplesCount = jdbcTemplate.queryForObject(
             "SELECT COUNT(*) FROM chat_links", Integer.class
-            );
+        );
         assertThat(chatLinksCouplesCount).isEqualTo(1);
     }
 

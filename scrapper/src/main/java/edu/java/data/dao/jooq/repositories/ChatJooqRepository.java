@@ -1,12 +1,9 @@
 package edu.java.data.dao.jooq.repositories;
 
 import edu.java.data.dto.Chat;
-import java.time.OffsetDateTime;
-import java.time.ZoneId;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.jooq.impl.DefaultDSLContext;
-import org.springframework.stereotype.Repository;
 import static edu.java.domain.jooq.public_.Tables.CHATS;
 
 @RequiredArgsConstructor

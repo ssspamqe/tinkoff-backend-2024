@@ -4,7 +4,6 @@ import edu.java.data.dto.StackOverflowQuestion;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.jooq.impl.DefaultDSLContext;
-import org.springframework.stereotype.Repository;
 import static edu.java.domain.jooq.public_.Tables.STACK_OVERFLOW_QUESTIONS;
 
 @RequiredArgsConstructor

@@ -2,7 +2,6 @@ package edu.java.restApi.services;
 
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.dto.Link;
-import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import java.net.URI;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;

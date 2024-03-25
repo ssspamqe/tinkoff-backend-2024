@@ -70,7 +70,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
 
     @Override
     public Chat registerChatWithId(long id) {
-        if(chatRepository.existsById(id)){
+        if (chatRepository.existsById(id)) {
             throw new DoubleChatRegistrationException(id);
         }
         var chat = new ChatJpaEntity(id);

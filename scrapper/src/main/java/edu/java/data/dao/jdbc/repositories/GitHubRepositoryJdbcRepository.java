@@ -1,8 +1,7 @@
 package edu.java.data.dao.jdbc.repositories;
 
-import edu.java.data.dto.GitHubRepository;
-
 import edu.java.data.dao.jdbc.repositories.rowMappers.GitHubRepositoryRowMapper;
+import edu.java.data.dto.GitHubRepository;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
@@ -48,7 +47,6 @@ public class GitHubRepositoryJdbcRepository {
             .update();
     }
 
-
     @SuppressWarnings("MultipleStringLiterals")
     public void update(GitHubRepository repository) {
         Long[] activities = repository.getActivitiesIds().toArray(new Long[0]);
@@ -62,7 +60,6 @@ public class GitHubRepositoryJdbcRepository {
             .update();
     }
 
-
     @SuppressWarnings("MultipleStringLiterals")
     public Optional<GitHubRepository> findById(long id) {
         return jdbcClient.sql(FIND_BY_ID_QUERY)
@@ -70,7 +67,6 @@ public class GitHubRepositoryJdbcRepository {
             .query(ROW_MAPPER)
             .optional();
     }
-
 
     @SuppressWarnings("MultipleStringLiterals")
     public Optional<GitHubRepository> findByNameAndOwner(String name, String owner) {

@@ -9,7 +9,6 @@ import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Set;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,7 +29,7 @@ public class ChatJpaEntity {
     @Column(name = "created_at", columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "chat")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "chat")
     private Collection<AssociationJpa> associations = new HashSet<>();
 
     public ChatJpaEntity(long id) {

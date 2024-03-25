@@ -4,7 +4,6 @@ import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dao.jpa.entities.StackOverflowQuestionJpaEntity;
 import edu.java.data.dto.StackOverflowQuestion;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

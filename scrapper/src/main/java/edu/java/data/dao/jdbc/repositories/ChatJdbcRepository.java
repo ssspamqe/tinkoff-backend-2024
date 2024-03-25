@@ -1,12 +1,11 @@
 package edu.java.data.dao.jdbc.repositories;
 
-import edu.java.data.dto.Chat;
 import edu.java.data.dao.jdbc.repositories.rowMappers.ChatRowMapper;
+import edu.java.data.dto.Chat;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
-import org.springframework.stereotype.Repository;
 
 @RequiredArgsConstructor
 public class ChatJdbcRepository {
@@ -25,7 +24,6 @@ public class ChatJdbcRepository {
 
     private final JdbcClient jdbcClient;
 
-
     @SuppressWarnings("MultipleStringLiterals")
     public void save(Chat chat) {
         jdbcClient.sql(SAVE_QUERY)
@@ -34,7 +32,6 @@ public class ChatJdbcRepository {
             .update();
     }
 
-
     @SuppressWarnings("MultipleStringLiterals")
     public Optional<Chat> findById(long id) {
         return jdbcClient.sql(FIND_BY_ID_QUERY)
@@ -42,7 +39,6 @@ public class ChatJdbcRepository {
             .query(ROW_MAPPER)
             .optional();
     }
-
 
     @SuppressWarnings("MultipleStringLiterals")
     public boolean removeById(long id) {

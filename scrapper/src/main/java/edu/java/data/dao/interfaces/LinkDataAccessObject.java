@@ -2,9 +2,7 @@ package edu.java.data.dao.interfaces;
 
 import edu.java.data.dto.Link;
 import java.net.URI;
-import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 

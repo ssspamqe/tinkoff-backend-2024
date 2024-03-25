@@ -2,8 +2,8 @@ package edu.java.data.dao.jpa.entities.utils.mappers;
 
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dto.Link;
-import org.springframework.stereotype.Component;
 import java.net.URI;
+import org.springframework.stereotype.Component;
 
 @Component
 public class LinkMapper implements EntityMapper<LinkJpaEntity, Link> {

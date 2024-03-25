@@ -2,8 +2,8 @@ package edu.java.data.dao.jpa.entities.utils;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
-import org.springframework.util.StringUtils;
 import java.net.URI;
+import org.springframework.util.StringUtils;
 
 @Converter(autoApply = true)
 public class UriPersistenceConverter implements AttributeConverter<URI, String> {

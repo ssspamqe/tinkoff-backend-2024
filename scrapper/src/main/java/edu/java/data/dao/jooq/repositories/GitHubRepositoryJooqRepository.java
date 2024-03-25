@@ -4,7 +4,6 @@ import edu.java.data.dto.GitHubRepository;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.jooq.impl.DefaultDSLContext;
-import org.springframework.stereotype.Repository;
 import static edu.java.domain.jooq.public_.Tables.GIT_HUB_REPOSITORIES;
 
 @RequiredArgsConstructor

@@ -5,7 +5,6 @@ import edu.java.data.dao.jooq.repositories.GitHubRepositoryJooqRepository;
 import edu.java.data.dto.GitHubRepository;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor

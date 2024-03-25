@@ -12,7 +12,6 @@ import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Optional;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,7 +36,7 @@ public class LinkJpaEntity {
     @Column(name = "created_at", columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    @Column(name = "last_checked_at", columnDefinition = "TIMESTAMP")
+    @Column(name = "last_checked_at", columnDefinition = "TIMESTAMP") @SuppressWarnings("MagicNumber")
     private LocalDateTime lastCheckedAt = LocalDateTime.of(1970, 1, 1, 0, 0);
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "link")

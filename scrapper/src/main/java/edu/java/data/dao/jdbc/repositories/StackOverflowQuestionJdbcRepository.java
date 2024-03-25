@@ -1,13 +1,11 @@
 package edu.java.data.dao.jdbc.repositories;
 
-import edu.java.data.dto.StackOverflowQuestion;
-
 import edu.java.data.dao.jdbc.repositories.rowMappers.StackOverflowQuestionRowMapper;
+import edu.java.data.dto.StackOverflowQuestion;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
-import org.springframework.stereotype.Repository;
 
 @RequiredArgsConstructor
 public class StackOverflowQuestionJdbcRepository {
@@ -34,7 +32,6 @@ public class StackOverflowQuestionJdbcRepository {
 
     private final JdbcClient jdbcClient;
 
-
     @SuppressWarnings("MultipleStringLiterals")
     public Optional<StackOverflowQuestion> findById(long id) {
         return jdbcClient.sql(FIND_BY_ID_QUERY)
@@ -43,7 +40,6 @@ public class StackOverflowQuestionJdbcRepository {
             .optional();
     }
 
-
     @SuppressWarnings("MultipleStringLiterals")
     public Optional<StackOverflowQuestion> findByLinkId(long linkId) {
         return jdbcClient.sql(FIND_BY_LINK_ID_QUERY)
@@ -51,7 +47,6 @@ public class StackOverflowQuestionJdbcRepository {
             .query(ROW_MAPPER)
             .optional();
     }
-
 
     @SuppressWarnings("MultipleStringLiterals")
     public void save(StackOverflowQuestion question) {
@@ -63,7 +58,6 @@ public class StackOverflowQuestionJdbcRepository {
             .param("answers_ids", answers)
             .update();
     }
-
 
     @SuppressWarnings("MultipleStringLiterals")
     public void update(StackOverflowQuestion question) {
