@@ -35,7 +35,7 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
             .findById(repository.getId())
             .orElseThrow(() -> new NoSuchGitHubRepositoryException(repository.getName(), repository.getOwner()));
 
-        if (oldRepository.getLink().getId() != repository.getLinkId()) {
+        if (linkIdWasChanged(oldRepository, repository)) {
             var newLink = findJpaLinkByIdOrThrowException(repository.getLinkId());
             oldRepository.setLink(newLink);
         }
@@ -46,6 +46,10 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
         oldRepository.setActivitiesIds(new ArrayList<>(repository.getActivitiesIds()));
 
         gitHubRepoRepository.flush(); //TODO investigate problems with transaction management
+    }
+
+    private boolean linkIdWasChanged(GitHubRepositoryJpaEntity oldRepository, GitHubRepository newRepository) {
+        return !oldRepository.getLink().getId().equals(newRepository.getLinkId());
     }
 
     @Override

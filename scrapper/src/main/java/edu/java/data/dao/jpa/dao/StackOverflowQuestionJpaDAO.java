@@ -4,7 +4,6 @@ import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dao.jpa.entities.StackOverflowQuestionJpaEntity;
 import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
-import edu.java.data.dao.jpa.entities.utils.mappers.StackOverflowQuestionMapper;
 import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dao.jpa.repositories.StackOverflowQuestionJpaRepository;
 import edu.java.data.dto.StackOverflowQuestion;
@@ -42,7 +41,7 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
             .findById(question.getId())
             .orElseThrow(() -> new NoSuchStackOverflowQuestionException(question.getId()));
 
-        if (oldQuestion.getLink().getId() != question.getId()) {
+        if (linkIdWasChanged(oldQuestion, question)) {
             var newLink = findJpaLinkByIdOrThrowException(question.getLinkId());
             oldQuestion.setLink(newLink);
         }
@@ -51,6 +50,10 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
         oldQuestion.setAnswersIds(new ArrayList<>(question.getAnswerIds()));
 
         questionRepository.flush(); //TODO investigate problems with transaction management
+    }
+
+    private boolean linkIdWasChanged(StackOverflowQuestionJpaEntity oldQuestion, StackOverflowQuestion newQuestion) {
+        return !oldQuestion.getLink().getId().equals(newQuestion.getLinkId());
     }
 
     @Override

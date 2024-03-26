@@ -24,7 +24,7 @@ public class GitHubRepositoryJpaEntity {
 
     @Id
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "link_id", referencedColumnName = "id")

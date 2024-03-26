@@ -24,7 +24,7 @@ public class StackOverflowQuestionJpaEntity {
 
     @Id
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "link_id", referencedColumnName = "id")
