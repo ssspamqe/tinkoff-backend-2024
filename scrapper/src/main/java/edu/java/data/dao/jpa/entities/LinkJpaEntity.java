@@ -9,7 +9,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.net.URI;
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.Collection;
 import java.util.HashSet;
 import lombok.AllArgsConstructor;
@@ -34,10 +36,10 @@ public class LinkJpaEntity {
     private URI url;
 
     @Column(name = "created_at", columnDefinition = "TIMESTAMP")
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private Instant createdAt = Instant.now();
 
     @Column(name = "last_checked_at", columnDefinition = "TIMESTAMP") @SuppressWarnings("MagicNumber")
-    private LocalDateTime lastCheckedAt = LocalDateTime.of(1970, 1, 1, 0, 0);
+    private Instant lastCheckedAt = LocalDateTime.of(1970, 1, 1, 0, 0).toInstant(ZoneOffset.UTC);
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "link")
     private Collection<AssociationJpa> associations = new HashSet<>();

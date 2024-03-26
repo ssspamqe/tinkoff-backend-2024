@@ -4,6 +4,10 @@ import edu.java.data.dao.jpa.dao.ChatJpaDAO;
 import edu.java.data.dao.jpa.dao.GitHubRepositoryJpaDAO;
 import edu.java.data.dao.jpa.dao.LinkJpaDAO;
 import edu.java.data.dao.jpa.dao.StackOverflowQuestionJpaDAO;
+import edu.java.data.dao.jpa.entities.utils.mappers.ChatMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.GitHubRepositoryMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.LinkMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.StackOverflowQuestionMapper;
 import edu.java.data.dao.jpa.repositories.AssociationJpaRepository;
 import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
@@ -24,33 +28,38 @@ public class JpaAccessConfiguration {
     public ChatJpaDAO chatJpaDAO(
         ChatJpaRepository chatRepository,
         LinkJpaDAO linkDao,
-        AssociationJpaRepository associationRepository
+        AssociationJpaRepository associationRepository,
+        ChatMapper chatMapper,
+        LinkMapper linkMapper
     ) {
-        return new ChatJpaDAO(chatRepository, associationRepository, linkDao);
+        return new ChatJpaDAO(chatRepository, associationRepository, linkDao, chatMapper, linkMapper);
     }
 
     @Bean
     public GitHubRepositoryJpaDAO gitHubRepositoryJpaDAO(
         GitHubRepositoryJpaRepository gitHubRepoRepository,
-        LinkJpaRepository linkRepository
+        LinkJpaRepository linkRepository,
+        GitHubRepositoryMapper repositoryMapper
     ) {
-        return new GitHubRepositoryJpaDAO(gitHubRepoRepository, linkRepository);
+        return new GitHubRepositoryJpaDAO(gitHubRepoRepository, linkRepository, repositoryMapper);
     }
 
     @Bean
     public LinkJpaDAO linkJpaDAO(
         LinkJpaRepository linkRepository,
-        UniversalInitialStateScreener initialStateScreener
+        UniversalInitialStateScreener initialStateScreener,
+        LinkMapper linkMapper
     ) {
-        return new LinkJpaDAO(linkRepository, initialStateScreener);
+        return new LinkJpaDAO(linkRepository, initialStateScreener, linkMapper);
     }
 
     @Bean
     public StackOverflowQuestionJpaDAO stackOverflowQuestionJpaDAO(
         StackOverflowQuestionJpaRepository questionRepository,
-        LinkJpaRepository linkRepository
+        LinkJpaRepository linkRepository,
+        StackOverflowQuestionMapper questionMapper
     ) {
-        return new StackOverflowQuestionJpaDAO(questionRepository, linkRepository);
+        return new StackOverflowQuestionJpaDAO(questionRepository, linkRepository,questionMapper);
     }
 
 }

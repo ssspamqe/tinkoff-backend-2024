@@ -4,7 +4,6 @@ import edu.java.data.dao.jpa.entities.ChatJpaEntity;
 import edu.java.data.dto.Chat;
 import org.springframework.stereotype.Component;
 
-@Component
 public class ChatMapper implements EntityMapper<ChatJpaEntity, Chat> {
 
     @Override

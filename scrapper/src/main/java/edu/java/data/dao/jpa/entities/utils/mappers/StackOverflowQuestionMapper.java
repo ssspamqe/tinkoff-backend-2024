@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Set;
 import org.springframework.stereotype.Component;
 
-@Component
 public class StackOverflowQuestionMapper
     implements ServiceEntityMapper<StackOverflowQuestionJpaEntity, StackOverflowQuestion> {
     @Override

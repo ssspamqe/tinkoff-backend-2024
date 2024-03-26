@@ -6,7 +6,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import java.time.LocalDateTime;
+import java.time.Instant;
 import java.util.Collection;
 import java.util.HashSet;
 import lombok.AllArgsConstructor;
@@ -27,7 +27,7 @@ public class ChatJpaEntity {
     private Long id;
 
     @Column(name = "created_at", columnDefinition = "TIMESTAMP")
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private Instant createdAt = Instant.now();
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "chat")
     private Collection<AssociationJpa> associations = new HashSet<>();

@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Set;
 import org.springframework.stereotype.Component;
 
-@Component
 public class GitHubRepositoryMapper implements ServiceEntityMapper<GitHubRepositoryJpaEntity, GitHubRepository> {
 
     @Override
