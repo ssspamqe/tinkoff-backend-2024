@@ -24,17 +24,17 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ChatJpaDAO implements ChatDataAccessObject {
 
-    private static final EntityMapper<ChatJpaEntity, Chat> CHAT_MAPPER = new ChatMapper();
-    private static final EntityMapper<LinkJpaEntity, Link> LINK_MAPPER = new LinkMapper();
-
     private final ChatJpaRepository chatRepository;
     private final AssociationJpaRepository associationRepository;
     private final LinkJpaDAO linkDao;
 
+    private final EntityMapper<ChatJpaEntity,Chat> chatMapper;
+    private final EntityMapper<LinkJpaEntity, Link> linkMapper;
+
     @Override
     public Optional<Chat> findById(long id) {
         var jpaChat = chatRepository.findById(id);
-        return CHAT_MAPPER.toOptionalDto(jpaChat);
+        return chatMapper.toOptionalDto(jpaChat);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
 
         return jpaChat
             .getAssociations().stream()
-            .map(pair -> LINK_MAPPER.toDto(pair.getLink()))
+            .map(pair -> linkMapper.toDto(pair.getLink()))
             .collect(Collectors.toSet());
     }
 
@@ -55,7 +55,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         var newAssociation = new AssociationJpa(chat, link);
         associationRepository.save(newAssociation);
 
-        return LINK_MAPPER.toDto(link);
+        return linkMapper.toDto(link);
     }
 
     @Override
@@ -65,7 +65,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
 
         associationRepository.removeByChatAndLink(chat, link);
 
-        return LINK_MAPPER.toDto(link);
+        return linkMapper.toDto(link);
     }
 
     @Override
@@ -75,7 +75,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         }
         var chat = new ChatJpaEntity(id);
         chat = chatRepository.save(chat);
-        return CHAT_MAPPER.toDto(chat);
+        return chatMapper.toDto(chat);
     }
 
     @Override

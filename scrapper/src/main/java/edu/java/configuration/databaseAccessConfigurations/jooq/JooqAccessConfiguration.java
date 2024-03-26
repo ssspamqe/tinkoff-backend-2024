@@ -1,4 +1,4 @@
-package edu.java.configuration.databaseAccessConfigurations;
+package edu.java.configuration.databaseAccessConfigurations.jooq;
 
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;

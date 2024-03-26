@@ -19,22 +19,21 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAccessObject {
 
-    private static final ServiceEntityMapper<StackOverflowQuestionJpaEntity, StackOverflowQuestion> ENTITY_MAPPER =
-        new StackOverflowQuestionMapper();
-
     private final StackOverflowQuestionJpaRepository questionRepository;
     private final LinkJpaRepository linkRepository;
+
+    private final ServiceEntityMapper<StackOverflowQuestionJpaEntity, StackOverflowQuestion> questionMapper;
 
     @Override
     public Optional<StackOverflowQuestion> findById(long id) {
         var jpaQuestion = questionRepository.findById(id);
-        return ENTITY_MAPPER.toOptionalDto(jpaQuestion);
+        return questionMapper.toOptionalDto(jpaQuestion);
     }
 
     @Override
     public Optional<StackOverflowQuestion> findByLinkId(long linkId) {
         var jpaQuestion = questionRepository.findByLinkId(linkId);
-        return ENTITY_MAPPER.toOptionalDto(jpaQuestion);
+        return questionMapper.toOptionalDto(jpaQuestion);
     }
 
     @Override
@@ -62,7 +61,7 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
 
     private StackOverflowQuestionJpaEntity buildJpaQuestion(StackOverflowQuestion question) {
         var link = findJpaLinkByIdOrThrowException(question.getLinkId());
-        return ENTITY_MAPPER.toJpaWithLink(question, link);
+        return questionMapper.toJpaWithLink(question, link);
     }
 
     private LinkJpaEntity findJpaLinkByIdOrThrowException(long id) {
