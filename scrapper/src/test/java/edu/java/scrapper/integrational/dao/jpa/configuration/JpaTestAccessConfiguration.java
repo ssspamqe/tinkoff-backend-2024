@@ -1,4 +1,4 @@
-package edu.java.scrapper.integrational.dao.jpa;
+package edu.java.scrapper.integrational.dao.jpa.configuration;
 
 import edu.java.data.dao.jpa.dao.ChatJpaDAO;
 import edu.java.data.dao.jpa.dao.GitHubRepositoryJpaDAO;

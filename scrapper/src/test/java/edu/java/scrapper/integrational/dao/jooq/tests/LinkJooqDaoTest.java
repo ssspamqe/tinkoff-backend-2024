@@ -1,4 +1,4 @@
-package edu.java.scrapper.integrational.dao.jpa;
+package edu.java.scrapper.integrational.dao.jooq.tests;
 
 import edu.java.data.dao.interfaces.LinkDataAccessObject;
 import edu.java.data.dao.jdbc.repositories.rowMappers.LinkRowMapper;
@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LinkJpaDaoTest extends DatabaseIntegrationEnvironment {
+public class LinkJooqDaoTest extends DatabaseIntegrationEnvironment {
 
     private static final RowMapper<Link> LINK_JDBC_MAPPER = new LinkRowMapper();
 

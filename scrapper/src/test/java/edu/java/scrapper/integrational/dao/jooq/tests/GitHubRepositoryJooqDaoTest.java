@@ -1,4 +1,4 @@
-package edu.java.scrapper.integrational.dao.jooq;
+package edu.java.scrapper.integrational.dao.jooq.tests;
 
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
 import edu.java.data.dao.jdbc.repositories.rowMappers.GitHubRepositoryRowMapper;

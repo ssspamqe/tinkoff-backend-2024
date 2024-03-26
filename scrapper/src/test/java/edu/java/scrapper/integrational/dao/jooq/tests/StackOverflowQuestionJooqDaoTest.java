@@ -1,4 +1,4 @@
-package edu.java.scrapper.integrational.dao.jdbc;
+package edu.java.scrapper.integrational.dao.jooq.tests;
 
 import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.dao.jdbc.repositories.rowMappers.StackOverflowQuestionRowMapper;
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.core.RowMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StackOverflowQuestionJdbcDaoTest extends DatabaseIntegrationEnvironment {
+public class StackOverflowQuestionJooqDaoTest extends DatabaseIntegrationEnvironment {
 
     private static final RowMapper<StackOverflowQuestion> QUESTION_JDBC_ROW_MAPPER =
         new StackOverflowQuestionRowMapper();
@@ -19,7 +19,7 @@ public class StackOverflowQuestionJdbcDaoTest extends DatabaseIntegrationEnviron
 
     @BeforeEach
     void assignDao() {
-        questionDao = stackOverflowQuestionJdbcDao;
+        questionDao = stackOverflowQuestionJooqDao;
     }
 
     @Test

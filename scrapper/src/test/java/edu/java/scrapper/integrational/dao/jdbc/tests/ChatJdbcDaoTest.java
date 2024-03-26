@@ -1,4 +1,4 @@
-package edu.java.scrapper.integrational.dao.jdbc;
+package edu.java.scrapper.integrational.dao.jdbc.tests;
 
 import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.dao.jdbc.repositories.rowMappers.ChatRowMapper;

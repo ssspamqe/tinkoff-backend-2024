@@ -1,4 +1,4 @@
-package edu.java.scrapper.integrational.dao.jpa;
+package edu.java.scrapper.integrational.dao.jpa.tests;
 
 import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.dao.jdbc.repositories.rowMappers.StackOverflowQuestionRowMapper;
