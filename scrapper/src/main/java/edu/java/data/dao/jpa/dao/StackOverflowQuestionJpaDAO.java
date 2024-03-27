@@ -3,7 +3,7 @@ package edu.java.data.dao.jpa.dao;
 import edu.java.data.dao.interfaces.StackOverflowQuestionDataAccessObject;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
 import edu.java.data.dao.jpa.entities.StackOverflowQuestionJpaEntity;
-import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.StackOverflowQuestionJpaMapper;
 import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dao.jpa.repositories.StackOverflowQuestionJpaRepository;
 import edu.java.data.dto.StackOverflowQuestion;
@@ -21,18 +21,18 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
     private final StackOverflowQuestionJpaRepository questionRepository;
     private final LinkJpaRepository linkRepository;
 
-    private final ServiceEntityMapper<StackOverflowQuestionJpaEntity, StackOverflowQuestion> questionMapper;
+    private final StackOverflowQuestionJpaMapper questionJpaMapper;
 
     @Override
     public Optional<StackOverflowQuestion> findById(long id) {
         var jpaQuestion = questionRepository.findById(id);
-        return questionMapper.toOptionalDto(jpaQuestion);
+        return questionJpaMapper.toOptionalDto(jpaQuestion);
     }
 
     @Override
     public Optional<StackOverflowQuestion> findByLinkId(long linkId) {
         var jpaQuestion = questionRepository.findByLinkId(linkId);
-        return questionMapper.toOptionalDto(jpaQuestion);
+        return questionJpaMapper.toOptionalDto(jpaQuestion);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
         }
 
         oldQuestion.setDescriptionMd5Hash(question.getDescriptionMd5Hash());
-        oldQuestion.setAnswersIds(new ArrayList<>(question.getAnswerIds()));
+        oldQuestion.setAnswersIds(new ArrayList<>(question.getAnswersIds()));
 
         questionRepository.flush(); //TODO investigate problems with transaction management
     }
@@ -64,7 +64,7 @@ public class StackOverflowQuestionJpaDAO implements StackOverflowQuestionDataAcc
 
     private StackOverflowQuestionJpaEntity buildJpaQuestion(StackOverflowQuestion question) {
         var link = findJpaLinkByIdOrThrowException(question.getLinkId());
-        return questionMapper.toJpaWithLink(question, link);
+        return questionJpaMapper.toJpaWithLink(question, link);
     }
 
     private LinkJpaEntity findJpaLinkByIdOrThrowException(long id) {

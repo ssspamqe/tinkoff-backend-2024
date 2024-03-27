@@ -31,6 +31,7 @@
         <docker-compose.version>3.2.3</docker-compose.version>
         <commons-codec.version>1.16.1</commons-codec.version>
         <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
 
         <!-- Tests -->
         <testcontainers.version>1.19.4</testcontainers.version>

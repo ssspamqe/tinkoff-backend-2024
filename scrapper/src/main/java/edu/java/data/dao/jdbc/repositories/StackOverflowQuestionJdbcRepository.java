@@ -50,7 +50,7 @@ public class StackOverflowQuestionJdbcRepository {
 
     @SuppressWarnings("MultipleStringLiterals")
     public void save(StackOverflowQuestion question) {
-        Long[] answers = question.getAnswerIds().toArray(new Long[0]);
+        Long[] answers = question.getAnswersIds().toArray(new Long[0]);
         jdbcClient.sql(SAVE_QUERY)
             .param("id", question.getId())
             .param("link_id", question.getLinkId())
@@ -61,7 +61,7 @@ public class StackOverflowQuestionJdbcRepository {
 
     @SuppressWarnings("MultipleStringLiterals")
     public void update(StackOverflowQuestion question) {
-        Long[] answers = question.getAnswerIds().toArray(new Long[0]);
+        Long[] answers = question.getAnswersIds().toArray(new Long[0]);
         jdbcClient.sql(UPDATE_QUERY)
             .param("id", question.getId())
             .param("link_id", question.getLinkId())

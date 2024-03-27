@@ -32,7 +32,7 @@ public class StackOverflowQuestionJooqRepository {
             .set(STACK_OVERFLOW_QUESTIONS.ID, question.getId())
             .set(STACK_OVERFLOW_QUESTIONS.LINK_ID, question.getLinkId())
             .set(STACK_OVERFLOW_QUESTIONS.DESCRIPTION_MD5_HASH, question.getDescriptionMd5Hash())
-            .set(STACK_OVERFLOW_QUESTIONS.ANSWERS_IDS, question.getAnswerIds().toArray(new Long[0]))
+            .set(STACK_OVERFLOW_QUESTIONS.ANSWERS_IDS, question.getAnswersIds().toArray(new Long[0]))
             .execute();
     }
 
@@ -40,7 +40,7 @@ public class StackOverflowQuestionJooqRepository {
         dsl.update(STACK_OVERFLOW_QUESTIONS)
             .set(STACK_OVERFLOW_QUESTIONS.LINK_ID, question.getLinkId())
             .set(STACK_OVERFLOW_QUESTIONS.DESCRIPTION_MD5_HASH, question.getDescriptionMd5Hash())
-            .set(STACK_OVERFLOW_QUESTIONS.ANSWERS_IDS, question.getAnswerIds().toArray(new Long[0]))
+            .set(STACK_OVERFLOW_QUESTIONS.ANSWERS_IDS, question.getAnswersIds().toArray(new Long[0]))
             .where(STACK_OVERFLOW_QUESTIONS.ID.eq(question.getId()))
             .execute();
     }

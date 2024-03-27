@@ -4,10 +4,10 @@ import edu.java.data.dao.jpa.dao.ChatJpaDAO;
 import edu.java.data.dao.jpa.dao.GitHubRepositoryJpaDAO;
 import edu.java.data.dao.jpa.dao.LinkJpaDAO;
 import edu.java.data.dao.jpa.dao.StackOverflowQuestionJpaDAO;
-import edu.java.data.dao.jpa.entities.utils.mappers.ChatMapper;
-import edu.java.data.dao.jpa.entities.utils.mappers.GitHubRepositoryMapper;
-import edu.java.data.dao.jpa.entities.utils.mappers.LinkMapper;
-import edu.java.data.dao.jpa.entities.utils.mappers.StackOverflowQuestionMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.ChatJpaMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.GitHubRepositoryJpaMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.LinkJpaMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.StackOverflowQuestionJpaMapper;
 import edu.java.data.dao.jpa.repositories.AssociationJpaRepository;
 import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
@@ -29,8 +29,8 @@ public class JpaAccessConfiguration {
         ChatJpaRepository chatRepository,
         LinkJpaDAO linkDao,
         AssociationJpaRepository associationRepository,
-        ChatMapper chatMapper,
-        LinkMapper linkMapper
+        ChatJpaMapper chatMapper,
+        LinkJpaMapper linkMapper
     ) {
         return new ChatJpaDAO(chatRepository, associationRepository, linkDao, chatMapper, linkMapper);
     }
@@ -39,7 +39,7 @@ public class JpaAccessConfiguration {
     public GitHubRepositoryJpaDAO gitHubRepositoryJpaDAO(
         GitHubRepositoryJpaRepository gitHubRepoRepository,
         LinkJpaRepository linkRepository,
-        GitHubRepositoryMapper repositoryMapper
+        GitHubRepositoryJpaMapper repositoryMapper
     ) {
         return new GitHubRepositoryJpaDAO(gitHubRepoRepository, linkRepository, repositoryMapper);
     }
@@ -48,7 +48,7 @@ public class JpaAccessConfiguration {
     public LinkJpaDAO linkJpaDAO(
         LinkJpaRepository linkRepository,
         UniversalInitialStateScreener initialStateScreener,
-        LinkMapper linkMapper
+        LinkJpaMapper linkMapper
     ) {
         return new LinkJpaDAO(linkRepository, initialStateScreener, linkMapper);
     }
@@ -57,7 +57,7 @@ public class JpaAccessConfiguration {
     public StackOverflowQuestionJpaDAO stackOverflowQuestionJpaDAO(
         StackOverflowQuestionJpaRepository questionRepository,
         LinkJpaRepository linkRepository,
-        StackOverflowQuestionMapper questionMapper
+        StackOverflowQuestionJpaMapper questionMapper
     ) {
         return new StackOverflowQuestionJpaDAO(questionRepository, linkRepository,questionMapper);
     }

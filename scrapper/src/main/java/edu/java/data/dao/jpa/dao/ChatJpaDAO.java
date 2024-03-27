@@ -4,9 +4,8 @@ import edu.java.data.dao.interfaces.ChatDataAccessObject;
 import edu.java.data.dao.jpa.entities.AssociationJpa;
 import edu.java.data.dao.jpa.entities.ChatJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
-import edu.java.data.dao.jpa.entities.utils.mappers.ChatMapper;
-import edu.java.data.dao.jpa.entities.utils.mappers.EntityMapper;
-import edu.java.data.dao.jpa.entities.utils.mappers.LinkMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.ChatJpaMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.LinkJpaMapper;
 import edu.java.data.dao.jpa.repositories.AssociationJpaRepository;
 import edu.java.data.dao.jpa.repositories.ChatJpaRepository;
 import edu.java.data.dto.Chat;
@@ -28,13 +27,13 @@ public class ChatJpaDAO implements ChatDataAccessObject {
     private final AssociationJpaRepository associationRepository;
     private final LinkJpaDAO linkDao;
 
-    private final EntityMapper<ChatJpaEntity,Chat> chatMapper;
-    private final EntityMapper<LinkJpaEntity, Link> linkMapper;
+    private final ChatJpaMapper chatJpaMapper;
+    private final LinkJpaMapper linkJpaMapper;
 
     @Override
     public Optional<Chat> findById(long id) {
         var jpaChat = chatRepository.findById(id);
-        return chatMapper.toOptionalDto(jpaChat);
+        return chatJpaMapper.toOptionalDto(jpaChat);
     }
 
     @Override
@@ -43,7 +42,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
 
         return jpaChat
             .getAssociations().stream()
-            .map(pair -> linkMapper.toDto(pair.getLink()))
+            .map(pair -> linkJpaMapper.toDto(pair.getLink()))
             .collect(Collectors.toSet());
     }
 
@@ -55,7 +54,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         var newAssociation = new AssociationJpa(chat, link);
         associationRepository.save(newAssociation);
 
-        return linkMapper.toDto(link);
+        return linkJpaMapper.toDto(link);
     }
 
     @Override
@@ -65,7 +64,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
 
         associationRepository.removeByChatAndLink(chat, link);
 
-        return linkMapper.toDto(link);
+        return linkJpaMapper.toDto(link);
     }
 
     @Override
@@ -75,7 +74,7 @@ public class ChatJpaDAO implements ChatDataAccessObject {
         }
         var chat = new ChatJpaEntity(id);
         chat = chatRepository.save(chat);
-        return chatMapper.toDto(chat);
+        return chatJpaMapper.toDto(chat);
     }
 
     @Override

@@ -2,12 +2,13 @@ package edu.java.data.dao.jpa.dao;
 
 import edu.java.data.dao.interfaces.LinkDataAccessObject;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
-import edu.java.data.dao.jpa.entities.utils.mappers.EntityMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.LinkJpaMapper;
 import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dto.Link;
 import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import java.net.URI;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Optional;
@@ -23,12 +24,12 @@ public class LinkJpaDAO implements LinkDataAccessObject {
     private final LinkJpaRepository linkRepository;
     private final UniversalInitialStateScreener initialStateScreener;
 
-    private final EntityMapper<LinkJpaEntity, Link> linkMapper;
+    private final LinkJpaMapper linkJpaMapper;
 
     @Override
     public Optional<Link> findByUrl(URI url) {
         var jpaLink = findJpaByUrl(url);
-        return linkMapper.toOptionalDto(jpaLink);
+        return linkJpaMapper.toOptionalDto(jpaLink);
     }
 
     Optional<LinkJpaEntity> findJpaByUrl(URI url) {
@@ -38,7 +39,7 @@ public class LinkJpaDAO implements LinkDataAccessObject {
     @Override
     public Optional<Link> findById(long id) {
         var jpaLink = findJpaById(id);
-        return linkMapper.toOptionalDto(jpaLink);
+        return linkJpaMapper.toOptionalDto(jpaLink);
     }
 
     Optional<LinkJpaEntity> findJpaById(long id) {
@@ -48,7 +49,7 @@ public class LinkJpaDAO implements LinkDataAccessObject {
     @Override
     public Link saveOrFindByUrl(URI url) {
         var jpaLink = saveJpaOrFindByUrl(url);
-        return linkMapper.toDto(jpaLink);
+        return linkJpaMapper.toDto(jpaLink);
     }
 
     LinkJpaEntity saveJpaOrFindByUrl(URI url) {
@@ -56,15 +57,15 @@ public class LinkJpaDAO implements LinkDataAccessObject {
             .orElseGet(() -> {
                 var newLink = new LinkJpaEntity(url);
                 newLink = linkRepository.save(newLink);
-                initialStateScreener.saveInitialState(linkMapper.toDto(newLink));
+                initialStateScreener.saveInitialState(linkJpaMapper.toDto(newLink));
                 return newLink;
             });
     }
 
     @Override
     public Set<Link> findByLastCheckedAtBefore(LocalDateTime borderDateTime) {
-        return linkRepository.findByLastCheckedAtBefore(borderDateTime).stream()
-            .map(linkMapper::toDto)
+        return linkRepository.findByLastCheckedAtBefore(toInstant(borderDateTime)).stream()
+            .map(linkJpaMapper::toDto)
             .collect(Collectors.toSet());
     }
 
@@ -81,7 +82,11 @@ public class LinkJpaDAO implements LinkDataAccessObject {
     @Override
     public void updateLastCheckedAtById(LocalDateTime lastChecked, long id) {
         var link = findJpaByIdOrThrowException(id);
-        link.setLastCheckedAt(lastChecked.atZone(ZoneId.systemDefault()).toInstant());
+        link.setLastCheckedAt(toInstant(lastChecked));
+    }
+
+    private Instant toInstant(LocalDateTime localDateTime) {
+        return localDateTime.atZone(ZoneId.systemDefault()).toInstant();
     }
 
     LinkJpaEntity findJpaByIdOrThrowException(long id) {

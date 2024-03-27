@@ -3,7 +3,7 @@ package edu.java.data.dao.jpa.dao;
 import edu.java.data.dao.interfaces.GitHubRepositoryDataAccessObject;
 import edu.java.data.dao.jpa.entities.GitHubRepositoryJpaEntity;
 import edu.java.data.dao.jpa.entities.LinkJpaEntity;
-import edu.java.data.dao.jpa.entities.utils.mappers.ServiceEntityMapper;
+import edu.java.data.dao.jpa.entities.utils.mappers.GitHubRepositoryJpaMapper;
 import edu.java.data.dao.jpa.repositories.GitHubRepositoryJpaRepository;
 import edu.java.data.dao.jpa.repositories.LinkJpaRepository;
 import edu.java.data.dto.GitHubRepository;
@@ -21,7 +21,7 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
     private final GitHubRepositoryJpaRepository gitHubRepoRepository;
     private final LinkJpaRepository linkRepository;
 
-    private final ServiceEntityMapper<GitHubRepositoryJpaEntity, GitHubRepository> repositoryMapper;
+    private final GitHubRepositoryJpaMapper repositoryJpaMapper;
 
     @Override
     public void save(GitHubRepository repository) {
@@ -55,18 +55,18 @@ public class GitHubRepositoryJpaDAO implements GitHubRepositoryDataAccessObject 
     @Override
     public Optional<GitHubRepository> findById(long id) {
         var jpaRepository = gitHubRepoRepository.findById(id);
-        return repositoryMapper.toOptionalDto(jpaRepository);
+        return repositoryJpaMapper.toOptionalDto(jpaRepository);
     }
 
     @Override
     public Optional<GitHubRepository> findByNameAndOwner(String name, String owner) {
         var jpaRepository = gitHubRepoRepository.findByNameAndOwner(name, owner);
-        return repositoryMapper.toOptionalDto(jpaRepository);
+        return repositoryJpaMapper.toOptionalDto(jpaRepository);
     }
 
     private GitHubRepositoryJpaEntity buildJpaRepository(GitHubRepository repository) {
         var link = findJpaLinkByIdOrThrowException(repository.getLinkId());
-        return repositoryMapper.toJpaWithLink(repository, link);
+        return repositoryJpaMapper.toJpaWithLink(repository, link);
     }
 
     private LinkJpaEntity findJpaLinkByIdOrThrowException(long id) {

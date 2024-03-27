@@ -13,5 +13,5 @@ public class StackOverflowQuestion {
     private long id;
     private long linkId;
     private String descriptionMd5Hash;
-    private Set<Long> answerIds;
+    private Set<Long> answersIds;
 }
