@@ -3,6 +3,8 @@ package edu.java.data.dao.jpa.entities.utils.mappers;
 import edu.java.data.dao.jpa.entities.ChatJpaEntity;
 import edu.java.data.dto.Chat;
 import org.springframework.stereotype.Component;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 public class ChatMapper implements EntityMapper<ChatJpaEntity, Chat> {
 
@@ -13,6 +15,6 @@ public class ChatMapper implements EntityMapper<ChatJpaEntity, Chat> {
         }
         long id = jpaEntity.getId();
         var createdAt = jpaEntity.getCreatedAt();
-        return new Chat(id, createdAt);
+        return new Chat(id, LocalDateTime.ofInstant(createdAt, ZoneId.systemDefault()));
     }
 }

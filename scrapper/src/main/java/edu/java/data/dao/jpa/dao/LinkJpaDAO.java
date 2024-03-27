@@ -9,6 +9,7 @@ import edu.java.data.exceptions.NoSuchLinkException;
 import edu.java.data.initialStateScreeners.UniversalInitialStateScreener;
 import java.net.URI;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -80,8 +81,7 @@ public class LinkJpaDAO implements LinkDataAccessObject {
     @Override
     public void updateLastCheckedAtById(LocalDateTime lastChecked, long id) {
         var link = findJpaByIdOrThrowException(id);
-
-        link.setLastCheckedAt(lastChecked);
+        link.setLastCheckedAt(lastChecked.atZone(ZoneId.systemDefault()).toInstant());
     }
 
     LinkJpaEntity findJpaByIdOrThrowException(long id) {

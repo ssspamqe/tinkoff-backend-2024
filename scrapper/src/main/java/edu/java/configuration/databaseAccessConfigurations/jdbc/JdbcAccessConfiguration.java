@@ -23,7 +23,7 @@ public class JdbcAccessConfiguration {
 
     @Bean
     public ChatJdbcRepository chatJdbcRepository(JdbcClient jdbcClient) {
-        return new ChatJdbcRepository(jdbcClient);
+        return  new ChatJdbcRepository(jdbcClient);
     }
 
     @Bean
