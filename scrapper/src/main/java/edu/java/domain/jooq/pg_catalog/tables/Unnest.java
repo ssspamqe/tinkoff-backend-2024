@@ -18,7 +18,6 @@ import org.jooq.Table;
 import org.jooq.TableField;
 import org.jooq.TableOptions;
 import org.jooq.impl.DSL;
-import org.jooq.impl.SQLDataType;
 import org.jooq.impl.TableImpl;
 
 
@@ -43,11 +42,11 @@ public class Unnest extends TableImpl<UnnestRecord> {
     }
 
     @Deprecated
-    public final TableField<UnnestRecord, Object> UNNEST_ = createField(DSL.name("unnest"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"anyelement\""), this, "");
+    public final TableField<UnnestRecord, Object> UNNEST_ = createField(DSL.name("unnest"), org.jooq.impl.DefaultDataType.getDefaultDataType("\"anyrange\""), this, "");
 
     private Unnest(Name alias, Table<UnnestRecord> aliased) {
         this(alias, aliased, new Field[] {
-            DSL.val(null, SQLDataType.OTHER.array())
+            DSL.val(null, org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"anymultirange\""))
         });
     }
 
@@ -110,17 +109,17 @@ public class Unnest extends TableImpl<UnnestRecord> {
     }
 
     public Unnest call(
-          Object[] __1
+          Object __1
     ) {
         Unnest result = new Unnest(DSL.name("unnest"), null, new Field[] {
-            DSL.val(__1, SQLDataType.OTHER.array())
+            DSL.val(__1, org.jooq.impl.DefaultDataType.getDefaultDataType("\"pg_catalog\".\"anymultirange\""))
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
     public Unnest call(
-          Field<Object[]> __1
+          Field<Object> __1
     ) {
         Unnest result = new Unnest(DSL.name("unnest"), null, new Field[] {
             __1

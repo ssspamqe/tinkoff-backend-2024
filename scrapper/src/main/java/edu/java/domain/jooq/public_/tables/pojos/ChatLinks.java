@@ -26,7 +26,6 @@ public class ChatLinks implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Long id;
     private Long chatId;
     private Long linkId;
     private LocalDateTime createdAt;
@@ -34,32 +33,20 @@ public class ChatLinks implements Serializable {
     public ChatLinks() {}
 
     public ChatLinks(ChatLinks value) {
-        this.id = value.id;
         this.chatId = value.chatId;
         this.linkId = value.linkId;
         this.createdAt = value.createdAt;
     }
 
-    @ConstructorProperties({ "id", "chatId", "linkId", "createdAt" })
+    @ConstructorProperties({ "chatId", "linkId", "createdAt" })
     public ChatLinks(
-        @Nullable Long id,
         @NotNull Long chatId,
         @NotNull Long linkId,
-        @NotNull LocalDateTime createdAt
+        @Nullable LocalDateTime createdAt
     ) {
-        this.id = id;
         this.chatId = chatId;
         this.linkId = linkId;
         this.createdAt = createdAt;
-    }
-
-    @Nullable
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(@Nullable Long id) {
-        this.id = id;
     }
 
     @jakarta.validation.constraints.NotNull
@@ -82,13 +69,12 @@ public class ChatLinks implements Serializable {
         this.linkId = linkId;
     }
 
-    @jakarta.validation.constraints.NotNull
-    @NotNull
+    @Nullable
     public LocalDateTime getCreatedAt() {
         return this.createdAt;
     }
 
-    public void setCreatedAt(@NotNull LocalDateTime createdAt) {
+    public void setCreatedAt(@Nullable LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -101,12 +87,6 @@ public class ChatLinks implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         final ChatLinks other = (ChatLinks) obj;
-        if (this.id == null) {
-            if (other.id != null)
-                return false;
-        }
-        else if (!this.id.equals(other.id))
-            return false;
         if (this.chatId == null) {
             if (other.chatId != null)
                 return false;
@@ -132,7 +112,6 @@ public class ChatLinks implements Serializable {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((this.id == null) ? 0 : this.id.hashCode());
         result = prime * result + ((this.chatId == null) ? 0 : this.chatId.hashCode());
         result = prime * result + ((this.linkId == null) ? 0 : this.linkId.hashCode());
         result = prime * result + ((this.createdAt == null) ? 0 : this.createdAt.hashCode());
@@ -143,8 +122,7 @@ public class ChatLinks implements Serializable {
     public String toString() {
         StringBuilder sb = new StringBuilder("ChatLinks (");
 
-        sb.append(id);
-        sb.append(", ").append(chatId);
+        sb.append(chatId);
         sb.append(", ").append(linkId);
         sb.append(", ").append(createdAt);
 

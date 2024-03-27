@@ -7,6 +7,7 @@ import edu.java.webClients.telegramBot.dto.requests.LinkUpdateType;
 import edu.java.webClients.telegramBot.dto.responses.TelegramBotApiErrorResponse;
 import java.net.URI;
 import java.util.List;
+import java.util.Set;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import static com.github.tomakehurst.wiremock.client.WireMock.ok;
@@ -27,7 +28,7 @@ public class TelegramBotClientTest extends WebClientTest {
             .willReturn(ok()));
 
         LinkUpdate linkUpdate = new LinkUpdate(
-            1, URI.create("http://my/link"), LinkUpdateType.GIT_HUB_REPOSITORY_ACTIVITIES, List.of(1L)
+            1, URI.create("http://my/link"), LinkUpdateType.GIT_HUB_REPOSITORY_ACTIVITIES, Set.of(1L)
         );
 
         assertDoesNotThrow(() -> telegramBotClient.sendLinkUpdates(List.of(linkUpdate)));
@@ -64,7 +65,7 @@ public class TelegramBotClientTest extends WebClientTest {
         );
 
         LinkUpdate linkUpdate = new LinkUpdate(
-            1, URI.create("http://my/link"), LinkUpdateType.STACK_OVERFLOW_ANSWERS, List.of(1L)
+            1, URI.create("http://my/link"), LinkUpdateType.STACK_OVERFLOW_ANSWERS, Set.of(1L)
         );
 
         assertThatThrownBy(

@@ -285,7 +285,6 @@ import edu.java.domain.jooq.pg_catalog.tables.records.PgStatGetSlruRecord;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatGetSubscriptionRecord;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgStatGetWalSendersRecord;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTablespaceDatabasesRecord;
-import edu.java.domain.jooq.pg_catalog.tables.records.PgTimezoneAbbrevsRecord;
 import edu.java.domain.jooq.pg_catalog.tables.records.PgTimezoneNamesRecord;
 import edu.java.domain.jooq.pg_catalog.tables.records.RegexpMatchesRecord;
 import edu.java.domain.jooq.pg_catalog.tables.records.RegexpSplitToTableRecord;
@@ -2193,18 +2192,6 @@ public class Tables {
 
     public static final PgTimezoneAbbrevs PG_TIMEZONE_ABBREVS = PgTimezoneAbbrevs.PG_TIMEZONE_ABBREVS;
 
-    public static Result<PgTimezoneAbbrevsRecord> PG_TIMEZONE_ABBREVS(
-          Configuration configuration
-    ) {
-        return configuration.dsl().selectFrom(edu.java.domain.jooq.pg_catalog.tables.PgTimezoneAbbrevs.PG_TIMEZONE_ABBREVS.call(
-        )).fetch();
-    }
-
-    public static PgTimezoneAbbrevs PG_TIMEZONE_ABBREVS() {
-        return edu.java.domain.jooq.pg_catalog.tables.PgTimezoneAbbrevs.PG_TIMEZONE_ABBREVS.call(
-        );
-    }
-
     public static final PgTimezoneNames PG_TIMEZONE_NAMES = PgTimezoneNames.PG_TIMEZONE_NAMES;
 
     public static Result<PgTimezoneNamesRecord> PG_TIMEZONE_NAMES(
@@ -2356,36 +2343,27 @@ public class Tables {
 
     public static final TsDebug TS_DEBUG = TsDebug.TS_DEBUG;
 
-    @Deprecated
     public static Result<TsDebugRecord> TS_DEBUG(
           Configuration configuration
-        , Object config
         , String document
     ) {
         return configuration.dsl().selectFrom(edu.java.domain.jooq.pg_catalog.tables.TsDebug.TS_DEBUG.call(
-              config
-            , document
+              document
         )).fetch();
     }
 
-    @Deprecated
     public static TsDebug TS_DEBUG(
-          Object config
-        , String document
+          String document
     ) {
         return edu.java.domain.jooq.pg_catalog.tables.TsDebug.TS_DEBUG.call(
-            config,
             document
         );
     }
 
-    @Deprecated
     public static TsDebug TS_DEBUG(
-          Field<Object> config
-        , Field<String> document
+          Field<String> document
     ) {
         return edu.java.domain.jooq.pg_catalog.tables.TsDebug.TS_DEBUG.call(
-            config,
             document
         );
     }
@@ -2394,31 +2372,31 @@ public class Tables {
 
     public static Result<TsParseRecord> TS_PARSE(
           Configuration configuration
-        , Long parserOid
+        , String parserName
         , String txt
     ) {
         return configuration.dsl().selectFrom(edu.java.domain.jooq.pg_catalog.tables.TsParse.TS_PARSE.call(
-              parserOid
+              parserName
             , txt
         )).fetch();
     }
 
     public static TsParse TS_PARSE(
-          Long parserOid
+          String parserName
         , String txt
     ) {
         return edu.java.domain.jooq.pg_catalog.tables.TsParse.TS_PARSE.call(
-            parserOid,
+            parserName,
             txt
         );
     }
 
     public static TsParse TS_PARSE(
-          Field<Long> parserOid
+          Field<String> parserName
         , Field<String> txt
     ) {
         return edu.java.domain.jooq.pg_catalog.tables.TsParse.TS_PARSE.call(
-            parserOid,
+            parserName,
             txt
         );
     }
@@ -2460,26 +2438,26 @@ public class Tables {
 
     public static Result<TsTokenTypeRecord> TS_TOKEN_TYPE(
           Configuration configuration
-        , String parserName
+        , Long parserOid
     ) {
         return configuration.dsl().selectFrom(edu.java.domain.jooq.pg_catalog.tables.TsTokenType.TS_TOKEN_TYPE.call(
-              parserName
+              parserOid
         )).fetch();
     }
 
     public static TsTokenType TS_TOKEN_TYPE(
-          String parserName
+          Long parserOid
     ) {
         return edu.java.domain.jooq.pg_catalog.tables.TsTokenType.TS_TOKEN_TYPE.call(
-            parserName
+            parserOid
         );
     }
 
     public static TsTokenType TS_TOKEN_TYPE(
-          Field<String> parserName
+          Field<Long> parserOid
     ) {
         return edu.java.domain.jooq.pg_catalog.tables.TsTokenType.TS_TOKEN_TYPE.call(
-            parserName
+            parserOid
         );
     }
 
@@ -2515,25 +2493,28 @@ public class Tables {
 
     public static final Unnest UNNEST = Unnest.UNNEST;
 
+    @Deprecated
     public static Result<UnnestRecord> UNNEST(
           Configuration configuration
-        , Object[] __1
+        , Object __1
     ) {
         return configuration.dsl().selectFrom(edu.java.domain.jooq.pg_catalog.tables.Unnest.UNNEST.call(
               __1
         )).fetch();
     }
 
+    @Deprecated
     public static Unnest UNNEST(
-          Object[] __1
+          Object __1
     ) {
         return edu.java.domain.jooq.pg_catalog.tables.Unnest.UNNEST.call(
             __1
         );
     }
 
+    @Deprecated
     public static Unnest UNNEST(
-          Field<Object[]> __1
+          Field<Object> __1
     ) {
         return edu.java.domain.jooq.pg_catalog.tables.Unnest.UNNEST.call(
             __1

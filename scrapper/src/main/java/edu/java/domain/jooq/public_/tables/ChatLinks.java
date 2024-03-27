@@ -44,13 +44,11 @@ public class ChatLinks extends TableImpl<ChatLinksRecord> {
         return ChatLinksRecord.class;
     }
 
-    public final TableField<ChatLinksRecord, Long> ID = createField(DSL.name("id"), SQLDataType.BIGINT.nullable(false).identity(true), this, "");
-
     public final TableField<ChatLinksRecord, Long> CHAT_ID = createField(DSL.name("chat_id"), SQLDataType.BIGINT.nullable(false), this, "");
 
     public final TableField<ChatLinksRecord, Long> LINK_ID = createField(DSL.name("link_id"), SQLDataType.BIGINT.nullable(false), this, "");
 
-    public final TableField<ChatLinksRecord, LocalDateTime> CREATED_AT = createField(DSL.name("created_at"), SQLDataType.LOCALDATETIME(6).nullable(false), this, "");
+    public final TableField<ChatLinksRecord, LocalDateTime> CREATED_AT = createField(DSL.name("created_at"), SQLDataType.LOCALDATETIME(6).nullable(false).defaultValue(DSL.field(DSL.raw("'1970-01-01 00:00:00'::timestamp without time zone"), SQLDataType.LOCALDATETIME)), this, "");
 
     private ChatLinks(Name alias, Table<ChatLinksRecord> aliased) {
         this(alias, aliased, null);

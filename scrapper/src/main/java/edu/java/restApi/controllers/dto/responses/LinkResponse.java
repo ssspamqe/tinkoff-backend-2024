@@ -1,6 +1,6 @@
 package edu.java.restApi.controllers.dto.responses;
 
-import edu.java.data.postgres.entities.Link;
+import edu.java.data.dto.Link;
 import edu.java.data.redis.documents.CachedLink;
 import java.net.URI;
 

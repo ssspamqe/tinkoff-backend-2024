@@ -50,7 +50,7 @@ public class TsTokenType extends TableImpl<TsTokenTypeRecord> {
 
     private TsTokenType(Name alias, Table<TsTokenTypeRecord> aliased) {
         this(alias, aliased, new Field[] {
-            DSL.val(null, SQLDataType.CLOB)
+            DSL.val(null, SQLDataType.BIGINT)
         });
     }
 
@@ -113,20 +113,20 @@ public class TsTokenType extends TableImpl<TsTokenTypeRecord> {
     }
 
     public TsTokenType call(
-          String parserName
+          Long parserOid
     ) {
         TsTokenType result = new TsTokenType(DSL.name("ts_token_type"), null, new Field[] {
-            DSL.val(parserName, SQLDataType.CLOB)
+            DSL.val(parserOid, SQLDataType.BIGINT)
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;
     }
 
     public TsTokenType call(
-          Field<String> parserName
+          Field<Long> parserOid
     ) {
         TsTokenType result = new TsTokenType(DSL.name("ts_token_type"), null, new Field[] {
-            parserName
+            parserOid
         });
 
         return aliased() ? result.as(getUnqualifiedName()) : result;

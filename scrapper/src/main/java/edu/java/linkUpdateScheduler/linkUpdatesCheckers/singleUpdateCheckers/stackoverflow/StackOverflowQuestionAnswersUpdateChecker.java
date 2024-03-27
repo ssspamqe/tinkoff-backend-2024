@@ -1,6 +1,6 @@
 package edu.java.linkUpdateScheduler.linkUpdatesCheckers.singleUpdateCheckers.stackoverflow;
 
-import edu.java.data.postgres.entities.StackOverflowQuestion;
+import edu.java.data.dto.StackOverflowQuestion;
 import edu.java.webClients.stackOverflow.StackOverflowClient;
 import edu.java.webClients.stackOverflow.dto.StackOverflowAnswerBody;
 import edu.java.webClients.stackOverflow.dto.StackOverflowQuestionBody;
@@ -23,7 +23,7 @@ public class StackOverflowQuestionAnswersUpdateChecker implements StackOverflowQ
 
     @Override
     public boolean hasUpdate(StackOverflowQuestion oldState, StackOverflowQuestionBody newState) {
-        Set<Long> oldAnswers = oldState.getAnswerIds();
+        Set<Long> oldAnswers = oldState.getAnswersIds();
         Set<Long> newAnswers = fetchAnswersIds(newState.id());
 
         return !oldAnswers.equals(newAnswers);

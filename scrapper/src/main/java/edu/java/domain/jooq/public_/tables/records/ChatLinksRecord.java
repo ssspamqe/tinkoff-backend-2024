@@ -28,43 +28,33 @@ public class ChatLinksRecord extends TableRecordImpl<ChatLinksRecord> {
 
     private static final long serialVersionUID = 1L;
 
-    public void setId(@Nullable Long value) {
-        set(0, value);
-    }
-
-    @Nullable
-    public Long getId() {
-        return (Long) get(0);
-    }
-
     public void setChatId(@NotNull Long value) {
-        set(1, value);
+        set(0, value);
     }
 
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getChatId() {
-        return (Long) get(1);
+        return (Long) get(0);
     }
 
     public void setLinkId(@NotNull Long value) {
-        set(2, value);
+        set(1, value);
     }
 
     @jakarta.validation.constraints.NotNull
     @NotNull
     public Long getLinkId() {
-        return (Long) get(2);
+        return (Long) get(1);
     }
 
-    public void setCreatedAt(@NotNull LocalDateTime value) {
-        set(3, value);
+    public void setCreatedAt(@Nullable LocalDateTime value) {
+        set(2, value);
     }
 
-    @jakarta.validation.constraints.NotNull
-    @NotNull
+    @Nullable
     public LocalDateTime getCreatedAt() {
-        return (LocalDateTime) get(3);
+        return (LocalDateTime) get(2);
     }
 
     // -------------------------------------------------------------------------
@@ -75,11 +65,10 @@ public class ChatLinksRecord extends TableRecordImpl<ChatLinksRecord> {
         super(ChatLinks.CHAT_LINKS);
     }
 
-    @ConstructorProperties({ "id", "chatId", "linkId", "createdAt" })
-    public ChatLinksRecord(@Nullable Long id, @NotNull Long chatId, @NotNull Long linkId, @NotNull LocalDateTime createdAt) {
+    @ConstructorProperties({ "chatId", "linkId", "createdAt" })
+    public ChatLinksRecord(@NotNull Long chatId, @NotNull Long linkId, @Nullable LocalDateTime createdAt) {
         super(ChatLinks.CHAT_LINKS);
 
-        setId(id);
         setChatId(chatId);
         setLinkId(linkId);
         setCreatedAt(createdAt);
@@ -90,7 +79,6 @@ public class ChatLinksRecord extends TableRecordImpl<ChatLinksRecord> {
         super(ChatLinks.CHAT_LINKS);
 
         if (value != null) {
-            setId(value.getId());
             setChatId(value.getChatId());
             setLinkId(value.getLinkId());
             setCreatedAt(value.getCreatedAt());

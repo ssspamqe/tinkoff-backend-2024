@@ -48,7 +48,7 @@ public class TsParse extends TableImpl<TsParseRecord> {
 
     private TsParse(Name alias, Table<TsParseRecord> aliased) {
         this(alias, aliased, new Field[] {
-            DSL.val(null, SQLDataType.BIGINT),
+            DSL.val(null, SQLDataType.CLOB),
             DSL.val(null, SQLDataType.CLOB)
         });
     }
@@ -112,11 +112,11 @@ public class TsParse extends TableImpl<TsParseRecord> {
     }
 
     public TsParse call(
-          Long parserOid
+          String parserName
         , String txt
     ) {
         TsParse result = new TsParse(DSL.name("ts_parse"), null, new Field[] {
-            DSL.val(parserOid, SQLDataType.BIGINT),
+            DSL.val(parserName, SQLDataType.CLOB),
             DSL.val(txt, SQLDataType.CLOB)
         });
 
@@ -124,11 +124,11 @@ public class TsParse extends TableImpl<TsParseRecord> {
     }
 
     public TsParse call(
-          Field<Long> parserOid
+          Field<String> parserName
         , Field<String> txt
     ) {
         TsParse result = new TsParse(DSL.name("ts_parse"), null, new Field[] {
-            parserOid,
+            parserName,
             txt
         });
 

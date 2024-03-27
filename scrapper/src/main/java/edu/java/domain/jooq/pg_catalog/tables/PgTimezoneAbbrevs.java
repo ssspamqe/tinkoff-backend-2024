@@ -50,12 +50,11 @@ public class PgTimezoneAbbrevs extends TableImpl<PgTimezoneAbbrevsRecord> {
     public final TableField<PgTimezoneAbbrevsRecord, Boolean> IS_DST = createField(DSL.name("is_dst"), SQLDataType.BOOLEAN, this, "");
 
     private PgTimezoneAbbrevs(Name alias, Table<PgTimezoneAbbrevsRecord> aliased) {
-        this(alias, aliased, new Field[] {
-        });
+        this(alias, aliased, null);
     }
 
     private PgTimezoneAbbrevs(Name alias, Table<PgTimezoneAbbrevsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.function());
+        super(alias, null, aliased, parameters, DSL.comment(""), TableOptions.view());
     }
 
     public PgTimezoneAbbrevs(String alias) {
@@ -79,42 +78,36 @@ public class PgTimezoneAbbrevs extends TableImpl<PgTimezoneAbbrevsRecord> {
     @Override
     @NotNull
     public PgTimezoneAbbrevs as(String alias) {
-        return new PgTimezoneAbbrevs(DSL.name(alias), this, parameters);
+        return new PgTimezoneAbbrevs(DSL.name(alias), this);
     }
 
     @Override
     @NotNull
     public PgTimezoneAbbrevs as(Name alias) {
-        return new PgTimezoneAbbrevs(alias, this, parameters);
+        return new PgTimezoneAbbrevs(alias, this);
     }
 
     @Override
     @NotNull
     public PgTimezoneAbbrevs as(Table<?> alias) {
-        return new PgTimezoneAbbrevs(alias.getQualifiedName(), this, parameters);
+        return new PgTimezoneAbbrevs(alias.getQualifiedName(), this);
     }
 
     @Override
     @NotNull
     public PgTimezoneAbbrevs rename(String name) {
-        return new PgTimezoneAbbrevs(DSL.name(name), null, parameters);
+        return new PgTimezoneAbbrevs(DSL.name(name), null);
     }
 
     @Override
     @NotNull
     public PgTimezoneAbbrevs rename(Name name) {
-        return new PgTimezoneAbbrevs(name, null, parameters);
+        return new PgTimezoneAbbrevs(name, null);
     }
 
     @Override
     @NotNull
     public PgTimezoneAbbrevs rename(Table<?> name) {
-        return new PgTimezoneAbbrevs(name.getQualifiedName(), null, parameters);
-    }
-
-    public PgTimezoneAbbrevs call() {
-        PgTimezoneAbbrevs result = new PgTimezoneAbbrevs(DSL.name("pg_timezone_abbrevs"), null, new Field[] {});
-
-        return aliased() ? result.as(getUnqualifiedName()) : result;
+        return new PgTimezoneAbbrevs(name.getQualifiedName(), null);
     }
 }

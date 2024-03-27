@@ -7,7 +7,7 @@ package edu.java.domain.jooq.public_.tables.records;
 import edu.java.domain.jooq.public_.tables.Chats;
 
 import java.beans.ConstructorProperties;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 import javax.annotation.processing.Generated;
 
@@ -37,14 +37,14 @@ public class ChatsRecord extends TableRecordImpl<ChatsRecord> {
         return (Long) get(0);
     }
 
-    public void setCreatedAt(@NotNull OffsetDateTime value) {
+    public void setCreatedAt(@NotNull LocalDateTime value) {
         set(1, value);
     }
 
     @jakarta.validation.constraints.NotNull
     @NotNull
-    public OffsetDateTime getCreatedAt() {
-        return (OffsetDateTime) get(1);
+    public LocalDateTime getCreatedAt() {
+        return (LocalDateTime) get(1);
     }
 
     // -------------------------------------------------------------------------
@@ -56,7 +56,7 @@ public class ChatsRecord extends TableRecordImpl<ChatsRecord> {
     }
 
     @ConstructorProperties({ "id", "createdAt" })
-    public ChatsRecord(@NotNull Long id, @NotNull OffsetDateTime createdAt) {
+    public ChatsRecord(@NotNull Long id, @NotNull LocalDateTime createdAt) {
         super(Chats.CHATS);
 
         setId(id);

@@ -1,7 +1,7 @@
 package edu.java.restApi.services;
 
-import edu.java.data.dao.ChatDataAccessObject;
-import edu.java.data.postgres.entities.Chat;
+import edu.java.data.dao.interfaces.ChatDataAccessObject;
+import edu.java.data.dto.Chat;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
