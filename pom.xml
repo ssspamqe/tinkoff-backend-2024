@@ -30,6 +30,7 @@
         <java-telegram-bot-api.version>7.0.1</java-telegram-bot-api.version>
         <docker-compose.version>3.2.3</docker-compose.version>
         <commons-codec.version>1.16.1</commons-codec.version>
+        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
 
         <!-- Tests -->
         <testcontainers.version>1.19.4</testcontainers.version>
